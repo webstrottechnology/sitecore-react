@@ -1,0 +1,683 @@
+@use "../../../styles/mixins/mixins" as *;
+
+.breadcrumb_title {
+  h2 {
+    font-size: var(--fs44);
+  }
+}
+
+.breadcrumb_links {
+  a {
+    font-size: var(--fs18);
+  }
+}
+
+
+/* ---------------- BREADCRUMB COMMON CSS ---------------- */
+
+.BreadcrumbFirst {
+  width: var(--width100);
+  background-color: var(--bg-dark);
+  padding: var(--p60) var(--p0);
+
+  .breadcrumbInnerBox {
+    width: var(--width100);
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    gap: 12px;
+
+    .breadcrumb_title {
+      h2 {
+        color: var(--white-color);
+      }
+    }
+
+    .breadcrumb_links {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
+
+      a {
+        color: var(--white-color);
+        transition: all 0.5s;
+
+        &:hover {
+          color: var(--gray-color);
+        }
+      }
+    }
+  }
+}
+
+/* ---------------- BREADCRUMB TWO CSS ---------------- */
+
+.BreadcrumbSecond {
+  width: var(--width100);
+  padding: var(--p60) var(--p0);
+  background-color: var(--bg-dark);
+  display: flex;
+  align-items: center;
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000000db;
+
+  }
+
+  .breadcrumbInnerBox {
+    position: relative;
+    z-index: 22;
+    width: var(--width100);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+
+    .breadcrumb_title {
+      h2 {
+        color: var(--white-color);
+      }
+    }
+
+    .breadcrumb_links {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
+
+      a {
+        color: var(--white-color);
+        transition: all 0.5s;
+
+        &:hover {
+          color: var(--gray-color);
+        }
+      }
+    }
+  }
+}
+
+/* ---------------- BREADCRUMB THREE CSS ---------------- */
+
+.BreadcrumbThree {
+  width: var(--width100);
+  padding: var(--p60) var(--p0);
+  background-color: var(--bg-dark);
+  display: flex;
+  align-items: center;
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000000db;
+
+  }
+
+  .breadcrumbInnerBox {
+    position: relative;
+    z-index: 22;
+    width: var(--width100);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: end;
+    gap: 12px;
+
+    .breadcrumb_title {
+      h2 {
+        color: var(--white-color);
+      }
+    }
+
+    .breadcrumb_links {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
+
+      a {
+        color: var(--white-color);
+        transition: all 0.5s;
+
+        &:hover {
+          color: var(--gray-color);
+        }
+      }
+    }
+  }
+}
+
+/* ---------------- BREADCRUMB FOUR CSS ---------------- */
+
+.BreadcrumbFour {
+  width: var(--width100);
+  padding: var(--p60) var(--p0);
+  display: flex;
+  align-items: center;
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #22C1C3;
+    background: linear-gradient(0deg, rgba(34, 193, 195, 1) 0%, rgba(253, 187, 45, 1) 100%);
+
+  }
+
+  .breadcrumbInnerBox {
+    position: relative;
+    z-index: 22;
+    width: var(--width100);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+
+    .breadcrumb_title {
+      h2 {
+        color: var(--white-color);
+      }
+    }
+
+    .breadcrumb_links {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
+
+      a {
+        color: var(--white-color);
+        transition: all 0.5s;
+
+        &:hover {
+          color: var(--yellow-color);
+        }
+      }
+    }
+  }
+}
+
+/* ---------------- BREADCRUMB FIVE CSS ---------------- */
+
+.BreadcrumbFive {
+  width: var(--width100);
+  padding: var(--p60) var(--p0);
+  display: flex;
+  align-items: center;
+  position: relative;
+  background: #EEAECA;
+  background: radial-gradient(circle, rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 100%);
+
+  .breadcrumbInnerBox {
+    position: relative;
+    z-index: 22;
+    width: var(--width100);
+    display: flex;
+    flex-direction: column;
+    gap: 26px;
+
+    .breadcrumb_title {
+      h2 {
+        color: var(--white-color);
+      }
+    }
+
+    .breadcrumb_nav {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      justify-content: flex-end;
+
+      a {
+        color: var(--white-color);
+        transition: all 0.5s;
+
+        &:hover {
+          color: var(--purple-color);
+        }
+      }
+
+      span {
+        color: var(--white-color);
+        font-size: var(--fs16);
+      }
+    }
+
+    .home_icon {
+      display: flex;
+      align-items: center;
+      color: var(--white-color);
+    }
+  }
+}
+
+/* ---------------- BREADCRUMB SIX CSS ---------------- */
+
+.BreadcrumbSix {
+  width: var(--width100);
+  padding: var(--p60) var(--p0);
+  display: flex;
+  align-items: center;
+  position: relative;
+  background: #833AB4;
+  background: linear-gradient(90deg, rgba(131, 58, 180, 1) 0%, rgba(253, 29, 29, 1) 50%, rgba(252, 176, 69, 1) 100%);
+
+  .breadcrumbInnerBox {
+    position: relative;
+    z-index: 22;
+    width: var(--width100);
+    display: flex;
+    flex-direction: column;
+    gap: 26px;
+
+    .breadcrumb_title {
+      h2 {
+        text-align: right;
+        color: var(--white-color);
+      }
+    }
+
+    .breadcrumb_nav {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      justify-content: flex-start;
+
+      a {
+        color: var(--white-color);
+        transition: all 0.5s;
+
+        &:hover {
+          color: var(--orange-color);
+        }
+      }
+
+      span {
+        color: var(--white-color);
+        font-size: var(--fs12);
+      }
+    }
+
+    .home_icon {
+      display: flex;
+      align-items: center;
+      color: var(--white-color);
+    }
+  }
+}
+
+/* ---------------- BREADCRUMB SEVEN CSS ---------------- */
+
+.BreadcrumbSeven {
+  width: var(--width100);
+  background: linear-gradient(135deg, #1f3c88, #3f6fbf);
+  position: relative;
+  padding: var(--p60) var(--p0);
+
+  .breadcrumbInnerBox {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+    .breadcrumb_links {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 10px;
+
+      .home_icon_circle {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+        background: var(--white-color);
+        color: var(--blue-color);
+        font-size: var(--fs18);
+      }
+
+      span {
+        font-size: var(--fs12);
+        color: var(--white-color);
+      }
+
+      a {
+        color: var(--white-color);
+        transition: all 0.5s;
+      }
+    }
+
+    .breadcrumb_title {
+      h2 {
+        font-size: var(--fs32);
+        font-weight: var(--fw700);
+        color: var(--white-color);
+      }
+    }
+  }
+}
+
+/* ---------------- BREADCRUMB EIGHT CSS ---------------- */
+
+.BreadcrumbEight {
+  width: var(--width100);
+  background: var(--bg-color);
+  position: relative;
+  padding: var(--p60) var(--p0);
+
+  .breadcrumbInnerBox {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 26px;
+
+    .breadcrumb_title {
+      h2 {
+        font-weight: var(--fw700);
+        color: var(--black-color);
+      }
+    }
+
+    .breadcrumb_links {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 20px;
+
+      .back_icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 36px;
+        height: 36px;
+        border-radius: var(--br8);
+        background: var(--white-color);
+        color: #0072ff;
+        font-size: var(--fs18);
+      }
+
+      span {
+        font-size: var(--fs24);
+        color: var(--black-color);
+      }
+
+      a {
+        font-size: var(--fs16);
+        color: var(--black-color);
+        font-weight: var(--fw600);
+        transition: all 0.5s;
+
+        &:hover {
+          color: var(--pink-color);
+        }
+      }
+    }
+  }
+}
+
+
+/* ---------------- BREADCRUMB Nine CSS ---------------- */
+.BreadcrumbNine {
+  width: var(--width100);
+  padding: var(--p60) var(--p0);
+  position: relative;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  &::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #219ebce3;
+  }
+
+  .breadcrumbInnerBox {
+    position: relative;
+    z-index: 999;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 35px;
+
+    .breadcrumb_title {
+      h2 {
+        font-weight: var(--fw700);
+        color: var(--white-color);
+      }
+    }
+
+    .breadcrumb_links {
+      width: 100%;
+      max-width: 350px;
+      margin: 0 auto;
+      background-color: var(--white-color);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 14px;
+      padding: var(--p16) var(--p20);
+      border-radius: var(--br30);
+
+
+
+      span {
+        font-size: var(--fs12);
+        color: var(--black-color);
+      }
+
+      a {
+        font-size: var(--fs16);
+        color: var(--black-color);
+        font-weight: var(--fw600);
+        text-decoration: none;
+        transition: transform 1s ease;
+
+        &:hover {
+          transform: translateY(-3px);
+        }
+      }
+    }
+  }
+}
+
+/* ---------------- BREADCRUMB Ten CSS ---------------- */
+.BreadcrumbTen {
+  width: var(--width100);
+  background: repeating-linear-gradient(45deg,
+      #1e3a8a,
+      #1e3a8a 20px,
+      #2563eb 20px,
+      #2563eb 40px);
+  padding: var(--p60) var(--p0);
+  position: relative;
+
+  .breadcrumbInnerBox {
+    width: var(--width100);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 26px;
+
+    .breadcrumb_title {
+      h2 {
+        font-weight: var(--fw700);
+        color: var(--white-color);
+      }
+    }
+
+    .breadcrumb_links {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+
+      .home_badge {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 28px;
+        height: 28px;
+        background: var(--white-color);
+        color: #1e3a8a;
+        border-radius: var(--br4);
+        font-size: var(--fs16);
+      }
+
+      span {
+        color: var(--white-color);
+        font-size: var(--fs12);
+      }
+
+      a {
+        color: var(--white-color);
+        text-decoration: none;
+        font-size: var(--fs16);
+        position: relative;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
+
+
+// about-banner-breadcrumb css start //
+
+.about-banner-breadcrumb {
+  width: var(--width100);
+  height: 100%;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  padding: var(--p170) var(--p0) var(--p70) var(--p0);
+
+  .banner-content {
+
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+    gap: 12px;
+    height: 100%;
+
+    h1 {
+      font-size: var(--fs70);
+      font-weight: var(--fw600);
+      color: var(--white-color);
+    }
+
+    .breadcrumb {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: var(--fs20);
+      background-color: transparent;
+      margin: 0;
+
+      .Title_link {
+        font-size: var(--fs20);
+        font-weight: var(--fw400);
+        color: var(--white-color);
+      }
+
+      span {
+        color: var(--white-color);
+      }
+
+      .divider {
+        opacity: 0.6;
+      }
+
+      .active {
+        color: var(--orange-color);
+        opacity: 1;
+      }
+    }
+  }
+}
+
+// responsive css start //
+
+
+@include responsive(mobile) {
+  .breadcrumb_title h2 {
+    font-size: 33px;
+  }
+
+  .breadcrumb_links a {
+    font-size: 16px;
+  }
+
+  .about-banner-breadcrumb {
+    padding: var(--p100) var(--p0) var(--p100) var(--p0);
+  }
+
+  .about-banner-breadcrumb .banner-content h1 {
+    font-size: 60px;
+  }
+}
+
+
+@include responsive(mobile-sm) {
+  .about-banner-breadcrumb .banner-content h1 {
+    font-size: 50px;
+  }
+}
+
+
+@include responsive(xs) {
+  .about-banner-breadcrumb .banner-content h1 {
+    font-size: 40px;
+  }
+}
+
+
+@include responsive(xxs) {
+  .about-banner-breadcrumb .banner-content h1 {
+    font-size: 38px;
+  }
+
+  .BreadcrumbEight .breadcrumbInnerBox .breadcrumb_links {
+    gap: 6px;
+  }
+
+  .about-banner-breadcrumb .banner-content .breadcrumb {
+    font-size: 18px;
+  }
+}

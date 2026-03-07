@@ -1,0 +1,394 @@
+/*-----------------------------------
+ 
+ 
+    Template Name: Sitecore React Template
+    Version: 1.0.0
+    Author: Webstrot
+    Copyright: © 2026-27
+ 
+--------------------------------------- */
+
+@use "../../../styles/mixins/mixins" as *;
+
+/* ---------------- COMMON HEADING TITLE ---------------- */
+
+.heading_title {
+  h2 {
+    font-family: var(--heading-font);
+    font-size: var(--fs32);
+    font-weight: var(--fw600) !important;
+    margin-bottom: var(--m10);
+    color: var(--black-color);
+  }
+}
+
+/* ---------------- HEADING ONE ---------------- */
+
+.heading_wrapper {
+  text-align: center;
+  padding-top: var(--p60);
+
+  .heading_title {
+    text-transform: uppercase;
+
+    .heading-underline {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 160px;
+      margin: var(--mAutoX);
+
+      .line {
+        width: 45px;
+        height: 2px;
+        background-color: var(--yellow-color);
+      }
+
+      .center-shape {
+        display: flex;
+        align-items: center;
+        margin: var(--m0) var(--m6);
+
+        .center-diamond {
+          width: 12px;
+          height: 12px;
+          background-color: var(--yellow-color);
+          transform: rotate(45deg);
+        }
+
+        .diamond {
+          width: 8px;
+          height: 8px;
+          border: 1px solid var(--yellow-color);
+          transform: rotate(45deg);
+
+          &:first-child {
+            margin-right: var(--m2);
+          }
+        }
+      }
+    }
+  }
+}
+
+/* ---------------- HEADING TWO ---------------- */
+
+.heading2_wrapper {
+  text-align: center;
+  padding: var(--m60) var(--m0);
+
+  .heading2_title {
+    display: inline-flex;
+    align-items: center;
+    gap: 14px;
+
+    .sparkle {
+      svg {
+        font-size: var(--fs26);
+        margin-bottom: var(--m8);
+      }
+    }
+  }
+}
+
+/* ---------------- HEADING THREE ---------------- */
+
+.heading3_wrapper {
+  text-align: center;
+
+  p {
+    font-size: var(--fs14);
+    color: var(--gray-color);
+    margin-bottom: var(--m12);
+    letter-spacing: 0.5px;
+  }
+
+  .underline {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    .line {
+      width: 40px;
+      height: 0.5px;
+      background-color: #d0d0d0;
+    }
+
+    .diamond {
+      width: 8px;
+      height: 8px;
+      background: var(--bottle-green-color);
+      transform: rotate(45deg);
+    }
+  }
+}
+
+/* ---------------- HEADING FOUR ---------------- */
+
+.heading4_wrapper {
+  text-align: center;
+  padding: var(--m60) var(--m0);
+
+  .separator {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    .line {
+      width: 60px;
+      height: 1px;
+      background: #999;
+    }
+
+    .symbol {
+      font-size: var(--fs20);
+      color: var(--pink-color);
+      font-weight: var(--fw700);
+      font-family: serif;
+    }
+  }
+}
+
+/* ---------------- HEADING FIVE ---------------- */
+
+.heading5_wrapper {
+  text-align: center;
+
+  .heading5_line {
+    width: 200px;
+    margin: var(--mAutoX);
+    position: relative;
+  }
+
+  h2 {
+    margin: var(--m10) var(--m0);
+    letter-spacing: 0.5px;
+  }
+
+  .line {
+    width: 60px;
+    height: 2px;
+    background-color: var(--red-color);
+
+    &.bottom {
+      position: absolute;
+      right: 0;
+    }
+  }
+}
+
+/* ---------------- HEADING SIX ---------------- */
+
+.heading6_wrapper {
+  text-align: center;
+  padding: var(--m60) var(--m0);
+
+  h2 {
+    color: var(--red-color);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: var(--m6);
+  }
+
+  p {
+    font-size: var(--fs14);
+    font-style: italic;
+    color: var(--gray-color);
+    margin-bottom: var(--m12);
+  }
+
+  .heading6_underline {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+
+    .line {
+      width: 35px;
+      height: 1px;
+      background-color: #ddd;
+    }
+
+    .center-line {
+      width: 20px;
+      height: 2px;
+      background-color: var(--red-color);
+    }
+  }
+}
+
+/* ---------------- HEADING SEVEN ---------------- */
+
+.heading7_wrapper {
+  background: var(--black-color);
+  padding: var(--p100) var(--p0);
+  text-align: center;
+
+  h1 {
+    position: relative;
+    font-family: "Times New Roman", serif;
+    font-size: var(--fs100);
+    letter-spacing: 18px;
+    text-transform: uppercase;
+
+    animation: smoothGlow 6s ease-in-out infinite;
+    color: var(--white-color);
+    text-shadow: 0 0 20px currentColor;
+
+    &::after {
+      content: attr(data-text);
+      position: absolute;
+      top: 90%;
+      left: 0;
+      width: 100%;
+      transform: scaleY(-1);
+      opacity: 0.35;
+      filter: blur(0px);
+      color: currentColor;
+      // -webkit-mask-image: linear-gradient(to bottom,
+      //     rgba(0, 0, 0, 0.7),
+      //     transparent);
+    }
+  }
+
+  @keyframes smoothGlow {
+    0% {
+      color: var(--white-color);
+      text-shadow: 0 0 20px var(--white-color);
+    }
+
+    33% {
+      color: var(--seaGreenColor);
+      text-shadow: 0 0 35px var(--seaGreenColor);
+    }
+
+    66% {
+      color: var(--purple-color);
+      text-shadow: 0 0 35px var(--purple-color);
+    }
+
+    100% {
+      color: var(--white-color);
+      text-shadow: 0 0 20px var(--white-color);
+    }
+  }
+
+}
+
+/* ---------------- HEADING EIGHT ---------------- */
+
+.heading8_wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding: var(--m60) var(--m0);
+
+  h2 {
+    letter-spacing: 2px;
+    padding: var(--p8) var(--p20);
+    border: 1px solid var(--black-color);
+    text-transform: uppercase;
+    color: var(--black-color);
+  }
+
+  .star {
+    color: var(--red-color);
+    font-size: var(--fs14);
+
+    &.left {
+      margin-right: var(--m6);
+    }
+
+    &.right {
+      margin-left: var(--m6);
+    }
+  }
+}
+
+/* ---------------- HEADING NINE ---------------- */
+
+.heading9_wrapper {
+  text-align: center;
+  background-color: var(--white-color);
+
+  h2 {
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--black-color);
+    margin-bottom: var(--m12);
+  }
+
+  .heading9_line {
+    width: 40px;
+    height: 3px;
+    background-color: var(--gray-color);
+    margin: 0 auto var(--m10);
+  }
+
+  p {
+    font-size: var(--fs14);
+    font-style: italic;
+    color: var(--gray-color);
+    margin: 0;
+  }
+}
+
+/* ---------------- HEADING TEN ---------------- */
+
+.heading10_wrapper {
+  text-align: center;
+  padding: var(--m60) var(--m0);
+  background-color: var(--white-color);
+
+  h2 {
+    letter-spacing: 2px;
+    margin-bottom: var(--m10);
+  }
+
+  .heading10_tagline {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+
+    p {
+      font-size: var(--fs12);
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--gray-color);
+      margin: var(--m0);
+    }
+
+    .line {
+      width: 50px;
+      height: 2px;
+      background-color: var(--light-gray);
+    }
+  }
+}
+
+@include responsive(mobile) {
+  .heading7_wrapper h1 {
+    font-size: var(--fs60);
+  }
+}
+
+@include responsive(mobile-sm) {
+  .heading7_wrapper h1 {
+    font-size: var(--fs50);
+  }
+}
+
+@include responsive(xs) {
+  .heading7_wrapper h1 {
+    font-size: var(--fs40);
+  }
+
+  .heading_title h2 {
+    font-size: var(--fs24);
+     text-align: center;
+  }
+}

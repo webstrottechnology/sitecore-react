@@ -1,0 +1,1886 @@
+/*-----------------------------------
+
+
+    Template Name: Sitecore React Template
+    Version: 1.0.0
+    Author: Webstrot
+    Copyright: © 2026-27
+
+--------------------------------------- */
+
+
+@use "../../../styles/mixins/mixins" as *;
+
+// +++++++++++++++++ Teams one css start +++++++++++++++
+.teamOne-section {
+    width: var(--width100);
+    height: 100%;
+    position: relative;
+    padding: var(--p100) var(--p0);
+    background: var(--bg-color);
+
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+
+        .teamOne-header {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto;
+
+            h2 {
+                font-size: var(--fs36);
+                margin-bottom: var(--m16);
+            }
+
+            p {
+                color: var(--gray-color);
+                font-size: var(--fs16);
+                font-family: var(--body);
+                font-weight: var(--fw400);
+            }
+        }
+    }
+
+    /* Header */
+
+
+    /* Slider */
+    .teamOne-slider {
+        margin-top: var(--m60);
+
+        .team-card {
+            position: relative;
+            overflow: hidden;
+            border-radius: var(--br10);
+            cursor: pointer;
+            transition: transform 0.4s ease;
+
+
+            &:hover {
+                transform: translateY(-8px);
+            }
+
+            img {
+                width: var(--width100);
+                display: block;
+                border-radius: var(--br10);
+            }
+
+            .overlay {
+                position: absolute;
+                inset: 0;
+                background: rgba(0, 0, 0, 0.85);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                opacity: 0;
+                transform: scale(0.8);
+                transition: all 0.4s ease;
+            }
+
+            &:hover .overlay {
+                opacity: 1;
+                transform: scale(1);
+            }
+
+            .content {
+                text-align: center;
+                color: var(--white-color);
+
+                h4 {
+                    font-size: var(--fs26);
+                    margin-bottom: var(--m6);
+                }
+
+                h5 {
+                    font-size: var(--fs14);
+                    color: var(--gray-color);
+                    margin-bottom: var(--m20);
+                }
+
+                .social {
+                    list-style: none;
+                    display: flex;
+                    gap: 12px;
+                    justify-content: center;
+                    padding: 0;
+
+                    li {
+                        width: 36px;
+                        height: 36px;
+                        border: 1px solid var(--gray-color);
+                        border-radius: 50%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        cursor: pointer;
+                        transition: all 0.3s ease;
+
+                        &:hover {
+                            background: var(--sky-blue);
+                            border-color: var(--sky-blue);
+                            transform: scale(1.1);
+                        }
+
+                        svg {
+                            font-size: var(--fs16);
+                            color: var(--white-color);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    /* Swiper Controls */
+    .swiper-button-next,
+    .swiper-button-prev {
+        color: var(--sky-blue);
+    }
+
+    .swiper-pagination-bullet {
+        background: var(--gray-color);
+        opacity: 1;
+
+        &-active {
+            background: var(--sky-blue);
+        }
+    }
+}
+
+// +++++++++++++++++ Teams one css end +++++++++++++++
+
+// +++++++++++++++++ Teams css two start +++++++++++++++
+.team2-section {
+    width: var(--width100);
+    height: 100%;
+    background: var(--bg-color);
+    padding: var(--p100) var(--p0);
+    position: relative;
+
+    /* Heading */
+    .team2-text {
+        text-align: center;
+        max-width: 700px;
+        margin: 0 auto;
+        padding-bottom: var(--p60);
+
+        h3 {
+            font-size: var(--fs12);
+            color: var(--dark-gray);
+            text-transform: uppercase;
+            margin-bottom: var(--m16);
+        }
+
+        h2 {
+            font-size: var(--fs30);
+            text-transform: uppercase;
+            margin-bottom: var(--m20);
+        }
+
+        p {
+            font-size: var(--fs16);
+            color: var(--dark-gray);
+        }
+    }
+
+    /* Slider */
+    .section2-slider {
+        text-align: center;
+
+        .swiper-button-next,
+        .swiper-button-prev {
+            display: none !important;
+        }
+    }
+
+    /* Card */
+    .team2-card {
+        background: var(--white-color);
+        padding: var(--p30) var(--p26);
+        border-radius: var(--br10);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+        transition: all 0.3s ease;
+
+        &:hover {
+            transform: translateY(-8px);
+        }
+
+        /* Image */
+        .team2-img {
+            margin-bottom: var(--m30);
+
+            img {
+                max-width: 120px;
+            }
+        }
+
+        /* Content */
+        .team2-content {
+            h5 {
+                color: var(--dark-gray);
+                font-size: var(--fs14);
+                margin-bottom: var(--m8);
+            }
+
+            h4 {
+                font-size: var(--fs28);
+                margin-bottom: var(--m20);
+            }
+
+            p {
+                font-size: var(--fs16);
+                margin-bottom: var(--m20);
+                color: var(--gray-color);
+            }
+        }
+
+        /* Social Icons */
+        .team2-social {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+
+            li {
+                a {
+                    width: 35px;
+                    height: 35px;
+                    border: 1px solid var(--gray-color);
+                    border-radius: 50%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    color: var(--gray-color);
+                    font-size: var(--fs16);
+                    cursor: pointer;
+                    transition: all 0.3s ease;
+
+                    &:hover {
+                        background: var(--sky-blue);
+                        border-color: var(--sky-blue);
+                        color: var(--white-color);
+                        transform: scale(1.1);
+                    }
+                }
+            }
+        }
+    }
+
+    /* Arrows */
+    .team2-arrows {
+        display: flex;
+        gap: 20px;
+        margin-bottom: var(--m26);
+        position: absolute;
+        bottom: 0;
+        left: 47%;
+    }
+
+    /* Button Style */
+    .team2-btn {
+        width: 42px;
+        height: 42px;
+        border-radius: 50%;
+        border: none;
+        background: var(--white-color);
+        color: var(--gray-color);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: var(--fs18);
+        cursor: pointer;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        transition: all 0.25s ease;
+
+        &:hover {
+            background: var(--sky-blue);
+            color: var(--white-color);
+            transform: scale(1.1);
+        }
+
+        &:active {
+            transform: scale(0.95);
+        }
+    }
+}
+
+// +++++++++++++++ Team two css end ++++++++++++++++++++
+
+// +++++++++++++++ Team three css Start ++++++++++++++++++++
+.team3-section {
+    position: relative;
+    width: var(--width100);
+    height: 100%;
+    padding: var(--p100) var(--p0);
+    background: url("../images/team-images/section3_bg.jpg") center/cover no-repeat;
+
+    .section3-overlay {
+        position: absolute;
+        inset: 0;
+        background: var(--sky-blue);
+        opacity: 0.9;
+    }
+
+    .container {
+        position: relative;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: var(--p0) var(--p0);
+
+        /* Header */
+        .section3-header {
+            text-align: center;
+            color: var(--white-color);
+            margin-bottom: var(--m60);
+
+            h2 {
+                font-size: var(--fs36);
+                margin-bottom: var(--m20);
+            }
+
+            p {
+                font-size: var(--fs16);
+                max-width: 600px;
+                margin: 0 auto;
+            }
+        }
+
+        /* Grid */
+        .section3-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 40px;
+
+            /* Card */
+            .team3-card {
+                text-align: center;
+                color: var(--white-color);
+
+                /* Image */
+                .team-img {
+                    position: relative;
+                    display: inline-block;
+
+                    img {
+                        width: 160px;
+                        height: 160px;
+                        border-radius: 50%;
+                        object-fit: cover;
+                    }
+
+                    /* Hover Overlay */
+                    .team-overlay {
+                        position: absolute;
+                        inset: 0;
+                        background: rgba(0, 0, 0, 0.8);
+                        border-radius: 50%;
+                        opacity: 0;
+                        transform: scale(0.5);
+                        transition: 0.4s;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+
+                        .social {
+                            display: flex;
+                            gap: 15px;
+
+                            a {
+                                color: var(--white-color);
+                                font-size: var(--fs16);
+                                cursor: pointer;
+                                transition: all 0.5s;
+
+                                svg {
+                                    transition: all 0.5s;
+
+                                    &:hover {
+                                        color: var(--sky-blue);
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    &:hover .team-overlay {
+                        opacity: 1;
+                        transform: scale(1);
+                    }
+                }
+
+                /* Text */
+                .team-text {
+                    margin-top: var(--m20);
+
+                    h4 {
+                        font-size: var(--fs20);
+                        color: var(--white-color);
+                    }
+
+                    h5 {
+                        font-size: var(--fs18);
+                        margin-top: var(--m8);
+                        opacity: 0.9;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// +++++++++++++++ Team three css End ++++++++++++++++++++
+
+// +++++++++++++++ Team Four css Start ++++++++++++++++++++
+.team4-section {
+    width: var(--width100);
+    height: 100%;
+    padding: var(--p80) var(--p20);
+    background: var(--bg-color);
+    text-align: center;
+
+    /* Heading */
+    .team4-header {
+        margin-bottom: var(--m50);
+
+        span {
+            color: var;
+            font-weight: var(--fw600);
+            font-size: var(--fs14);
+            letter-spacing: 2px;
+        }
+
+        h2 {
+            font-size: var(--fs42);
+            margin-top: 10px;
+            color: var(--black-color);
+
+            span {
+                color: var(--seaGreenColor);
+            }
+        }
+    }
+
+    /* Grid */
+    .team4-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 30px;
+        max-width: 1200px;
+        margin: 0 auto;
+
+        /* Card */
+        .team4-card {
+            background: var(--white-color);
+            border-radius: var(--br10);
+            overflow: hidden;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
+            transition: all 0.4s ease;
+
+            &:hover {
+                transform: translateY(-8px);
+            }
+
+            /* Image */
+            .team4-img {
+                position: relative;
+                overflow: hidden;
+
+                img {
+                    width: var(--width100);
+                    height: 320px;
+                    object-fit: cover;
+                    transition: transform 0.6s ease;
+                }
+
+                &:hover img {
+                    transform: scale(1.1);
+                }
+
+                /* Overlay */
+                .team4-overlay {
+                    position: absolute;
+                    inset: 0;
+                    background: rgba(31, 168, 161, 0.85);
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    opacity: 0;
+                    transition: all 0.4s ease;
+                }
+
+                &:hover .team4-overlay {
+                    opacity: 1;
+                }
+
+                /* Socials */
+                .socials {
+                    display: flex;
+                    gap: 15px;
+
+                    svg {
+                        color: var(--white-color);
+                        font-size: var(--fs18);
+                        cursor: pointer;
+                        transition: 0.3s;
+
+                        &:hover {
+                            transform: scale(1.2);
+                        }
+                    }
+                }
+            }
+
+            /* Info */
+            .team4-info {
+                padding: var(--p20);
+
+                h4 {
+                    font-size: var(--fs18);
+                    color: var(--black-color);
+                }
+
+                p {
+                    font-size: var(--fs14);
+                    color: var(--gray-color);
+                    margin-top: var(--m6);
+                }
+            }
+        }
+    }
+}
+
+// +++++++++++++++ Team Four css End ++++++++++++++++++++
+
+// +++++++++++++++ Team Five css Start ++++++++++++++++++++
+.team5-section {
+    width: var(--width100);
+    height: 100%;
+    padding: var(--p80) var(--p20);
+    position: relative;
+    background: var(--bg-color);
+    text-align: center;
+
+    /* Container */
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: var(--p0) var(--p16);
+    }
+
+    /* Header */
+    .team5-header {
+        text-align: center;
+        margin-bottom: var(--m50);
+
+        h2 {
+            font-size: var(--fs36);
+            margin-bottom: var(--m10);
+            color: var(--black-color);
+        }
+
+        p {
+            max-width: var(--fw600);
+            margin: auto;
+            color: var(--gray-color);
+            font-size: var(--fs16);
+            line-height: 1.6;
+        }
+    }
+
+    /* Card */
+    .team5-card {
+        background: var(--white-color);
+        border: 1px solid #eee;
+        overflow: hidden;
+        transition: 0.4s ease;
+
+        &:hover {
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            transform: translateY(-5px);
+        }
+    }
+
+    /* Image */
+    .team5-img {
+        img {
+            width: var(--width100);
+
+
+        }
+    }
+
+    /* Info */
+    .team5-info {
+        padding: var(--p22) var(--p16);
+
+        h4 {
+            font-size: var(--fs18);
+            margin-bottom: var(--m6);
+        }
+
+        span {
+            font-size: var(--fs14);
+            color: var(--gray-color);
+        }
+    }
+
+    /* Social */
+    .team5-social {
+        margin-top: var(--m16);
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        list-style: none;
+        padding: 0;
+
+        li {
+            width: 34px;
+            height: 34px;
+            border: 1px solid #ddd;
+            border-radius: 50%;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            cursor: pointer;
+            transition: 0.3s ease;
+
+            svg {
+                font-size: var(--fs14);
+                color: var(--gray-color);
+                transition: 0.3s;
+            }
+
+            &:hover {
+                background: var(--sky-blue);
+                border-color: var(--sky-blue);
+
+                svg {
+                    color: var(--white-color);
+                }
+            }
+        }
+    }
+
+    /* Swiper Pagination */
+    .swiper-pagination {
+        &-bullet {
+            width: 6px;
+            height: 6px;
+            background: #ccc;
+            opacity: 1;
+            transition: 0.3s;
+        }
+
+        &-bullet-active {
+            background: var(--sky-blue);
+            width: 9px;
+            height: 9px;
+        }
+    }
+}
+
+// ++++++++++++++ Team Five css end ++++++++++++++++++++
+
+// +++++++++++++++ Team Six css Start ++++++++++++++++++++
+.team6-section {
+    width: var(--width100);
+    height: 100%;
+    padding: var(--p80) var(--p0);
+    background: var(--white-color);
+
+    /* Container */
+    .container {
+        max-width: 1200px;
+        margin: auto;
+        padding: var(--p0) var(--p0);
+    }
+
+    /* Grid */
+    .team6-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+    }
+
+    /* Card */
+    .team6-card {
+        position: relative;
+        overflow: hidden;
+        cursor: pointer;
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+
+        /* Hover Effect */
+        &:hover {
+            .team6-overlay {
+                transform: translateY(0);
+                opacity: 1;
+            }
+
+            .team6-img img {
+                transform: scale(1.05);
+            }
+        }
+    }
+
+    /* Image */
+    .team6-img {
+        overflow: hidden;
+
+        img {
+            width: var(--width100);
+            transition: transform 0.5s ease;
+        }
+    }
+
+    /* Overlay */
+    .team6-overlay {
+        position: absolute;
+        inset: 0; // top:0 left:0 right:0 bottom:0
+
+        background: rgba(255, 78, 105, 0.9);
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        /* Start hidden */
+        transform: translateY(100%);
+        opacity: 0;
+
+        transition: all 0.5s ease;
+
+        h4 {
+            color: var(--white-color);
+            font-size: var(--fs18);
+            letter-spacing: 2px;
+            margin-bottom: var(--m20);
+        }
+    }
+
+    /* Social */
+    .team6-social {
+        display: flex;
+        gap: 15px;
+        padding: 0;
+        list-style: none;
+
+        li {
+            a {
+                width: 36px;
+                height: 36px;
+                border: 1px solid var(--white-color);
+                border-radius: 50%;
+
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                color: var(--white-color);
+                cursor: pointer;
+
+                transition: all 0.3s ease;
+
+                &:hover {
+                    background: var(--white-color);
+                    color: var(--pink-color01);
+                    transform: translateY(-3px);
+                }
+            }
+        }
+    }
+}
+
+// +++++++++++++++ Team Six css end ++++++++++++++++++++
+
+
+// +++++++++++++++ Team Seven css start ++++++++++++++++++++
+.team7-section {
+    width: var(--width100);
+    height: 100%;
+    position: relative;
+    padding: var(--p100) var(--p0);
+    background: var(--white-color);
+
+    .container {
+        max-width: 1200px;
+        margin: auto;
+        padding: var(--p0) var(--p16);
+    }
+
+    /* Heading */
+    .section5-text {
+        text-align: center;
+        margin-bottom: var(--m54);
+
+        h2 {
+            font-size: var(--fs36);
+            margin-bottom: var(--m20);
+        }
+
+        p {
+            font-size: var(--fs16);
+            color: var(--gray-color);
+            max-width: var(--fw600);
+            margin: auto;
+        }
+    }
+
+    /* Swiper */
+    .team-swiper {
+        padding-bottom: var(--p50);
+    }
+
+    /* Card */
+    .team-card {
+        position: relative;
+        text-align: center;
+        cursor: pointer;
+
+        &:hover {
+            .team-content {
+                border-color: var(--primary-color);
+            }
+
+            h4 {
+                color: var(--primary-color);
+            }
+
+            .team-img::after {
+                background: var(--primary-color);
+            }
+        }
+    }
+
+    /* Image */
+    .team-img {
+        position: relative;
+        display: inline-block;
+        z-index: 1;
+
+        img {
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        /* Circle */
+        &::after {
+            content: "";
+            position: absolute;
+
+            width: 60px;
+            height: 60px;
+
+            background: var(--black-color);
+            border: 6px solid var(--white-color);
+            border-radius: 50%;
+
+            left: 0;
+            right: 0;
+            margin: auto;
+
+            bottom: -30px;
+
+            transition: 0.4s;
+        }
+
+        i {
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: -15px;
+            margin: auto;
+            z-index: 2;
+            color: var(--white-color);
+            font-size: var(--fs20);
+        }
+    }
+
+    /* Content */
+    .team-content {
+        border: 1px solid #e8e8e8;
+        border-top: 0;
+        padding: var(--p80) var(--p16) var(--p30);
+        background: var(--white-color);
+        transition: 0.4s;
+
+        h5 {
+            font-size: var(--fs16);
+            color: var(--gray-color);
+            margin-bottom: var(--m8);
+        }
+
+        h4 {
+            font-size: var(--fs20);
+            transition: 0.3s;
+        }
+    }
+
+    /* Pagination */
+    .swiper-pagination {
+        bottom: 0;
+
+        &-bullet {
+            width: 5px;
+            height: 5px;
+            background: var(--gray-color);
+            opacity: 1;
+            transition: 0.3s;
+        }
+
+        &-bullet-active {
+            width: 8px;
+            height: 8px;
+            background: var(--primary-color);
+        }
+    }
+}
+
+// +++++++++++++++ Team Seven css end ++++++++++++++++++++
+
+// +++++++++++++++ Team Eight css start ++++++++++++++++++++
+.team8-section {
+    width: var(--width100);
+    height: 100%;
+    position: relative;
+    padding: var(--p100) var(--p0);
+    background: var(--bg-color);
+
+
+    .container {
+        max-width: 1200px;
+        margin: auto;
+        padding: 0 15px;
+    }
+
+    /* Grid */
+    .team-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+    }
+
+    /* Card */
+    .team-card {
+        background: var(--white-color);
+        border-radius: var(--br10);
+        text-align: center;
+        padding: var(--p40) var(--p16);
+        cursor: pointer;
+
+        transition: all 0.4s ease;
+
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+
+        &:hover {
+            transform: translateY(-8px);
+
+            h3 {
+                color: var(--white-color);
+            }
+        }
+
+        &.active {
+            background: var(--blue-color);
+            color: var(--white-color);
+
+            .line {
+                background: var(--white-color);
+            }
+
+            span {
+                color: rgba(255, 255, 255, 0.8);
+            }
+
+            p {
+                color: rgba(255, 255, 255, 0.9);
+            }
+
+            .team-social svg {
+                background: rgba(255, 255, 255, 0.15);
+                color: var(--white-color);
+            }
+
+            h3 {
+                color: var(--white-color);
+            }
+        }
+    }
+
+    /* Image */
+    .team-img {
+        margin-bottom: var(--m20);
+
+        img {
+            width: 110px;
+            height: 110px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid var(--white-color);
+        }
+    }
+
+    /* Name */
+    h3 {
+        font-size: var(--fs20);
+        color: var(--black-color);
+        margin-bottom: var(--m6);
+    }
+
+    /* Role */
+    span {
+        font-size: var(--fs14);
+        color: var(--gray-color);
+        font-style: italic;
+    }
+
+    /* Line */
+    .line {
+        width: 40px;
+        height: 3px;
+        background: var(--blue-color);
+        margin: 15px auto 20px;
+        border-radius: 5px;
+        transition: 0.3s;
+    }
+
+    /* Description */
+    p {
+        font-size: var(--fs14);
+        line-height: 1.6;
+        color: var(--gray-color);
+        margin-bottom: var(--m26);
+    }
+
+    /* Social */
+    .team-social {
+        display: flex;
+        justify-content: center;
+        gap: 12px;
+
+        svg {
+            width: 36px;
+            height: 36px;
+
+            background: var(--white-color);
+            color: var(--blue-color);
+
+            border-radius: 50%;
+            padding: 8px;
+
+            cursor: pointer;
+
+            transition: 0.3s;
+
+            &:hover {
+                transform: scale(1.1);
+            }
+        }
+    }
+}
+
+// +++++++++++++++ Team Eight css end ++++++++++++++++++++
+
+// +++++++++++++++ Team Nine css start ++++++++++++++++++++
+.team9-section {
+    width: var(--width100);
+    height: 100%;
+    position: relative;
+    padding: var(--p100) var(--p0);
+    text-align: center;
+
+    h2 {
+        font-size: var(--fs36);
+        margin-bottom: var(--fs50);
+    }
+
+    /* Grid */
+    .team9-row {
+        max-width: 1200px;
+        margin: auto;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 25px;
+
+        /* Card */
+        .team9-card {
+            height: 380px;
+            border-radius: var(--br20);
+            overflow: hidden;
+
+            position: relative;
+            cursor: pointer;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+
+            /* Bottom White Box */
+            .team9-info-box {
+                position: absolute;
+                left: 15px;
+                right: 15px;
+                bottom: 15px;
+                background: var(--white-color);
+                border-radius: var(--br16);
+                padding: var(--p20);
+                height: 85px;
+                overflow: hidden;
+                transition: 0.4s;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                /* Name */
+                h4 {
+                    font-size: var(--fs24);
+                    margin-bottom: 2px;
+                    color: var(--black-color);
+                }
+
+                /* Role */
+                span {
+                    font-size: var(--fs16);
+                    color: var(--red-color);
+                }
+
+                /* Social */
+                .team9-social {
+                    display: flex;
+                    gap: 12px;
+                    opacity: 0;
+                    overflow: hidden;
+                    transform: translateY(15px);
+                    transition: 0.4s;
+
+                    svg {
+                        width: 32px;
+                        height: 32px;
+                        background: var(--gray-color);
+                        padding: var(--p8);
+                        border-radius: 50%;
+                        margin-top: var(--m10);
+                        cursor: pointer;
+                        fill: var(--black-color);
+                        transition: 0.3s;
+
+                        &:hover {
+                            background: var(--red-color);
+                            fill: var(--white-color);
+                        }
+                    }
+                }
+            }
+
+            /* Hover Effect */
+            &:hover {
+                .team9-info-box {
+                    height: 150px;
+                }
+
+                .team9-social {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+        }
+    }
+}
+
+
+// +++++++++++++++ Team Nine css end ++++++++++++++++++++
+
+// +++++++++++++++ Team Ten css start ++++++++++++++++++++
+.team10-section {
+    width: var(--width100);
+    background: var(--blue03-color);
+    height: 100%;
+    padding: 200px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+/* Item */
+.team-item {
+    position: relative;
+    width: 220px;
+    height: 220px;
+
+    /* Circle */
+    .circle {
+        width: 220px;
+        height: 220px;
+        border-radius: 50%;
+        border: 20px solid var(--white-color);
+        overflow: hidden;
+        transition: 0.3s;
+
+        img {
+            width: var(--width100);
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    /* Card */
+    .info-card {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(0.7);
+        width: 230px;
+        background: var(--white-color);
+        border-radius: var(--br16);
+        text-align: center;
+        padding: var(--p66) var(--p20) var(--p26);
+        opacity: 0;
+        pointer-events: none;
+        transition: 0.4s ease;
+        z-index: 5;
+
+        /* Card Image */
+        .card-img {
+            width: var(--width100);
+            height: 180px;
+            border-radius: var(--br12);
+            overflow: hidden;
+            margin: -80px auto 15px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+
+            img {
+                width: var(--width100);
+                height: 100%;
+                object-fit: cover;
+                box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+                border-radius: var(--br16);
+            }
+        }
+
+        /* Text */
+        h3 {
+            font-size: var(--fs18);
+            margin-bottom: var(--m6);
+        }
+
+        p {
+            font-size: var(--fs14);
+            color: var(--gray-color);
+        }
+
+        /* Social */
+        .social-icon {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            margin-bottom: var(--m12);
+            margin-top: var(--m12);
+
+            a {
+                width: 34px;
+                height: 34px;
+
+                background: var(--black-color);
+                color: var(--white-color);
+
+                border-radius: 50%;
+
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                transition: 0.3s;
+
+                &:hover {
+                    background: var(--blue-color);
+                }
+            }
+        }
+    }
+
+    /* Hover Effect */
+    &:hover,
+    &.active {
+        .circle {
+            opacity: 0;
+            transform: scale(0);
+        }
+
+        .info-card {
+            opacity: 1;
+            transform: translate(-50%, -50%) scale(1);
+            pointer-events: auto;
+        }
+    }
+}
+
+// +++++++++++++++ Team Ten css end ++++++++++++++++++++
+
+// +++++++++++++++ Team 11 css start ++++++++++++++++++++
+.team11-section {
+    width: var(--width100);
+    height: 100%;
+    position: relative;
+    padding: var(--p70) var(--p0);
+
+    .team-inner-wrapper {
+        width: var(--width100);
+        display: flex;
+        flex-wrap: wrap;
+        gap: 24px;
+        align-items: center;
+        justify-content: center;
+
+        .team-box-contnet {
+            width: 47%;
+
+            .corprate-title {
+                h4 {
+                    color: var(--green-color02);
+                    font-size: var(--fs26);
+                    font-style: normal;
+                    margin-bottom: var(--m10);
+                }
+
+                h2 {
+                    max-width: 550px !important;
+                    color: var(--black-color);
+                    font-size: var(--fs40);
+                    font-style: normal;
+                    padding: var(--p20) var(--p0);
+                }
+
+                p {
+                    max-width: 620px;
+                    margin-top: var(--m16);
+                }
+            }
+
+            .corprate-btn {
+                display: inline-block;
+                margin-top: var(--m30);
+                padding: var(--p12) var(--p28);
+                background: var(--green-color02);
+                color: var(--white-color);
+                border-radius: var(--br6);
+                text-decoration: none;
+                transition: 0.3s;
+                border: 1px solid transparent;
+
+                &:hover {
+                    background: var(--white-color);
+                    color: var(--green-color02);
+                    border-color: var(--green-color02);
+                }
+            }
+        }
+
+        .team-box {
+            width: 23%;
+            position: relative;
+            overflow: hidden;
+            border-radius: var(--br16);
+            cursor: pointer;
+
+            .team-img {
+                overflow: hidden;
+                border-radius: var(--br16);
+
+                img {
+                    width: 100%;
+                    display: block;
+                    border-radius: var(--br16);
+                    transition: transform 0.4s ease;
+                }
+            }
+
+            .team-text {
+                border-radius: var(--br14);
+                background: var(--green-color02); // green like screenshot
+                text-align: center;
+                padding: var(--p26) var(--p0);
+                width: 85%;
+                position: absolute;
+                left: 50%;
+                transform: translate(-50%, 100%);
+                bottom: 0;
+                opacity: 0;
+                transition: all 0.4s ease;
+
+                h4 {
+                    font-size: var(--fs22);
+                    color: var(--black-color);
+                    margin-bottom: var(--m6);
+                }
+
+                p {
+                    font-size: var(--fs16);
+                    color: var(--white-color);
+                }
+            }
+
+            &:hover {
+
+                .team-img img {
+                    transform: scale(0.93); // smooth shrink
+                }
+
+                .team-text {
+                    transform: translate(-50%, 0%);
+                    opacity: 1;
+                }
+            }
+        }
+
+    }
+}
+
+// +++++++++++++++ Team 11 css end ++++++++++++++++++++
+
+// +++++++++++++++ Team 12 css start ++++++++++++++++++++
+.team12-section {
+    width: var(--width100);
+    height: 100%;
+    position: relative;
+    padding: var(--p100) var(--p0);
+
+    .container {
+        max-width: 1600px;
+        margin: auto;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 25px;
+    }
+
+    .team12-card-box {
+        background: var(--white-color);
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+
+        .imgBox {
+            position: relative;
+
+            img {
+                width: 100%;
+                display: block;
+            }
+
+
+            /* overlay */
+            .team12overlay {
+                position: absolute;
+                top: 50px;
+                right: -15px;
+                width: 100%;
+                height: 100%;
+                display: flex;
+                justify-content: flex-end;
+                align-items: flex-start;
+                padding: var(--p20);
+                pointer-events: none;
+
+                .social {
+                    background: var(--temp1BlueColor);
+                    padding: var(--p10);
+                    border-radius: var(--br10);
+                    display: flex;
+                    flex-direction: column;
+                    gap: 12px;
+
+                    transform: translateY(-40px) scale(0.8);
+                    opacity: 0;
+
+                    transition: 0.4s;
+
+                    a {
+                        width: 40px;
+                        height: 40px;
+                        background: var(--white-color);
+                        border: 1px solid var(--white-color);
+                        border-radius: 50%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        transition: 0.5s;
+
+                        svg {
+                            fill: var(--temp1BlueColor);
+                        }
+
+                        &:hover {
+                            background: var(--temp1BlueColor);
+
+                            svg {
+                                fill: var(--white-color);
+                            }
+                        }
+                    }
+                }
+            }
+
+
+            /* SHOW SOCIAL ON CLICK */
+            .team12overlay.show {
+
+                pointer-events: auto;
+
+                .social {
+
+                    transform: translateY(0) scale(1);
+                    opacity: 1;
+
+                }
+
+            }
+
+
+
+            /* PLUS BUTTON */
+            .plus {
+                position: absolute;
+                top: 15px;
+                right: 15px;
+                width: 40px;
+                height: 40px;
+                background: var(--white-color);
+                border-radius: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                cursor: pointer;
+                z-index: 2;
+
+                transition: 0.4s;
+
+                svg {
+                    transition: 0.4s;
+                }
+
+            }
+
+
+            /* PLUS ACTIVE (CLICK) */
+            .plus.active {
+
+                background: var(--temp1BlueColor);
+                color: var(--white-color);
+
+                svg {
+                    transform: rotate(45deg);
+                }
+
+            }
+
+        }
+
+
+
+        .info {
+            width: var(--width100);
+            height: 100%;
+            padding: var(--p20);
+            text-align: center;
+            transition: 0.5s;
+
+            h3 {
+                font-size: var(--fs22);
+
+                a {
+                    color: var(--black-color);
+                    text-decoration: none;
+                }
+            }
+
+            p {
+                color: var(--bottle-green-color);
+                font-size: var(--fs16);
+            }
+        }
+
+
+
+        &:hover {
+
+            .info {
+
+                background-color: var(--temp1BlueColor);
+
+                h3 a {
+                    color: var(--white-color);
+                }
+
+                p {
+                    color: var(--white-color);
+                }
+
+            }
+
+        }
+
+    }
+
+}
+
+// +++++++++++++++ Team 12 css end ++++++++++++++++++++
+
+// +++++++++++++++ Team 13 css start ++++++++++++++++++++
+.team13-section {
+    width: var(--width100);
+    padding: var(--p80) var(--p0) var(--p40);
+    background: var(--white-color);
+
+    .container {
+        max-width: 1200px;
+        margin: auto;
+        display: grid;
+        grid-template-columns: 400px 1fr;
+        gap: 60px;
+        align-items: center;
+    }
+
+    .team13-image {
+        img {
+            width: var(--width100);
+            border-radius: var(--br6);
+        }
+    }
+
+    .team13-content {
+        h2 {
+            font-size: var(--fs42);
+            font-weight: var(--fw600);
+            color: var(--black-color);
+            margin-bottom: var(--m10);
+
+        }
+
+
+        .role {
+            color: var(--orange-color);
+            font-size: var(--fs16);
+            margin-bottom: var(--m26);
+            display: block;
+
+        }
+
+
+
+        /* SOCIAL */
+
+        .team13-social {
+            display: flex;
+            gap: 15px;
+            margin-bottom: var(--m26);
+
+
+            a {
+                width: 45px;
+                height: 45px;
+                background: var(--white-color);
+                box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+                border-radius: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: var(--black-color);
+                transition: .3s;
+
+
+                &:hover {
+                    background: var(--orange-color);
+                    color: var(--white-color);
+                    transform: translateY(-5px);
+
+                }
+
+            }
+
+        }
+
+
+
+        p {
+            color: var(--gray-color);
+            line-height: 1.8;
+            margin-bottom: var(--m20);
+            font-size: var(--fs16);
+        }
+
+    }
+
+}
+
+// +++++++++++++++ Team 13 css end ++++++++++++++++++++
+
+
+
+/* +++++++++++++++++++++++ Responsive css start +++++++++++++++ */
+
+@include responsive(md) {
+    .team11-section .team-inner-wrapper .team-box-contnet .corprate-title h2 {
+        font-size: var(--fs32);
+        padding: var(--p10) var(--p0);
+    }
+
+    .team11-section .team-inner-wrapper .team-box-contnet .corprate-title p {
+        margin-top: var(--m1);
+    }
+}
+
+
+@include responsive(tablet-sm) {
+    .team3-section .container .section3-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .team4-section .team4-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .team6-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .team8-section .team-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+
+    .team9-section {
+        .team9-row {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    .team10-section {
+        flex-direction: column;
+        gap: 100px;
+
+    }
+
+    .team12-section .container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .team13-section .container {
+
+        grid-template-columns: 300px 1fr;
+        gap: 30px;
+    }
+}
+
+
+/* Responsive */
+@include responsive(mobile-lg) {
+    .team4-header {
+        h2 {
+            font-size: 32px;
+        }
+    }
+
+    .team4-grid {
+        .team4-card {
+            .team4-img {
+                img {
+                    height: 260px;
+                }
+            }
+        }
+    }
+
+    .team4-section .team4-header h2 {
+        font-size: var(--fs30);
+    }
+
+    .team6-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .team9-section {
+        .team9-row {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    .team8-section .team-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .team6-section .team6-grid {
+        grid-template-columns: repeat(2, 1fr);
+        margin: 0 auto;
+    }
+
+    .team11-section .team-inner-wrapper .team-box-contnet {
+        width: 100%;
+    }
+
+    .team11-section .team-inner-wrapper .team-box {
+        width: 47%;
+    }
+
+    .team12-section .container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .team13-section .container {
+        grid-template-columns: 1fr;
+    }
+}
+
+@include responsive(mobile) {
+    .team11-section {
+        padding: 30px 0px 60px 0px;
+    }
+}
+
+@include responsive(mobile-sm) {
+    .team3-section .container .section3-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .team4-section .team4-grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .team6-section .team6-grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .team11-section .team-inner-wrapper .team-box {
+        width: 100%;
+    }
+
+    .team11-section .team-inner-wrapper .team-box-contnet .corprate-title h2 {
+        font-size: var(--fs28);
+    }
+
+    .team12-section .container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+
+    .team13-section .team13-content h2 {
+        font-size: 26px;
+    }
+
+    .team12-section {
+        padding: 60px 0px;
+    }
+
+    .team11-section .team-inner-wrapper .team-box-contnet .corprate-title h2 {
+        font-size: var(--fs24);
+    }
+}

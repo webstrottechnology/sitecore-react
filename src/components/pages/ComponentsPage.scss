@@ -1,0 +1,29 @@
+.components-page {
+    width: var(--width100);
+    height: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+
+
+    .navbarCompo {
+        width: var(--width100);
+        display: flex;
+        background-color: var(--black-color);
+        gap: 20px;
+        padding: 20px;
+        flex-wrap: wrap;
+        position: fixed;
+        top: 0;
+        z-index:99;
+
+        .navlink {
+            font-size: var(--fs16);
+            font-family: var(--heading-font);
+            font-weight: var(--fw500);
+            color: var(--white-color);
+            text-decoration: none;
+        }
+    }
+}

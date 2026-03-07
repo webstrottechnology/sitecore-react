@@ -1,0 +1,168 @@
+/* ---------------- ABOUT US CSS ---------------- */
+.innerPagesAboutUs {
+  padding: var(--P60) var(--P0);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.innerPagesAboutUs .innerPagesAboutUsInner .row {
+  align-items: center;
+}
+.innerPagesAboutUs .innerPagesAboutUsInner .commHeading1 {
+  gap: 15px;
+  display: flex;
+  flex-direction: column;
+}
+.innerPagesAboutUs .innerPagesAboutUsInner .commHeading1 .subHeading {
+  font-size: var(--fs26);
+  color: var(--orange-color);
+}
+.innerPagesAboutUs .innerPagesAboutUsInner .commHeading1 h2 {
+  font-size: var(--fs38);
+}
+.innerPagesAboutUs .innerPagesAboutUsInner .commHeading1 p {
+  color: var(--dark-gray);
+}
+.innerPagesAboutUs .innerPagesAboutUsInner .innerPagesAboutContent .innerPagesAboutRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 35px;
+  margin-bottom: var(--m30);
+}
+.innerPagesAboutUs .innerPagesAboutUsInner .innerPagesAboutContent .innerPagesAboutRow .borderRadiusRounded {
+  border-radius: var(--br50);
+  padding: var(--p8) var(--p40);
+  background-color: var(--orange-color);
+  color: var(--white-color);
+  font-weight: var(--fw700);
+  text-transform: uppercase;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.innerPagesAboutUs .innerPagesAboutUsInner .innerPagesAboutContent .innerPagesAboutRow .innerPagesAboutContentInner {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+.innerPagesAboutUs .innerPagesAboutUsInner .innerPagesAboutContent .innerPagesAboutRow .innerPagesAboutContentInner .innerPagesAboutYearNum svg {
+  font-size: 110px;
+  font-weight: var(--fw800);
+  fill: transparent;
+  stroke: var(--sky-blue);
+  stroke-width: 2;
+  width: 200px;
+}
+.innerPagesAboutUs .innerPagesAboutUsInner .innerPagesAboutContent .innerPagesAboutRow .innerPagesAboutContentInner .innerPagesAboutYearTxt h6 {
+  color: var(--temp1BlueColor);
+  font-size: var(--fs40);
+  font-weight: var(--fw700);
+  margin-bottom: var(--m6);
+}
+.innerPagesAboutUs .innerPagesAboutUsInner .innerPagesAboutContent .innerPagesAboutRow .innerPagesAboutContentInner .innerPagesAboutYearTxt p {
+  color: var(--dark-gray);
+  font-size: 26px;
+  margin: 0;
+}
+.innerPagesAboutUs .innerPagesAboutUsInner .innerPagesAboutContent .innerPagesAboutPara p {
+  line-height: 1.7;
+}
+
+/* =========================
+   Circle Items
+========================= */
+.innerPagesAboutCircleItem {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  padding-top: 60px;
+  gap: 60px;
+}
+.innerPagesAboutCircleItem .innerPagesAboutCircle a {
+  width: 420px;
+  height: 420px;
+  margin: 0 auto;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  text-align: center;
+  text-decoration: none;
+}
+.innerPagesAboutCircleItem .innerPagesAboutCircle a::before {
+  content: "";
+  position: absolute;
+  width: 420px;
+  height: 420px;
+  border: 2px dashed #ff7a00;
+  border-radius: 50%;
+}
+.innerPagesAboutCircleItem .innerPagesAboutCircle a .icon {
+  width: 100px;
+  height: 100px;
+  background: #ff7a00;
+  border-radius: 50%;
+  position: absolute;
+  top: 10px;
+  right: 30px;
+  display: flex;
+  align-items: center;
+  border: 4px solid #fff;
+  outline: 2px solid transparent;
+  justify-content: center;
+  transition: all 0.5s;
+}
+.innerPagesAboutCircleItem .innerPagesAboutCircle a .innerPagesAboutCircleInner {
+  width: 380px;
+  height: 380px;
+  background: #ffffff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+}
+.innerPagesAboutCircleItem .innerPagesAboutCircle a .innerPagesAboutCircleInner .innerPagesAboutInnerContent {
+  padding-top: 20px;
+}
+.innerPagesAboutCircleItem .innerPagesAboutCircle a .innerPagesAboutCircleInner .innerPagesAboutInnerContent h4 {
+  color: #0e2a47;
+  font-size: 32px;
+}
+.innerPagesAboutCircleItem .innerPagesAboutCircle a .innerPagesAboutCircleInner .innerPagesAboutInnerContent p {
+  color: var(--black-color);
+  line-height: 1.6;
+  margin-top: 10px;
+}
+.innerPagesAboutCircleItem .innerPagesAboutCircle a .innerPagesAboutCircleInner .innerPagesAboutInnerContent .arrow {
+  font-size: 40px;
+  color: #ff7a00;
+}
+.innerPagesAboutCircleItem .innerPagesAboutCircle:hover .icon {
+  border: 4px solid #fff;
+  outline: 2px solid #FB8500;
+}
+
+/* ---------------- RESPONSIVE CSS ---------------- */
+@media (max-width: 1440px) {
+  .innerPagesAboutCircleItem .innerPagesAboutCircle a::before {
+    width: 380px;
+    height: 380px;
+  }
+  .innerPagesAboutCircleItem .innerPagesAboutCircle a .innerPagesAboutCircleInner .innerPagesAboutInnerContent {
+    padding-inline: 20px;
+  }
+}
+@media (max-width: 1366px) {
+  .innerPagesAboutCircleItem .innerPagesAboutCircle a::before {
+    width: 350px;
+    height: 350px;
+  }
+}
+@media (max-width: 991px) {
+  .innerPagesAboutUs .innerPagesAboutUsInner .innerPagesAboutContent .innerPagesAboutRow {
+    margin-top: var(--m30);
+  }
+}/*# sourceMappingURL=AboutUs.css.map */

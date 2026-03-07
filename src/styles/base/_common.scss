@@ -1,0 +1,222 @@
+//    Template Name: Sitecore React Template
+//    Version: 1.0.0
+//    Author: Webstrot
+
+/************ TABLE OF CONTENTS ***************
+ 
+  01. Common css
+
+
+
+**********************************************/
+// Common css start
+
+@use "../mixins/mixins" as *;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--body);
+  background-color: var(--white);
+  color: var(--black-color);
+}
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--heading-font);
+  font-weight: var(--fw600);
+}
+
+h1 {
+  margin: 0;
+  padding: 0;
+}
+
+h2 {
+  margin: 0;
+  padding: 0;
+}
+
+h3 {
+  margin: 0;
+  padding: 0;
+}
+
+h4 {
+  margin: 0;
+  padding: 0;
+}
+
+h5 {
+  margin: 0;
+  padding: 0;
+}
+
+h6 {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+input {
+  outline: none;
+  box-shadow: none;
+}
+
+p {
+  margin: 0;
+  font-size: 16px;
+}
+
+// custom container
+
+.custom-container-md {
+  width: 100%;
+  max-width: 1440px;
+  margin: auto;
+  padding: 0 24px;
+  position: relative;
+  z-index: 2;
+}
+
+
+.custom-container-lg {
+  width: 100%;
+  max-width: 1600px;
+  margin: auto;
+  padding: 0 24px;
+  position: relative;
+  z-index: 2;
+}
+
+
+@include responsive(tablet-sm) {
+  .custom-container-md {
+    width: 100%;
+    max-width: 100%;
+    padding: 0 15px;
+  }
+
+
+  .custom-container-lg {
+    width: 100%;
+    max-width: 100%;
+    padding: 0 15px;
+  }
+
+}
+
+// common btn animation effect  //
+
+.Temp-read-more {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--p10) var(--p22);
+  border: 1px solid var(--orange-color);
+  border-radius: var(--br26);
+  color: var(--orange-color);
+  font-size: var(--fs18);
+  font-weight: var(--fw600);
+  transition: all 0.5s;
+  position: relative;
+  overflow: hidden;
+
+  span {
+    position: relative;
+    z-index: 1;
+  }
+
+  &::before,
+  &::after {
+    position: absolute;
+    top: 50%;
+    content: "";
+    width: 20px;
+    height: 20px;
+    background-color: var(--temSitCoreBlueColor);
+    border-radius: 50%;
+  }
+
+  &::before {
+    left: -20px;
+    transform: translate(-50%, -50%);
+  }
+
+  &::after {
+    right: -20px;
+    transform: translate(50%, -50%);
+  }
+
+  &:hover {
+    color: var(--white-color);
+    border: 1px solid var(--temSitCoreBlueColor);
+
+    &::before {
+      animation: criss-cross-left 0.8s both;
+      animation-direction: alternate;
+    }
+
+    &::after {
+      animation: criss-cross-right 0.8s both;
+      animation-direction: alternate;
+    }
+  }
+}
+
+@keyframes criss-cross-left {
+  0% {
+    left: -20px;
+  }
+
+  50% {
+    left: 50%;
+    width: 20px;
+    height: 20px;
+  }
+
+  100% {
+    left: 50%;
+    width: 375px;
+    height: 375px;
+  }
+}
+
+@keyframes criss-cross-right {
+  0% {
+    right: -20px;
+  }
+
+  50% {
+    right: 50%;
+    width: 20px;
+    height: 20px;
+  }
+
+  100% {
+    right: 50%;
+    width: 375px;
+    height: 375px;
+  }
+}

@@ -1,0 +1,193 @@
+/*-----------------------------------
+ 
+ 
+    Template Name: Sitecore React Template
+    Version: 1.0.0
+    Author: Webstrot
+    Copyright: © 2026-27
+ 
+--------------------------------------- */
+
+@use "../../../styles/mixins/mixins" as *;
+
+/* ---------------- NEWSLETTER ONE ---------------- */
+
+.Sitecorenewsletter_wrapper {
+    width: var(--width100);
+    padding: var(--p60) var(--p0);
+    background: var(--green-color02);
+    position: relative;
+
+    .newsletter__container {
+        margin: var(--mAutoX);
+        width: var(--width100);
+
+        .newsletter__content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+
+            /* LEFT SIDE */
+            .newsletter__left {
+                width: 40%;
+
+                h2 {
+                    font-size: var(--fs40);
+                    color: #032b3a;
+                    line-height: 1.4;
+                    margin: var(--m0);
+                }
+            }
+
+            /* RIGHT SIDE */
+            .newsletter__right {
+                width: 60%;
+                justify-content: flex-end;
+                position: relative;
+                display: flex;
+                align-items: center;
+
+
+                /* ARROW IMAGE */
+                .arrow-img {
+                    width: 120px;
+                }
+
+                /* FORM */
+                .newsletter__form {
+                    display: flex;
+                    align-items: center;
+                    gap: 20px;
+
+                    input {
+                        width: 400px;
+                        height: 45px;
+                        border: none;
+                        outline: none;
+                        padding: var(--p0) var(--p20);
+                        border-radius: var(--br30);
+                        background: var(--white-color);
+                        font-size: var(--fs16);
+                    }
+
+                    button {
+                        height: 56px;
+                        padding: var(--p0) var(--p40);
+                        border: none;
+                        border-radius: var(--br50);
+                        background: #062c3f;
+                        color: var(--white-color);
+                        font-weight: var(--fw600);
+                        font-size: var(--fs16);
+                        cursor: pointer;
+                        transition: 0.5s ease;
+                        white-space: nowrap;
+                        border: 1px solid transparent;
+
+                        &:hover {
+                            color: var(--temp1BlueColor);
+                            background-color: var(--white-color);
+                            border: 1px solid var(--temp1BlueColor);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+/* ---------------- RESPONSIVE NEWSLETTER CSS ---------------- */
+
+@include responsive(lg) {
+
+    .Sitecorenewsletter_wrapper .newsletter__container .newsletter__content .newsletter__right .arrow-img {
+        width: 100px;
+    }
+
+    .Sitecorenewsletter_wrapper .newsletter__container .newsletter__content .newsletter__left h2 {
+        font-size: var(--fs36);
+    }
+}
+
+@include responsive(md) {
+    .Sitecorenewsletter_wrapper .newsletter__content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .Sitecorenewsletter_wrapper .newsletter__container .newsletter__content .newsletter__left {
+        width: var(--width100);
+    }
+
+    .Sitecorenewsletter_wrapper .newsletter__container .newsletter__content .newsletter__right {
+        width: var(--width100);
+        justify-content: center;
+    }
+}
+
+@include responsive(tablet) {
+    .Sitecorenewsletter_wrapper .newsletter__container .newsletter__content .newsletter__left h2 {
+        font-size: var(--fs32);
+    }
+}
+
+@include responsive(tablet-sm) {
+
+   .Sitecorenewsletter_wrapper .newsletter__container .newsletter__content .newsletter__left h2 {
+        font-size: var(--fs30);
+    }
+}
+
+@include responsive(mobile) {
+    .Sitecorenewsletter_wrapper .arrow-img {
+        display: none;
+    }
+
+    .Sitecorenewsletter_wrapper .newsletter__form {
+        flex-direction: column;
+        margin-top: var(--m20);
+    }
+
+}
+
+@include responsive(mobile-sm) {
+    .Sitecorenewsletter_wrapper .newsletter__container .newsletter__content .newsletter__left h2 {
+        font-size: var(--fs26);
+    }
+}
+
+@include responsive(xs) {
+
+    .Sitecorenewsletter_wrapper .newsletter__container .newsletter__content .newsletter__right .newsletter__form button{
+            height: 52px;
+    padding: var(--p0) var(--p36);
+    }
+
+    .Sitecorenewsletter_wrapper .newsletter__container .newsletter__content .newsletter__left h2 {
+        font-size: var(--fs24);
+    }
+
+    .Sitecorenewsletter_wrapper .newsletter__left h2 {
+        font-size: var(--fs26);
+    }
+
+    .Sitecorenewsletter_wrapper .newsletter__content {
+        width: var(--width100);
+    }
+
+    .Sitecorenewsletter_wrapper .newsletter__form {
+        width: var(--width100);
+    }
+
+    .Sitecorenewsletter_wrapper .newsletter__container .newsletter__content .newsletter__right .newsletter__form input {
+        width: var(--width90);
+    }
+}
+
+@include responsive(xxs) {
+    .Sitecorenewsletter_wrapper .newsletter__container .newsletter__content .newsletter__left h2 {
+        font-size: var(--fs20);
+    }
+}

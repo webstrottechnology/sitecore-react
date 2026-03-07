@@ -1,0 +1,709 @@
+/*-----------------------------------
+
+
+    Template Name: Sitecore React Template
+    Version: 1.0.0
+    Author: Webstrot
+    Copyright: © 2026-27
+
+--------------------------------------- */
+
+
+@use "../../../styles/mixins/mixins" as *;
+
+.counterOne {
+  width: var(--width100);
+  height: 100%;
+  padding: var(--p100) var(--p0);
+  background: var(--white-color);
+
+  .title-box {
+    h2 {
+      font-family: var(--heading-font);
+      font-weight: var(--fw700);
+      font-size: var(--fs32);
+      color: var(--black-color);
+      text-transform: uppercase;
+      text-align: center;
+      margin-bottom: 50px;
+    }
+  }
+
+  .counter-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+    text-align: center;
+  }
+}
+
+.counter-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .icon {
+    font-size: var(--fs50);
+    margin-bottom: var(--m20);
+  }
+
+  h4 {
+    font-family: var(--heading-font);
+    font-weight: var(--fw500);
+    font-size: var(--fs18);
+    color: var(--black-color);
+    margin-bottom: var(--m14);
+
+  }
+
+  h2 {
+    font-family: var(--heading-font);
+    font-weight: var(--fw700);
+    font-size: var(--fs40);
+    color: var(--black-color);
+  }
+}
+
+// ++++++++++++++++++ counter two css start ++++++++++++++
+.counterTwo {
+  width: var(--width100);
+  height: 100%;
+  position: relative;
+  padding: var(--p100) var(--p0);
+  background: var(--bg-color);
+
+  .counterTwo-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+  }
+}
+
+.counterTwo-card {
+  background: var(--white-color);
+  border-radius: var(--br20);
+  padding: var(--p48) var(--p20);
+  text-align: center;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+
+  h2 {
+    font-family: var(--heading-font);
+    font-size: var(--fs40);
+    font-weight: var(--fw700);
+    color: var(--primary-color); // golden
+    margin-bottom: 12px;
+  }
+
+  p {
+    font-family: var(--heading-font);
+    font-size: var(--fs18);
+    font-weight: var(--fw700);
+    color: var(--black-color);
+  }
+}
+
+// ++++++++++++++++++ counter two css end ++++++++++++++
+
+// ++++++++++++++++++ counter three css start ++++++++++++++
+.counterThree {
+  width: var(--width100);
+  height: 100%;
+  position: relative;
+  background: linear-gradient(to right,
+      #0d1b2a,
+      #13293d,
+      #16324f,
+      #1b3a57);
+  color: var(--white-color);
+
+  /* Heading */
+  .counterThree-heading {
+    background: var(--white-color);
+    color: var(--black-color);
+    text-align: center;
+    padding: var(--p50) var(--p0) var(--p20);
+
+    h2 {
+      font-family: var(--heading-font);
+      font-size: var(--fs40);
+      font-weight: var(--fw700);
+      color: var(--black-color);
+      text-transform: uppercase;
+      margin-bottom: var(--m10);
+    }
+  }
+
+  /* Grid */
+  .counterThree-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.counterThree-item {
+  padding: var(--p70) var(--p20);
+  text-align: center;
+  border-right: 1px solid rgba(255, 255, 255, 0.08);
+
+  &:last-child {
+    border-right: none;
+  }
+
+  .icon {
+    font-size: var(--fs40);
+    font-family: var(--heading-font);
+    font-weight: var(--fw700);
+    margin-bottom: var(--m18);
+    color: var(--white-color);
+  }
+
+  h3 {
+    font-size: var(--fs40);
+    font-family: var(--heading-font);
+    font-weight: var(--fw700);
+    color: var(--white-color);
+    margin-bottom: var(--m6);
+  }
+
+  p {
+    font-size: var(--fs16);
+    font-family: var(--body);
+    font-weight: var(--fw700);
+    color: var(--white-color);
+  }
+}
+
+// ++++++++++++++++++ counter three css end ++++++++++++++
+
+
+// ++++++++++++++++++ counter four css Start ++++++++++++++
+.counterFour {
+  width: var(--width100);
+  height: 100%;
+  position: relative;
+  background: var(--sky-blue);
+  padding: var(--p100) var(--p0);
+  color: var(--white-color);
+
+  .counterFour-wrapper {
+    .counterFour-content {
+      h2 {
+        font-family: var(--heading-font);
+        font-size: var(--fs40);
+        font-weight: var(--fw700);
+        color: var(--white-color);
+        margin-bottom: var(--m20);
+      }
+
+      p {
+        font-family: var(--body);
+        font-size: var(--fs16);
+        font-weight: var(--fw400);
+        color: var(--white-color);
+        max-width: 420px;
+      }
+    }
+  }
+}
+
+/* Right counters */
+.counterFour-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+  margin-top: var(--m50);
+
+  .counterFour-item {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+
+    .icon {
+      font-size: var(--fs80);
+      margin-bottom: var(--m14);
+      color: var(--white-color);
+      opacity: 0.9;
+    }
+
+    .content-box {
+      display: flex;
+      flex-direction: column;
+
+      h3 {
+        font-family: var(--heading-font);
+        font-size: var(--fs70);
+        font-weight: var(--fw700);
+        color: var(--white-color);
+        margin-bottom: var(--m6);
+      }
+
+      p {
+        font-family: var(--body);
+        font-size: var(--fs24);
+        font-weight: var(--fw500);
+        color: var(--white-color);
+      }
+    }
+  }
+}
+
+// ++++++++++++++++++ counter four css end ++++++++++++++
+
+// ++++++++++++++++++ counter five css start ++++++++++++++
+.counterFive {
+  width: var(--width100);
+  height: 100%;
+  position: relative;
+  padding: var(--p100) var(--p20);
+  background: var(--bg-color);
+
+  .title {
+    text-align: center;
+    font-size: var(--fs40);
+    font-family: var(--heading-font);
+    font-weight: var(--fw600);
+    color: var(--olive-green);
+    margin-bottom: var(--m50);
+  }
+
+  .counterFive-wrapper {
+    max-width: 1200px;
+    margin: auto;
+    padding: var(--p50);
+    background: rgba(255, 255, 255, 0.45);
+    border-radius: var(--br70);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(14px);
+    display: grid;
+    grid-template-columns: 1.3fr 1fr;
+    gap: 60px;
+
+    .counterFive-content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+
+      h3 {
+        max-width: 500px;
+        font-size: var(--fs40);
+        font-family: var(--heading-font);
+        font-weight: var(--fw600);
+        color: var(--olive-green);
+        margin-bottom: var(--m20);
+      }
+
+      p {
+        font-size: var(--fs16);
+        font-family: var(--body);
+        font-weight: var(--fw600);
+        color: var(--black-color);
+        max-width: 420px;
+      }
+    }
+
+    .counterFive-grid {
+      position: relative;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 26px;
+
+      .counterFive-card {
+        background: var(--white-color);
+        border-radius: var(--br18);
+        padding: var(--p34) var(--p20);
+        text-align: center;
+        box-shadow: 0 18px 40px rgba(0, 0, 0, 0.08);
+
+        h3 {
+          font-size: var(--fs32);
+          font-weight: var(--fw600);
+          font-family: var(--heading-font);
+          color: var(--black-color);
+          margin-bottom: var(--m6);
+        }
+
+        p {
+          font-size: var(--fs16);
+          font-weight: var(--fw600);
+          font-family: var(--body);
+          color: var(--olive-green);
+          text-transform: uppercase;
+        }
+      }
+
+
+      .center-arrows {
+        position: absolute;
+        inset: 0;
+        margin: auto;
+        width: 120px;
+        height: 120px;
+        background: var(--bg-color);
+        border-radius: var(--br30);
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        padding: var(--p14);
+        box-shadow: inset 0 0 0 2px #d4eeee;
+
+        span {
+          background: var(--white-color);
+          border-radius: 50%;
+          width: 38px;
+          height: 38px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: var(--fs16);
+          color: var(--olive-green);
+          box-shadow: 0 6px 14px rgba(0, 0, 0, 0.08);
+
+          svg {
+            font-size: var(--fs14);
+          }
+        }
+
+        .tl {
+          justify-self: start;
+          align-self: start;
+        }
+
+        .tr {
+          justify-self: end;
+          align-self: start;
+        }
+
+        .bl {
+          justify-self: start;
+          align-self: end;
+        }
+
+        .br {
+          justify-self: end;
+          align-self: end;
+        }
+      }
+    }
+  }
+}
+
+// ++++++++++++++++++ counter five css end ++++++++++++++
+
+// ++++++++++++++++++ counter six css start ++++++++++++++
+.counterSix {
+  width: var(--width100);
+  height: 100%;
+  position: relative;
+  padding: var(--p100) var(--p20);
+  background: linear-gradient(120deg, #4fa4ff, #9fe8ff);
+  display: flex;
+  justify-content: center;
+
+  .counterSix-wrapper {
+    background: var(--white-color);
+    border-radius: var(--br16);
+    padding: var(--p40) var(--p60);
+    display: flex;
+    gap: 80px;
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.15);
+  }
+
+}
+
+.counterSix-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+
+
+  .icon {
+    width: 54px;
+    height: 54px;
+    border-radius: var(--br12);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: var(--fs24);
+
+    &.orange {
+      background: var(--bg-color);
+      color: var(--orange-color);
+    }
+
+    &.blue {
+      background: var(--bg-color);
+      color: var(--blue03-color);
+    }
+
+    &.green {
+      background: var(--bg-color);
+      color: var(--green-color);
+    }
+  }
+
+  .content {
+    h3 {
+      font-family: var(--heading-font);
+      font-size: var(--fs30);
+      font-weight: var(--fw600);
+      color: var(--black-color);
+      margin-bottom: var(--m4);
+    }
+
+    p {
+      font-family: var(--heading-font);
+      font-size: var(--fs18);
+      font-weight: var(--fw600);
+      color: var(--black-color);
+      margin: var(--m0);
+    }
+  }
+
+}
+
+
+// ++++++++++++++++++ counter six css end ++++++++++++++
+
+// ++++++++++++++++++ counter seven css start ++++++++++++++
+.counter-seven {
+  padding: var(--p100) var(--p20);
+  background: linear-gradient(180deg, #1f242c, #1b2027);
+  text-align: center;
+}
+
+.counter-title {
+  color: var(--white-color);
+  font-size: var(--fs20);
+  margin-bottom: var(--m60);
+}
+
+.counter-wrapper {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+}
+
+.counter-box {
+  h2 {
+    font-size: var(--fs56);
+    color: var(--white-color);
+
+    span {
+      color: var(--primary-color);
+      font-size: var(--fs32);
+      margin-left: var(--m4);
+      vertical-align: top;
+    }
+  }
+
+  p {
+    color: var(--white-color);
+    font-size: var(--fs16);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+}
+
+
+
+
+// ++++++++++++++++++ counter seven css end ++++++++++++++
+
+// ++++++++++++++++++ counter Eight css start ++++++++++++++
+.counterEight {
+  padding: var(--p90) var(--p20);
+  background: linear-gradient(180deg, #55c7c3, #3c5ec9);
+  display: flex;
+  justify-content: center;
+}
+
+.counterEight-wrapper {
+  max-width: 1100px;
+  width: 100%;
+  background: var(--white-color);
+  border-radius: var(--br12);
+  padding: var(--p50) var(--p30);
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  text-align: center;
+}
+
+.counterEight-item {
+  .icon {
+    width: 54px;
+    height: 54px;
+    margin: 0 auto 14px;
+    background: var(--bg-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--blue-color);
+    font-size: var(--fs26);
+  }
+
+  h3 {
+    font-size: var(--fs32);
+    font-weight: var(--fw700);
+    font-family: var(--heading-font);
+    color: var(--black-color);
+    margin-bottom: var(--m6);
+  }
+
+  p {
+    font-size: var(--fs16);
+    font-weight: var(--fw600);
+    font-family: var(--heading-font);
+    color: var(--gray-color);
+    margin: 0;
+  }
+}
+
+
+
+
+// ++++++++++++++++++ counter Eight css end ++++++++++++++
+
+
+
+// responsive css start 
+/* Responsive */
+@include responsive(tablet-sm) {
+  .counterOne .counter-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .counterTwo .counterTwo-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .counterThree .counterThree-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .counterThree-item {
+    border-right: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .counterFour-wrapper {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .counterFour-content p {
+    margin: auto;
+  }
+
+  .counterFour-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .counterFive-wrapper {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .counterFive-content p {
+    margin: var(--m0);
+    text-align: start;
+    max-width: inherit !important;
+  }
+
+  .counterSix-wrapper {
+    flex-direction: column;
+    gap: 30px;
+    padding: var(--p30);
+  }
+
+  .counter-wrapper {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .counterEight-wrapper {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+
+  .counterFive .counterFive-wrapper .counterFive-content h3 {
+    text-align: start;
+    max-width: inherit;
+    font-size: var(--fs30);
+  }
+
+  .counterFive .counterFive-wrapper {
+    grid-template-columns: 1fr;
+  }
+}
+
+@include responsive(mobile-lg) {
+  .counterOne .counter-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .counterTwo .counterTwo-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .counterThree .counterThree-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .counterFour-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .counterFive-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .counterFive .counterFive-wrapper .counterFive-grid .counterFive-card h3 {
+    font-size: var(--fs22);
+  }
+
+  .counterFive .counterFive-wrapper .counterFive-grid .counterFive-card p {
+    font-size: var(--fs12);
+  }
+
+  .counterSix-item {
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .counterSix-item .content {
+    width: var(--width100);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .counterSix-item .content p {
+    text-align: center;
+  }
+
+  .center-arrows {
+    display: none;
+  }
+
+  .counter-wrapper {
+    grid-template-columns: 1fr;
+  }
+
+  .counterEight-wrapper {
+    grid-template-columns: 1fr;
+  }
+
+  .counterFive {
+    padding: var(--p50) var(--p20);
+  }
+
+  .counterFive .counterFive-wrapper {
+    padding: var(--p30);
+    gap: 30px;
+  }
+}

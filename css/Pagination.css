@@ -1,0 +1,57 @@
+.pagination-wrapper {
+  width: var(--width100);
+  display: flex;
+  justify-content: center;
+  padding: var(--p80) var(--p0);
+}
+.pagination-wrapper .pagination-container {
+  background: var(--orange-color);
+  padding: var(--p20) var(--p40);
+  border-radius: var(--br60);
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+.pagination-wrapper .pagination-container .nav-btn {
+  width: 70px;
+  height: 70px;
+  background: var(--grayColorShade1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: 0.3s ease;
+  font-size: 24px;
+  color: var(--orange-color);
+  border: none;
+}
+.pagination-wrapper .pagination-container .nav-btn:hover {
+  transform: scale(1.05);
+}
+.pagination-wrapper .pagination-container .pages {
+  display: flex;
+  gap: 18px;
+}
+.pagination-wrapper .pagination-container .pages .page {
+  width: 55px;
+  height: 55px;
+  background: var(--grayColorShade1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--fs18);
+  cursor: pointer;
+  transition: 0.3s ease;
+  color: var(--black-color);
+}
+.pagination-wrapper .pagination-container .pages .page:hover {
+  transform: scale(1.05);
+}
+.pagination-wrapper .pagination-container .pages .page.active {
+  background: var(--white-color);
+  border: 3px solid var(--orange-color);
+  color: var(--black-color);
+  outline: 2px solid var(--white-color);
+}/*# sourceMappingURL=Pagination.css.map */

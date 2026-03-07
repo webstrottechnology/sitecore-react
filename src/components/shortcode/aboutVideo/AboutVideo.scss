@@ -1,0 +1,138 @@
+/*-----------------------------------
+ 
+ 
+    Template Name: Sitecore React Template
+    Version: 1.0.0
+    Author: Webstrot
+    Copyright: © 2026-27
+ 
+--------------------------------------- */
+
+@use "../../../styles/mixins/mixins" as *;
+
+/* ---------------- ABOUT INNER VIDEO CSS---------------- */
+
+.innerpagesVideoSection {
+  padding: var(--p80) var(--p0);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  position: relative;
+  width: 100%;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: rgb(0 0 0 / 60%);
+  }
+
+  .innerpagesVideoInner {
+    position: relative;
+    height: 100%;
+
+    .innerpagesVideoPlay {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+
+      .playBtn {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        border: none;
+        background: transparent;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+
+        .pulse {
+          border-radius: 50%;
+          animation: pulseAnimation 2s infinite;
+        }
+      }
+
+      @keyframes pulseAnimation {
+        0% {
+          box-shadow: 0 0 0 0px rgb(33 158 188 / 50%);
+        }
+
+        100% {
+          box-shadow: 0 0 0 20px rgb(33 158 188 / 0%);
+        }
+      }
+    }
+  }
+
+
+  /* Modal */
+  .videoModal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.85);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+
+    .videoModalContent {
+      position: relative;
+      width: var(--width80);
+      max-width: 900px;
+    }
+
+    .closeBtn {
+      position: absolute;
+      top: -40px;
+      right: 0;
+      background: none;
+      border: none;
+      color: var(--white-color);
+      font-size: var(--fs28);
+      cursor: pointer;
+    }
+  }
+}
+
+
+/* ---------------- RESPONSIVE ABOUT INNER VIDEO CSS---------------- */
+
+@include responsive(lg) {
+  .innerpagesVideoSection {
+    height: 90vh;
+  }
+}
+
+@include responsive(md) {
+  .innerpagesVideoSection {
+    height: 70vh;
+  }
+}
+
+@include responsive(tablet-sm) {
+  .innerpagesVideoSection {
+    height: 60vh;
+  }
+}
+
+@include responsive(mobile) {
+  .innerpagesVideoSection {
+    height: 50vh;
+  }
+}
+
+@include responsive(mobile-sm) {
+  .innerpagesVideoSection {
+    height: 40vh;
+  }
+}
+
+@include responsive(xs) {
+  .innerpagesVideoSection {
+    height: 30vh;
+  }
+}

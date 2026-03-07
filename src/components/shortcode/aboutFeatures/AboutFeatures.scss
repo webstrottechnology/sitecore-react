@@ -1,0 +1,84 @@
+/*-----------------------------------
+ 
+ 
+    Template Name: Sitecore React Template
+    Version: 1.0.0
+    Author: Webstrot
+    Copyright: © 2026-27
+ 
+--------------------------------------- */
+
+@use "../../../styles/mixins/mixins" as *;
+
+
+/* ---------------- ABOUT FEATURES CSS ---------------- */
+
+.innerPageStayConnected {
+    padding: var(--p60) var(--p0);
+    height: 100%;
+
+    .row {
+        row-gap: 30px;
+        .innerPageStayConnectedContant {
+
+            .commHeading1 {
+                span {
+                    color: var(--yellow-color);
+                    font-size: var(--fs26);
+                    font-weight: var(--fw400);
+                }
+
+                h4 {
+                    color: var(--temp1BlueColor);
+                    font-size: var(--fs40);
+                }
+
+
+                p {
+                    color: var(--dark-gray);
+                    padding: var(--p16) var(--p0);
+                }
+            }
+        }
+
+    }
+
+}
+
+/* ---------------- RESPONSIVE ABOUT FEATURES CSS ---------------- */
+
+@include responsive(lg-md) {
+    .innerPageStayConnected .row .innerPageStayConnectedContant .commHeading1 h4 {
+        font-size: var(--fs34);
+    }
+}
+
+@include responsive(md) {
+    .innerPageStayConnected .row .innerPageStayConnectedContant .commHeading1 span {
+        font-size: var(--fs22);
+    }
+
+    .innerPageStayConnected .row .innerPageStayConnectedContant .commHeading1 h4 {
+        font-size: var(--fs30);
+    }
+}
+
+@include responsive(tablet-sm) {
+    .innerPageStayConnected .row .innerPageStayConnectedContant .commHeading1 h4 {
+        font-size: var(--fs26);
+    }
+
+    .innerPageStayConnected .row .innerPageStayConnectedContant .commHeading1 p {
+        font-size: var(--fs14);
+    }
+}
+
+@include responsive(mobile-sm) {
+    .innerPageStayConnected .row .innerPageStayConnectedContant .commHeading1 h4 {
+        font-size: var(--fs22);
+    }
+
+    .innerPageStayConnected .row .innerPageStayConnectedContant .commHeading1 span{
+        font-size: var(--fs18);
+    }
+}

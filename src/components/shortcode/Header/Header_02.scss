@@ -1,0 +1,389 @@
+/*-----------------------------------
+
+
+    Template Name: Sitecore React Template
+    Version: 1.0.0
+    Author: Webstrot
+    Copyright: © 2026-27
+
+--------------------------------------- */
+@use "../../../styles/mixins/mixins" as *;
+
+.header-02-section {
+    width: var(--width100);
+    height: 100%;
+    position: relative;
+    padding: var(--p30) var(--p0);
+    background-color: var(--bg-color);
+    margin-top: var(--m60);
+
+    .header-02-wrapper {
+        background-color: var(--white-color);
+        border-radius: var(--br50);
+
+
+        /* ================= HEADER ================= */
+
+        .header-02 {
+            padding: var(--p40) var(--p40);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            // background: #fff;
+
+            .icon {
+                font-size: var(--fs22);
+                font-weight: var(--fw600);
+                cursor: pointer;
+            }
+
+            .header-right {
+                display: flex;
+                gap: 15px;
+                align-items: center;
+            }
+
+            .search-box {
+                padding: var(--p6);
+                border: 1px solid var(--gray-color);
+            }
+        }
+
+        /* ================= SIDEBAR ================= */
+
+        .sidebar {
+            position: fixed;
+            left: -100%;
+            top: 0;
+            width: 250px;
+            height: 100%;
+            background: var(--black-color);
+            color: var(--white-color);
+            transition: .3s;
+            padding: var(--p30);
+            z-index: 999;
+
+            &.open {
+                left: 0;
+            }
+
+            .close {
+                font-size: var(--fs26);
+                cursor: pointer;
+            }
+
+            ul {
+                margin-top: var(--m30);
+
+                li {}
+            }
+
+            .sidebar-menu {
+                li {
+                    list-style: none;
+                    margin: var(--m30) var(--m0);
+                    cursor: pointer;
+                }
+
+                .menu-title {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    cursor: pointer;
+                    font-size: var(--fs16);
+                    padding: var(--p6) var(--p0);
+                }
+
+                .submenu {
+                    max-height: 0;
+                    overflow: hidden;
+
+                    opacity: 0;
+                    transform: translateY(-5px);
+
+                    transition: all 0.4s ease;
+
+                    margin-top: 0;
+                    padding-left: var(--p16);
+
+                    li {
+                        font-size: var(--fs14);
+                        margin: var(--m8) var(--m0);
+                        cursor: pointer;
+                        color: var(--dark-gray);
+
+                        &:hover {
+                            color: var(--white-color);
+                        }
+                    }
+
+
+                    &.open {
+                        max-height: 300px; // enough height
+                        opacity: 1;
+                        transform: translateY(0);
+                        margin-top: var(--m10);
+                    }
+                }
+
+
+                .single-link {
+                    cursor: pointer;
+                    font-size: var(--fs16);
+                    margin-top: var(--m10);
+                }
+
+            }
+
+        }
+
+        /* ================= BANNER ================= */
+
+        .banner {
+            display: flex;
+            justify-content: space-between;
+            padding: var(--p20) var(--p100); // more space
+            gap: 60px;
+            align-items: center;
+            width: var(--width100);
+
+            .banner-left {
+                width: 30%;
+
+                span {
+                    background: var(--green-color);
+                    padding: var(--p6) var(--p10);
+                }
+
+                h1 {
+                    font-size: var(--fs64);
+                    margin: var(--m16) var(--m0);
+                }
+
+                p {
+                    font-size: var(--fs18);
+                    font-family: var(--body-font);
+                    font-weight: var(--fw400);
+                    color: var(--gray-color);
+                    margin: var(--m20) var(--m0);
+                }
+
+                button {
+                    padding: var(--p10) var(--p26);
+                    background: var(--black-color);
+                    color: var(--white-color);
+                    border: none;
+                    margin: var(--m16);
+                }
+            }
+
+            /* CENTER */
+            .banner-center {
+                width: 40%;
+                max-width: 100%;
+                overflow: hidden;
+
+                .swiper {
+                    width: 100%;
+                }
+
+                .swiper-slide {
+                    display: flex;
+                    justify-content: center;
+                }
+
+                img {
+                    width: 100%;
+                    // max-width: 350px; // 🔴 limit size
+                    height: auto;
+                    border-radius: var(--br16);
+                }
+
+                .slider-wrapper {
+                    .slider-nav {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        gap: 20px;
+
+                        .custom-prev {
+                            width: 50px;
+                            height: 50px;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            border-radius: var(--br50);
+                            border: 1px solid var(--dark02);
+                            background-color: transparent;
+                        }
+
+                        .custom-next {
+                            width: 50px;
+                            height: 50px;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            border-radius: var(--br50);
+                            border: 1px solid var(--dark02);
+                            background-color: transparent;
+                        }
+                    }
+                }
+            }
+
+            .banner-right {
+                width: 30%;
+                max-width: 100%;
+
+                /* RIGHT */
+                .accordion {
+                    .acc-item {
+                        border-bottom: 1px solid #ddd;
+                        padding: 15px 0;
+
+                        h4 {
+                            display: flex;
+                            justify-content: space-between;
+                            cursor: pointer;
+                        }
+
+                        /* Content */
+                        .acc-content {
+                            max-height: 0;
+                            overflow: hidden;
+                            transition: all 0.4s ease;
+
+                            p {
+                                margin-top: var(--m10);
+                                color: var(--dark-gray);
+                                line-height: 1.6;
+                            }
+                        }
+
+                        /* Active */
+                        &.active {
+
+                            .acc-content {
+                                max-height: 200px; // enough height
+                            }
+
+                        }
+                    }
+                }
+
+
+            }
+        }
+    }
+}
+
+.custom-container {
+    max-width: 1800px !important; // Full HD
+    width: 100%;
+    margin: auto;
+
+}
+
+
+
+/* SEARCH CENTER POPUP */
+
+.search-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    z-index: 9999;
+
+    input {
+        width: 400px;
+        padding: var(--p16) var(--p20);
+        font-size: var(--fs6);
+        border-radius: var(--br6);
+        border: none;
+        outline: none;
+    }
+
+    .close-search {
+        position: absolute;
+        top: 30px;
+        right: 40px;
+        color: var(--white-color);
+        font-size: var(--fs28);
+        cursor: pointer;
+    }
+}
+
+/* ================= SEARCH INPUT ================= */
+
+.search-input-box {
+    position: relative;
+    width: 300px;
+
+    input {
+        width: 100%;
+        padding: var(--p10) var(--p16) var(--p10) var(--p40);
+        border: 1px solid #ddd;
+        border-radius: 25px;
+        font-size: var(--fs14);
+        outline: none;
+    }
+
+    .search-icon {
+        position: absolute;
+        top: 50%;
+        left: 14px;
+        transform: translateY(-50%);
+        font-size: var(--fs18);
+        color: var(--gray-color);
+        pointer-events: none; // click input pe hi jaye
+    }
+}
+
+
+/* ================= RESPONSIVE ================= */
+
+@include responsive(md) {
+    .header-02-section .header-02-wrapper .banner {
+        padding: var(--p20) var(--p20);
+        gap: 30px;
+    }
+
+    .header-02-section .header-02-wrapper .banner .banner-left h1 {
+        font-size: var(--fs40);
+    }
+}
+
+
+@include responsive(tablet-sm) {
+    .header-02-section .header-02-wrapper .banner {
+        flex-wrap: wrap;
+    }
+
+    .header-02-section .header-02-wrapper .banner .banner-left {
+        width: 100%;
+    }
+
+    .header-02-section .header-02-wrapper .banner .banner-center {
+        width: 100%;
+    }
+
+    .header-02-section .header-02-wrapper .banner .banner-right {
+        width: 100%;
+    }
+
+    .header-02-section .header-02-wrapper .banner .banner-center img {
+        max-width: 400px;
+    }
+     .header-02-section .header-02-wrapper .banner .banner-center img {
+        max-width: 250px;
+    }
+}
+
+

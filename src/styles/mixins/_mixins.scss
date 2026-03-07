@@ -1,0 +1,150 @@
+//  commmon responsive mixin //
+
+@mixin responsive($breakpoint) {
+
+  // Extra Large Screens (1920px and below)
+  @if $breakpoint ==xxl {
+    @media (max-width: 1920px) {
+      @content;
+    }
+  }
+
+  // Large Desktop (1600px and below)
+  @else if $breakpoint ==xl {
+    @media (max-width: 1600px) {
+      @content;
+    }
+  }
+
+  // Desktop (1440px and below)
+  @else if $breakpoint ==lg {
+    @media (max-width: 1440px) {
+      @content;
+    }
+  }
+
+  @else if $breakpoint ==lg-md {
+    @media (max-width: 1366px) {
+      @content;
+    }
+  }
+
+  // Small Desktop / Laptop (1280px and below)
+  @else if $breakpoint ==md {
+    @media (max-width: 1280px) {
+      @content;
+    }
+  }
+
+  // Tablet Landscape (1024px and below)
+  @else if $breakpoint ==tablet {
+    @media (max-width: 1024px) {
+      @content;
+    }
+  }
+
+  // Tablet Portrait (991px and below)
+  @else if $breakpoint ==tablet-sm {
+    @media (max-width: 991px) {
+      @content;
+    }
+  }
+
+  // Large Mobile (768px and below)
+  @else if $breakpoint ==mobile-lg {
+    @media (max-width: 768px) {
+      @content;
+    }
+  }
+
+  // Mobile (767px and below)
+  @else if $breakpoint ==mobile {
+    @media (max-width: 767px) {
+      @content;
+    }
+  }
+
+  // Small Mobile (576px and below)
+  @else if $breakpoint ==mobile-sm {
+    @media (max-width: 576px) {
+      @content;
+    }
+  }
+
+  // Extra Small Mobile (480px and below)
+  @else if $breakpoint ==xs {
+    @media (max-width: 480px) {
+      @content;
+    }
+  }
+
+  // Ultra Small Devices (360px and below)
+  @else if $breakpoint ==xxs {
+    @media (max-width: 375px) {
+      @content;
+    }
+  }
+
+  // Minimum Devices (320px and below)
+  @else if $breakpoint ==min {
+    @media (max-width: 320px) {
+      @content;
+    }
+  }
+}
+
+// common mixin component  //
+
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flex-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@mixin flex-around {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+@mixin flex ($direction, $justify, $align) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+@mixin rtl($property, $value) {
+  #{$property}-left: $value;
+
+  [dir="rtl"] & {
+    #{$property}-right: $value;
+    #{$property}-left: 0;
+  }
+}
+
+@mixin rtl-switch($property, $ltr, $rtl) {
+  #{$property}: $ltr;
+
+  [dir="rtl"] & {
+    #{$property}: $rtl;
+  }
+}
+
+
+@mixin rtl-position($left: auto, $right: auto) {
+  left: $left;
+  right: $right;
+
+  [dir="rtl"] & {
+    left: $right;
+    right: $left;
+  }
+}

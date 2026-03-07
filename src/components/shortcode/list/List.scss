@@ -1,0 +1,975 @@
+/*-----------------------------------
+ 
+ 
+    Template Name: Sitecore React Template
+    Version: 1.0.0
+    Author: Webstrot
+    Copyright: © 2026-27
+ 
+--------------------------------------- */
+
+@use "../../../styles/mixins/mixins" as *;
+
+/* ===============================
+   LIST COMMON SCSS
+================================ */
+
+.list_title {
+  font-size: var(--fs40);
+  font-weight: var(--fw700);
+  text-align: center;
+
+  p {
+    margin-top: 20px;
+  }
+}
+
+
+/* ===============================
+   LIST 1 – CSS
+================================ */
+
+.bg-wrapper {
+  background: var(--black-color);
+  width: var(--width100);
+
+  .list_wrapper {
+    max-width: 450px;
+    width: var(--width100);
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: slideDown var(--transition3);
+    font-family: var(--body);
+
+    padding: var(--p60) var(--p0);
+
+    h2 {
+      color: var(--white-color);
+    }
+
+    ul {
+      margin-top: var(--m60);
+
+      li {
+        background-color: var(--bg-light);
+        border: 1px solid var(--gray-color);
+        border-radius: var(--br6);
+        padding: var(--p16);
+        margin-bottom: var(--m16);
+        cursor: pointer;
+        font-weight: var(--fw700);
+        color: var(--black-color);
+        transition: var(--transition2);
+        position: relative;
+
+        a {
+          position: absolute;
+          right: var(--p16);
+          top: 50%;
+          transform: translateY(-50%);
+          color: var(--red-color);
+          text-decoration: none;
+          font-weight: var(--fw700);
+          display: none;
+        }
+
+        &.active {
+          color: var(--red-color);
+          margin-left: -20px;
+
+          a {
+            display: inline-block;
+          }
+        }
+
+        &:hover {
+          box-shadow: var(--boxShadow01);
+        }
+      }
+    }
+
+    /* ===============================
+   ANIMATION
+================================ */
+
+    @keyframes slideDown {
+      0% {
+        top: -150px;
+      }
+
+      40% {
+        top: 20px;
+      }
+
+      70% {
+        top: 10px;
+      }
+
+      100% {
+        top: var(--p16);
+      }
+    }
+  }
+}
+
+/* ===============================
+   LIST 2 – CSS
+================================ */
+
+.list-wrapper2 {
+  background-color: var(--bg-light);
+  border-radius: var(--br12);
+  margin: var(--mAuto);
+  font-family: var(--body);
+  padding: var(--p60) var(--p0);
+
+  .timeline {
+    position: relative;
+    padding-left: var(--p24);
+    margin-top: var(--m60);
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: var(--p10);
+      top: 0;
+      width: 2px;
+      height: 100%;
+      background-color: var(--blue-color);
+    }
+
+    .timeline-item {
+      position: relative;
+      display: flex;
+      gap: var(--p16);
+      margin-bottom: var(--m24);
+
+      .dot {
+        width: 14px;
+        height: 14px;
+        background-color: var(--white-color);
+        border: 2px solid var(--blue-color);
+        border-radius: var(--br50);
+        position: absolute;
+        left: -2px;
+        top: 6px;
+      }
+
+      .content {
+        background-color: var(--bg-color);
+        padding: var(--p16);
+        border-radius: var(--br10);
+        box-shadow: var(--boxShadow01);
+        width: var(--width100);
+
+        .time {
+          display: inline-block;
+          font-size: var(--fs12);
+          font-weight: var(--fw700);
+          color: var(--blue-color);
+          margin-bottom: var(--m8);
+        }
+
+        p {
+          line-height: var(--line-height-20);
+          color: var(--dark-gray);
+        }
+      }
+    }
+  }
+}
+
+/* ===============================
+   LIST 3 – CSS
+================================ */
+
+
+.list_wrapper3 {
+  min-height: 100vh;
+  background-color: var(--bg-color);
+  display: flex;
+  justify-content: center;
+  padding: var(--p60) var(--p0);
+  margin: var(--mAutoX);
+
+  .wrapper3_content {
+    text-align: center;
+
+    .list_title3 {
+      .subtitle {
+        font-size: var(--fs16);
+        color: var(--gray-color);
+        margin-top: var(--m20);
+      }
+    }
+
+    .music-list {
+      margin-top: var(--m60);
+
+      .music-item {
+        display: flex;
+        align-items: center;
+        gap: var(--p14);
+        background-color: var(--white-color);
+        border-radius: var(--br14);
+        padding: var(--p16) var(--p18);
+        margin-bottom: var(--m18);
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        cursor: pointer;
+        transition: var(--transition2);
+
+        &:hover {
+          transform: translateY(-8px);
+          box-shadow:
+            0px 20px 40px -10px rgba(0, 0, 0, 0.25),
+            0px 10px 20px -8px rgba(0, 0, 0, 0.15);
+        }
+
+        .rank {
+          width: 28px;
+          font-size: var(--fs18);
+          font-weight: var(--fw700);
+          color: var(--gray-color);
+          text-align: center;
+        }
+
+        .info {
+          text-align: left;
+
+          h3 {
+            font-size: var(--fs18);
+            font-weight: var(--fw700);
+            color: var(--black-color);
+          }
+
+          span {
+            font-size: var(--fs14);
+            color: var(--dark-gray);
+          }
+        }
+      }
+    }
+  }
+}
+
+/* ===============================
+   LIST 4 – CSS
+================================ */
+
+.list_wrapper4 {
+  background-color: var(--bottle-green-color);
+  padding: var(--p60) var(--p0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .skills-container {
+    background-color: var(--white-color);
+    max-width: 480px;
+    width: var(--width100);
+    padding-inline: var(--p30);
+    border-radius: var(--br16);
+    box-shadow: var(--boxShadow01);
+    padding: var(--p60);
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 20px;
+
+      h2 {
+        font-size: var(--fs20);
+        font-weight: var(--fw700);
+        color: var(--black-color);
+      }
+
+      a {
+        background: transparent;
+        border: 1px solid var(--white-color);
+        padding: var(--p8) var(--p14);
+        border-radius: var(--br8);
+        font-size: var(--fs14);
+        cursor: pointer;
+        transition: var(--transition2);
+        color: var(--white-color);
+        background-color: var(--primary-color);
+        transition: all 0.5s;
+        border: 1px solid var(--white-color);
+
+        &:hover {
+          color: var(--black-color);
+          background-color: var(--white-color);
+          border: 1px solid var(--primary-color);
+        }
+      }
+    }
+
+    .skills-list {
+      list-style: none;
+      margin-top: var(--m60);
+
+      .skill-card {
+        display: flex;
+        align-items: center;
+        border: 1px solid var(--white-color);
+        border-radius: var(--br10);
+        padding: var(--p18);
+        margin-bottom: var(--m16);
+        cursor: pointer;
+        transition: var(--transition2);
+        background-color: var(--white-color);
+
+        &:hover {
+          transform: translateY(-6px);
+          box-shadow: var(--boxShadow02);
+        }
+
+        .color-bar {
+          width: 4px;
+          height: 48px;
+          border-radius: var(--br4);
+          margin-right: var(--m16);
+        }
+
+        .content {
+          h3 {
+            font-size: var(--fs16);
+            font-weight: var(--fw700);
+            margin-bottom: var(--m4);
+            color: var(--black-color);
+          }
+
+          p {
+            font-size: var(--fs14);
+            color: var(--gray-color);
+          }
+        }
+      }
+    }
+  }
+}
+
+/* ===============================
+   LIST 5 – CSS
+================================ */
+
+.list_wrapper5 {
+  background: var(--white-color);
+  padding: var(--p60) var(--p0);
+
+  .board {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+
+    .contact-list {
+      width: var(--width60);
+
+      .header {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: var(--m60);
+        margin-top: var(--m0);
+        flex-wrap: wrap;
+        gap: 20px;
+
+        h2 {
+          font-size: var(--fs40);
+        }
+
+        button {
+          background: var(--bottle-green-color);
+          color: var(--white-color);
+          border: none;
+          padding: var(--p8) var(--p14);
+          cursor: pointer;
+        }
+      }
+
+      .contact-item {
+        padding: var(--p14);
+        border-left: 4px solid var(--bottle-green-color);
+        margin-bottom: var(--m18);
+        cursor: pointer;
+        transition: 0.3s;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+        &:hover {
+          background: var(--white-color);
+          transform: scale(1.03);
+        }
+
+        &.active {
+          background: var(--white-color);
+          transform: scale(1.05);
+        }
+      }
+    }
+
+    .contact-details {
+      width: var(--width40);
+      gap: 30px;
+      display: flex;
+      flex-direction: column;
+
+      h2 {
+        font-size: var(--fs40);
+      }
+
+      .form {
+        label {
+          font-size: var(--fs16);
+          margin-top: var(--m10);
+          display: block;
+        }
+
+        input,
+        textarea,
+        select {
+          width: var(--width100);
+          padding: var(--p8);
+          margin-top: var(--m6);
+        }
+
+        .save-button {
+          margin-top: var(--m30);
+
+          .save-btn {
+            background: var(--bottle-green-color);
+            color: var(--white-color);
+            border: none;
+            padding: var(--p10) var(--p20);
+            cursor: pointer;
+          }
+        }
+
+      }
+    }
+  }
+
+  .contact-list,
+  .contact-details {
+    background: var(--white-color);
+    border-radius: var(--br8);
+    padding: var(--p20);
+  }
+}
+
+/* ===============================
+   LIST 6 – CSS
+================================ */
+
+.list_wrapper6 {
+  background: var(--bg-color);
+  padding: var(--p60) var(--p0);
+
+  .career-header {
+    text-align: center;
+
+    p {
+      color: var(--gray-color);
+    }
+  }
+
+  .career-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 24px;
+    margin-top: var(--m60);
+
+    .career-card {
+      background: var(--white-color);
+      border-radius: var(--br14);
+      padding: var(--p20);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+      transition: transform 0.35s ease;
+
+      &:hover {
+        transform: translateY(-8px);
+      }
+
+      .card-header {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: var(--m18);
+
+        .icon {
+          width: 36px;
+          height: 36px;
+          border-radius: var(--br10);
+          background: var(--white-color);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: var(--fs18);
+        }
+
+        h3 {
+          font-size: var(--fs20);
+          font-weight: var(--fw600);
+        }
+      }
+
+      .role-list {
+        li {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: var(--p10) var(--p0);
+          border-bottom: 1px solid var(--white-color);
+          cursor: pointer;
+          transition: all 0.3s ease;
+
+          &:last-child {
+            border-bottom: none;
+          }
+
+          &:hover {
+            transform: translateX(6px);
+          }
+
+          span {
+            font-size: var(--fs16);
+          }
+
+          .count {
+            background: var(--white-color);
+            color: var(--blue-color);
+            font-size: var(--fs14);
+            padding: var(--p2) var(--p8);
+            border-radius: var(--br20);
+          }
+        }
+      }
+    }
+  }
+}
+
+/* ===============================
+   LIST 7 – CSS
+================================ */
+
+.list_wrapper7 {
+  margin: var(--mAutoX);
+  padding: var(--p60) var(--p0);
+
+  .list7 {
+    margin-top: var(--m60);
+
+    .list7_item {
+      display: flex;
+      align-items: center;
+      gap: var(--p14);
+      padding: var(--p16) var(--p20);
+      margin-bottom: var(--m12);
+      background-color: var(--bg-light);
+      border-radius: var(--br8);
+      cursor: pointer;
+      transition: var(--transition3);
+      overflow: hidden;
+
+      /* initial position */
+      .icon,
+      .text {
+        transition: var(--transition3);
+      }
+
+      .icon {
+        color: var(--green-color);
+        font-size: var(--fs16);
+        flex-shrink: 0;
+      }
+
+      .text {
+        font-size: var(--fs16);
+        color: var(--dark-gray);
+        transform: translateX(0);
+      }
+
+      &:hover {
+        background-color: var(--bg-color);
+
+        .text {
+          transform: translateX(12px);
+          color: var(--black-color);
+        }
+
+        .icon {
+          transform: translateX(6px);
+        }
+      }
+    }
+  }
+}
+
+/* ===============================
+   LIST 8 – CSS
+================================ */
+
+.list_wrapper8 {
+  background-color: var(--bg-color);
+  padding: var(--p60) var(--p0);
+
+  .container {
+    max-width: 480px;
+    margin: var(--mAutoX);
+
+    .list_title {
+      text-align: center;
+      color: var(--black-color);
+    }
+
+    .menu-list {
+      margin-top: var(--m60);
+      padding: 20px;
+
+      .menu-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        padding: var(--p20) var(--p0);
+        border-bottom: 1px solid var(--white-color);
+        transition: var(--transition2);
+
+        &:last-child {
+          border-bottom: none;
+        }
+
+        .left {
+          max-width: 75%;
+
+          h4 {
+            font-size: var(--fs20);
+            font-weight: var(--fw600);
+            color: var(--black-color);
+            display: flex;
+            align-items: center;
+            gap: var(--p8);
+
+            .tag {
+              font-size: var(--fs10);
+              font-weight: var(--fw600);
+              padding: var(--p2) var(--p6);
+              background-color: var(--primary-color);
+              color: var(--white-color);
+              border-radius: var(--br4);
+              line-height: 1;
+            }
+          }
+
+          p {
+            color: var(--gray-color);
+            line-height: var(--line-height-20);
+          }
+        }
+
+        .price {
+          font-size: var(--fs16);
+          font-weight: var(--fw600);
+          color: var(--black-color);
+          white-space: nowrap;
+        }
+
+        &:hover {
+          padding-left: var(--p10);
+        }
+      }
+    }
+  }
+}
+
+/* ===============================
+   LIST 9 – CSS
+================================ */
+
+.list_wrapper9 {
+  margin: var(--mAutoX);
+  padding: var(--p60) var(--p0);
+  display: flex;
+  justify-content: center;
+  background-color: var(--bg-color);
+
+  .ux-card {
+    background-color: var(--bg-light);
+    border-radius: var(--br8);
+    box-shadow: var(--boxShadow01);
+    overflow: hidden;
+
+    .top-bar {
+      height: 10px;
+      background-color: var(--primary-color);
+    }
+
+    .content {
+      padding: var(--p20);
+
+      .title {
+        font-family: var(--heading-font);
+        font-size: var(--fs18);
+        font-weight: var(--fw700);
+        color: var(--primary-color);
+        margin-bottom: var(--m8);
+      }
+
+      .underline {
+        display: block;
+        width: 40px;
+        height: 2px;
+        background-color: var(--primary-color);
+      }
+
+      .ux-list {
+        margin-top: var(--m60);
+
+        .ux-item {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          padding: var(--p14) var(--p16);
+          font-size: var(--fs16);
+          color: var(--dark-gray);
+          border-radius: var(--br20);
+          cursor: pointer;
+          transition: var(--transition2);
+          margin-bottom: var(--m8);
+
+          .arrow {
+            font-size: var(--fs18);
+            color: var(--gray-color);
+            transition: var(--transition2);
+          }
+
+          &.active {
+            border: 1px solid var(--primary-color);
+            color: var(--primary-color);
+
+            .arrow {
+              color: var(--primary-color);
+            }
+          }
+
+          &:hover {
+            background-color: var(--bg-color);
+
+            .arrow {
+              transform: translateX(4px);
+              color: var(--primary-color);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/* ===============================
+   LIST 10 – CSS
+================================ */
+
+.list_wrapper10 {
+  display: flex;
+  justify-content: center;
+  background-color: var(--bg-color);
+  padding: var(--p60) var(--p0);
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 580px;
+
+
+  .leaderboard-card {
+    max-width: 420px;
+    width: var(--width100);
+    background-color: var(--bg-light);
+    border-radius: var(--br12);
+    box-shadow: var(--boxShadow01);
+    overflow: hidden;
+    justify-content: center;
+    display: flex;
+    margin: var(--m0) auto;
+    flex-direction: column;
+
+    .leaderboard-header {
+      background: linear-gradient(135deg,
+          var(--blue-color),
+          var(--purple-color));
+      color: var(--white-color);
+      padding: var(--p20);
+      text-align: right;
+      position: relative;
+
+      .icon {
+        position: absolute;
+        left: var(--p20);
+        top: var(--p20);
+        font-size: var(--fs20);
+        opacity: 0.4;
+      }
+
+      h3 {
+        font-size: var(--fs26);
+        font-weight: var(--fw700);
+        letter-spacing: 2px;
+        margin-bottom: var(--m2);
+      }
+
+      p {
+        letter-spacing: 1px;
+        opacity: 0.8;
+      }
+    }
+
+    .leaderboard-list {
+      list-style: none;
+      padding: var(--p10);
+
+      .leader-item {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: var(--p12) var(--p14);
+        background-color: var(--bg-light);
+        border-radius: var(--br10);
+        margin-bottom: var(--m10);
+        cursor: pointer;
+        transition: var(--transition3);
+        box-shadow: var(--boxShadow02);
+
+        &:last-child {
+          margin-bottom: var(--m0);
+        }
+
+        .profile {
+          display: flex;
+          align-items: center;
+          gap: var(--p10);
+
+          img {
+            width: 38px;
+            height: 38px;
+            border-radius: var(--br50);
+            object-fit: cover;
+          }
+
+          .name {
+            font-size: var(--fs16);
+            font-weight: var(--fw600);
+            color: var(--black-color);
+          }
+        }
+
+        .amount {
+          font-size: var(--fs14);
+          font-weight: var(--fw700);
+          color: var(--green-color);
+        }
+
+        &:hover {
+          transform: scale(1.08);
+          z-index: 2;
+        }
+      }
+    }
+  }
+}
+
+
+/* ===============================
+   RESPONSIVE CSS
+================================ */
+
+
+@include responsive(tablet-sm) {
+  .list_wrapper5 .board {
+    flex-direction: column;
+  }
+
+  .list_wrapper5 .board .contact-list {
+    width: var(--width100);
+  }
+
+  .list_wrapper5 .board .contact-details {
+    width: var(--width100);
+  }
+
+  .list_title,
+  .list_wrapper5 .board .contact-list .header h2,
+  .list_wrapper5 .board .contact-details h2 {
+    font-size: var(--fs34);
+  }
+}
+
+
+@include responsive(mobile-sm) {
+
+  .bg-wrapper .list_wrapper h2,
+  .list_title,
+  .list_wrapper5 .board .contact-list .header h2,
+  .list_wrapper5 .board .contact-details h2 {
+    font-size: var(--fs30);
+  }
+}
+
+@include responsive(xs) {
+
+
+  .bg-wrapper .list_wrapper h2,
+  .list_title,
+  .list_wrapper5 .board .contact-list .header h2,
+  .list_wrapper5 .board .contact-details h2 {
+    font-size: var(--fs24);
+  }
+
+  .list_wrapper4 .skills-container {
+    padding: var(--p30);
+  }
+
+  .list_wrapper4 .skills-container .skills-list .skill-card {
+    padding: var(--p14);
+  }
+
+  .list_wrapper3 .wrapper3_content .music-list .music-item .info h3 {
+    font-size: var(--fs16);
+  }
+
+  .list_wrapper6 .career-grid .career-card .card-header h3,
+  .list_wrapper8 .container .menu-list .menu-item .left h4 {
+    font-size: var(--fs16);
+  }
+
+  .list-wrapper2 .timeline .timeline-item .content p,
+  .bg-wrapper .list_wrapper ul li,
+  .list_wrapper5 .board .contact-list .contact-item,
+  .list_wrapper6 .career-grid .career-card .role-list li span,
+  .list_wrapper7 .list7 .list7_item .text,
+  .list_wrapper8 .container .menu-list .menu-item .left p,
+  .list_wrapper9 .ux-card .content .ux-list .ux-item,
+  .list_wrapper10 .leaderboard-card .leaderboard-header p,
+  .list_wrapper10 .leaderboard-card .leaderboard-list .leader-item .profile .name,
+  .list_wrapper4 .skills-container .skills-list .skill-card .content h3,
+  .list_wrapper8 .container .menu-list .menu-item .price {
+    font-size: var(--fs14);
+  }
+
+  .list_wrapper10 .leaderboard-card .leaderboard-header h3 {
+    font-size: var(--fs20);
+  }
+}
+
+@include responsive(xxs) {
+
+  .bg-wrapper .list_wrapper h2,
+  .list_title,
+  .list_wrapper5 .board .contact-list .header h2,
+  .list_wrapper5 .board .contact-details h2 {
+    font-size: var(--fs22);
+  }
+}
