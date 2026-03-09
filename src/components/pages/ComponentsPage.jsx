@@ -211,7 +211,8 @@ import Blog, {
   BlogSectionTwo,
 } from "../shortcode/blog/Blog";
 
-import NewsLetter from "../shortcode/newsLetter/NewsLetter";
+
+import NewsLetter from "../shortcode/newsletter/Newsletter";
 
 import FeatureWithIconOne, {
   FeatureWithIconEight,
