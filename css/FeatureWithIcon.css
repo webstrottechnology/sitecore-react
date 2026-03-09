@@ -673,6 +673,95 @@
     transform: scale(1);
   }
 }
+/* ==============================
+   SitecoreinnerPageWhatWeDo css start
+============================== */
+.SitecoreinnerPageWhatWeDo {
+  width: var(--width100);
+  padding: var(--p60) var(--p0);
+  background: var(--white-color);
+}
+.SitecoreinnerPageWhatWeDo .mobileAppDesignHead {
+  margin-bottom: var(--m60);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  justify-content: center;
+  align-items: center;
+}
+.SitecoreinnerPageWhatWeDo .mobileAppDesignHead .subHeading {
+  display: inline-block;
+  font-size: var(--fs26);
+  font-weight: var(--fw600);
+  color: var(--orange-color);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.SitecoreinnerPageWhatWeDo .mobileAppDesignHead h4 {
+  font-size: var(--fs40);
+  font-weight: var(--fw600);
+  color: var(--black-color);
+}
+.SitecoreinnerPageWhatWeDo .row {
+  display: flex;
+  row-gap: 30px;
+}
+.SitecoreinnerPageWhatWeDo .innerPageWhatWeDoCard {
+  width: 100%;
+  height: 100%;
+  background-color: #f7fcfc;
+  padding: var(--p30) var(--p30);
+  border-radius: var(--br10);
+  text-align: center;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.SitecoreinnerPageWhatWeDo .innerPageWhatWeDoCard:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+.SitecoreinnerPageWhatWeDo .innerPageWhatWeDoCard .serviceIcon {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  color: var(--bottle-green-color);
+  border: 1px solid var(--bottle-green-color);
+  font-size: 30px;
+  transition: all 0.3s ease;
+}
+.SitecoreinnerPageWhatWeDo .innerPageWhatWeDoCard .serviceIcon svg {
+  font-size: 32px;
+}
+.SitecoreinnerPageWhatWeDo .innerPageWhatWeDoCard .serviceIcon:hover {
+  background: var(--bottle-green-color);
+  color: var(--white-color);
+}
+.SitecoreinnerPageWhatWeDo .innerPageWhatWeDoCard h5 {
+  font-size: var(--fs20);
+  font-weight: var(--fw600);
+  text-align: left;
+}
+.SitecoreinnerPageWhatWeDo .innerPageWhatWeDoCard h5 a {
+  color: var(--black-color);
+  transition: all 0.3s ease;
+}
+.SitecoreinnerPageWhatWeDo .innerPageWhatWeDoCard h5 a:hover {
+  color: var(--bottle-green-color);
+}
+.SitecoreinnerPageWhatWeDo .innerPageWhatWeDoCard p {
+  font-size: var(--fs16);
+  font-weight: var(--fw500);
+  line-height: 1.6;
+  color: var(--dark-gray);
+  text-align: left;
+}
+
 @media (max-width: 1024px) {
   .features-with-icon-three {
     padding: var(--p60) var(--p18);
@@ -729,6 +818,12 @@
   .features-with-icon-one .features-container {
     grid-template-columns: repeat(1, 1fr);
   }
+  .SitecoreinnerPageWhatWeDo .mobileAppDesignHead h4 {
+    font-size: 30px;
+  }
+  .SitecoreinnerPageWhatWeDo .mobileAppDesignHead .subHeading {
+    font-size: 22px;
+  }
 }
 @media (max-width: 576px) {
   .features-with-icon-two .features_container {
@@ -744,5 +839,14 @@
 @media (max-width: 480px) {
   .features-with-icon-five .features_container .feature-card {
     flex-wrap: wrap;
+  }
+  .SitecoreinnerPageWhatWeDo .innerPageWhatWeDoCard {
+    padding: 20px 20px;
+  }
+  .SitecoreinnerPageWhatWeDo .mobileAppDesignHead h4 {
+    font-size: 26px;
+  }
+  .SitecoreinnerPageWhatWeDo .mobileAppDesignHead .subHeading {
+    font-size: 18px;
   }
 }/*# sourceMappingURL=FeatureWithIcon.css.map */

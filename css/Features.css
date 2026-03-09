@@ -881,26 +881,25 @@
 /* =======================
    FEATURE 11
 ======================= */
-.about_wrapper {
+.AboutWrapperInformation {
   background-color: var(--bg-color);
   width: var(--width100);
   padding: var(--p60) var(--p0);
 }
-.about_wrapper .container {
-  width: var(--width90);
+.AboutWrapperInformation .container {
   margin: var(--mAutoX);
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 40px;
   align-items: center;
 }
-.about_wrapper .container .about_image img {
+.AboutWrapperInformation .container .about_image img {
   width: var(--width100);
   display: block;
   border-radius: var(--br10);
   object-fit: cover;
 }
-.about_wrapper .container .about_content .about_title h5 {
+.AboutWrapperInformation .container .about_content .about_title h5 {
   font-family: var(--heading-font);
   font-size: var(--fs14);
   color: var(--seaGreenColor);
@@ -908,24 +907,24 @@
   font-weight: var(--fw600);
   margin-bottom: var(--m10);
 }
-.about_wrapper .container .about_content .about_title h3 {
+.AboutWrapperInformation .container .about_content .about_title h3 {
   font-family: var(--heading-font);
   font-size: var(--fs34);
   font-weight: var(--fw800);
   margin: var(--m20) var(--m0) var(--m10);
 }
-.about_wrapper .container .about_content .about_title p {
+.AboutWrapperInformation .container .about_content .about_title p {
   font-family: var(--body);
   font-size: var(--fs14);
   color: #444;
   line-height: 1.6;
   margin: var(--m30) var(--m0);
 }
-.about_wrapper .container .about_content .about_list {
+.AboutWrapperInformation .container .about_content .about_list {
   list-style: none;
   padding: 0;
 }
-.about_wrapper .container .about_content .about_list li {
+.AboutWrapperInformation .container .about_content .about_list li {
   font-family: var(--body);
   font-size: var(--fs16);
   font-weight: var(--fw600);
@@ -934,7 +933,7 @@
   position: relative;
   padding-left: var(--p20);
 }
-.about_wrapper .container .about_content .about_list li::before {
+.AboutWrapperInformation .container .about_content .about_list li::before {
   content: "▶";
   position: absolute;
   left: 0;
@@ -943,23 +942,23 @@
   font-size: var(--fs16);
   font-weight: var(--fw700);
 }
-.about_wrapper .container .about_content .progress_wrapper {
+.AboutWrapperInformation .container .about_content .progress_wrapper {
   margin-top: var(--m50);
 }
-.about_wrapper .container .about_content .progress_wrapper .progress_item {
+.AboutWrapperInformation .container .about_content .progress_wrapper .progress_item {
   margin-bottom: var(--m30);
 }
-.about_wrapper .container .about_content .progress_wrapper .progress_item h5 {
+.AboutWrapperInformation .container .about_content .progress_wrapper .progress_item h5 {
   font-family: var(--heading-font);
   font-size: var(--fs18);
   font-weight: var(--fw700);
   margin: var(--m0) 0 var(--m10);
 }
-.about_wrapper .container .about_content .progress_wrapper .progress_item .progress_bar_wrapper {
+.AboutWrapperInformation .container .about_content .progress_wrapper .progress_item .progress_bar_wrapper {
   position: relative;
   width: var(--width100);
 }
-.about_wrapper .container .about_content .progress_wrapper .progress_item .progress_number {
+.AboutWrapperInformation .container .about_content .progress_wrapper .progress_item .progress_number {
   position: absolute;
   top: -22px;
   right: 0;
@@ -968,14 +967,14 @@
   font-weight: var(--fw700);
   color: var(--black-color);
 }
-.about_wrapper .container .about_content .progress_wrapper .progress_item .progress_bar {
+.AboutWrapperInformation .container .about_content .progress_wrapper .progress_item .progress_bar {
   width: var(--width100);
   height: 6px;
   background: #dcdcdc;
   border-radius: var(--br10);
   overflow: hidden;
 }
-.about_wrapper .container .about_content .progress_wrapper .progress_item .progress_fill {
+.AboutWrapperInformation .container .about_content .progress_wrapper .progress_item .progress_fill {
   height: 100%;
   background: var(--green-color02);
   border-radius: var(--br10);
@@ -987,6 +986,7 @@
    FEATURE 12
 ======================= */
 .feature12 {
+  width: var(--width100);
   padding: var(--p60) var(--p0);
   background: var(--bg-light);
 }
@@ -1067,6 +1067,73 @@
   opacity: 0.85;
 }
 
+/* =======================
+   FEATURE 13
+======================= */
+.connectBusiness {
+  width: var(--width100);
+  color: var(--white-color);
+}
+.connectBusiness .connectBusinessContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  height: 100%;
+}
+.connectBusiness .connectBusinessContainer .connectBusinessImage {
+  height: 100%;
+}
+.connectBusiness .connectBusinessContainer .connectBusinessImage img {
+  width: var(--width100);
+  height: 100%;
+  object-fit: cover;
+}
+.connectBusiness .connectBusinessContainer .connectBusinessContent {
+  background-image: url("../../../assets/images/inner-pages/sitecore-feature-img.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 100%;
+  padding: var(--p40);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.connectBusiness .connectBusinessContainer .connectBusinessContent .connectBusinessContactInner {
+  max-width: 600px;
+}
+.connectBusiness .connectBusinessContainer .connectBusinessContent .connectBusinessContactInner h2 {
+  font-size: var(--fs40);
+  font-weight: var(--fw700);
+  margin-bottom: var(--m20);
+}
+.connectBusiness .connectBusinessContainer .connectBusinessContent .connectBusinessContactInner p {
+  line-height: 1.7;
+  margin-bottom: var(--m30);
+  color: #cbd5db;
+}
+.connectBusiness .connectBusinessContainer .connectBusinessContent .connectBusinessContactInner .connectBusinessList {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+.connectBusiness .connectBusinessContainer .connectBusinessContent .connectBusinessContactInner .connectBusinessList ul {
+  list-style: none;
+  padding: 0;
+}
+.connectBusiness .connectBusinessContainer .connectBusinessContent .connectBusinessContactInner .connectBusinessList ul li {
+  margin-bottom: var(--m16);
+  font-size: var(--fs20);
+  cursor: pointer;
+  transition: 0.3s;
+}
+.connectBusiness .connectBusinessContainer .connectBusinessContent .connectBusinessContactInner .connectBusinessList ul li span {
+  padding-left: var(--p6);
+}
+.connectBusiness .connectBusinessContainer .connectBusinessContent .connectBusinessContactInner .connectBusinessList ul li:hover {
+  color: var(--green-color02);
+}
+
 /* ===============================
    RESPONSIVE
 ================================ */
@@ -1078,8 +1145,27 @@
   .features_wrapper6 .features6-right {
     width: 45%;
   }
+  .connectBusiness .connectBusinessContainer .connectBusinessContent .connectBusinessContactInner h2 {
+    font-size: var(--fs36);
+  }
+}
+@media (max-width: 1280px) {
+  .connectBusiness .connectBusinessContainer .connectBusinessContent .connectBusinessContactInner h2 {
+    font-size: var(--fs30);
+  }
+  .connectBusiness .connectBusinessContainer .connectBusinessContent .connectBusinessContactInner .connectBusinessList ul li {
+    font-size: var(--fs18);
+  }
+}
+@media (max-width: 1024px) {
+  .connectBusiness .connectBusinessContainer .connectBusinessContent .connectBusinessContactInner h2 {
+    font-size: var(--fs28);
+  }
 }
 @media (max-width: 991px) {
+  .connectBusiness .connectBusinessContainer {
+    grid-template-columns: 1fr;
+  }
   .features_wrapper6 .features6-container .features6-left img {
     height: 100%;
   }
@@ -1214,18 +1300,27 @@
   .features_wrapper8 .features8-container .features8-content h2 {
     font-size: var(--fs36);
   }
-  .about_wrapper .container .about_content .about_title h3 {
+  .AboutWrapperInformation .container .about_content .about_title h3 {
     font-size: var(--fs28);
   }
 }
 @media (max-width: 767px) {
+  .connectBusiness .connectBusinessContainer .connectBusinessContent .connectBusinessContactInner .connectBusinessList ul li {
+    font-size: var(--fs16);
+  }
+  .connectBusiness .connectBusinessContainer .connectBusinessContent .connectBusinessContactInner h2 {
+    font-size: var(--fs26);
+  }
   .feature10-cards {
     flex-direction: column;
   }
   .features_wrapper8 .features8-images .image-wrapper .floating-img {
     right: 0 !important;
   }
-  .about_wrapper .container {
+  .connectBusiness .connectBusinessContainer .connectBusinessContent .connectBusinessContactInner p {
+    font-size: var(--fs14);
+  }
+  .AboutWrapperInformation .container {
     grid-template-columns: 1fr;
   }
   .feature12-container {
@@ -1251,7 +1346,7 @@
   .features_wrapper8 .features8-container .features8-content h2 {
     font-size: var(--fs32);
   }
-  .about_wrapper .container .about_content .about_title h3 {
+  .AboutWrapperInformation .container .about_content .about_title h3 {
     font-size: var(--fs24);
   }
   .features-section .features-container .features-content .feature-item .text h4,
@@ -1271,6 +1366,12 @@
   }
 }
 @media (max-width: 576px) {
+  .connectBusiness .connectBusinessContainer .connectBusinessContent .connectBusinessContactInner .connectBusinessList ul li {
+    font-size: var(--fs14);
+  }
+  .connectBusiness .connectBusinessContainer .connectBusinessContent .connectBusinessContactInner h2 {
+    font-size: var(--fs22);
+  }
   .features4-title {
     font-size: var(--fs28);
     line-height: var(--line-height-42);
@@ -1288,7 +1389,7 @@
   .feature12 .feature12-container .feature12-left h2 {
     font-size: var(--fs28);
   }
-  .about_wrapper .container .about_content .about_title h3 {
+  .AboutWrapperInformation .container .about_content .about_title h3 {
     font-size: var(--fs24);
   }
   .features4-image img {
@@ -1343,6 +1444,12 @@
   }
 }
 @media (max-width: 480px) {
+  .connectBusiness .connectBusinessContainer .connectBusinessContent {
+    padding-inline: var(--p20);
+  }
+  .connectBusiness .connectBusinessContainer .connectBusinessContent .connectBusinessContactInner h2 {
+    font-size: var(--fs20);
+  }
   .features_wrapper4 .features4-container .features4-content .features4-title {
     line-height: var(--line-height-36);
   }
@@ -1373,14 +1480,17 @@
   .feature12 .feature12-container .feature12-left h2 {
     line-height: var(--line-height-38);
   }
-  .about_wrapper .container .about_content .about_title h3 {
+  .AboutWrapperInformation .container .about_content .about_title h3 {
     font-size: var(--fs22);
   }
-  .about_wrapper .container .about_content .progress_wrapper .progress_item h5 {
+  .AboutWrapperInformation .container .about_content .progress_wrapper .progress_item h5 {
     font-size: var(--fs18);
   }
 }
 @media (max-width: 375px) {
+  .connectBusiness .connectBusinessContainer .connectBusinessContent .connectBusinessContactInner h2 {
+    font-size: var(--fs18);
+  }
   .features_wrapper8 .features8-container .features8-images .image-wrapper .floating-img {
     width: 150px;
   }
@@ -1438,13 +1548,13 @@
   .feature12 .feature12-container .feature12-left h2 {
     font-size: var(--fs20);
   }
-  .about_wrapper .container .about_content .about_title h3 {
+  .AboutWrapperInformation .container .about_content .about_title h3 {
     font-size: var(--fs20);
   }
-  .about_wrapper .container .about_content .progress_wrapper .progress_item h5 {
+  .AboutWrapperInformation .container .about_content .progress_wrapper .progress_item h5 {
     font-size: var(--fs16);
   }
-  .about_wrapper .container .about_content .progress_wrapper .progress_item .progress_number {
+  .AboutWrapperInformation .container .about_content .progress_wrapper .progress_item .progress_number {
     font-size: var(--fs12);
   }
   .features_wrapper8 .features8-container .features8-content h2,

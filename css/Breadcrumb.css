@@ -519,10 +519,21 @@
   .breadcrumb_links a {
     font-size: 16px;
   }
+  .about-banner-breadcrumb {
+    padding: var(--p100) var(--p0) var(--p100) var(--p0);
+  }
+  .about-banner-breadcrumb .banner-content h1 {
+    font-size: 60px;
+  }
 }
 @media (max-width: 576px) {
   .about-banner-breadcrumb .banner-content h1 {
     font-size: 50px;
+  }
+}
+@media (max-width: 480px) {
+  .about-banner-breadcrumb .banner-content h1 {
+    font-size: 40px;
   }
 }
 @media (max-width: 375px) {

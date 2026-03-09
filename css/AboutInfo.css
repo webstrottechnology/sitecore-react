@@ -16,7 +16,7 @@
   background-size: cover;
 }
 .innerPagesAboutUs .innerPagesAboutUsInner .row {
-  align-items: center;
+  row-gap: 30px;
 }
 .innerPagesAboutUs .innerPagesAboutUsInner .commHeading1 {
   gap: 15px;
@@ -159,8 +159,11 @@
 
 /* ---------------- RESPONSIVE CSS ---------------- */
 @media (max-width: 1440px) {
-  .innerPagesAboutCircleItem .innerPagesAboutCircle a::before,
   .innerPagesAboutCircleItem .innerPagesAboutCircle a {
+    width: 380px;
+    height: 380px;
+  }
+  .innerPagesAboutCircleItem .innerPagesAboutCircle a::before {
     width: 380px;
     height: 380px;
   }
@@ -177,13 +180,27 @@
   }
 }
 @media (max-width: 1366px) {
-  .innerPagesAboutCircleItem .innerPagesAboutCircle a::before,
   .innerPagesAboutCircleItem .innerPagesAboutCircle a {
-    width: 350px;
-    height: 350px;
+    width: 340px;
+    height: 340px;
+  }
+  .innerPagesAboutCircleItem .innerPagesAboutCircle a::before {
+    width: 340px;
+    height: 340px;
   }
   .innerPagesAboutUs .innerPagesAboutUsInner .commHeading1 h2 {
     font-size: var(--fs30);
+  }
+  .innerPagesAboutCircleItem .innerPagesAboutCircle a .innerPagesAboutCircleInner {
+    width: 320px;
+    height: 320px;
+  }
+  .innerPagesAboutCircleItem {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
   }
 }
 @media (max-width: 1280px) {
@@ -240,7 +257,10 @@
   .innerPagesAboutUs .innerPagesAboutUsInner .innerPagesAboutContent .innerPagesAboutRow .innerPagesAboutContentInner .innerPagesAboutYearNum svg {
     height: 80px;
   }
-  .innerPagesAboutCircleItem .innerPagesAboutCircle a::before,
+  .innerPagesAboutCircleItem .innerPagesAboutCircle a::before {
+    width: 300px;
+    height: 300px;
+  }
   .innerPagesAboutCircleItem .innerPagesAboutCircle a {
     width: 300px;
     height: 300px;
@@ -254,13 +274,20 @@
   .innerPagesAboutUs .innerPagesAboutUsInner .innerPagesAboutContent .innerPagesAboutRow .borderRadiusRounded {
     height: 45px;
   }
+  .innerPagesAboutCircleItem .innerPagesAboutCircle a .innerPagesAboutCircleInner {
+    width: 270px;
+    height: 270px;
+  }
 }
 @media (max-width: 576px) {
   .innerPagesAboutUs .innerPagesAboutUsInner .innerPagesAboutContent .innerPagesAboutRow {
     flex-direction: column;
     align-items: start;
   }
-  .innerPagesAboutCircleItem .innerPagesAboutCircle a::before,
+  .innerPagesAboutCircleItem .innerPagesAboutCircle a::before {
+    width: 280px;
+    height: 280px;
+  }
   .innerPagesAboutCircleItem .innerPagesAboutCircle a {
     width: 280px;
     height: 280px;
