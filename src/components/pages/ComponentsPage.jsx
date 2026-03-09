@@ -236,13 +236,16 @@ import AlertOne, {
 } from "../shortcode/Alert/Alert";
 import ErrorPage from "../shortcode/404Pages/ErrorPage";
 import ComingSoon from "../shortcode/commingSoon/ComingSoon";
-import HistoricalFiction from "../shortcode/thubnails/historicalFiction";
+import HistoricalFiction from "../shortcode/thumbnails/historicalFiction";
 import AboutInfo from "../shortcode/aboutInfo/AboutInfo";
 import AboutTestimonial from "../shortcode/aboutTestimonial/AboutTestimonial";
 import AboutFeatures from "../shortcode/aboutFeatures/AboutFeatures";
 import AboutBrandStory from "../shortcode/aboutBrandStory/AboutBrandStory";
 import AboutVideo from "../shortcode/aboutVideo/AboutVideo";
 import Pagination from "../shortcode/pagination/Pagination";
+import BlogLeftAsideBox from "../shortcode/BlogLeftWrap/BlogLeftWrap";
+import BlogRightAsideBox from "../shortcode/BlogRightWrap/BlogRightWrap";
+import BlogSinglepage from "../shortcode/BlogMainPage/BlogSidebar";
 
 const ComponentsPage = () => {
   return (
@@ -371,6 +374,7 @@ const ComponentsPage = () => {
             </>
           }
         />
+
         <Route
           path="breadcrumb"
           element={
@@ -407,6 +411,7 @@ const ComponentsPage = () => {
             </>
           }
         />
+
         <Route
           path="teams"
           element={
@@ -475,6 +480,7 @@ const ComponentsPage = () => {
             </>
           }
         />
+
         <Route
           path="list"
           element={
@@ -492,6 +498,7 @@ const ComponentsPage = () => {
             </>
           }
         />
+
         <Route
           path="features"
           element={
@@ -530,6 +537,7 @@ const ComponentsPage = () => {
             </>
           }
         />
+
         <Route
           path="heading"
           element={
@@ -697,6 +705,32 @@ const ComponentsPage = () => {
           element={
             <>
               <Pagination />
+            </>
+          }
+        />
+        <Route
+          path="BlogLeftWrap"
+          element={
+            <>
+              <BlogLeftAsideBox />
+            </>
+          }
+        />
+
+        <Route
+          path="BlogRightWrap"
+          element={
+            <>
+              <BlogRightAsideBox />
+            </>
+          }
+        />
+
+        <Route
+          path="BlogMainPage"
+          element={
+            <>
+              <BlogSinglepage />
             </>
           }
         />

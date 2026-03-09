@@ -1,17 +1,29 @@
-import React, { useState,  useRef} from "react";
+import React, { useState, useRef } from "react";
 import "./Accordian.scss";
-import { FiChevronDown, FiChevronRight, FiChevronUp, FiEye, FiMinus, FiPlus } from "react-icons/fi";
+import {
+  FiChevronDown,
+  FiChevronRight,
+  FiChevronUp,
+  FiMinus,
+  FiPlus,
+} from "react-icons/fi";
 import { BiShareAlt } from "react-icons/bi";
 import { MdArrowOutward, MdOutlineDesktopWindows } from "react-icons/md";
-import { PiBellLight } from "react-icons/pi";
-import { VscGraphScatter } from "react-icons/vsc";
-import { data, dataEight, dataFive, dataFour, dataNine, dataSeven, dataSix, dataTen, dataThree, dataTwo } from "./AccordianData";
+import {
+  data,
+  dataEight,
+  dataFive,
+  dataFour,
+  dataNine,
+  dataSeven,
+  dataSix,
+  dataTen,
+  dataThree,
+  dataTwo,
+} from "./AccordianData";
 import { FaArrowRightLong } from "react-icons/fa6";
-
-
-
-
-
+import { AboutBannerBreadCrumb } from "../breadcrumb/Breadcrumb";
+import sitecoreBg from "../../../assets/images/sitecoreBreadCrumb_bg_img.png";
 
 /* ---------------- ACCORDION ONE ---------------- */
 
@@ -19,35 +31,38 @@ const Accordian = () => {
   const [active, setActive] = useState(null);
 
   return (
-    <div className="accordian-container">
-      <div className="accordian-box">
-        <h2>The Accordion</h2>
+    <>
+      <AboutBannerBreadCrumb title="Accordion" bgImage={sitecoreBg} />
+      <div className="accordian-container">
+        <div className="accordian-box">
+          <h2>The Accordion</h2>
 
-        <p className="description">
-          The accordion is a graphical control element comprising a vertically
-          stacked list of items.
-        </p>
+          <p className="description">
+            The accordion is a graphical control element comprising a vertically
+            stacked list of items.
+          </p>
 
-        {data.map((item, index) => (
-          <div
-            key={index}
-            className={`accordian-item ${active === index ? "active" : ""}`}
-          >
-            <button
-              className="accordian-header"
-              onClick={() => setActive(active === index ? null : index)}
+          {data.map((item, index) => (
+            <div
+              key={index}
+              className={`accordian-item ${active === index ? "active" : ""}`}
             >
-              <span className="icon">
-                {active === index ? <FiMinus /> : <FiPlus />}
-              </span>
-              {item.title}
-            </button>
+              <button
+                className="accordian-header"
+                onClick={() => setActive(active === index ? null : index)}
+              >
+                <span className="icon">
+                  {active === index ? <FiMinus /> : <FiPlus />}
+                </span>
+                {item.title}
+              </button>
 
-            <div className="accordian-body">{item.content}</div>
-          </div>
-        ))}
+              <div className="accordian-body">{item.content}</div>
+            </div>
+          ))}
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 /* ---------------- ACCORDION TWO ---------------- */
@@ -63,7 +78,7 @@ const AccordianTwo = () => {
     } else {
       if (active2 !== null) {
         const prevIndex = contentRefs.current.findIndex(
-          el => el.style.height !== "0px"
+          (el) => el.style.height !== "0px",
         );
         if (contentRefs.current[prevIndex]) {
           contentRefs.current[prevIndex].style.height = "0px";
@@ -118,7 +133,6 @@ const AccordianTwo = () => {
   );
 };
 
-
 /* ---------------- ACCORDION THREE ---------------- */
 
 const AccordianThree = () => {
@@ -139,8 +153,9 @@ const AccordianThree = () => {
         {dataThree.map((item, index) => (
           <div
             key={index}
-            className={`accordianThree-item ${activeIndex === index ? "active" : ""
-              }`}
+            className={`accordianThree-item ${
+              activeIndex === index ? "active" : ""
+            }`}
           >
             <div
               className="accordianThree-header"
@@ -148,11 +163,7 @@ const AccordianThree = () => {
             >
               <h4>{item.question}</h4>
               <span className="icon">
-                {activeIndex === index ? (
-                  <FiChevronDown />
-                ) : (
-                  <FiChevronRight />
-                )}
+                {activeIndex === index ? <FiChevronDown /> : <FiChevronRight />}
               </span>
             </div>
 
@@ -187,7 +198,11 @@ const AccordianFour = () => {
                 <div className="accordianFour-overlay">
                   <h3>{item.title}</h3>
                   <p>{item.description}</p>
-                  <a href="#"><BiShareAlt />{item.link}<MdArrowOutward /></a>
+                  <a href="#">
+                    <BiShareAlt />
+                    {item.link}
+                    <MdArrowOutward />
+                  </a>
                 </div>
               </div>
             ) : (
@@ -199,8 +214,6 @@ const AccordianFour = () => {
         ))}
       </div>
     </div>
-
-
   );
 };
 
@@ -219,8 +232,9 @@ const AccordionFive = () => {
       <div className="accordion-list">
         {dataFive.map((item, index) => (
           <div
-            className={`accordion-item ${activeIndex === index ? "active" : ""
-              }`}
+            className={`accordion-item ${
+              activeIndex === index ? "active" : ""
+            }`}
             key={index}
           >
             <div
@@ -245,21 +259,12 @@ const AccordionFive = () => {
                 <p>{item.para}</p>
 
                 {item.video && (
-                  <video
-                    src={item.video}
-                    muted
-                    loop
-                    controls
-                    playsInline
-                  />
+                  <video src={item.video} muted loop controls playsInline />
                 )}
 
-                {item.image && (
-                  <img src={item.image} alt="accordion visual" />
-                )}
+                {item.image && <img src={item.image} alt="accordion visual" />}
               </div>
             </div>
-
           </div>
         ))}
       </div>
@@ -317,8 +322,9 @@ const AccordionSeven = () => {
     <div className="accordionSeven">
       <h2>Discover Our Solutions</h2>
       <p className="subtitle">
-        Explore a world of possibilities with our comprehensive solutions.
-        Dive into the details of how our offerings can benefit you and your organization.
+        Explore a world of possibilities with our comprehensive solutions. Dive
+        into the details of how our offerings can benefit you and your
+        organization.
       </p>
 
       <div className="accordion-list">
@@ -335,7 +341,9 @@ const AccordionSeven = () => {
             <div className="accordion-body-7">
               <p>{item.desc}</p>
               {activeIndex === index && (
-                <a href="#" className="view-more">View more <FaArrowRightLong /></a>
+                <a href="#" className="view-more">
+                  View more <FaArrowRightLong />
+                </a>
               )}
             </div>
           </div>
@@ -358,8 +366,9 @@ const AccordianEight = () => {
       <div className="accordionEight-wrapper">
         {dataEight.map((item, index) => (
           <div
-            className={`accordion-item ${activeIndex === index ? "active" : ""
-              }`}
+            className={`accordion-item ${
+              activeIndex === index ? "active" : ""
+            }`}
             key={index}
           >
             <button className="accordion-header" onClick={() => toggle(index)}>
@@ -389,7 +398,6 @@ const AccordianNine = () => {
 
   return (
     <div className="accordion-nine">
-
       <div className="faq-header">
         <span className="badge">FAQ Section</span>
         <h2>Frequently Asked Questions</h2>
@@ -417,7 +425,7 @@ const AccordianNine = () => {
   );
 };
 
-
+/* ---------------- ACCORDION TEN ---------------- */
 const AccordionTen = () => {
   const [active, setActive] = useState(0);
 
@@ -462,4 +470,14 @@ const AccordionTen = () => {
 /* ---------------- EXPORTS ---------------- */
 
 export default Accordian;
-export { AccordianTwo, AccordianThree, AccordianFour, AccordionFive, AccordionSix, AccordionSeven, AccordianEight, AccordianNine, AccordionTen };
+export {
+  AccordianTwo,
+  AccordianThree,
+  AccordianFour,
+  AccordionFive,
+  AccordionSix,
+  AccordionSeven,
+  AccordianEight,
+  AccordianNine,
+  AccordionTen,
+};
