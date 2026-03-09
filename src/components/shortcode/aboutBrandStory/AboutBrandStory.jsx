@@ -6,7 +6,10 @@ import brandStoryImg from "../../../assets/images/inner-pages/aboutBrandStory-im
 
 const AboutBrandStory = () => {
   return (
-    <section className="innerPagesBrandStory"  style={{ "--brandStoryImg": `url(${brandStoryImg})` }}>
+    <section
+      className="innerPagesBrandStory"
+      style={{ "--brandStoryImg": `url(${brandStoryImg})` }}
+    >
       <div className="container">
         <div className="location-wrapper">
           {/* LEFT CONTENT */}
