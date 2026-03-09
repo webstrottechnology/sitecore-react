@@ -36,8 +36,8 @@ const App = () => {
         <Route path="/components/*" element={<ComponentsPage />} />
         <Route path="/contact" element={<ContactUs />} />
         <Route path="/blog-page" element={<BlogPage />} />
+        <Route path="/404" element={<ErrorPage />} />
         <Route path="/coming-soon" element={<ComingSoon />} />
-        <Route path="*" element={<ErrorPage />} />
       </Routes>
 
       {/* FOOTER ALWAYS */}
