@@ -1,0 +1,132 @@
+.blogRightArticles {
+
+    .latestNewsCardInner {
+        background: #fff;
+        border-radius: 6px;
+        margin-bottom: 30px;
+        overflow: hidden;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+    }
+
+    .latestNewsCardImg {
+        position: relative;
+
+        img {
+            width: 100%;
+            display: block;
+        }
+
+        iframe {
+            width: 100%;
+            height: 420px;
+            border: 0;
+        }
+    }
+
+    .latestNewsDate {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        background: #fb8500;
+        color: #fff;
+        padding: 8px 12px;
+        text-align: center;
+        border-radius: 4px;
+
+        h5 {
+            margin: 0;
+            font-size: 18px;
+        }
+
+        span {
+            font-size: 13px;
+        }
+    }
+
+    .latestNewsCardInnerContent {
+        padding: 25px;
+    }
+
+    .latestNewsList {
+        display: flex;
+        gap: 20px;
+        margin-bottom: 15px;
+
+        a {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            color: #777;
+            font-size: 14px;
+
+            svg {
+                color: #fb8500;
+            }
+
+            &:hover {
+                color: #fb8500;
+            }
+        }
+    }
+
+    .latestNewsTxt {
+
+        h4 {
+            font-size: 22px;
+            font-weight: 600;
+            margin-bottom: 10px;
+
+            a {
+                color: #111;
+                text-decoration: none;
+
+                &:hover {
+                    color: #fb8500;
+                }
+            }
+        }
+
+        p {
+            font-size: 15px;
+            color: #666;
+        }
+    }
+
+    .latestNewBtn {
+
+        margin-top: 20px;
+
+        a {
+            background: #fb8500;
+            color: #fff;
+            padding: 10px 25px;
+            border-radius: 30px;
+            text-decoration: none;
+            display: inline-block;
+            transition: 0.3s;
+
+            &:hover {
+                background: #d96f00;
+            }
+        }
+
+    }
+
+    .ipQuoteBlog {
+        background: #111;
+        color: #fff;
+        padding: 60px;
+        text-align: center;
+
+        p {
+            font-size: 22px;
+            font-weight: 600;
+        }
+
+        span {
+            font-size: 14px;
+            opacity: .8;
+        }
+    }
+
+}

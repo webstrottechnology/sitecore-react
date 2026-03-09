@@ -15,6 +15,7 @@ import Services_01 from "./components/pages/Services_01";
 import { FormEleven } from "./components/shortcode/forms/Form";
 import ContactUs from "./components/pages/ContactUs";
 import ServiceSingle from "./components/pages/ServiceSingle";
+import BlogPage from "./components/pages/blogPage";
 
 const App = () => {
   return (
@@ -36,6 +37,7 @@ const App = () => {
         <Route path="/login" element={<FormEleven />} />
         <Route path="/components/*" element={<ComponentsPage />} />
         <Route path="/Contact" element={<ContactUs />} />
+        <Route path="/blog-page" element={<BlogPage />} />
       </Routes>
 
       {/* FOOTER ALWAYS */}

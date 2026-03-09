@@ -12,14 +12,9 @@ import { alertDataEight } from "./AlertData";
 import { IoClose } from "react-icons/io5";
 
 // React Icons
-import {
-  FiCheckCircle,
-  FiAlertTriangle,
-  FiXCircle,
-} from "react-icons/fi";
+import { FiCheckCircle, FiAlertTriangle, FiXCircle } from "react-icons/fi";
 import { AiOutlineLoading3Quarters } from "react-icons/ai";
 import Alert from "react-bootstrap/Alert";
-
 
 const AlertOne = () => {
   const [alerts, setAlerts] = useState(alertDataOne);
@@ -68,10 +63,7 @@ const AlertTwo = () => {
   return (
     <section className="alert-wrapper-two">
       {alerts.map((item) => (
-        <article
-          key={item.id}
-          className={`g-alert g-alert--${item.type}`}
-        >
+        <article key={item.id} className={`g-alert g-alert--${item.type}`}>
           <div className="g-alert_body">
             <h5>{item.title}</h5>
             <p>{item.desc}</p>
@@ -111,9 +103,7 @@ const AlertThree = () => {
             <h4>{item.title}</h4>
             <p>{item.message}</p>
 
-            <button className="smart-alert_action">
-              {item.action}
-            </button>
+            <button className="smart-alert_action">{item.action}</button>
           </div>
 
           <button
@@ -132,7 +122,7 @@ const AlertFour = () => {
   const [alerts, setAlerts] = useState(alertDataFour);
 
   const handleClose = (id) => {
-    setAlerts(alerts.filter(alert => alert.id !== id));
+    setAlerts(alerts.filter((alert) => alert.id !== id));
   };
 
   return (
@@ -169,7 +159,7 @@ const AlertFive = () => {
   const [alerts, setAlerts] = useState(alertDataFive);
 
   const closeAlert = (id) => {
-    setAlerts(alerts.filter(item => item.id !== id));
+    setAlerts(alerts.filter((item) => item.id !== id));
   };
 
   return (
@@ -212,9 +202,7 @@ const AlertSix = () => {
         <div key={item.id} className={`status-alert ${item.type}`}>
           <div className="left-border" />
 
-          <div className="icon">
-            {iconMap[item.type]}
-          </div>
+          <div className="icon">{iconMap[item.type]}</div>
 
           <div className="content">
             <h4>{item.title}</h4>
@@ -223,16 +211,11 @@ const AlertSix = () => {
             <div className="meta">
               <span>{item.time}</span>
 
-              {item.linkText && (
-                <a href={item.linkUrl}>{item.linkText}</a>
-              )}
+              {item.linkText && <a href={item.linkUrl}>{item.linkText}</a>}
             </div>
           </div>
 
-          <button
-            className="close-btn"
-            onClick={() => closeAlert(item.id)}
-          >
+          <button className="close-btn" onClick={() => closeAlert(item.id)}>
             ×
           </button>
         </div>
@@ -243,27 +226,59 @@ const AlertSix = () => {
 
 const AlertSeven = () => {
   return (
-   <div className="alert-wrapper-Seven"> 
-    <div className="container">
-      <div className="inner_main_box">
-          <div className="alert alert-info alert-dismissible fade show" role="alert">
-              Information is saved.
-          <button type="button" className="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    <div className="alert-wrapper-Seven">
+      <div className="container">
+        <div className="inner_main_box">
+          <div
+            className="alert alert-info alert-dismissible fade show"
+            role="alert"
+          >
+            Information is saved.
+            <button
+              type="button"
+              className="btn-close"
+              data-bs-dismiss="alert"
+              aria-label="Close"
+            ></button>
           </div>
-          <div className="alert alert-danger alert-dismissible fade show" role="alert">
-              Data is not saved.
-          <button type="button" className="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+          <div
+            className="alert alert-danger alert-dismissible fade show"
+            role="alert"
+          >
+            Data is not saved.
+            <button
+              type="button"
+              className="btn-close"
+              data-bs-dismiss="alert"
+              aria-label="Close"
+            ></button>
           </div>
-          <div className="alert alert-warning alert-dismissible fade show" role="alert">
-              Your Session will expire in 5 minutes.
-          <button type="button" className="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+          <div
+            className="alert alert-warning alert-dismissible fade show"
+            role="alert"
+          >
+            Your Session will expire in 5 minutes.
+            <button
+              type="button"
+              className="btn-close"
+              data-bs-dismiss="alert"
+              aria-label="Close"
+            ></button>
           </div>
-          <div className="alert alert-success alert-dismissible fade show" role="alert">
-              All changes are saved successfully.
-          <button type="button" className="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+          <div
+            className="alert alert-success alert-dismissible fade show"
+            role="alert"
+          >
+            All changes are saved successfully.
+            <button
+              type="button"
+              className="btn-close"
+              data-bs-dismiss="alert"
+              aria-label="Close"
+            ></button>
           </div>
+        </div>
       </div>
-    </div>
     </div>
   );
 };
@@ -305,7 +320,12 @@ const AlertEight = () => {
 };
 
 export default AlertOne;
-export{
-    AlertTwo , AlertThree , AlertFour , AlertFive , AlertSix , AlertSeven , AlertEight
+export {
+  AlertTwo,
+  AlertThree,
+  AlertFour,
+  AlertFive,
+  AlertSix,
+  AlertSeven,
+  AlertEight,
 };
-
