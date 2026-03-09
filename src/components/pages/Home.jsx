@@ -8,8 +8,9 @@ import { Features11, Features12 } from "../shortcode/features/Feature";
 import Services, { WhyChooseUs } from "../shortcode/services/Services";
 import Youtube from "../shortcode/youtube/Youtube";
 import Newsletter from "../shortcode/newsletter/Newsletter";
-import { Testimonial11 } from "../shortcode/testimonial/Testimonial";
 import Blog from "../shortcode/blog/Blog";
+import { Testimonial11 } from "../shortcode/testimonial/Testimonial";
+
 const Home = () => {
   return (
     <>

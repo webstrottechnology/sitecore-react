@@ -244,8 +244,8 @@ import AboutBrandStory from "../shortcode/aboutBrandStory/AboutBrandStory";
 import AboutVideo from "../shortcode/aboutVideo/AboutVideo";
 import Pagination from "../shortcode/pagination/Pagination";
 import BlogLeftAsideBox from "../shortcode/BlogLeftWrap/BlogLeftWrap";
-import BlogRightAsideBox from "../shortcode/BlogRightWrap/BlogRightWrap";
 import BlogSinglepage from "../shortcode/BlogMainPage/BlogSidebar";
+import BlogRightAsideBox from "../shortcode/BlogRightWrap/BlogRightWrap";
 
 const ComponentsPage = () => {
   return (
