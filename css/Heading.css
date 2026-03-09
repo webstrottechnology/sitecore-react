@@ -20,6 +20,7 @@
 /* ---------------- HEADING ONE ---------------- */
 .heading_wrapper {
   text-align: center;
+  padding-top: var(--p60);
 }
 .heading_wrapper .heading_title {
   text-transform: uppercase;
@@ -303,4 +304,24 @@
   width: 50px;
   height: 2px;
   background-color: var(--light-gray);
+}
+
+@media (max-width: 767px) {
+  .heading7_wrapper h1 {
+    font-size: var(--fs60);
+  }
+}
+@media (max-width: 576px) {
+  .heading7_wrapper h1 {
+    font-size: var(--fs50);
+  }
+}
+@media (max-width: 480px) {
+  .heading7_wrapper h1 {
+    font-size: var(--fs40);
+  }
+  .heading_title h2 {
+    font-size: var(--fs24);
+    text-align: center;
+  }
 }/*# sourceMappingURL=Heading.css.map */

@@ -243,7 +243,7 @@
 .accordianThree-item {
   background: var(--white-color);
   border-radius: var(--br14);
-  padding: var(--p20) var(--p24);
+  padding: var(--p20) var(--p20);
   border: 1px solid var(--bg-color);
   transition: all 0.3s ease;
 }
@@ -1006,5 +1006,20 @@
   }
   .accordionFive .accordion-list .accordion-item.active .accordion-body {
     max-height: 600px;
+  }
+}
+@media (max-width: 480px) {
+  .accordianThree-item {
+    padding: 16px 10px;
+  }
+  .accordianThree-header {
+    gap: 10px;
+  }
+  .accordianThree-header h4 {
+    font-size: 16px;
+    max-width: 180px;
+  }
+  .accordianThree .accordianThree-card {
+    padding: var(--p0) var(--p10);
   }
 }/*# sourceMappingURL=Accordian.css.map */

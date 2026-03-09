@@ -1182,17 +1182,15 @@
   width: var(--width100);
   height: 100%;
   position: relative;
-  padding: var(--p100) var(--p0);
-}
-.team11-section .container {
-  max-width: 1600px !important;
+  padding: var(--p70) var(--p0);
 }
 .team11-section .team-inner-wrapper {
   width: var(--width100);
   display: flex;
   flex-wrap: wrap;
   gap: 24px;
-  align-items: flex-start;
+  align-items: center;
+  justify-content: center;
 }
 .team11-section .team-inner-wrapper .team-box-contnet {
   width: 47%;
@@ -1420,8 +1418,8 @@
 
 .team13-section {
   width: var(--width100);
-  padding: var(--p60) var(--p0);
-  background: var(--bg-color);
+  padding: var(--p80) var(--p0) var(--p40);
+  background: var(--white-color);
 }
 .team13-section .container {
   max-width: 1200px;
@@ -1456,9 +1454,10 @@
   margin-bottom: var(--m26);
 }
 .team13-section .team13-content .team13-social a {
-  width: 40px;
-  height: 40px;
+  width: 45px;
+  height: 45px;
   background: var(--white-color);
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   border-radius: 50%;
   display: flex;
   justify-content: center;
@@ -1553,6 +1552,11 @@
     grid-template-columns: 1fr;
   }
 }
+@media (max-width: 767px) {
+  .team11-section {
+    padding: 30px 0px 60px 0px;
+  }
+}
 @media (max-width: 576px) {
   .team3-section .container .section3-grid {
     grid-template-columns: 1fr;
@@ -1574,5 +1578,11 @@
   }
   .team13-section .team13-content h2 {
     font-size: 26px;
+  }
+  .team12-section {
+    padding: 60px 0px;
+  }
+  .team11-section .team-inner-wrapper .team-box-contnet .corprate-title h2 {
+    font-size: var(--fs24);
   }
 }/*# sourceMappingURL=Teams.css.map */

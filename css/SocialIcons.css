@@ -621,6 +621,20 @@
   .social2-wrapper .social2-list {
     gap: 30px;
   }
+  .social_wrapper9 ul li i {
+    width: 30px;
+    height: 30px;
+  }
+  .social_wrapper9 ul li {
+    width: 304px;
+  }
+  .social_wrapper8 .sticky-icon a {
+    width: 204px;
+  }
+  .social_wrapper8 .sticky-icon a i {
+    width: 30px;
+    height: 30px;
+  }
 }
 @media (max-width: 375px) {
   .social2-wrapper .social2-list {

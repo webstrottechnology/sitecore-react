@@ -80,4 +80,7 @@
   .error404-subtitle {
     font-size: var(--fs14);
   }
+  .error404-logo img {
+    max-width: 165px;
+  }
 }/*# sourceMappingURL=ErrorPage.css.map */
