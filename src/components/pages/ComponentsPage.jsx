@@ -211,8 +211,7 @@ import Blog, {
   BlogSectionTwo,
 } from "../shortcode/blog/Blog";
 
-
-import NewsLetter from "../shortcode/newsletter/Newsletter";
+import Newsletter from "../shortcode/newsLetter/NewsLetter";
 
 import FeatureWithIconOne, {
   FeatureWithIconEight,
@@ -594,7 +593,7 @@ const ComponentsPage = () => {
           path="newsLetter"
           element={
             <>
-              <NewsLetter />
+              <Newsletter />
             </>
           }
         />
@@ -697,7 +696,7 @@ const ComponentsPage = () => {
           path="thumbnails"
           element={
             <>
-              <HistoricalFiction/>
+              <HistoricalFiction />
             </>
           }
         />
