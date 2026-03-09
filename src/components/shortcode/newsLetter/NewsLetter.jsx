@@ -1,5 +1,5 @@
 import React from "react";
-import "./NewsLetter.scss";
+import "./Newsletter.scss";
 import arrowImg from "../../../assets/images/arrow.png";
 
 /* ---------------- NEWSLETTER ONE ---------------- */
