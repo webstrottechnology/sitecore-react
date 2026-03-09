@@ -32,12 +32,12 @@ const App = () => {
         <Route path="/team-single" element={<TeamSingle />} />
         <Route path="/services" element={<Services_01 />} />
         <Route path="/services-single" element={<ServiceSingle />} />
-        <Route path="/404" element={<ErrorPage />} />
-        <Route path="/coming-soon" element={<ComingSoon />} />
         <Route path="/login" element={<FormEleven />} />
         <Route path="/components/*" element={<ComponentsPage />} />
-        <Route path="/Contact" element={<ContactUs />} />
+        <Route path="/contact" element={<ContactUs />} />
         <Route path="/blog-page" element={<BlogPage />} />
+        <Route path="/coming-soon" element={<ComingSoon />} />
+        <Route path="*" element={<ErrorPage />} />
       </Routes>
 
       {/* FOOTER ALWAYS */}
