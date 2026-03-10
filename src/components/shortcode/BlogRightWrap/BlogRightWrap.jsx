@@ -12,7 +12,7 @@ const BlogRightAsideBox = () => {
         {blogArticles.map((blog) => (
           <div key={blog.id} className="col-md-12">
             <div className="latestNewsCardInner">
-              {/* IMAGE BLOG */}
+              {/* IMAGE */}
               {blog.type === "image" && (
                 <div className="latestNewsCardImg">
                   <Link to={blog.link}>
@@ -28,7 +28,7 @@ const BlogRightAsideBox = () => {
                 </div>
               )}
 
-              {/* YOUTUBE BLOG */}
+              {/* YOUTUBE */}
               {blog.type === "youtube" && (
                 <div className="latestNewsCardImg ipYoutube">
                   <iframe src={blog.video} title="youtube" allowFullScreen />
@@ -42,7 +42,98 @@ const BlogRightAsideBox = () => {
                 </div>
               )}
 
-              {/* QUOTE BLOG */}
+              {/* VIMEO */}
+              {blog.type === "vimeo" && (
+                <div className="latestNewsCardImg ipVimeo">
+                  <iframe
+                    src={blog.video}
+                    height="520"
+                    title="vimeo"
+                    allow="autoplay; fullscreen; picture-in-picture"
+                  />
+
+                  <div className="latestNewsDate">
+                    <Link to="#">
+                      <h5>{blog.date}</h5>
+                      <span>{blog.month}</span>
+                    </Link>
+                  </div>
+                </div>
+              )}
+
+              {/* AUDIO */}
+              {blog.type === "audio" && (
+                <div className="latestNewsCardImg ipSoundCloudAudio">
+                  <iframe
+                    height="300"
+                    src={blog.audio}
+                    allow="autoplay"
+                    title="audio"
+                  />
+
+                  <div className="latestNewsDate">
+                    <Link to="#">
+                      <h5>{blog.date}</h5>
+                      <span>{blog.month}</span>
+                    </Link>
+                  </div>
+                </div>
+              )}
+
+              {/* SLIDER */}
+              {blog.type === "slider" && (
+                <div className="latestNewsCardImg ipSlider">
+                  <div
+                    id={`carousel${blog.id}`}
+                    className="carousel slide"
+                    data-bs-ride="carousel"
+                  >
+                    <div className="carousel-inner">
+                      {blog.images.map((img, index) => (
+                        <div
+                          key={index}
+                          className={`carousel-item ${index === 0 ? "active" : ""}`}
+                        >
+                          <Link to={blog.link}>
+                            <img
+                              src={img}
+                              alt="slider"
+                              className="d-block w-100"
+                            />
+                          </Link>
+                        </div>
+                      ))}
+                    </div>
+
+                    <button
+                      className="carousel-control-prev"
+                      type="button"
+                      data-bs-target={`#carousel${blog.id}`}
+                      data-bs-slide="prev"
+                    >
+                      <span className="carousel-control-prev-icon"></span>
+                    </button>
+
+                    <button
+                      className="carousel-control-next"
+                      type="button"
+                      data-bs-target={`#carousel${blog.id}`}
+                      data-bs-slide="next"
+                    >
+                      <span className="carousel-control-next-icon"></span>
+                    </button>
+                  </div>
+
+                  <div className="latestNewsDate">
+                    <Link to="#">
+                      <h5>{blog.date}</h5>
+                      <span>{blog.month}</span>
+                    </Link>
+                  </div>
+                </div>
+              )}
+
+              {/* QUOTE */}
               {blog.type === "quote" && (
                 <div className="latestNewsCardImg ipQuoteBlog">
                   <Link to={blog.link}>
@@ -94,96 +185,6 @@ const BlogRightAsideBox = () => {
                       className="Temp-read-more Temp-read-more-bg-color"
                     >
                       <span>Read More</span>
-                    </Link>
-                  </div>
-                </div>
-              )}
-
-              {/* VIMEO */}
-              {blog.type === "vimeo" && (
-                <div className="latestNewsCardImg ipVimeo">
-                  <iframe
-                    src={blog.video}
-                    height="520"
-                    allow="autoplay; fullscreen; picture-in-picture"
-                    title="vimeo"
-                  ></iframe>
-
-                  <div className="latestNewsDate">
-                    <Link to="#">
-                      <h5>{blog.date}</h5>
-                      <span>{blog.month}</span>
-                    </Link>
-                  </div>
-                </div>
-              )}
-
-              {/* AUDIO */}
-              {blog.type === "audio" && (
-                <div className="latestNewsCardImg ipSoundCloudAudio">
-                  <iframe
-                    height="300"
-                    allow="autoplay"
-                    src={blog.audio}
-                  ></iframe>
-
-                  <div className="latestNewsDate">
-                    <Link to="#">
-                      <h5>{blog.date}</h5>
-                      <span>{blog.month}</span>
-                    </Link>
-                  </div>
-                </div>
-              )}
-
-              {/* SlIDER */}
-              {blog.type === "slider" && (
-                <div className="latestNewsCardImg ipSlider">
-                  <div
-                    id={`carousel${blog.id}`}
-                    className="carousel slide mb-0"
-                    data-bs-ride="carousel"
-                  >
-                    <div className="carousel-inner">
-                      {blog.images.map((img, index) => (
-                        <div
-                          key={index}
-                          className={`carousel-item ${index === 0 ? "active" : ""}`}
-                        >
-                          <Link to={blog.link}>
-                            <img
-                              src={img}
-                              alt="slider"
-                              className="d-block w-100"
-                            />
-                          </Link>
-                        </div>
-                      ))}
-                    </div>
-
-                    <button
-                      className="carousel-control-prev"
-                      type="button"
-                      data-bs-target={`#carousel${blog.id}`}
-                      data-bs-slide="prev"
-                    >
-                      <span className="carousel-control-prev-icon"></span>
-                    </button>
-
-                    <button
-                      className="carousel-control-next"
-                      type="button"
-                      data-bs-target={`#carousel${blog.id}`}
-                      data-bs-slide="next"
-                    >
-                      <span className="carousel-control-next-icon"></span>
-                    </button>
-                  </div>
-
-                  <div className="latestNewsDate">
-                    <Link to="#">
-                      <h5>{blog.date}</h5>
-                      <span>{blog.month}</span>
                     </Link>
                   </div>
                 </div>

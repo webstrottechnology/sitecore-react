@@ -1,0 +1,127 @@
+/*-----------------------------------
+ 
+ 
+    Template Name: Sitecore React Template
+    Version: 1.0.0
+    Author: Webstrot
+    Copyright: © 2026-27
+ 
+--------------------------------------- */
+
+@use "../../../styles/mixins/mixins" as *;
+
+
+.portfolioGallery {
+    padding: var(--p80) var(--p0);
+
+    .galleryItem {
+        position: relative;
+        border-radius: var(--br20);
+        overflow: hidden;
+
+        img {
+            border-radius: var(--br20);
+            width: var(--width100);
+            object-fit: cover;
+            border-radius: var(--br20);
+        }
+
+        .galleryText {
+            position: absolute;
+            bottom: 15px;
+            width: var(--width100);
+            text-align: center;
+            display: none;
+            padding: var(--p0) var(--p20);
+
+            p {
+                background: var(--temSitCoreBlueColor);
+                color: #fff;
+                padding: 12px 20px;
+                border-radius: 10px;
+                font-weight: 700;
+                font-size: var(--fs20);
+            }
+        }
+    }
+
+    /* side slides */
+    .swiper-slide {
+        transform: scale(0.85);
+        transition: 0.4s;
+    }
+
+    /* center slide */
+    .swiper-slide-active {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    /* text only center */
+    .swiper-slide-active .galleryText {
+        display: block;
+    }
+
+    .galleryNav {
+        gap: 50px;
+        width: 47%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 0 auto;
+        margin-top: 20px;
+        position: relative;
+        z-index: 2;
+
+        button {
+            border: none;
+            background: none;
+            font-weight: 600;
+            color: orange;
+            cursor: pointer;
+            font-size: var(--fs18);
+        }
+    }
+}
+
+@include responsive(tablet) {
+    .portfolioGallery .galleryNav {
+        width: 50%;
+    }
+}
+
+@include responsive(tablet-sm) {
+    .portfolioGallery .galleryNav {
+        width: 55%;
+    }
+}
+
+@include responsive(mobile) {
+    .portfolioGallery .galleryNav {
+        width: 65%;
+    }
+
+    .portfolioGallery .galleryItem .galleryText p {
+        font-size: var(--fs16);
+    }
+}
+
+@include responsive(mobile-sm) {
+    .portfolioGallery .galleryItem .galleryText p {
+        font-size: var(--fs14);
+    }
+
+    .portfolioGallery .galleryItem {
+        margin: var(--m0) var(--m20);
+    }
+
+    .portfolioGallery .galleryNav {
+        width: 80%;
+    }
+}
+
+@include responsive(xxs) {
+    .portfolioGallery .galleryItem {
+        margin: var(--m0) var(--m10);
+    }
+}

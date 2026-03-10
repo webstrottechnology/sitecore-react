@@ -1356,6 +1356,92 @@
 }
 
 
+/* src/components/PortfolioSection.scss */
+
+.innerPagePortfolioDetails {
+    padding: var(--p60) var(--p0);
+
+    .innerPagePortfolioDetailInner {
+        .row {
+            align-items: center;
+
+            .portfolioCategoryName {
+                h4 {
+                    font-size: var(--fs18);
+                    font-weight: var(--fw500);
+                    color: var(--orange-color);
+                    margin-bottom: var(--m16);
+                }
+            }
+
+            .ipPortfolioDetailTxt {
+                h2 {
+                    font-size: var(--fs40);
+                    font-weight: var(--fw600);
+                    margin-bottom: var(--m20);
+                    line-height: 1.3;
+                }
+
+                p {
+                    color: var(--dark-gray);
+                    margin-bottom: var(--m16);
+                    line-height: 1.6;
+                }
+            }
+
+            .viewWebsiteBtn {
+                margin-top: var(--m26);
+
+                a.btn {
+                    padding: var(--p8) var(--p40);
+                    font-size: var(--fs16);
+                    font-weight: var(--fw600);
+                    color: var(--white-color);
+                    background-color: var(--orange-color);
+                    border: none;
+                    border-radius: var(--br50);
+                    height: 50px;
+                    text-transform: uppercase;
+                    border: 1px solid var(--temSitCoreBlueColor);
+
+                    &:hover {
+                        background-color: var(--white-color);
+                    }
+
+                    span {
+                        display: flex;
+                    }
+                }
+            }
+
+            .ipPortfolioDetailImg {
+                padding: 20px;
+                position: relative;
+
+                img {
+                    max-width: 100%;
+                    border-radius: 10px;
+                    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+                    transition: transform 0.3s ease;
+                }
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    width: 40%;
+                    height: 100%;
+                    top: 0;
+                    right: 0;
+                    border-radius: 0px 20px 20px 0px;
+                    background: #FB8500;
+                    z-index: -1;
+                }
+            }
+        }
+    }
+}
+
+
 
 /* ===============================
    RESPONSIVE
@@ -1385,6 +1471,10 @@
     .connectBusiness .connectBusinessContainer .connectBusinessContent .connectBusinessContactInner .connectBusinessList ul li {
         font-size: var(--fs18);
     }
+
+    .innerPagePortfolioDetails .innerPagePortfolioDetailInner .row .ipPortfolioDetailTxt h2 {
+        font-size: var(--fs32);
+    }
 }
 
 @include responsive(tablet) {
@@ -1394,6 +1484,21 @@
 }
 
 @include responsive(tablet-sm) {
+    .innerPagePortfolioDetails .innerPagePortfolioDetailInner .row .ipPortfolioDetailTxt h2 {
+        font-size: var(--fs30);
+    }
+
+    .innerPagePortfolioDetails .innerPagePortfolioDetailInner .ipPortfolioDetailImg {
+        margin-top: var(--m40);
+    }
+
+    .innerPagePortfolioDetails {
+        .ipPortfolioDetailTxt {
+            h2 {
+                font-size: var(--fs28);
+            }
+        }
+    }
 
     .connectBusiness .connectBusinessContainer {
         grid-template-columns: 1fr;
@@ -1580,6 +1685,14 @@
 }
 
 @include responsive(mobile) {
+    .innerPagePortfolioDetails {
+        .ipPortfolioDetailTxt {
+            p {
+                font-size: var(--fs14);
+            }
+        }
+    }
+
     .connectBusiness .connectBusinessContainer .connectBusinessContent .connectBusinessContactInner .connectBusinessList ul li {
         font-size: var(--fs16);
     }
@@ -1657,6 +1770,19 @@
 }
 
 @include responsive(mobile-sm) {
+    .innerPagePortfolioDetails .innerPagePortfolioDetailInner .row .viewWebsiteBtn a.btn {
+        font-size: var(--fs14);
+        height: 40px;
+    }
+
+    .innerPagePortfolioDetails .innerPagePortfolioDetailInner .row .ipPortfolioDetailImg {
+        padding: var(--p10);
+    }
+
+    .innerPagePortfolioDetails .innerPagePortfolioDetailInner .row .ipPortfolioDetailTxt h2 {
+        font-size: var(--fs24);
+    }
+
     .connectBusiness .connectBusinessContainer .connectBusinessContent .connectBusinessContactInner .connectBusinessList ul li {
         font-size: var(--fs14);
     }
@@ -1753,9 +1879,14 @@
 }
 
 @include responsive(xs) {
-    .connectBusiness .connectBusinessContainer .connectBusinessContent{
+    .innerPagePortfolioDetails .innerPagePortfolioDetailInner .row .ipPortfolioDetailTxt h2 {
+        font-size: var(--fs22);
+    }
+
+    .connectBusiness .connectBusinessContainer .connectBusinessContent {
         padding-inline: var(--p20);
     }
+
     .connectBusiness .connectBusinessContainer .connectBusinessContent .connectBusinessContactInner h2 {
         font-size: var(--fs20);
     }

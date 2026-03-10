@@ -3,7 +3,12 @@ import Lightbox from "yet-another-react-lightbox";
 import "yet-another-react-lightbox/styles.css";
 import { motion, AnimatePresence } from "framer-motion";
 import "./Portfolio.scss";
-import { gallery2Data, gallery3Data, galleryData } from "./PortfolioData";
+import {
+  gallery2Data,
+  gallery3Data,
+  galleryData,
+  gallery4Data,
+} from "./PortfolioData";
 import { FaPlus, FaLink, FaSearch } from "react-icons/fa";
 
 const Portfolio1 = () => {
@@ -213,5 +218,59 @@ const Portfolio3 = () => {
   );
 };
 
+const Portfolio4 = () => {
+  const [activeTab, setActiveTab] = useState("all");
+
+  const currentData = gallery4Data.data[activeTab];
+
+  // merge all steps vertically
+  const images = [
+    ...(currentData?.step1 || []),
+    ...(currentData?.step2 || []),
+    ...(currentData?.step3 || []),
+  ];
+
+  return (
+    <section className="innerPagePortfolioColumn3">
+      <div className="container custom-container-lg">
+        <div className="ipPortfolioColumn3Inner">
+          <ul className="nav">
+            {gallery4Data.tabs.map((tab) => (
+              <li key={tab.id} className="nav-item">
+                <button
+                  className={`nav-link ${
+                    activeTab === tab.value ? "active" : ""
+                  }`}
+                  onClick={() => setActiveTab(tab.value)}
+                >
+                  {tab.name}
+                </button>
+              </li>
+            ))}
+          </ul>
+
+          <div className="gallery-main-wrapper">
+            {images.map((item, index) => (
+              <div className="portfolio_img_wrapper" key={index}>
+                <div className="portfolio_img">
+                  <img src={item} alt="portfolio" />
+
+                  <div className="portfolio_img_text">
+                    <span>
+                      <i className="fa fa-search"></i>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+
+
 export default Portfolio1;
-export { Portfolio2, Portfolio3 };
+export { Portfolio2, Portfolio3, Portfolio4 };
