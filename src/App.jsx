@@ -15,6 +15,7 @@ import Services_01 from "./components/pages/Services_01";
 import { FormEleven } from "./components/shortcode/forms/Form";
 import ContactUs from "./components/pages/ContactUs";
 import ServiceSingle from "./components/pages/ServiceSingle";
+import PortfolioDetails from "./components/pages/PortfolioDetails"
 import BlogPage from "./components/pages/BlogPage";
 
 const App = () => {
@@ -34,6 +35,8 @@ const App = () => {
         <Route path="/services-single" element={<ServiceSingle />} />
         <Route path="/login" element={<FormEleven />} />
         <Route path="/components/*" element={<ComponentsPage />} />
+        <Route path="/Contact" element={<ContactUs />} />
+        <Route path="/portfolio-details" element={<PortfolioDetails />} />
         <Route path="/contact" element={<ContactUs />} />
         <Route path="/blog-page" element={<BlogPage />} />
         <Route path="/404" element={<ErrorPage />} />

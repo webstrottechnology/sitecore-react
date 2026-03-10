@@ -10,7 +10,6 @@ import img9 from "../../../assets/images/portfolio/05.png";
 import img10 from "../../../assets/images/portfolio/06.png";
 import img11 from "../../../assets/images/portfolio/07.png";
 
-
 // src/components/portfolio/PortfolioData.js
 
 import port1 from "../../../assets/images/portfolio/port1.png";
@@ -26,16 +25,12 @@ import port10 from "../../../assets/images/portfolio/port10.png";
 import port11 from "../../../assets/images/portfolio/port11.png";
 import port12 from "../../../assets/images/portfolio/port12.png";
 
-
-
 export const galleryData = [
   { id: 1, img: img1, title: "Image 1" },
   { id: 2, img: img2, title: "Image 2" },
   { id: 3, img: img3, title: "Image 3" },
   { id: 4, img: img4, title: "Image 4" },
 ];
-
-
 
 export const gallery2Data = [
   { id: 1, img: img5 },
@@ -62,3 +57,67 @@ export const gallery3Data = [
   { id: 12, img: port12, category: "wp", title: "Frontier" },
 ];
 
+import column3Img1 from "../../../assets/images/portfolio/column3Img1.webp";
+import column3Img2 from "../../../assets/images/portfolio/column3Img2.webp";
+import column3Img3 from "../../../assets/images/portfolio/column3Img3.webp";
+import column3Img4 from "../../../assets/images/portfolio/column3Img4.webp";
+import column3Img5 from "../../../assets/images/portfolio/column3Img5.webp";
+import column3Img6 from "../../../assets/images/portfolio/column3Img6.webp";
+import column3Img7 from "../../../assets/images/portfolio/column3Img7.webp";
+import column3Img8 from "../../../assets/images/portfolio/column3Img8.webp";
+import column3Img9 from "../../../assets/images/portfolio/column3Img9.webp";
+import column3Img10 from "../../../assets/images/portfolio/column3Img10.webp";
+import column3Img11 from "../../../assets/images/portfolio/column3Img11.webp";
+import column3Img12 from "../../../assets/images/portfolio/column3Img12.webp";
+import column3Img13 from "../../../assets/images/portfolio/column3Img13.webp";
+import column3Img14 from "../../../assets/images/portfolio/column3Img14.webp";
+import column3Img15 from "../../../assets/images/portfolio/column3Img15.webp";
+import column3Img16 from "../../../assets/images/portfolio/column3Img16.webp";
+import column3Img17 from "../../../assets/images/portfolio/column3Img17.webp";
+
+export const gallery4Data = {
+  tabs: [
+    { id: 1, name: "All Projects", value: "all" },
+    { id: 2, name: "Cafe", value: "cafe" },
+    { id: 3, name: "Restaurant", value: "restaurant" },
+    { id: 4, name: "Bakery", value: "bakery" },
+    { id: 5, name: "Fast Food", value: "fastfood" },
+  ],
+
+  data: {
+    all: {
+      step1: [column3Img1, column3Img2, column3Img3, column3Img4, column3Img5, column3Img6],
+      step2: [column3Img4, column3Img5, column3Img6, column3Img7, column3Img8, column3Img9],
+      step3: [column3Img7, column3Img8, column3Img9, column3Img10, column3Img11, column3Img12],
+    },
+
+    cafe: {
+      step1: [column3Img1],
+      step2: [column3Img4],
+      step3: [column3Img7],
+      step3: [column3Img10],
+      step3: [column3Img17],
+      step3: [column3Img13],
+
+
+    },
+
+    restaurant: {
+      step1: [column3Img2],
+      step2: [column3Img5],
+      step3: [column3Img8],
+    },
+
+    bakery: {
+      step1: [column3Img3],
+      step2: [column3Img6],
+      step3: [column3Img9],
+    },
+
+    fastfood: {
+      step1: [column3Img1, column3Img3],
+      step2: [column3Img5],
+      step3: [column3Img7],
+    },
+  },
+};

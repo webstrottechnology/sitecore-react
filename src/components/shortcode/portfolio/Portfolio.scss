@@ -425,6 +425,114 @@
 
 // ++++++++++++++++ Gallary Three css End +++++++++++++++
 
+.innerPagePortfolioColumn3 {
+  padding: 80px 0;
+
+  .ipPortfolioColumn3Inner {
+
+    /* ---------- TABS ---------- */
+
+    ul.nav {
+      border-bottom: 1px solid #ddd;
+      justify-content: center;
+      margin-bottom: 40px;
+      gap: 20px;
+
+      .nav-link {
+        font-size: 20px;
+        font-weight: 600;
+        color: #111;
+        border: none;
+        background: transparent;
+        padding: 10px 5px;
+        position: relative;
+
+        &.active {
+          color: #fb8500;
+          border-bottom: 2px solid #fb8500;
+        }
+
+        &:hover {
+          color: #fb8500;
+        }
+      }
+    }
+
+    /* ---------- GALLERY GRID (MASONRY) ---------- */
+
+    .gallery-main-wrapper {
+      column-count: 3;
+      column-gap: 20px;
+    }
+
+    .gallery-column {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .portfolio_img_wrapper {
+      break-inside: avoid;
+      margin-bottom: 20px;
+    }
+
+    /* ---------- IMAGE BOX ---------- */
+
+    .portfolio_img {
+      position: relative;
+      overflow: hidden;
+      border-radius: 6px;
+
+      img {
+        width: 100%;
+        display: block;
+        transition: transform 0.4s ease;
+      }
+
+      /* ---------- HOVER ZOOM ---------- */
+
+      &:hover img {
+        transform: scale(1.08);
+      }
+
+      /* ---------- OVERLAY ---------- */
+
+      .portfolio_img_text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 80%;
+        height: 80%;
+        transform: translate(-50%, -50%) scale(0);
+        background: rgba(0, 0, 0, 0.75);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        opacity: 0;
+        transition: all 0.4s ease;
+
+        span {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+
+        i {
+          font-size: 60px;
+          color: #fb8500;
+        }
+      }
+
+      &:hover .portfolio_img_text {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+      }
+    }
+
+  }
+}
+
 
 // responsive css start 
 

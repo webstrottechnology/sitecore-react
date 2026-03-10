@@ -1,0 +1,93 @@
+@use "../../../styles/mixins/mixins" as *;
+
+// about-banner-breadcrumb css start //
+
+.about-banner-breadcrumb {
+    width: var(--width100);
+    height: 100%;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    padding: var(--p170) var(--p0) var(--p70) var(--p0);
+
+    .banner-content {
+
+        display: flex;
+        align-items: start;
+        justify-content: center;
+        flex-direction: column;
+        gap: 12px;
+        height: 100%;
+
+        h1 {
+            font-size: var(--fs70);
+            font-weight: var(--fw600);
+            color: var(--white-color);
+        }
+
+        .breadcrumb {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: var(--fs20);
+            background-color: transparent;
+            margin: 0;
+
+            .Title_link {
+                font-size: var(--fs20);
+                font-weight: var(--fw400);
+                color: var(--white-color);
+            }
+
+            span {
+                color: var(--white-color);
+            }
+
+            .divider {
+                opacity: 0.6;
+            }
+
+            .active {
+                color: var(--orange-color);
+                opacity: 1;
+            }
+        }
+    }
+}
+
+// responsive about-banner-breadcrumb css start //
+
+@include responsive(mobile) {
+    .about-banner-breadcrumb {
+        padding: var(--p100) var(--p0) var(--p100) var(--p0);
+    }
+
+    .about-banner-breadcrumb .banner-content h1 {
+        font-size: var(--fs60);
+    }
+}
+
+@include responsive(mobile-sm) {
+  .about-banner-breadcrumb .banner-content h1 {
+    font-size: var(--fs50);
+  }
+}
+
+
+@include responsive(xs) {
+  .about-banner-breadcrumb .banner-content h1 {
+    font-size: var(--fs40);
+  }
+}
+
+
+@include responsive(xxs) {
+  .about-banner-breadcrumb .banner-content h1 {
+    font-size: var(--fs38);
+  }
+
+  .about-banner-breadcrumb .banner-content .breadcrumb {
+    font-size: var(--fs18)
+  }
+}
