@@ -120,10 +120,10 @@ const Header_05 = () => {
               <Link to="#">
                 Blog <FiChevronDown />
               </Link>
-              <div className="mega-menu-box">
+              <div className="mega-menu-box dropdwonMenu">
                 <div>
                   <h4>With Sidebar</h4>
-                  <Link to="/blog-with-sidebar">Blog With Sidebar</Link>
+                  <Link to="/blog-page">Blog With Sidebar</Link>
                   <Link to="/image-post">Image Post</Link>
                   <Link to="/slider-post">Slider Post</Link>
                   <Link to="/youtube-post">Youtube Post</Link>
@@ -131,22 +131,6 @@ const Header_05 = () => {
                   <Link to="/audio-post">Audio Post</Link>
                   <Link to="/quote-post">Quote Post</Link>
                   <Link to="/text-post">Text Post</Link>
-                </div>
-
-                <div>
-                  <h4>Without Sidebar</h4>
-                  <Link to="/blog-without-sidebar">Blog Without Sidebar</Link>
-                  <Link to="/image-post">Image Post</Link>
-                  <Link to="/slider-post">Slider Post</Link>
-                  <Link to="/youtube-post">Youtube Post</Link>
-                  <Link to="/vimeo-post">Vimeo Post</Link>
-                  <Link to="/audio-post">Audio Post</Link>
-                  <Link to="/quote-post">Quote Post</Link>
-                  <Link to="/text-post">Text Post</Link>
-                </div>
-
-                <div className="megaMenuImg">
-                  <img src={MegaImg} alt="about" className="img-fluid" />
                 </div>
               </div>
             </li>

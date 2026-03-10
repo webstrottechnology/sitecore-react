@@ -37,6 +37,7 @@
   --alertTextColor4: #084298;
   --temBgBlueColor: #e9f5f8;
   --temSitCoreBlueColor: #219EBC;
+  --temSitecoreRamaColor: #08384a;
   /* font family*/
   --body: 'Lato', sans-serif;
   --heading-font: 'Montserrat', sans-serif;
@@ -171,6 +172,7 @@
   --p96: 96px;
   --p100: 100px;
   --p120: 120px;
+  --p140: 140px;
   --p170: 170px;
   --p270: 270px;
   --mAuto: auto;

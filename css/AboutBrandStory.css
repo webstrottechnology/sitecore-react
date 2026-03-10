@@ -14,7 +14,6 @@
   padding: var(--p60) 0;
   background-color: #fcf0e3;
   position: relative;
-  /* BOTTOM HEXAGON FADE IMAGE */
 }
 .innerPagesBrandStory::after {
   content: "";
@@ -25,7 +24,7 @@
   height: 300px;
   background: url("../../../assets/images/inner-pages/aboutBrandStory-img.png") no-repeat bottom center;
   background-size: cover;
-  opacity: 1.4;
+  opacity: 1;
   z-index: 0;
 }
 .innerPagesBrandStory .container {

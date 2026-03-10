@@ -101,6 +101,9 @@
 }
 .formOne-container-box .social-icons {
   margin: var(--m20) 0;
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 10px;
 }
 .formOne-container-box .social-icons a {
   border: 1px solid var(--gray-color);
@@ -1214,7 +1217,7 @@
   gap: 50px;
   align-items: center;
   position: relative;
-  z-index: 99;
+  z-index: 22;
 }
 .appointment_section .appointment_wrapper {
   width: var(--width100);
@@ -1490,10 +1493,40 @@
     font-size: var(--fs30);
   }
   .appointment_section {
-    padding: var(--p30) var(--p0);
+    padding: var(--p60) var(--p0);
   }
   .contact-section .contact-wrapper {
     grid-template-columns: 1fr;
+  }
+  .appointment_section .appointment_wrapper .left p {
+    text-align: center;
+    max-width: 100%;
+  }
+  .appointment_section .appointment_wrapper .left h2 {
+    text-align: center;
+    max-width: 100%;
+  }
+  .appointment_section .appointment_wrapper .left .tag {
+    display: block;
+    text-align: center;
+  }
+  .FormNine-wrapper .contact-card .contact-right .info-box {
+    border-radius: var(--br20);
+    padding: var(--p30) var(--p30);
+    max-width: 400px;
+  }
+  .formTwo-wrapper .formTwo-container .formInfo-box {
+    width: 100%;
+    padding: 30px;
+  }
+  .form-seven__container {
+    max-width: 100%;
+  }
+  .form-seven__right {
+    padding: var(--p26) var(--p10);
+  }
+  .form-seven__right h3 {
+    font-size: var(--fs32);
   }
 }
 @media (max-width: 768px) {
@@ -1525,61 +1558,6 @@
   .formFive-wrapper .formFive-login-card .login-right {
     width: var(--width100);
   }
-  .formSix-wrapper {
-    padding: 40px 15px;
-  }
-  /* Container */
-  .formSix-container-box {
-    width: 100%;
-    max-width: 420px;
-    height: auto;
-    flex-direction: column;
-    border-radius: 15px;
-  }
-  /* Sections */
-  .formSix-section,
-  .info-section {
-    width: 100%;
-    position: relative;
-  }
-  /* ================= INFO FIX ================= */
-  .info-section {
-    min-height: 200px;
-  }
-  .info-section .info {
-    position: relative !important;
-    inset: auto;
-    transform: none !important;
-    padding: 30px 25px;
-    width: 100%;
-    height: auto;
-    text-align: center;
-  }
-  /* ================= FORM FIX ================= */
-  .formSix-section {
-    min-height: auto;
-  }
-  .formSix-section .form {
-    position: relative;
-    inset: auto;
-    transform: none !important;
-    opacity: 1;
-    padding: 30px 25px;
-  }
-  /* Hide inactive form */
-  .formSix-section .form:not(.show) {
-    display: none;
-  }
-  /* ================= ACTIVE FIX ================= */
-  .formSix-container-box.active .loginSix,
-  .formSix-container-box.active .register {
-    transform: none !important;
-    opacity: 1;
-  }
-  .login-info,
-  .register-info {
-    transform: none !important;
-  }
   .formFive-wrapper {
     padding: var(--p50) var(--p20);
   }
@@ -1608,14 +1586,18 @@
 @media (max-width: 480px) {
   .formOne-container-box {
     border-radius: 20px;
-    min-height: auto;
+    min-height: 500px;
     padding: 30px 0;
+  }
+  .formOne-container-box .form_container {
+    height: 100%;
+    width: 100%;
   }
   /* Stack Layout */
   .form_container {
     width: 100%;
     position: relative;
-    height: auto;
+    height: 100%;
     transform: none !important;
   }
   .sign_in,

@@ -145,7 +145,7 @@
   overflow-y: auto;
   background: var(--temp1BlueColor);
   transition: 0.4s;
-  z-index: 9999;
+  z-index: 9999999;
 }
 .header_05_section .mobile-sidebar.show {
   left: 0;
@@ -169,12 +169,12 @@
   position: sticky;
   top: 0;
   background: var(--temp1BlueColor);
-  padding: var(--p26);
+  padding: var(--p0) var(--p26) var(--p26) var(--p26);
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   z-index: 10;
 }
 .header_05_section .mobile-sidebar .sidebar-logo img {
-  width: 180px;
+  width: 150px;
 }
 .header_05_section .mobile-sidebar ul {
   list-style: none;

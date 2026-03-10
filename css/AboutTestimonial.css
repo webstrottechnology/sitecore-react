@@ -11,9 +11,12 @@
 /* ---------------- ABOUT INNER PAGES TESTOMONIAL CSS ---------------- */
 .innerPagesTestimonial {
   padding: var(--p60) var(--p0);
-  background: #f3f3f3;
+  background: var(--white-color);
   overflow: hidden;
   text-align: center;
+}
+.innerPagesTestimonial .ourTestimonialHead {
+  margin-bottom: var(--p60);
 }
 .innerPagesTestimonial .ourTestimonialHead .subHeading {
   color: var(--orange-color);
@@ -29,7 +32,6 @@
 }
 .innerPagesTestimonial .testimonialSlider {
   position: relative;
-  padding: var(--p100) var(--p0);
 }
 .innerPagesTestimonial .testimonialSlider .swiper {
   overflow: visible;

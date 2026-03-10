@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import videoData from "./aboutVideoData";
-import "./aboutVideo.scss";
+import "./AboutVideo.scss";
 
 /* ---------------- ABOUT INNER VIDEO PAGE---------------- */
 
