@@ -15,8 +15,9 @@ import Services_01 from "./components/pages/Services_01";
 import { FormEleven } from "./components/shortcode/forms/Form";
 import ContactUs from "./components/pages/ContactUs";
 import ServiceSingle from "./components/pages/ServiceSingle";
-import PortfolioDetails from "./components/pages/PortfolioDetails"
+import PortfolioDetails from "./components/pages/PortfolioDetails";
 import BlogPage from "./components/pages/BlogPage";
+import BlogImagePage from "./components/pages/BlogImagePage";
 
 const App = () => {
   return (
@@ -39,6 +40,7 @@ const App = () => {
         <Route path="/portfolio-details" element={<PortfolioDetails />} />
         <Route path="/contact" element={<ContactUs />} />
         <Route path="/blog-page" element={<BlogPage />} />
+        <Route path="/image-post" element={<BlogImagePage />} />
         <Route path="/404" element={<ErrorPage />} />
         <Route path="/coming-soon" element={<ComingSoon />} />
       </Routes>

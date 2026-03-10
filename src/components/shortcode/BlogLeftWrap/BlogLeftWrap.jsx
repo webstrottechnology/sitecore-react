@@ -9,6 +9,7 @@ import {
   BlogpopularPosts,
   BlogTags,
   BlogsocialIcons,
+  Blognewsletter
 } from "./BlogLeftWrapData";
 
 const BlogLeftAsideBox = () => {
@@ -151,6 +152,19 @@ const BlogLeftAsideBox = () => {
             ))}
           </ul>
         </div>
+      </div>
+
+      {/* Newsletter */}
+      <div className="newsletterCard customCard fadein">
+        <h4>{Blognewsletter.title}</h4>
+
+        <p>{Blognewsletter.desc}</p>
+
+        <form className="newsletterForm">
+          <input type="email" placeholder={Blognewsletter.placeholder} />
+
+          <button type="submit">{Blognewsletter.button}</button>
+        </form>
       </div>
     </div>
   );

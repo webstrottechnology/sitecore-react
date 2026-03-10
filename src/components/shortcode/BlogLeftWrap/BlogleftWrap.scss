@@ -19,6 +19,7 @@
     h4 {
         font-weight: var(--fw700);
         font-size: var(--fs28);
+        color: var(--black-color);
 
         a {
             color: var(--black-color);
@@ -28,6 +29,11 @@
                 color: var(--orange-color);
             }
         }
+
+        &:hover {
+            color: var(--orange-color);
+        }
+
     }
 
     /* search */
@@ -48,7 +54,7 @@
 
             .input-group {
                 display: flex;
-                background: #fdf1e6;
+                background: var(--temSiteCoreLightOrangeColor);
                 border-radius: var(--br4);
                 overflow: hidden;
                 margin-top: var(--m10);
@@ -115,10 +121,6 @@
                     color: var(--white-color)
                 }
 
-                p {
-                    margin: 0;
-                }
-
                 span {
                     font-size: var(--fs16);
                     font-weight: var(--fw600);
@@ -130,10 +132,11 @@
     /* recent post */
 
     .recentPost {
+        width: var(--width100);
 
         .recentPostGroupList {
             border-bottom: 1px solid var(--grayColorShade1);
-            padding: 18px 0;
+            padding: var(--p18) var(--p0);
 
             &:last-child {
                 border-bottom: 0;
@@ -145,10 +148,10 @@
                 grid-template-columns: 90px 1fr;
                 gap: 15px;
                 align-items: center;
-                color: #333;
+                color: var(--black-color);
 
                 &:hover p {
-                    color: #fb8500;
+                    color: var(--orange-color);
                 }
             }
 
@@ -156,25 +159,27 @@
 
                 img {
                     width: 90px;
-                    height: 70px;
+                    height: 100%;
                     object-fit: cover;
-                    border-radius: 5px;
+                    border-radius: var(--br4);
                 }
 
             }
 
             .recentPostTxt {
+                display: inline-flex;
+                flex-direction: column;
+                gap: 10px;
 
                 p {
-                    font-size: 16px;
-                    font-weight: 600;
-                    margin-bottom: 5px;
+                    font-size: var(--fs18);
+                    font-weight: var(--fw600);
                     transition: 0.3s;
                 }
 
                 span {
-                    font-size: 13px;
-                    color: #777;
+                    font-size: var(--fs14);
+                    color: var(--gray-color);
                 }
 
             }
@@ -186,74 +191,119 @@
     /* tags */
 
     .popularTags {
+        width: var(--width100);
 
         .tagGroup {
-
             ul {
                 display: flex;
                 flex-wrap: wrap;
                 gap: 10px;
 
                 .tag {
-                    border: 1px solid #ddd;
-                    padding: 6px 18px;
-                    border-radius: 3px;
-                    font-size: 14px;
-                    color: #111;
+                    border: 1px solid var(--grayColorShade1);
+                    padding: var(--p6) var(--p18);
+                    border-radius: var(--br4);
+                    font-size: var(--fs16);
+                    color: var(--black-color);
                     transition: 0.3s;
 
                     &:hover {
-                        border-color: #fb8500;
-                        color: #fb8500;
+                        border-color: var(--orange-color);
+                        color: var(--orange-color);
                     }
 
                     &.tagActive {
-                        background: #fb8500;
-                        border-color: #fb8500;
-                        color: #fff;
+                        background: var(--orange-color);
+                        border-color: var(--orange-color);
+                        color: var(--white-color);
+
+                        &:hover {
+                            background-color: transparent;
+                            color: var(--orange-color);
+                        }
                     }
                 }
-
             }
-
         }
-
     }
 
     /* social icons */
 
     .ipSocialMedia {
+        width: var(--width100);
 
         .ipSocialMediaIcon {
-
             ul {
                 display: flex;
                 gap: 10px;
-            }
 
-            .tag {
-                width: 40px;
-                height: 40px;
-                border: 1px solid #ddd;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                border-radius: 4px;
-                transition: 0.3s;
+                li {
+                    .tag {
+                        width: 40px;
+                        height: 40px;
+                        border: 1px solid var(--orange-color);
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        border-radius: var(--br4);
+                        transition: 0.3s;
+                        background: transparent;
+                        padding: inherit;
 
-                svg {
-                    font-size: 18px;
+                        svg {
+                            width: 18px;
+                            height: 18px;
+                            transition: 0.3s;
+                            fill: var(--orange-color);
+                        }
+
+                        &:hover {
+                            background: var(--orange-color);
+                            color: var(--white-color);
+
+                            svg {
+                                fill: var(--white-color);
+                            }
+                        }
+                    }
                 }
-
-                &:hover {
-                    background: #fb8500;
-                    border-color: #fb8500;
-                    color: #fff;
-                }
             }
-
         }
-
     }
 
+    .newsletterCard {
+        width: var(--width100);
+
+        p {
+            font-size: var(--fs16);
+            color: var(--black-color);
+            line-height: 1.6;
+        }
+    }
+
+    .newsletterForm {
+        display: flex;
+        background: var(--temSiteCoreLightOrangeColor);
+        border-radius: 6px;
+        overflow: hidden;
+
+        input {
+            flex: 1;
+            border: none;
+            padding: var(--p14) var(--p0) var(--p14) var(--p16);
+            background: transparent;
+            font-size: var(--fs16);
+            outline: none;
+            color: var(--black-color);
+        }
+
+        button {
+            border: none;
+            background: transparent;
+            padding: 0 18px;
+            font-weight: 600;
+            color: #ff7a00;
+            cursor: pointer;
+        }
+    }
 }
