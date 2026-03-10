@@ -14,6 +14,7 @@ import {
   FeatureData11,
   FeatureData12,
   connectBusinessData,
+  portfolioDetails,
 } from "./featuresData";
 import featureImg from "../../../assets/images/feature-img1.jpg";
 import featureImg2 from "../../../assets/images/feature-img2.jpg";
@@ -622,6 +623,50 @@ const ConnectBusiness = () => {
   );
 };
 
+const PortfolioDetailsSection = () => {
+  return (
+    <section
+      className="w-100 clearfix innerPagePortfolioDetails"
+      id="innerPagePortfolioDetails"
+    >
+      <div className="container custom-container-lg">
+        <div className="innerPagePortfolioDetailInner">
+          <div className="row">
+            <div className="col-lg-6">
+              <div className="portfolioCategoryName">
+                <h4>{portfolioDetails.category}</h4>
+              </div>
+              <div className="ipPortfolioDetailTxt">
+                <h2>{portfolioDetails.title}</h2>
+                {portfolioDetails.description.map((desc, index) => (
+                  <p key={index}>{desc}</p>
+                ))}
+              </div>
+              <div className="viewWebsiteBtn d-flex">
+                <a
+                  href={portfolioDetails.buttonLink}
+                  className="btn medCommBtn borderRadiusRounded fadein Temp-read-more medCommBtn"
+                >
+                  <span>{portfolioDetails.buttonText}</span>
+                </a>
+              </div>
+            </div>
+            <div className="col-lg-6">
+              <div className="ipPortfolioDetailImg">
+                <img
+                  src={portfolioDetails.image}
+                  alt={portfolioDetails.alt}
+                  className="img-fluid"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
 export default Features;
 export {
   Features2,
@@ -636,4 +681,5 @@ export {
   Features11,
   Features12,
   ConnectBusiness,
+  PortfolioDetailsSection,
 };

@@ -137,6 +137,7 @@ import Features, {
   Features11,
   Features12,
   ConnectBusiness,
+  PortfolioDetailsSection
 } from "../shortcode/features/Feature";
 
 import Banner, {
@@ -192,6 +193,7 @@ import Teams, {
 import Portfolio1, {
   Portfolio2,
   Portfolio3,
+  Portfolio4
 } from "../shortcode/portfolio/Portfolio";
 import Header_01 from "../shortcode/Header/Header_01";
 import Header_02 from "../shortcode/Header/Header_02";
@@ -243,6 +245,7 @@ import AboutFeatures from "../shortcode/aboutFeatures/AboutFeatures";
 import AboutBrandStory from "../shortcode/aboutBrandStory/AboutBrandStory";
 import AboutVideo from "../shortcode/aboutVideo/AboutVideo";
 import Pagination from "../shortcode/pagination/Pagination";
+import SliderGallery from "../shortcode/sliderGallery/SliderGallery"
 
 const ComponentsPage = () => {
   return (
@@ -435,6 +438,7 @@ const ComponentsPage = () => {
               <Portfolio1 />
               <Portfolio2 />
               <Portfolio3 />
+              <Portfolio4 />
             </>
           }
         />
@@ -509,6 +513,7 @@ const ComponentsPage = () => {
               <Features11 />
               <Features12 />
               <ConnectBusiness />
+              <PortfolioDetailsSection/>
             </>
           }
         />
@@ -697,6 +702,15 @@ const ComponentsPage = () => {
           element={
             <>
               <Pagination />
+            </>
+          }
+        />
+
+         <Route
+          path="sliderGallery"
+          element={
+            <>
+              <SliderGallery />
             </>
           }
         />

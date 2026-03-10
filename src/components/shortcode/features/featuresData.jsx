@@ -78,7 +78,6 @@ export const features2Left = [
   },
 ];
 
-
 export const features2Right = [
   {
     id: 1,
@@ -395,7 +394,6 @@ export const FeatureData12 = {
 
 /* ---------------- FEATURE DATA THIRTEEN ---------------- */
 
-
 export const connectBusinessData = {
   title: "That Connect Your Business To Your Audience",
   description:
@@ -405,4 +403,21 @@ export const connectBusinessData = {
   listLeft: ["Clever System", "Smart Diversification", "Google Fonts"],
 
   listRight: ["Great Timing", "Credit Cards", "We Are Everywhere"],
+};
+
+/* ---------------- FEATURE DATA FOURTEEN ---------------- */
+
+import portfolioImg from "../../../assets/images/portfolio/portfolioDetailsImg.webp";
+
+export const portfolioDetails = {
+  category: "Food Recipe",
+  title: "Food Heaven Restaurant and Recipe HTML Template",
+  description: [
+    "Food Heaven is a stylish and modern HTML template designed for restaurants, cafes, and food bloggers who want to showcase their delicious cuisine and mouth-watering recipes online. With its clean and elegant design, Food Heaven offers a range of features and functionalities, including menu displays, recipe pages, online reservations, and social media integration. Whether you're looking to build a new website or update an existing one, Food Heaven is the perfect choice for food lovers who want to share their passion for great food with the world.",
+    "It is a complete bootstrap 5 based html item with all minimum required contents for a restaurant. The template is also fully documented and supported through comments section. For easier manipulation of SCSS files. The Food Heaven is scalable and more options & updates will be available in future based on buyers' request. We are really glad to introduce you Food Heaven. Thanks!",
+  ],
+  image: portfolioImg,
+  alt: "portfolio-img",
+  buttonText: "View Website",
+  buttonLink: "javascript:void(0);",
 };
