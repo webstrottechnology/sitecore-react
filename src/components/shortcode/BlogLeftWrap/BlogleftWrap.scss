@@ -1,28 +1,31 @@
 .blogLeftArticles {
-
-    a {
-        text-decoration: none;
-    }
+    width: var(--width100);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 
     .customCard {
-        background: #fff;
+        width: var(--width100);
+        background: var(--white-color);
         box-shadow: 0px 7px 32px rgba(0, 0, 0, 0.04);
-        border-radius: 5px;
-        padding: 30px;
-        margin-bottom: 20px;
+        border-radius: var(--br4);
+        padding: var(--p30) var(--p30);
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
     }
 
     h4 {
-        font-weight: 700;
-        font-size: 28px;
-        margin-bottom: 20px;
+        font-weight: var(--fw700);
+        font-size: var(--fs28);
 
         a {
-            color: #111;
+            color: var(--black-color);
             transition: 0.3s;
 
             &:hover {
-                color: #fb8500;
+                color: var(--orange-color);
             }
         }
     }
@@ -30,26 +33,32 @@
     /* search */
 
     .searchKeyword {
+        width: var(--width100);
 
         .searchKeywordInner {
+            width: var(--width100);
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
 
             h6 {
-                font-size: 16px;
-                margin-bottom: 20px;
+                font-size: var(--fs16);
+                color: var(--black-color);
             }
 
             .input-group {
                 display: flex;
                 background: #fdf1e6;
-                border-radius: 5px;
+                border-radius: var(--br4);
                 overflow: hidden;
+                margin-top: var(--m10);
 
                 .form-control {
                     border: 0;
                     height: 50px;
                     flex: 1;
-                    padding: 0 15px;
-                    font-size: 15px;
+                    padding: var(--p0) var(--p14);
+                    font-size: var(--fs16);
                     background: transparent;
 
                     &:focus {
@@ -64,17 +73,17 @@
                     display: flex;
                     align-items: center;
                     justify-content: center;
-                    background: #fb8500;
-                    color: #fff;
+                    background: var(--orange-color);
+                    color: var(--white-color);
                     cursor: pointer;
                     transition: 0.3s;
 
                     svg {
-                        font-size: 18px;
+                        font-size: var(--fs18);
                     }
 
                     &:hover {
-                        background: #e67300;
+                        background: var(--orange-color);
                     }
                 }
             }
@@ -84,28 +93,26 @@
     /* categories */
 
     .postCategories {
+        width: var(--width100);
 
         .list-group {
-
             .list-group-item {
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
                 border: 0;
-                border-bottom: 1px solid #e6e6e6;
-                padding: 12px 0;
-                color: #333;
+                border-bottom: 1px solid var(--grayColorShade1);
+                padding: var(--p12) var(--p12);
+                color: var(--black-color);
                 transition: 0.3s;
 
                 &:hover {
-                    color: #fb8500;
+                    color: var(--orange-color);
                 }
 
                 &.active {
-                    background: #fb8500;
-                    padding: 12px 15px;
-                    border-radius: 4px;
-                    color: #fff;
+                    background: var(--orange-color);
+                    color: var(--white-color)
                 }
 
                 p {
@@ -113,8 +120,8 @@
                 }
 
                 span {
-                    font-size: 14px;
-                    font-weight: 600;
+                    font-size: var(--fs16);
+                    font-weight: var(--fw600);
                 }
             }
         }
@@ -125,7 +132,7 @@
     .recentPost {
 
         .recentPostGroupList {
-            border-bottom: 1px solid #e6e6e6;
+            border-bottom: 1px solid var(--grayColorShade1);
             padding: 18px 0;
 
             &:last-child {
