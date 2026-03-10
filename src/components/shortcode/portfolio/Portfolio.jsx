@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import Lightbox from "yet-another-react-lightbox";
 import "yet-another-react-lightbox/styles.css";
 import { motion, AnimatePresence } from "framer-motion";
@@ -219,58 +219,294 @@ const Portfolio3 = () => {
 };
 
 const Portfolio4 = () => {
-  const [activeTab, setActiveTab] = useState("all");
+  const [activeTab, setActiveTab] = useState("AllProjects");
+  const [open, setOpen] = useState(false);
+  const [index, setIndex] = useState(0);
+
+  const gridRef = useRef(null);
 
   const currentData = gallery4Data.data[activeTab];
 
-  // merge all steps vertically
   const images = [
     ...(currentData?.step1 || []),
     ...(currentData?.step2 || []),
     ...(currentData?.step3 || []),
   ];
 
+  /* MASONRY HEIGHT FIX */
+
+  useEffect(() => {
+    const grid = gridRef.current;
+
+    if (!grid) return;
+
+    const rowHeight = 10;
+    const rowGap = 20;
+
+    const resizeAll = () => {
+      const items = grid.querySelectorAll(".gallery-item");
+
+      items.forEach((item) => {
+        const img = item.querySelector("img");
+
+        const resize = () => {
+          const height = img.getBoundingClientRect().height;
+
+          const span = Math.ceil((height + rowGap) / (rowHeight + rowGap));
+
+          item.style.gridRowEnd = "span " + span;
+        };
+
+        if (img.complete) resize();
+        else img.onload = resize;
+      });
+    };
+
+    resizeAll();
+
+    window.addEventListener("resize", resizeAll);
+
+    return () => window.removeEventListener("resize", resizeAll);
+  }, [images]);
+
   return (
-    <section className="innerPagePortfolioColumn3">
+    <section className="portfolio-img-gallery-wrapper4">
       <div className="container custom-container-lg">
-        <div className="ipPortfolioColumn3Inner">
-          <ul className="nav">
-            {gallery4Data.tabs.map((tab) => (
-              <li key={tab.id} className="nav-item">
-                <button
-                  className={`nav-link ${
-                    activeTab === tab.value ? "active" : ""
-                  }`}
-                  onClick={() => setActiveTab(tab.value)}
-                >
-                  {tab.name}
-                </button>
-              </li>
-            ))}
-          </ul>
 
-          <div className="gallery-main-wrapper">
-            {images.map((item, index) => (
-              <div className="portfolio_img_wrapper" key={index}>
+        {/* TABS */}
+
+        <ul className="nav">
+          {gallery4Data.tabs.map((tab) => (
+            <li key={tab.id}>
+              <button
+                className={
+                  activeTab === tab.value ? "nav-link active" : "nav-link"
+                }
+                onClick={() => setActiveTab(tab.value)}
+              >
+                {tab.name}
+              </button>
+            </li>
+          ))}
+        </ul>
+
+        {/* GALLERY */}
+
+        <div className="gallery-grid-style4" ref={gridRef}>
+          {images.map((img, i) => (
+            <div className="gallery-item" key={i}>
+              <div className="portfolio_img_wrapper">
                 <div className="portfolio_img">
-                  <img src={item} alt="portfolio" />
+                  <img
+                    src={img}
+                    alt="portfolio"
+                    onClick={() => {
+                      setIndex(i);
+                      setOpen(true);
+                    }}
+                  />
 
-                  <div className="portfolio_img_text">
-                    <span>
-                      <i className="fa fa-search"></i>
-                    </span>
+                  {/* Overlay */}
+
+                  <div className="portfolio_img_overlay">
+                    <div className="portfolio_img_text">
+                      <button
+                        className="lightbox-btn"
+                        onClick={() => {
+                          setIndex(i);
+                          setOpen(true);
+                        }}
+                      >
+                        <FaPlus />
+                      </button>
+
+                      <a href="#">
+                        <FaLink />
+                      </a>
+                    </div>
                   </div>
+
                 </div>
               </div>
-            ))}
-          </div>
+            </div>
+          ))}
         </div>
       </div>
+
+      {/* LIGHTBOX */}
+
+      <Lightbox
+        open={open}
+        close={() => setOpen(false)}
+        index={index}
+        slides={images.map((img) => ({ src: img }))}
+        on={{ view: ({ index }) => setIndex(index) }}
+      />
     </section>
   );
 };
 
+const PortfolioColumn4 = () => {
+
+  const [activeTab, setActiveTab] = useState("AllProjects");
+  const [open, setOpen] = useState(false);
+  const [index, setIndex] = useState(0);
+
+  const gridRef = useRef(null);
+
+  const currentData = gallery4Data.data[activeTab];
+
+  const images = [
+    ...(currentData?.step1 || []),
+    ...(currentData?.step2 || []),
+    ...(currentData?.step3 || []),
+  ];
+
+  /* Masonry Height Fix */
+
+  useEffect(() => {
+
+    const grid = gridRef.current;
+
+    if (!grid) return;
+
+    const rowHeight = 10;
+    const rowGap = 20;
+
+    const resizeAll = () => {
+
+      const items = grid.querySelectorAll(".gallery-item");
+
+      items.forEach((item) => {
+
+        const img = item.querySelector("img");
+
+        const resize = () => {
+
+          const height = img.getBoundingClientRect().height;
+
+          const span = Math.ceil((height + rowGap) / (rowHeight + rowGap));
+
+          item.style.gridRowEnd = "span " + span;
+
+        };
+
+        if (img.complete) resize();
+        else img.onload = resize;
+
+      });
+
+    };
+
+    resizeAll();
+
+    window.addEventListener("resize", resizeAll);
+
+    return () => window.removeEventListener("resize", resizeAll);
+
+  }, [images]);
+
+
+  return (
+
+    <section className="portfolio-img-gallery-wrapper-column4">
+
+      <div className="container custom-container-lg">
+
+        {/* Tabs */}
+
+        <ul className="nav">
+
+          {gallery4Data.tabs.map((tab) => (
+
+            <li key={tab.id}>
+
+              <button
+                className={activeTab === tab.value ? "nav-link active" : "nav-link"}
+                onClick={() => setActiveTab(tab.value)}
+              >
+                {tab.name}
+              </button>
+
+            </li>
+
+          ))}
+
+        </ul>
+
+
+        {/* Gallery */}
+
+        <div className="gallery-grid-style-column4" ref={gridRef}>
+
+          {images.map((img, i) => (
+
+            <div className="gallery-item" key={i}>
+
+              <div className="portfolio_img_wrapper">
+
+                <div className="portfolio_img">
+
+                  <img
+                    src={img}
+                    alt="portfolio"
+                    onClick={() => {
+                      setIndex(i);
+                      setOpen(true);
+                    }}
+                  />
+
+                  <div className="portfolio_img_overlay">
+
+                    <div className="portfolio_img_text">
+
+                      <button
+                        className="lightbox-btn"
+                        onClick={() => {
+                          setIndex(i);
+                          setOpen(true);
+                        }}
+                      >
+                        <FaPlus />
+                      </button>
+
+                      <a href="#">
+                        <FaLink />
+                      </a>
+
+                    </div>
+
+                  </div>
+
+                </div>
+
+              </div>
+
+            </div>
+
+          ))}
+
+        </div>
+
+      </div>
+
+
+      {/* Lightbox */}
+
+      <Lightbox
+        open={open}
+        close={() => setOpen(false)}
+        index={index}
+        slides={images.map((img) => ({ src: img }))}
+        on={{ view: ({ index }) => setIndex(index) }}
+      />
+
+    </section>
+
+  );
+
+};
 
 
 export default Portfolio1;
-export { Portfolio2, Portfolio3, Portfolio4 };
+export { Portfolio2, Portfolio3, Portfolio4, PortfolioColumn4 };
