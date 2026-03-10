@@ -719,6 +719,10 @@ const ComponentsPage = () => {
           element={
             <>
               <SliderGallery />
+              </>
+              }
+          />
+
         <Route
           path="BlogLeftWrap"
           element={
