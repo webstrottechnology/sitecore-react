@@ -211,7 +211,7 @@ import Blog, {
   BlogSectionTwo,
 } from "../shortcode/blog/Blog";
 
-import Newsletter from "../shortcode/newsletter/Newsletter";
+import Newsletter from "../shortcode/newsLetter/NewsLetter";
 
 import FeatureWithIconOne, {
   FeatureWithIconEight,
@@ -590,7 +590,7 @@ const ComponentsPage = () => {
         />
 
         <Route
-          path="newsletter"
+          path="newsLetter"
           element={
             <>
               <Newsletter />
