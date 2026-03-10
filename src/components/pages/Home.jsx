@@ -7,9 +7,9 @@ import Brand from "../shortcode/brand/Brand";
 import { Features11, Features12 } from "../shortcode/features/Feature";
 import Services, { WhyChooseUs } from "../shortcode/services/Services";
 import Youtube from "../shortcode/youtube/Youtube";
+import { Testimonial11 } from "../shortcode/testimonial/Testimonial";
 import Newsletter from "../shortcode/newsletter/Newsletter";
 import Blog from "../shortcode/blog/Blog";
-import { Testimonial11 } from "../shortcode/testimonial/Testimonial";
 
 const Home = () => {
   return (
