@@ -122,7 +122,6 @@ const Header_05 = () => {
               </Link>
               <div className="mega-menu-box dropdwonMenu">
                 <div>
-                  <h4>With Sidebar</h4>
                   <Link to="/blog-page">Blog With Sidebar</Link>
                   <Link to="/image-post">Image Post</Link>
                   <Link to="/slider-post">Slider Post</Link>
