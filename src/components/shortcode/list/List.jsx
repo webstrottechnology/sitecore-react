@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./list.scss";
+import "./List.scss";
 import {
   listData,
   listData2,
