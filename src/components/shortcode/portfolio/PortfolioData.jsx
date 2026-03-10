@@ -77,47 +77,86 @@ import column3Img17 from "../../../assets/images/portfolio/column3Img17.webp";
 
 export const gallery4Data = {
   tabs: [
-    { id: 1, name: "All Projects", value: "all" },
-    { id: 2, name: "Cafe", value: "cafe" },
-    { id: 3, name: "Restaurant", value: "restaurant" },
-    { id: 4, name: "Bakery", value: "bakery" },
-    { id: 5, name: "Fast Food", value: "fastfood" },
+    { id: 1, name: "All Projects", value: "AllProjects" },
+    { id: 2, name: "Branding", value: "Branding" },
+    { id: 3, name: "Concept", value: "Concept" },
+    { id: 4, name: "Figma", value: "Figma" },
+    { id: 5, name: "Adobe XD", value: "AdobeXD" },
+    { id: 6, name: "Logo Design", value: "LogoDesign" },
   ],
 
   data: {
-    all: {
-      step1: [column3Img1, column3Img2, column3Img3, column3Img4, column3Img5, column3Img6],
-      step2: [column3Img4, column3Img5, column3Img6, column3Img7, column3Img8, column3Img9],
-      step3: [column3Img7, column3Img8, column3Img9, column3Img10, column3Img11, column3Img12],
+    AllProjects: {
+      step1: [
+        column3Img1,
+        column3Img2,
+        column3Img3,
+        column3Img4,
+        column3Img5,
+        column3Img6,
+      ],
+      step2: [
+        column3Img7,
+        column3Img8,
+        column3Img9,
+        column3Img10,
+        column3Img11,
+        column3Img12,
+      ],
+      step3: [
+        column3Img13,
+        column3Img14,
+        column3Img15,
+        column3Img16,
+        column3Img17,
+      ],
     },
 
-    cafe: {
-      step1: [column3Img1],
-      step2: [column3Img4],
-      step3: [column3Img7],
-      step3: [column3Img10],
-      step3: [column3Img17],
-      step3: [column3Img13],
-
-
+    Branding: {
+      step1: [
+        column3Img4,
+        column3Img7,
+        column3Img10,
+        column3Img17,
+        column3Img13,
+      ],
     },
 
-    restaurant: {
-      step1: [column3Img2],
-      step2: [column3Img5],
-      step3: [column3Img8],
+    Concept: {
+      step1: [
+        column3Img2,
+        column3Img5,
+        column3Img8,
+        column3Img10,
+        column3Img9,
+        column3Img17,
+      ],
     },
 
-    bakery: {
-      step1: [column3Img3],
-      step2: [column3Img6],
-      step3: [column3Img9],
+    Figma: {
+      step1: [
+        column3Img3,
+        column3Img6,
+        column3Img13,
+        column3Img4,
+        column3Img9,
+        column3Img7,
+      ],
     },
 
-    fastfood: {
-      step1: [column3Img1, column3Img3],
-      step2: [column3Img5],
-      step3: [column3Img7],
+    AdobeXD: {
+      step1: [column3Img1, column3Img3, column3Img5, column3Img7],
+    },
+
+    LogoDesign: {
+      step1: [
+        column3Img14,
+        column3Img5,
+        column3Img7,
+        column3Img15,
+        column3Img17,
+        column3Img16,
+      ],
     },
   },
 };

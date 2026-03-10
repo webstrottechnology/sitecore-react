@@ -193,7 +193,8 @@ import Teams, {
 import Portfolio1, {
   Portfolio2,
   Portfolio3,
-  Portfolio4
+  Portfolio4,
+  PortfolioColumn4
 } from "../shortcode/portfolio/Portfolio";
 import Header_01 from "../shortcode/Header/Header_01";
 import Header_02 from "../shortcode/Header/Header_02";
@@ -444,6 +445,7 @@ const ComponentsPage = () => {
               <Portfolio2 />
               <Portfolio3 />
               <Portfolio4 />
+              <PortfolioColumn4/>
             </>
           }
         />
