@@ -1,132 +1,157 @@
 .blogRightArticles {
+    width: var(--width100);
+    height: 100%;
+    background-color: var(--white-color);
+
+    .blogWithSidebarRow {
+        row-gap: 20px;
+    }
 
     .latestNewsCardInner {
-        background: #fff;
-        border-radius: 6px;
-        margin-bottom: 30px;
-        overflow: hidden;
-        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
-    }
-
-    .latestNewsCardImg {
+        width: var(--width100);
+        padding: var(--p16);
+        background: var(--white-color);
+        border-radius: var(--br4);
         position: relative;
-
-        img {
-            width: 100%;
-            display: block;
-        }
-
-        iframe {
-            width: 100%;
-            height: 420px;
-            border: 0;
-        }
-    }
-
-    .latestNewsDate {
-        position: absolute;
-        top: 20px;
-        left: 20px;
-        background: #fb8500;
-        color: #fff;
-        padding: 8px 12px;
-        text-align: center;
-        border-radius: 4px;
-
-        h5 {
-            margin: 0;
-            font-size: 18px;
-        }
-
-        span {
-            font-size: 13px;
-        }
-    }
-
-    .latestNewsCardInnerContent {
-        padding: 25px;
-    }
-
-    .latestNewsList {
+        z-index: 2;
+        height: 100%;
         display: flex;
-        gap: 20px;
-        margin-bottom: 15px;
+        flex-direction: column;
+        box-shadow: 0px 7px 32px rgba(0, 0, 0, 0.04);
 
-        a {
-            display: flex;
-            align-items: center;
-            gap: 6px;
-            color: #777;
-            font-size: 14px;
+        .latestNewsCardImg {
+            position: relative;
 
-            svg {
-                color: #fb8500;
+            img {
+                width: var(--width100);
+                display: block;
             }
 
-            &:hover {
-                color: #fb8500;
+            iframe {
+                width: var(--width100);
+                height: 420px;
+                border: 0;
             }
-        }
-    }
 
-    .latestNewsTxt {
+            .latestNewsDate {
+                position: absolute;
+                bottom: -25px;
+                right: 20px;
 
-        h4 {
-            font-size: 22px;
-            font-weight: 600;
-            margin-bottom: 10px;
+                a {
+                    background: var(--orange-color);
+                    display: flex;
+                    flex-direction: column;
+                    width: 60px;
+                    height: 60px;
+                    color: var(--white-color);
+                    align-items: center;
+                    border-radius: 50px;
+                    border: 4px solid var(--white-color);
+                    text-decoration: none;
+                    justify-content: center;
 
-            a {
-                color: #111;
-                text-decoration: none;
+                    h5 {
+                        font-size: var(--fs16);
+                        color: var(--white-color);
+                    }
 
-                &:hover {
-                    color: #fb8500;
+                    span {
+                        font-size: var(--fs12);
+                        color: var(--white-color);
+                    }
                 }
             }
         }
 
-        p {
-            font-size: 15px;
-            color: #666;
-        }
-    }
+        .latestNewsCardInnerContent {
+            width: var(--width100);
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            padding: var(--p20) var(--p0);
 
-    .latestNewBtn {
+            .latestNewsList {
+                display: flex;
+                gap: 20px;
 
-        margin-top: 20px;
+                a {
+                    display: flex;
+                    align-items: center;
+                    gap: 6px;
+                    color: var(--dark-gray);
+                    font-size: var(--fs16);
 
-        a {
-            background: #fb8500;
-            color: #fff;
-            padding: 10px 25px;
-            border-radius: 30px;
-            text-decoration: none;
-            display: inline-block;
-            transition: 0.3s;
+                    svg {
+                        color: var(--orange-color);
+                    }
 
-            &:hover {
-                background: #d96f00;
+                    &:hover {
+                        color: var(--orange-color);
+                    }
+                }
+            }
+
+            .latestNewsTxt {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+
+                h4 {
+                    font-size: var(--fs26);
+                    font-weight: var(--fw600);
+
+                    a {
+                        color: var(--black-color);
+
+                        &:hover {
+                            color: #fb8500;
+                        }
+                    }
+                }
+
+                p {
+                    font-size: var(--fs18);
+                    color: var(--dark-gray);
+                    font-weight: var(--fw400);
+                }
+            }
+
+            .latestNewBtn {
+                margin-top: var(--m10);
             }
         }
-
     }
 
     .ipQuoteBlog {
-        background: #111;
-        color: #fff;
-        padding: 60px;
-        text-align: center;
+        background: var(--orange-color);
+        color: var(--white-color);
+        padding: var(--p40);
+        border-radius: var(--br10);
 
-        p {
-            font-size: 22px;
-            font-weight: 600;
-        }
+        .ipQuote {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
 
-        span {
-            font-size: 14px;
-            opacity: .8;
+            p {
+                font-size: var(--fs42);
+                color: var(--white-color);
+                font-weight: var(--fw600);
+                text-align: center;
+            }
+
+            .ipAwesomeAuthor {
+                display: flex;
+                justify-content: space-between;
+
+                span {
+                    font-size: var(--fs16);
+                    color: var(--white-color);
+                    font-weight: var(--fw400);
+                }
+            }
         }
     }
-
 }
