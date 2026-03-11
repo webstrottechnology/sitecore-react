@@ -8,6 +8,7 @@ const BlogPageCategory = () => {
     <>
       <AboutBannerBreadCrumb title="Blog With Sidebar" bgImage={sitecoreBg} />
       <BlogSinglepage />
+      
     </>
   );
 };
