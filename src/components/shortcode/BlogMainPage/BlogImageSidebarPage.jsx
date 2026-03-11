@@ -1,6 +1,8 @@
 import React from "react";
 import "./SitecoreBlogPage.scss";
 import BlogLeftWrap from "../BlogLeftWrap/BlogLeftWrap";
+import BlogImageSidebarSection from "../BlogSingleWrap/BlogImageSidebar";
+import { FormFourteen } from "../forms/Form";
 
 const BlogImageSidebarPage = () => {
   return (
@@ -9,7 +11,10 @@ const BlogImageSidebarPage = () => {
         <div className="blogSingleInner">
           <div className="row">
             {/* Left Side */}
-            <div className="col-lg-8"></div>
+            <div className="col-lg-8">
+              <BlogImageSidebarSection />
+              <FormFourteen />
+            </div>
 
             {/* Right Side */}
             <div className="col-lg-4">

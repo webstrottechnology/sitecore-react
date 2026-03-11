@@ -133,7 +133,7 @@ p {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: var(--p10) var(--p22);
+  padding: var(--p10) var(--p40);
   border: 1px solid var(--orange-color);
   border-radius: var(--br26);
   color: var(--orange-color);
@@ -171,9 +171,10 @@ p {
 
   &.Temp-read-more-bg-color {
     background-color: var(--orange-color);
-     span{
-       color:var(--white-color);
-     }
+
+    span {
+      color: var(--white-color);
+    }
   }
 
   &:hover {
