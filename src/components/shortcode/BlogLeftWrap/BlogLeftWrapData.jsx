@@ -25,19 +25,19 @@ export const BlogrecentPosts = [
   {
     img: thumb1,
     title: "Lorem Ipsum is simply dummy text of the printing",
-    date: "05 May 2024",
+    date: "05 May2026",
     link: "/blog/post-1",
   },
   {
     img: thumb2,
     title: "Use our free Lorem Ipsum Generator if you are looking",
-    date: "05 May 2024",
+    date: "05 May2026",
     link: "/blog/post-2",
   },
   {
     img: thumb3,
     title: "Etiam eu ultrices lacus. Suspendisse id tincidunt.",
-    date: "05 May 2024",
+    date: "05 May2026",
     link: "/blog/post-3",
   },
 ];
@@ -46,19 +46,19 @@ export const BlogpopularPosts = [
   {
     img: thumb4,
     title: "Lorem Ipsum is simply dummy text of the printing",
-    date: "05 May 2024",
+    date: "05 May2026",
     link: "/blog/post-4",
   },
   {
     img: thumb5,
     title: "Use our free Lorem Ipsum Generator if you are looking",
-    date: "05 May 2024",
+    date: "05 May2026",
     link: "/blog/post-5",
   },
   {
     img: thumb6,
     title: "Etiam eu ultrices lacus. Suspendisse id tincidunt.",
-    date: "05 May 2024",
+    date: "05 May2026",
     link: "/blog/post-6",
   },
 ];

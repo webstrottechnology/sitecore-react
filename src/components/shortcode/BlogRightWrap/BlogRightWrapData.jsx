@@ -13,7 +13,7 @@ export const blogArticles = [
     date: "25",
     month: "Mar",
 
-    title: "Navigating Change: Strategies for Corporate Resilience in 2024",
+    title: "Navigating Change: Strategies for Corporate Resilience in2026",
     desc: "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
 
     author: "admin",
