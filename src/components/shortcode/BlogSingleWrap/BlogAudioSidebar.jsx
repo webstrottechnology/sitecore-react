@@ -7,18 +7,32 @@ import {
   tags,
   socialIcons,
   comments,
+  blogAudioDetail,
 } from "./BlogSingleDataSidebar";
 
-const BlogImageSidebarSection = () => {
+const BlogAudioSidebarSection = () => {
   return (
     <div className="BlogSinglePagesSection">
       <div className="latestNewsCardInner">
-        {/* Image */}
-        <div className="latestNewsCardImg">
-          <a href={blogDetail.titleLink}>
-            <img src={blogDetail.image} alt="blog" />
-          </a>
+        {/* Vedio */}
+        <div className="latestNewsCardImg VedioNewsCardWrap">
+          {blogAudioDetail.type === "video" ? (
+            <div className="videoWrapper">
+              <iframe
+                src={blogAudioDetail.videoUrl}
+                title="blog video"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              ></iframe>
+            </div>
+          ) : (
+            <a href={blogAudioDetail.titleLink}>
+              <img src={blogAudioDetail.image} alt="blog" />
+            </a>
+          )}
 
+          {/* Date Badge */}
           <div className="latestNewsDate">
             <h5>{blogDetail.date}</h5>
             <span>{blogDetail.month}</span>
@@ -132,4 +146,4 @@ const BlogImageSidebarSection = () => {
   );
 };
 
-export default BlogImageSidebarSection;
+export default BlogAudioSidebarSection;

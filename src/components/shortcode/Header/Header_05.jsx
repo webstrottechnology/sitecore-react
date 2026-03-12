@@ -129,7 +129,6 @@ const Header_05 = () => {
                   <Link to="/vimeo-post">Vimeo Post</Link>
                   <Link to="/audio-post">Audio Post</Link>
                   <Link to="/quote-post">Quote Post</Link>
-                  <Link to="/text-post">Text Post</Link>
                 </div>
               </div>
             </li>
@@ -140,9 +139,6 @@ const Header_05 = () => {
               <div className="mega-menu-box dropdwonMenu">
                 <div>
                   <Link to="/product-with-sidebar">Product With Sidebar</Link>
-                  <Link to="/product-without-sidebar">
-                    Product Without Sidebar
-                  </Link>
                   <Link to="/product-single-01">Product Single 01</Link>
                   <Link to="/product-single-02">Product Single 02</Link>
                   <Link to="/cart">Cart</Link>
@@ -334,80 +330,25 @@ const Header_05 = () => {
                 <ul>
                   {/* With Sidebar */}
                   <li>
-                    <Link to="/blog/sidebar">Blog With Sidebar</Link>
+                    <Link to="/blog-page">Blog With Sidebar</Link>
                   </li>
                   <li>
-                    <Link to="/blog/sidebar/image">
-                      Image Post With Sidebar
-                    </Link>
+                    <Link to="/image-post">Image Post</Link>
                   </li>
                   <li>
-                    <Link to="/blog/sidebar/slider">
-                      Slider Post With Sidebar
-                    </Link>
+                    <Link to="/slider-post">Slider Post</Link>
                   </li>
                   <li>
-                    <Link to="/blog/sidebar/youtube">
-                      Youtube Post With Sidebar
-                    </Link>
+                    <Link to="/youtube-post">Youtube Post</Link>
                   </li>
                   <li>
-                    <Link to="/blog/sidebar/vimeo">
-                      Vimeo Post With Sidebar
-                    </Link>
+                    <Link to="/vimeo-post">Vimeo Post</Link>
                   </li>
                   <li>
-                    <Link to="/blog/sidebar/audio">
-                      Audio Post With Sidebar
-                    </Link>
+                    <Link to="/audio-post">Audio Post</Link>
                   </li>
                   <li>
-                    <Link to="/blog/sidebar/quote">
-                      Quote Post With Sidebar
-                    </Link>
-                  </li>
-                  <li>
-                    <Link to="/blog/sidebar/text">Text Post With Sidebar</Link>
-                  </li>
-
-                  {/* Without Sidebar */}
-                  <li>
-                    <Link to="/blog/no-sidebar">Blog Without Sidebar</Link>
-                  </li>
-                  <li>
-                    <Link to="/blog/no-sidebar/image">
-                      Image Post Without Sidebar
-                    </Link>
-                  </li>
-                  <li>
-                    <Link to="/blog/no-sidebar/slider">
-                      Slider Post Without Sidebar
-                    </Link>
-                  </li>
-                  <li>
-                    <Link to="/blog/no-sidebar/youtube">
-                      Youtube Post Without Sidebar
-                    </Link>
-                  </li>
-                  <li>
-                    <Link to="/blog/no-sidebar/vimeo">
-                      Vimeo Post Without Sidebar
-                    </Link>
-                  </li>
-                  <li>
-                    <Link to="/blog/no-sidebar/audio">
-                      Audio Post Without Sidebar
-                    </Link>
-                  </li>
-                  <li>
-                    <Link to="/blog/no-sidebar/quote">
-                      Quote Post Without Sidebar
-                    </Link>
-                  </li>
-                  <li>
-                    <Link to="/blog/no-sidebar/text">
-                      Text Post Without Sidebar
-                    </Link>
+                    <Link to="/quote-post">Quote Post</Link>
                   </li>
                 </ul>
               </div>
@@ -428,22 +369,19 @@ const Header_05 = () => {
               >
                 <ul>
                   <li>
-                    <a href="#">Product With Sidebar</a>
+                    <Link to="/product-with-sidebar">Product With Sidebar</Link>
                   </li>
                   <li>
-                    <a href="#">Product Without Sidebar</a>
+                    <Link to="/product-single-01">Product Single 01</Link>
                   </li>
                   <li>
-                    <a href="#">Product Single 01</a>
+                    <Link to="/product-single-02">Product Single 02</Link>
                   </li>
                   <li>
-                    <a href="#">Product Single 02</a>
+                    <Link to="/cart">Cart</Link>
                   </li>
                   <li>
-                    <a href="#">Cart</a>
-                  </li>
-                  <li>
-                    <a href="#">Checkout</a>
+                    <Link to="/checkout">Checkout</Link>
                   </li>
                 </ul>
               </div>
@@ -511,6 +449,12 @@ const Header_05 = () => {
                     <Link to="/components/feature-with-images">
                       Feature With Images
                     </Link>
+                  </li>
+                  <li>
+                    <Link to="/components/Header">Headers</Link>
+                  </li>
+                  <li>
+                    <Link to="/components/footer">Footer</Link>
                   </li>
                   <li>
                     <Link to="/components/heading">Heading</Link>

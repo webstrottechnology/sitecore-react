@@ -7,21 +7,64 @@ import {
   tags,
   socialIcons,
   comments,
+  blogSliderDetail,
 } from "./BlogSingleDataSidebar";
 
-const BlogImageSidebarSection = () => {
+const BlogSliderSidebarSection = () => {
   return (
     <div className="BlogSinglePagesSection">
       <div className="latestNewsCardInner">
-        {/* Image */}
-        <div className="latestNewsCardImg">
-          <a href={blogDetail.titleLink}>
-            <img src={blogDetail.image} alt="blog" />
-          </a>
+        {/* Slider */}
+        <div className="latestNewsCardImg SliderNewsCardWrap">
+          <div
+            id={`carousel${blogSliderDetail.id}`}
+            className="carousel slide"
+            data-bs-ride="carousel"
+          >
+            <div className="carousel-inner">
+              {blogSliderDetail.images.map((img, index) => (
+                <div
+                  key={index}
+                  className={`carousel-item ${index === 0 ? "active" : ""}`}
+                >
+                  <a href={blogSliderDetail.titleLink}>
+                    <img
+                      src={img}
+                      alt="blog slider"
+                      className="d-block w-100"
+                    />
+                  </a>
+                </div>
+              ))}
+            </div>
 
+            {/* Prev Button */}
+            <button
+              className="carousel-control-prev"
+              type="button"
+              data-bs-target={`#carousel${blogSliderDetail.id}`}
+              data-bs-slide="prev"
+            >
+              <span className="carousel-control-prev-icon"></span>
+            </button>
+
+            {/* Next Button */}
+            <button
+              className="carousel-control-next"
+              type="button"
+              data-bs-target={`#carousel${blogSliderDetail.id}`}
+              data-bs-slide="next"
+            >
+              <span className="carousel-control-next-icon"></span>
+            </button>
+          </div>
+
+          {/* Date Badge */}
           <div className="latestNewsDate">
-            <h5>{blogDetail.date}</h5>
-            <span>{blogDetail.month}</span>
+            <a href="#">
+              <h5>{blogSliderDetail.date}</h5>
+              <span>{blogSliderDetail.month}</span>
+            </a>
           </div>
         </div>
 
@@ -132,4 +175,4 @@ const BlogImageSidebarSection = () => {
   );
 };
 
-export default BlogImageSidebarSection;
+export default BlogSliderSidebarSection;

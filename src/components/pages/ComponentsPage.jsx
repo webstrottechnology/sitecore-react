@@ -252,6 +252,8 @@ import BlogLeftAsideBox from "../shortcode/BlogLeftWrap/BlogLeftWrap";
 import BlogSinglepage from "../shortcode/BlogMainPage/BlogSidebar";
 import BlogRightAsideBox from "../shortcode/BlogRightWrap/BlogRightWrap";
 import BlogImageSidebarSection from "../shortcode/BlogSingleWrap/BlogImageSidebar";
+import ProductGridSection from "../shortcode/ProductPage/ProductGridsectionPage";
+
 
 const ComponentsPage = () => {
   return (
@@ -485,7 +487,7 @@ const ComponentsPage = () => {
               <FormTen />
               <FormEleven />
               <FormTwelve />
-              <FormFourteen/>
+              <FormFourteen />
             </>
           }
         />
@@ -759,7 +761,16 @@ const ComponentsPage = () => {
           path="BlogSingleWrap"
           element={
             <>
-              <BlogImageSidebarSection/>
+              <BlogImageSidebarSection />
+            </>
+          }
+        />
+
+        <Route
+          path="ProductPage"
+          element={
+            <>
+              <ProductGridSection />
             </>
           }
         />

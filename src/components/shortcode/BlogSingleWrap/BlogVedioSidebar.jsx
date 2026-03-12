@@ -7,24 +7,37 @@ import {
   tags,
   socialIcons,
   comments,
+  blogVedioDetail
 } from "./BlogSingleDataSidebar";
 
-const BlogImageSidebarSection = () => {
+const BlogVedioSidebarSection = () => {
   return (
     <div className="BlogSinglePagesSection">
       <div className="latestNewsCardInner">
-        {/* Image */}
-        <div className="latestNewsCardImg">
-          <a href={blogDetail.titleLink}>
-            <img src={blogDetail.image} alt="blog" />
-          </a>
+        {/* Vedio */}
+        <div className="latestNewsCardImg VedioNewsCardWrap">
+          {blogVedioDetail.type === "video" ? (
+            <div className="videoWrapper">
+              <iframe
+                src={blogVedioDetail.videoUrl}
+                title="blog video"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              ></iframe>
+            </div>
+          ) : (
+            <a href={blogVedioDetail.titleLink}>
+              <img src={blogVedioDetail.image} alt="blog" />
+            </a>
+          )}
 
+          {/* Date Badge */}
           <div className="latestNewsDate">
             <h5>{blogDetail.date}</h5>
             <span>{blogDetail.month}</span>
           </div>
         </div>
-
         {/* Meta */}
         <div className="latestNewsList">
           <span>
@@ -132,4 +145,4 @@ const BlogImageSidebarSection = () => {
   );
 };
 
-export default BlogImageSidebarSection;
+export default BlogVedioSidebarSection;
