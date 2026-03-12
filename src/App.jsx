@@ -20,6 +20,7 @@ import BlogPage from "./components/pages/BlogPage";
 import PortfolioColumn3 from "./components/pages/PortfolioColumn3"
 import PortfolioColumn4 from "./components/pages/PortfolioColumn4"
 import BlogImagePage from "./components/pages/BlogImagePage";
+import ShopCart from "./components/pages/cart"
 
 const App = () => {
   return (
@@ -47,6 +48,7 @@ const App = () => {
         <Route path="/image-post" element={<BlogImagePage />} />
         <Route path="/404" element={<ErrorPage />} />
         <Route path="/coming-soon" element={<ComingSoon />} />
+        <Route path="/cart" element={<ShopCart />} />
       </Routes>
 
       {/* FOOTER ALWAYS */}
