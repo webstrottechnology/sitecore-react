@@ -8,6 +8,7 @@ import sitecoreBg from "../../assets/images/sitecoreBreadCrumb_bg_img.png";
 import AboutVideo from "../shortcode/aboutVideo/AboutVideo";
 import AboutFeatures from "../shortcode/aboutFeatures/AboutFeatures";
 import { FormTwelve } from "../shortcode/forms/Form";
+import Checkout from "../shortcode/checkout/Checkout"
 
 const About = () => {
   return (
@@ -19,6 +20,7 @@ const About = () => {
       <AboutBrandStory />
       <AboutTestimonial />
       <FormTwelve />
+      <Checkout/>
     </>
   );
 };
