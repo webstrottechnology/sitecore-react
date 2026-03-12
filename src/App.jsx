@@ -17,10 +17,16 @@ import ContactUs from "./components/pages/ContactUs";
 import ServiceSingle from "./components/pages/ServiceSingle";
 import PortfolioDetails from "./components/pages/PortfolioDetails";
 import BlogPage from "./components/pages/BlogPage";
-import PortfolioColumn3 from "./components/pages/PortfolioColumn3"
-import PortfolioColumn4 from "./components/pages/PortfolioColumn4"
+import PortfolioColumn3 from "./components/pages/PortfolioColumn3";
+import PortfolioColumn4 from "./components/pages/PortfolioColumn4";
 import BlogImagePage from "./components/pages/BlogImagePage";
 import ShopCart from "./components/pages/cart"
+import BlogVedioPage from "./components/pages/BlogVedioPage";
+import BlogSliderPage from "./components/pages/BlogSliderPage";
+import BlogVimeoPage from "./components/pages/BlogVimeoPage";
+import BlogAudioPage from "./components/pages/BlogAudioPage";
+import BlogQuotePage from "./components/pages/BlogQuotePage";
+import ProductGridPage from "./components/pages/ProductGridPage";
 
 const App = () => {
   return (
@@ -46,6 +52,12 @@ const App = () => {
         <Route path="/contact" element={<ContactUs />} />
         <Route path="/blog-page" element={<BlogPage />} />
         <Route path="/image-post" element={<BlogImagePage />} />
+        <Route path="/youtube-post" element={<BlogVedioPage />} />
+        <Route path="/slider-post" element={<BlogSliderPage />} />
+        <Route path="/vimeo-post" element={<BlogVimeoPage />} />
+        <Route path="/audio-post" element={<BlogAudioPage />} />
+        <Route path="/quote-post" element={<BlogQuotePage />} />
+        <Route path="/product-with-sidebar" element={<ProductGridPage/>} />
         <Route path="/404" element={<ErrorPage />} />
         <Route path="/coming-soon" element={<ComingSoon />} />
         <Route path="/cart" element={<ShopCart />} />

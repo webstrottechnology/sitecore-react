@@ -1,3 +1,15 @@
+/*-----------------------------------
+
+
+    Template Name: Sitecore React Template
+    Version: 1.0.0
+    Author: Webstrot
+    Copyright: © 2026-27
+
+--------------------------------------- */
+
+@use "../../../styles/mixins/mixins" as *;
+
 .blogRightArticles {
     width: var(--width100);
     height: 100%;
@@ -74,6 +86,8 @@
             .latestNewsList {
                 display: flex;
                 gap: 20px;
+                flex-wrap: wrap;
+                row-gap: 10px;
 
                 a {
                     display: flex;
@@ -158,6 +172,11 @@
     .ipSlider {
         width: var(--width100);
 
+        img {
+            width: 100%;
+            border-radius: var(--br6);
+        }
+
         .carousel {
             width: var(--width100);
             height: 100%;
@@ -190,5 +209,41 @@
             }
 
         }
+    }
+}
+
+//  resposnive css start //
+
+@include responsive(tablet-sm) {
+    .blogRightArticles .ipQuoteBlog .ipQuote p {
+        font-size: 35px;
+    }
+
+    .blogRightArticles .latestNewsCardInner .latestNewsCardInnerContent .latestNewsTxt h4 {
+        font-size: 22px;
+    }
+
+    .blogRightArticles .latestNewsCardInner .latestNewsCardInnerContent .latestNewsTxt p {
+        font-size: 16px;
+    }
+}
+
+
+@include responsive(xs) {
+    .blogRightArticles .ipQuoteBlog .ipQuote p {
+        font-size: 26px;
+    }
+
+    .blogRightArticles .latestNewsCardInner .latestNewsCardInnerContent .latestNewsTxt h4 {
+        font-size: 20px;
+    }
+
+    .blogRightArticles .ipQuoteBlog {
+        padding: 24px;
+    }
+
+    .blogRightArticles .latestNewsCardInner .latestNewsCardImg .latestNewsDate {
+        bottom: -22px;
+        right: 6px;
     }
 }

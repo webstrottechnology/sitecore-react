@@ -43,6 +43,12 @@
     }
   }
 
+  @else if $breakpoint ==laptop {
+    @media (max-width: 1200px) {
+      @content;
+    }
+  }
+
   // Tablet Landscape (1024px and below)
   @else if $breakpoint ==tablet {
     @media (max-width: 1024px) {
