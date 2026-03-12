@@ -2032,6 +2032,11 @@
     .contact-section .contact-wrapper .contact-right h2 {
         font-size: var(--fs28);
     }
+
+
+    .FourteencommentBox {
+        padding: 20px 20px;
+    }
 }
 
 
@@ -2137,5 +2142,13 @@
 
     .appointment_section .appointment_wrapper .left .contact_card .item .text-box span {
         font-size: var(--fs14);
+    }
+
+    .FourteencommentBox .commentBoxInner .commentBoxHeading h4 {
+        font-size: 30px;
+    }
+
+    .FourteencommentBox {
+        padding: 16px 16px;
     }
 }

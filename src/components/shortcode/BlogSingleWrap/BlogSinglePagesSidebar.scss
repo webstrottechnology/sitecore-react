@@ -1,4 +1,16 @@
-.blogSingleBlog {
+/*-----------------------------------
+
+
+    Template Name: Sitecore React Template
+    Version: 1.0.0
+    Author: Webstrot
+    Copyright: © 2026-27
+
+--------------------------------------- */
+
+@use "../../../styles/mixins/mixins" as *;
+
+.BlogSinglePagesSection {
     width: var(--width100);
     position: relative;
     padding: var(--p30) var(--30);
@@ -43,7 +55,93 @@
                     color: var(--white-color);
                 }
             }
+
+            &.VedioNewsCardWrap {
+                .videoWrapper {
+                    width: 100%;
+                    height: 415px;
+
+                    iframe {
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+            }
+
+            &.SliderNewsCardWrap {
+                position: relative;
+
+                img {
+                    width: 100%;
+                    border-radius: var(--br6);
+                }
+
+                .carousel {
+                    width: var(--width100);
+                    height: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    .carousel-control-next,
+                    .carousel-control-prev {
+                        top: inherit;
+                        bottom: 45%;
+                        width: 40px;
+                        height: 40px;
+                        padding: var(--p10) var(--p10);
+                        background-color: var(--orange-color);
+                        color: var(--black-color);
+                        display: inline-flex;
+                        justify-content: center;
+                        align-items: center;
+
+                        .carousel-control-prev-icon {
+                            width: 20px;
+                            height: 20px;
+                        }
+
+                        .carousel-control-next-icon {
+                            width: 20px;
+                            height: 20px;
+                        }
+                    }
+
+                }
+            }
+
+            &.ipQuoteBlog {
+                background: var(--orange-color);
+                color: var(--white-color);
+                padding: var(--p40);
+                border-radius: var(--br10);
+
+                .ipQuote {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 20px;
+
+                    p {
+                        font-size: var(--fs42);
+                        color: var(--white-color);
+                        font-weight: var(--fw600);
+                        text-align: center;
+                    }
+
+                    .ipAwesomeAuthor {
+                        display: flex;
+                        justify-content: space-between;
+
+                        span {
+                            font-size: var(--fs16);
+                            color: var(--white-color);
+                            font-weight: var(--fw400);
+                        }
+                    }
+                }
+            }
         }
+
 
         .latestNewsList {
             display: flex;
@@ -108,6 +206,8 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
 
             .shareGroup {
                 display: flex;
@@ -187,7 +287,7 @@
 
 
     .coment {
-        margin-top: 50px;
+        margin-top: var(--mr50);
         background: var(--white-color);
         box-shadow: 0px 7px 32px rgba(0, 0, 0, 0.04);
         border-radius: var(--br6);
@@ -229,27 +329,46 @@
                 justify-content: center;
                 gap: 4px;
 
-                h5 {
-                    font-size: var(--fs20);
-                    color: var(--black-color);
-                    font-weight: var(--fw600);
-                    transition: all 0.5s;
+                .commentTop {
+                    position: relative;
 
-                    a {
+                    h5 {
+                        font-size: var(--fs20);
                         color: var(--black-color);
-                    }
+                        font-weight: var(--fw600);
+                        transition: all 0.5s;
 
-                    &:hover {
                         a {
-                            color: var(--orange-color);
+                            color: var(--black-color);
+                        }
+
+                        &:hover {
+                            a {
+                                color: var(--orange-color);
+                            }
                         }
                     }
+
+                    .commentShare {
+                        position: absolute;
+                        top: 0px;
+                        right: 0px;
+                        color: var(--orange-color);
+                        font-weight: var(--fw600);
+                        font-size: var(--fs18);
+                        display: inline-flex;
+                        align-items: center;
+                        gap: 10px;
+                    }
+
                 }
+
 
                 p {
 
                     font-size: var(--fs16);
                     color: var(--gray-color);
+                    max-width: 500px;
                 }
 
                 span {
@@ -259,51 +378,87 @@
                 }
             }
         }
+    }
+}
+
+//  resposnive css start //
 
 
+@include responsive(tablet-sm) {
+    .BlogSinglePagesSection .coment {
+        margin-top: 30px;
+        padding: 24px 24px;
+    }
+}
 
-
+@include responsive(mobile-sm) {
+    .BlogSinglePagesSection .coment {
+        padding: 20px 20px;
     }
 
-    .commentBox {
-        margin-top: 40px;
-
-        .commentBoxHeading {
-            margin-bottom: 20px;
-        }
-
-        form {
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-
-            input,
-            textarea {
-                width: 100%;
-                padding: 12px;
-                border: 1px solid #ddd;
-                border-radius: 4px;
-                font-size: 14px;
-            }
-
-            textarea {
-                height: 120px;
-            }
-
-            button {
-                width: 150px;
-                padding: 12px;
-                background: #4caf50;
-                border: none;
-                color: #fff;
-                cursor: pointer;
-                border-radius: 4px;
-
-                &:hover {
-                    background: #388e3c;
-                }
-            }
-        }
+    .BlogSinglePagesSection .latestNewsCardInner .blogTagsShare {
+        justify-content: center;
     }
 
+    .BlogSinglePagesSection .coment h2 {
+        font-size: 33px;
+        margin-bottom: 20px;
+    }
+
+    .BlogSinglePagesSection .coment .commentGroup {
+        padding: 14px;
+        margin-bottom: 20px;
+        flex-direction: column;
+    }
+
+    .BlogSinglePagesSection .coment .commentGroup .commentLeft {
+        width: 100%;
+    }
+
+    .BlogSinglePagesSection .coment .commentGroup .commentRight {
+        width: 100%;
+    }
+
+    .BlogSinglePagesSection .coment .commentGroup .commentLeft img {
+        max-width: 120px;
+    }
+
+    .BlogSinglePagesSection .coment .commentGroup .commentRight .commentTop .commentShare {
+        top: -60px;
+    }
+}
+
+@include responsive(xs) {
+    .BlogSinglePagesSection .latestNewsCardInner .latestNewsTxt h4 {
+        font-size: 22px;
+    }
+
+    .BlogSinglePagesSection .latestNewsCardInner .blogTagsShare .shareGroup ul {
+        gap: 8px;
+        flex-wrap: wrap;
+    }
+
+    .BlogSinglePagesSection .latestNewsCardInner .blogTagsShare .shareGroup ul li a {
+        font-size: 16px;
+        padding: 10px;
+    }
+
+    .BlogSinglePagesSection .latestNewsCardInner .latestNewsCardImg .latestNewsDate {
+        bottom: -30px;
+        right: 10px;
+        width: 65px;
+        height: 65px;
+    }
+
+    .BlogSinglePagesSection .latestNewsCardInner .latestNewsList span a {
+        font-size: 16px;
+    }
+
+    .BlogSinglePagesSection .coment {
+        padding: 16px 12px;
+    }
+
+    .BlogSinglePagesSection .latestNewsCardInner .latestNewsCardImg.VedioNewsCardWrap .videoWrapper {
+        height: 270px;
+    }
 }

@@ -7,17 +7,17 @@ import { FormFourteen } from "../forms/Form";
 const BlogImageSidebarPage = () => {
   return (
     <section className="w-100 clearfix SiteCoreblogSingle" id="blogSingle">
-      <div className="container">
+      <div className="container custom-container-lg">
         <div className="blogSingleInner">
           <div className="row">
             {/* Left Side */}
-            <div className="col-lg-8">
+            <div className="col-md-12 col-lg-8">
               <BlogImageSidebarSection />
               <FormFourteen />
             </div>
 
             {/* Right Side */}
-            <div className="col-lg-4">
+            <div className="col-md-12 col-lg-4">
               <BlogLeftWrap />
             </div>
           </div>

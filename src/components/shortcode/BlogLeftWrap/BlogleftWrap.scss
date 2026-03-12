@@ -1,3 +1,15 @@
+/*-----------------------------------
+
+
+    Template Name: Sitecore React Template
+    Version: 1.0.0
+    Author: Webstrot
+    Copyright: © 2026-27
+
+--------------------------------------- */
+
+@use "../../../styles/mixins/mixins" as *;
+
 .blogLeftArticles {
     width: var(--width100);
     height: 100%;
@@ -283,14 +295,16 @@
 
     .newsletterForm {
         display: flex;
+        align-items: center;
+        gap: 8px;
         background: var(--temSiteCoreLightOrangeColor);
-        border-radius: 6px;
+        border-radius: var(--br6);
         overflow: hidden;
+        padding: var(--p14) var(--p10) var(--p14) var(--p10);
 
         input {
             flex: 1;
             border: none;
-            padding: var(--p14) var(--p0) var(--p14) var(--p16);
             background: transparent;
             font-size: var(--fs16);
             outline: none;
@@ -300,10 +314,32 @@
         button {
             border: none;
             background: transparent;
-            padding: 0 18px;
             font-weight: 600;
-            color: #ff7a00;
+            color: var(--orange-color);
             cursor: pointer;
         }
+    }
+}
+
+//  responsive css start  //
+
+
+@include responsive(xs) {
+    .blogLeftArticles .customCard {
+        padding: 22px 22px;
+    }
+
+    .blogLeftArticles h4 {
+        font-size: 24px;
+    }
+
+    .blogLeftArticles .recentPost .recentPostGroupList .recentPostTxt p {
+        font-size: 16px;
+    }
+}
+
+@include responsive(xxs) {
+    .blogLeftArticles .customCard {
+        padding: 16px 16px;
     }
 }

@@ -1,0 +1,233 @@
+.checkout {
+    padding: 80px 0;
+
+    .commentBox {
+        .commentBoxInner {
+            background: #fff;
+            box-shadow: 0px 7px 32px rgba(0, 0, 0, 0.04);
+            border-radius: 5px;
+            padding: 40px;
+
+            .commentBoxHeading {
+                h4 {
+                    font-weight: 700;
+                    font-size: 30px;
+                    color: #333;
+                    margin: 10px 0 20px;
+                }
+            }
+
+            .commentFormGroup {
+                margin-bottom: 20px;
+
+                .form-label {
+                    color: #707070;
+                    font-size: 16px;
+                }
+
+                .form-control {
+                    background: #ffebd6;
+                    border: none;
+                    border-radius: 5px;
+                    height: 50px;
+                }
+
+                textarea.form-control {
+                    height: auto;
+                }
+
+                .form-check {
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+
+                    input {
+                        border: 1px solid #fb8500;
+                    }
+
+                    label {
+                        color: #333;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* RIGHT SIDE */
+
+.checkoutAside {
+    .asideHeading {
+        h4 {
+            font-weight: 700;
+            font-size: 30px;
+            margin-bottom: 30px;
+        }
+    }
+
+    .productBox {
+        .asideProductItem {
+            background: rgba(251, 133, 0, 0.16);
+            padding: 40px;
+            border-radius: 5px;
+
+            .horizLine {
+                border-color: #fff;
+                opacity: 1;
+            }
+
+            .asideProdtBx {
+                display: grid;
+                grid-template-columns: 1fr 100px;
+                align-items: center;
+
+                .asideImg {
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+
+                    .asideImgInner {
+                        background: #fff;
+                        padding: 10px;
+                        border-radius: 5px;
+
+                        img {
+                            width: 50px;
+                        }
+                    }
+
+                    .asideContent {
+                        h5 {
+                            font-size: 16px;
+                        }
+
+                        p {
+                            font-size: 14px;
+                        }
+                    }
+                }
+
+                .asidePrice {
+                    text-align: right;
+
+                    span {
+                        color: #fb8500;
+                        font-weight: 700;
+                    }
+                }
+            }
+
+            .subTotals {
+                display: flex;
+                justify-content: space-between;
+
+                p {
+                    font-weight: 700;
+                }
+
+                span {
+                    color: #fb8500;
+                    font-weight: 700;
+                    text-align: right;
+                }
+            }
+
+            .subPrice {
+                display: grid;
+                grid-template-columns: 1fr 100px;
+                margin: 15px 0;
+                align-items: center;
+
+                .asideProductPrice {
+                    text-align: right;
+
+                    span {
+                        color: #fb8500;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* CUSTOM RADIO */
+
+.custom-radios {
+    input[type="radio"] {
+        display: none;
+    }
+
+    label {
+        position: relative;
+        cursor: pointer;
+        display: flex;
+        align-items: flex-start;
+        gap: 10px;
+        padding-left: 30px;
+
+        &::before {
+            content: "";
+            width: 20px;
+            height: 20px;
+            border: 2px solid #fb8500;
+            border-radius: 50%;
+            position: absolute;
+            left: -4px;
+            top: 3px;
+        }
+
+        &::after {
+            content: "";
+            width: 12px;
+            height: 12px;
+            background: #fb8500;
+            border-radius: 50%;
+            position: absolute;
+            left: 0px;
+            top: 7px;
+            transform: scale(0);
+            transition: 0.3s;
+        }
+    }
+
+    input:checked+label::after {
+        transform: scale(1);
+    }
+}
+
+/* PAYMENT BOX */
+
+.paymentMethod {
+    border: 1px solid #fb8500;
+    border-radius: 5px;
+    padding: 40px;
+    margin-top: 20px;
+
+    .paymentformGroup {
+        margin-bottom: 20px;
+        position: relative;
+
+        label {
+            cursor: pointer;
+        }
+
+        .paymentText {
+            display: flex;
+            flex-direction: column;
+
+            .title {
+                font-weight: 700;
+                font-size: 18px;
+            }
+
+            .desc {
+                font-size: 14px;
+                color: #707070;
+            }
+        }
+    }
+
+    .cardImg {
+        margin-top: 30px;
+    }
+}

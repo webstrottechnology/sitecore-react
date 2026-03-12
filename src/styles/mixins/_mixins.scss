@@ -29,9 +29,22 @@
     }
   }
 
+  @else if $breakpoint ==laptop {
+    @media (max-width: 1200px) {
+      @content;
+    }
+  }
+
+
   // Small Desktop / Laptop (1280px and below)
   @else if $breakpoint ==md {
     @media (max-width: 1280px) {
+      @content;
+    }
+  }
+
+  @else if $breakpoint ==laptop {
+    @media (max-width: 1200px) {
       @content;
     }
   }

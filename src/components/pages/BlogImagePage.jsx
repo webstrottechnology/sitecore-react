@@ -6,7 +6,7 @@ import BlogImageSidebarPage from "../shortcode/BlogMainPage/BlogImageSidebarPage
 const BlogImagePage = () => {
   return (
     <>
-      <AboutBannerBreadCrumb title="Blog With Sidebar" bgImage={sitecoreBg} />
+      <AboutBannerBreadCrumb title="Blog Single Image" bgImage={sitecoreBg} />
       <BlogImageSidebarPage />
     </>
   );

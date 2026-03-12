@@ -7,22 +7,26 @@ import {
   tags,
   socialIcons,
   comments,
+  blogQuoteDetail,
 } from "./BlogSingleDataSidebar";
 
-const BlogImageSidebarSection = () => {
+const BlogQuoteSidebarSection = () => {
   return (
     <div className="BlogSinglePagesSection">
       <div className="latestNewsCardInner">
-        {/* Image */}
-        <div className="latestNewsCardImg">
-          <a href={blogDetail.titleLink}>
-            <img src={blogDetail.image} alt="blog" />
-          </a>
+        {/* Quote */}
+        <div className="latestNewsCardImg ipQuoteBlog">
+          <a href={blogQuoteDetail.link}>
+            <div className="ipQuote">
+              <p>{blogQuoteDetail.quote}</p>
 
-          <div className="latestNewsDate">
-            <h5>{blogDetail.date}</h5>
-            <span>{blogDetail.month}</span>
-          </div>
+              <div className="ipAwesomeAuthor">
+                <span>{blogQuoteDetail.author}</span>
+
+                <span>{blogQuoteDetail.icon && <blogQuoteDetail.icon />}</span>
+              </div>
+            </div>
+          </a>
         </div>
 
         {/* Meta */}
@@ -132,4 +136,4 @@ const BlogImageSidebarSection = () => {
   );
 };
 
-export default BlogImageSidebarSection;
+export default BlogQuoteSidebarSection;
