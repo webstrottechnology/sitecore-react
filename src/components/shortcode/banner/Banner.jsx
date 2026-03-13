@@ -603,28 +603,30 @@ const Banner10 = () => {
 
 const Banner11 = () => {
   return (
-    <div className="banner11" style={{ backgroundImage: `url(${BgImg})` }}>
-      <div className="container custom-container">
-        <div className="order-strip-wrapper">
-          <span>%</span>
-          <p className="mb-0">50% Off On Your First Order</p>
-        </div>
+    <>
+      <div className="banner11" style={{ backgroundImage: `url(${BgImg})` }}>
+        <div className="container custom-container">
+          <div className="order-strip-wrapper">
+            <span>%</span>
+            <p className="mb-0">50% Off On Your First Order</p>
+          </div>
 
-        {/* CAPTION */}
-        <div className="slider-caption">
-          <h1>
-            Transforming Your Ideas Into
-            <span>Digital Reality</span>
-          </h1>
-          <img src={TitleShape} alt="shape" />
-        </div>
+          {/* CAPTION */}
+          <div className="slider-caption">
+            <h1>
+              Transforming Your Ideas Into
+              <span>Digital Reality</span>
+            </h1>
+            <img src={TitleShape} alt="shape" />
+          </div>
 
-        {/* IMAGE + PROGRESS */}
-        <div className="slider-img">
-          <img src={SliderImg} alt="slider" />
+          {/* IMAGE + PROGRESS */}
+          <div className="slider-img">
+            <img src={SliderImg} alt="slider" />
+          </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

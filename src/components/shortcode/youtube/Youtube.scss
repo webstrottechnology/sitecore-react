@@ -10,6 +10,15 @@
 
 @use "../../../styles/mixins/mixins" as *;
 
+// Hero_main_section //
+
+.Hero_main_section {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
 .hero-container {
     position: relative;
     width: var(--width100);
@@ -166,7 +175,7 @@
         font-size: var(--fs42);
     }
 
-     .hero-container .hero-bottom {
+    .hero-container .hero-bottom {
         flex-direction: column;
         gap: 20px;
     }
