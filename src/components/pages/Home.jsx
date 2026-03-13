@@ -10,7 +10,6 @@ import Youtube from "../shortcode/youtube/Youtube";
 import { Testimonial11 } from "../shortcode/testimonial/Testimonial";
 import Newsletter from "../shortcode/newsLetter/NewsLetter";
 import Blog from "../shortcode/blog/Blog";
-
 const Home = () => {
   return (
     <>
