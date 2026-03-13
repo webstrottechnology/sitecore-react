@@ -1,0 +1,326 @@
+/*-----------------------------------
+
+
+    Template Name: Sitecore React Template
+    Version: 1.0.0
+    Author: Webstrot
+    Copyright: © 2026-27
+
+--------------------------------------- */
+
+@use "../../../styles/mixins/mixins" as *;
+
+
+/* ---------------- CHECKOUT CSS ---------------- */
+
+.checkout {
+    padding: var(--p80) var(--p0);
+
+    .checkoutInner {
+
+        .commentBox {
+            .commentBoxInner {
+                background: var(--white-color);
+                box-shadow: 0px 7px 32px rgba(0, 0, 0, 0.04);
+                border-radius: var(--br6);
+                padding: var(--p40);
+
+                .checkout-btn {
+                    margin-top: var(--m20);
+                }
+
+                .commentBoxHeading {
+                    h4 {
+                        font-weight: var(--fw700);
+                        font-size: var(--fs30);
+                        color: #333;
+                        margin: var(--m10) var(--m0) var(--m20);
+                    }
+                }
+
+                .commentFormGroup {
+                    margin-bottom: var(--m20);
+
+                    .order-notes {
+                        margin-top: var(--m30);
+                    }
+
+                    .form-label {
+                        color: #707070;
+                        font-size: var(--fs16);
+                    }
+
+                    .form-control {
+                        background: #ffebd6;
+                        border: none;
+                        border-radius: var(--br6);
+                        height: 50px;
+                    }
+
+                    textarea.form-control {
+                        height: auto;
+                        background: #ffebd6;
+                        margin-top: var(--m10);
+                        padding-top: var(--p10);
+                    }
+
+                    .form-check {
+                        display: flex;
+                        align-items: center;
+                        gap: 10px;
+                        margin-top: var(--m20);
+
+                        input {
+                            border: 1px solid var(--orange-color);
+                        }
+
+                        label {
+                            color: #333;
+                        }
+
+                        input[type="checkbox"] {
+                            appearance: none;
+                            width: 18px;
+                            height: 18px;
+                            border: 2px solid var(--orange-color);
+                            border-radius: var(--br4);
+                            position: relative;
+                            cursor: pointer;
+                            text-align: center;
+                        }
+
+                        input[type="checkbox"]:checked::after {
+                            content: "✔";
+                            background-color: var(--orange-color);
+                            color: var(--white-color);
+                            font-size: var(--fs12);
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%, -50%);
+                            width: 18px;
+                        }
+                    }
+                }
+            }
+        }
+
+        /* RIGHT SIDE */
+
+        .checkoutAside {
+            .asideHeading {
+                h4 {
+                    font-weight: var(--fw700);
+                    font-size: var(--fs30);
+                    margin-bottom: var(--m30);
+                }
+            }
+
+            .productBox {
+                .asideProductItem {
+                    background: rgba(251, 133, 0, 0.16);
+                    padding: var(--p40);
+                    border-radius: var(--br6);
+
+                    .shipping-text {
+                        font-weight: var(--fw700);
+                    }
+
+                    .horizLine {
+                        border-color: var(--white-color);
+                        opacity: 1;
+                    }
+
+                    .asideProdtBx {
+                        display: grid;
+                        grid-template-columns: 1fr 100px;
+                        align-items: center;
+
+                        .asideImg {
+                            display: flex;
+                            align-items: center;
+                            gap: 10px;
+
+                            .asideImgInner {
+                                background: var(--white-color);
+                                padding: var(--p10);
+                                border-radius: var(--br6);
+
+                                img {
+                                    width: 50px;
+                                }
+                            }
+
+                            .asideContent {
+                                h5 {
+                                    font-size: var(--fs16);
+                                }
+
+                                p {
+                                    margin-top: var(--m10);
+                                }
+                            }
+                        }
+
+                        .asidePrice {
+                            text-align: right;
+
+                            span {
+                                color: var(--orange-color);
+                                font-weight: var(--fw700);
+                            }
+                        }
+                    }
+
+                    .subTotals {
+                        display: flex;
+                        justify-content: space-between;
+                        margin-top: var(--m30);
+
+                        p {
+                            font-weight: var(--fw700);
+                        }
+
+                        span {
+                            color: var(--orange-color);
+                            font-weight: var(--fw700);
+                            text-align: right;
+                        }
+                    }
+
+                    .subPrice {
+                        display: grid;
+                        grid-template-columns: 1fr 100px;
+                        margin: var(--m16) var(--m0);
+                        align-items: center;
+
+                        .asideProductPrice {
+                            text-align: right;
+
+                            span {
+                                color: var(--orange-color);
+                            }
+                        }
+                    }
+                }
+            }
+
+
+            /* CUSTOM RADIO */
+
+            .custom-radios {
+                input[type="radio"] {
+                    display: none;
+                }
+
+                label {
+                    position: relative;
+                    cursor: pointer;
+                    display: flex;
+                    align-items: flex-start;
+                    gap: 10px;
+                    padding-left: var(--p30);
+
+                    &::before {
+                        content: "";
+                        width: 20px;
+                        height: 20px;
+                        border: 2px solid var(--orange-color);
+                        border-radius: 50%;
+                        position: absolute;
+                        left: -4px;
+                        top: 3px;
+                    }
+
+                    &::after {
+                        content: "";
+                        width: 12px;
+                        height: 12px;
+                        background: var(--orange-color);
+                        border-radius: 50%;
+                        position: absolute;
+                        left: 0px;
+                        top: 7px;
+                        transform: scale(0);
+                        transition: 0.3s;
+                    }
+                }
+
+                input:checked+label::after {
+                    transform: scale(1);
+                }
+            }
+
+            /* PAYMENT BOX */
+
+            .paymentMethod {
+                border: 1px solid var(--orange-color);
+                border-radius: var(--br6);
+                padding: var(--p40);
+                margin-top: var(--m20);
+
+                .paymentformGroup {
+                    margin-bottom: var(--m20);
+                    position: relative;
+
+                    label {
+                        cursor: pointer;
+                    }
+
+                    .paymentText {
+                        display: flex;
+                        flex-direction: column;
+
+                        .title {
+                            font-weight: var(--fw700);
+                            font-size: var(--fs18);
+                            color: #707070;
+                        }
+
+                        .desc {
+                            font-size: var(--fs14);
+                            color: #707070;
+                        }
+                    }
+                }
+
+                .cardImg {
+                    margin-top: var(--m30);
+                }
+            }
+        }
+    }
+
+}
+
+@include responsive(laptop) {
+    .checkout .checkoutInner .checkoutAside .asideHeading h4,
+    .checkout .checkoutInner .commentBox .commentBoxInner .commentBoxHeading h4 {
+        font-size: var(--fs24);
+    }
+
+    .checkout .checkoutInner .commentBox .commentBoxInner{
+        padding: var(--p20);
+    }
+}
+
+@include responsive(tablet-sm) {
+.checkout .checkoutInner .checkoutAside .asideHeading h4,
+.checkout .checkoutInner .commentBox .commentBoxInner .commentBoxHeading h4 {
+        font-size: var(--fs22);
+    }
+}
+
+@include responsive(mobile) {
+
+    .checkout .checkoutInner .checkoutAside .paymentMethod .paymentformGroup .paymentText .title {
+        font-size: var(--fs16);
+    }
+}
+
+@include responsive(mobile-sm) {
+    .checkout .checkoutInner .commentBox .commentBoxInner .checkout-btn{
+        height: 40px;
+        font-size: var(--fs14);
+    }
+}
