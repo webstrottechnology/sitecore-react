@@ -1,9 +1,16 @@
 import React, { useState } from "react";
-import { productData, shippingOptions, paymentMethods } from "./checkoutData";
-import "./Checkout.scss";
+import {
+  productData,
+  shippingOptions,
+  paymentMethods,
+} from "./SitecoreCheckoutData";
+
+import "./SitecoreCheckout.scss";
 import cardImages from "../../../assets/images/inner-pages/icons/cards-images.webp";
 
-const Checkout = () => {
+// ================= CHECKOUT PAGE =================
+
+const SitecoreCheckout = () => {
   const [shipping, setShipping] = useState(shippingOptions[0].id);
   const [payment, setPayment] = useState(paymentMethods[0].id);
 
@@ -15,7 +22,7 @@ const Checkout = () => {
 
   return (
     <section className="w-100 clearfix checkout" id="checkout">
-      <div className="container">
+      <div className="container custom-container-lg">
         <div className="checkoutInner">
           <div className="row">
             {/* LEFT FORM */}
@@ -107,18 +114,24 @@ const Checkout = () => {
                               Ship to a different address
                             </label>
                           </div>
+                          <div className="order-notes">
+                            <strong>Order Notes( Optional)</strong>
+                            <textarea
+                              className="form-control"
+                              rows="5"
+                              placeholder="Notes About Your Order"
+                            />
+                          </div>
                         </div>
-                        <textarea
-                          className="form-control"
-                          rows="5"
-                          placeholder="Notes About Your Order"
-                        />
                       </div>
                     </div>
 
-                    <button className="btn medCommBtn borderRadiusRounded">
+                    <a
+                      href="#"
+                      className="checkout-btn medCommBtn borderRadiusRounded Temp-read-more"
+                    >
                       <span>Place Order</span>
-                    </button>
+                    </a>
                   </form>
                 </div>
               </div>
@@ -168,6 +181,8 @@ const Checkout = () => {
                     <hr className="horizLine" />
 
                     {/* SHIPPING */}
+
+                    <p className="shipping-text">Shipping</p>
 
                     {shippingOptions.map((item) => (
                       <div className="subPrice" key={item.id}>
@@ -248,4 +263,4 @@ const Checkout = () => {
   );
 };
 
-export default Checkout;
+export default SitecoreCheckout;

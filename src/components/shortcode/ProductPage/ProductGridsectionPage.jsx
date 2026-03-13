@@ -1,147 +1,258 @@
 import React, { useState } from "react";
-import { categories, authors, products } from "./ProductDataPage";
+import {
+  categories,
+  authors,
+  products,
+  reviewRatings,
+} from "./ProductDataPage";
 import "./ProductPage.scss";
+import { FaStar, FaArrowRight } from "react-icons/fa";
+import { FaThLarge, FaList } from "react-icons/fa";
+import { FiArrowRight } from "react-icons/fi";
+import promoImg from "../../../assets/images/product/product_left_sidebar_data_img.jpg";
 
 const ProductGridSection = () => {
   const [view, setView] = useState("grid");
 
+  /* STATE */
+  const [price, setPrice] = useState(300);
+
   return (
     <section className="w-100 clearfix ipProductGridWithSidebar">
       <div className="container">
-        <div className="row">
-          {/* LEFT SIDEBAR */}
+        <div className="ipProductGridViewInner">
+          <div className="row">
+            {/* LEFT SIDEBAR */}
 
-          <div className="col-lg-4 col-xxl-3">
-            <div className="ipProductGridLeft">
-              {/* Categories */}
+            <div className="col-lg-4 col-xxl-3">
+              <div className="ipProductGridLeft">
+                {/* Categories */}
 
-              <div className="ipFilterCard">
-                <div className="ipFilterCardHead">
-                  <h5>Categories</h5>
+                <div className="ipFilterCard">
+                  <div className="ipFilterCardHead">
+                    <h5>Categories</h5>
+                  </div>
+
+                  <div className="ipFilterCardContant">
+                    <ul className="ipCategoryList">
+                      {categories.map((cat, index) => (
+                        <li key={index}>
+                          <a href="#">
+                            <FiArrowRight className="catIcon" />
+
+                            {cat}
+                          </a>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
                 </div>
 
-                <div className="ipFilterCardContant">
-                  <ul className="nav flex-column">
-                    {categories.map((cat, i) => (
-                      <li className="nav-item" key={i}>
-                        <a className="nav-link">{cat}</a>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
+                {/* Authors */}
 
-              {/* Authors */}
+                <div className="ipFilterCard">
+                  <div className="ipFilterCardHead">
+                    <h5>Authors</h5>
+                  </div>
 
-              <div className="ipFilterCard">
-                <div className="ipFilterCardHead">
-                  <h5>Authors</h5>
-                </div>
+                  <div className="ipFilterCardContant">
+                    <ul className="nav flex-column">
+                      {authors.map((author, index) => (
+                        <li key={index} className="nav-item">
+                          <div className="ipFilterCardCheck">
+                            <div className="ipFilterCardCheckInner">
+                              <div className="form-check">
+                                <label className="form-check-label">
+                                  <input
+                                    className="form-check-input"
+                                    type="checkbox"
+                                  />
 
-                <div className="ipFilterCardContant">
-                  <ul className="nav flex-column">
-                    {authors.map((author, i) => (
-                      <li className="nav-item" key={i}>
-                        <div className="ipFilterCardCheck">
-                          <div className="ipFilterCardCheckInner">
-                            <div className="form-check">
-                              <label className="form-check-label">
-                                <input
-                                  className="form-check-input"
-                                  type="checkbox"
-                                />
+                                  {author.name}
+                                </label>
+                              </div>
+                            </div>
 
-                                {author.name}
-                              </label>
+                            <div className="ipFilterCount">
+                              <span>({author.count})</span>
                             </div>
                           </div>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
 
-                          <div className="ipFilterCount">
-                            <span>({author.count})</span>
+                {/* Filter By Price */}
+
+                <div className="ipFilterCard">
+                  <div className="ipFilterCardHead">
+                    <h5>Filter By Price</h5>
+                  </div>
+
+                  <div className="ipFilterCardContant">
+                    <div className="ipPriceRange">
+                      <input
+                        type="range"
+                        min="100"
+                        max="900"
+                        value={price}
+                        onChange={(e) => setPrice(e.target.value)}
+                      />
+
+                      <div className="ipPriceValue">
+                        <span>$100</span>
+                        <span>${price}</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Review Rating */}
+
+                <div className="ipFilterCard">
+                  <div className="ipFilterCardHead">
+                    <h5>Review Ratings</h5>
+                  </div>
+
+                  <div className="ipFilterCardContant">
+                    <div className="ipFilterReviewCard">
+                      {reviewRatings.map((item, index) => (
+                        <a
+                          key={index}
+                          href={item.link}
+                          className="ipFilterReview"
+                        >
+                          <div className="stars">
+                            {[...Array(5)].map((_, i) => (
+                              <FaStar
+                                key={i}
+                                className={
+                                  i < item.star ? "star active" : "star"
+                                }
+                              />
+                            ))}
                           </div>
-                        </div>
-                      </li>
-                    ))}
-                  </ul>
+
+                          <span>({String(item.count).padStart(2, "0")})</span>
+                        </a>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+                {/* Promo Card */}
+
+                <div className="ipFilterPromoCard" style={{ backgroundImage: `url(${promoImg})` }}>
+                  <span className="promoSmall">Kids Love Reading Books</span>
+
+                  <h3>
+                    Buy One, Get One <br />
+                    30% off
+                  </h3>
+
+                  <a href="#" className="promoBtn">
+                    BUY NOW
+                    <FaArrowRight />
+                  </a>
                 </div>
               </div>
             </div>
-          </div>
 
-          {/* RIGHT SIDE */}
+            {/* RIGHT SIDE */}
 
-          <div className="col-lg-8 col-xxl-9">
-            <div className="ipProductGridRight">
-              {/* FILTER BAR */}
+            <div className="col-lg-8 col-xxl-9">
+              <div className="ipProductGridRight">
+                {/* TOP FILTER */}
 
-              <div className="filter-bar-buttons">
-                <div className="showing-results">
-                  <span>Showing 1-16 of 54 results</span>
-                </div>
-
-                <div className="filter-Column">
-                  <div className="filter-short-by">
-                    <select className="form-select">
-                      <option>Name</option>
-                      <option>Size</option>
-                      <option>Item Type</option>
-                      <option>Date Modified</option>
-                    </select>
+                <div className="filter-bar-buttons">
+                  <div className="showing-results">
+                    <span>Showing 1-16 of 54 results</span>
                   </div>
 
-                  {/* GRID LIST BUTTON */}
+                  <div className="filter-Column">
+                    <div className="filter-short-by">
+                      <label>Short By:</label>
 
-                  <div className="filter-buttons">
-                    <div
-                      className={`grid-view-button ${view === "grid" ? "active" : ""}`}
-                      onClick={() => setView("grid")}
-                    >
-                      <i className="fa fa-th-large"></i>
+                      <select className="form-select">
+                        <option>Name</option>
+
+                        <option>Size</option>
+
+                        <option>Date Modified</option>
+                      </select>
                     </div>
 
-                    <div
-                      className={`list-view-button ${view === "list" ? "active" : ""}`}
-                      onClick={() => setView("list")}
-                    >
-                      <i className="fa fa-list"></i>
+                    <div className="filter-buttons d-flex">
+                      <button
+                        className={`grid-view-button ${view === "grid" ? "active" : ""}`}
+                        onClick={() => setView("grid")}
+                      >
+                        <FaThLarge />
+                      </button>
+
+                      <button
+                        className={`list-view-button ${view === "list" ? "active" : ""}`}
+                        onClick={() => setView("list")}
+                      >
+                        <FaList />
+                      </button>
                     </div>
                   </div>
                 </div>
-              </div>
 
-              {/* PRODUCT GRID */}
+                {/* PRODUCTS */}
 
-              <div
-                className={`grid-list ${view === "grid" ? "grid-view-filter" : "list-view-filter"}`}
-              >
-                <div className="row">
-                  {products.map((product) => (
-                    <div className="col-md-4" key={product.id}>
-                      <div className="bsFeaturedProductItem">
-                        <div className="bsFeaturedProductImg">
-                          <a href="#">
-                            <img
-                              src={product.image}
-                              alt="product"
-                              className="img-fluid"
-                            />
-                          </a>
-                        </div>
+                <div
+                  className={`grid-list ${view === "grid" ? "grid-view-filter" : "list-view-filter"}`}
+                >
+                  <div className="row">
+                    {products.map((product) => (
+                      <div
+                        key={product.id}
+                        className={
+                          view === "grid"
+                            ? "col-md-4 list-view-filter-item"
+                            : "col-md-12 list-view-filter-item"
+                        }
+                      >
+                        <div className="bsFeaturedProductItem">
+                          <div className="bsFeaturedProductImg">
+                            <div className="bsFeaturedProductImgInner">
+                              <a href={product.link}>
+                                <img
+                                  src={product.img}
+                                  alt={product.title}
+                                  className="img-fluid"
+                                />
+                              </a>
 
-                        <div className="bsFeaturedProductContant">
-                          <span>{product.category}</span>
+                              <a className="btn bsCommBtn" href={product.link}>
+                                <span>ADD TO CART</span>
+                              </a>
+                            </div>
+                          </div>
 
-                          <h5>{product.title}</h5>
+                          <div className="bsFeaturedProductContant">
+                            <span>{product.category}</span>
 
-                          <h6>
-                            <ins>{product.price}</ins>
+                            <h5>
+                              <a href={product.link}>{product.title}</a>
+                            </h5>
 
-                            <del>{product.oldPrice}</del>
-                          </h6>
+                            <h6>
+                              <ins>{product.price}</ins>
+
+                              <del>{product.oldPrice}</del>
+                            </h6>
+
+                            <a className="btn bsCommBtn" href={product.link}>
+                              <span>ADD TO CART</span>
+                            </a>
+                          </div>
                         </div>
                       </div>
-                    </div>
-                  ))}
+                    ))}
+                  </div>
                 </div>
               </div>
             </div>

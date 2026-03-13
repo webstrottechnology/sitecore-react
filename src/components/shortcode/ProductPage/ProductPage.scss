@@ -1,119 +1,479 @@
 .ipProductGridWithSidebar {
   padding: 80px 0;
+  position: relative;
 
-  .ipFilterCard {
-    background: #fff;
-    border: 1px solid #eee;
-    margin-bottom: 25px;
-    padding: 20px;
+  &:before {
+    content: "";
+    position: absolute;
+    background-image: url("../images/inner-page/bg5.png");
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+  }
 
-    h5 {
-      font-size: 18px;
-      font-weight: 600;
-      margin-bottom: 15px;
-    }
+  .ipProductGridViewInner {
+    position: relative;
+    z-index: 2;
 
-    .nav-link {
-      padding: 6px 0;
-      color: #333;
-      font-size: 14px;
+    .ipProductGridLeft {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
 
-      &:hover {
-        color: #ff6b6b;
+      .ipFilterCard {
+        background: #ffffff;
+        border-radius: 10px;
+        box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.05);
+
+        .ipFilterCardHead {
+          padding: 20px;
+          border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+
+          h5 {
+            color: #023047;
+            font-size: 22px;
+            font-weight: 700;
+          }
+        }
+
+        .ipCategoryList {
+
+          list-style: none;
+          padding: 0;
+          margin: 0;
+
+          li {
+
+            margin-bottom: 14px;
+
+            a {
+
+              display: flex;
+              align-items: center;
+              gap: 10px;
+              text-decoration: none;
+              color: #8a8a8a;
+              font-size: 16px;
+              font-weight: 500;
+
+              transition: 0.3s;
+
+              .catIcon {
+
+                color: #fb8500;
+                font-size: 26px;
+
+              }
+
+              &:hover {
+
+                color: #023047;
+
+              }
+
+            }
+
+          }
+
+        }
+
+        .ipFilterCardContant {
+          padding: 20px;
+
+          .nav {
+            li {
+              margin-bottom: 8px;
+
+              a {
+                color: #858585;
+                font-size: 16px;
+                font-weight: 500;
+                position: relative;
+                padding-left: 28px;
+
+                &:after {
+                  content: "";
+                  position: absolute;
+                  left: 0;
+                  top: 5px;
+                  width: 18px;
+                  height: 18px;
+                  background-image: url("../images/inner-page/icon/arrow-icon.png");
+                  background-size: contain;
+                  background-repeat: no-repeat;
+                }
+              }
+            }
+          }
+
+          .ipFilterCardCheck {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            .form-check-label {
+              color: #858585;
+              font-size: 16px;
+              cursor: pointer;
+
+              input {
+                margin-right: 8px;
+                border-color: #858585;
+
+                &:checked {
+                  background-color: #fb8500;
+                  border-color: #fb8500;
+
+                  &:focus {
+                    border-color: #fb8500;
+                  }
+                }
+
+                &:focus {
+                  box-shadow: unset;
+                  border-color: #858585;
+                }
+              }
+            }
+
+            span {
+              color: #858585;
+              font-size: 15px;
+            }
+          }
+
+          .ipFilterReviewCard {
+
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+
+            .ipFilterReview {
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+              gap: 10px;
+
+
+              .stars {
+                display: flex;
+                align-items: center;
+                gap: 4px;
+                font-size: 16px;
+                color: #bdbdbd; // grey star
+
+                .active {
+                  color: #ff7a00; // orange star
+                }
+              }
+
+              span {
+
+                color: #858585;
+                font-size: 15px;
+
+              }
+
+            }
+
+          }
+
+          .ipPriceRange {
+
+            input[type="range"] {
+              width: 100%;
+              appearance: none;
+              background: transparent;
+              margin: 20px 0;
+            }
+
+            /* slider line */
+
+            input[type="range"]::-webkit-slider-runnable-track {
+              height: 6px;
+              background: #ddd;
+              border-radius: 10px;
+            }
+
+            /* sliding point */
+
+            input[type="range"]::-webkit-slider-thumb {
+              appearance: none;
+              height: 18px;
+              width: 18px;
+              background: #fb8500;
+              border-radius: 50%;
+              cursor: pointer;
+              margin-top: -6px;
+              box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+            }
+
+            /* firefox support */
+
+            input[type="range"]::-moz-range-thumb {
+              height: 18px;
+              width: 18px;
+              background: #fb8500;
+              border: none;
+              border-radius: 50%;
+              cursor: pointer;
+            }
+
+            .ipPriceValue {
+              display: flex;
+              justify-content: space-between;
+
+              span {
+                font-size: 16px;
+                font-weight: 600;
+                color: #023047;
+              }
+            }
+
+          }
+        }
+
+
       }
-    }
-  }
 
-  .ipFilterCardCheck {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 6px 0;
-
-    .form-check-label {
-      font-size: 14px;
-      cursor: pointer;
-    }
-
-    .count {
-      font-size: 13px;
-      color: #777;
-    }
-  }
-
-  .productGrid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 25px;
-  }
-
-  .productCard {
-    border: 1px solid #eee;
-    padding: 20px;
-    transition: 0.3s;
-
-    &:hover {
-      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-    }
-
-    .productImage {
-      text-align: center;
-
-      img {
+      .ipFilterPromoCard {
         width: 100%;
-        max-height: 220px;
-        object-fit: contain;
-      }
-    }
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 450px;
+        padding: var(--p26) var(--p20);
+        text-align: center;
+        border-radius: var(--br10);
+        box-shadow: 0px 2px 20px 0px rgba(0, 0, 0, 0.05);
 
-    .productContent {
-      margin-top: 15px;
-      text-align: center;
-
-      .category {
-        font-size: 13px;
-        color: #777;
-      }
-
-      h5 {
-        font-size: 18px;
-        margin: 8px 0;
-      }
-
-      h6 {
-        margin-bottom: 15px;
-
-        ins {
-          color: #000;
-          font-weight: 600;
-          margin-right: 6px;
+        .promoSmall {
+          display: block;
+          font-size: var(--fs14);
+          margin-bottom: var(--m6);
+          color: var(--white-color);
         }
 
-        del {
-          color: #aaa;
+        h3 {
+          font-size: var(--fs26);
+          font-weight: var(--fw600);
+          margin-bottom: var(--m10);
+          color: var(--white-color);
+        }
+
+        .promoBtn {
+          display: inline-flex;
+          align-items: center;
+          gap: 10px;
+          color: var(--white-color);
+          font-weight: var(--fw600);
+          text-decoration: none;
+          border-bottom: 1px solid var(--white-color);
+          padding-bottom: var(--p4);
+        }
+
+        .promoBtn svg {
+          font-size: var(--fs16);
+        }
+      }
+    }
+
+    .ipProductGridRight {
+
+      .filter-bar-buttons {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 30px;
+
+        .showing-results span {
+          color: #023047;
+          font-size: 16px;
+          font-weight: 700;
+        }
+
+        .filter-Column {
+          display: flex;
+          align-items: center;
+          gap: 15px;
+
+          .filter-short-by {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+
+            label {
+              font-size: 16px;
+              font-weight: 700;
+              color: #023047;
+            }
+
+            select {
+              background: #fcf0e3;
+              border: 1px solid #fcf0e3;
+              font-size: 15px;
+
+              &:focus {
+                box-shadow: none;
+              }
+            }
+          }
+
+          .filter-buttons {
+            display: flex;
+            gap: 10px;
+
+            button {
+              width: 40px;
+              height: 40px;
+              border: 1px solid #fcf0e3;
+              background: #fcf0e3;
+              color: #858585;
+              border-radius: 5px;
+              cursor: pointer;
+
+              &:hover,
+              &.active {
+                background: #fcf0e3;
+                color: #fb8500;
+              }
+            }
+          }
         }
       }
 
-      .addCartBtn {
-        background: #ff6b6b;
-        border: none;
-        padding: 10px 20px;
-        color: #fff;
-        font-size: 14px;
-        cursor: pointer;
+      /* PRODUCT GRID */
+
+      .grid-list {
+
+        &.grid-view-filter {
+          .row {
+            display: flex;
+            flex-wrap: wrap;
+          }
+
+          .list-view-filter-item {
+            margin-bottom: 30px;
+          }
+        }
+
+        &.list-view-filter {
+
+          .list-view-filter-item {
+            margin-bottom: 20px;
+
+            .bsFeaturedProductItem {
+              display: grid;
+              grid-template-columns: 200px 1fr;
+              gap: 20px;
+              background: #ffffff;
+              box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.08);
+              border-radius: 8px;
+            }
+
+            .bsFeaturedProductImg img {
+              height: 200px;
+              object-fit: cover;
+            }
+
+            .bsFeaturedProductContant {
+              text-align: left;
+            }
+          }
+        }
+
+        .bsFeaturedProductItem {
+          padding: 20px;
+          background: #ffffff;
+          border-radius: 8px;
+          display: flex;
+          flex-direction: column;
+          gap: 15px;
+          text-align: center;
+
+          .bsFeaturedProductImg {
+            background: #ffffff;
+            padding: 20px;
+
+            img {
+              width: 100%;
+              height: 300px;
+              object-fit: cover;
+            }
+
+            .bsCommBtn {
+              margin-top: 10px;
+            }
+          }
+
+          .bsFeaturedProductContant {
+
+            span {
+              color: #219653;
+              font-size: 15px;
+              font-weight: 700;
+            }
+
+            h5 {
+              font-size: 18px;
+              font-weight: 700;
+              color: #000000;
+              margin: 10px 0;
+
+              a {
+                color: inherit;
+                text-decoration: none;
+              }
+            }
+
+            h6 {
+              font-size: 18px;
+              font-weight: 700;
+
+              ins {
+                color: #000000;
+                text-decoration: none;
+                margin-right: 10px;
+              }
+
+              del {
+                color: #858585;
+              }
+            }
+
+            .bsCommBtn {
+              margin-top: 10px;
+
+              span {
+                color: #ffffff;
+              }
+            }
+          }
+        }
       }
-    }
-  }
 
-  @media (max-width: 992px) {
-    .productGrid {
-      grid-template-columns: repeat(2, 1fr);
-    }
-  }
+      .innerPagePagination {
+        margin-top: 40px;
 
-  @media (max-width: 576px) {
-    .productGrid {
-      grid-template-columns: 1fr;
+        .page-link {
+          width: 45px;
+          height: 45px;
+          border-radius: 8px;
+          border: 1px solid #fb8500;
+          background: #ffffff;
+          color: #858585;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+
+        .page-item.active .page-link {
+          background: #fb8500;
+          border-color: #fb8500;
+          color: #ffffff;
+        }
+      }
     }
   }
 }
