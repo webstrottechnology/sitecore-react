@@ -16,6 +16,9 @@ import img2 from "../../../assets/images/portfolio/13.jpg";
 import { MdOutlinePhoneInTalk } from "react-icons/md";
 import { CiMail } from "react-icons/ci";
 
+import { AboutBannerBreadCrumb } from "../breadcrumb/Breadcrumb";
+import sitecoreBg from "../../../assets/images/sitecoreBreadCrumb_bg_img.png";
+
 const Header_01 = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [active, setActive] = useState(null);
@@ -113,6 +116,7 @@ const Header_01 = () => {
   return (
     <>
       {/* ================= TOP BAR ================= */}
+        <AboutBannerBreadCrumb title="Header" bgImage={sitecoreBg} />
 
       <div className="header_01_section">
         <div className="top-bar">

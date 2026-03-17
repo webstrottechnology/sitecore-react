@@ -4,15 +4,24 @@ import {
   FaArrowRight,
   FaArrowDown,
   FaArrowLeft,
-
 } from "react-icons/fa";
 import "./Counter.scss";
 
-import { counterDataFive, counterDataFour, counterDataOne, counterdataSix, counterDataThree, counterDataTwo, counterEightData, counterSevenData } from "./CounterData";
+import {
+  counterDataFive,
+  counterDataFour,
+  counterDataOne,
+  counterdataSix,
+  counterDataThree,
+  counterDataTwo,
+  counterEightData,
+  counterSevenData,
+} from "./CounterData";
 
+import { AboutBannerBreadCrumb } from "../breadcrumb/Breadcrumb";
+import sitecoreBg from "../../../assets/images/sitecoreBreadCrumb_bg_img.png";
 
-
-// ++++++++++++++counter one section Start ++++++++++++++++++ 
+// ++++++++++++++counter one section Start ++++++++++++++++++
 const CounterBox = ({ icon, title, value, color }) => {
   const [count, setCount] = useState(0);
 
@@ -46,23 +55,26 @@ const CounterBox = ({ icon, title, value, color }) => {
 
 const CounterOne = () => {
   return (
-    <div className="counterOne">
-      <div className="container">
-        <div className="title-box">
-          <h2>Counters</h2>
-        </div>
-        <div className="counter-grid">
-          {counterDataOne.map((item, i) => (
-            <CounterBox key={i} {...item} />
-          ))}
+    <>
+      <AboutBannerBreadCrumb title="Counter" bgImage={sitecoreBg} />
+      <div className="counterOne">
+        <div className="container">
+          <div className="title-box">
+            <h2>Counters</h2>
+          </div>
+          <div className="counter-grid">
+            {counterDataOne.map((item, i) => (
+              <CounterBox key={i} {...item} />
+            ))}
+          </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
-// ++++++++++++++ counter one section End ++++++++++++++++++ 
+// ++++++++++++++ counter one section End ++++++++++++++++++
 
-// ++++++++++++++ counter Two section start ++++++++++++++++++ 
+// ++++++++++++++ counter Two section start ++++++++++++++++++
 const CounterCard = ({ value, label }) => {
   const [count, setCount] = useState(0);
 
@@ -104,9 +116,9 @@ const CounterTwo = () => {
     </div>
   );
 };
-// ++++++++++++++ counter Two section end ++++++++++++++++++ 
+// ++++++++++++++ counter Two section end ++++++++++++++++++
 
-// ++++++++++++++ counter Three section start ++++++++++++++++++ 
+// ++++++++++++++ counter Three section start ++++++++++++++++++
 const CounterItem = ({ icon, value, label }) => {
   const [count, setCount] = useState(0);
 
@@ -151,9 +163,9 @@ const CounterThree = () => {
     </div>
   );
 };
-// ++++++++++++++ counter Three section end ++++++++++++++++++ 
+// ++++++++++++++ counter Three section end ++++++++++++++++++
 
-// ++++++++++++++ counter Four section start ++++++++++++++++++ 
+// ++++++++++++++ counter Four section start ++++++++++++++++++
 const CounterItem2 = ({ icon, value, label }) => {
   const [count, setCount] = useState(0);
 
@@ -194,8 +206,8 @@ const CounterFour = () => {
           <h2>Consulting Successes</h2>
           <p>
             Sample text. Click to select the text box. Click again or double
-            click to start editing the text. Sit amet porttitor eget dolor
-            morbi non arcu risus quis.
+            click to start editing the text. Sit amet porttitor eget dolor morbi
+            non arcu risus quis.
           </p>
         </div>
 
@@ -209,9 +221,9 @@ const CounterFour = () => {
     </div>
   );
 };
-// ++++++++++++++ counter Four section end ++++++++++++++++++ 
+// ++++++++++++++ counter Four section end ++++++++++++++++++
 
-// ++++++++++++++ counter Five section start ++++++++++++++++++ 
+// ++++++++++++++ counter Five section start ++++++++++++++++++
 const CounterItem3 = ({ value, label, suffix }) => {
   const [count, setCount] = useState(0);
 
@@ -245,18 +257,15 @@ const CounterItem3 = ({ value, label, suffix }) => {
 const CounterFive = () => {
   return (
     <div className="counterFive">
-      <h2 className="title">Modern Counter  </h2>
+      <h2 className="title">Modern Counter </h2>
       <div className="counterFive-wrapper">
         {/* Left Content */}
         <div className="counterFive-content">
-          <h3>
-            Our Success Is Defined
-            By The Impact We Create.
-          </h3>
+          <h3>Our Success Is Defined By The Impact We Create.</h3>
           <p>
             Ever wondered how some graphic designers always manage to produce
-            beautiful looking designs for their brochures, website designs,
-            logo designs? Talent…yes.
+            beautiful looking designs for their brochures, website designs, logo
+            designs? Talent…yes.
           </p>
         </div>
 
@@ -268,21 +277,27 @@ const CounterFive = () => {
 
           {/* Center arrows */}
           <div className="center-arrows">
-            <span className="tl"><FaArrowUp style={{ transform: "rotate(-45deg)" }} /></span>
-            <span className="tr"><FaArrowRight style={{ transform: "rotate(-45deg)" }} /></span>
-            <span className="bl"><FaArrowLeft style={{ transform: "rotate(-45deg)" }} /></span>
-            <span className="br"><FaArrowDown style={{ transform: "rotate(-45deg)" }} /></span>
+            <span className="tl">
+              <FaArrowUp style={{ transform: "rotate(-45deg)" }} />
+            </span>
+            <span className="tr">
+              <FaArrowRight style={{ transform: "rotate(-45deg)" }} />
+            </span>
+            <span className="bl">
+              <FaArrowLeft style={{ transform: "rotate(-45deg)" }} />
+            </span>
+            <span className="br">
+              <FaArrowDown style={{ transform: "rotate(-45deg)" }} />
+            </span>
           </div>
-
-
         </div>
       </div>
     </div>
   );
 };
-// ++++++++++++++ counter Five section end ++++++++++++++++++ 
+// ++++++++++++++ counter Five section end ++++++++++++++++++
 
-// ++++++++++++++ counter six section Start ++++++++++++++++++ 
+// ++++++++++++++ counter six section Start ++++++++++++++++++
 const CounterSix = () => {
   return (
     <div className="counterSix">
@@ -323,9 +338,9 @@ const CounterItem6 = ({ item }) => {
     </div>
   );
 };
-// ++++++++++++++ counter six section end ++++++++++++++++++ 
+// ++++++++++++++ counter six section end ++++++++++++++++++
 
-// ++++++++++++++ counter seven section start ++++++++++++++++++ 
+// ++++++++++++++ counter seven section start ++++++++++++++++++
 
 const CounterItem7 = ({ number, label }) => {
   const [count, setCount] = useState(0);
@@ -353,7 +368,7 @@ const CounterItem7 = ({ number, label }) => {
           }, 16);
         }
       },
-      { threshold: 0.4 }
+      { threshold: 0.4 },
     );
 
     if (ref.current) observer.observe(ref.current);
@@ -379,20 +394,16 @@ const CounterSeven = () => {
 
       <div className="counter-wrapper">
         {counterSevenData.map((item, index) => (
-          <CounterItem7
-            key={index}
-            number={item.number}
-            label={item.label}
-          />
+          <CounterItem7 key={index} number={item.number} label={item.label} />
         ))}
       </div>
     </div>
   );
 };
 
-// ++++++++++++++ counter seven section end ++++++++++++++++++ 
+// ++++++++++++++ counter seven section end ++++++++++++++++++
 
-// ++++++++++++++ counter Eight section start  ++++++++++++++++++ 
+// ++++++++++++++ counter Eight section start  ++++++++++++++++++
 const CounterNumber = ({ value }) => {
   const [count, setCount] = useState(0);
 
@@ -430,7 +441,15 @@ const CounterEight = () => {
     </div>
   );
 };
-// ++++++++++++++ counter Eight section end ++++++++++++++++++ 
+// ++++++++++++++ counter Eight section end ++++++++++++++++++
 
 export default CounterOne;
-export { CounterTwo, CounterThree, CounterFour, CounterFive, CounterSix, CounterSeven, CounterEight }
+export {
+  CounterTwo,
+  CounterThree,
+  CounterFour,
+  CounterFive,
+  CounterSix,
+  CounterSeven,
+  CounterEight,
+};

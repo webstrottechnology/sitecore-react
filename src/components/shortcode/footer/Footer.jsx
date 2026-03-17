@@ -19,43 +19,48 @@ import { FaXTwitter } from "react-icons/fa6";
 // import { TbBrandXTwitter } from "react-icons/tb";
 import { BsFillCircleFill } from "react-icons/bs";
 import footerLogo from "../../../assets/images/sitecore_footer_logo.png";
+import { AboutBannerBreadCrumb } from "../breadcrumb/Breadcrumb";
+import sitecoreBg from "../../../assets/images/sitecoreBreadCrumb_bg_img.png";
 
 const FooterOne = () => {
   return (
-    <div>
-      <footer className="footerOne">
-        {/* Newsletter */}
-        <div className="footer-top">
-          <h2>Subscribe to our newsletter</h2>
+    <>
+      <AboutBannerBreadCrumb title="Footer" bgImage={sitecoreBg} />
+      <div>
+        <footer className="footerOne">
+          {/* Newsletter */}
+          <div className="footer-top">
+            <h2>Subscribe to our newsletter</h2>
 
-          <div className="subscribe-box">
-            <input type="email" placeholder="Enter your email" />
-            <button>Subscribe</button>
-          </div>
-        </div>
-
-        {/* Footer Links */}
-        <div className="footer-links">
-          {footerOneLinks.map((section, i) => (
-            <div className="footer-column" key={section.title}>
-              <h4>{section.title}</h4>
-              <ul>
-                {section.links.map((link, j) => (
-                  <li key={link.title}>
-                    <a href={link.url}>{link.title}</a>
-                  </li>
-                ))}
-              </ul>
+            <div className="subscribe-box">
+              <input type="email" placeholder="Enter your email" />
+              <button>Subscribe</button>
             </div>
-          ))}
-        </div>
+          </div>
 
-        {/* Bottom */}
-        <div className="footer-bottom">
-          <p>© 2026 YourBrand. All rights reserved.</p>
-        </div>
-      </footer>
-    </div>
+          {/* Footer Links */}
+          <div className="footer-links">
+            {footerOneLinks.map((section, i) => (
+              <div className="footer-column" key={section.title}>
+                <h4>{section.title}</h4>
+                <ul>
+                  {section.links.map((link, j) => (
+                    <li key={link.title}>
+                      <a href={link.url}>{link.title}</a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+
+          {/* Bottom */}
+          <div className="footer-bottom">
+            <p>© 2026 YourBrand. All rights reserved.</p>
+          </div>
+        </footer>
+      </div>
+    </>
   );
 };
 

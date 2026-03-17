@@ -254,7 +254,6 @@ import BlogRightAsideBox from "../shortcode/BlogRightWrap/BlogRightWrap";
 import BlogImageSidebarSection from "../shortcode/BlogSingleWrap/BlogImageSidebar";
 import ProductGridSection from "../shortcode/ProductPage/ProductGridsectionPage";
 
-
 const ComponentsPage = () => {
   return (
     <div className="components-page">

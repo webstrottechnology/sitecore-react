@@ -2,29 +2,34 @@ import React from "react";
 import "./Heading.scss";
 import { HiOutlineSparkles } from "react-icons/hi2";
 import { HiStar } from "react-icons/hi2";
+import { AboutBannerBreadCrumb } from "../breadcrumb/Breadcrumb";
+import sitecoreBg from "../../../assets/images/sitecoreBreadCrumb_bg_img.png";
 
 /* ---------------- HEADING ONE ---------------- */
 
 const Heading = () => {
   return (
-    <div className="heading_wrapper">
-      <div className="container">
-        <div className="heading_title">
-          <h2>How you can help?</h2>
-          <div className="heading-underline">
-            <span className="line"></span>
+    <>
+      <AboutBannerBreadCrumb title="Heading" bgImage={sitecoreBg} />
+      <div className="heading_wrapper">
+        <div className="container">
+          <div className="heading_title">
+            <h2>How you can help?</h2>
+            <div className="heading-underline">
+              <span className="line"></span>
 
-            <span className="center-shape">
-              <span className="diamond"></span>
-              <div className="center-diamond"></div>
-              <span className="diamond"></span>
-            </span>
+              <span className="center-shape">
+                <span className="diamond"></span>
+                <div className="center-diamond"></div>
+                <span className="diamond"></span>
+              </span>
 
-            <span className="line"></span>
+              <span className="line"></span>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 
@@ -168,10 +173,7 @@ const Heading9 = ({
 
 // headings10
 
-const Heading10 = ({
-  title = "Style Ten",
-  tagline = "TAGLINE KEYWORDS",
-}) => {
+const Heading10 = ({ title = "Style Ten", tagline = "TAGLINE KEYWORDS" }) => {
   return (
     <div className="heading10_wrapper heading_title">
       <h2 className="heading_title">{title}</h2>
@@ -195,5 +197,5 @@ export {
   Heading7,
   Heading8,
   Heading9,
-  Heading10
+  Heading10,
 };

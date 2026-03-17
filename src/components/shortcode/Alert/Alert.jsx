@@ -15,6 +15,8 @@ import { IoClose } from "react-icons/io5";
 import { FiCheckCircle, FiAlertTriangle, FiXCircle } from "react-icons/fi";
 import { AiOutlineLoading3Quarters } from "react-icons/ai";
 import Alert from "react-bootstrap/Alert";
+import { AboutBannerBreadCrumb } from "../breadcrumb/Breadcrumb";
+import sitecoreBg from "../../../assets/images/sitecoreBreadCrumb_bg_img.png";
 
 const AlertOne = () => {
   const [alerts, setAlerts] = useState(alertDataOne);
@@ -24,32 +26,35 @@ const AlertOne = () => {
   };
 
   return (
-    <div className="alert-wrapper-one">
-      {alerts.map((item) => (
-        <div key={item.id} className={`alert alert--${item.type}`}>
-          <span className="alert_icon">
-            {item.type === "success" && "✔"}
-            {item.type === "error" && "✖"}
-            {item.type === "warning" && "⚠"}
-            {item.type === "info" && "ℹ"}
-          </span>
+    <>
+      <AboutBannerBreadCrumb title="Alert" bgImage={sitecoreBg} />
+      <div className="alert-wrapper-one">
+        {alerts.map((item) => (
+          <div key={item.id} className={`alert alert--${item.type}`}>
+            <span className="alert_icon">
+              {item.type === "success" && "✔"}
+              {item.type === "error" && "✖"}
+              {item.type === "warning" && "⚠"}
+              {item.type === "info" && "ℹ"}
+            </span>
 
-          <div className="alert_content">
-            <h4>{item.title}</h4>
-            <p>{item.message}</p>
+            <div className="alert_content">
+              <h4>{item.title}</h4>
+              <p>{item.message}</p>
+            </div>
+
+            {/* Cancel Button */}
+            <button
+              className="alert_close"
+              onClick={() => handleClose(item.id)}
+              aria-label="Close alert"
+            >
+              ✕
+            </button>
           </div>
-
-          {/* Cancel Button */}
-          <button
-            className="alert_close"
-            onClick={() => handleClose(item.id)}
-            aria-label="Close alert"
-          >
-            ✕
-          </button>
-        </div>
-      ))}
-    </div>
+        ))}
+      </div>
+    </>
   );
 };
 
