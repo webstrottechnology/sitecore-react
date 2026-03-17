@@ -37,6 +37,7 @@
   --alertTextColor4: #084298;
   --temBgBlueColor: #e9f5f8;
   --temSitCoreBlueColor: #219EBC;
+  --temSiteCoreLightOrangeColor: #fdf1e6;
   --temSitecoreRamaColor: #08384a;
   /* font family*/
   --body: 'Lato', sans-serif;
@@ -616,7 +617,7 @@ p {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: var(--p10) var(--p22);
+  padding: var(--p10) var(--p40);
   border: 1px solid var(--orange-color);
   border-radius: var(--br26);
   color: var(--orange-color);
@@ -647,6 +648,12 @@ p {
   right: -20px;
   transform: translate(50%, -50%);
 }
+.Temp-read-more.Temp-read-more-bg-color {
+  background-color: var(--orange-color);
+}
+.Temp-read-more.Temp-read-more-bg-color span {
+  color: var(--white-color);
+}
 .Temp-read-more:hover {
   color: var(--white-color);
   border: 1px solid var(--temSitCoreBlueColor);
@@ -656,6 +663,65 @@ p {
   animation-direction: alternate;
 }
 .Temp-read-more:hover::after {
+  animation: criss-cross-right 0.8s both;
+  animation-direction: alternate;
+}
+
+.Temp-add-to-cart {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--p10) var(--p40);
+  background-color: var(--temSitCoreBlueColor);
+  border: 1px solid var(--temSitCoreBlueColor);
+  border-radius: var(--br4);
+  color: var(--white-color);
+  font-size: var(--fs16);
+  font-weight: var(--fw600);
+  transition: all 0.5s;
+  position: relative;
+  overflow: hidden;
+}
+.Temp-add-to-cart span {
+  position: relative;
+  z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+.Temp-add-to-cart::before, .Temp-add-to-cart::after {
+  position: absolute;
+  top: 50%;
+  content: "";
+  width: 20px;
+  height: 20px;
+  background-color: var(--temp1BlueColor);
+  border-radius: 50%;
+}
+.Temp-add-to-cart::before {
+  left: -20px;
+  transform: translate(-50%, -50%);
+}
+.Temp-add-to-cart::after {
+  right: -20px;
+  transform: translate(50%, -50%);
+}
+.Temp-add-to-cart.Temp-read-more-bg-color {
+  background-color: var(--orange-color);
+}
+.Temp-add-to-cart.Temp-read-more-bg-color span {
+  color: var(--white-color);
+}
+.Temp-add-to-cart:hover {
+  background-color: var(--temp1BlueColor);
+  color: var(--white-color);
+  border: 1px solid var(--temp1BlueColor);
+}
+.Temp-add-to-cart:hover::before {
+  animation: criss-cross-left 0.8s both;
+  animation-direction: alternate;
+}
+.Temp-add-to-cart:hover::after {
   animation: criss-cross-right 0.8s both;
   animation-direction: alternate;
 }

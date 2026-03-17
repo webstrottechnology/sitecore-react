@@ -2,6 +2,11 @@ import product1 from "../../../assets/images/product/product_img1.jpg";
 import product2 from "../../../assets/images/product/product_img2.jpg";
 import product3 from "../../../assets/images/product/product_img3.jpg";
 import product4 from "../../../assets/images/product/product_img4.jpg";
+import product5 from "../../../assets/images/product/product_img5.jpg";
+import product6 from "../../../assets/images/product/product_img6.png";
+import product7 from "../../../assets/images/product/product_img7.png";
+import product8 from "../../../assets/images/product/product_img8.png";
+import product9 from "../../../assets/images/product/product_img9.png";
 
 export const categories = [
   "Historical Fiction",
@@ -56,6 +61,51 @@ export const products = [
     id: 4,
     img: product4,
     category: "Historical Fiction",
+    title: "Best Beloved",
+    link: "/product-single",
+    price: "$23.00",
+    oldPrice: "$25.50",
+  },
+  {
+    id: 5,
+    img: product5,
+    category: "Historical Fiction",
+    title: "Acts of Love and War",
+    link: "/product-single",
+    price: "$44.00",
+    oldPrice: "$66.50",
+  },
+  {
+    id: 6,
+    img: product6,
+    category: "Historical Fiction",
+    title: "The Book of Lost Friends",
+    link: "/product-single",
+    price: "$77.00",
+    oldPrice: "$68.50",
+  },
+  {
+    id: 7,
+    img: product7,
+    category: "Historical Fiction",
+    title: "Acts of Love and War",
+    link: "/product-single",
+    price: "$79.00",
+    oldPrice: "$98.50",
+  },
+  {
+    id: 8,
+    img: product8,
+    category: "Historical Fiction",
+    title: "The Book of Lost Friends",
+    link: "/product-single",
+    price: "$23.00",
+    oldPrice: "$25.50",
+  },
+  {
+    id: 9,
+    img: product9,
+    category: "The Big Book of Science",
     title: "Best Beloved",
     link: "/product-single",
     price: "$23.00",

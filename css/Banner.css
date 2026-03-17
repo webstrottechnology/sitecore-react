@@ -1199,7 +1199,6 @@
   background-size: cover;
   margin-top: -110px;
   z-index: 1;
-  background-color: var(--bg-color);
 }
 .banner11 .custom-container {
   position: relative;

@@ -193,6 +193,75 @@ p {
   }
 }
 
+.Temp-add-to-cart {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--p10) var(--p40);
+  background-color: var(--temSitCoreBlueColor);
+  border: 1px solid var(--temSitCoreBlueColor);
+  border-radius: var(--br4);
+  color: var(--white-color);
+  font-size: var(--fs16);
+  font-weight: var(--fw600);
+  transition: all 0.5s;
+  position: relative;
+  overflow: hidden;
+
+  span {
+    position: relative;
+    z-index: 1;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  &::before,
+  &::after {
+    position: absolute;
+    top: 50%;
+    content: "";
+    width: 20px;
+    height: 20px;
+    background-color: var(--temp1BlueColor);
+    border-radius: 50%;
+  }
+
+  &::before {
+    left: -20px;
+    transform: translate(-50%, -50%);
+  }
+
+  &::after {
+    right: -20px;
+    transform: translate(50%, -50%);
+  }
+
+  &.Temp-read-more-bg-color {
+    background-color: var(--orange-color);
+
+    span {
+      color: var(--white-color);
+    }
+  }
+
+  &:hover {
+    background-color: var(--temp1BlueColor);
+    color: var(--white-color);
+    border: 1px solid var(--temp1BlueColor);
+
+    &::before {
+      animation: criss-cross-left 0.8s both;
+      animation-direction: alternate;
+    }
+
+    &::after {
+      animation: criss-cross-right 0.8s both;
+      animation-direction: alternate;
+    }
+  }
+}
+
 @keyframes criss-cross-left {
   0% {
     left: -20px;
