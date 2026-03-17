@@ -13,7 +13,8 @@ import {
   listData9,
   listData10,
 } from "./listData";
-
+import { AboutBannerBreadCrumb } from "../breadcrumb/Breadcrumb";
+import sitecoreBg from "../../../assets/images/sitecoreBreadCrumb_bg_img.png";
 /* ---------------- LIST ONE ---------------- */
 
 const List = () => {
@@ -29,29 +30,32 @@ const List = () => {
   };
 
   return (
-    <div className="bg-wrapper">
-      <div className="list_wrapper">
-        <div className="container">
-          <h2 className="list_title">THE WHITE STRIPES</h2>
-          <ul>
-            {listData.map((item, index) => (
-              <li
-                key={index}
-                className={activeIndex === index ? "active" : ""}
-                onClick={() => handleItemClick(index)}
-              >
-                {item}
-                {activeIndex === index && (
-                  <a href="#" onClick={handleLinkClick}>
-                    Link
-                  </a>
-                )}
-              </li>
-            ))}
-          </ul>
+    <>
+      <AboutBannerBreadCrumb title="List" bgImage={sitecoreBg} />
+      <div className="bg-wrapper">
+        <div className="list_wrapper">
+          <div className="container">
+            <h2 className="list_title">THE WHITE STRIPES</h2>
+            <ul>
+              {listData.map((item, index) => (
+                <li
+                  key={index}
+                  className={activeIndex === index ? "active" : ""}
+                  onClick={() => handleItemClick(index)}
+                >
+                  {item}
+                  {activeIndex === index && (
+                    <a href="#" onClick={handleLinkClick}>
+                      Link
+                    </a>
+                  )}
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 
