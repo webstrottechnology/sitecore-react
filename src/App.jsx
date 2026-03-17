@@ -27,7 +27,8 @@ import BlogVimeoPage from "./components/pages/BlogVimeoPage";
 import BlogAudioPage from "./components/pages/BlogAudioPage";
 import BlogQuotePage from "./components/pages/BlogQuotePage";
 import ProductGridPage from "./components/pages/ProductGridPage";
-import Checkout from "./components/pages/Checkout"
+import Checkout from "./components/pages/Checkout";
+import ProductSingle01 from "./components/pages/ProductSingle01";
 
 const App = () => {
   return (
@@ -62,6 +63,7 @@ const App = () => {
         <Route path="/coming-soon" element={<ComingSoon />} />
         <Route path="/cart" element={<ShopCart />} />
         <Route path="/checkout" element={<Checkout />} />
+        <Route path="/product-single-01" element={<ProductSingle01 />} />
       </Routes>
       {/* FOOTER ALWAYS */}
       <Sitecorefooter />
