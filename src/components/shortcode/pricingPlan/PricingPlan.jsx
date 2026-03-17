@@ -13,42 +13,46 @@ import pricingPlanData, {
 } from "./pricingPlanData";
 import "./PricingPlan.scss";
 import { FaHome } from "react-icons/fa";
-
+import { AboutBannerBreadCrumb } from "../breadcrumb/Breadcrumb";
+import sitecoreBg from "../../../assets/images/sitecoreBreadCrumb_bg_img.png";
 /* ---------------- PRICING PLAN ONE ---------------- */
 
 const PricingPlan = () => {
   return (
-    <div className="pricing_wrapper">
-      <div className="container">
-        <div className="pricing_title_wrapper">
-          <h2>Find the Perfect Plan for You</h2>
-        </div>
-        <div className="pricing_cards">
-          {pricingPlanData.map((plan, index) => (
-            <div
-              key={plan.id}
-              className={`plan-card ${index === 1 ? "active2" : ""}`}
-            >
-              <div className="content">
-                <h3 className="name">{plan.name}</h3>
-                <span className="price">{plan.price}</span>
+    <>
+      <AboutBannerBreadCrumb title="Pricing Table" bgImage={sitecoreBg} />
+      <div className="pricing_wrapper">
+        <div className="container">
+          <div className="pricing_title_wrapper">
+            <h2>Find the Perfect Plan for You</h2>
+          </div>
+          <div className="pricing_cards">
+            {pricingPlanData.map((plan, index) => (
+              <div
+                key={plan.id}
+                className={`plan-card ${index === 1 ? "active2" : ""}`}
+              >
+                <div className="content">
+                  <h3 className="name">{plan.name}</h3>
+                  <span className="price">{plan.price}</span>
+                </div>
+
+                <ul className="list">
+                  <p>Includes:</p>
+                  {plan.features.map((feature, index) => (
+                    <li key={index}>{feature}</li>
+                  ))}
+                </ul>
+
+                <a href={plan.link} className="button">
+                  Contact Us
+                </a>
               </div>
-
-              <ul className="list">
-                <p>Includes:</p>
-                {plan.features.map((feature, index) => (
-                  <li key={index}>{feature}</li>
-                ))}
-              </ul>
-
-              <a href={plan.link} className="button">
-                Contact Us
-              </a>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 
@@ -316,7 +320,9 @@ const PricingPlan8 = () => {
                 ))}
               </ul>
 
-              <a href="#"><button>{plan.buttonText}</button></a>
+              <a href="#">
+                <button>{plan.buttonText}</button>
+              </a>
             </div>
           ))}
         </div>

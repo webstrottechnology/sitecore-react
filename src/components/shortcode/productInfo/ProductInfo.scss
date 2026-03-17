@@ -37,9 +37,18 @@
     }
 
     .tab-pane {
+        width: 100%;
+        position: relative;
+        overflow: auto;
+
         ul {
+            width: 100%;
+
             li {
-                list-style: disc;
+                svg {
+                    width: 12px;
+                    height: 12px;
+                }
             }
         }
 
@@ -57,6 +66,9 @@
             min-width: 350px;
             font-weight: var(--fw600);
             color: var(--temp1BlueColor);
+            display: flex;
+            gap: 10px;
+            align-items: center;
         }
 
         .custTblRight {
@@ -182,8 +194,15 @@
 
 // responsive css start 
 
-@include responsive(md) {
-    .ipProductInfo .userProfile img {
-        
+@include responsive(mobile) {
+    .ipProductInfo .custTbl .custTblLeft {
+        min-width: 260px;
+    }
+}
+
+
+@include responsive(mobile-sm) {
+    .ipProductInfo .tab-pane ul {
+        width: 600px;
     }
 }

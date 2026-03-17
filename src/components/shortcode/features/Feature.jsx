@@ -25,41 +25,50 @@ import furnitureImg1 from "../../../assets/images/feature6-1.jpg";
 import furnitureImg2 from "../../../assets/images/feature6-2.jpg";
 import furnitureImg3 from "../../../assets/images/feature6-3.jpg";
 
+import { AboutBannerBreadCrumb } from "../breadcrumb/Breadcrumb";
+import sitecoreBg from "../../../assets/images/sitecoreBreadCrumb_bg_img.png";
+
 /* ---------------- FEATURE ONE ---------------- */
 
 const Features = () => {
   return (
-    <section className="features-section">
-      <div className="container">
-        <div className="features-container">
-          <div className="features-image">
-            <img src={featureImg} alt="Features" />
-          </div>
+    <>
+      <AboutBannerBreadCrumb
+        title="Feature With Images"
+        bgImage={sitecoreBg}
+      />
+      <section className="features-section">
+        <div className="container">
+          <div className="features-container">
+            <div className="features-image">
+              <img src={featureImg} alt="Features" />
+            </div>
 
-          <div className="features-content">
-            <span className="features-tag">Services</span>
-            <h2 className="features-title">
-              Our <span>Features</span>
-            </h2>
+            <div className="features-content">
+              <span className="features-tag">Services</span>
+              <h2 className="features-title">
+                Our <span>Features</span>
+              </h2>
 
-            {FeaturesData.map((item) => {
-              const Icon = item.icon;
-              return (
-                <div className="feature-item" key={item.id}>
-                  <div className="icon">
-                    <Icon />
+              {FeaturesData.map((item) => {
+                const Icon = item.icon;
+                return (
+                  <div className="feature-item" key={item.id}>
+                    <div className="icon">
+                      <Icon />
+                    </div>
+                    <div className="text">
+                      <h4>{item.title}</h4>
+                      <p>{item.description}</p>
+                    </div>
                   </div>
-                  <div className="text">
-                    <h4>{item.title}</h4>
-                    <p>{item.description}</p>
-                  </div>
-                </div>
-              );
-            })}
+                );
+              })}
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </>
   );
 };
 

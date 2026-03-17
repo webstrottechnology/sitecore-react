@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { ProductInfoData } from "./ProductInfoData";
 import { FaStar } from "react-icons/fa";
 import "./ProductInfo.scss";
+import { GoDotFill } from "react-icons/go";
 
 const ProductInfo = () => {
   const [activeTab, setActiveTab] = useState("info");
@@ -9,7 +10,7 @@ const ProductInfo = () => {
 
   return (
     <section className="ipProductInfo">
-      <div className="container">
+      <div className="container custom-container-lg">
         {/* Tabs */}
 
         <ul className="nav nav-pills">
@@ -49,7 +50,10 @@ const ProductInfo = () => {
               {ProductInfoData.information.map((item, index) => (
                 <li key={index}>
                   <div className="custTbl">
-                    <div className="custTblLeft">{item.title}</div>
+                    <div className="custTblLeft">
+                      <GoDotFill />
+                      {item.title}
+                      </div>
 
                     <div className="custTblRight">
                       <span>:</span> {item.value}

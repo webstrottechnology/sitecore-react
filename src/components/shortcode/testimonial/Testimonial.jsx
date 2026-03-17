@@ -18,62 +18,68 @@ import {
   testimonialData10,
   testimonialData11,
 } from "./testimonialData";
+import { AboutBannerBreadCrumb } from "../breadcrumb/Breadcrumb";
+import sitecoreBg from "../../../assets/images/sitecoreBreadCrumb_bg_img.png";
+
 
 /* ---------------- TESTIMONIAL ONE ---------------- */
 
 const Testimonial = () => {
   return (
-    <div className="testimonial_wrapper">
-      <div className="container">
-        <div className="testimonial_title_wrapper">
-          <h2>OUR TESTIMONIALS</h2>
-          <h3>What Our Students Say About Us</h3>
-        </div>
+    <>
+      <AboutBannerBreadCrumb title="Testimonial" bgImage={sitecoreBg} />
+      <div className="testimonial_wrapper">
+        <div className="container">
+          <div className="testimonial_title_wrapper">
+            <h2>OUR TESTIMONIALS</h2>
+            <h3>What Our Students Say About Us</h3>
+          </div>
 
-        <Swiper
-          modules={[Pagination, Autoplay]}
-          spaceBetween={30}
-          slidesOffsetBefore={20}
-          slidesOffsetAfter={20}
-          slidesPerView={3}
-          loop={true}
-          pagination={{ clickable: true }}
-          autoplay={{
-            delay: 2500,
-            disableOnInteraction: false,
-          }}
-          breakpoints={{
-            0: { slidesPerView: 1 },
-            768: { slidesPerView: 2 },
-            1024: { slidesPerView: 3 },
-          }}
-          className="testimonial_swiper"
-        >
-          {TestimonialData.map((item) => (
-            <SwiperSlide key={item.id} className="swiper_slide_custom">
-              <div className="testimonial_card_wrapper">
-                <div className="testimonia_Card_content">
-                  <div className="top-text">
-                    <p className="text">{item.text}</p>
-                  </div>
-
-                  <div className="bottom_text">
-                    <div className="bottom_text_img">
-                      <img src={item.img} alt="" />
+          <Swiper
+            modules={[Pagination, Autoplay]}
+            spaceBetween={30}
+            slidesOffsetBefore={20}
+            slidesOffsetAfter={20}
+            slidesPerView={3}
+            loop={true}
+            pagination={{ clickable: true }}
+            autoplay={{
+              delay: 2500,
+              disableOnInteraction: false,
+            }}
+            breakpoints={{
+              0: { slidesPerView: 1 },
+              768: { slidesPerView: 2 },
+              1024: { slidesPerView: 3 },
+            }}
+            className="testimonial_swiper"
+          >
+            {TestimonialData.map((item) => (
+              <SwiperSlide key={item.id} className="swiper_slide_custom">
+                <div className="testimonial_card_wrapper">
+                  <div className="testimonia_Card_content">
+                    <div className="top-text">
+                      <p className="text">{item.text}</p>
                     </div>
 
-                    <div className="bottom_text_info">
-                      <p className="name">{item.name}</p>
-                      <p className="companyName">{item.companyName}</p>
+                    <div className="bottom_text">
+                      <div className="bottom_text_img">
+                        <img src={item.img} alt="" />
+                      </div>
+
+                      <div className="bottom_text_info">
+                        <p className="name">{item.name}</p>
+                        <p className="companyName">{item.companyName}</p>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-            </SwiperSlide>
-          ))}
-        </Swiper>
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 
@@ -569,7 +575,7 @@ const Testimonial10 = () => {
 const Testimonial11 = () => {
   return (
     <div className="testimonial11_wrapper">
-      <div className="container custom-container-lg" >
+      <div className="container custom-container-lg">
         <div className="testimonial_title_wrapper center">
           <h2>Testimonial</h2>
           <h3>What Our Client Say</h3>
