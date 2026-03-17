@@ -11,6 +11,7 @@
 @use "../../../styles/mixins/mixins" as *;
 
 .ipProductGridWithSidebar {
+  width: 100%;
   padding: var(--p80) var(--p0);
   position: relative;
 
