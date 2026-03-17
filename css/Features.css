@@ -882,7 +882,7 @@
    FEATURE 11
 ======================= */
 .AboutWrapperInformation {
-  background-color: var(--bg-color);
+  background-color: var(--white-color);
   width: var(--width100);
   padding: var(--p60) var(--p0);
 }
@@ -1134,6 +1134,73 @@
   color: var(--green-color02);
 }
 
+/* src/components/PortfolioSection.scss */
+.innerPagePortfolioDetails {
+  padding: var(--p60) var(--p0);
+}
+.innerPagePortfolioDetails .innerPagePortfolioDetailInner .row {
+  align-items: center;
+}
+.innerPagePortfolioDetails .innerPagePortfolioDetailInner .row .portfolioCategoryName h4 {
+  font-size: var(--fs18);
+  font-weight: var(--fw500);
+  color: var(--orange-color);
+  margin-bottom: var(--m16);
+}
+.innerPagePortfolioDetails .innerPagePortfolioDetailInner .row .ipPortfolioDetailTxt h2 {
+  font-size: var(--fs40);
+  font-weight: var(--fw600);
+  margin-bottom: var(--m20);
+  line-height: 1.3;
+}
+.innerPagePortfolioDetails .innerPagePortfolioDetailInner .row .ipPortfolioDetailTxt p {
+  color: var(--dark-gray);
+  margin-bottom: var(--m16);
+  line-height: 1.6;
+}
+.innerPagePortfolioDetails .innerPagePortfolioDetailInner .row .viewWebsiteBtn {
+  margin-top: var(--m26);
+}
+.innerPagePortfolioDetails .innerPagePortfolioDetailInner .row .viewWebsiteBtn a.btn {
+  padding: var(--p8) var(--p40);
+  font-size: var(--fs16);
+  font-weight: var(--fw600);
+  color: var(--white-color);
+  background-color: var(--orange-color);
+  border: none;
+  border-radius: var(--br50);
+  height: 50px;
+  text-transform: uppercase;
+  border: 1px solid var(--temSitCoreBlueColor);
+}
+.innerPagePortfolioDetails .innerPagePortfolioDetailInner .row .viewWebsiteBtn a.btn:hover {
+  background-color: var(--white-color);
+}
+.innerPagePortfolioDetails .innerPagePortfolioDetailInner .row .viewWebsiteBtn a.btn span {
+  display: flex;
+}
+.innerPagePortfolioDetails .innerPagePortfolioDetailInner .row .ipPortfolioDetailImg {
+  padding: 20px;
+  position: relative;
+}
+.innerPagePortfolioDetails .innerPagePortfolioDetailInner .row .ipPortfolioDetailImg img {
+  max-width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+.innerPagePortfolioDetails .innerPagePortfolioDetailInner .row .ipPortfolioDetailImg::before {
+  content: "";
+  position: absolute;
+  width: 40%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  border-radius: 0px 20px 20px 0px;
+  background: #FB8500;
+  z-index: -1;
+}
+
 /* ===============================
    RESPONSIVE
 ================================ */
@@ -1156,6 +1223,9 @@
   .connectBusiness .connectBusinessContainer .connectBusinessContent .connectBusinessContactInner .connectBusinessList ul li {
     font-size: var(--fs18);
   }
+  .innerPagePortfolioDetails .innerPagePortfolioDetailInner .row .ipPortfolioDetailTxt h2 {
+    font-size: var(--fs32);
+  }
 }
 @media (max-width: 1024px) {
   .connectBusiness .connectBusinessContainer .connectBusinessContent .connectBusinessContactInner h2 {
@@ -1163,6 +1233,15 @@
   }
 }
 @media (max-width: 991px) {
+  .innerPagePortfolioDetails .innerPagePortfolioDetailInner .row .ipPortfolioDetailTxt h2 {
+    font-size: var(--fs30);
+  }
+  .innerPagePortfolioDetails .innerPagePortfolioDetailInner .ipPortfolioDetailImg {
+    margin-top: var(--m40);
+  }
+  .innerPagePortfolioDetails .ipPortfolioDetailTxt h2 {
+    font-size: var(--fs28);
+  }
   .connectBusiness .connectBusinessContainer {
     grid-template-columns: 1fr;
   }
@@ -1305,6 +1384,9 @@
   }
 }
 @media (max-width: 767px) {
+  .innerPagePortfolioDetails .ipPortfolioDetailTxt p {
+    font-size: var(--fs14);
+  }
   .connectBusiness .connectBusinessContainer .connectBusinessContent .connectBusinessContactInner .connectBusinessList ul li {
     font-size: var(--fs16);
   }
@@ -1366,6 +1448,16 @@
   }
 }
 @media (max-width: 576px) {
+  .innerPagePortfolioDetails .innerPagePortfolioDetailInner .row .viewWebsiteBtn a.btn {
+    font-size: var(--fs14);
+    height: 40px;
+  }
+  .innerPagePortfolioDetails .innerPagePortfolioDetailInner .row .ipPortfolioDetailImg {
+    padding: var(--p10);
+  }
+  .innerPagePortfolioDetails .innerPagePortfolioDetailInner .row .ipPortfolioDetailTxt h2 {
+    font-size: var(--fs24);
+  }
   .connectBusiness .connectBusinessContainer .connectBusinessContent .connectBusinessContactInner .connectBusinessList ul li {
     font-size: var(--fs14);
   }
@@ -1444,6 +1536,9 @@
   }
 }
 @media (max-width: 480px) {
+  .innerPagePortfolioDetails .innerPagePortfolioDetailInner .row .ipPortfolioDetailTxt h2 {
+    font-size: var(--fs22);
+  }
   .connectBusiness .connectBusinessContainer .connectBusinessContent {
     padding-inline: var(--p20);
   }

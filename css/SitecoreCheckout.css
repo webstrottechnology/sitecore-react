@@ -1,0 +1,258 @@
+@charset "UTF-8";
+/*-----------------------------------
+
+
+    Template Name: Sitecore React Template
+    Version: 1.0.0
+    Author: Webstrot
+    Copyright: © 2026-27
+
+--------------------------------------- */
+/* ---------------- CHECKOUT CSS ---------------- */
+.checkout {
+  padding: var(--p80) var(--p0);
+}
+.checkout .checkoutInner .commentBox .commentBoxInner {
+  background: var(--white-color);
+  box-shadow: 0px 7px 32px rgba(0, 0, 0, 0.04);
+  border-radius: var(--br6);
+  padding: var(--p40);
+}
+.checkout .checkoutInner .commentBox .commentBoxInner .checkout-btn {
+  margin-top: var(--m20);
+}
+.checkout .checkoutInner .commentBox .commentBoxInner .commentBoxHeading h4 {
+  font-weight: var(--fw700);
+  font-size: var(--fs30);
+  color: #333;
+  margin: var(--m10) var(--m0) var(--m20);
+}
+.checkout .checkoutInner .commentBox .commentBoxInner .commentFormGroup {
+  margin-bottom: var(--m20);
+}
+.checkout .checkoutInner .commentBox .commentBoxInner .commentFormGroup .order-notes {
+  margin-top: var(--m30);
+}
+.checkout .checkoutInner .commentBox .commentBoxInner .commentFormGroup .form-label {
+  color: #707070;
+  font-size: var(--fs16);
+}
+.checkout .checkoutInner .commentBox .commentBoxInner .commentFormGroup .form-control {
+  background: #ffebd6;
+  border: none;
+  border-radius: var(--br6);
+  height: 50px;
+}
+.checkout .checkoutInner .commentBox .commentBoxInner .commentFormGroup textarea.form-control {
+  height: auto;
+  background: #ffebd6;
+  margin-top: var(--m10);
+  padding-top: var(--p10);
+}
+.checkout .checkoutInner .commentBox .commentBoxInner .commentFormGroup .form-check {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: var(--m20);
+}
+.checkout .checkoutInner .commentBox .commentBoxInner .commentFormGroup .form-check input {
+  border: 1px solid var(--orange-color);
+}
+.checkout .checkoutInner .commentBox .commentBoxInner .commentFormGroup .form-check label {
+  color: #333;
+}
+.checkout .checkoutInner .commentBox .commentBoxInner .commentFormGroup .form-check input[type=checkbox] {
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border: 2px solid var(--orange-color);
+  border-radius: var(--br4);
+  position: relative;
+  cursor: pointer;
+  text-align: center;
+}
+.checkout .checkoutInner .commentBox .commentBoxInner .commentFormGroup .form-check input[type=checkbox]:checked::after {
+  content: "✔";
+  background-color: var(--orange-color);
+  color: var(--white-color);
+  font-size: var(--fs12);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 18px;
+}
+.checkout .checkoutInner {
+  /* RIGHT SIDE */
+}
+.checkout .checkoutInner .checkoutAside .asideHeading h4 {
+  font-weight: var(--fw700);
+  font-size: var(--fs30);
+  margin-bottom: var(--m30);
+}
+.checkout .checkoutInner .checkoutAside .productBox .asideProductItem {
+  background: rgba(251, 133, 0, 0.16);
+  padding: var(--p40);
+  border-radius: var(--br6);
+}
+.checkout .checkoutInner .checkoutAside .productBox .asideProductItem .shipping-text {
+  font-weight: var(--fw700);
+}
+.checkout .checkoutInner .checkoutAside .productBox .asideProductItem .horizLine {
+  border-color: var(--white-color);
+  opacity: 1;
+}
+.checkout .checkoutInner .checkoutAside .productBox .asideProductItem .asideProdtBx {
+  display: grid;
+  grid-template-columns: 1fr 100px;
+  align-items: center;
+}
+.checkout .checkoutInner .checkoutAside .productBox .asideProductItem .asideProdtBx .asideImg {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.checkout .checkoutInner .checkoutAside .productBox .asideProductItem .asideProdtBx .asideImg .asideImgInner {
+  background: var(--white-color);
+  padding: var(--p10);
+  border-radius: var(--br6);
+}
+.checkout .checkoutInner .checkoutAside .productBox .asideProductItem .asideProdtBx .asideImg .asideImgInner img {
+  width: 50px;
+}
+.checkout .checkoutInner .checkoutAside .productBox .asideProductItem .asideProdtBx .asideImg .asideContent h5 {
+  font-size: var(--fs16);
+}
+.checkout .checkoutInner .checkoutAside .productBox .asideProductItem .asideProdtBx .asideImg .asideContent p {
+  margin-top: var(--m10);
+}
+.checkout .checkoutInner .checkoutAside .productBox .asideProductItem .asideProdtBx .asidePrice {
+  text-align: right;
+}
+.checkout .checkoutInner .checkoutAside .productBox .asideProductItem .asideProdtBx .asidePrice span {
+  color: var(--orange-color);
+  font-weight: var(--fw700);
+}
+.checkout .checkoutInner .checkoutAside .productBox .asideProductItem .subTotals {
+  display: flex;
+  justify-content: space-between;
+  margin-top: var(--m30);
+}
+.checkout .checkoutInner .checkoutAside .productBox .asideProductItem .subTotals p {
+  font-weight: var(--fw700);
+}
+.checkout .checkoutInner .checkoutAside .productBox .asideProductItem .subTotals span {
+  color: var(--orange-color);
+  font-weight: var(--fw700);
+  text-align: right;
+}
+.checkout .checkoutInner .checkoutAside .productBox .asideProductItem .subPrice {
+  display: grid;
+  grid-template-columns: 1fr 100px;
+  margin: var(--m16) var(--m0);
+  align-items: center;
+}
+.checkout .checkoutInner .checkoutAside .productBox .asideProductItem .subPrice .asideProductPrice {
+  text-align: right;
+}
+.checkout .checkoutInner .checkoutAside .productBox .asideProductItem .subPrice .asideProductPrice span {
+  color: var(--orange-color);
+}
+.checkout .checkoutInner .checkoutAside {
+  /* CUSTOM RADIO */
+}
+.checkout .checkoutInner .checkoutAside .custom-radios input[type=radio] {
+  display: none;
+}
+.checkout .checkoutInner .checkoutAside .custom-radios label {
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding-left: var(--p30);
+}
+.checkout .checkoutInner .checkoutAside .custom-radios label::before {
+  content: "";
+  width: 20px;
+  height: 20px;
+  border: 2px solid var(--orange-color);
+  border-radius: 50%;
+  position: absolute;
+  left: -4px;
+  top: 3px;
+}
+.checkout .checkoutInner .checkoutAside .custom-radios label::after {
+  content: "";
+  width: 12px;
+  height: 12px;
+  background: var(--orange-color);
+  border-radius: 50%;
+  position: absolute;
+  left: 0px;
+  top: 7px;
+  transform: scale(0);
+  transition: 0.3s;
+}
+.checkout .checkoutInner .checkoutAside .custom-radios input:checked + label::after {
+  transform: scale(1);
+}
+.checkout .checkoutInner .checkoutAside {
+  /* PAYMENT BOX */
+}
+.checkout .checkoutInner .checkoutAside .paymentMethod {
+  border: 1px solid var(--orange-color);
+  border-radius: var(--br6);
+  padding: var(--p40);
+  margin-top: var(--m20);
+}
+.checkout .checkoutInner .checkoutAside .paymentMethod .paymentformGroup {
+  margin-bottom: var(--m20);
+  position: relative;
+}
+.checkout .checkoutInner .checkoutAside .paymentMethod .paymentformGroup label {
+  cursor: pointer;
+}
+.checkout .checkoutInner .checkoutAside .paymentMethod .paymentformGroup .paymentText {
+  display: flex;
+  flex-direction: column;
+}
+.checkout .checkoutInner .checkoutAside .paymentMethod .paymentformGroup .paymentText .title {
+  font-weight: var(--fw700);
+  font-size: var(--fs18);
+  color: #707070;
+}
+.checkout .checkoutInner .checkoutAside .paymentMethod .paymentformGroup .paymentText .desc {
+  font-size: var(--fs14);
+  color: #707070;
+}
+.checkout .checkoutInner .checkoutAside .paymentMethod .cardImg {
+  margin-top: var(--m30);
+}
+
+@media (max-width: 1200px) {
+  .checkout .checkoutInner .checkoutAside .asideHeading h4,
+  .checkout .checkoutInner .commentBox .commentBoxInner .commentBoxHeading h4 {
+    font-size: var(--fs24);
+  }
+  .checkout .checkoutInner .commentBox .commentBoxInner {
+    padding: var(--p20);
+  }
+}
+@media (max-width: 991px) {
+  .checkout .checkoutInner .checkoutAside .asideHeading h4,
+  .checkout .checkoutInner .commentBox .commentBoxInner .commentBoxHeading h4 {
+    font-size: var(--fs22);
+  }
+}
+@media (max-width: 767px) {
+  .checkout .checkoutInner .checkoutAside .paymentMethod .paymentformGroup .paymentText .title {
+    font-size: var(--fs16);
+  }
+}
+@media (max-width: 576px) {
+  .checkout .checkoutInner .commentBox .commentBoxInner .checkout-btn {
+    height: 40px;
+    font-size: var(--fs14);
+  }
+}/*# sourceMappingURL=SitecoreCheckout.css.map */

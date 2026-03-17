@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+
 import {
   categories,
   authors,
@@ -9,6 +10,10 @@ import "./ProductPage.scss";
 import { FaStar, FaArrowRight } from "react-icons/fa";
 import { FaThLarge, FaList } from "react-icons/fa";
 import { FiArrowRight } from "react-icons/fi";
+import { IoCart } from "react-icons/io5";
+import { FaHeart } from "react-icons/fa";
+import Pagination from "../../shortcode/pagination/Pagination";
+
 import promoImg from "../../../assets/images/product/product_left_sidebar_data_img.jpg";
 
 const ProductGridSection = () => {
@@ -16,10 +21,17 @@ const ProductGridSection = () => {
 
   /* STATE */
   const [price, setPrice] = useState(300);
+  // wishlist state
+  const [wishlist, setWishlist] = useState([]);
 
+  const toggleWishlist = (id) => {
+    setWishlist((prev) =>
+      prev.includes(id) ? prev.filter((item) => item !== id) : [...prev, id],
+    );
+  };
   return (
     <section className="w-100 clearfix ipProductGridWithSidebar">
-      <div className="container">
+      <div className="container custom-container-lg">
         <div className="ipProductGridViewInner">
           <div className="row">
             {/* LEFT SIDEBAR */}
@@ -142,7 +154,10 @@ const ProductGridSection = () => {
                 </div>
                 {/* Promo Card */}
 
-                <div className="ipFilterPromoCard" style={{ backgroundImage: `url(${promoImg})` }}>
+                <div
+                  className="ipFilterPromoCard"
+                  style={{ backgroundImage: `url(${promoImg})` }}
+                >
                   <span className="promoSmall">Kids Love Reading Books</span>
 
                   <h3>
@@ -226,9 +241,31 @@ const ProductGridSection = () => {
                                 />
                               </a>
 
-                              <a className="btn bsCommBtn" href={product.link}>
-                                <span>ADD TO CART</span>
+                              <a
+                                className="btn-cart Temp-add-to-cart"
+                                href={product.link}
+                              >
+                                <span>
+                                  <IoCart />
+                                  ADD TO CART
+                                </span>
                               </a>
+
+                              <span
+                                className="bsIconNav"
+                                onClick={() => toggleWishlist(product.id)}
+                              >
+                                <svg fill="none" viewBox="0 0 30 30">
+                                  <path
+                                    fill={
+                                      wishlist.includes(product.id)
+                                        ? "red"
+                                        : "#858585"
+                                    }
+                                    d="M15 26.25c-.376 0-.743-.114-1.054-.326-4.605-3.126-6.599-5.27-7.699-6.61-2.343-2.856-3.465-5.789-3.434-8.965C2.85 6.71 5.77 3.75 9.322 3.75c2.583 0 4.371 1.455 5.413 2.667a.352.352 0 00.531 0c1.042-1.213 2.83-2.667 5.414-2.667 3.552 0 6.471 2.96 6.508 6.6.032 3.176-1.091 6.109-3.434 8.965-1.1 1.34-3.094 3.483-7.699 6.61-.31.211-.678.325-1.054.325z"
+                                  />
+                                </svg>
+                              </span>
                             </div>
                           </div>
 
@@ -244,15 +281,15 @@ const ProductGridSection = () => {
 
                               <del>{product.oldPrice}</del>
                             </h6>
-
-                            <a className="btn bsCommBtn" href={product.link}>
-                              <span>ADD TO CART</span>
-                            </a>
                           </div>
                         </div>
                       </div>
                     ))}
                   </div>
+                </div>
+
+                <div className="Pagination-Box">
+                  <Pagination />
                 </div>
               </div>
             </div>
