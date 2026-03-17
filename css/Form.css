@@ -1249,13 +1249,15 @@
   padding: var(--p30);
   border-radius: var(--br12);
   position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
   z-index: 1;
 }
 .appointment_section .appointment_wrapper .left .contact_card .item {
   display: grid;
   grid-template-columns: 70px 1fr;
   gap: 15px;
-  margin-bottom: var(--m26);
   color: var(--white-color);
 }
 .appointment_section .appointment_wrapper .left .contact_card .item .icon {
@@ -1424,6 +1426,69 @@
   cursor: pointer;
 }
 
+.FourteencommentBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--white-color);
+  padding: var(--p40) var(--p40);
+  box-shadow: 0px 7px 32px rgba(0, 0, 0, 0.04);
+  border-radius: var(--br6);
+  margin-top: var(--m30);
+}
+.FourteencommentBox .commentBoxInner {
+  max-width: 900px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.FourteencommentBox .commentBoxInner .commentBoxHeading {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.FourteencommentBox .commentBoxInner .commentBoxHeading h4 {
+  font-size: var(--fs40);
+  font-weight: var(--fw700);
+  color: var(--black-color);
+}
+.FourteencommentBox .commentBoxInner .commentBoxHeading p {
+  font-size: var(--fs16);
+  color: var(--gray-color);
+}
+.FourteencommentBox .commentBoxInner .row {
+  display: flex;
+  row-gap: 20px;
+}
+.FourteencommentBox .commentBoxInner .commentFormGroup input,
+.FourteencommentBox .commentBoxInner .commentFormGroup textarea {
+  width: 100%;
+  background: var(--temSiteCoreLightOrangeColor);
+  border: none;
+  padding: var(--p16) var(--p18);
+  border-radius: var(--br8);
+  font-size: var(--fs16);
+  color: var(--gray-color);
+  outline: none;
+  box-shadow: none;
+}
+.FourteencommentBox .commentBoxInner .commentFormGroup input::placeholder,
+.FourteencommentBox .commentBoxInner .commentFormGroup textarea::placeholder {
+  color: var(--gray-color);
+}
+.FourteencommentBox .commentBoxInner .commentFormGroup input:focus,
+.FourteencommentBox .commentBoxInner .commentFormGroup textarea:focus {
+  outline: none;
+  box-shadow: none;
+}
+.FourteencommentBox .commentBoxInner .commentFormGroup textarea {
+  height: 180px;
+  resize: none;
+}
+.FourteencommentBox .commentBoxInner .medCommBtn {
+  margin-top: var(--m30);
+}
+
 /* Responsive */
 @media (max-width: 1600px) {
   .appointment_section .appointment_wrapper .left .contact_card {
@@ -1582,6 +1647,9 @@
   .contact-section .contact-wrapper .contact-right h2 {
     font-size: var(--fs28);
   }
+  .FourteencommentBox {
+    padding: 20px 20px;
+  }
 }
 @media (max-width: 480px) {
   .formOne-container-box {
@@ -1661,5 +1729,11 @@
   }
   .appointment_section .appointment_wrapper .left .contact_card .item .text-box span {
     font-size: var(--fs14);
+  }
+  .FourteencommentBox .commentBoxInner .commentBoxHeading h4 {
+    font-size: 30px;
+  }
+  .FourteencommentBox {
+    padding: 16px 16px;
   }
 }/*# sourceMappingURL=Form.css.map */

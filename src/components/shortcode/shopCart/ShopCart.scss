@@ -216,10 +216,12 @@
                 display: flex;
                 justify-content: space-between;
                 margin-bottom: var(--m10);
-                .label-content{
+
+                .label-content {
                     display: flex;
                     gap: 20px;
-                    input{
+
+                    input {
                         width: 20px;
                     }
                 }
@@ -227,7 +229,7 @@
                 span {
                     color: var(--orange-color);
                 }
-                
+
             }
         }
 

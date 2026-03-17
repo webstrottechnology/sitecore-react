@@ -8,7 +8,7 @@ import {
 import "./SitecoreCheckout.scss";
 import cardImages from "../../../assets/images/inner-pages/icons/cards-images.webp";
 
-// ================= CHECKOUT PAGE =================
+// ================= CHECKOUT PAGE ================= //
 
 const SitecoreCheckout = () => {
   const [shipping, setShipping] = useState(shippingOptions[0].id);

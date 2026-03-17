@@ -2,4 +2,7 @@
   width: var(--width100);
   padding: var(--p80) var(--p0);
   background-color: var(--white-color);
+}
+.SiteCoreblogSingle .blogSingleInner .row {
+  row-gap: 30px;
 }/*# sourceMappingURL=SitecoreBlogPage.css.map */
