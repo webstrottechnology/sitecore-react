@@ -253,6 +253,15 @@ import BlogSinglepage from "../shortcode/BlogMainPage/BlogSidebar";
 import BlogRightAsideBox from "../shortcode/BlogRightWrap/BlogRightWrap";
 import BlogImageSidebarSection from "../shortcode/BlogSingleWrap/BlogImageSidebar";
 import ProductGridSection from "../shortcode/ProductPage/ProductGridsectionPage";
+import Brand, { ClientLogos, ClientStyle01 } from "../shortcode/client/Client";
+import ButtonComponent1, {
+  ButtonComponent2,
+  ButtonComponent3,
+  ButtonComponent4,
+  ButtonComponent5,
+  ButtonComponent6,
+  ButtonComponent7,
+} from "../shortcode/button/Button";
 
 const ComponentsPage = () => {
   return (
@@ -770,6 +779,32 @@ const ComponentsPage = () => {
           element={
             <>
               <ProductGridSection />
+            </>
+          }
+        />
+
+        <Route
+          path="client"
+          element={
+            <>
+              <ClientLogos />
+              <ClientStyle01 />
+              <Brand />
+            </>
+          }
+        />
+
+        <Route
+          path="button"
+          element={
+            <>
+             <ButtonComponent7 />
+              <ButtonComponent1 />
+              <ButtonComponent2 />
+              <ButtonComponent3 />
+              <ButtonComponent4 />
+              <ButtonComponent5 />
+              <ButtonComponent6 />
             </>
           }
         />

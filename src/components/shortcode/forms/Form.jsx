@@ -28,96 +28,101 @@ import {
 } from "react-icons/fi";
 import { FcGoogle } from "react-icons/fc";
 import Logo from "../../../assets/images/inner-pages/login-logo.png";
+import { AboutBannerBreadCrumb } from "../breadcrumb/Breadcrumb";
+import sitecoreBg from "../../../assets/images/sitecoreBreadCrumb_bg_img.png";
 
 const FormOne = () => {
   const [active, setActive] = useState(false);
 
   return (
-    <div className={`formOne-container-box ${active ? "active" : ""}`}>
-      {/* SIGN UP */}
-      <div className="form_container sign_up">
-        <form>
-          <h1>Sign Up</h1>
+    <>
+      <AboutBannerBreadCrumb title="Form" bgImage={sitecoreBg} />
+      <div className={`formOne-container-box ${active ? "active" : ""}`}>
+        {/* SIGN UP */}
+        <div className="form_container sign_up">
+          <form>
+            <h1>Sign Up</h1>
 
-          <div className="social-icons">
-            <a href="#">
-              <FaGooglePlusG />
-            </a>
-            <a href="#">
-              <FaFacebookF />
-            </a>
-            <a href="#">
-              <FaGithub />
-            </a>
-            <a href="#">
-              <FaLinkedinIn />
-            </a>
-          </div>
+            <div className="social-icons">
+              <a href="#">
+                <FaGooglePlusG />
+              </a>
+              <a href="#">
+                <FaFacebookF />
+              </a>
+              <a href="#">
+                <FaGithub />
+              </a>
+              <a href="#">
+                <FaLinkedinIn />
+              </a>
+            </div>
 
-          <span>or use your email for registration</span>
+            <span>or use your email for registration</span>
 
-          <input type="text" placeholder="Name" />
-          <input type="email" placeholder="Email" />
-          <input type="password" placeholder="Password" />
+            <input type="text" placeholder="Name" />
+            <input type="email" placeholder="Email" />
+            <input type="password" placeholder="Password" />
 
-          <button type="button">Sign Up</button>
-        </form>
-      </div>
+            <button type="button">Sign Up</button>
+          </form>
+        </div>
 
-      {/* SIGN IN */}
-      <div className="form_container sign_in">
-        <form>
-          <h1>Sign In</h1>
+        {/* SIGN IN */}
+        <div className="form_container sign_in">
+          <form>
+            <h1>Sign In</h1>
 
-          <div className="social-icons">
-            <a href="#">
-              <FaGooglePlusG />
-            </a>
-            <a href="#">
-              <FaFacebookF />
-            </a>
-            <a href="#">
-              <FaGithub />
-            </a>
-            <a href="#">
-              <FaLinkedinIn />
-            </a>
-          </div>
+            <div className="social-icons">
+              <a href="#">
+                <FaGooglePlusG />
+              </a>
+              <a href="#">
+                <FaFacebookF />
+              </a>
+              <a href="#">
+                <FaGithub />
+              </a>
+              <a href="#">
+                <FaLinkedinIn />
+              </a>
+            </div>
 
-          <span>or use your email password</span>
+            <span>or use your email password</span>
 
-          <input type="email" placeholder="Email" />
-          <input type="password" placeholder="Password" />
+            <input type="email" placeholder="Email" />
+            <input type="password" placeholder="Password" />
 
-          <a href="#">Forget Your Password?</a>
+            <a href="#">Forget Your Password?</a>
 
-          <button type="button">Sign In</button>
-        </form>
-      </div>
+            <button type="button">Sign In</button>
+          </form>
+        </div>
 
-      {/* TOGGLE PANEL */}
-      <div className="toggle_container">
-        <div className="toggle">
-          <div className="toggle_pannel toggle_left">
-            <h1>Welcome Back!</h1>
-            <p>Enter your personal details to use all of site features</p>
-            <button className="hidden" onClick={() => setActive(false)}>
-              Sign In
-            </button>
-          </div>
+        {/* TOGGLE PANEL */}
+        <div className="toggle_container">
+          <div className="toggle">
+            <div className="toggle_pannel toggle_left">
+              <h1>Welcome Back!</h1>
+              <p>Enter your personal details to use all of site features</p>
+              <button className="hidden" onClick={() => setActive(false)}>
+                Sign In
+              </button>
+            </div>
 
-          <div className="toggle_pannel toggle_right">
-            <h1>Hello, Friend!</h1>
-            <p>
-              Register with your personal details to use all of site features
-            </p>
-            <button className="hidden" onClick={() => setActive(true)}>
-              Sign Up
-            </button>
+            <div className="toggle_pannel toggle_right">
+              <h1>Hello, Friend!</h1>
+              <p>
+                Register with your personal details to use all of site features
+              </p>
+              <button className="hidden" onClick={() => setActive(true)}>
+                Sign Up
+              </button>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

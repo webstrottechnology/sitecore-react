@@ -138,7 +138,7 @@ const Header_05 = () => {
               </Link>
               <div className="mega-menu-box dropdwonMenu">
                 <div>
-                  <Link to="/product-with-sidebar">Product With Sidebar</Link>
+                  <Link to="/product-with-sidebar">Product Sidebar</Link>
                   <Link to="/product-single-01">Product Single 01</Link>
                   <Link to="/product-single-02">Product Single 02</Link>
                   <Link to="/cart">Cart</Link>
@@ -369,7 +369,7 @@ const Header_05 = () => {
               >
                 <ul>
                   <li>
-                    <Link to="/product-with-sidebar">Product With Sidebar</Link>
+                    <Link to="/product-with-sidebar">Product Sidebar</Link>
                   </li>
                   <li>
                     <Link to="/product-single-01">Product Single 01</Link>

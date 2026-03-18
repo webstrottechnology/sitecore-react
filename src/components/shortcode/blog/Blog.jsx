@@ -15,6 +15,8 @@ import {
   FiArrowRight,
 } from "react-icons/fi";
 import { FaUser, FaComment } from "react-icons/fa";
+import { AboutBannerBreadCrumb } from "../breadcrumb/Breadcrumb";
+import sitecoreBg from "../../../assets/images/sitecoreBreadCrumb_bg_img.png";
 
 import "./Blog.scss";
 
@@ -64,79 +66,85 @@ const Blog = () => {
   const active = leftSliderBlog[currentSlide];
 
   return (
-    <section className="Sitecorehome_blog_wrapper">
-      <div className="container custom-container-lg">
-        <div className="blog__container">
-          <div className="blog__top">
-            <h4 className="blog__label">News</h4>
-            <h2 className="blog__heading">Latest News</h2>
-          </div>
-
-          <div className="blog__wrapper">
-            {/* LEFT SIDE */}
-            <div className="blog__left">
-              <div className={`blog__image ${fade ? "fade-in" : "fade-out"}`}>
-                <img src={active.image} alt={active.title} />
-              </div>
-
-              <div
-                className={`blog__contentBox ${fade ? "fade-in" : "fade-out"}`}
-              >
-                <div className="blog__meta">
-                  <span className="blog__date">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="black"
-                      viewBox="0 0 24 24"
-                      width="16px"
-                      height="16px"
-                      style={{ marginRight: "6px" }}
-                    >
-                      <path d="M7 11h2v2H7zm4 0h2v2h-2zm4-6h-1V3h-2v2H8V3H6v2H5c-1.11 0-2 .89-2 2v14c0 1.11.89 2 2 2h14c1.11 0 2-.89 2-2V7c0-1.11-.89-2-2-2zm0 16H5V10h14v11z" />
-                    </svg>
-                    {active.date}
-                  </span>
-                  <span className="blog__tag">{active.tag}</span>
-                </div>
-
-                <h3>{active.title}</h3>
-                <p>{active.description}</p>
-
-                <div className="blog__buttons">
-                  <button onClick={prevSlide}>❮</button>
-                  <button onClick={nextSlide}>❯</button>
-                </div>
-              </div>
+    <>
+      <AboutBannerBreadCrumb title="Progress" bgImage={sitecoreBg} />
+      <section className="Sitecorehome_blog_wrapper">
+        <div className="container custom-container-lg">
+          <div className="blog__container">
+            <div className="blog__top">
+              <h4 className="blog__label">News</h4>
+              <h2 className="blog__heading">Latest News</h2>
             </div>
 
-            {/* RIGHT SIDE */}
-            <div className="blog__right">
-              {rightListBlog.map((item) => (
-                <div className="blog__item" key={item.id}>
-                  <img src={item.image} alt={item.title} />
-                  <div className="blog__info">
-                    <h4>{item.title}</h4>
-                    <span className="blog__date-right">
+            <div className="blog__wrapper">
+              {/* LEFT SIDE */}
+              <div className="blog__left">
+                <div className={`blog__image ${fade ? "fade-in" : "fade-out"}`}>
+                  <img src={active.image} alt={active.title} />
+                </div>
+
+                <div
+                  className={`blog__contentBox ${fade ? "fade-in" : "fade-out"}`}
+                >
+                  <div className="blog__meta">
+                    <span className="blog__date">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         fill="black"
                         viewBox="0 0 24 24"
-                        width="14px"
-                        height="14px"
-                        style={{ marginRight: "4px", verticalAlign: "middle" }}
+                        width="16px"
+                        height="16px"
+                        style={{ marginRight: "6px" }}
                       >
                         <path d="M7 11h2v2H7zm4 0h2v2h-2zm4-6h-1V3h-2v2H8V3H6v2H5c-1.11 0-2 .89-2 2v14c0 1.11.89 2 2 2h14c1.11 0 2-.89 2-2V7c0-1.11-.89-2-2-2zm0 16H5V10h14v11z" />
                       </svg>
-                      {item.date}
+                      {active.date}
                     </span>
+                    <span className="blog__tag">{active.tag}</span>
+                  </div>
+
+                  <h3>{active.title}</h3>
+                  <p>{active.description}</p>
+
+                  <div className="blog__buttons">
+                    <button onClick={prevSlide}>❮</button>
+                    <button onClick={nextSlide}>❯</button>
                   </div>
                 </div>
-              ))}
+              </div>
+
+              {/* RIGHT SIDE */}
+              <div className="blog__right">
+                {rightListBlog.map((item) => (
+                  <div className="blog__item" key={item.id}>
+                    <img src={item.image} alt={item.title} />
+                    <div className="blog__info">
+                      <h4>{item.title}</h4>
+                      <span className="blog__date-right">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="black"
+                          viewBox="0 0 24 24"
+                          width="14px"
+                          height="14px"
+                          style={{
+                            marginRight: "4px",
+                            verticalAlign: "middle",
+                          }}
+                        >
+                          <path d="M7 11h2v2H7zm4 0h2v2h-2zm4-6h-1V3h-2v2H8V3H6v2H5c-1.11 0-2 .89-2 2v14c0 1.11.89 2 2 2h14c1.11 0 2-.89 2-2V7c0-1.11-.89-2-2-2zm0 16H5V10h14v11z" />
+                        </svg>
+                        {item.date}
+                      </span>
+                    </div>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </>
   );
 };
 

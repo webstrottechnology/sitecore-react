@@ -1,0 +1,325 @@
+/*-----------------------------------
+
+
+    Template Name: Sitecore React Template
+    Version: 1.0.0
+    Author: Webstrot
+    Copyright: © 2026-27
+
+--------------------------------------- */
+
+
+@use "../../../styles/mixins/mixins" as *;
+
+.productSingle {
+    padding-top: var(--p80);
+    width: var(--width100);
+
+    /* LEFT */
+    .leftSection {
+        display: flex;
+        height: 100%;
+
+        .imageBox {
+            position: relative;
+            height: 610px;
+            display: inline-block;
+            padding-right: var(--p20);
+            width: 490px;
+
+            img {
+                width: var(--width100);
+                height: 100%;
+                object-fit: contain;
+                padding: var(--p20);
+                background-color: var(--bg-ligh);
+                border: 1px solid var(--orange-color);
+            }
+
+            .share {
+                position: absolute;
+                top: 20px;
+                right: 40px;
+                background: var(--bottle-green-color);
+                color: var(--white-color);
+                width: 50px;
+                height: 50px;
+                border-radius: var(--br10);
+                background-color: var(--bottle-green-color);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: absolute;
+            }
+        }
+
+        .thumbs {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            justify-content: center;
+
+
+
+            button {
+                border: none;
+                background: none;
+                color: var(--orange-color);
+                cursor: pointer;
+            }
+
+            img {
+                width: 85px;
+                padding: var(--p10);
+                background: var(--bg-light);
+                border: 2px solid transparent;
+                cursor: pointer;
+
+                &.active {
+                    border: 2px solid var(--orange-color);
+                }
+            }
+        }
+    }
+
+    /* RIGHT */
+    .rightSection {
+        .category {
+            color: var(--bottle-green-color);
+            font-size: var(--fs16);
+            font-weight: var(--fw700);
+            display: inline-block;
+            margin-bottom: var(--m10);
+        }
+
+        h2 {
+            color: var(--temp1BlueColor);
+            font-size: var(--fs26);
+            font-weight: var(--fw700);
+            margin-bottom: var(--m10);
+        }
+
+        .rating {
+            color: var(--orange-color);
+            margin-bottom: var(--m10);
+            gap: 6px;
+            display: flex;
+
+            svg {
+                font-size: var(--fs18);
+            }
+        }
+
+        .price {
+            font-size: var(--fs26);
+            font-weight: var(--fw700);
+
+            span {
+                margin-left: var(--m10);
+                text-decoration: line-through;
+                color: #999;
+                font-size: var(--fs16);
+            }
+        }
+
+        .qty {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin: var(--m16) var(--m0);
+
+            .quantity {
+                color: var(--temp1BlueColor);
+                font-size: var(--fs16);
+                font-weight: var(--fw700);
+            }
+
+            .box {
+                display: flex;
+                border: 1px solid var(--orange-color);
+
+                button {
+                    width: 40px;
+                    height: 40px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    color: var(--orange-color);
+                    font-size: var(--fs26);
+                    padding: var(--p12);
+                    border: none;
+                }
+
+                span {
+                    padding: var(--p6) var(--p16);
+                }
+            }
+        }
+
+        .desc {
+            font-size: var(--fs14);
+            color: #777;
+            margin-bottom: var(--m16);
+        }
+
+        h3 {
+            margin-bottom: var(--m10);
+            font-size: var(--fs26);
+        }
+
+        .offers {
+
+            .offer {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: var(--p12) var(--p0);
+                border-top: 1px solid rgba(204, 204, 204, 0.48);
+                padding: var(--p10) var(--p0);
+
+                .left {
+                    display: flex;
+                    gap: 20px;
+
+                    .offer-content {
+                        h4 {
+                            color: var(--orange-color);
+                            font-size: var(--fs16);
+                            font-weight: var(--fw600);
+                        }
+
+                        p {
+                            color: #888;
+                            margin-top: var(--m6);
+                        }
+
+
+                        span {
+                            color: #888;
+                        }
+                    }
+
+                    .icon {
+                        padding: var(--p8);
+                        border-radius: 50%;
+                        font-size: var(--fs12);
+                    }
+
+                }
+            }
+
+            .more {
+                color: var(--orange-color);
+                font-size: var(--fs16);
+                cursor: pointer;
+                display: inline-block;
+                margin-top: var(--m8);
+                font-weight: var(--fw600);
+            }
+        }
+
+        .buttons {
+            margin-top: var(--m40);
+            display: flex;
+            gap: 20px;
+
+            .cart {
+                background: var(--orange-color);
+                color: var(--white-color);
+                width: 260px;
+                height: 50px;
+                border-radius: var(--br50);
+                border: none;
+                font-weight: var(--fw700);
+            }
+
+            .buy {
+                border: 1px solid var(--orange-color);
+                width: 260px;
+                height: 50px;
+                border-radius: var(--br50);
+                background: transparent;
+                color: var(--orange-color);
+                font-weight: var(--fw700);
+            }
+        }
+    }
+}
+
+@include responsive(tablet-sm) {
+    .productSingle .leftSection .imageBox {
+        width: var(--width100);
+        height: auto;
+    }
+
+    .productSingle .rightSection {
+        margin-top: var(--m40);
+    }
+}
+
+@include responsive(mobile) {
+    .productSingle .rightSection h2 {
+        font-size: var(--fs22);
+    }
+
+    .productSingle .rightSection .price {
+        font-size: var(--fs22);
+    }
+
+    .productSingle .rightSection h3 {
+        font-size: var(--fs22);
+    }
+
+    .productSingle .rightSection .buttons .cart,
+    .productSingle .rightSection .buttons .buy {
+        width: 200px;
+    }
+}
+
+@include responsive(mobile-sm) {
+    .productSingle .rightSection .offers .offer .left .offer-content h4 {
+        font-size: var(--fs14);
+    }
+
+    .productSingle .rightSection .buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .productSingle .leftSection {
+        flex-direction: column;
+        gap: 50px;
+    }
+
+    .productSingle .leftSection .thumbs {
+        flex-direction: row;
+    }
+
+    .productSingle .leftSection .thumbs button {
+        transform: rotate(90deg);
+    }
+
+    .productSingle .leftSection .imageBox {
+        padding-right: var(--p0);
+    }
+
+    .productSingle .leftSection .imageBox .share {
+        right: 20px;
+        width: 40px;
+        height: 40px;
+    }
+}
+
+@include responsive(xs) {
+    .productSingle .leftSection .thumbs {
+        overflow-x: scroll;
+    }
+}
+
+@include responsive(xxs) {
+
+    .productSingle .rightSection .buttons .cart,
+    .productSingle .rightSection .buttons .buy {
+        width: var(--width100);
+    }
+}
