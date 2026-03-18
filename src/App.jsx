@@ -29,6 +29,7 @@ import BlogQuotePage from "./components/pages/BlogQuotePage";
 import ProductGridPage from "./components/pages/ProductGridPage";
 import Checkout from "./components/pages/Checkout";
 import ProductSingle01 from "./components/pages/ProductSingle01";
+import ProductSingle02 from "./components/pages/ProductSingle02";
 
 const App = () => {
   return (
@@ -64,6 +65,7 @@ const App = () => {
         <Route path="/cart" element={<ShopCart />} />
         <Route path="/checkout" element={<Checkout />} />
         <Route path="/product-single-01" element={<ProductSingle01 />} />
+        <Route path="/product-single-02" element={<ProductSingle02 />} />
       </Routes>
       {/* FOOTER ALWAYS */}
       <Sitecorefooter />
