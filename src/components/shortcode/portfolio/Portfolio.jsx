@@ -10,43 +10,48 @@ import {
   gallery4Data,
 } from "./PortfolioData";
 import { FaPlus, FaLink, FaSearch } from "react-icons/fa";
+import { AboutBannerBreadCrumb } from "../breadcrumb/Breadcrumb";
+import sitecoreBg from "../../../assets/images/sitecoreBreadCrumb_bg_img.png";
 
 const Portfolio1 = () => {
   const [open, setOpen] = useState(false);
   const [index, setIndex] = useState(0);
 
   return (
-    <div className="portfolio-img-gallery-wrapper1">
-      <ul>
-        {galleryData.map((item, i) => (
-          <li key={item.id}>
-            <div
-              className="portfolio_img"
-              onClick={() => {
-                setIndex(i);
-                setOpen(true);
-              }}
-            >
-              <img src={item.img} alt={item.title} />
+    <>
+      <AboutBannerBreadCrumb title="Portfolio" bgImage={sitecoreBg} />
+      <div className="portfolio-img-gallery-wrapper1">
+        <ul>
+          {galleryData.map((item, i) => (
+            <li key={item.id}>
+              <div
+                className="portfolio_img"
+                onClick={() => {
+                  setIndex(i);
+                  setOpen(true);
+                }}
+              >
+                <img src={item.img} alt={item.title} />
 
-              <div className="portfolio_img_overlay">
-                <span>+</span>
+                <div className="portfolio_img_overlay">
+                  <span>+</span>
+                </div>
               </div>
-            </div>
-          </li>
-        ))}
-      </ul>
+            </li>
+          ))}
+        </ul>
 
-      {/* Lightbox */}
-      <Lightbox
-        open={open}
-        close={() => setOpen(false)}
-        index={index}
-        slides={galleryData.map((item) => ({
-          src: item.img,
-        }))}
-      />
-    </div>
+        {/* Lightbox */}
+        <Lightbox
+          open={open}
+          close={() => setOpen(false)}
+          index={index}
+          slides={galleryData.map((item) => ({
+            src: item.img,
+          }))}
+        />
+      </div>
+    </>
   );
 };
 
@@ -272,7 +277,6 @@ const Portfolio4 = () => {
   return (
     <section className="portfolio-img-gallery-wrapper4">
       <div className="container custom-container-lg">
-
         {/* TABS */}
 
         <ul className="nav">
@@ -325,7 +329,6 @@ const Portfolio4 = () => {
                       </a>
                     </div>
                   </div>
-
                 </div>
               </div>
             </div>
@@ -347,7 +350,6 @@ const Portfolio4 = () => {
 };
 
 const PortfolioColumn4 = () => {
-
   const [activeTab, setActiveTab] = useState("AllProjects");
   const [open, setOpen] = useState(false);
   const [index, setIndex] = useState(0);
@@ -365,7 +367,6 @@ const PortfolioColumn4 = () => {
   /* Masonry Height Fix */
 
   useEffect(() => {
-
     const grid = gridRef.current;
 
     if (!grid) return;
@@ -374,28 +375,22 @@ const PortfolioColumn4 = () => {
     const rowGap = 20;
 
     const resizeAll = () => {
-
       const items = grid.querySelectorAll(".gallery-item");
 
       items.forEach((item) => {
-
         const img = item.querySelector("img");
 
         const resize = () => {
-
           const height = img.getBoundingClientRect().height;
 
           const span = Math.ceil((height + rowGap) / (rowHeight + rowGap));
 
           item.style.gridRowEnd = "span " + span;
-
         };
 
         if (img.complete) resize();
         else img.onload = resize;
-
       });
-
     };
 
     resizeAll();
@@ -403,50 +398,35 @@ const PortfolioColumn4 = () => {
     window.addEventListener("resize", resizeAll);
 
     return () => window.removeEventListener("resize", resizeAll);
-
   }, [images]);
 
-
   return (
-
     <section className="portfolio-img-gallery-wrapper-column4">
-
       <div className="container custom-container-lg">
-
         {/* Tabs */}
 
         <ul className="nav">
-
           {gallery4Data.tabs.map((tab) => (
-
             <li key={tab.id}>
-
               <button
-                className={activeTab === tab.value ? "nav-link active" : "nav-link"}
+                className={
+                  activeTab === tab.value ? "nav-link active" : "nav-link"
+                }
                 onClick={() => setActiveTab(tab.value)}
               >
                 {tab.name}
               </button>
-
             </li>
-
           ))}
-
         </ul>
-
 
         {/* Gallery */}
 
         <div className="gallery-grid-style-column4" ref={gridRef}>
-
           {images.map((img, i) => (
-
             <div className="gallery-item" key={i}>
-
               <div className="portfolio_img_wrapper">
-
                 <div className="portfolio_img">
-
                   <img
                     src={img}
                     alt="portfolio"
@@ -457,9 +437,7 @@ const PortfolioColumn4 = () => {
                   />
 
                   <div className="portfolio_img_overlay">
-
                     <div className="portfolio_img_text">
-
                       <button
                         className="lightbox-btn"
                         onClick={() => {
@@ -473,23 +451,14 @@ const PortfolioColumn4 = () => {
                       <a href="#">
                         <FaLink />
                       </a>
-
                     </div>
-
                   </div>
-
                 </div>
-
               </div>
-
             </div>
-
           ))}
-
         </div>
-
       </div>
-
 
       {/* Lightbox */}
 
@@ -500,13 +469,9 @@ const PortfolioColumn4 = () => {
         slides={images.map((img) => ({ src: img }))}
         on={{ view: ({ index }) => setIndex(index) }}
       />
-
     </section>
-
   );
-
 };
-
 
 export default Portfolio1;
 export { Portfolio2, Portfolio3, Portfolio4, PortfolioColumn4 };

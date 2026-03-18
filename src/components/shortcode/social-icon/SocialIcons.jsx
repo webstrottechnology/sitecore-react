@@ -12,29 +12,34 @@ import {
   socialData10,
 } from "./socialData";
 import "./SocialIcons.scss";
+import { AboutBannerBreadCrumb } from "../breadcrumb/Breadcrumb";
+import sitecoreBg from "../../../assets/images/sitecoreBreadCrumb_bg_img.png";
 
 /* ---------------- SOCIAL ICONS ONE ---------------- */
 
 const SocialIcons = () => {
   return (
-    <div className="social-wrapper">
-      {socialData.map((item) => {
-        const Icon = item.icon;
+    <>
+      <AboutBannerBreadCrumb title="Social Icon" bgImage={sitecoreBg} />
+      <div className="social-wrapper">
+        {socialData.map((item) => {
+          const Icon = item.icon;
 
-        return (
-          <a
-            key={item.id}
-            href={item.link}
-            className="social-icon"
-            style={{
-              "--brand-color": item.color,
-            }}
-          >
-            <Icon className="icon" />
-          </a>
-        );
-      })}
-    </div>
+          return (
+            <a
+              key={item.id}
+              href={item.link}
+              className="social-icon"
+              style={{
+                "--brand-color": item.color,
+              }}
+            >
+              <Icon className="icon" />
+            </a>
+          );
+        })}
+      </div>
+    </>
   );
 };
 
