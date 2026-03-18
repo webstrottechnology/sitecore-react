@@ -12,49 +12,53 @@ import {
   tabsData9,
   tabsData10,
 } from "./tabsData";
-
+import { AboutBannerBreadCrumb } from "../breadcrumb/Breadcrumb";
+import sitecoreBg from "../../../assets/images/sitecoreBreadCrumb_bg_img.png";
 /* ---------------- Tabs ONE ---------------- */
 
 const Tabs = () => {
   const [currentTabIndex, setCurrentTabIndex] = useState(0);
   return (
-    <div className="tabs_wrapper">
-      <div className="container">
-        <div className="tabs_title">
-          <h2>Photo Gallery</h2>
-          <p>
-            Explore our collection of stunning images organised by category.
-            Click the tabs to filter the gallery.
-          </p>
-        </div>
-        <div className="tabs_button">
-          {tabsData.map((item, index) => (
-            <button
-              key={item.id}
-              className={currentTabIndex === index ? "active" : ""}
-              onClick={() => setCurrentTabIndex(index)}
-            >
-              {item.label}
-            </button>
-          ))}
-        </div>
-        <div className="tabs_card">
-          <div className="cards_container">
-            {tabsData[currentTabIndex].content.map((card, index) => (
-              <div className="card" key={index}>
-                <img src={card.image} alt={card.title} />
-                <div className="card_body">
-                <h3>
-                  <a href="#">{card.title}</a>
-                </h3>
-                <p>{card.description}</p>
-                </div>
-              </div>
+    <>
+      <AboutBannerBreadCrumb title="Tab" bgImage={sitecoreBg} />
+      <div className="tabs_wrapper">
+        <div className="container">
+          <div className="tabs_title">
+            <h2>Photo Gallery</h2>
+            <p>
+              Explore our collection of stunning images organised by category.
+              Click the tabs to filter the gallery.
+            </p>
+          </div>
+          <div className="tabs_button">
+            {tabsData.map((item, index) => (
+              <button
+                key={item.id}
+                className={currentTabIndex === index ? "active" : ""}
+                onClick={() => setCurrentTabIndex(index)}
+              >
+                {item.label}
+              </button>
             ))}
+          </div>
+          <div className="tabs_card">
+            <div className="cards_container">
+              {tabsData[currentTabIndex].content.map((card, index) => (
+                <div className="card" key={index}>
+                  <img src={card.image} alt={card.title} />
+                  <div className="card_body">
+                    <h3>
+                      <a href="#">{card.title}</a>
+                    </h3>
+                    <p>{card.description}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 
@@ -469,7 +473,9 @@ const Tabs8 = () => {
           </div>
           <div className="right">
             <h3>{tabsData8[activeTab].title}</h3>
-            <a href="#" className="action">{tabsData8[activeTab].button}</a>
+            <a href="#" className="action">
+              {tabsData8[activeTab].button}
+            </a>
             <p>{tabsData8[activeTab].content}</p>
           </div>
         </div>

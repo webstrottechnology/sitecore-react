@@ -14,7 +14,7 @@ const Header_04 = () => {
   return (
     <>
       <header className={`headerFour ${scrolled ? "scrolled" : ""}`}>
-      <div className="headerFour-inner">
+        <div className="headerFour-inner">
           <div className="logo">
             Fox<span>Bat</span>
           </div>
@@ -42,7 +42,7 @@ const Header_04 = () => {
       </header>
 
       {/* Mobile Menu */}
-     <div className={`headerFour-mobile ${menuOpen ? "show" : ""}`}>
+      <div className={`headerFour-mobile ${menuOpen ? "show" : ""}`}>
         <a href="#">Home</a>
         <a href="#">About</a>
         <a href="#">Services</a>

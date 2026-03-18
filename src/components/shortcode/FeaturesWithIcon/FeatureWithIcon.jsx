@@ -12,24 +12,29 @@ import { FeaturesWithIconDataEight } from "./FeatureWithIconData";
 import { FeaturesWithIconDataNine } from "./FeatureWithIconData";
 import { FeaturesWithIconDataTen } from "./FeatureWithIconData";
 import { SitecoreFeaturesData } from "./FeatureWithIconData";
+import { AboutBannerBreadCrumb } from "../breadcrumb/Breadcrumb";
+import sitecoreBg from "../../../assets/images/sitecoreBreadCrumb_bg_img.png";
 
 const FeatureWithIconOne = () => {
   return (
-    <div>
-      <section className="features-with-icon-one">
-        <div className="features-container">
-          {FeaturesWithIconDataOne.map((item) => (
-            <div className="features-card" key={item.id}>
-              <div className="features-icon">{item.icon}</div>
-              <h4 className="features-title">
-                <a href={item.link}>{item.title}</a>
-              </h4>
-              <p className="features-desc">{item.desc}</p>
-            </div>
-          ))}
-        </div>
-      </section>
-    </div>
+    <>
+      <AboutBannerBreadCrumb title="Feature With Icon" bgImage={sitecoreBg} />
+      <div>
+        <section className="features-with-icon-one">
+          <div className="features-container">
+            {FeaturesWithIconDataOne.map((item) => (
+              <div className="features-card" key={item.id}>
+                <div className="features-icon">{item.icon}</div>
+                <h4 className="features-title">
+                  <a href={item.link}>{item.title}</a>
+                </h4>
+                <p className="features-desc">{item.desc}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+      </div>
+    </>
   );
 };
 

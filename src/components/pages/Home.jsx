@@ -3,7 +3,7 @@ import React from "react";
 import { Banner11 } from "../shortcode/banner/Banner";
 import { Team11 } from "../shortcode/teams/Teams";
 import { Portfolio3 } from "../shortcode/portfolio/Portfolio";
-import Brand from "../shortcode/brand/Brand";
+import Brand from "../shortcode/client/Client";
 import { Features11, Features12 } from "../shortcode/features/Feature";
 import Services, { WhyChooseUs } from "../shortcode/services/Services";
 import Youtube from "../shortcode/youtube/Youtube";
