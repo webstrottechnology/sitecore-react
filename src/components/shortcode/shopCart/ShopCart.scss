@@ -154,7 +154,7 @@
                 font-size: var(--fs20);
             }
 
-            .Temp-read-more {
+            .outlineroundedbtn{
                 background: var(--orange-color);
                 color: var(--white-color);
                 border: none;
@@ -272,7 +272,7 @@
 }
 
 @include responsive(mobile) {
-    .shopCart .Temp-read-more {
+    .shopCart .outlineroundedbtn{
         padding: var(--p10) var(--p20);
     }
 

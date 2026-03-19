@@ -649,12 +649,13 @@ const Team11 = () => {
               <h4>Our Team</h4>
               <h2>We Help to Achieve Your Business Goal</h2>
               <p>
-                It look like readable English. Many desktop publishing packages
-                and web page editors now use Lorem Ipsum as their default model
-                text.
+                Developers write code using languages like HTML, CSS, and
+                JavaScript to create everything from the layout you see to the
+                buttons you click. Whether you're starting a blog, opening an
+                online store, or showcasing a portfolio.
               </p>
             </div>
-            <a className="corprate-btn" href="#">
+            <a className="mintGreenFilledBtn lg-btn" href="#">
               View Our Team
             </a>
           </div>

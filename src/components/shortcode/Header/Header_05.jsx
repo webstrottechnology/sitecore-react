@@ -197,7 +197,7 @@ const Header_05 = () => {
               className="search-icon"
               onClick={() => setSearchOpen(true)}
             />
-            <button>Let's Talk</button>
+            <button className="mintGreenFilledBtn md-btn">Let's Talk</button>
 
             {/* MOBILE MENU BUTTON */}
 

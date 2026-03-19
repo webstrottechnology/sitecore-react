@@ -718,7 +718,9 @@ const Sitecorefooter = () => {
                     />
                   </div>
 
-                  <button className="btn bsCommBtn w-100">Subscribe Now</button>
+                  <button className="mintGreenOutlineBtn lg-btn">
+                    Subscribe Now
+                  </button>
                 </div>
               </div>
 

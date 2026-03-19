@@ -12,11 +12,11 @@
 @use "../../../styles/mixins/mixins" as *;
 
 
-.productDetails {
+.SiteproductDetails {
     width: var(--width100);
     height: 100%;
     padding: var(--p60) var(--p0);
-    background: #f4efe8;
+    background: var(--white-color);
 
     .container {
         max-width: 1600px;
@@ -253,11 +253,11 @@
 /* ======================= */
 
 @include responsive(md) {
-    .productDetails .container {
+    .SiteproductDetails .container {
         gap: 30px;
     }
 
-    .productDetails .thumbnails-left-box {
+    .SiteproductDetails .thumbnails-left-box {
         width: var(--width50);
     }
 
@@ -265,17 +265,17 @@
         width: var(--width50);
     }
 
-    .productDetails .thumbnails-left-box .main {
+    .SiteproductDetails .thumbnails-left-box .main {
         padding: var(--p20);
     }
 }
 
 @include responsive(tablet-sm) {
-    .productDetails .container {
+    .SiteproductDetails .container {
         flex-wrap: wrap;
     }
 
-    .productDetails .thumbnails-left-box {
+    .SiteproductDetails .thumbnails-left-box {
         width: var(--width100);
     }
 
@@ -283,14 +283,14 @@
         width: var(--width100);
     }
 
-    .productDetails .thumbnails-left-box .main img {
+    .SiteproductDetails .thumbnails-left-box .main img {
         width: 100%;
         max-width: inherit;
     }
 }
 
 @include responsive(mobile) {
-    .productDetails {
+    .SiteproductDetails {
         .thumbnails-left-box {
             width: 100%;
 

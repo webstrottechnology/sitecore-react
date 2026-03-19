@@ -261,6 +261,7 @@ import ButtonComponent1, {
   ButtonComponent5,
   ButtonComponent6,
   ButtonComponent7,
+  ButtonComponent8,
 } from "../shortcode/button/Button";
 
 const ComponentsPage = () => {
@@ -798,7 +799,8 @@ const ComponentsPage = () => {
           path="button"
           element={
             <>
-             <ButtonComponent7 />
+              <ButtonComponent7 />
+              <ButtonComponent8 />
               <ButtonComponent1 />
               <ButtonComponent2 />
               <ButtonComponent3 />

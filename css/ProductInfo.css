@@ -1,0 +1,164 @@
+@charset "UTF-8";
+/*-----------------------------------
+
+
+    Template Name: Sitecore React Template
+    Version: 1.0.0
+    Author: Webstrot
+    Copyright: © 2026-27
+
+--------------------------------------- */
+.ipProductInfo {
+  padding: var(--p80) var(--p0);
+}
+.ipProductInfo .nav-pills {
+  border-bottom: 1px solid rgba(2, 48, 71, 0.12);
+  margin-bottom: var(--m40);
+  display: flex;
+  gap: 25px;
+}
+.ipProductInfo .nav-pills button {
+  background: none;
+  border: none;
+  font-size: var(--fs20);
+  color: #858585;
+  padding: var(--p10) var(--p0);
+  cursor: pointer;
+}
+.ipProductInfo .nav-pills button.active {
+  color: var(--orange-color);
+  border-bottom: 2px solid var(--orange-color);
+  font-weight: var(--fw600);
+}
+.ipProductInfo .tab-pane {
+  width: 100%;
+  position: relative;
+  overflow: auto;
+}
+.ipProductInfo .tab-pane ul {
+  width: 100%;
+}
+.ipProductInfo .tab-pane ul li svg {
+  width: 12px;
+  height: 12px;
+}
+.ipProductInfo .tab-pane p {
+  white-space: pre-line;
+}
+.ipProductInfo .custTbl {
+  display: flex;
+  align-items: center;
+  margin-bottom: var(--m6);
+}
+.ipProductInfo .custTbl .custTblLeft {
+  min-width: 350px;
+  font-weight: var(--fw600);
+  color: var(--temp1BlueColor);
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.ipProductInfo .custTbl .custTblRight {
+  color: var(--temp1BlueColor);
+}
+.ipProductInfo .custTbl .custTblRight span {
+  margin-right: var(--m50);
+}
+.ipProductInfo .commentItem {
+  margin-bottom: var(--m24);
+}
+.ipProductInfo .commentPost {
+  display: flex;
+  gap: 20px;
+}
+.ipProductInfo .userProfile img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.ipProductInfo .postGroup {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--m16);
+}
+.ipProductInfo .postGroup .userName {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+.ipProductInfo .postGroup .userName p {
+  font-size: var(--fs18);
+}
+.ipProductInfo .postGroup .userName span {
+  color: #797979;
+}
+.ipProductInfo .reviewStar {
+  display: flex;
+  gap: 4px;
+  font-size: var(--fs18);
+}
+.ipProductInfo .reviews-title {
+  color: var(--temp1BlueColor);
+  font-size: var(--fs26);
+  margin-bottom: var(--m50);
+}
+.ipProductInfo .leaveComment {
+  margin-top: var(--m40);
+  padding: var(--p30);
+  background: #f8efe6;
+  border-radius: var(--br8);
+}
+.ipProductInfo .leaveComment form .prouctInfo-btn {
+  background-color: var(--orange-color);
+  color: var(--white-color);
+}
+.ipProductInfo .leaveComment form label {
+  font-size: var(--fs18);
+  margin-bottom: var(--m10);
+}
+.ipProductInfo .form-control {
+  width: var(--width100);
+  border: none;
+  padding: var(--p10);
+  border-radius: var(--br4);
+  margin-bottom: var(--m16);
+}
+.ipProductInfo .form-control:focus {
+  box-shadow: none;
+}
+.ipProductInfo .ratingStars {
+  display: flex;
+  gap: 6px;
+  margin: var(--m10) var(--m0);
+}
+.ipProductInfo .star {
+  cursor: pointer;
+  transition: 0.2s;
+}
+.ipProductInfo .star:hover {
+  transform: scale(1.2);
+}
+.ipProductInfo .submitBtn {
+  background: var(--orange-color);
+  color: var(--white-color);
+  border: none;
+  padding: var(--p10) var(--p24);
+  border-radius: var(--br26);
+  font-weight: var(--fw600);
+}
+.ipProductInfo .submitBtn:hover {
+  background: var(--orange-color);
+}
+
+@media (max-width: 767px) {
+  .ipProductInfo .custTbl .custTblLeft {
+    min-width: 260px;
+  }
+}
+@media (max-width: 576px) {
+  .ipProductInfo .tab-pane ul {
+    width: 600px;
+  }
+}/*# sourceMappingURL=ProductInfo.css.map */

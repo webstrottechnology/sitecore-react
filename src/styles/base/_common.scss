@@ -129,13 +129,100 @@ p {
 
 // common btn animation effect  //
 
-.Temp-read-more {
+.filledroundedbtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--orange-color);
+  border-radius: var(--br50);
+  padding: var(--p10) var(--p40);
+  background-color: var(--orange-color);
+  color: var(--white-color);
+  font-weight: var(--fw600);
+  transition: all 0.5s;
+  position: relative;
+  overflow: hidden;
+
+  span {
+    position: relative;
+    z-index: 1;
+    color: var(--white-color);
+  }
+
+
+  &::before,
+  &::after {
+    position: absolute;
+    top: 50%;
+    content: "";
+    width: 20px;
+    height: 20px;
+    background-color: var(--temSitCoreBlueColor);
+    border-radius: 50%;
+  }
+
+  &::before {
+    left: -20px;
+    transform: translate(-50%, -50%);
+  }
+
+  &::after {
+    right: -20px;
+    transform: translate(50%, -50%);
+  }
+
+
+  &:hover {
+    color: var(--white-color) !important;
+    border: 1px solid var(--temSitCoreBlueColor);
+
+    &::before {
+      animation: criss-cross-left 0.8s both;
+      animation-direction: alternate;
+    }
+
+    &::after {
+      animation: criss-cross-right 0.8s both;
+      animation-direction: alternate;
+    }
+  }
+
+
+
+  // Size variations
+  &.xl-btn {
+    padding: var(--p18) var(--p46);
+    font-size: var(--fs20);
+  }
+
+  &.lg-btn {
+    padding: var(--p16) var(--p38);
+    font-size: var(--fs18);
+  }
+
+  &.md-btn {
+    padding: var(--p14) var(--p34);
+    font-size: var(--fs16);
+  }
+
+  &.sm-btn {
+    padding: var(--p12) var(--p32);
+    font-size: var(--fs14);
+  }
+
+  &.xs-btn {
+    padding: var(--p10) var(--p24);
+    font-size: var(--fs12);
+  }
+}
+
+.outlineroundedbtn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   padding: var(--p10) var(--p40);
   border: 1px solid var(--orange-color);
-  border-radius: var(--br26);
+  border-radius: var(--br50);
   color: var(--orange-color);
   font-size: var(--fs18);
   font-weight: var(--fw600);
@@ -169,12 +256,31 @@ p {
     transform: translate(50%, -50%);
   }
 
-  &.Temp-read-more-bg-color {
-    background-color: var(--orange-color);
 
-    span {
-      color: var(--white-color);
-    }
+  // Size variations
+  &.xl-btn {
+    padding: var(--p18) var(--p46);
+    font-size: var(--fs20);
+  }
+
+  &.lg-btn {
+    padding: var(--p16) var(--p38);
+    font-size: var(--fs18);
+  }
+
+  &.md-btn {
+    padding: var(--p14) var(--p34);
+    font-size: var(--fs16);
+  }
+
+  &.sm-btn {
+    padding: var(--p12) var(--p32);
+    font-size: var(--fs14);
+  }
+
+  &.xs-btn {
+    padding: var(--p10) var(--p24);
+    font-size: var(--fs12);
   }
 
   &:hover {
@@ -191,9 +297,102 @@ p {
       animation-direction: alternate;
     }
   }
+
+
 }
 
-.Temp-add-to-cart {
+.outlinesqaurebtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--p10) var(--p40);
+  border: 1px solid var(--temp1BlueColor);
+  border-radius: var(--br4);
+  color: var(--white-color);
+  font-size: var(--fs16);
+  font-weight: var(--fw600);
+  transition: all 0.5s;
+  position: relative;
+  overflow: hidden;
+
+  span {
+    position: relative;
+    z-index: 1;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    color: var(--temp1BlueColor);
+  }
+
+  &::before,
+  &::after {
+    position: absolute;
+    top: 50%;
+    content: "";
+    width: 20px;
+    height: 20px;
+    background-color: var(--temp1BlueColor);
+    border-radius: 50%;
+  }
+
+  &::before {
+    left: -20px;
+    transform: translate(-50%, -50%);
+  }
+
+  &::after {
+    right: -20px;
+    transform: translate(50%, -50%);
+  }
+
+  &:hover {
+    background-color: var(--temp1BlueColor);
+    color: var(--white-color);
+    border: 1px solid var(--temp1BlueColor);
+
+    span {
+      color: var(--white-color);
+    }
+
+    &::before {
+      animation: criss-cross-left 0.8s both;
+      animation-direction: alternate;
+    }
+
+    &::after {
+      animation: criss-cross-right 0.8s both;
+      animation-direction: alternate;
+    }
+  }
+
+  // Size variations
+  &.xl-btn {
+    padding: var(--p18) var(--p46);
+    font-size: var(--fs20);
+  }
+
+  &.lg-btn {
+    padding: var(--p16) var(--p38);
+    font-size: var(--fs18);
+  }
+
+  &.md-btn {
+    padding: var(--p14) var(--p34);
+    font-size: var(--fs16);
+  }
+
+  &.sm-btn {
+    padding: var(--p12) var(--p32);
+    font-size: var(--fs14);
+  }
+
+  &.xs-btn {
+    padding: var(--p10) var(--p24);
+    font-size: var(--fs12);
+  }
+}
+
+.filledsqaurebtn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -237,14 +436,6 @@ p {
     transform: translate(50%, -50%);
   }
 
-  &.Temp-read-more-bg-color {
-    background-color: var(--orange-color);
-
-    span {
-      color: var(--white-color);
-    }
-  }
-
   &:hover {
     background-color: var(--temp1BlueColor);
     color: var(--white-color);
@@ -259,6 +450,274 @@ p {
       animation: criss-cross-right 0.8s both;
       animation-direction: alternate;
     }
+  }
+
+  // Size variations
+  &.xl-btn {
+    padding: var(--p18) var(--p46);
+    font-size: var(--fs20);
+  }
+
+  &.lg-btn {
+    padding: var(--p16) var(--p38);
+    font-size: var(--fs18);
+  }
+
+  &.md-btn {
+    padding: var(--p14) var(--p34);
+    font-size: var(--fs16);
+  }
+
+  &.sm-btn {
+    padding: var(--p12) var(--p32);
+    font-size: var(--fs14);
+  }
+
+  &.xs-btn {
+    padding: var(--p10) var(--p24);
+    font-size: var(--fs12);
+  }
+}
+
+.anchorTextBtn {
+  font-size: var(--fs18);
+  font-weight: var(--fw500);
+  position: relative;
+  transition: color 0.3s ease;
+
+  // Gradient text link with decorative line
+  &.text-gradient {
+    background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-weight: var(--fw600);
+
+    .gradient-line {
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+      transform: scaleX(0);
+      transition: transform 0.3s ease;
+    }
+
+    &:hover .gradient-line {
+      transform: scaleX(1);
+    }
+  }
+
+  // Underline link (basic)
+  &.text-undeline {
+    color: var(--black-color);
+    position: relative;
+    font-weight: var(--fw400);
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background-color: var(--temp1BlueColor);
+      transform: scaleX(0);
+      transition: transform 0.3s ease;
+    }
+
+    &:hover::after {
+      transform: scaleX(1);
+    }
+  }
+
+  // Thin underline link
+  &.text-thin-underline {
+    color: var(--temSitCoreBlueColor);
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background-color: var(--temSitCoreBlueColor);
+      transform: scaleX(0);
+      transition: transform 0.3s ease;
+    }
+
+    &:hover::after {
+      transform: scaleX(1);
+    }
+  }
+}
+
+.GradientBtnAnchor {
+  display: inline-block;
+  padding: var(--p12) var(--p24);
+  color: var(--white-color);
+  font-weight: var(--fw600);
+  transition: transform 0.3s ease;
+
+  &:hover {
+    transform: translateY(-3px);
+  }
+
+  // Gradient variations
+  &.gradient1 {
+    background: linear-gradient(45deg, #ff6b6b, #feca57);
+  }
+
+  &.gradient2 {
+    background: linear-gradient(45deg, #48dbfb, #1dd1a1);
+  }
+
+  &.gradient3 {
+    background: linear-gradient(45deg, #f368e0, #ff9f43);
+  }
+
+  &.gradient4 {
+    background: linear-gradient(45deg, #0abde3, #10ac84);
+  }
+
+  &.gradient5 {
+    background: linear-gradient(45deg, #ee5253, #f93e6c);
+  }
+
+  // Special event button
+  &.event-btn {
+    display: inline-block;
+    padding: var(--p12) var(--p24);
+    color: var(--white-color);
+    font-weight: var(--fw600);
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+
+    &:hover {
+      transform: translateY(-3px);
+    }
+  }
+}
+
+.mintGreenOutlineBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--p12) var(--p40);
+  border: 1px solid var(--green-color02);
+  background-color: transparent;
+  border-radius: var(--br50);
+  font-size: var(--fs18);
+  font-weight: var(--fw600);
+  color: var(--green-color02);
+  transition: all 0.5s;
+  position: relative;
+  overflow: hidden;
+
+
+
+  // Hover effect: background fades to transparent, text turns green
+  &:hover {
+    background-color: var(--green-color02);
+    border-color: var(--green-color02);
+    color: var(--white-color);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 16px rgba(0, 128, 0, 0.2); // subtle green shadow
+  }
+
+  // Optional: active effect for click feedback
+  &:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(0, 128, 0, 0.2);
+  }
+
+  // Size variations
+  &.xl-btn {
+    padding: var(--p18) var(--p40);
+    font-size: var(--fs20);
+  }
+
+  &.lg-btn {
+    padding: var(--p16) var(--p36);
+    font-size: var(--fs18);
+  }
+
+  &.md-btn {
+    padding: var(--p14) var(--p30);
+    font-size: var(--fs16);
+  }
+
+  &.sm-btn {
+    padding: var(--p12) var(--p28);
+    font-size: var(--fs14);
+  }
+
+  &.xs-btn {
+    padding: var(--p10) var(--p22);
+    font-size: var(--fs12);
+  }
+}
+
+.mintGreenFilledBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--p12) var(--p40);
+  border: 1px solid var(--green-color02);
+  background-color: var(--green-color02);
+  border-radius: var(--br50);
+  font-size: var(--fs18);
+  font-weight: var(--fw600);
+  color: var(--black-color);
+  transition: all 0.5s;
+  position: relative;
+  overflow: hidden;
+
+
+
+  // Hover effect: background fades to transparent, text turns green
+  &:hover {
+    background-color: transparent;
+    border-color: var(--green-color02);
+    color: var(--green-color02);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 16px rgba(0, 128, 0, 0.2); // subtle green shadow
+  }
+
+  // Optional: active effect for click feedback
+  &:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(0, 128, 0, 0.2);
+  }
+
+  // Size variations
+  &.xl-btn {
+    padding: var(--p18) var(--p46);
+    font-size: var(--fs20);
+  }
+
+  &.lg-btn {
+    padding: var(--p16) var(--p38);
+    font-size: var(--fs18);
+  }
+
+  &.md-btn {
+    padding: var(--p14) var(--p34);
+    font-size: var(--fs16);
+  }
+
+  &.sm-btn {
+    padding: var(--p12) var(--p32);
+    font-size: var(--fs14);
+  }
+
+  &.xs-btn {
+    padding: var(--p10) var(--p24);
+    font-size: var(--fs12);
   }
 }
 

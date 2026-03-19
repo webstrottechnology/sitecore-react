@@ -184,7 +184,7 @@ const ProductInfo = () => {
 
                 <a 
                   href="#"
-                  className="prouctInfo-btn medCommBtn borderRadiusRounded Temp-read-more mt-3"
+                  className="prouctInfo-btn medCommBtn borderRadiusRounded outlineroundedbtnmt-3"
                 >
                   <span>SUBMIT</span>
                 </a>

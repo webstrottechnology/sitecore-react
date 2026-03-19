@@ -44,7 +44,7 @@ const ProductCartSection = () => {
                     </a>
 
                     <a
-                      className="btn-cart Temp-add-to-cart"
+                      className="btn-cart filledsqaurebtn"
                       href={product.link}
                     >
                       <span>

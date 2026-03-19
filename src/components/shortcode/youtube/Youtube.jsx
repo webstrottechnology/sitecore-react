@@ -29,11 +29,6 @@ const Youtube = () => {
         {/* Overlay Content */}
 
         <div className="hero-content">
-          <h2 className="subtitle">Global client from around the world</h2>
-          <h1>
-            We build ideas driven the future <br /> needs.
-          </h1>
-
           {/* PLAY BUTTON */}
           {!isVideoPlaying && (
             <button
@@ -43,7 +38,6 @@ const Youtube = () => {
               ▶
             </button>
           )}
-
           {/* CLOSE BUTTON */}
           {isVideoPlaying && (
             <button
@@ -53,6 +47,8 @@ const Youtube = () => {
               ❚❚
             </button>
           )}
+          <h2 className="subtitle">Global client from around the world</h2>
+          <h1>We build ideas driven the futures needs.</h1>
         </div>
         <div className="hero-bottom">
           <h4>Get up to - 50% offer on your first project booking</h4>

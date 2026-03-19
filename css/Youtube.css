@@ -35,7 +35,9 @@
   background: rgba(0, 0, 0, 0.45);
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
+  gap: 45px;
   text-align: center;
   color: var(--white-color);
   padding-top: var(--p80);
@@ -168,26 +170,12 @@
   }
 }
 @media (max-width: 576px) {
-  .hero-container .hero-content .subtitle {
-    font-size: var(--fs16);
-  }
   .hero-container .hero-content h1 {
     font-size: var(--fs26);
   }
 }
 @media (max-width: 480px) {
-  .hero-container .hero-content .subtitle {
-    font-size: var(--fs14);
-  }
   .hero-container .hero-content h1 {
-    font-size: var(--fs22);
-  }
-}
-@media (max-width: 375px) {
-  .hero-container .hero-content .subtitle {
-    font-size: var(--fs12);
-  }
-  .hero-container .hero-content h1 {
-    font-size: var(--fs18);
+    font-size: var(--fs24);
   }
 }/*# sourceMappingURL=Youtube.css.map */

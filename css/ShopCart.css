@@ -131,7 +131,7 @@
   border-radius: var(--br6);
   font-size: var(--fs20);
 }
-.shopCart .cartTbl .couponCode .Temp-read-more {
+.shopCart .cartTbl .couponCode .outlineroundedbtn {
   background: var(--orange-color);
   color: var(--white-color);
   border: none;
@@ -141,7 +141,7 @@
   height: 50px;
   font-size: var(--fs16);
 }
-.shopCart .cartTbl .couponCode .Temp-read-more:hover {
+.shopCart .cartTbl .couponCode .outlineroundedbtn:hover {
   background-color: var(--white-color);
 }
 .shopCart {
@@ -224,7 +224,7 @@
   }
 }
 @media (max-width: 767px) {
-  .shopCart .Temp-read-more {
+  .shopCart .outlineroundedbtn {
     padding: var(--p10) var(--p20);
   }
   .shopCart .cartTbl .couponCode input {

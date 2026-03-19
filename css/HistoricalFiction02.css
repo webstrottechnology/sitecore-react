@@ -1,0 +1,267 @@
+@charset "UTF-8";
+/*-----------------------------------
+
+
+    Template Name: Sitecore React Template
+    Version: 1.0.0
+    Author: Webstrot
+    Copyright: © 2026-27
+
+--------------------------------------- */
+.productSingle {
+  padding-top: var(--p80);
+  width: var(--width100);
+  /* LEFT */
+}
+.productSingle .leftSection {
+  display: flex;
+  height: 100%;
+}
+.productSingle .leftSection .imageBox {
+  position: relative;
+  height: 610px;
+  display: inline-block;
+  padding-right: var(--p20);
+  width: 490px;
+}
+.productSingle .leftSection .imageBox img {
+  width: var(--width100);
+  height: 100%;
+  object-fit: contain;
+  padding: var(--p20);
+  background-color: var(--bg-ligh);
+  border: 1px solid var(--orange-color);
+}
+.productSingle .leftSection .imageBox .share {
+  position: absolute;
+  top: 20px;
+  right: 40px;
+  background: var(--bottle-green-color);
+  color: var(--white-color);
+  width: 50px;
+  height: 50px;
+  border-radius: var(--br10);
+  background-color: var(--bottle-green-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+}
+.productSingle .leftSection .thumbs {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
+}
+.productSingle .leftSection .thumbs button {
+  border: none;
+  background: none;
+  color: var(--orange-color);
+  cursor: pointer;
+}
+.productSingle .leftSection .thumbs img {
+  width: 85px;
+  padding: var(--p10);
+  background: var(--bg-light);
+  border: 2px solid transparent;
+  cursor: pointer;
+}
+.productSingle .leftSection .thumbs img.active {
+  border: 2px solid var(--orange-color);
+}
+.productSingle {
+  /* RIGHT */
+}
+.productSingle .rightSection .category {
+  color: var(--bottle-green-color);
+  font-size: var(--fs16);
+  font-weight: var(--fw700);
+  display: inline-block;
+  margin-bottom: var(--m10);
+}
+.productSingle .rightSection h2 {
+  color: var(--temp1BlueColor);
+  font-size: var(--fs26);
+  font-weight: var(--fw700);
+  margin-bottom: var(--m10);
+}
+.productSingle .rightSection .rating {
+  color: var(--orange-color);
+  margin-bottom: var(--m10);
+  gap: 6px;
+  display: flex;
+}
+.productSingle .rightSection .rating svg {
+  font-size: var(--fs18);
+}
+.productSingle .rightSection .price {
+  font-size: var(--fs26);
+  font-weight: var(--fw700);
+}
+.productSingle .rightSection .price span {
+  margin-left: var(--m10);
+  text-decoration: line-through;
+  color: #999;
+  font-size: var(--fs16);
+}
+.productSingle .rightSection .qty {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin: var(--m16) var(--m0);
+}
+.productSingle .rightSection .qty .quantity {
+  color: var(--temp1BlueColor);
+  font-size: var(--fs16);
+  font-weight: var(--fw700);
+}
+.productSingle .rightSection .qty .box {
+  display: flex;
+  border: 1px solid var(--orange-color);
+}
+.productSingle .rightSection .qty .box button {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--orange-color);
+  font-size: var(--fs26);
+  padding: var(--p12);
+  border: none;
+}
+.productSingle .rightSection .qty .box span {
+  padding: var(--p6) var(--p16);
+}
+.productSingle .rightSection .desc {
+  font-size: var(--fs14);
+  color: #777;
+  margin-bottom: var(--m16);
+}
+.productSingle .rightSection h3 {
+  margin-bottom: var(--m10);
+  font-size: var(--fs26);
+}
+.productSingle .rightSection .offers .offer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--p12) var(--p0);
+  border-top: 1px solid rgba(204, 204, 204, 0.48);
+  padding: var(--p10) var(--p0);
+}
+.productSingle .rightSection .offers .offer .left {
+  display: flex;
+  gap: 20px;
+}
+.productSingle .rightSection .offers .offer .left .offer-content h4 {
+  color: var(--orange-color);
+  font-size: var(--fs16);
+  font-weight: var(--fw600);
+}
+.productSingle .rightSection .offers .offer .left .offer-content p {
+  color: #888;
+  margin-top: var(--m6);
+}
+.productSingle .rightSection .offers .offer .left .offer-content span {
+  color: #888;
+}
+.productSingle .rightSection .offers .offer .left .icon {
+  padding: var(--p8);
+  border-radius: 50%;
+  font-size: var(--fs12);
+}
+.productSingle .rightSection .offers .more {
+  color: var(--orange-color);
+  font-size: var(--fs16);
+  cursor: pointer;
+  display: inline-block;
+  margin-top: var(--m8);
+  font-weight: var(--fw600);
+}
+.productSingle .rightSection .buttons {
+  margin-top: var(--m40);
+  display: flex;
+  gap: 20px;
+}
+.productSingle .rightSection .buttons .cart {
+  background: var(--orange-color);
+  color: var(--white-color);
+  width: 260px;
+  height: 50px;
+  border-radius: var(--br50);
+  border: none;
+  font-weight: var(--fw700);
+}
+.productSingle .rightSection .buttons .buy {
+  border: 1px solid var(--orange-color);
+  width: 260px;
+  height: 50px;
+  border-radius: var(--br50);
+  background: transparent;
+  color: var(--orange-color);
+  font-weight: var(--fw700);
+}
+
+@media (max-width: 991px) {
+  .productSingle .leftSection .imageBox {
+    width: var(--width100);
+    height: auto;
+  }
+  .productSingle .rightSection {
+    margin-top: var(--m40);
+  }
+}
+@media (max-width: 767px) {
+  .productSingle .rightSection h2 {
+    font-size: var(--fs22);
+  }
+  .productSingle .rightSection .price {
+    font-size: var(--fs22);
+  }
+  .productSingle .rightSection h3 {
+    font-size: var(--fs22);
+  }
+  .productSingle .rightSection .buttons .cart,
+  .productSingle .rightSection .buttons .buy {
+    width: 200px;
+  }
+}
+@media (max-width: 576px) {
+  .productSingle .rightSection .offers .offer .left .offer-content h4 {
+    font-size: var(--fs14);
+  }
+  .productSingle .rightSection .buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+  .productSingle .leftSection {
+    flex-direction: column;
+    gap: 50px;
+  }
+  .productSingle .leftSection .thumbs {
+    flex-direction: row;
+  }
+  .productSingle .leftSection .thumbs button {
+    transform: rotate(90deg);
+  }
+  .productSingle .leftSection .imageBox {
+    padding-right: var(--p0);
+  }
+  .productSingle .leftSection .imageBox .share {
+    right: 20px;
+    width: 40px;
+    height: 40px;
+  }
+}
+@media (max-width: 480px) {
+  .productSingle .leftSection .thumbs {
+    overflow-x: scroll;
+  }
+}
+@media (max-width: 375px) {
+  .productSingle .rightSection .buttons .cart,
+  .productSingle .rightSection .buttons .buy {
+    width: var(--width100);
+  }
+}/*# sourceMappingURL=HistoricalFiction02.css.map */

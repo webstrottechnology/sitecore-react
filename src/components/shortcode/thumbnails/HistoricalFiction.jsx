@@ -33,7 +33,7 @@ const HistoricalFiction = () => {
   };
 
   return (
-    <div className="productDetails">
+    <div className="SiteproductDetails2">
       <div className="container custom-container-lg">
         {/* LEFT SIDE */}
         <div className="thumbnails-left-box">
