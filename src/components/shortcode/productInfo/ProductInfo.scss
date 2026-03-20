@@ -10,13 +10,14 @@
 @use "../../../styles/mixins/mixins" as *;
 
 .ipProductInfo {
-    padding: var(--p80) var(--p0);
+    padding: var(--p40) var(--p0);
 
     .nav-pills {
         border-bottom: 1px solid rgba(2, 48, 71, 0.12);
         margin-bottom: var(--m40);
         display: flex;
         gap: 25px;
+        row-gap: 8px;
 
 
         button {
@@ -197,6 +198,19 @@
 @include responsive(mobile) {
     .ipProductInfo .custTbl .custTblLeft {
         min-width: 260px;
+    }
+
+    .ipProductInfo .leaveComment {
+        padding: var(--p16);
+    }
+
+    .ipProductInfo .commentPost {
+        flex-direction: column;
+    }
+
+    .ipProductInfo .postGroup .userName {
+        flex-direction: column;
+        align-items: baseline;
     }
 }
 

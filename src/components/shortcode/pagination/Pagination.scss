@@ -23,9 +23,10 @@
     background: var(--orange-color);
     padding: var(--p20) var(--p40);
     border-radius: var(--br60);
-    display: flex;
+    display: grid;
+    grid-template-columns: auto repeat(1, 1fr) auto;
     align-items: center;
-    gap: 25px;
+    gap: 20px;
 
     .nav-btn {
       width: 70px;
@@ -122,6 +123,6 @@
   }
 
   .pagination-wrapper .pagination-container {
-    padding: var(--p10) var(--p10);
+    padding: var(--p10) var(--p14);
   }
 }

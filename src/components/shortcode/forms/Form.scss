@@ -1842,12 +1842,28 @@
 
 @include responsive(lg-md) {
     .appointment_section .appointment_wrapper {
-        gap: 50px;
+        gap: 30px;
     }
 
     .appointment_section .appointment_wrapper .left .contact_card {
         width: var(--width100);
     }
+
+    .appointment_section .appointment_wrapper .left {
+        width: 50%
+    }
+
+    .appointment_section .appointment_wrapper .right {
+        width: 50%;
+        padding: var(--p40) var(--p40) var(--p40) var(--p40);
+    }
+
+    .appointment_section .appointment_wrapper .right .grid {
+        display: grid;
+        grid-template-columns: auto;
+        gap: 20px;
+    }
+
 }
 
 @include responsive(tablet-sm) {

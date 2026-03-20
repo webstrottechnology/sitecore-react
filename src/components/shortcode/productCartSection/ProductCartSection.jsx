@@ -28,7 +28,7 @@ const ProductCartSection = () => {
               key={product.id}
               className={
                 view === "grid"
-                  ? "col-md-3 list-view-filter-item"
+                  ? "col-12 col-md-6 col-lg-4 col-xl-4 list-view-filter-item"
                   : "col-md-12 list-view-filter-item"
               }
             >

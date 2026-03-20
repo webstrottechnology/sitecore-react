@@ -133,6 +133,7 @@ p {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  gap: 10px;
   border: 1px solid var(--orange-color);
   border-radius: var(--br50);
   padding: var(--p10) var(--p40);
@@ -147,6 +148,10 @@ p {
     position: relative;
     z-index: 1;
     color: var(--white-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
   }
 
 
@@ -220,8 +225,10 @@ p {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  gap: 10px;
   padding: var(--p10) var(--p40);
   border: 1px solid var(--orange-color);
+  background-color:transparent;
   border-radius: var(--br50);
   color: var(--orange-color);
   font-size: var(--fs18);
@@ -231,8 +238,13 @@ p {
   overflow: hidden;
 
   span {
+    color: var(--orange-color);
     position: relative;
     z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
   }
 
   &::before,
@@ -286,6 +298,10 @@ p {
   &:hover {
     color: var(--white-color);
     border: 1px solid var(--temSitCoreBlueColor);
+
+    span {
+      color: var(--white-color);
+    }
 
     &::before {
       animation: criss-cross-left 0.8s both;
@@ -488,7 +504,6 @@ p {
   // Gradient text link with decorative line
   &.text-gradient {
     background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
-    -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
     font-weight: var(--fw600);

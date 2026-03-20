@@ -21,7 +21,7 @@ const SitecoreCheckout = () => {
   const total = subtotal + shippingPrice;
 
   return (
-    <section className="w-100 clearfix checkout" id="checkout">
+    <section className="w-100 clearfix checkoutPageSection" id="checkout">
       <div className="container custom-container-lg">
         <div className="checkoutInner">
           <div className="row">
@@ -128,7 +128,7 @@ const SitecoreCheckout = () => {
 
                     <a
                       href="#"
-                      className="checkout-btn medCommBtn borderRadiusRounded Temp-read-more"
+                      className="checkout-btn filledroundedbtn"
                     >
                       <span>Place Order</span>
                     </a>

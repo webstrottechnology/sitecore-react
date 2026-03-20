@@ -34,159 +34,169 @@ const HistoricalFiction = () => {
 
   return (
     <div className="SiteproductDetails">
-      <div className="container">
-        {/* LEFT SIDE */}
-        <div className="thumbnails-left-box">
-          {/* thumbnails */}
-          <div className="thumbs">
-            {images.map((img, i) => (
-              <img
-                key={i}
-                src={img}
-                alt=""
-                className={active === i ? "active" : ""}
-                onClick={() => setActive(i)}
-              />
-            ))}
-          </div>
+      <div className="container custom-container-lg">
+        <div className="row">
+          <div className="col-12 col-md-12 col-lg-6 ">
+            {/* LEFT SIDE */}
+            <div className="thumbnails-left-box">
+              {/* thumbnails */}
+              <div className="thumbs">
+                {images.map((img, i) => (
+                  <img
+                    key={i}
+                    src={img}
+                    alt=""
+                    className={active === i ? "active" : ""}
+                    onClick={() => setActive(i)}
+                  />
+                ))}
+              </div>
 
-          {/* main image */}
-          <div className="main">
-            <img src={images[active]} alt="" />
+              {/* main image */}
+              <div className="main">
+                <img src={images[active]} alt="" />
 
-            <div className="wishlist">
-              <FiHeart />
+                <div className="wishlist">
+                  <FiHeart />
+                </div>
+              </div>
+
+              {/* cart buttons */}
+              <div className="cartRow">
+                <a href="#" className="cart filledroundedbtn lg-btn">
+                  <span>
+                    <FiShoppingCart />
+                    Add To Cart
+                  </span>
+                </a>
+
+                <a href="#" className="share outlineroundedbtn lg-btn">
+                  <span>
+                    <FiShare2 />
+                    Share
+                  </span>
+                </a>
+              </div>
+
+              {/* buy now */}
+              <a href="#" className="buyNow mintGreenFilledBtn">
+                Buy Now
+              </a>
             </div>
           </div>
+          <div className="col-12 col-md-12 col-lg-6 ">
+            {/* RIGHT SIDE */}
+            <div className="thumbnails-right-box">
+              <p className="category">Historical Fiction</p>
 
-          {/* cart buttons */}
-          <div className="cartRow">
-            <a href="#" className="cart">
-              <FiShoppingCart />
-              Add To Cart
-            </a>
+              <h2>Acts of Love and War</h2>
 
-            <a href="#" className="share">
-              <FiShare2 />
-              Share
-            </a>
-          </div>
+              {/* rating */}
+              <div className="rating">
+                <a href="#">
+                  {" "}
+                  <FiStar />
+                </a>
+                <a href="#">
+                  {" "}
+                  <FiStar />
+                </a>
+                <a href="#">
+                  {" "}
+                  <FiStar />
+                </a>
+                <a href="#">
+                  {" "}
+                  <FiStar />
+                </a>
+                <a href="#">
+                  {" "}
+                  <FiStar className="gray" />
+                </a>
+              </div>
 
-          {/* buy now */}
-          <a href="#" className="buyNow">
-            Buy Now
-          </a>
-        </div>
+              {/* price */}
+              <div className="price">
+                $23.00
+                <span>$25.50</span>
+              </div>
 
-        {/* RIGHT SIDE */}
-        <div className="thumbnails-right-box">
-          <p className="category">Historical Fiction</p>
+              {/* quantity */}
+              <div className="qty">
+                <h2>Quantity:</h2>
 
-          <h2>Acts of Love and War</h2>
+                <div className="box">
+                  <button onClick={decreaseQty} disabled={qty === 0}>
+                    <FiMinus />
+                  </button>
 
-          {/* rating */}
-          <div className="rating">
-            <a href="#">
-              {" "}
-              <FiStar />
-            </a>
-            <a href="#">
-              {" "}
-              <FiStar />
-            </a>
-            <a href="#">
-              {" "}
-              <FiStar />
-            </a>
-            <a href="#">
-              {" "}
-              <FiStar />
-            </a>
-            <a href="#">
-              {" "}
-              <FiStar className="gray" />
-            </a>
-          </div>
+                  <span>{qty}</span>
 
-          {/* price */}
-          <div className="price">
-            $23.00
-            <span>$25.50</span>
-          </div>
+                  <button onClick={increaseQty}>
+                    <FiPlus />
+                  </button>
+                </div>
+              </div>
 
-          {/* quantity */}
-          <div className="qty">
-            <h2>Quantity:</h2>
+              {/* description */}
+              <p className="desc">
+                Guardians are defenders, careers and guides. Some look after
+                individual people, others whole planets or universes, but all
+                share a strong belief in their responsibility to protect their
+                charges.
+              </p>
 
-            <div className="box">
-              <button onClick={decreaseQty} disabled={qty === 0}>
-                <FiMinus />
-              </button>
+              {/* stories list */}
+              <div className="stories-list-box">
+                <h2>The Stories Are:</h2>
 
-              <span>{qty}</span>
+                <ul className="nav flex-column">
+                  <li>
+                    <b>Awakening</b> - Alasdair Shaw
+                  </li>
 
-              <button onClick={increaseQty}>
-                <FiPlus />
-              </button>
+                  <li>
+                    <b>The Lattice</b> - Jeff Tanyard
+                  </li>
+
+                  <li>
+                    <b>Biting Shadow</b> - C Gold
+                  </li>
+
+                  <li>
+                    <b>Gate of Dreams</b> - Rick Partlow
+                  </li>
+
+                  <li>
+                    <b>The Following Star</b> - Elizabeth Baxter
+                  </li>
+
+                  <li>
+                    <b>The Renewal</b> - Zen DiPietro
+                  </li>
+
+                  <li>
+                    <b>Stowaway</b> - Benjamin Douglas
+                  </li>
+
+                  <li>
+                    <b>Baptism of Fire</b> - Cora Buhlert
+                  </li>
+
+                  <li>
+                    <b>Sleeping Giant</b> - Andrew Vaillencourt
+                  </li>
+
+                  <li>
+                    <b>We Have the Stars</b> - JJ Green
+                  </li>
+
+                  <li>
+                    <b>Warning Signs</b> - Edward M Grant
+                  </li>
+                </ul>
+              </div>
             </div>
-          </div>
-
-          {/* description */}
-          <p className="desc">
-            Guardians are defenders, careers and guides. Some look after
-            individual people, others whole planets or universes, but all share
-            a strong belief in their responsibility to protect their charges.
-          </p>
-
-          {/* stories list */}
-          <div className="stories-list-box">
-            <h2>The Stories Are:</h2>
-
-            <ul className="nav flex-column">
-              <li>
-                <b>Awakening</b> - Alasdair Shaw
-              </li>
-
-              <li>
-                <b>The Lattice</b> - Jeff Tanyard
-              </li>
-
-              <li>
-                <b>Biting Shadow</b> - C Gold
-              </li>
-
-              <li>
-                <b>Gate of Dreams</b> - Rick Partlow
-              </li>
-
-              <li>
-                <b>The Following Star</b> - Elizabeth Baxter
-              </li>
-
-              <li>
-                <b>The Renewal</b> - Zen DiPietro
-              </li>
-
-              <li>
-                <b>Stowaway</b> - Benjamin Douglas
-              </li>
-
-              <li>
-                <b>Baptism of Fire</b> - Cora Buhlert
-              </li>
-
-              <li>
-                <b>Sleeping Giant</b> - Andrew Vaillencourt
-              </li>
-
-              <li>
-                <b>We Have the Stars</b> - JJ Green
-              </li>
-
-              <li>
-                <b>Warning Signs</b> - Edward M Grant
-              </li>
-            </ul>
           </div>
         </div>
       </div>

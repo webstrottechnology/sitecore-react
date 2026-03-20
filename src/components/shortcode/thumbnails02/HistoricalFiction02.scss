@@ -11,7 +11,7 @@
 
 @use "../../../styles/mixins/mixins" as *;
 
-.productSingle {
+.SitecoreProductSingle {
     padding-top: var(--p80);
     width: var(--width100);
 
@@ -224,102 +224,101 @@
             gap: 20px;
 
             .cart {
-                background: var(--orange-color);
-                color: var(--white-color);
-                width: 260px;
-                height: 50px;
-                border-radius: var(--br50);
-                border: none;
-                font-weight: var(--fw700);
+                width: var(--width100);
+                max-width: 260px;
             }
 
             .buy {
-                border: 1px solid var(--orange-color);
-                width: 260px;
-                height: 50px;
-                border-radius: var(--br50);
-                background: transparent;
-                color: var(--orange-color);
-                font-weight: var(--fw700);
+                width: var(--width100);
+                max-width: 260px;
             }
         }
     }
 }
 
 @include responsive(tablet-sm) {
-    .productSingle .leftSection .imageBox {
+    .SitecoreProductSingle .leftSection .imageBox {
         width: var(--width100);
         height: auto;
     }
 
-    .productSingle .rightSection {
+    .SitecoreProductSingle .rightSection {
         margin-top: var(--m40);
     }
 }
 
 @include responsive(mobile) {
-    .productSingle .rightSection h2 {
+    .SitecoreProductSingle .rightSection h2 {
         font-size: var(--fs22);
     }
 
-    .productSingle .rightSection .price {
+    .SitecoreProductSingle .rightSection .price {
         font-size: var(--fs22);
     }
 
-    .productSingle .rightSection h3 {
+    .SitecoreProductSingle .rightSection h3 {
         font-size: var(--fs22);
     }
 
-    .productSingle .rightSection .buttons .cart,
-    .productSingle .rightSection .buttons .buy {
+    .SitecoreProductSingle .rightSection .buttons .cart,
+    .SitecoreProductSingle .rightSection .buttons .buy {
         width: 200px;
     }
 }
 
 @include responsive(mobile-sm) {
-    .productSingle .rightSection .offers .offer .left .offer-content h4 {
+    .SitecoreProductSingle .rightSection .offers .offer .left .offer-content h4 {
         font-size: var(--fs14);
     }
 
-    .productSingle .rightSection .buttons {
+    .SitecoreProductSingle .rightSection .buttons {
         flex-direction: column;
         align-items: center;
     }
 
-    .productSingle .leftSection {
+    .SitecoreProductSingle .leftSection {
         flex-direction: column;
         gap: 50px;
     }
 
-    .productSingle .leftSection .thumbs {
+    .SitecoreProductSingle .leftSection .thumbs {
         flex-direction: row;
     }
 
-    .productSingle .leftSection .thumbs button {
+    .SitecoreProductSingle .leftSection .thumbs button {
         transform: rotate(90deg);
     }
 
-    .productSingle .leftSection .imageBox {
+    .SitecoreProductSingle .leftSection .imageBox {
         padding-right: var(--p0);
     }
 
-    .productSingle .leftSection .imageBox .share {
+    .SitecoreProductSingle .leftSection .imageBox .share {
         right: 20px;
         width: 40px;
         height: 40px;
     }
+
+    .SitecoreProductSingle .leftSection .thumbs img {
+        width: 70px;
+        padding: var(--p6);
+    }
+
+    .SitecoreProductSingle .leftSection .thumbs {
+        gap: 6px;
+    }
 }
 
 @include responsive(xs) {
-    .productSingle .leftSection .thumbs {
+    .SitecoreProductSingle .leftSection .thumbs {
         overflow-x: scroll;
     }
 }
 
 @include responsive(xxs) {
 
-    .productSingle .rightSection .buttons .cart,
-    .productSingle .rightSection .buttons .buy {
+    .SitecoreProductSingle .rightSection .buttons .cart,
+    .SitecoreProductSingle .rightSection .buttons .buy {
         width: var(--width100);
     }
 }

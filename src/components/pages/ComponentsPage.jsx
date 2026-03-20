@@ -240,7 +240,6 @@ import AlertOne, {
 } from "../shortcode/Alert/Alert";
 import ErrorPage from "../shortcode/404Pages/ErrorPage";
 import ComingSoon from "../shortcode/commingSoon/ComingSoon";
-import HistoricalFiction from "../shortcode/thumbnails/HistoricalFiction";
 import AboutInfo from "../shortcode/aboutInfo/AboutInfo";
 import AboutTestimonial from "../shortcode/aboutTestimonial/AboutTestimonial";
 import AboutFeatures from "../shortcode/aboutFeatures/AboutFeatures";
@@ -710,14 +709,6 @@ const ComponentsPage = () => {
           element={
             <>
               <ComingSoon />
-            </>
-          }
-        />
-        <Route
-          path="thumbnails"
-          element={
-            <>
-              <HistoricalFiction />
             </>
           }
         />

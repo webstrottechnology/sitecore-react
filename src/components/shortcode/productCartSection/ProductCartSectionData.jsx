@@ -33,13 +33,4 @@ export const Productcartdata = [
     price: "$23.00",
     oldPrice: "$25.50",
   },
-  {
-    id: 4,
-    img: product4,
-    category: "Historical Fiction",
-    title: "Best Beloved",
-    link: "/product-single",
-    price: "$23.00",
-    oldPrice: "$25.50",
-  },
 ];
