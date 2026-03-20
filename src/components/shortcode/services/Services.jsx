@@ -2,7 +2,7 @@ import React from "react";
 import "./Services.scss";
 import { services, servicesData, whyChooseUsData } from "./servicesData";
 import { Link } from "react-router-dom";
-import { FiArrowRight } from "react-icons/fi";
+import { LiaLongArrowAltRightSolid } from "react-icons/lia";
 import { FaMobileAlt } from "react-icons/fa";
 import mobileImg from "../../../assets/images/inner-pages/mobile-app-img.png"; // apna path set karein
 
@@ -29,8 +29,10 @@ const Services = () => {
           ))}
         </ul>
 
-        <div className="services_btn">
-          <a href="javascript:;">View All Services</a>
+        <div className="services_btn ">
+          <a href="javascript:;" className="mintGreenFilledBtn lg-btn">
+            View All Services
+          </a>
         </div>
       </div>
     </div>
@@ -54,7 +56,9 @@ const WhyChooseUs = () => {
             ))}
           </ul>
 
-          <a href="#:;">{whyChooseUsData.button.text}</a>
+          <a href="#:;" className="mintGreenFilledBtn lg-btn">
+            {whyChooseUsData.button.text}
+          </a>
         </div>
 
         <div className="data_right_content">
@@ -85,7 +89,7 @@ const ServicesGrid = () => {
               <p>{item.desc}</p>
 
               <div className="arrow">
-                <FiArrowRight />
+             <LiaLongArrowAltRightSolid />
               </div>
             </div>
           ))}

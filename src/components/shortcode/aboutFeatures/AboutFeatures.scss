@@ -19,9 +19,22 @@
 
     .row {
         row-gap: 30px;
+
+        .innerPageStayConnectedImg1 {
+            height: 100%;
+
+            img {
+                height: 100%;
+            }
+        }
+
         .innerPageStayConnectedContant {
 
             .commHeading1 {
+                display: flex;
+                flex-direction: column;
+                gap: 24px;
+
                 span {
                     color: var(--yellow-color);
                     font-size: var(--fs26);
@@ -36,7 +49,6 @@
 
                 p {
                     color: var(--dark-gray);
-                    padding: var(--p16) var(--p0);
                 }
             }
         }
@@ -78,7 +90,7 @@
         font-size: var(--fs22);
     }
 
-    .innerPageStayConnected .row .innerPageStayConnectedContant .commHeading1 span{
+    .innerPageStayConnected .row .innerPageStayConnectedContant .commHeading1 span {
         font-size: var(--fs18);
     }
 }

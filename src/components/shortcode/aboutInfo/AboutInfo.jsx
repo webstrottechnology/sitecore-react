@@ -46,7 +46,7 @@ const AboutInfo = () => {
                   <div className="weCareForLearnMoreBtn">
                     <a
                       href="#"
-                      className="btn medCommBtn borderRadiusRounded Temp-read-more"
+                      className="filledroundedbtn md-btn"
                     >
                       <span>{AboutUsData.buttonText}</span>
                     </a>

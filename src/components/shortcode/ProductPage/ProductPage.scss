@@ -307,6 +307,7 @@
               background-color: var(--temSiteCoreLightOrangeColor);
               border: 1px solid var(--temSiteCoreLightOrangeColor);
               font-size: var(--fs16);
+              padding: var(--p10) var(--p18);
               outline: none;
 
               &:focus {
@@ -321,9 +322,9 @@
             gap: 10px;
 
             button {
-              width: 40px;
-              height: 40px;
-              border: 1px solid var(--temSiteCoreLightOrangeColor);
+              width: 45px;
+              height: 45px;
+              border: none;
               background: var(--temSiteCoreLightOrangeColor);
               color: var(--gray-color);
               border-radius: var(--br6);
@@ -344,6 +345,11 @@
       .grid-list {
         .row {
           row-gap: 30px;
+
+          .list-view-filter-item {
+            padding-left: 2px;
+            padding-right: 2px;
+          }
         }
 
         &.grid-view-filter {
@@ -566,6 +572,26 @@
 }
 
 //  resposnive css start //
+
+
+@include responsive(lg-md) {
+  .ipProductGridWithSidebar .ipProductGridViewInner .ipProductGridRight .grid-list .bsFeaturedProductItem {
+    padding: var(--p14) var(--p10);
+  }
+
+  .ipProductGridWithSidebar .ipProductGridViewInner .ipProductGridRight .grid-list .bsFeaturedProductItem .bsFeaturedProductImg {
+    padding: var(--p10) var(--p10);
+  }
+}
+
+
+@include responsive(tablet-sm) {
+  .ipProductGridWithSidebar .ipProductGridViewInner .ipProductGridLeft .ipFilterPromoCard {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+}
 
 @include responsive(mobile) {
   .ipProductGridWithSidebar .ipProductGridViewInner .ipProductGridRight .grid-list.list-view-filter .list-view-filter-item .bsFeaturedProductItem {

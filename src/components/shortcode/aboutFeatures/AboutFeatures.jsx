@@ -7,7 +7,7 @@ import "./AboutFeatures.scss";
 const AboutFeatures = () => {
   return (
     <section className="innerPageStayConnected" id="innerPageStayConnected">
-      <div className="container">
+      <div className="container custom-container-lg">
         <div className="row">
           <div className="col-md-12 col-lg-6 col-xl-5">
             <div className="innerPageStayConnectedImg1 fadein">

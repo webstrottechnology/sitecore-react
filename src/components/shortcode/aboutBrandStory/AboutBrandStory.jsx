@@ -10,7 +10,7 @@ const AboutBrandStory = () => {
       className="innerPagesBrandStory"
       style={{ "--brandStoryImg": `url(${brandStoryImg})` }}
     >
-      <div className="container">
+      <div className="container custom-container-lg">
         <div className="location-wrapper">
           {/* LEFT CONTENT */}
           <div className="location-content">

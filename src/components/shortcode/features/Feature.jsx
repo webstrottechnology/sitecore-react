@@ -33,10 +33,7 @@ import sitecoreBg from "../../../assets/images/sitecoreBreadCrumb_bg_img.png";
 const Features = () => {
   return (
     <>
-      <AboutBannerBreadCrumb
-        title="Feature With Images"
-        bgImage={sitecoreBg}
-      />
+      <AboutBannerBreadCrumb title="Feature With Images" bgImage={sitecoreBg} />
       <section className="features-section">
         <div className="container">
           <div className="features-container">
@@ -544,6 +541,20 @@ const Features11 = () => {
               </div>
             ))}
           </div>
+
+          {/* ===== Anchor Link / Button ===== */}
+          <a
+            href={FeatureData11.button?.link || "#"}
+            className="mintGreenFilledBtn lg-btn"
+            target={FeatureData11.button?.target || "_self"}
+            rel={
+              FeatureData11.button?.target === "_blank"
+                ? "noopener noreferrer"
+                : ""
+            }
+          >
+            {FeatureData11.button?.text || "Read More"}
+          </a>
         </div>
       </div>
     </div>
@@ -572,7 +583,7 @@ const Features12 = () => {
 
             <p>{description}</p>
 
-            <a href="#" className="btn">
+            <a href="#" className="mintGreenFilledBtn lg-btn">
               {buttonText}
             </a>
 
@@ -654,7 +665,7 @@ const PortfolioDetailsSection = () => {
               <div className="viewWebsiteBtn d-flex">
                 <a
                   href={portfolioDetails.buttonLink}
-                  className="btn medCommBtn borderRadiusRounded fadein Temp-read-more medCommBtn"
+                  className="filledroundedbtn md-btn"
                 >
                   <span>{portfolioDetails.buttonText}</span>
                 </a>

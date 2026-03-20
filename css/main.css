@@ -160,6 +160,7 @@
   --p38: 38px;
   --p40: 40px;
   --p44: 44px;
+  --p46: 46px;
   --p48: 48px;
   --p50: 50px;
   --p56: 56px;
@@ -613,25 +614,26 @@ p {
     padding: 0 15px;
   }
 }
-.Temp-read-more {
+.filledroundedbtn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: var(--p10) var(--p40);
   border: 1px solid var(--orange-color);
-  border-radius: var(--br26);
-  color: var(--orange-color);
-  font-size: var(--fs18);
+  border-radius: var(--br50);
+  padding: var(--p10) var(--p40);
+  background-color: var(--orange-color);
+  color: var(--white-color);
   font-weight: var(--fw600);
   transition: all 0.5s;
   position: relative;
   overflow: hidden;
 }
-.Temp-read-more span {
+.filledroundedbtn span {
   position: relative;
   z-index: 1;
+  color: var(--white-color);
 }
-.Temp-read-more::before, .Temp-read-more::after {
+.filledroundedbtn::before, .filledroundedbtn::after {
   position: absolute;
   top: 50%;
   content: "";
@@ -640,34 +642,192 @@ p {
   background-color: var(--temSitCoreBlueColor);
   border-radius: 50%;
 }
-.Temp-read-more::before {
+.filledroundedbtn::before {
   left: -20px;
   transform: translate(-50%, -50%);
 }
-.Temp-read-more::after {
+.filledroundedbtn::after {
   right: -20px;
   transform: translate(50%, -50%);
 }
-.Temp-read-more.Temp-read-more-bg-color {
-  background-color: var(--orange-color);
-}
-.Temp-read-more.Temp-read-more-bg-color span {
-  color: var(--white-color);
-}
-.Temp-read-more:hover {
-  color: var(--white-color);
+.filledroundedbtn:hover {
+  color: var(--white-color) !important;
   border: 1px solid var(--temSitCoreBlueColor);
 }
-.Temp-read-more:hover::before {
+.filledroundedbtn:hover::before {
   animation: criss-cross-left 0.8s both;
   animation-direction: alternate;
 }
-.Temp-read-more:hover::after {
+.filledroundedbtn:hover::after {
+  animation: criss-cross-right 0.8s both;
+  animation-direction: alternate;
+}
+.filledroundedbtn.xl-btn {
+  padding: var(--p18) var(--p46);
+  font-size: var(--fs20);
+}
+.filledroundedbtn.lg-btn {
+  padding: var(--p16) var(--p38);
+  font-size: var(--fs18);
+}
+.filledroundedbtn.md-btn {
+  padding: var(--p14) var(--p34);
+  font-size: var(--fs16);
+}
+.filledroundedbtn.sm-btn {
+  padding: var(--p12) var(--p32);
+  font-size: var(--fs14);
+}
+.filledroundedbtn.xs-btn {
+  padding: var(--p10) var(--p24);
+  font-size: var(--fs12);
+}
+
+.outlineroundedbtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--p10) var(--p40);
+  border: 1px solid var(--orange-color);
+  border-radius: var(--br50);
+  color: var(--orange-color);
+  font-size: var(--fs18);
+  font-weight: var(--fw600);
+  transition: all 0.5s;
+  position: relative;
+  overflow: hidden;
+}
+.outlineroundedbtn span {
+  position: relative;
+  z-index: 1;
+}
+.outlineroundedbtn::before, .outlineroundedbtn::after {
+  position: absolute;
+  top: 50%;
+  content: "";
+  width: 20px;
+  height: 20px;
+  background-color: var(--temSitCoreBlueColor);
+  border-radius: 50%;
+}
+.outlineroundedbtn::before {
+  left: -20px;
+  transform: translate(-50%, -50%);
+}
+.outlineroundedbtn::after {
+  right: -20px;
+  transform: translate(50%, -50%);
+}
+.outlineroundedbtn.xl-btn {
+  padding: var(--p18) var(--p46);
+  font-size: var(--fs20);
+}
+.outlineroundedbtn.lg-btn {
+  padding: var(--p16) var(--p38);
+  font-size: var(--fs18);
+}
+.outlineroundedbtn.md-btn {
+  padding: var(--p14) var(--p34);
+  font-size: var(--fs16);
+}
+.outlineroundedbtn.sm-btn {
+  padding: var(--p12) var(--p32);
+  font-size: var(--fs14);
+}
+.outlineroundedbtn.xs-btn {
+  padding: var(--p10) var(--p24);
+  font-size: var(--fs12);
+}
+.outlineroundedbtn:hover {
+  color: var(--white-color);
+  border: 1px solid var(--temSitCoreBlueColor);
+}
+.outlineroundedbtn:hover::before {
+  animation: criss-cross-left 0.8s both;
+  animation-direction: alternate;
+}
+.outlineroundedbtn:hover::after {
   animation: criss-cross-right 0.8s both;
   animation-direction: alternate;
 }
 
-.Temp-add-to-cart {
+.outlinesqaurebtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--p10) var(--p40);
+  border: 1px solid var(--temp1BlueColor);
+  border-radius: var(--br4);
+  color: var(--white-color);
+  font-size: var(--fs16);
+  font-weight: var(--fw600);
+  transition: all 0.5s;
+  position: relative;
+  overflow: hidden;
+}
+.outlinesqaurebtn span {
+  position: relative;
+  z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--temp1BlueColor);
+}
+.outlinesqaurebtn::before, .outlinesqaurebtn::after {
+  position: absolute;
+  top: 50%;
+  content: "";
+  width: 20px;
+  height: 20px;
+  background-color: var(--temp1BlueColor);
+  border-radius: 50%;
+}
+.outlinesqaurebtn::before {
+  left: -20px;
+  transform: translate(-50%, -50%);
+}
+.outlinesqaurebtn::after {
+  right: -20px;
+  transform: translate(50%, -50%);
+}
+.outlinesqaurebtn:hover {
+  background-color: var(--temp1BlueColor);
+  color: var(--white-color);
+  border: 1px solid var(--temp1BlueColor);
+}
+.outlinesqaurebtn:hover span {
+  color: var(--white-color);
+}
+.outlinesqaurebtn:hover::before {
+  animation: criss-cross-left 0.8s both;
+  animation-direction: alternate;
+}
+.outlinesqaurebtn:hover::after {
+  animation: criss-cross-right 0.8s both;
+  animation-direction: alternate;
+}
+.outlinesqaurebtn.xl-btn {
+  padding: var(--p18) var(--p46);
+  font-size: var(--fs20);
+}
+.outlinesqaurebtn.lg-btn {
+  padding: var(--p16) var(--p38);
+  font-size: var(--fs18);
+}
+.outlinesqaurebtn.md-btn {
+  padding: var(--p14) var(--p34);
+  font-size: var(--fs16);
+}
+.outlinesqaurebtn.sm-btn {
+  padding: var(--p12) var(--p32);
+  font-size: var(--fs14);
+}
+.outlinesqaurebtn.xs-btn {
+  padding: var(--p10) var(--p24);
+  font-size: var(--fs12);
+}
+
+.filledsqaurebtn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -682,14 +842,14 @@ p {
   position: relative;
   overflow: hidden;
 }
-.Temp-add-to-cart span {
+.filledsqaurebtn span {
   position: relative;
   z-index: 1;
   display: inline-flex;
   align-items: center;
   gap: 6px;
 }
-.Temp-add-to-cart::before, .Temp-add-to-cart::after {
+.filledsqaurebtn::before, .filledsqaurebtn::after {
   position: absolute;
   top: 50%;
   content: "";
@@ -698,32 +858,242 @@ p {
   background-color: var(--temp1BlueColor);
   border-radius: 50%;
 }
-.Temp-add-to-cart::before {
+.filledsqaurebtn::before {
   left: -20px;
   transform: translate(-50%, -50%);
 }
-.Temp-add-to-cart::after {
+.filledsqaurebtn::after {
   right: -20px;
   transform: translate(50%, -50%);
 }
-.Temp-add-to-cart.Temp-read-more-bg-color {
-  background-color: var(--orange-color);
-}
-.Temp-add-to-cart.Temp-read-more-bg-color span {
-  color: var(--white-color);
-}
-.Temp-add-to-cart:hover {
+.filledsqaurebtn:hover {
   background-color: var(--temp1BlueColor);
   color: var(--white-color);
   border: 1px solid var(--temp1BlueColor);
 }
-.Temp-add-to-cart:hover::before {
+.filledsqaurebtn:hover::before {
   animation: criss-cross-left 0.8s both;
   animation-direction: alternate;
 }
-.Temp-add-to-cart:hover::after {
+.filledsqaurebtn:hover::after {
   animation: criss-cross-right 0.8s both;
   animation-direction: alternate;
+}
+.filledsqaurebtn.xl-btn {
+  padding: var(--p18) var(--p46);
+  font-size: var(--fs20);
+}
+.filledsqaurebtn.lg-btn {
+  padding: var(--p16) var(--p38);
+  font-size: var(--fs18);
+}
+.filledsqaurebtn.md-btn {
+  padding: var(--p14) var(--p34);
+  font-size: var(--fs16);
+}
+.filledsqaurebtn.sm-btn {
+  padding: var(--p12) var(--p32);
+  font-size: var(--fs14);
+}
+.filledsqaurebtn.xs-btn {
+  padding: var(--p10) var(--p24);
+  font-size: var(--fs12);
+}
+
+.anchorTextBtn {
+  font-size: var(--fs18);
+  font-weight: var(--fw500);
+  position: relative;
+  transition: color 0.3s ease;
+}
+.anchorTextBtn.text-gradient {
+  background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-weight: var(--fw600);
+}
+.anchorTextBtn.text-gradient .gradient-line {
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+.anchorTextBtn.text-gradient:hover .gradient-line {
+  transform: scaleX(1);
+}
+.anchorTextBtn.text-undeline {
+  color: var(--black-color);
+  position: relative;
+  font-weight: var(--fw400);
+}
+.anchorTextBtn.text-undeline::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--temp1BlueColor);
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+.anchorTextBtn.text-undeline:hover::after {
+  transform: scaleX(1);
+}
+.anchorTextBtn.text-thin-underline {
+  color: var(--temSitCoreBlueColor);
+  position: relative;
+}
+.anchorTextBtn.text-thin-underline::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: var(--temSitCoreBlueColor);
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+.anchorTextBtn.text-thin-underline:hover::after {
+  transform: scaleX(1);
+}
+
+.GradientBtnAnchor {
+  display: inline-block;
+  padding: var(--p12) var(--p24);
+  color: var(--white-color);
+  font-weight: var(--fw600);
+  transition: transform 0.3s ease;
+}
+.GradientBtnAnchor:hover {
+  transform: translateY(-3px);
+}
+.GradientBtnAnchor.gradient1 {
+  background: linear-gradient(45deg, #ff6b6b, #feca57);
+}
+.GradientBtnAnchor.gradient2 {
+  background: linear-gradient(45deg, #48dbfb, #1dd1a1);
+}
+.GradientBtnAnchor.gradient3 {
+  background: linear-gradient(45deg, #f368e0, #ff9f43);
+}
+.GradientBtnAnchor.gradient4 {
+  background: linear-gradient(45deg, #0abde3, #10ac84);
+}
+.GradientBtnAnchor.gradient5 {
+  background: linear-gradient(45deg, #ee5253, #f93e6c);
+}
+.GradientBtnAnchor.event-btn {
+  display: inline-block;
+  padding: var(--p12) var(--p24);
+  color: var(--white-color);
+  font-weight: var(--fw600);
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+.GradientBtnAnchor.event-btn:hover {
+  transform: translateY(-3px);
+}
+
+.mintGreenOutlineBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--p12) var(--p40);
+  border: 1px solid var(--green-color02);
+  background-color: transparent;
+  border-radius: var(--br50);
+  font-size: var(--fs18);
+  font-weight: var(--fw600);
+  color: var(--green-color02);
+  transition: all 0.5s;
+  position: relative;
+  overflow: hidden;
+}
+.mintGreenOutlineBtn:hover {
+  background-color: var(--green-color02);
+  border-color: var(--green-color02);
+  color: var(--white-color);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(0, 128, 0, 0.2);
+}
+.mintGreenOutlineBtn:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(0, 128, 0, 0.2);
+}
+.mintGreenOutlineBtn.xl-btn {
+  padding: var(--p18) var(--p40);
+  font-size: var(--fs20);
+}
+.mintGreenOutlineBtn.lg-btn {
+  padding: var(--p16) var(--p36);
+  font-size: var(--fs18);
+}
+.mintGreenOutlineBtn.md-btn {
+  padding: var(--p14) var(--p30);
+  font-size: var(--fs16);
+}
+.mintGreenOutlineBtn.sm-btn {
+  padding: var(--p12) var(--p28);
+  font-size: var(--fs14);
+}
+.mintGreenOutlineBtn.xs-btn {
+  padding: var(--p10) var(--p22);
+  font-size: var(--fs12);
+}
+
+.mintGreenFilledBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--p12) var(--p40);
+  border: 1px solid var(--green-color02);
+  background-color: var(--green-color02);
+  border-radius: var(--br50);
+  font-size: var(--fs18);
+  font-weight: var(--fw600);
+  color: var(--black-color);
+  transition: all 0.5s;
+  position: relative;
+  overflow: hidden;
+}
+.mintGreenFilledBtn:hover {
+  background-color: transparent;
+  border-color: var(--green-color02);
+  color: var(--green-color02);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(0, 128, 0, 0.2);
+}
+.mintGreenFilledBtn:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(0, 128, 0, 0.2);
+}
+.mintGreenFilledBtn.xl-btn {
+  padding: var(--p18) var(--p46);
+  font-size: var(--fs20);
+}
+.mintGreenFilledBtn.lg-btn {
+  padding: var(--p16) var(--p38);
+  font-size: var(--fs18);
+}
+.mintGreenFilledBtn.md-btn {
+  padding: var(--p14) var(--p34);
+  font-size: var(--fs16);
+}
+.mintGreenFilledBtn.sm-btn {
+  padding: var(--p12) var(--p32);
+  font-size: var(--fs14);
+}
+.mintGreenFilledBtn.xs-btn {
+  padding: var(--p10) var(--p24);
+  font-size: var(--fs12);
 }
 
 @keyframes criss-cross-left {

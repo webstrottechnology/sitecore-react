@@ -240,7 +240,6 @@ import AlertOne, {
 } from "../shortcode/Alert/Alert";
 import ErrorPage from "../shortcode/404Pages/ErrorPage";
 import ComingSoon from "../shortcode/commingSoon/ComingSoon";
-import HistoricalFiction from "../shortcode/thumbnails/HistoricalFiction";
 import AboutInfo from "../shortcode/aboutInfo/AboutInfo";
 import AboutTestimonial from "../shortcode/aboutTestimonial/AboutTestimonial";
 import AboutFeatures from "../shortcode/aboutFeatures/AboutFeatures";
@@ -261,6 +260,7 @@ import ButtonComponent1, {
   ButtonComponent5,
   ButtonComponent6,
   ButtonComponent7,
+  ButtonComponent8,
 } from "../shortcode/button/Button";
 
 const ComponentsPage = () => {
@@ -713,14 +713,6 @@ const ComponentsPage = () => {
           }
         />
         <Route
-          path="thumbnails"
-          element={
-            <>
-              <HistoricalFiction />
-            </>
-          }
-        />
-        <Route
           path="pagination"
           element={
             <>
@@ -798,7 +790,8 @@ const ComponentsPage = () => {
           path="button"
           element={
             <>
-             <ButtonComponent7 />
+              <ButtonComponent7 />
+              <ButtonComponent8 />
               <ButtonComponent1 />
               <ButtonComponent2 />
               <ButtonComponent3 />

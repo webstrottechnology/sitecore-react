@@ -40,7 +40,9 @@
         background: rgba(0, 0, 0, 0.45);
         display: flex;
         flex-direction: column;
+        justify-content: center;
         align-items: center;
+        gap: 45px;
         text-align: center;
         color: var(--white-color);
         padding-top: var(--p80);
@@ -192,9 +194,7 @@
 }
 
 @include responsive(mobile-sm) {
-    .hero-container .hero-content .subtitle {
-        font-size: var(--fs16);
-    }
+ 
 
     .hero-container .hero-content h1 {
         font-size: var(--fs26);
@@ -202,21 +202,12 @@
 }
 
 @include responsive(xs) {
-    .hero-container .hero-content .subtitle {
-        font-size: var(--fs14);
-    }
 
     .hero-container .hero-content h1 {
-        font-size: var(--fs22);
+        font-size: var(--fs24);
     }
 }
 
 @include responsive(xxs) {
-    .hero-container .hero-content .subtitle {
-        font-size: var(--fs12);
-    }
 
-    .hero-container .hero-content h1 {
-        font-size: var(--fs18);
-    }
 }

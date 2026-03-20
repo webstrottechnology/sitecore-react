@@ -14,7 +14,7 @@
 
 .innerPagesBrandStory {
     width: var(--width100);
-    padding: var(--p60) 0;
+    padding: var(--p80) var(--p0);
     background-color: #fcf0e3;
     position: relative;
 
@@ -99,7 +99,7 @@
                             .custom-arrow {
                                 width: 22px;
                                 height: 22px;
-                                background: url("../../../assets/images/inner-pages/icons/brand-story-right-arrow.png") no-repeat center;
+                                background: url("../../../assets/images/brand-story-right-arrow.png") no-repeat center;
                                 background-size: contain;
                                 transition: transform 0.3s ease;
                             }

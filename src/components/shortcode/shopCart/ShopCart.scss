@@ -9,8 +9,12 @@
 --------------------------------------- */
 @use "../../../styles/mixins/mixins" as *;
 
-.shopCart {
+.SiteCoreShopCart {
     padding: var(--p80) var(--p0);
+
+    .row {
+        row-gap: 20px;
+    }
 
     /* SHIPPING BAR */
 
@@ -142,6 +146,7 @@
         .couponCode {
             display: flex;
             gap: 20px;
+            flex-wrap: wrap;
             margin-top: var(--m26);
 
             input {
@@ -154,7 +159,7 @@
                 font-size: var(--fs20);
             }
 
-            .Temp-read-more {
+            .outlineroundedbtn {
                 background: var(--orange-color);
                 color: var(--white-color);
                 border: none;
@@ -174,6 +179,7 @@
     /* RIGHT SIDE */
 
     .checkoutAside {
+        height: 100%;
         background: rgb(251 133 0 / 16%);
         padding: var(--p30);
         border-radius: var(--br6);
@@ -255,49 +261,53 @@
     }
 }
 
-@include responsive(laptop) {
-    .shopCart .checkoutAside {
-        margin-top: var(--m40);
-    }
-}
+
 
 @include responsive(tablet-sm) {
-    .shopCart .cartTbl .couponCode {
+    .SiteCoreShopCart .cartTbl .couponCode {
         flex-direction: column;
     }
 
-    .shopCart .cartTbl .couponCode input {
+    .SiteCoreShopCart .cartTbl .couponCode input {
         width: 100%;
     }
 }
 
 @include responsive(mobile) {
-    .shopCart .Temp-read-more {
+    .SiteCoreShopCart .outlineroundedbtn {
         padding: var(--p10) var(--p20);
     }
 
-    .shopCart .cartTbl .couponCode input {
+    .SiteCoreShopCart .cartTbl .couponCode input {
         font-size: var(--fs16);
     }
 
-    .shopCart .checkoutAside h4 {
+    .SiteCoreShopCart .checkoutAside h4 {
         font-size: var(--fs26);
     }
 
 }
 
 @include responsive(mobile-sm) {
-    .shopCart .checkoutAside h4 {
+    .SiteCoreShopCart .checkoutAside h4 {
         font-size: var(--fs22);
     }
 
-    .shopCart .cartTbl .couponCode .Temp-read-more,
-    .shopCart .cartTbl .couponCode input {
+    .SiteCoreShopCart .cartTbl .couponCode .Temp-read-more,
+    .SiteCoreShopCart .cartTbl .couponCode input {
         height: 40px;
         font-size: var(--fs14);
     }
 
-    .shopCart .checkoutAside .weCareForLearnMoreBtn .checkoutBtn {
+    .SiteCoreShopCart .checkoutAside .weCareForLearnMoreBtn .checkoutBtn {
         font-size: var(--fs14);
+    }
+
+    .SiteCoreShopCart .checkoutAside {
+        padding: var(--p30) var(--p14);
+    }
+
+    .SiteCoreShopCart .checkoutAside .weCareForLearnMoreBtn .filledroundedbtn {
+        padding: var(--p14) var(--p20);
     }
 }

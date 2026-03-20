@@ -1,9 +1,40 @@
+/*-----------------------------------
+
+
+    Template Name: Foxbat HTML Template
+    Version: 1.0.0
+    Author: Webstrot
+    Copyright: © 2026-27
+
+--------------------------------------- */
+
+
+@use "../../../styles/mixins/mixins" as *;
+
 .ProductCartSection {
-    .ProductCartSection-title h4 {
-        color: var(--temp1BlueColor);
-        font-size: var(--fs26);
-        font-weight: var(--fw700);
-        text-align: center;
+    width: 100%;
+    position: relative;
+    padding: var(--p50) var(--p0);
+
+    .row {
+        row-gap: 30px;
+
+        .list-view-filter-item {
+            padding-left: 2px;
+            padding-right: 2px;
+        }
+    }
+
+
+    .ProductCartSection-title {
+        margin-bottom: var(--m30);
+
+        h4 {
+            color: var(--temp1BlueColor);
+            font-size: var(--fs26);
+            font-weight: var(--fw700);
+            text-align: center;
+        }
     }
 
     .bsFeaturedProductItem {
@@ -180,5 +211,33 @@
                 }
             }
         }
+    }
+}
+
+/* ======================= */
+/* MOBILE RESPONSIVE */
+/* ======================= */
+
+
+.ProductCartSection .bsFeaturedProductItem {
+    padding: var(--p20) var(--p20);
+    background: var(--white-color);
+    border-radius: var(--br8);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+    position: relative;
+}
+
+
+
+@include responsive(lg-md) {
+    .ProductCartSection .bsFeaturedProductItem {
+        padding: var(--p14) var(--p10);
+    }
+
+    .ProductCartSection .bsFeaturedProductItem .bsFeaturedProductImg {
+        padding: var(--p10) var(--p10);
     }
 }
