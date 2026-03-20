@@ -4,7 +4,6 @@ import slider2 from "../../../assets/images/blog-img/blog_image_page_slider2.png
 import slider3 from "../../../assets/images/blog-img/blog_image_page_slider3.png";
 
 export const blogArticles = [
-
   /* IMAGE BLOG */
   {
     id: 1,
@@ -14,7 +13,7 @@ export const blogArticles = [
     month: "Mar",
 
     title: "Navigating Change: Strategies for Corporate Resilience in2026",
-    desc: "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
+    desc: "Modern development practices emphasize clean code architecture, version control systems like Git, and frameworks such as React, Angular, or Vue.js that streamline development and enhance performance.",
 
     author: "admin",
     comments: 2,
@@ -32,7 +31,7 @@ export const blogArticles = [
     month: "Mar",
 
     title: "The Power of Collaboration: Fostering a Culture of Teamwork",
-    desc: "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
+    desc: "Whether building a simple blog or a complex e-commerce platform, effective website development ensures your online presence is fast, secure, accessible, and tailored to meet both user needs and business goals.",
 
     author: "admin",
     comments: 2,
@@ -51,7 +50,7 @@ export const blogArticles = [
 
     title:
       "Employee Wellness: Prioritizing Health and Happiness in the Workplace - Vimeo Video",
-    desc: "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
+    desc: "Developers write code using languages like HTML, CSS, and JavaScript to create everything from the layout you see to the buttons you click. Whether you're starting a blog, opening an online store.",
 
     author: "admin",
     comments: 2,
@@ -71,7 +70,7 @@ export const blogArticles = [
 
     title:
       "Corporate Social Responsibility: Making an Impact Beyond Business - Audio",
-    desc: "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
+    desc: "In today's digital landscape, a well-developed website serves as the cornerstone of any successful business presence. Website development goes beyond just coding—it's about creating a digital storefront that engages visitors.",
 
     author: "admin",
     comments: 2,
@@ -90,7 +89,7 @@ export const blogArticles = [
 
     title:
       "Embracing Diversity and Inclusion: Building a Better Workplace - Slider",
-    desc: "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
+    desc: " On the back end, server-side languages such as PHP, Python, or Node.js work with databases to handle data processing, user authentication, and content management. Modern development practices emphasize clean code architecture.",
 
     author: "admin",
     comments: 2,

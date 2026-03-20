@@ -8,43 +8,37 @@ export const buttonData = [
 ];
 
 export const gradientButtonData = [
-  { id: 1, text: 'Gradient Button', className: 'gradient1 btn5', link: '#' },
-  { id: 2, text: 'Gradient Button', className: 'gradient2 btn5', link: '#' },
-  { id: 3, text: 'Gradient Button', className: 'gradient3 btn5', link: '#' },
-  { id: 4, text: 'Gradient Button', className: 'gradient4 btn5', link: '#' },
-  { id: 5, text: 'Gradient Button', className: 'gradient5 btn5', link: '#' },
-  { id: 6, text: 'Gradient Button', className: 'event-btn', link: '#' },
+  { id: 1, text: 'Gradient Button', className: 'gradient1 GradientBtnAnchor', link: '#' },
+  { id: 2, text: 'Gradient Button', className: 'gradient2 GradientBtnAnchor', link: '#' },
+  { id: 3, text: 'Gradient Button', className: 'gradient3 GradientBtnAnchor', link: '#' },
+  { id: 4, text: 'Gradient Button', className: 'gradient4 GradientBtnAnchor', link: '#' },
+  { id: 5, text: 'Gradient Button', className: 'gradient5 GradientBtnAnchor', link: '#' },
 ];
 
 // Data array for text links
+
 export const textLinksData = [
   {
     id: 1,
     text: 'Only Gradient',
-    className: 'text-gradient',
-    link: '#',
-    hasLine: true, // indicates the gradient-line span should be added
+    link: '#', // Replace with actual URL or route path
+    className: 'text-gradient anchorTextBtn',
+    hasLine: true,
   },
   {
     id: 2,
     text: 'with underline',
-    className: 'text-undeline', // keep as per HTML
     link: '#',
+    className: 'text-undeline anchorTextBtn', // Keeping original spelling (maybe intentional)
     hasLine: false,
   },
   {
     id: 3,
     text: 'thin underline',
-    className: 'text-thin-underline',
     link: '#',
+    className: 'text-thin-underline anchorTextBtn',
     hasLine: false,
   },
 ];
 
-// Button data array – you can map over this to render multiple buttons
-export const buttonData2 = [
-  { id: 1, text: "Let's Talk", link: "/contact-us", variant: "filled" },
-  { id: 2, text: "Learn More", link: "/about", variant: "outline" },
-  { id: 3, text: "Get Started", link: "/signup", variant: "filled" },
-  { id: 4, text: "View Details", link: "/services", variant: "outline" },
-];
+

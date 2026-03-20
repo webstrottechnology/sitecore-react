@@ -1347,42 +1347,31 @@
 
             .corprate-title {
                 h4 {
+                    max-width: 550px;
+                    font-size: var(--fs20);
+                    font-weight: var(--fw600);
+                    letter-spacing: 3px;
+                    text-transform: uppercase;
                     color: var(--green-color02);
-                    font-size: var(--fs26);
-                    font-style: normal;
                     margin-bottom: var(--m10);
                 }
 
                 h2 {
-                    max-width: 550px !important;
                     color: var(--black-color);
                     font-size: var(--fs40);
-                    font-style: normal;
                     padding: var(--p20) var(--p0);
                 }
 
                 p {
-                    max-width: 620px;
+                    max-width: 600px;
+                    color: var(--black-color);
                     margin-top: var(--m16);
                 }
+
             }
 
-            .corprate-btn {
-                display: inline-block;
-                margin-top: var(--m30);
-                padding: var(--p12) var(--p28);
-                background: var(--green-color02);
-                color: var(--white-color);
-                border-radius: var(--br6);
-                text-decoration: none;
-                transition: 0.3s;
-                border: 1px solid transparent;
-
-                &:hover {
-                    background: var(--white-color);
-                    color: var(--green-color02);
-                    border-color: var(--green-color02);
-                }
+            .mintGreenFilledBtn {
+                margin-top: var(--m26);
             }
         }
 
@@ -1425,7 +1414,8 @@
                 }
 
                 p {
-                    font-size: var(--fs16);
+                    font-size: var(--fs18);
+                    font-weight: var(--fw600);
                     color: var(--white-color);
                 }
             }

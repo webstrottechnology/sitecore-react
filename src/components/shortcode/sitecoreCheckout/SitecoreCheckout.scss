@@ -13,7 +13,7 @@
 
 /* ---------------- CHECKOUT CSS ---------------- */
 
-.checkout {
+.checkoutPageSection {
     padding: var(--p80) var(--p0);
 
     .checkoutInner {
@@ -55,6 +55,12 @@
                         border: none;
                         border-radius: var(--br6);
                         height: 50px;
+                        outline: none;
+                        box-shadow: none;
+
+                        &:focus {
+                            outline: none;
+                        }
                     }
 
                     textarea.form-control {
@@ -72,6 +78,12 @@
 
                         input {
                             border: 1px solid var(--orange-color);
+                            outline: none;
+                            box-shadow: none;
+
+                            &:focus {
+                                outline: none;
+                            }
                         }
 
                         label {
@@ -294,33 +306,47 @@
 }
 
 @include responsive(laptop) {
-    .checkout .checkoutInner .checkoutAside .asideHeading h4,
-    .checkout .checkoutInner .commentBox .commentBoxInner .commentBoxHeading h4 {
+
+    .checkoutPageSection .checkoutInner .checkoutAside .asideHeading h4,
+    .checkoutPageSection .checkoutInner .commentBox .commentBoxInner .commentBoxHeading h4 {
         font-size: var(--fs24);
     }
 
-    .checkout .checkoutInner .commentBox .commentBoxInner{
+    .checkoutPageSection .checkoutInner .commentBox .commentBoxInner {
         padding: var(--p20);
     }
 }
 
 @include responsive(tablet-sm) {
-.checkout .checkoutInner .checkoutAside .asideHeading h4,
-.checkout .checkoutInner .commentBox .commentBoxInner .commentBoxHeading h4 {
+
+    .checkoutPageSection .checkoutInner .checkoutAside .asideHeading h4,
+    .checkoutPageSection .checkoutInner .commentBox .commentBoxInner .commentBoxHeading h4 {
         font-size: var(--fs22);
     }
 }
 
 @include responsive(mobile) {
 
-    .checkout .checkoutInner .checkoutAside .paymentMethod .paymentformGroup .paymentText .title {
+    .checkoutPageSection .checkoutInner .checkoutAside .paymentMethod .paymentformGroup .paymentText .title {
         font-size: var(--fs16);
+    }
+
+    .checkoutPageSection .checkoutInner .checkoutAside .productBox .asideProductItem {
+        padding: var(--p24);
+    }
+
+    .checkoutPageSection .checkoutInner .checkoutAside .paymentMethod {
+        padding: var(--p24);
     }
 }
 
 @include responsive(mobile-sm) {
-    .checkout .checkoutInner .commentBox .commentBoxInner .checkout-btn{
+    .checkoutPageSection .checkoutInner .commentBox .commentBoxInner .checkout-btn {
         height: 40px;
         font-size: var(--fs14);
+    }
+
+    .checkoutPageSection .checkoutInner .checkoutAside .productBox .asideProductItem .asideProdtBx {
+        grid-template-columns: 1fr 28px;
     }
 }

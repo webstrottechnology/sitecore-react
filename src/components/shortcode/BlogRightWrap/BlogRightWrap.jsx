@@ -180,10 +180,7 @@ const BlogRightAsideBox = () => {
                   </div>
 
                   <div className="latestNewBtn">
-                    <Link
-                      to={blog.link}
-                      className="Temp-read-more Temp-read-more-bg-color"
-                    >
+                    <Link to={blog.link} className="filledroundedbtn md-btn">
                       <span>Read More</span>
                     </Link>
                   </div>

@@ -15,7 +15,7 @@ const AboutVideo = () => {
         style={{ backgroundImage: `url(${videoData.bgImage})` }}
       >
         <div className="innerpagesVideoInner">
-          <div className="container">
+          <div className="container custom-container-lg">
             <h2 className="d-none">video</h2>
 
             <div className="innerpagesVideoPlay fadein">

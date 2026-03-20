@@ -53,7 +53,7 @@ const ProductInfo = () => {
                     <div className="custTblLeft">
                       <GoDotFill />
                       {item.title}
-                      </div>
+                    </div>
 
                     <div className="custTblRight">
                       <span>:</span> {item.value}
@@ -182,10 +182,7 @@ const ProductInfo = () => {
                   </div>
                 </div>
 
-                <a 
-                  href="#"
-                  className="prouctInfo-btn medCommBtn borderRadiusRounded Temp-read-more mt-3"
-                >
+                <a href="#" className="prouctInfo-btn filledroundedbtn md-btn mt-3">
                   <span>SUBMIT</span>
                 </a>
               </form>

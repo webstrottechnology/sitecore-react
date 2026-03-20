@@ -337,7 +337,7 @@ export const FeatureData11 = {
   heading: "We turn information into actionable",
 
   description:
-    "It look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search.",
+    "In today's digital landscape, a well-developed website serves as the cornerstone of any successful business presence. Website development goes beyond just coding—it's about creating a digital storefront that engages visitors, builds trust, and drives conversions. From intuitive navigation and fast loading speeds to mobile responsiveness and search engine optimization, every aspect of development contributes to how potential customers perceive and interact with your brand.Website development is the technical implementation of web design concepts into functional, interactive experiences. It begins with front-end technologies like HTML, CSS, and JavaScript that structure content, apply styling, and enable dynamic behavior in the browser. ",
 
   services: [
     {
@@ -363,7 +363,12 @@ export const FeatureData11 = {
     {
       id: 2,
       title: "Financial Services",
-      percentage: 85,
+      percentage: 75,
+    },
+    {
+      id: 3,
+      title: "Financial Services",
+      percentage: 90,
     },
   ],
 
@@ -382,7 +387,7 @@ export const FeatureData12 = {
   highlighted: "with your audience",
 
   description:
-    "It look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text.",
+    "It transforms creative concepts into functional digital experiences through a combination of coding, design integration, and technical problem-solving. Whether building a simple blog or a complex e-commerce platform, effective website development ensures your online presence is fast, secure, accessible, and tailored to meet both user needs and business goals. ",
 
   buttonText: "Get In Touch",
 

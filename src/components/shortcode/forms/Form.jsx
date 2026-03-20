@@ -699,7 +699,9 @@ const FormEleven = () => {
                   </span>
                 </div>
 
-                <button className="main_btn">LOG IN</button>
+                <button className="filledroundedbtn md-btn ">
+                  <span>LOG IN</span>
+                </button>
               </>
             )}
 
@@ -855,7 +857,9 @@ const FormTwelve = () => {
                 <textarea rows="5"></textarea>
               </div>
 
-              <button className="btn">SEND MESSAGE</button>
+              <button className=" filledroundedbtn md-btn">
+                <span>SEND MESSAGE</span>
+              </button>
             </form>
           </div>
         </div>
@@ -1028,7 +1032,7 @@ const FormFourteen = () => {
               </div>
             </div>
 
-            <button type="submit" className="btn medCommBtn Temp-read-more">
+            <button type="submit" className="filledroundedbtn md-btn">
               <span>Send</span>
             </button>
           </form>

@@ -26,7 +26,7 @@ const ShopCart = () => {
   );
 
   return (
-    <section className="shopCart">
+    <section className="SiteCoreShopCart">
       <div className="container custom-container-lg">
         <div className="row">
           {/* LEFT SIDE */}
@@ -108,11 +108,8 @@ const ShopCart = () => {
               <div className="couponCode">
                 <input placeholder="Coupan Code" />
 
-                <a
-                  href="#"
-                  className="medCommBtn borderRadiusRounded Temp-read-more"
-                >
-                  APPLY COUPN
+                <a href="#" className=" filledroundedbtn">
+                  <span>APPLY COUPN</span>
                 </a>
               </div>
             </div>
@@ -157,11 +154,8 @@ const ShopCart = () => {
                 <span>${subtotal}.00</span>
               </div>
               <div className="weCareForLearnMoreBtn">
-                <a
-                  href="#"
-                  className="checkoutBtn medCommBtn borderRadiusRounded Temp-read-more"
-                >
-                  PROCEED TO CHECKOUT
+                <a href="#" className="filledroundedbtn">
+                  <span>PROCEED TO CHECKOUT</span>
                 </a>
               </div>
             </div>

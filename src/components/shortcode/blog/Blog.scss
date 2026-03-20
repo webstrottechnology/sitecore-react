@@ -15,25 +15,29 @@
 
 .Sitecorehome_blog_wrapper {
     width: 100%;
-    padding: var(--p60) var(--p0);
+    padding: var(--p80) var(--p0);
     background: var(--bg-light);
 
     .blog__container {
         width: 100%;
 
         .blog__top {
-            margin-bottom: var(--m40);
+            margin-bottom: var(--m60);
+
 
             .blog__label {
                 color: var(--green-color02);
-                letter-spacing: 4px;
+                letter-spacing: 3px;
                 font-size: var(--fs26);
                 display: block;
                 margin-bottom: var(--m10);
+                text-align: center;
             }
 
             .blog__heading {
                 font-size: var(--fs40);
+                color: var(--black-color);
+                text-align: center;
             }
         }
 
@@ -128,8 +132,9 @@
                             background: var(--green-color02);
                             border: none;
                             color: var(--white-color);
-                            padding: var(--p6) var(--p12);
+                            padding: var(--p6) var(--p14);
                             margin-left: var(--m8);
+                            border-radius: var(--br50);
                             cursor: pointer;
                             transition: background 0.3s;
 
@@ -696,6 +701,6 @@
         padding: 20px 20px;
     }
 
-    
+
 
 }

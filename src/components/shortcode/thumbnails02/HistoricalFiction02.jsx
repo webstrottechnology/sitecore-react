@@ -23,7 +23,7 @@ const HistoricalFiction02 = () => {
   const dec = () => qty > 1 && setQty((prev) => prev - 1);
 
   return (
-    <section className="productSingle">
+    <section className="SitecoreProductSingle">
       <div className="container custom-container-lg">
         <div className="wrapper">
           {/* LEFT IMAGE */}
@@ -145,8 +145,12 @@ const HistoricalFiction02 = () => {
 
                 {/* BUTTONS */}
                 <div className="buttons">
-                  <button className="cart">Add To cart</button>
-                  <button className="buy">Buy Now</button>
+                  <button className="cart filledroundedbtn">
+                    <span>Add To cart</span>
+                  </button>
+                  <button className="buy outlineroundedbtn">
+                    <span>Buy Now</span>
+                  </button>
                 </div>
               </div>
             </div>

@@ -1523,10 +1523,11 @@
                 }
 
                 input {
-                    height: 50px;
+                    border-radius: var(--br50);
                     margin-bottom: var(--m16);
                     color: var(--black-color);
                     font-size: var(--fs16);
+                    padding: var(--p14) var(--p24);
                     outline: none;
                     border: none;
 
@@ -1536,17 +1537,8 @@
                     }
                 }
 
-                .bsCommBtn {
-                    background: var(--bottle-green-color);
-                    border: none;
-                    height: 45px;
-                    color: var(--white-color);
-                    font-weight: var(--fw600);
-                    transition: 0.3s;
-                }
-
-                .bsCommBtn:hover {
-                    background: var(--green-color02);
+                .mintGreenOutlineBtn {
+                    width: 100%;
                 }
             }
         }
@@ -1568,6 +1560,7 @@
                     .nav-link {
                         color: var(--white-color);
                         font-size: var(--fs16);
+
                         padding: 0;
 
                         i {
@@ -1604,12 +1597,12 @@
                                 align-items: center;
                                 justify-content: center;
                                 color: var(--white-color);
-                                border-radius: var(--br4);
+                                border-radius: var(--br50);
                                 transition: 0.3s;
                             }
 
                             .nav-link:hover {
-                                background: var(--bottle-green-color);
+                                background: var(--green-color02);
                             }
                         }
                     }

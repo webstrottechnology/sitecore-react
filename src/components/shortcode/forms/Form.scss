@@ -1283,6 +1283,9 @@
 
 
     .auth_card {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
         width: 500px;
         background: rgba(248, 248, 248, 0.1);
         box-shadow: 2px 0px 43px rgba(0, 0, 0, 0.04);
@@ -1294,14 +1297,12 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            margin-bottom: var(--m20);
         }
 
         h3 {
             font-size: var(--fs36);
             color: var(--black-color);
             text-align: center;
-            margin-bottom: var(--m10);
         }
 
         p {
@@ -1313,7 +1314,6 @@
         .tabs {
             display: flex;
             background: var(--white-color);
-            margin: var(--m20) var(--m0);
             border-radius: var(--br6);
             overflow: hidden;
 
@@ -1337,7 +1337,9 @@
 
 
         .input_group {
-            margin-bottom: var(--m16);
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
 
             .input_box {
                 position: relative;
@@ -1419,22 +1421,19 @@
             }
         }
 
-        .main_btn {
+        .filledroundedbtn {
             width: var(--width100);
-            padding: var(--p14);
-            background: var(--orange-color);
-            border: none;
-            border-radius: var(--br26);
-            color: var(--white-color);
-            margin-top: var(--m16);
+            max-width: 375px;
+            margin: 0 auto;
             cursor: pointer;
         }
 
         .google_btn {
             width: var(--width100);
+            max-width: 375px;
+            margin: 0 auto;
             padding: var(--p12);
-            margin-top: var(--m16);
-            border-radius: var(--br26);
+            border-radius: var(--br50);
             border: none;
             background: var(--white-color);
             display: flex;
@@ -1760,7 +1759,7 @@
     margin-top: var(--m30);
 
     .commentBoxInner {
-        max-width: 900px;
+        max-width: 1000px;
         display: flex;
         flex-direction: column;
         gap: 30px;
@@ -1817,8 +1816,9 @@
             }
         }
 
-        .medCommBtn {
+        .filledroundedbtn {
             margin-top: var(--m30);
+            min-width: 160px;
         }
     }
 }
@@ -1842,12 +1842,28 @@
 
 @include responsive(lg-md) {
     .appointment_section .appointment_wrapper {
-        gap: 50px;
+        gap: 30px;
     }
 
     .appointment_section .appointment_wrapper .left .contact_card {
         width: var(--width100);
     }
+
+    .appointment_section .appointment_wrapper .left {
+        width: 50%
+    }
+
+    .appointment_section .appointment_wrapper .right {
+        width: 50%;
+        padding: var(--p40) var(--p40) var(--p40) var(--p40);
+    }
+
+    .appointment_section .appointment_wrapper .right .grid {
+        display: grid;
+        grid-template-columns: auto;
+        gap: 20px;
+    }
+
 }
 
 @include responsive(tablet-sm) {
@@ -2112,7 +2128,7 @@
     }
 
     .sitecore_lr_wrapper .auth_card {
-        padding: var(--p20);
+        padding: var(--p40) var(--p16);
     }
 
     .formten-wrapper .formten__container .formten__form h2 {
