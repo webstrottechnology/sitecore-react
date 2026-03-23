@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import "./Features.scss";
 import {
   FeaturesData,
@@ -502,12 +503,17 @@ const Features11 = () => {
     <div className="AboutWrapperInformation">
       <div className="container custom-container-lg">
         {/* ===== About Image ===== */}
-        <div className="about_image">
+        <div
+          className="about_image"
+          data-aos="fade-up"
+          data-aos-delay="180"
+          data-aos-duration="1500"
+        >
           <img src={FeatureData11.image.src} alt={FeatureData11.image.alt} />
         </div>
 
         {/* ===== About Content ===== */}
-        <div className="about_content">
+        <div className="about_content" data-aos="fade-up" data-aos-delay="200">
           {/* ===== Title Section ===== */}
           <div className="about_title">
             <h5>{FeatureData11.sectionTitle}</h5>
@@ -543,18 +549,9 @@ const Features11 = () => {
           </div>
 
           {/* ===== Anchor Link / Button ===== */}
-          <a
-            href={FeatureData11.button?.link || "#"}
-            className="mintGreenFilledBtn lg-btn"
-            target={FeatureData11.button?.target || "_self"}
-            rel={
-              FeatureData11.button?.target === "_blank"
-                ? "noopener noreferrer"
-                : ""
-            }
-          >
-            {FeatureData11.button?.text || "Read More"}
-          </a>
+          <Link to="/about-us" className="mintGreenFilledBtn lg-btn">
+            Read More
+          </Link>
         </div>
       </div>
     </div>
@@ -572,7 +569,11 @@ const Features12 = () => {
       <div className="container custom-container-lg">
         <div className="feature12-container">
           {/* LEFT SIDE */}
-          <div className="feature12-left">
+          <div
+            className="feature12-left"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
             <span className="tag">{tag}</span>
 
             <h2>
@@ -583,9 +584,9 @@ const Features12 = () => {
 
             <p>{description}</p>
 
-            <a href="#" className="mintGreenFilledBtn lg-btn">
+            <Link to="/about-us" className="mintGreenFilledBtn lg-btn">
               {buttonText}
-            </a>
+            </Link>
 
             {/* SMALL IMAGE */}
             <div className="small-img">
@@ -594,7 +595,12 @@ const Features12 = () => {
           </div>
 
           {/* RIGHT SIDE */}
-          <div className="feature12-right">
+          <div
+            className="feature12-right"
+            data-aos="fade-up"
+            data-aos-delay="200"
+            data-aos-duration="1500"
+          >
             <img src={images.main} alt="big" />
           </div>
         </div>

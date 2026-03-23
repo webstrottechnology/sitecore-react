@@ -424,27 +424,27 @@ export const SiteCorefooterLinks = {
     "Our inspired solutions have helped shape modern acoustic design. Alluring spaces, internationally recognised for their architectura.",
 
   categories: [
-    "Consult Doctors",
-    "Pharmacy",
-    "Health Product",
-    "Radio Diagnosis",
-    "Fitness & Nutrition",
+    { name: "Accordion", link: "/accordion" },
+    { name: "Alert", link: "/alert" },
+    { name: "Button", link: "/button" },
+    { name: "Testimonial", link: "/Testimonial" },
+    { name: "Pricing Table", link: "/pricingPlan" },
   ],
 
   usefulLinks: [
     { name: "About Us", link: "/about-us" },
     { name: "Services", link: "/services" },
-    { name: "Our Blog", link: "/blog" },
-    { name: "Make Appointment", link: "#mediGetInTouch" },
-    { name: "Product", link: "/product" },
+    { name: "Our Blog", link: "/blog-page" },
+    { name: "Team", link: "/team-single" },
+    { name: "Product", link: "/product-with-sidebar" },
   ],
 
   moreInfo: [
     { name: "Contact Us", link: "/contact-us" },
+    { name: "Login/Register", link: "/login" },
     { name: "Cart", link: "/cart" },
+    { name: "Checkout", link: "/checkout" },
     { name: "404 Error", link: "/404" },
-    { name: "Login Register", link: "/login" },
-    { name: "Portfolio", link: "/portfolio" },
   ],
 
   social: [
