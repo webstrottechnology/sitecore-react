@@ -4,6 +4,7 @@ import { services, servicesData, whyChooseUsData } from "./servicesData";
 import { Link } from "react-router-dom";
 import { LiaLongArrowAltRightSolid } from "react-icons/lia";
 import { FaMobileAlt } from "react-icons/fa";
+import { GoArrowRight } from "react-icons/go";
 import mobileImg from "../../../assets/images/inner-pages/mobile-app-img.png"; // apna path set karein
 
 /* ---------------- SERVICES ONE ---------------- */
@@ -18,21 +19,23 @@ const Services = () => {
             We provide Various Service <br /> For Your Business
           </h2>
         </div>
-        <ul className="services_list">
+        <ul className="services_list" data-aos="fade-up" data-aos-delay="250">
           {servicesData.map((item, index) => (
             <li key={index} className={`services_Card card_${index}`}>
               <div className="icon">{item.icon}</div>
               <h4>{item.title}</h4>
               <p>{item.description}</p>
-              <a href="#">{item.link}</a>
+              <Link to={item.link}>
+                Read More <GoArrowRight />
+              </Link>
             </li>
           ))}
         </ul>
 
         <div className="services_btn ">
-          <a href="javascript:;" className="mintGreenFilledBtn lg-btn">
+          <Link to="/services-single" className="mintGreenFilledBtn lg-btn">
             View All Services
-          </a>
+          </Link>
         </div>
       </div>
     </div>
@@ -45,7 +48,11 @@ const WhyChooseUs = () => {
   return (
     <div className="SitecoreChooseData_wrapper">
       <div className="container custom-container-lg">
-        <div className="data_left_content">
+        <div
+          className="data_left_content"
+          data-aos="fade-up"
+          data-aos-delay="200"
+        >
           <h4>{whyChooseUsData.sectionTag}</h4>
           <h2>{whyChooseUsData.heading}</h2>
           <p>{whyChooseUsData.description}</p>
@@ -56,12 +63,16 @@ const WhyChooseUs = () => {
             ))}
           </ul>
 
-          <a href="#:;" className="mintGreenFilledBtn lg-btn">
+          <Link to="/team-single" className="mintGreenFilledBtn lg-btn">
             {whyChooseUsData.button.text}
-          </a>
+          </Link>
         </div>
 
-        <div className="data_right_content">
+        <div
+          className="data_right_content"
+          data-aos="fade-up"
+          data-aos-delay="200"
+        >
           {whyChooseUsData.features.map((item) => (
             <div key={item.id} className="card">
               <div className="icon">{item.icon}</div>
@@ -89,7 +100,7 @@ const ServicesGrid = () => {
               <p>{item.desc}</p>
 
               <div className="arrow">
-             <LiaLongArrowAltRightSolid />
+                <LiaLongArrowAltRightSolid />
               </div>
             </div>
           ))}

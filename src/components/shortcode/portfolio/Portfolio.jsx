@@ -147,7 +147,7 @@ const Portfolio3 = () => {
         </div>
 
         {/* FILTER MENU */}
-        <div className="portfolio-menu">
+        <div className="portfolio-menu" data-aos="fade-up" data-aos-delay="200">
           {["all", "web", "dev", "wp"].map((cat) => (
             <button
               key={cat}
@@ -166,7 +166,7 @@ const Portfolio3 = () => {
         </div>
 
         {/* GRID */}
-        <div className="portfolio-grid">
+        <div className="portfolio-grid" data-aos="zoom-in" data-aos-delay="250">
           <AnimatePresence mode="wait">
             {filteredItems.map((item, i) => (
               <motion.div

@@ -42,7 +42,7 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        gap: 45px;
+        gap: 24px;
         text-align: center;
         color: var(--white-color);
         padding-top: var(--p80);
@@ -51,12 +51,12 @@
             font-size: var(--fs26);
             letter-spacing: 7.8px;
             color: var(--green-color02);
-            margin-bottom: var(--m20);
+            margin-top: var(--m26);
         }
 
         h1 {
             font-size: var(--fs60);
-            margin-bottom: var(--m30);
+            color: var(--white-color);
         }
 
         .play-btn,
@@ -194,7 +194,7 @@
 }
 
 @include responsive(mobile-sm) {
- 
+
 
     .hero-container .hero-content h1 {
         font-size: var(--fs26);
@@ -208,6 +208,4 @@
     }
 }
 
-@include responsive(xxs) {
-
-}
+@include responsive(xxs) {}
