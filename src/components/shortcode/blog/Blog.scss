@@ -116,6 +116,11 @@
                     h3 {
                         font-size: var(--fs26);
                         margin: var(--m20) var(--m0);
+                        color: var(--white-color);
+
+                        a {
+                            color: var(--white-color);
+                        }
                     }
 
                     p {
@@ -187,8 +192,16 @@
                             color: var(--temp1BlueColor);
                             transition: all 0.5s;
 
+                            a {
+                                color: var(--temp1BlueColor);
+                            }
+
                             &:hover {
                                 color: var(--green-color02);
+
+                                a {
+                                    color: var(--green-color02);
+                                }
                             }
                         }
 

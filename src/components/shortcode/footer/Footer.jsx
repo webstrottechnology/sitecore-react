@@ -685,7 +685,11 @@ const Sitecorefooter = () => {
           <div className="container custom-container-lg">
             <div className="row footerInnerRow">
               {/* LEFT SIDE */}
-              <div className="col-lg-6 footerInnerCol1">
+              <div
+                className="col-lg-6 footerInnerCol1"
+                data-aos="fade-up"
+                data-aos-delay="200"
+              >
                 <div className="footerLogoGroup">
                   <div className="row">
                     <div className="col-md-4">
@@ -725,20 +729,24 @@ const Sitecorefooter = () => {
               </div>
 
               {/* RIGHT SIDE */}
-              <div className="col-lg-6 footerInnerCol2">
+              <div
+                className="col-lg-6 footerInnerCol2"
+                data-aos="fade-up"
+                data-aos-delay="200"
+              >
                 <div className="row">
                   {/* Categories */}
                   <div className="col-md-4">
-                    <h4>Categories</h4>
+                    <h4>Short Code</h4>
 
                     <ul className="nav flex-column">
                       {SiteCorefooterLinks.categories.map((item, index) => (
                         <li className="nav-item" key={index}>
-                          <a className="nav-link" href="#">
+                          <a className="nav-link" href={item.link}>
                             <BsFillCircleFill
                               style={{ fontSize: "8px", marginRight: "8px" }}
                             />{" "}
-                            {item}
+                            {item.name}
                           </a>
                         </li>
                       ))}
@@ -748,7 +756,6 @@ const Sitecorefooter = () => {
                   {/* Useful Links */}
                   <div className="col-md-4">
                     <h4>Useful Links</h4>
-
                     <ul className="nav flex-column">
                       {SiteCorefooterLinks.usefulLinks.map((item, index) => (
                         <li className="nav-item" key={index}>

@@ -1354,6 +1354,7 @@
                     text-transform: uppercase;
                     color: var(--green-color02);
                     margin-bottom: var(--m10);
+
                 }
 
                 h2 {
@@ -1411,6 +1412,10 @@
                     font-size: var(--fs22);
                     color: var(--black-color);
                     margin-bottom: var(--m6);
+
+                    a {
+                        color: var(--black-color);
+                    }
                 }
 
                 p {

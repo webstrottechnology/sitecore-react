@@ -15,7 +15,7 @@ export const servicesData = [
     title: "Business consulting",
     description:
       "It look like readable English. Many desktop publishing packages",
-    link: "Read More →",
+    link: "/services",
   },
   {
     id: 2,
@@ -23,14 +23,14 @@ export const servicesData = [
     title: "Market Enalysis",
     description:
       "By using Lorem Ipsum, designers focus on layout and aesthetics without worrying about actual text.",
-    link: "Read More →",
+    link: "/services",
   },
   {
     id: 3,
     icon: <FiMonitor />,
     title: "User Monitering",
     description: "Always proofread multiple times to ensure content quality.",
-    link: "Read More →",
+    link: "/services",
   },
   {
     id: 4,
@@ -38,7 +38,7 @@ export const servicesData = [
     title: "Digital Marketing",
     description:
       "Maintain high standards by regularly reviewing and updating content.",
-    link: "Read More →",
+    link: "/services",
   },
 ];
 

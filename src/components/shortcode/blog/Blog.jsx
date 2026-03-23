@@ -7,6 +7,7 @@ import { HomeBlogData } from "./blogData";
 import { blogDataOne } from "./blogData";
 import { blogDataTwo } from "./blogData";
 import { blogDataThree } from "./blogData";
+import { Link } from "react-router-dom";
 import {
   FiUser,
   FiMessageCircle,
@@ -67,7 +68,6 @@ const Blog = () => {
 
   return (
     <>
-      <AboutBannerBreadCrumb title="Progress" bgImage={sitecoreBg} />
       <section className="Sitecorehome_blog_wrapper">
         <div className="container custom-container-lg">
           <div className="blog__container">
@@ -78,7 +78,11 @@ const Blog = () => {
 
             <div className="blog__wrapper">
               {/* LEFT SIDE */}
-              <div className="blog__left">
+              <div
+                className="blog__left"
+                data-aos="fade-up"
+                data-aos-delay="200"
+              >
                 <div className={`blog__image ${fade ? "fade-in" : "fade-out"}`}>
                   <img src={active.image} alt={active.title} />
                 </div>
@@ -103,7 +107,9 @@ const Blog = () => {
                     <span className="blog__tag">{active.tag}</span>
                   </div>
 
-                  <h3>{active.title}</h3>
+                  <h3>
+                    <Link to="/blog-page">{active.title}</Link>
+                  </h3>
                   <p>{active.description}</p>
 
                   <div className="blog__buttons">
@@ -114,12 +120,18 @@ const Blog = () => {
               </div>
 
               {/* RIGHT SIDE */}
-              <div className="blog__right">
+              <div
+                className="blog__right"
+                data-aos="fade-up"
+                data-aos-delay="200"
+              >
                 {rightListBlog.map((item) => (
                   <div className="blog__item" key={item.id}>
                     <img src={item.image} alt={item.title} />
                     <div className="blog__info">
-                      <h4>{item.title}</h4>
+                      <h4>
+                        <Link to="/image-post"> {item.title}</Link>
+                      </h4>
                       <span className="blog__date-right">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"

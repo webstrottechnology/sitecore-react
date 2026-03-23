@@ -1,4 +1,5 @@
 import React, { useRef, useState } from "react";
+import { Link } from "react-router-dom";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import "./Teams.scss";
@@ -644,7 +645,11 @@ const Team11 = () => {
       <div className="container custom-container-lg">
         <div className="team-inner-wrapper">
           {/* Left Content */}
-          <div className="team-box-contnet">
+          <div
+            className="team-box-contnet"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
             <div className="corprate-title">
               <h4>Our Team</h4>
               <h2>We Help to Achieve Your Business Goal</h2>
@@ -655,19 +660,30 @@ const Team11 = () => {
                 online store, or showcasing a portfolio.
               </p>
             </div>
-            <a className="mintGreenFilledBtn lg-btn" href="#">
+            <Link
+              rel="stylesheet"
+              to="/team-01"
+              className="mintGreenFilledBtn lg-btn"
+            >
               View Our Team
-            </a>
+            </Link>
           </div>
 
           {/* Team Members */}
           {team11Data.map((member, index) => (
-            <div className="team-box" key={index}>
+            <div
+              className="team-box"
+              key={index}
+              data-aos="fade-up"
+              data-aos-delay="200"
+            >
               <div className="team-img">
                 <img src={member.img} alt={member.name} />
               </div>
               <div className="team-text">
-                <h4>{member.name}</h4>
+                <h4>
+                  <Link to="/team-single">{member.name}</Link>
+                </h4>
                 <p>{member.role}</p>
               </div>
             </div>
