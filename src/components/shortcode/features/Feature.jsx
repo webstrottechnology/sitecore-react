@@ -669,12 +669,12 @@ const PortfolioDetailsSection = () => {
                 ))}
               </div>
               <div className="viewWebsiteBtn d-flex">
-                <a
-                  href={portfolioDetails.buttonLink}
+                <Link
+                  to={portfolioDetails.buttonLink}
                   className="filledroundedbtn md-btn"
                 >
                   <span>{portfolioDetails.buttonText}</span>
-                </a>
+                </Link>
               </div>
             </div>
             <div className="col-lg-6">
