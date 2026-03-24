@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { ShopCartData } from "./shopCartData";
 import truck from "../../../assets/images/inner-pages/icons/truck.webp";
 import "./ShopCart.scss";
+ import { Link } from "react-router-dom";
 
 const ShopCart = () => {
   const [cart, setCart] = useState(ShopCartData);
@@ -154,9 +155,9 @@ const ShopCart = () => {
                 <span>${subtotal}.00</span>
               </div>
               <div className="weCareForLearnMoreBtn">
-                <a href="#" className="filledroundedbtn">
+                <Link to="/checkout" className="filledroundedbtn">
                   <span>PROCEED TO CHECKOUT</span>
-                </a>
+                </Link>
               </div>
             </div>
           </div>

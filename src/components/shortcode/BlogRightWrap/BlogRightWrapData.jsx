@@ -19,9 +19,27 @@ export const blogArticles = [
     comments: 2,
     category: "Events",
 
-    link: "/blog-detail",
+    link: "/image-post",
   },
 
+  /* SLIDER BLOG */
+  {
+    id: 5,
+    type: "slider",
+    images: [slider1, slider2, slider3],
+    date: "21",
+    month: "Mar",
+
+    title:
+      "Embracing Diversity and Inclusion: Building a Better Workplace - Slider",
+    desc: " On the back end, server-side languages such as PHP, Python, or Node.js work with databases to handle data processing, user authentication, and content management. Modern development practices emphasize clean code architecture.",
+
+    author: "admin",
+    comments: 2,
+    category: "Events",
+
+    link: "/slider-post",
+  },
   /* YOUTUBE BLOG */
   {
     id: 2,
@@ -37,7 +55,7 @@ export const blogArticles = [
     comments: 2,
     category: "Events",
 
-    link: "/blog-detail-video",
+    link: "/youtube-post",
   },
 
   /* VIMEO BLOG */
@@ -56,7 +74,7 @@ export const blogArticles = [
     comments: 2,
     category: "Events",
 
-    link: "/blog-detail-vimeo",
+    link: "/vimeo-post",
   },
 
   /* AUDIO BLOG */
@@ -76,26 +94,7 @@ export const blogArticles = [
     comments: 2,
     category: "Events",
 
-    link: "/blog-detail-audio",
-  },
-
-  /* SLIDER BLOG */
-  {
-    id: 5,
-    type: "slider",
-    images: [slider1, slider2, slider3],
-    date: "21",
-    month: "Mar",
-
-    title:
-      "Embracing Diversity and Inclusion: Building a Better Workplace - Slider",
-    desc: " On the back end, server-side languages such as PHP, Python, or Node.js work with databases to handle data processing, user authentication, and content management. Modern development practices emphasize clean code architecture.",
-
-    author: "admin",
-    comments: 2,
-    category: "Events",
-
-    link: "/blog-detail-slider",
+    link: "/audio-post",
   },
 
   /* QUOTE BLOG */
@@ -107,6 +106,6 @@ export const blogArticles = [
       "THE BLINDING SPLENDOR OF THE DIAMOND. THE MIGHTY POWER OF THE ROCKET.",
     author: "Awesome Author",
 
-    link: "/blog-detail-quote",
+    link: "/quote-post",
   },
 ];

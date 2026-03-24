@@ -21,7 +21,6 @@ import team16 from "../../../assets/images/teams/team-16.jpg";
 import team17 from "../../../assets/images/teams/team-17.jpg";
 import team18 from "../../../assets/images/teams/team-18.jpg";
 
-
 import team19 from "../../../assets/images/teams/team1.png";
 import team20 from "../../../assets/images/teams/team2.png";
 import team21 from "../../../assets/images/teams/team3.png";
@@ -41,7 +40,6 @@ import tempimg9 from "../../../assets/images/inner-pages/team09.png";
 import tempimg10 from "../../../assets/images/inner-pages/team010.png";
 import tempimg11 from "../../../assets/images/inner-pages/team011.png";
 import tempimg12 from "../../../assets/images/inner-pages/team012.png";
-
 
 export const teamData = [
   {
@@ -70,7 +68,6 @@ export const teamData = [
     role: "Developer",
   },
 ];
-
 
 export const teams2Data = [
   {
@@ -214,7 +211,6 @@ export const teams5Data = [
   },
 ];
 
-
 export const team6Data = [
   {
     id: 1,
@@ -290,7 +286,6 @@ export const team8Data = [
   },
 ];
 
-
 export const team9Data = [
   {
     name: "John",
@@ -356,73 +351,73 @@ export const team12Data = [
     role: "Psychiatrist",
     img: tempimg1,
     active: true,
-    link: "/doctor/vincent-cooper",
+    link: "/team-single",
   },
   {
     name: "Danielle Bryant",
     role: "Psychiatrist",
     img: tempimg2,
-    link: "/doctor/danielle-bryant",
+    link: "/team-single",
   },
   {
     name: "Howard Holmes",
     role: "Psychiatrist",
     img: tempimg3,
-    link: "/doctor/howard-holmes",
+    link: "/team-single",
   },
   {
     name: "Ella Thompson",
     role: "Psychiatrist",
     img: tempimg4,
-    link: "/doctor/ella-thompson",
+    link: "/team-single",
   },
   {
     name: "James N. Pruden",
     role: "Psychiatrist",
     img: tempimg5,
     active: true,
-    link: "/doctor/james-pruden",
+    link: "/team-single",
   },
   {
     name: "Barbara W. Kelly",
     role: "Psychiatrist",
     img: tempimg6,
-    link: "/doctor/barbara-kelly",
+    link: "/team-single",
   },
   {
     name: "Bruce A. Walker",
     role: "Psychiatrist",
     img: tempimg7,
-    link: "/doctor/bruce-walker",
+    link: "/team-single",
   },
   {
     name: "Dr. Edward Collins",
     role: "Psychiatrist",
     img: tempimg8,
-    link: "/doctor/edward-collins",
+    link: "/team-single",
   },
   {
     name: "Vincent Cooper",
     role: "Psychiatrist",
     img: tempimg9,
-    link: "/doctor/vincent-cooper",
+    link: "/team-single",
   },
   {
     name: "John B. Duncan",
     role: "Psychiatrist",
     img: tempimg10,
-    link: "/doctor/john-duncan",
+    link: "/team-single",
   },
   {
     name: "Arron N. Whaley",
     role: "Psychiatrist",
     img: tempimg11,
-    link: "/doctor/arron-whaley",
+    link: "/team-single",
   },
   {
     name: "Dewayne M. Hubbard",
     role: "Psychiatrist",
     img: tempimg12,
-    link: "/doctor/dewayne-hubbard",
+    link: "/team-single",
   },
 ];

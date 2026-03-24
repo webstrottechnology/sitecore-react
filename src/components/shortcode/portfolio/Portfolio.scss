@@ -85,8 +85,7 @@
 .portfolio-img-gallery-wrapper2 {
   width: var(--width100);
   height: 100%;
-  background: rgba(251, 133, 0, 0.15);
-  padding: var(--p70) var(--p0);
+  padding: var(--p80) var(--p0);
 
   /* Heading */
 
@@ -260,7 +259,7 @@
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    column-gap: 14px;
+    column-gap: 40px;
     row-gap: 8px;
 
     .control {

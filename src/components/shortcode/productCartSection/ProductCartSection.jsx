@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { Productcartdata } from "./ProductCartSectionData";
 import "./ProductCartSection.scss";
 import { IoCart } from "react-icons/io5";
+import { Link } from "react-router-dom";
 
 const ProductCartSection = () => {
   const [view, setView] = useState("grid");
@@ -43,15 +44,15 @@ const ProductCartSection = () => {
                       />
                     </a>
 
-                    <a
+                    <Link
+                      to={product.link}
                       className="btn-cart filledsqaurebtn"
-                      href={product.link}
                     >
                       <span>
                         <IoCart />
                         ADD TO CART
                       </span>
-                    </a>
+                    </Link>
 
                     <span
                       className="bsIconNav"

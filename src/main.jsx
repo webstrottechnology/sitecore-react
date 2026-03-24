@@ -11,11 +11,8 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
-
-
 createRoot(document.getElementById("root")).render(
   <BrowserRouter>
     <App />
   </BrowserRouter>,
-
 );

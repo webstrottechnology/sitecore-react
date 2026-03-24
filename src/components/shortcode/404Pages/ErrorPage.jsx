@@ -3,6 +3,7 @@ import "./ErrorPage.scss";
 import Logo from "../../../assets/images/home-01/logo.png";
 import ErrorImg01 from "../../../assets/images/inner-pages/404.png";
 import { Link } from "react-router-dom";
+
 const ErrorPage = () => {
   return (
     <div className="error404">
@@ -27,7 +28,9 @@ const ErrorPage = () => {
 
         {/* Button */}
         <div className="btnBox">
-           <Link to='/home' className="error404-btn"> Back To Home </Link>
+          <Link to="/" className="error404-btn">
+            Back To Home
+          </Link>
         </div>
       </div>
     </div>

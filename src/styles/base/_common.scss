@@ -140,6 +140,7 @@ p {
   background-color: var(--orange-color);
   color: var(--white-color);
   font-weight: var(--fw600);
+  font-size: var(--fs16);
   transition: all 0.5s;
   position: relative;
   overflow: hidden;
@@ -228,10 +229,10 @@ p {
   gap: 10px;
   padding: var(--p10) var(--p40);
   border: 1px solid var(--orange-color);
-  background-color:transparent;
+  background-color: transparent;
   border-radius: var(--br50);
   color: var(--orange-color);
-  font-size: var(--fs18);
+  font-size: var(--fs16);
   font-weight: var(--fw600);
   transition: all 0.5s;
   position: relative;
@@ -496,7 +497,7 @@ p {
 }
 
 .anchorTextBtn {
-  font-size: var(--fs18);
+  font-size: var(--fs16);
   font-weight: var(--fw500);
   position: relative;
   transition: color 0.3s ease;
@@ -573,6 +574,7 @@ p {
 .GradientBtnAnchor {
   display: inline-block;
   padding: var(--p12) var(--p24);
+  font-size: var(--fs16);
   color: var(--white-color);
   font-weight: var(--fw600);
   transition: transform 0.3s ease;
@@ -626,7 +628,7 @@ p {
   border: 1px solid var(--green-color02);
   background-color: transparent;
   border-radius: var(--br50);
-  font-size: var(--fs18);
+  font-size: var(--fs16);
   font-weight: var(--fw600);
   color: var(--green-color02);
   transition: all 0.5s;
@@ -685,7 +687,7 @@ p {
   border: 1px solid var(--green-color02);
   background-color: var(--green-color02);
   border-radius: var(--br50);
-  font-size: var(--fs18);
+  font-size: var(--fs16);
   font-weight: var(--fw600);
   color: var(--black-color);
   transition: all 0.5s;

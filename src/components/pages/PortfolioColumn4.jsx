@@ -8,7 +8,7 @@ const PortfolioColumn3 = () => {
   return (
     <>
       <AboutBannerBreadCrumb title="Portfolio 4 Column" bgImage={sitecoreBg} />
-      <Portfolio3 />
+      <Portfolio3/>
       <FormTwelve />
     </>
   );
