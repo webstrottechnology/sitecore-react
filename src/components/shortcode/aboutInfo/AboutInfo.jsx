@@ -1,6 +1,7 @@
 import React from "react";
 import { AboutUsData } from "./aboutInfoData";
 import "./AboutInfo.scss";
+import { Link } from "react-router-dom";
 
 /* ---------------- ABOUT US PAGE ---------------- */
 
@@ -44,10 +45,7 @@ const AboutInfo = () => {
                   </div>
 
                   <div className="weCareForLearnMoreBtn">
-                    <a
-                      href="#"
-                      className="filledroundedbtn md-btn"
-                    >
+                    <a href="#" className="filledroundedbtn md-btn">
                       <span>{AboutUsData.buttonText}</span>
                     </a>
                   </div>
@@ -64,7 +62,7 @@ const AboutInfo = () => {
               <div className="innerPagesAboutCircleItem">
                 {AboutUsData.services.map((item) => (
                   <div className="innerPagesAboutCircle" key={item.id}>
-                    <a href="#" className="medLink">
+                    <Link to="/services-single" className="medLink">
                       <span className="icon">
                         <img src={item.icon} alt="icon" />
                       </span>
@@ -76,7 +74,7 @@ const AboutInfo = () => {
                           <span className="arrow">→</span>
                         </div>
                       </div>
-                    </a>
+                    </Link>
                   </div>
                 ))}
               </div>

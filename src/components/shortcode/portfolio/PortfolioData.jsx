@@ -86,77 +86,73 @@ export const gallery4Data = {
   ],
 
   data: {
-    AllProjects: {
-      step1: [
-        column3Img1,
-        column3Img2,
-        column3Img3,
-        column3Img4,
-        column3Img5,
-        column3Img6,
-      ],
-      step2: [
-        column3Img7,
-        column3Img8,
-        column3Img9,
-        column3Img10,
-        column3Img11,
-        column3Img12,
-      ],
-      step3: [
-        column3Img13,
-        column3Img14,
-        column3Img15,
-        column3Img16,
-        column3Img17,
-      ],
-    },
+    AllProjects: [
+      column3Img1,
+      column3Img2,
+      column3Img3,
+      column3Img4,
+      column3Img5,
+      column3Img6,
+      column3Img7,
+      column3Img8,
+      column3Img9,
+      column3Img10,
+      column3Img11,
+      column3Img12,
+      column3Img13,
+      column3Img14,
+      column3Img15,
+      column3Img16,
+    ],
 
-    Branding: {
-      step1: [
-        column3Img4,
-        column3Img7,
-        column3Img10,
-        column3Img17,
-        column3Img13,
-      ],
-    },
+    Branding: [
+      column3Img4,
+      column3Img7,
+      column3Img10,
+      column3Img17,
+      column3Img13,
+      column3Img2,
+      column3Img5,
+    ],
 
-    Concept: {
-      step1: [
-        column3Img2,
-        column3Img5,
-        column3Img8,
-        column3Img10,
-        column3Img9,
-        column3Img17,
-      ],
-    },
+    Concept: [
+      column3Img2,
+      column3Img5,
+      column3Img8,
+      column3Img10,
+      column3Img9,
+      column3Img17,
+      column3Img1,
+    ],
 
-    Figma: {
-      step1: [
-        column3Img3,
-        column3Img6,
-        column3Img13,
-        column3Img4,
-        column3Img9,
-        column3Img7,
-      ],
-    },
+    Figma: [
+      column3Img3,
+      column3Img6,
+      column3Img13,
+      column3Img4,
+      column3Img9,
+      column3Img7,
+      column3Img2,
+    ],
 
-    AdobeXD: {
-      step1: [column3Img1, column3Img3, column3Img5, column3Img7],
-    },
+    AdobeXD: [
+      column3Img1,
+      column3Img3,
+      column3Img5,
+      column3Img7,
+      column3Img9,
+      column3Img11,
+      column3Img13,
+    ],
 
-    LogoDesign: {
-      step1: [
-        column3Img14,
-        column3Img5,
-        column3Img7,
-        column3Img15,
-        column3Img17,
-        column3Img16,
-      ],
-    },
+    LogoDesign: [
+      column3Img14,
+      column3Img5,
+      column3Img7,
+      column3Img15,
+      column3Img17,
+      column3Img16,
+      column3Img2,
+    ],
   },
 };
