@@ -1451,7 +1451,6 @@
     padding: var(--p100) var(--p0);
 
     .container {
-        max-width: 1600px;
         margin: auto;
         display: grid;
         grid-template-columns: repeat(4, 1fr);
@@ -1637,7 +1636,6 @@
     background: var(--white-color);
 
     .container {
-        max-width: 1200px;
         margin: auto;
         display: grid;
         grid-template-columns: 400px 1fr;

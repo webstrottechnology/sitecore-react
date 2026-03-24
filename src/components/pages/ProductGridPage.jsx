@@ -6,7 +6,7 @@ import ProductGridSection from "../shortcode/ProductPage/ProductGridsectionPage"
 const ProductGridPage = () => {
   return (
     <>
-      <AboutBannerBreadCrumb title="Blog Single Audio" bgImage={sitecoreBg} />
+      <AboutBannerBreadCrumb title="Product With Sidebar" bgImage={sitecoreBg} />
       <ProductGridSection />
     </>
   );

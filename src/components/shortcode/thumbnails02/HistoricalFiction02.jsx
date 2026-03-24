@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./HistoricalFiction02.scss";
+import { Link } from "react-router-dom";
 
 import img1 from "../../../assets/images/thumbnail/thumbnail1.png";
 import img2 from "../../../assets/images/thumbnail/thumbnail2.png";
@@ -145,12 +146,12 @@ const HistoricalFiction02 = () => {
 
                 {/* BUTTONS */}
                 <div className="buttons">
-                  <button className="cart filledroundedbtn">
+                  <Link to="/cart" className="cart filledroundedbtn">
                     <span>Add To cart</span>
-                  </button>
-                  <button className="buy outlineroundedbtn">
+                  </Link>
+                  <Link to="/checkout" className="buy outlineroundedbtn">
                     <span>Buy Now</span>
-                  </button>
+                  </Link>
                 </div>
               </div>
             </div>

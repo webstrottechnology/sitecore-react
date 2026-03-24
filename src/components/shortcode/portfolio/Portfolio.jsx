@@ -230,19 +230,12 @@ const Portfolio4 = () => {
 
   const gridRef = useRef(null);
 
-  const currentData = gallery4Data.data[activeTab];
+  // ✅ get current tab data
+  const currentData = gallery4Data.data[activeTab] || [];
 
-  const images = [
-    ...(currentData?.step1 || []),
-    ...(currentData?.step2 || []),
-    ...(currentData?.step3 || []),
-  ];
-
-  /* MASONRY HEIGHT FIX */
-
+  /* ✅ MASONRY FIX */
   useEffect(() => {
     const grid = gridRef.current;
-
     if (!grid) return;
 
     const rowHeight = 10;
@@ -256,9 +249,7 @@ const Portfolio4 = () => {
 
         const resize = () => {
           const height = img.getBoundingClientRect().height;
-
           const span = Math.ceil((height + rowGap) / (rowHeight + rowGap));
-
           item.style.gridRowEnd = "span " + span;
         };
 
@@ -268,17 +259,15 @@ const Portfolio4 = () => {
     };
 
     resizeAll();
-
     window.addEventListener("resize", resizeAll);
 
     return () => window.removeEventListener("resize", resizeAll);
-  }, [images]);
+  }, [currentData]);
 
   return (
     <section className="portfolio-img-gallery-wrapper4">
       <div className="container custom-container-lg">
-        {/* TABS */}
-
+        {/* ✅ Tabs */}
         <ul className="nav">
           {gallery4Data.tabs.map((tab) => (
             <li key={tab.id}>
@@ -294,16 +283,16 @@ const Portfolio4 = () => {
           ))}
         </ul>
 
-        {/* GALLERY */}
-
-        <div className="gallery-grid-style4" ref={gridRef}>
-          {images.map((img, i) => (
-            <div className="gallery-item" key={i}>
+        {/* ✅ Gallery */}
+        <div className="gallery-grid-style2" ref={gridRef}>
+          {currentData.map((item, i) => (
+            <div className={`gallery-item item-${i + 1}`} key={item.id}>
               <div className="portfolio_img_wrapper">
                 <div className="portfolio_img">
+                  {/* Image */}
                   <img
-                    src={img}
-                    alt="portfolio"
+                    src={item.img}
+                    alt={item.title}
                     onClick={() => {
                       setIndex(i);
                       setOpen(true);
@@ -311,9 +300,9 @@ const Portfolio4 = () => {
                   />
 
                   {/* Overlay */}
-
                   <div className="portfolio_img_overlay">
                     <div className="portfolio_img_text">
+                      {/* Lightbox */}
                       <button
                         className="lightbox-btn"
                         onClick={() => {
@@ -324,7 +313,8 @@ const Portfolio4 = () => {
                         <FaPlus />
                       </button>
 
-                      <a href="#">
+                      {/* Link */}
+                      <a href={item.link}>
                         <FaLink />
                       </a>
                     </div>
@@ -336,14 +326,12 @@ const Portfolio4 = () => {
         </div>
       </div>
 
-      {/* LIGHTBOX */}
-
+      {/* ✅ Lightbox */}
       <Lightbox
         open={open}
         close={() => setOpen(false)}
         index={index}
-        slides={images.map((img) => ({ src: img }))}
-        on={{ view: ({ index }) => setIndex(index) }}
+        slides={currentData.map((item) => ({ src: item.img }))}
       />
     </section>
   );

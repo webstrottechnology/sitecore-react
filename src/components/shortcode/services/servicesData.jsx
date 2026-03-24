@@ -109,7 +109,7 @@ export const services = [
     ),
     title: "UI/UX Design",
     desc: "All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary.",
-    link: "/ui-ux-design",
+    link: "/services-single",
   },
 
   {
@@ -131,6 +131,7 @@ export const services = [
     ),
     title: "Mobile App Design",
     desc: "Nunc ac sem lacinia, bibendum libero at, tempus lectus.",
+    link: "/services-single",
   },
 
   {
@@ -157,6 +158,7 @@ export const services = [
     ),
     title: "Web App Development",
     desc: "Aliquam tempus tincidunt nisi nec vulputate. Nullam at felis et odio dapibus facilisis.",
+    link: "/services-single",
   },
 
   {
@@ -177,6 +179,7 @@ export const services = [
     ),
     title: "Shopify eCommerce Website",
     desc: "Aenean ut ligula sed nisi convallis accumsan. Nullam ac felis sed risus pellentesque posuere.",
+    link: "/services-single",
   },
 
   {
@@ -194,6 +197,7 @@ export const services = [
     ),
     title: "Website Maintenance & Hosting",
     desc: "All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary.",
+    link: "/services-single",
   },
 
   {
@@ -214,6 +218,7 @@ export const services = [
     ),
     title: "Analytics & Consulting",
     desc: "Integer venenatis urna sit amet orci condimentum, ac interdum odio bibendum.",
+    link: "/services-single",
   },
 
   {
@@ -234,6 +239,7 @@ export const services = [
     ),
     title: "ERP Software",
     desc: "Suspendisse eget eros finibus, facilisis orci et, lobortis nulla.",
+    link: "/services-single",
   },
 
   {
@@ -251,6 +257,7 @@ export const services = [
     ),
     title: "eCommerce Website",
     desc: "Sed luctus, turpis a fermentum vehicula, ligula nulla venenatis felis, in tincidunt turpis augue vel urna.",
+    link: "/services-single",
   },
 
   {
@@ -271,5 +278,6 @@ export const services = [
     ),
     title: "SEO & Digital Marketing Services",
     desc: "Nullam vel mauris vel ipsum malesuada suscipit. Morbi rutrum tortor at magna pellentesque, ut aliquam metus rhoncus.",
+    link: "/services-single",
   },
 ];

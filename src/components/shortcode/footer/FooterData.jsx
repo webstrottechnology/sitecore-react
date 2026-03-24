@@ -27,45 +27,45 @@ export const footerOneLinks = [
   {
     title: "Company",
     links: [
-      { title: "About", url: "#" },
-      { title: "Press and Media", url: "#" },
-      { title: "Careers", url: "#" },
-      { title: "Partners", url: "#" },
-      { title: "Legal", url: "#" },
+      { title: "About", url: "Javascript:0" },
+      { title: "Press and Media", url: "Javascript:0" },
+      { title: "Careers", url: "Javascript:0" },
+      { title: "Partners", url: "Javascript:0" },
+      { title: "Legal", url: "Javascript:0" },
     ],
   },
   {
     title: "Support",
     links: [
-      { title: "Help Center", url: "#" },
-      { title: "Terms of Service", url: "#" },
-      { title: "Hire a Partner", url: "#" },
-      { title: "Shopify Community", url: "#" },
+      { title: "Help Center", url: "Javascript:0" },
+      { title: "Terms of Service", url: "Javascript:0" },
+      { title: "Hire a Partner", url: "Javascript:0" },
+      { title: "Shopify Community", url: "Javascript:0" },
     ],
   },
   {
     title: "Developers",
     links: [
-      { title: "API Documentation", url: "#" },
-      { title: "Salesforce.dev", url: "#" },
-      { title: "Office Hours", url: "#" },
+      { title: "API Documentation", url: "Javascript:0" },
+      { title: "Salesforce.dev", url: "Javascript:0" },
+      { title: "Office Hours", url: "Javascript:0" },
     ],
   },
   {
     title: "Products",
     links: [
-      { title: "Shop", url: "#" },
-      { title: "Salesforce Plus", url: "#" },
-      { title: "Linkpop", url: "#" },
-      { title: "Shopify for Enterprise", url: "#" },
+      { title: "Shop", url: "Javascript:0" },
+      { title: "Salesforce Plus", url: "Javascript:0" },
+      { title: "Linkpop", url: "Javascript:0" },
+      { title: "Shopify for Enterprise", url: "Javascript:0" },
     ],
   },
   {
     title: "Solutions",
     links: [
-      { title: "Online Store Builder", url: "#" },
-      { title: "Website Builder", url: "#" },
-      { title: "Ecommerce Website", url: "#" },
+      { title: "Online Store Builder", url: "Javascript:0" },
+      { title: "Website Builder", url: "Javascript:0" },
+      { title: "Ecommerce Website", url: "Javascript:0" },
     ],
   },
 ];
@@ -97,23 +97,23 @@ export const footerDataTwo = {
 
 export const footerDataThree = {
   socialLinks: [
-    { icon: <FaFacebookF />, url: "#", label: "Facebook" },
-    { icon: <FaTwitter />, url: "#", label: "Twitter" },
-    { icon: <FaLinkedinIn />, url: "#", label: "LinkedIn" },
-    { icon: <FaInstagram />, url: "#", label: "Instagram" },
+    { icon: <FaFacebookF />, url: "Javascript:0", label: "Facebook" },
+    { icon: <FaTwitter />, url: "Javascript:0", label: "Twitter" },
+    { icon: <FaLinkedinIn />, url: "Javascript:0", label: "LinkedIn" },
+    { icon: <FaInstagram />, url: "Javascript:0", label: "Instagram" },
   ],
   footerLinks: [
-    { title: "Home", url: "#" },
-    { title: "Buyers", url: "#" },
-    { title: "Sellers", url: "#" },
-    { title: "Our team", url: "#" },
-    { title: "About Us", url: "#" },
+    { title: "Home", url: "Javascript:0" },
+    { title: "Buyers", url: "Javascript:0" },
+    { title: "Sellers", url: "Javascript:0" },
+    { title: "Our team", url: "Javascript:0" },
+    { title: "About Us", url: "Javascript:0" },
   ],
   contactInfo: [
-    { title: "123 Example Road", url: "#" },
-    { title: "New York, NY 12345", url: "#" },
-    { title: "email@example.com", url: "#" },
-    { title: "(555) 555-5555", url: "#" },
+    { title: "123 Example Road", url: "Javascript:0" },
+    { title: "New York, NY 12345", url: "Javascript:0" },
+    { title: "email@example.com", url: "Javascript:0" },
+    { title: "(555) 555-5555", url: "Javascript:0" },
   ],
 };
 
@@ -261,10 +261,10 @@ export const footerDataSix = {
   ],
 
   socials: [
-    { icon: FaFacebookF, link: "#" },
-    { icon: FaInstagram, link: "#" },
-    { icon: FaXTwitter, link: "#" },
-    { icon: FaLinkedinIn, link: "#" },
+    { icon: FaFacebookF, link: "Javascript:0" },
+    { icon: FaInstagram, link: "Javascript:0" },
+    { icon: FaXTwitter, link: "Javascript:0" },
+    { icon: FaLinkedinIn, link: "Javascript:0" },
   ],
 
   copyright: "© 2026 Demo All right reserved",
@@ -357,12 +357,12 @@ export const footerDataNine = [
     type: "links",
     title: "Links",
     content: [
-      { label: "About", url: "#" },
-      { label: "Services", url: "#" },
-      { label: "RSVP", url: "#" },
-      { label: "Gallery", url: "#" },
-      { label: "Get Quote", url: "#" },
-      { label: "Contact", url: "#" },
+      { label: "About", url: "Javascript:0" },
+      { label: "Services", url: "Javascript:0" },
+      { label: "RSVP", url: "Javascript:0" },
+      { label: "Gallery", url: "Javascript:0" },
+      { label: "Get Quote", url: "Javascript:0" },
+      { label: "Contact", url: "Javascript:0" },
     ],
   },
   {
@@ -371,9 +371,9 @@ export const footerDataNine = [
     description:
       "We can’t wait to see all of our beloved friends and relatives at our wedding.",
     social: [
-      { icon: <FaFacebookF />, url: "#" },
-      { icon: <FaTwitter />, url: "#" },
-      { icon: <FaInstagram />, url: "#" },
+      { icon: <FaFacebookF />, url: "Javascript:0" },
+      { icon: <FaTwitter />, url: "Javascript:0" },
+      { icon: <FaInstagram />, url: "Javascript:0" },
     ],
   },
   {
@@ -391,19 +391,19 @@ export const footerDataTen = [
     title: "Get connected\nwith Aigocy on social",
     subtitle: "Don't miss our new updates!",
     items: [
-      { name: "Twitter / X", icon: FaXTwitter, url: "#" },
-      { name: "Facebook", icon: FaFacebookF, url: "#" },
-      { name: "Instagram", icon: FaInstagram, url: "#" },
-      { name: "LinkedIn", icon: FaLinkedinIn, url: "#" },
+      { name: "Twitter / X", icon: FaXTwitter, url: "Javascript:0" },
+      { name: "Facebook", icon: FaFacebookF, url: "Javascript:0" },
+      { name: "Instagram", icon: FaInstagram, url: "Javascript:0" },
+      { name: "LinkedIn", icon: FaLinkedinIn, url: "Javascript:0" },
     ],
   },
   {
     type: "bottom",
     menu: [
-      { title: "About", url: "#" },
-      { title: "Services", url: "#" },
-      { title: "Works", url: "#" },
-      { title: "Contact", url: "#" },
+      { title: "About", url: "Javascript:0" },
+      { title: "Services", url: "Javascript:0" },
+      { title: "Works", url: "Javascript:0" },
+      { title: "Contact", url: "Javascript:0" },
     ],
     copyright: "© 2026 Aigocy. All Rights Reserved.",
     icon: FaArrowUp,
@@ -424,11 +424,11 @@ export const SiteCorefooterLinks = {
     "Our inspired solutions have helped shape modern acoustic design. Alluring spaces, internationally recognised for their architectura.",
 
   categories: [
-    { name: "Accordion", link: "/accordion" },
-    { name: "Alert", link: "/alert" },
-    { name: "Button", link: "/button" },
-    { name: "Testimonial", link: "/Testimonial" },
-    { name: "Pricing Table", link: "/pricingPlan" },
+    { name: "Accordion", link: "/components/accordion" },
+    { name: "Alert", link: "/components/alert" },
+    { name: "Button", link: "/components/button" },
+    { name: "Testimonial", link: "/components/testimonial" },
+    { name: "Pricing Table", link: "/components/pricingPlan" },
   ],
 
   usefulLinks: [
@@ -440,7 +440,7 @@ export const SiteCorefooterLinks = {
   ],
 
   moreInfo: [
-    { name: "Contact Us", link: "/contact-us" },
+    { name: "Contact Us", link: "/Contact" },
     { name: "Login/Register", link: "/login" },
     { name: "Cart", link: "/cart" },
     { name: "Checkout", link: "/checkout" },
@@ -448,10 +448,10 @@ export const SiteCorefooterLinks = {
   ],
 
   social: [
-    { icon: "fa-whatsapp", link: "#" },
-    { icon: "fa-instagram", link: "#" },
-    { icon: "fa-facebook", link: "#" },
-    { icon: "fa-twitter", link: "#" },
+    { icon: "fa-whatsapp", link: "Javascript:0" },
+    { icon: "fa-instagram", link: "Javascript:0" },
+    { icon: "fa-facebook", link: "Javascript:0" },
+    { icon: "fa-twitter", link: "Javascript:0" },
   ],
 
   support: {

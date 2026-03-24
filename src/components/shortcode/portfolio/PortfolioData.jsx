@@ -57,23 +57,17 @@ export const gallery3Data = [
   { id: 12, img: port12, category: "wp", title: "Frontier" },
 ];
 
-import column3Img1 from "../../../assets/images/portfolio/column3Img1.webp";
-import column3Img2 from "../../../assets/images/portfolio/column3Img2.webp";
-import column3Img3 from "../../../assets/images/portfolio/column3Img3.webp";
-import column3Img4 from "../../../assets/images/portfolio/column3Img4.webp";
-import column3Img5 from "../../../assets/images/portfolio/column3Img5.webp";
-import column3Img6 from "../../../assets/images/portfolio/column3Img6.webp";
-import column3Img7 from "../../../assets/images/portfolio/column3Img7.webp";
-import column3Img8 from "../../../assets/images/portfolio/column3Img8.webp";
-import column3Img9 from "../../../assets/images/portfolio/column3Img9.webp";
-import column3Img10 from "../../../assets/images/portfolio/column3Img10.webp";
-import column3Img11 from "../../../assets/images/portfolio/column3Img11.webp";
-import column3Img12 from "../../../assets/images/portfolio/column3Img12.webp";
-import column3Img13 from "../../../assets/images/portfolio/column3Img13.webp";
-import column3Img14 from "../../../assets/images/portfolio/column3Img14.webp";
-import column3Img15 from "../../../assets/images/portfolio/column3Img15.webp";
-import column3Img16 from "../../../assets/images/portfolio/column3Img16.webp";
-import column3Img17 from "../../../assets/images/portfolio/column3Img17.webp";
+import imgG1 from "../../../assets/images/portfolio/15.jpg";
+import imgG2 from "../../../assets/images/portfolio/12.jpg";
+import imgG3 from "../../../assets/images/portfolio/13.jpg";
+import imgG4 from "../../../assets/images/portfolio/14.jpg";
+import imgG5 from "../../../assets/images/portfolio/01.png";
+import imgG6 from "../../../assets/images/portfolio/02.png";
+import imgG7 from "../../../assets/images/portfolio/03.png";
+import imgG8 from "../../../assets/images/portfolio/04.png";
+import imgG9 from "../../../assets/images/portfolio/05.png";
+import imgG10 from "../../../assets/images/portfolio/06.png";
+import imgG11 from "../../../assets/images/portfolio/07.png";
 
 export const gallery4Data = {
   tabs: [
@@ -86,77 +80,35 @@ export const gallery4Data = {
   ],
 
   data: {
-    AllProjects: {
-      step1: [
-        column3Img1,
-        column3Img2,
-        column3Img3,
-        column3Img4,
-        column3Img5,
-        column3Img6,
-      ],
-      step2: [
-        column3Img7,
-        column3Img8,
-        column3Img9,
-        column3Img10,
-        column3Img11,
-        column3Img12,
-      ],
-      step3: [
-        column3Img13,
-        column3Img14,
-        column3Img15,
-        column3Img16,
-        column3Img17,
-      ],
-    },
+    AllProjects: [
+      { id: 1, img: imgG5, title: "Brand Identity", link: "/portfolio-single" },
+      { id: 2, img: imgG6, title: "UI Design", link: "/portfolio-single" },
+      { id: 3, img: imgG7, title: "Mobile App", link: "/portfolio-single" },
+      { id: 4, img: imgG8, title: "Website", link: "/portfolio-single" },
+      { id: 5, img: imgG9, title: "Creative Design", link: "/portfolio-single" },
+      { id: 6, img: imgG10, title: "Marketing", link: "/portfolio-single" },
+      { id: 7, img: imgG11, title: "Branding", link: "/portfolio-single" },
+    ],
 
-    Branding: {
-      step1: [
-        column3Img4,
-        column3Img7,
-        column3Img10,
-        column3Img17,
-        column3Img13,
-      ],
-    },
+    Branding: [
+      { id: 8, img: imgG9, title: "Branding", link: "/portfolio-single" },
+      { id: 9, img: imgG10, title: "Logo Work", link: "/portfolio-single" },
+    ],
 
-    Concept: {
-      step1: [
-        column3Img2,
-        column3Img5,
-        column3Img8,
-        column3Img10,
-        column3Img9,
-        column3Img17,
-      ],
-    },
+    Concept: [
+      { id: 10, img: imgG11, title: "Concept UI", link: "/portfolio-single" },
+    ],
 
-    Figma: {
-      step1: [
-        column3Img3,
-        column3Img6,
-        column3Img13,
-        column3Img4,
-        column3Img9,
-        column3Img7,
-      ],
-    },
+    Figma: [
+      { id: 11, img: imgG5, title: "Figma Kit", link: "/portfolio-single" },
+    ],
 
-    AdobeXD: {
-      step1: [column3Img1, column3Img3, column3Img5, column3Img7],
-    },
+    AdobeXD: [
+      { id: 12, img: imgG8, title: "Adobe XD", link: "/portfolio-single" },
+    ],
 
-    LogoDesign: {
-      step1: [
-        column3Img14,
-        column3Img5,
-        column3Img7,
-        column3Img15,
-        column3Img17,
-        column3Img16,
-      ],
-    },
+    LogoDesign: [
+      { id: 13, img: imgG10, title: "Logo", link: "/portfolio-single" },
+    ],
   },
 };

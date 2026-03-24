@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./HistoricalFaction.scss";
+import { Link } from "react-router-dom";
 
 import HistoricalImg1 from "../../../assets/images/inner-pages/thumbnail1.png";
 import HistoricalImg2 from "../../../assets/images/inner-pages/thumbnail2.png";
@@ -63,12 +64,12 @@ const HistoricalFiction = () => {
 
               {/* cart buttons */}
               <div className="cartRow">
-                <a href="#" className="cart filledroundedbtn lg-btn">
+                <Link to="/cart" className="cart filledroundedbtn lg-btn">
                   <span>
                     <FiShoppingCart />
                     Add To Cart
                   </span>
-                </a>
+                </Link>
 
                 <a href="#" className="share outlineroundedbtn lg-btn">
                   <span>
@@ -79,9 +80,9 @@ const HistoricalFiction = () => {
               </div>
 
               {/* buy now */}
-              <a href="#" className="buyNow mintGreenFilledBtn">
+              <Link to="/checkout" className="buyNow mintGreenFilledBtn">
                 Buy Now
-              </a>
+              </Link>
             </div>
           </div>
           <div className="col-12 col-md-12 col-lg-6 ">

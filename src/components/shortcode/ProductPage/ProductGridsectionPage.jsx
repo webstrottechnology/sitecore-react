@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import { Link } from "react-router-dom";
 import {
   categories,
   authors,
@@ -241,15 +241,15 @@ const ProductGridSection = () => {
                                 />
                               </a>
 
-                              <a
+                              <Link
+                                to={product.link}
                                 className="btn-cart filledsqaurebtn"
-                                href={product.link}
                               >
                                 <span>
                                   <IoCart />
                                   ADD TO CART
                                 </span>
-                              </a>
+                              </Link>
 
                               <span
                                 className="bsIconNav"
