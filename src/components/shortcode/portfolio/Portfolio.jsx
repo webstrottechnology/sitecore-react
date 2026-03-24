@@ -257,10 +257,9 @@ const Portfolio4 = () => {
             <div className={`gallery-item item-${i + 1}`} key={i}>
               <div className="portfolio_img_wrapper">
                 <div className="portfolio_img">
-                  {/* Image */}
                   <img
-                    src={item.img}
-                    alt={item.title}
+                    src={img}
+                    alt="portfolio"
                     onClick={() => {
                       setIndex(i);
                       setOpen(true);
@@ -270,7 +269,6 @@ const Portfolio4 = () => {
                   {/* Overlay same as Portfolio2 */}
                   <div className="portfolio_img_overlay">
                     <div className="portfolio_img_text">
-                      {/* Lightbox */}
                       <button
                         className="lightbox-btn"
                         onClick={() => {
@@ -281,8 +279,7 @@ const Portfolio4 = () => {
                         <FaPlus />
                       </button>
 
-                      {/* Link */}
-                      <a href={item.link}>
+                      <a href="#">
                         <FaLink />
                       </a>
                     </div>

@@ -57,17 +57,23 @@ export const gallery3Data = [
   { id: 12, img: port12, category: "wp", title: "Frontier" },
 ];
 
-import imgG1 from "../../../assets/images/portfolio/15.jpg";
-import imgG2 from "../../../assets/images/portfolio/12.jpg";
-import imgG3 from "../../../assets/images/portfolio/13.jpg";
-import imgG4 from "../../../assets/images/portfolio/14.jpg";
-import imgG5 from "../../../assets/images/portfolio/01.png";
-import imgG6 from "../../../assets/images/portfolio/02.png";
-import imgG7 from "../../../assets/images/portfolio/03.png";
-import imgG8 from "../../../assets/images/portfolio/04.png";
-import imgG9 from "../../../assets/images/portfolio/05.png";
-import imgG10 from "../../../assets/images/portfolio/06.png";
-import imgG11 from "../../../assets/images/portfolio/07.png";
+import column3Img1 from "../../../assets/images/portfolio/column3Img1.webp";
+import column3Img2 from "../../../assets/images/portfolio/column3Img2.webp";
+import column3Img3 from "../../../assets/images/portfolio/column3Img3.webp";
+import column3Img4 from "../../../assets/images/portfolio/column3Img4.webp";
+import column3Img5 from "../../../assets/images/portfolio/column3Img5.webp";
+import column3Img6 from "../../../assets/images/portfolio/column3Img6.webp";
+import column3Img7 from "../../../assets/images/portfolio/column3Img7.webp";
+import column3Img8 from "../../../assets/images/portfolio/column3Img8.webp";
+import column3Img9 from "../../../assets/images/portfolio/column3Img9.webp";
+import column3Img10 from "../../../assets/images/portfolio/column3Img10.webp";
+import column3Img11 from "../../../assets/images/portfolio/column3Img11.webp";
+import column3Img12 from "../../../assets/images/portfolio/column3Img12.webp";
+import column3Img13 from "../../../assets/images/portfolio/column3Img13.webp";
+import column3Img14 from "../../../assets/images/portfolio/column3Img14.webp";
+import column3Img15 from "../../../assets/images/portfolio/column3Img15.webp";
+import column3Img16 from "../../../assets/images/portfolio/column3Img16.webp";
+import column3Img17 from "../../../assets/images/portfolio/column3Img17.webp";
 
 export const gallery4Data = {
   tabs: [
