@@ -48,7 +48,10 @@ const Header_05 = () => {
         <div className="container">
           {/* LOGO */}
           <div className="logo">
-            <img src={Logo} alt="" />
+            <Link to="/">
+              {" "}
+              <img src={Logo} alt="" />{" "}
+            </Link>
           </div>
           {/* NAV */}
           <ul className="nav">

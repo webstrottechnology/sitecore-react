@@ -89,7 +89,7 @@ const WhyChooseUs = () => {
 const ServicesGrid = () => {
   return (
     <div className="tempservicesGrid">
-      <div className="container">
+      <div className="container custom-container-lg">
         <div className="grid">
           {services.map((item, index) => (
             <div className="service-card-box" key={index}>
@@ -98,9 +98,10 @@ const ServicesGrid = () => {
                 <Link to={item.link}>{item.title}</Link>
               </h4>
               <p>{item.desc}</p>
-
               <div className="arrow">
-                <LiaLongArrowAltRightSolid />
+                <Link to={item.link}>
+                  <LiaLongArrowAltRightSolid />
+                </Link>
               </div>
             </div>
           ))}

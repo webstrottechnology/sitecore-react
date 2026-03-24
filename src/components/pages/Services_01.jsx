@@ -10,7 +10,7 @@ import { ConnectBusiness } from "../shortcode/features/Feature";
 const Services_01 = () => {
   return (
     <>
-      <AboutBannerBreadCrumb title="Service 01" bgImage={sitecoreBg} />
+      <AboutBannerBreadCrumb title="Services" bgImage={sitecoreBg} />
       <ServicesGrid />
       <AboutBrandStory />
       <ConnectBusiness />

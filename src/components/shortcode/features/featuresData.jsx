@@ -424,5 +424,5 @@ export const portfolioDetails = {
   image: portfolioImg,
   alt: "portfolio-img",
   buttonText: "View Website",
-  buttonLink: "javascript:void(0);",
+  buttonLink: "/",
 };

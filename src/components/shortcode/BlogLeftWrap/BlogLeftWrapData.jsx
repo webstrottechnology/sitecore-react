@@ -24,42 +24,42 @@ export const Blogcategories = [
 export const BlogrecentPosts = [
   {
     img: thumb1,
-    title: "Lorem Ipsum is simply dummy text of the printing",
+    title: "Large image files can slow down your website.",
     date: "05 May2026",
-    link: "/blog/post-1",
+    link: "/image-post",
   },
   {
     img: thumb2,
-    title: "Use our free Lorem Ipsum Generator if you are looking",
+    title: " which may lead to a poor user experience.",
     date: "05 May2026",
-    link: "/blog/post-2",
+    link: "/image-post",
   },
   {
     img: thumb3,
-    title: "Etiam eu ultrices lacus. Suspendisse id tincidunt.",
+    title: "They longer on your page and interacting with your content.",
     date: "05 May2026",
-    link: "/blog/post-3",
+    link: "/image-post",
   },
 ];
 
 export const BlogpopularPosts = [
   {
     img: thumb4,
-    title: "Lorem Ipsum is simply dummy text of the printing",
+    title: "Maintaining a uniform color, design elements, and image quality.",
     date: "05 May2026",
-    link: "/blog/post-4",
+    link: "/image-post",
   },
   {
     img: thumb5,
-    title: "Use our free Lorem Ipsum Generator if you are looking",
+    title: "People are naturally drawn to visual content to perform better.",
     date: "05 May2026",
-    link: "/blog/post-5",
+    link: "/image-post",
   },
   {
     img: thumb6,
-    title: "Etiam eu ultrices lacus. Suspendisse id tincidunt.",
+    title: "Image-based posts not only make your content more appealing.",
     date: "05 May2026",
-    link: "/blog/post-6",
+    link: "/image-post",
   },
 ];
 

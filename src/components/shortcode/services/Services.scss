@@ -372,7 +372,6 @@
   padding: var(--p100) var(--p0);
 
   .container {
-    max-width: 1600px;
     margin: auto;
   }
 
@@ -432,6 +431,10 @@
       color: var(--orange-color);
       font-size: var(--fs50);
       transition: 0.3s ease;
+
+      a {
+        color: var(--orange-color);
+      }
     }
 
 

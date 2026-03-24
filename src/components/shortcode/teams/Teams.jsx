@@ -707,7 +707,7 @@ const Team12 = () => {
 
   return (
     <div className="team12-section">
-      <div className="container">
+      <div className="container custom-container-lg">
         {team12Data.map((member, index) => (
           <div className="team12-card-box" key={index}>
             <div className="imgBox">
@@ -741,7 +741,7 @@ const Team12 = () => {
 
             <div className="info">
               <h3>
-                <a href={member.link}>{member.name}</a>
+                <Link to={member.link}>{member.name}</Link>
               </h3>
               <p>{member.role}</p>
             </div>
@@ -755,7 +755,7 @@ const Team12 = () => {
 const Team13 = () => {
   return (
     <div className="team13-section">
-      <div className="container">
+      <div className="container custom-container-lg">
         {/* LEFT IMAGE */}
 
         <div className="team13-image">

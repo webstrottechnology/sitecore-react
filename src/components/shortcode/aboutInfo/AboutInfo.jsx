@@ -45,9 +45,9 @@ const AboutInfo = () => {
                   </div>
 
                   <div className="weCareForLearnMoreBtn">
-                    <a href="#" className="filledroundedbtn md-btn">
+                    <Link to="/services" className="filledroundedbtn md-btn">
                       <span>{AboutUsData.buttonText}</span>
-                    </a>
+                    </Link>
                   </div>
                 </div>
 
