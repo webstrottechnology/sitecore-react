@@ -489,6 +489,8 @@
   }
 
   .portfolio_img {
+
+    overflow: hidden;
     position: relative;
     display: inline-block;
     width: var(--width100);
@@ -501,158 +503,7 @@
       display: block;
       object-fit: cover;
       cursor: pointer;
-    }
-  }
-
-  /* BIG IMAGE LEFT */
-
-  .item-1 {
-    grid-row: span 2;
-  }
-
-  /* BIG IMAGE RIGHT BOTTOM */
-
-  .item-6 {
-    grid-column: span 2;
-  }
-
-  /* OVERLAY */
-
-  .portfolio_img_overlay {
-    background: rgba(255, 255, 255, 0.8);
-    box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
-    position: absolute;
-    top: 30px;
-    left: 30px;
-    width: calc(100% - 60px);
-    height: calc(100% - 60px);
-    opacity: 0;
-    visibility: hidden;
-    transform: translate(-15px, -15px);
-    transition: all 0.5s ease;
-  }
-
-  .portfolio_img_wrapper:hover {
-
-    .portfolio_img_overlay {
-      opacity: 1;
-      visibility: visible;
-      transform: translate(0, 0);
-    }
-
-    .portfolio_img_text {
-      opacity: 1;
-      visibility: visible;
-    }
-  }
-
-  /* TEXT ICON */
-
-  .portfolio_img_text {
-    position: absolute;
-    top: 50%;
-    left: 0;
-    width: var(--width100);
-    transform: translateY(-50%);
-    text-align: center;
-    opacity: 0;
-    visibility: hidden;
-    transition: all 0.3s ease;
-
-    a,
-    .lightbox-btn {
-      display: inline-block;
-
-      padding: var(--p10) var(--p12);
-      margin: var(--m0) var(--m6);
-      font-size: var(--fs12);
-      font-family: var(--heading-font);
-      font-weight: var(--fw400);
-      background: transparent;
-      border: 1px solid var(--red-color);
-      color: var(--red-color);
-      cursor: pointer;
-      transition: 0.3s;
-
-      svg {
-        font-size: 14px;
-      }
-
-      &:hover {
-        background: var(--red-color);
-        color: var(--white-color);
-      }
-    }
-  }
-
-}
-
-.portfolio-img-gallery-wrapper-column4 {
-
-  padding: var(--p80) var(--p0);
-
-  ul.nav {
-
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    margin-bottom: var(--m40);
-    border-bottom: 1px solid #ddd;
-
-    .nav-link {
-
-      font-size: var(--fs18);
-      font-weight: var(--fw600);
-      background: none;
-      border: none;
-      padding: var(--p10) var(--p6);
-      color: var(--black-color);
-      cursor: pointer;
-
-      &.active {
-        color: var(--orange-color);
-        border-bottom: 2px solid var(--orange-color);
-      }
-
-      &:hover {
-        color: var(--orange-color);
-      }
-
-    }
-
-  }
-
-
-  /* GRID */
-
-  .gallery-grid-style-column4 {
-
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-auto-rows: 10px;
-    gap: 20px;
-
-  }
-
-  .gallery-item {
-    width: var(--width100);
-  }
-
-
-  /* IMAGE */
-
-  .portfolio_img {
-
-    position: relative;
-    overflow: hidden;
-
-    img {
-
-      width: var(--width100);
-      display: block;
-      cursor: pointer;
       transition: .4s;
-
     }
 
     &:hover img {
@@ -666,32 +517,27 @@
 
   .portfolio_img_overlay {
 
+    background: #000000a6;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
     position: absolute;
-    inset: 0;
-    background: rgba(0, 0, 0, .7);
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    opacity: 0;
-    visibility: hidden;
-    transition: .4s;
+    top: 30px;
+    left: 30px;
+    width: calc(100% - 60px);
+    height: calc(100% - 60px);
+    transition: all 0.5s ease;
 
   }
 
   .portfolio_img_wrapper:hover .portfolio_img_overlay {
-
     opacity: 1;
     visibility: visible;
-
   }
 
 
   /* ICON */
 
   .portfolio_img_text {
-
+    justify-content: center;
     display: flex;
     gap: 10px;
 
@@ -706,28 +552,20 @@
       transition: .3s;
 
       &:hover {
-
         background: var(--orange-color);
         border-color: var(--orange-color);
-
       }
-
     }
 
   }
 
 }
 
+
 // responsive css start 
 
 @include responsive(md) {
   .portfolio-img-gallery-wrapper3 .portfolio-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-@include responsive(tablet) {
-  .gallery-grid-style-column4 {
     grid-template-columns: repeat(3, 1fr);
   }
 }
@@ -754,9 +592,6 @@
 }
 
 @include responsive(mobile-lg) {
-  .gallery-grid-style-column4 {
-    grid-template-columns: repeat(2, 1fr);
-  }
 
   .portfolio-img-gallery-wrapper2 .gallery-grid-style2 {
     grid-template-columns: 1fr;
@@ -778,10 +613,6 @@
 }
 
 @include responsive(mobile-sm) {
-  .gallery-grid-style-column4 {
-    grid-template-columns: repeat(1, 1fr);
-  }
-
   .gallery-grid-style4 {
     grid-template-columns: repeat(1, 1fr);
   }

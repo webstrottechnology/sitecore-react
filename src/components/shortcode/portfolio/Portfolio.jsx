@@ -228,46 +228,14 @@ const Portfolio4 = () => {
   const [open, setOpen] = useState(false);
   const [index, setIndex] = useState(0);
 
-  const gridRef = useRef(null);
+  const currentData = gallery4Data.data[activeTab];
 
-  // ✅ get current tab data
-  const currentData = gallery4Data.data[activeTab] || [];
-
-  /* ✅ MASONRY FIX */
-  useEffect(() => {
-    const grid = gridRef.current;
-    if (!grid) return;
-
-    const rowHeight = 10;
-    const rowGap = 20;
-
-    const resizeAll = () => {
-      const items = grid.querySelectorAll(".gallery-item");
-
-      items.forEach((item) => {
-        const img = item.querySelector("img");
-
-        const resize = () => {
-          const height = img.getBoundingClientRect().height;
-          const span = Math.ceil((height + rowGap) / (rowHeight + rowGap));
-          item.style.gridRowEnd = "span " + span;
-        };
-
-        if (img.complete) resize();
-        else img.onload = resize;
-      });
-    };
-
-    resizeAll();
-    window.addEventListener("resize", resizeAll);
-
-    return () => window.removeEventListener("resize", resizeAll);
-  }, [currentData]);
+  const images = gallery4Data.data[activeTab] || [];
 
   return (
-    <section className="portfolio-img-gallery-wrapper4">
+    <section className="portfolio-img-gallery-wrapper4 portfolio-img-gallery-wrapper2">
       <div className="container custom-container-lg">
-        {/* ✅ Tabs */}
+        {/* TABS (AS IT IS) */}
         <ul className="nav">
           {gallery4Data.tabs.map((tab) => (
             <li key={tab.id}>
@@ -283,10 +251,10 @@ const Portfolio4 = () => {
           ))}
         </ul>
 
-        {/* ✅ Gallery */}
-        <div className="gallery-grid-style2" ref={gridRef}>
-          {currentData.map((item, i) => (
-            <div className={`gallery-item item-${i + 1}`} key={item.id}>
+        {/* UPDATED GRID (Portfolio2 style) */}
+        <div className="gallery-grid-style2">
+          {images.map((img, i) => (
+            <div className={`gallery-item item-${i + 1}`} key={i}>
               <div className="portfolio_img_wrapper">
                 <div className="portfolio_img">
                   {/* Image */}
@@ -299,7 +267,7 @@ const Portfolio4 = () => {
                     }}
                   />
 
-                  {/* Overlay */}
+                  {/* Overlay same as Portfolio2 */}
                   <div className="portfolio_img_overlay">
                     <div className="portfolio_img_text">
                       {/* Lightbox */}
@@ -326,130 +294,7 @@ const Portfolio4 = () => {
         </div>
       </div>
 
-      {/* ✅ Lightbox */}
-      <Lightbox
-        open={open}
-        close={() => setOpen(false)}
-        index={index}
-        slides={currentData.map((item) => ({ src: item.img }))}
-      />
-    </section>
-  );
-};
-
-const PortfolioColumn4 = () => {
-  const [activeTab, setActiveTab] = useState("AllProjects");
-  const [open, setOpen] = useState(false);
-  const [index, setIndex] = useState(0);
-
-  const gridRef = useRef(null);
-
-  const currentData = gallery4Data.data[activeTab];
-
-  const images = [
-    ...(currentData?.step1 || []),
-    ...(currentData?.step2 || []),
-    ...(currentData?.step3 || []),
-  ];
-
-  /* Masonry Height Fix */
-
-  useEffect(() => {
-    const grid = gridRef.current;
-
-    if (!grid) return;
-
-    const rowHeight = 10;
-    const rowGap = 20;
-
-    const resizeAll = () => {
-      const items = grid.querySelectorAll(".gallery-item");
-
-      items.forEach((item) => {
-        const img = item.querySelector("img");
-
-        const resize = () => {
-          const height = img.getBoundingClientRect().height;
-
-          const span = Math.ceil((height + rowGap) / (rowHeight + rowGap));
-
-          item.style.gridRowEnd = "span " + span;
-        };
-
-        if (img.complete) resize();
-        else img.onload = resize;
-      });
-    };
-
-    resizeAll();
-
-    window.addEventListener("resize", resizeAll);
-
-    return () => window.removeEventListener("resize", resizeAll);
-  }, [images]);
-
-  return (
-    <section className="portfolio-img-gallery-wrapper-column4">
-      <div className="container custom-container-lg">
-        {/* Tabs */}
-
-        <ul className="nav">
-          {gallery4Data.tabs.map((tab) => (
-            <li key={tab.id}>
-              <button
-                className={
-                  activeTab === tab.value ? "nav-link active" : "nav-link"
-                }
-                onClick={() => setActiveTab(tab.value)}
-              >
-                {tab.name}
-              </button>
-            </li>
-          ))}
-        </ul>
-
-        {/* Gallery */}
-
-        <div className="gallery-grid-style-column4" ref={gridRef}>
-          {images.map((img, i) => (
-            <div className="gallery-item" key={i}>
-              <div className="portfolio_img_wrapper">
-                <div className="portfolio_img">
-                  <img
-                    src={img}
-                    alt="portfolio"
-                    onClick={() => {
-                      setIndex(i);
-                      setOpen(true);
-                    }}
-                  />
-
-                  <div className="portfolio_img_overlay">
-                    <div className="portfolio_img_text">
-                      <button
-                        className="lightbox-btn"
-                        onClick={() => {
-                          setIndex(i);
-                          setOpen(true);
-                        }}
-                      >
-                        <FaPlus />
-                      </button>
-
-                      <a href="#">
-                        <FaLink />
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
-
-      {/* Lightbox */}
-
+      {/* LIGHTBOX SAME */}
       <Lightbox
         open={open}
         close={() => setOpen(false)}
@@ -462,4 +307,4 @@ const PortfolioColumn4 = () => {
 };
 
 export default Portfolio1;
-export { Portfolio2, Portfolio3, Portfolio4, PortfolioColumn4 };
+export { Portfolio2, Portfolio3, Portfolio4 };
