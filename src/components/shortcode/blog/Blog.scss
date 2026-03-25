@@ -657,6 +657,23 @@
     }
 }
 
+//  RTL Version Css Start //
+
+[dir="rtl"] {
+    .Sitecorehome_blog_wrapper {
+        .blog__container {
+            .blog__wrapper {
+                .blog__right {
+                    .blog__item {
+                        direction: rtl;
+                        text-align: right;
+                    }
+                }
+            }
+        }
+    }
+}
+
 
 
 

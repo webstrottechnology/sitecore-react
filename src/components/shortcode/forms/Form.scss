@@ -1823,6 +1823,16 @@
     }
 }
 
+//  RTL Version css Start  //
+
+[dir="rtl"] {
+    .appointment_section .appointment_wrapper .left {
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        margin-right: 20px;
+    }
+}
 
 // resposnsive css start 
 

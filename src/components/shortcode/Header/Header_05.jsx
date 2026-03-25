@@ -5,7 +5,7 @@ import Logo from "../../../assets/images/home-01/logo.png";
 import MegaImg from "../../../assets/images/home-01/mega-menu-img.png";
 import { Link } from "react-router-dom";
 
-const Header_05 = () => {
+const Header_05 = ({ direction, setDirection }) => {
   const [sidebar, setSidebar] = useState(false);
   const [mobileDrop, setMobileDrop] = useState(null);
   const [searchOpen, setSearchOpen] = useState(false);
@@ -21,31 +21,10 @@ const Header_05 = () => {
     { label: "Home Cafe", path: "/home-cafe" },
   ];
 
-  // const homeLinks2 = [
-  //   "Home Single Property",
-  //   "Home Restaurant",
-  //   "Home Interior",
-  //   "Home Solar Energy",
-  //   "Home Wedding",
-  //   "Home Dating",
-  //   "Home Corporate2",
-  //   "Home Job Portal",
-  //   "Home Lawyer",
-  // ];
-
-  // const homeLinks3 = [
-  //   "Home Corporate 3",
-  //   "Home Corporate 4",
-  //   "Home Dental",
-  //   "Home Interior 2",
-  //   "Home Driving School",
-  //   "Home Spa",
-  // ];
-
   return (
     <>
       <header className="header_05_section">
-        <div className="container">
+        <div className="container custom-container-lg">
           {/* LOGO */}
           <div className="logo">
             <Link to="/">
@@ -70,21 +49,6 @@ const Header_05 = () => {
                     </Link>
                   ))}
                 </div>
-
-                {/* <div>
-                  <h4>HOME 02</h4>
-                  {homeLinks2.map((item, i) => (
-                    <a key={i}>{item}</a>
-                  ))}
-                </div> */}
-
-                {/* <div>
-                  <h4>HOME 03</h4>
-
-                  {homeLinks3.map((item, i) => (
-                    <a key={i}>{item}</a>
-                  ))}
-                </div> */}
               </div>
             </li>
             {/* NORMAL */}
@@ -200,7 +164,16 @@ const Header_05 = () => {
               className="search-icon"
               onClick={() => setSearchOpen(true)}
             />
-            <button className="mintGreenFilledBtn md-btn">Let's Talk</button>
+            {/* ✅ RTL BUTTON */}
+            <button
+              className="rtl-toggle-btn"
+              onClick={() => setDirection(direction === "ltr" ? "rtl" : "ltr")}
+            >
+              {direction === "ltr" ? "RTL" : "LTR"}
+            </button>
+            <Link to="/contact" className="mintGreenFilledBtn md-btn">
+              Let's Talk
+            </Link>
 
             {/* MOBILE MENU BUTTON */}
 

@@ -381,6 +381,32 @@
     }
 }
 
+//   RTL Version css start //
+
+[dir="rtl"] {
+    .BlogSinglePagesSection {
+        .latestNewsCardInner {
+            .latestNewsList {
+                flex-direction: row-reverse;
+                margin-top: 20px;
+            }
+        }
+
+        .coment {
+            .commentGroup {
+                .commentRight {
+                    .commentTop {
+                        .commentShare{
+                                 left: 0;
+                                 right:inherit;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
 //  resposnive css start //
 
 

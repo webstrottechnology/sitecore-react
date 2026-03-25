@@ -17,7 +17,6 @@
   z-index: 99;
 
   .container {
-    max-width: 1600px;
     margin: auto;
     display: flex;
     justify-content: space-between;
@@ -336,6 +335,88 @@
 }
 
 
+// RTL CSS START  //
+
+.rtl-toggle-btn {
+  padding: var(--p6) var(--p12);
+  font-size: var(--fs16);
+  background: transparent;
+  color: var(--white-color);
+  border: none;
+  cursor: pointer;
+  border-radius: var(--br4);
+  display: inline-block !important;
+  border: 1px solid var(--white-color);
+}
+
+[dir="rtl"] {
+  .header_05_section {
+    .container {
+      flex-direction: row-reverse;
+    }
+
+    .nav {
+      direction: rtl;
+
+      li {
+        text-align: right;
+
+        .mega-menu-box {
+          text-align: right;
+
+          div {
+            a {
+              text-align: right;
+
+              &:hover {
+                padding-right: var(--p8);
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .right {
+      flex-direction: row-reverse;
+    }
+  }
+
+
+  .mobile-sidebar.show {
+    right: 0;
+  }
+
+  .mobile-sidebar {
+    .close {
+      left: inherit;
+      right: 280px;
+    }
+
+    ul {
+      li {
+        .mobile-title {
+          direction: rtl;
+          text-align: right; // text right side
+        }
+      }
+    }
+  }
+
+  .mobile-dropdown {
+    text-align: right;
+  }
+
+  .search-box {
+    input {
+      text-align: right;
+    }
+  }
+
+
+}
+
+
 
 /* RESPONSIVE */
 
@@ -350,7 +431,7 @@
 
   .header_05_section .right {
     display: flex;
-    gap: 15px;
+    gap: 10px;
     color: var(--white-color);
     align-items: center;
   }
@@ -358,6 +439,8 @@
   .header_05_section .logo img {
     max-width: 140px;
   }
+
+
 }
 
 @include responsive(tablet-sm) {
@@ -369,11 +452,48 @@
     display: block;
   }
 
-  .header_05_section .container {
-    padding: var(--p20);
-  }
-
   .header_05_section .right button {
     display: none;
   }
+
+  .header_05_section .right {
+    gap: 12px;
+  }
+
+  .header_05_section .logo img {
+    max-width: 140px;
+  }
+
+
+  .header_05_section .container {
+    padding: 20px;
+  }
+
+}
+
+
+@include responsive(mobile-sm) {
+
+  .rtl-toggle-btn {
+    font-size: var(--fs12);
+    padding: 8px 8px;
+  }
+
+  .header_05_section .container {
+    padding: 16px 10px;
+  }
+
+  .header_05_section .mintGreenFilledBtn.md-btn {
+    padding: 8px 10px;
+    font-size: var(--fs12);
+  }
+
+  .header_05_section .logo img {
+    max-width: 90px;
+  }
+
+  .header_05_section .right {
+    gap: 6px;
+  }
+
 }

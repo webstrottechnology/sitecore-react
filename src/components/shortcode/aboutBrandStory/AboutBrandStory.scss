@@ -124,6 +124,47 @@
     }
 }
 
+// RTL Version Css Start //
+
+
+[dir="rtl"] {
+    .innerPagesBrandStory {
+        .location-wrapper {
+            .location-content {
+                .commHeading1 {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: end;
+                    align-items: end;
+                }
+            }
+
+            .location-accord {
+                .accordion {
+                    .accordion-item {
+                        .accordion-header {
+                            .accordion-button {
+                                flex-direction: row-reverse;
+
+                                .d-flex {
+                                    flex-direction: row-reverse;
+                                }
+                            }
+
+                            .custom-arrow {
+                                transform: rotate(180deg);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+// Responsive scss start //
+
 @include responsive(md) {
     .innerPagesBrandStory .location-wrapper .location-content .commHeading1 h4 {
         font-size: var(--fs30);
