@@ -1560,7 +1560,9 @@
                     .nav-link {
                         color: var(--white-color);
                         font-size: var(--fs16);
-
+                        display: flex;
+                        align-items: center;
+                        gap: 3px;
                         padding: 0;
 
                         i {
@@ -1656,6 +1658,27 @@
     to {
         opacity: 1;
         transform: translateX(0);
+    }
+}
+
+// RTl version css start //
+
+
+[dir="rtl"] {
+    .SiteCore_footer_Wrapper {
+        .footerInner {
+            .footerInnerCol2 {
+                .nav {
+                    .nav-item {
+                        .nav-link {
+                            justify-content: end;
+                            flex-direction: row-reverse;
+                            gap: 10px;
+                        }
+                    }
+                }
+            }
+        }
     }
 }
 

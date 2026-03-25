@@ -49,7 +49,6 @@
         width: 100%;
         padding: var(--p30);
         border-radius: var(--br16);
-        text-align: left;
         position: relative;
         cursor: default;
         transition: var(--transition2);
@@ -99,6 +98,9 @@
           font-weight: var(--fw700) !important;
           text-decoration: none;
           transition: var(--transition2);
+          display: flex;
+          align-items: center;
+          gap: 6px;
 
           &:hover {
             text-decoration: underline;
@@ -199,6 +201,7 @@
   .container {
     display: flex;
     align-items: flex-start;
+    gap: 30px;
   }
 
   /* ================= LEFT SIDE ================= */
@@ -243,7 +246,7 @@
           content: "";
           position: absolute;
           left: 0;
-          top: 7px;
+          top: 14px;
           width: 8px;
           height: 8px;
           border-radius: 50%;
@@ -535,6 +538,60 @@
 }
 
 // +++++++++++++Mobile App Design css End +++++++++++
+
+// Rtl Version Css Start //
+
+[dir="rtl"] {
+  .SiteCoreServices_wrapper {
+    .container {
+      .services_list {
+        .services_Card {
+          a {
+            direction: rtl;
+            flex-direction: row-reverse; // 🔥 icon right side
+            text-align: right;
+            justify-content: flex-end;
+          }
+        }
+      }
+    }
+  }
+
+  .MobileAppDesignWrapper {
+    .mobile-content {
+      align-items: end;
+    }
+  }
+
+  .SitecoreChooseData_wrapper {
+    .data_left_content {
+      display: flex;
+      flex-direction: column;
+      align-items: end;
+
+      ul {
+        li {
+          padding-left: inherit;
+          padding-right: 22px;
+
+          &::before {
+            left: inherit;
+            right: 0;
+          }
+        }
+      }
+
+    }
+
+    .data_right_content {
+      .card {
+        .icon {
+          text-align: justify;
+        }
+      }
+    }
+  }
+}
 
 
 

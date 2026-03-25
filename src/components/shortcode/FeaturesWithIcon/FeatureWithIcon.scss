@@ -923,6 +923,22 @@
     }
 }
 
+//  rtl Version css start   //
+
+[dir="rtl"] {
+    .SitecoreinnerPageWhatWeDo {
+        .innerPageWhatWeDoCard {
+            align-items: end;
+
+            p {
+                text-align: right;
+            }
+        }
+    }
+}
+
+
+
 //  responsive css start //
 
 @include responsive(tablet) {
