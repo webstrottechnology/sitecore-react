@@ -305,6 +305,43 @@
 
 }
 
+// RTL Version css start //
+
+[dir="rtl"] {
+    .checkoutPageSection {
+        .checkoutInner {
+            .checkoutAside {
+                .paymentMethod {
+                    .paymentformGroup {
+                        display: flex;
+                        flex-direction: row-reverse;
+                    }
+                }
+
+                .custom-radios {
+
+                    label {
+                        padding-left: 0px;
+                        padding-right: 30px;
+
+                        &::before {
+                            left: inherit;
+                            right: -4px;
+                        }
+
+                        &::after {
+                            left: inherit;
+                            right: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+//  Responsive css start //
+
 @include responsive(laptop) {
 
     .checkoutPageSection .checkoutInner .checkoutAside .asideHeading h4,

@@ -120,17 +120,6 @@
 
 }
 
-.read-more-btn {
-    background: var(--primary-color);
-    border: none;
-    padding: var(--p6) var(--p16);
-    border-radius: var(--br20);
-    font-size: var(--fs12);
-    font-weight: var(--fw400);
-    font-family: var(--heading-font);
-    color: var(--white-color);
-    cursor: pointer;
-}
 
 //++++++++++++++++++++ ACCORDIAN ONE CSS END +++++++++++++++++++
 
@@ -1110,6 +1099,115 @@
 }
 
 //++++++++++++++++++++ ACCORDIAN TEN CSS END +++++++++++++++++++
+
+// RTL Version css Start //
+
+[dir="rtl"] {
+    .accordian-container {
+        .accordian-box {
+            .accordian-item {
+                .accordian-header {
+                    text-align: right;
+                    flex-direction: row-reverse;
+                }
+            }
+        }
+    }
+
+    .accordianTwo {
+        .accordianTwo-card {
+            .accordianTwo-item {
+                .accordianTwo-header {
+                    flex-direction: row-reverse;
+
+                    .accordianTwo-count {
+                        flex-direction: row-reverse;
+                    }
+                }
+            }
+        }
+    }
+
+    .accordianThree {
+        .accordianThree-content {
+            p {
+                text-align: right;
+            }
+        }
+
+        .accordianThree-header {
+            flex-direction: row-reverse;
+
+            .icon {
+                transform: rotate(180deg);
+            }
+        }
+    }
+
+    .accordionFive {
+        .accordion-list {
+            .accordion-item {
+                .accordion-header {
+                    flex-direction: row-reverse;
+
+                    .left {
+                        justify-content: end;
+                    }
+                }
+            }
+        }
+    }
+
+    .accordionSix {
+        .faq-card {
+            .faq-list {
+                .faq-item {
+                    .faq-question {
+                        flex-direction: row-reverse;
+                    }
+                }
+            }
+        }
+    }
+
+    .accordionSeven {
+        .accordion-list {
+            .accordion-item {
+                .accordion-header {
+                    flex-direction: row-reverse;
+                }
+            }
+        }
+    }
+
+    .accordion-eight {
+        .accordionEight-wrapper {
+            .accordion-item {
+                .accordion-header {
+                    flex-direction: row-reverse;
+                }
+            }
+        }
+    }
+
+    .accordion-nine {
+        .faq-list {
+            .faq-item {
+                .faq-question {
+                    flex-direction: row-reverse;
+                }
+            }
+        }
+    }
+
+    .accordionTen {
+        .accordianTen-wrapper {
+            .acc-header {
+                flex-direction: row-reverse;
+            }
+        }
+    }
+}
 
 
 

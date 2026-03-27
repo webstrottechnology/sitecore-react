@@ -882,6 +882,35 @@
 }
 
 
+//  RTL Version css Start  //
+
+[dir="rtl"] {
+  .list_wrapper3 {
+    .wrapper3_content {
+      .music-list {
+        .music-item {
+          flex-direction: row-reverse;
+
+          .info {
+            text-align: right;
+          }
+        }
+      }
+    }
+  }
+
+  .list_wrapper4 {
+    .skills-container {
+      .skills-list {
+        .skill-card {
+          flex-direction: row-reverse;
+          gap: 30px;
+        }
+      }
+    }
+  }
+}
+
 /* ===============================
    RESPONSIVE CSS
 ================================ */

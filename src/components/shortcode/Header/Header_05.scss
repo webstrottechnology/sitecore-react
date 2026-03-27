@@ -13,8 +13,11 @@
 .header_05_section {
   width: var(--width100);
   background: var(--temp1BlueColor);
-  position: relative;
-  z-index: 99;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
 
   .container {
     margin: auto;

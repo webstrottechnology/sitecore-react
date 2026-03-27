@@ -935,6 +935,22 @@
             }
         }
     }
+
+    .features-with-icon-four {
+        .features_container {
+            .features_card {
+                align-items: end;
+            }
+        }
+    }
+
+    .features-with-icon-five {
+        .features_container {
+            .feature-card {
+                flex-direction: row-reverse;
+            }
+        }
+    }
 }
 
 

@@ -786,6 +786,95 @@
     }
 }
 
+//  RTL Version css start //
+
+[dir="rtl"] {
+    .alert-wrapper-one {
+        .alert {
+            flex-direction: row-reverse;
+
+            .alert_close {
+                left: 14px;
+                right: inherit;
+            }
+        }
+    }
+
+    .alert-wrapper-two {
+        .g-alert {
+            flex-direction: row-reverse;
+
+            .g-alert_close {
+                left: 14px;
+                right: inherit;
+            }
+        }
+    }
+
+    .alert-wrapper-three {
+        .smart-alert {
+            display: flex;
+            flex-direction: column;
+            align-items: end;
+
+            .smart-alert_content {
+                width: 100%;
+            }
+
+            .smart-alert_close {
+                left: 12px;
+                right: inherit;
+            }
+        }
+    }
+
+    .alert-wrapper-Four {
+        .alert {
+            flex-direction: row-reverse;
+        }
+    }
+
+    .alert-wrapper-Five {
+        .alert-box {
+            flex-direction: row-reverse;
+
+            .close {
+                left: 18px;
+                right: inherit;
+            }
+        }
+    }
+
+    .alert-wrapper-Six {
+        .status-alert {
+            flex-direction: row-reverse;
+
+            .close-btn {
+                left: 16px;
+                right: inherit;
+            }
+
+            .content {
+                .meta {
+                    justify-content: end;
+                }
+            }
+        }
+    }
+
+    .alert-wrapper-Eight {
+        .alert-card {
+            flex-direction: row-reverse;
+
+            .alert-close {
+                right: inherit;
+                left: 14px;
+            }
+        }
+    }
+}
+
+
 
 
 // -----------  responsive css start ----------- //

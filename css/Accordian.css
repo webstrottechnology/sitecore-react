@@ -96,17 +96,6 @@
   margin-bottom: var(--m10);
 }
 
-.read-more-btn {
-  background: var(--primary-color);
-  border: none;
-  padding: var(--p6) var(--p16);
-  border-radius: var(--br20);
-  font-size: var(--fs12);
-  font-weight: var(--fw400);
-  font-family: var(--heading-font);
-  color: var(--white-color);
-  cursor: pointer;
-}
 
 .accordianTwo {
   width: var(--width100);

@@ -30,8 +30,8 @@
     .gradientbtnbox {
         display: flex;
         justify-content: center;
+        flex-wrap: wrap;
+        row-gap: 15px; // space between buttons
         gap: 30px;
     }
 }
-
-
