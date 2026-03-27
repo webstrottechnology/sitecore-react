@@ -236,6 +236,22 @@
     }
 }
 
+// RTL version css start //
+
+[dir="rtl"] {
+    .SitecoreProductSingle {
+        .rightSection {
+            .buttons {
+                flex-direction: row-reverse;
+            }
+        }
+    }
+}
+
+
+
+//  Responsive css start //
+
 @include responsive(tablet-sm) {
     .SitecoreProductSingle .leftSection .imageBox {
         width: var(--width100);

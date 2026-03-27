@@ -193,6 +193,20 @@
 
 }
 
+// Rtl Version css Start //
+
+[dir="rtl"] {
+    .ipProductInfo {
+        .commentPost {
+            flex-direction: row-reverse;
+        }
+
+        .postGroup {
+            flex-direction: row-reverse;
+        }
+    }
+}
+
 // responsive css start 
 
 @include responsive(mobile) {

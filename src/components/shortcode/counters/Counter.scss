@@ -567,6 +567,24 @@
 
 // ++++++++++++++++++ counter Eight css end ++++++++++++++
 
+//  RTL Version css start  //
+
+[dir="rtl"] {
+  .counterFour {
+    .counterFour-content {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+    }
+
+    .counterFour-grid {
+      .counterFour-item {
+        justify-content: end;
+      }
+    }
+  }
+}
+
 
 
 // responsive css start 

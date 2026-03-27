@@ -1438,6 +1438,24 @@
                         }
                     }
                 }
+
+                .about_list {
+                    li {
+                        padding-left: inherit;
+                        padding-right: 24px;
+
+                        &::before {
+                            content: "▶";
+                            position: absolute;
+                            right: 0;
+                            left: inherit;
+                            top: 0;
+                            color: var(--seaGreenColor);
+                            font-size: var(--fs16);
+                            font-weight: var(--fw700);
+                        }
+                    }
+                }
             }
         }
     }
