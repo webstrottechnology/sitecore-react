@@ -244,6 +244,13 @@
             .buttons {
                 flex-direction: row-reverse;
             }
+
+            .offers {
+                .offer {
+                    flex-direction: row-reverse;
+                }
+
+            }
         }
     }
 }

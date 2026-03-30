@@ -5,22 +5,26 @@ import brand3 from "../../../assets/images/home-01/brand3.png";
 import brand4 from "../../../assets/images/home-01/brand4.png";
 import { ClientLogoData1, clientLogoData2 } from "./ClientData";
 import "./Client.scss";
-
+import { AboutBannerBreadCrumb } from "../breadcrumb/Breadcrumb";
+import sitecoreBg from "../../../assets/images/sitecoreBreadCrumb_bg_img.png";
 const ClientLogos = () => {
   return (
-    <div className="client2-wrapper padd-100 w-100">
-      <div className="container custom-container-lg">
-        <div className="row">
-          {ClientLogoData1.map((logo) => (
-            <div key={logo.id} className="col-lg-3 col-md-6 col-sm-12 col-12">
-              <a href={logo.link} target="_blank" rel="noopener noreferrer">
-                <img src={logo.imgSrc} alt={logo.alt} />
-              </a>
-            </div>
-          ))}
+    <>
+      <AboutBannerBreadCrumb title="Client Logos" bgImage={sitecoreBg} />
+      <div className="client2-wrapper padd-100 w-100">
+        <div className="container custom-container-lg">
+          <div className="row">
+            {ClientLogoData1.map((logo) => (
+              <div key={logo.id} className="col-lg-3 col-md-6 col-sm-12 col-12">
+                <a href={logo.link} target="_blank" rel="noopener noreferrer">
+                  <img src={logo.imgSrc} alt={logo.alt} />
+                </a>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

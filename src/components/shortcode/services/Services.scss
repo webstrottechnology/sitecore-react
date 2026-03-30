@@ -350,7 +350,7 @@
   }
 }
 
-// RTL Version Css Start //
+
 
 
 /* ================= ICON ANIMATION ================= */
@@ -544,7 +544,33 @@
 
 // Rtl Version Css Start //
 
+
+// RTL Version Css Start //
+
 [dir="rtl"] {
+  .SiteCoreServices_wrapper {
+    .container {
+      .services_list {
+        .services_Card {
+          display: flex;
+          flex-direction: column;
+          align-items: end;
+        }
+      }
+    }
+  }
+
+  .SitecoreChooseData_wrapper {
+    .data_right_content {
+      .card {
+        &::before {
+          left: inherit;
+          right: -38px;
+        }
+      }
+    }
+  }
+
   .SiteCoreServices_wrapper {
     .container {
       .services_list {
@@ -589,7 +615,7 @@
     .data_right_content {
       .card {
         .icon {
-          text-align: justify;
+          text-align: end;
         }
       }
     }

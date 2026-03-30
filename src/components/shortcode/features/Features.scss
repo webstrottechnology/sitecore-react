@@ -1469,6 +1469,25 @@
             }
         }
     }
+
+    .connectBusiness {
+        .connectBusinessContainer {
+            .connectBusinessContent {
+                .connectBusinessContactInner {
+                    .connectBusinessList {
+                        ul {
+                            li {
+
+                                display: flex;
+                                flex-direction: row-reverse;
+                                gap: 10px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 
 

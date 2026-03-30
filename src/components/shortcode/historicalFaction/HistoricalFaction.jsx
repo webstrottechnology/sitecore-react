@@ -149,7 +149,7 @@ const HistoricalFiction = () => {
 
               {/* stories list */}
               <div className="stories-list-box">
-                <h2>The Stories Are:</h2>
+                <h2>The Stories Are : </h2>
 
                 <ul className="nav flex-column">
                   <li>

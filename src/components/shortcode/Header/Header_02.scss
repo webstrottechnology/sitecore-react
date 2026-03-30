@@ -346,6 +346,15 @@
     }
 }
 
+// RTL Version Css Start //
+
+
+[dir="rtl"] {
+    .header-02-section .header-02-wrapper .banner .banner-right .accordion .acc-item h4 {
+        flex-direction: row-reverse;
+    }
+}
+
 
 /* ================= RESPONSIVE ================= */
 
@@ -381,9 +390,8 @@
     .header-02-section .header-02-wrapper .banner .banner-center img {
         max-width: 400px;
     }
-     .header-02-section .header-02-wrapper .banner .banner-center img {
+
+    .header-02-section .header-02-wrapper .banner .banner-center img {
         max-width: 250px;
     }
 }
-
-
