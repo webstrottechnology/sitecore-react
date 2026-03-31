@@ -60,6 +60,7 @@ import FooterOne, {
   FooterTen,
   FooterThree,
   FooterTwo,
+  HomeCafeFooter,
   Sitecorefooter,
 } from "../shortcode/footer/Footer";
 
@@ -386,6 +387,7 @@ const ComponentsPage = () => {
               <Sitecorefooter />
               <FooterNine />
               <FooterTen />
+              <HomeCafeFooter />
             </>
           }
         />
@@ -456,7 +458,6 @@ const ComponentsPage = () => {
               <Portfolio2 />
               <Portfolio3 />
               <Portfolio4 />
-             
             </>
           }
         />
