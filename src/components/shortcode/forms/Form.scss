@@ -1917,20 +1917,142 @@
         }
 
         .forgot-password {
-           justify-content: end;
+            justify-content: end;
         }
     }
+
     .formFour-wrapper {
-	.formFour-container {
-		.login-form {
-			.form-group {
-				.form-input {
-					text-align: right;
-				}
-			}
-		}
-	}
-}
+        .formFour-container {
+            .login-form {
+                .form-group {
+                    .form-input {
+                        text-align: right;
+                    }
+                }
+
+                .checkbox-group {
+                    .checkbox-label {
+                        flex-direction: row-reverse;
+                    }
+                }
+            }
+        }
+    }
+
+    .formOne-container-box {
+        input {
+            text-align: right;
+        }
+    }
+
+    .formFive-wrapper {
+        .formFive-login-card {
+            .login-left {
+                .form-box {
+                    input {
+                        text-align: right;
+                    }
+                }
+            }
+        }
+    }
+
+    .form-seven__form {
+        input {
+            text-align: right;
+        }
+
+        textarea {
+            text-align: right;
+        }
+    }
+
+    .form-seven__info {
+        .info-item {
+            justify-content: end;
+        }
+    }
+
+    .formEight-wrapper {
+        .form-group {
+            .form-input {
+                text-align: right;
+            }
+
+            .form-textarea {
+                text-align: right;
+            }
+        }
+    }
+
+    .FormNine-wrapper {
+        .contact-card {
+            .contact-left {
+                .input-group {
+                    input {
+                        text-align: right;
+                    }
+
+                    textarea {
+                        text-align: right;
+                    }
+                }
+            }
+        }
+
+        .contact-left {
+            p {
+                text-align: right;
+                max-width: 100%;
+            }
+        }
+    }
+
+    .FourteencommentBox {
+        .commentBoxInner {
+            .commentFormGroup {
+                input {
+                    text-align: right;
+                }
+
+                textarea {
+                    text-align: right;
+                }
+            }
+        }
+    }
+
+    .formten-wrapper {
+        .formten__container {
+            .formten__form {
+
+                form {
+                    align-items: flex-end;
+
+                    .flexBox {
+                        width: 100%;
+                    }
+
+                    input {
+                        text-align: right;
+                    }
+
+                    input[type="text"] {
+                        width: 100%;
+                    }
+
+                    textarea {
+                        text-align: right;
+                        width: 100%;
+                    }
+
+                    .remember {
+                        flex-direction: row-reverse;
+                    }
+                }
+            }
+        }
+    }
 }
 
 // resposnsive css start 

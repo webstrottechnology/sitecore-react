@@ -5,6 +5,13 @@ import partner4 from "../../../assets/images/partner/partner-logo4.png";
 import partner5 from "../../../assets/images/partner/partner-logo5.png";
 import partner6 from "../../../assets/images/partner/partner-logo6.png";
 
+import social1 from "../../../assets/images/homecafe/social1.png";
+import social2 from "../../../assets/images/homecafe/social2.png";
+import social3 from "../../../assets/images/homecafe/social3.png";
+import social4 from "../../../assets/images/homecafe/social4.png";
+import social5 from "../../../assets/images/homecafe/social5.png";
+import social6 from "../../../assets/images/homecafe/social6.png";
+
 import {
   FaFacebookF,
   FaTwitter,
@@ -19,6 +26,10 @@ import {
   FaHeart,
   FaArrowUp,
 } from "react-icons/fa";
+
+import { MdEmail } from "react-icons/md";
+
+import { IoLocation } from "react-icons/io5";
 
 import { FaXTwitter } from "react-icons/fa6";
 import f10logo from "../../../assets/images/footer10-logo.svg";
@@ -458,4 +469,50 @@ export const SiteCorefooterLinks = {
     text: "Help & Support",
     phone: "+22 54792 01479",
   },
+};
+
+export const SitecoreCafeFooterData = {
+  contact: [
+    {
+      id: 1,
+      icon: <FaPhoneAlt />,
+      text: "+48 35461 35480",
+      link: "tel:+483546135480",
+    },
+    {
+      id: 2,
+      icon: <MdEmail />,
+      text: "aprl132@example.com",
+      link: "mailto:aprl132@example.com",
+    },
+    {
+      id: 2,
+      icon: <IoLocation />,
+      text: "2462 Williams LaneWichita, KS 67202",
+      link: "#",
+    },
+  ],
+  quickLinks: [
+    { name: "About Us", path: "/about" },
+    { name: "Services", path: "/services" },
+    { name: "Our Blog", path: "/blog" },
+    { name: "Our Team", path: "/team" },
+    { name: "Portfolio", path: "/portfolio" },
+    { name: "Product", path: "/product" },
+    { name: "Login/Register", path: "/login" },
+  ],
+
+  moreinfo: [
+    { name: "Contact Us", path: "/contact" },
+    { name: "Comming Soon", path: "/services" },
+    { name: "Checkout", path: "/blog" },
+    { name: "404 Error", path: "/team" },
+  ],
+  socials: [
+    { icon: <FaFacebookF />, link: "#" },
+    { icon: <FaTwitter />, link: "#" },
+    { icon: <FaLinkedinIn />, link: "#" },
+    { icon: <FaInstagram />, link: "#" },
+  ],
+  instagram: [social1, social2, social3, social4, social5, social6],
 };

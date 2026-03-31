@@ -1664,6 +1664,159 @@
     }
 }
 
+
+//  HomeCafe Footer Css Start  //
+
+.cafe-footer-main-wrapper {
+    width: 100%;
+    height: 100%;
+    background-image: url('../../../assets/images/homecafe/CafeFooterBgImg.png');
+    background-position: top center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: var(--p80) var(--p0) var(--p30);
+
+    .footer-main-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        padding-top: 60px;
+        display: flex;
+        gap: 40px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.3882352941);
+        padding-bottom: 40px;
+        color: var(--white-color);
+
+        .footer-column {
+            flex: 1;
+            min-width: 250px;
+        }
+
+        .footer-contact-wrapper {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-top: 20px;
+
+            .contact-icon {
+                background: rgba(255, 255, 255, 0.1);
+                width: 45px;
+                height: 45px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 50%;
+                transition: 0.3s;
+
+                &:hover {
+                    background: var(--primaryGreen);
+                }
+            }
+
+            p {
+                margin: 0;
+                font-size: 15px;
+            }
+        }
+
+        h4 {
+            font-size: 22px;
+            margin-bottom: 25px;
+            font-weight: 600;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            margin-bottom: 25px;
+
+            a {
+                color: var(--white-color);
+                text-decoration: none;
+                font-size: 15px;
+                transition: 0.3s;
+
+                &:hover {
+                    color: var(--primaryGreen);
+                }
+            }
+        }
+
+        .social-icon {
+            display: flex;
+            gap: 12px;
+
+            a {
+                width: 40px;
+                height: 40px;
+                border: 1px solid rgba(255, 255, 255, 0.3);
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: var(--white-color);
+                transition: 0.3s;
+
+                &:hover {
+                    background: var(--primaryGreen);
+                    border-color: var(--primaryGreen);
+                }
+            }
+        }
+
+        .media-wrapper {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+
+            .media-img {
+                position: relative;
+                overflow: hidden;
+                border-radius: 4px;
+
+                img {
+                    width: 100%;
+                    height: auto;
+                    display: block;
+                }
+
+                .insta-icon {
+                    position: absolute;
+                    inset: 0;
+                    background: rgba(81, 131, 94, 0.8);
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    opacity: 0;
+                    transition: 0.4s;
+                }
+
+                &:hover .insta-icon {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+
+    .footer-bottom-wrapper {
+        text-align: center;
+        padding-top: 30px;
+
+        p {
+            font-size: 14px;
+            opacity: 0.8;
+        }
+
+        a {
+            color: var(--primaryGreen);
+            text-decoration: none;
+            font-weight: 600;
+        }
+    }
+}
+
 // RTl version css start //
 
 
@@ -1756,7 +1909,21 @@
             }
         }
     }
+
+    .SiteCore_footer_Wrapper {
+        .footerInner {
+            .footerInnerCol1 {
+                .subscribeGroup {
+                    input {
+                        text-align: right;
+                    }
+                }
+            }
+        }
+    }
 }
+
+
 
 //  responsive css start  //
 
