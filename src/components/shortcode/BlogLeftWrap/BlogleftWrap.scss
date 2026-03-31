@@ -37,13 +37,6 @@
             color: var(--black-color);
             transition: 0.3s;
 
-            &:hover {
-                color: var(--orange-color);
-            }
-        }
-
-        &:hover {
-            color: var(--orange-color);
         }
 
     }
@@ -317,6 +310,50 @@
             font-weight: 600;
             color: var(--orange-color);
             cursor: pointer;
+        }
+    }
+}
+
+
+//   RTL Version css start //
+
+
+[dir="rtl"] {
+    .blogLeftArticles {
+        .popularTags {
+            .tagGroup {
+                ul {
+                    flex-direction: row-reverse;
+                }
+            }
+        }
+
+        .ipSocialMedia {
+            .ipSocialMediaIcon {
+                ul {
+                    justify-content: end;
+                }
+            }
+        }
+
+        .searchKeyword {
+            .searchKeywordInner {
+                .input-group {
+                    flex-direction: row-reverse;
+
+                    .form-control {
+                        text-align: right;
+                    }
+                }
+            }
+        }
+
+        .postCategories {
+            .list-group {
+                .list-group-item {
+                    flex-direction: row-reverse;
+                }
+            }
         }
     }
 }

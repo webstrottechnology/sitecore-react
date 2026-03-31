@@ -571,6 +571,27 @@
   }
 }
 
+// RTL Version Css Start //
+
+[dir="rtl"] {
+  .ipProductGridWithSidebar {
+    .ipProductGridViewInner {
+      .ipProductGridLeft {
+        .ipFilterCard {
+          .ipCategoryList {
+            li {
+              a {
+                   flex-direction: row-reverse;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
 //  resposnive css start //
 
 

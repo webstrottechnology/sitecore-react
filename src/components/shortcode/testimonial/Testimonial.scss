@@ -1140,6 +1140,40 @@
     }
 }
 
+//  RTL Version Css Start //
+
+[dir="rtl"] {
+    .testimonial11_wrapper {
+        .container {
+            .swiper {
+                .testimonial11_card {
+                    .testimonial11_top {
+                        flex-direction: row-reverse;
+
+                        .testimonial_top_left {
+                            align-items: end;
+                        }
+
+                        .quote-icon {
+                            left: 0px;
+                            right: inherit;
+                            transform: rotate(180deg);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .testimonial_wrapper {
+        .bottom_text {
+            justify-content: end;
+            flex-direction: row-reverse;
+        }
+    }
+}
+
+
 @include responsive(lg) {
     .dark-btn .slick-prev {
         right: 39rem;

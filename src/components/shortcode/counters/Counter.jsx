@@ -200,7 +200,7 @@ const CounterItem2 = ({ icon, value, label }) => {
 const CounterFour = () => {
   return (
     <div className="counterFour">
-      <div className="container counterFour-wrapper">
+      <div className="container custom-container-lg counterFour-wrapper">
         {/* Left content */}
         <div className="counterFour-content">
           <h2>Consulting Successes</h2>

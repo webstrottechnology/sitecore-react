@@ -1,4 +1,5 @@
 import { Routes, Route } from "react-router-dom";
+import { useState, useEffect } from "react";
 import ThemeSwitcher from "./components/shortcode/ThemeSwitcher/ThemeSwitcher";
 import DirectionSwitcher from "./components/shortcode/DirectionSwitcher/Direction";
 import Home from "./components/pages/Home";
@@ -32,22 +33,28 @@ import ProductSingle01 from "./components/pages/ProductSingle01";
 import ProductSingle02 from "./components/pages/ProductSingle02";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { useEffect } from "react";
 
 const App = () => {
+  const [direction, setDirection] = useState("ltr");
+
+  useEffect(() => {
+    document.documentElement.setAttribute("dir", direction);
+  }, [direction]);
+
   useEffect(() => {
     AOS.init({
       duration: 2000, // animation speed
       once: true, // animation only once
     });
   }, []);
+
   useEffect(() => {
     AOS.refresh();
   }, []);
   return (
     <>
       {/* HEADER ALWAYS */}
-      <Header_05 />
+      <Header_05 direction={direction} setDirection={setDirection}/>
       {/* PAGE ROUTES */}
       <Routes>
         <Route path="/" element={<Home />} />

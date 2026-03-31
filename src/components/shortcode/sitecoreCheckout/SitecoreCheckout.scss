@@ -305,6 +305,69 @@
 
 }
 
+// RTL Version css start //
+
+[dir="rtl"] {
+    .checkoutPageSection {
+        .checkoutInner {
+            .checkoutAside {
+                .paymentMethod {
+                    .paymentformGroup {
+                        display: flex;
+                        flex-direction: row-reverse;
+                    }
+                }
+
+                .custom-radios {
+
+                    label {
+                        padding-left: 0px;
+                        padding-right: 30px;
+
+                        &::before {
+                            left: inherit;
+                            right: -4px;
+                        }
+
+                        &::after {
+                            left: inherit;
+                            right: 0;
+                        }
+                    }
+                }
+
+                .productBox {
+                    .asideProductItem {
+                        .asideProdtBx {
+                            display: flex;
+                            justify-content: space-between;
+                            flex-direction: row-reverse;
+                            flex-wrap: wrap;
+                            row-gap: 20px;
+
+                            .asideImg {
+                                flex-direction: row-reverse;
+                            }
+                        }
+
+                        .subTotals {
+                            flex-direction: row-reverse;
+                        }
+
+                        .subPrice {
+                            display: flex;
+                            justify-content: space-between;
+                            flex-direction: row-reverse;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+//  Responsive css start //
+
 @include responsive(laptop) {
 
     .checkoutPageSection .checkoutInner .checkoutAside .asideHeading h4,

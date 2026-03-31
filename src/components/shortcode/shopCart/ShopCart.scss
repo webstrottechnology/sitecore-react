@@ -261,6 +261,60 @@
     }
 }
 
+// RTL Version Css start //
+
+[dir="rtl"] {
+    .SiteCoreShopCart {
+        .checkoutAside {
+            .rowItem {
+                flex-direction: row-reverse;
+
+            }
+
+            .shipping {
+                label {
+                    flex-direction: row-reverse;
+
+                    .label-content {
+                        flex-direction: row-reverse;
+                    }
+                }
+            }
+        }
+
+        .cartTbl {
+            .cartTableWrapper {
+                table {
+                    th {
+                        text-align: right;
+                    }
+                }
+            }
+
+            .productsDetail {
+                flex-direction: row-reverse;
+
+            }
+
+            .qty-container {
+                justify-content: end;
+            }
+
+            .couponCode {
+                justify-content: end;
+            }
+
+            .couponCode {
+                input {
+                    text-align: right;
+                    padding-right: 16px;
+                   
+                }
+            }
+        }
+    }
+}
+
 
 
 @include responsive(tablet-sm) {

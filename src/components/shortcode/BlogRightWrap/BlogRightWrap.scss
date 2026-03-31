@@ -212,6 +212,23 @@
     }
 }
 
+// RTL version css start //
+
+[dir="rtl"] {
+    .blogRightArticles {
+        .latestNewsCardInner {
+            .latestNewsCardInnerContent {
+                .latestNewsList {
+                    flex-direction: row-reverse;
+                     margin-top: 20px;
+                }
+            }
+        }
+    }
+
+}
+
+
 //  resposnive css start //
 
 @include responsive(tablet-sm) {

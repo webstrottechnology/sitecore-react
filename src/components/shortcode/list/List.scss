@@ -882,6 +882,110 @@
 }
 
 
+//  RTL Version css Start  //
+
+[dir="rtl"] {
+  .list_wrapper3 {
+    .wrapper3_content {
+      .music-list {
+        .music-item {
+          flex-direction: row-reverse;
+
+          .info {
+            text-align: right;
+          }
+        }
+      }
+    }
+  }
+
+  .list_wrapper6 {
+    .career-grid {
+      .career-card {
+        .card-header {
+          justify-content: end;
+
+        }
+
+        .role-list {
+          li {
+            flex-direction: row-reverse;
+          }
+        }
+      }
+    }
+  }
+
+  .list_wrapper4 {
+    .skills-container {
+      .skills-list {
+        .skill-card {
+          flex-direction: row-reverse;
+          gap: 30px;
+        }
+
+      }
+    }
+  }
+
+  .list_wrapper8 {
+    .container {
+      .menu-list {
+        .menu-item {
+          flex-direction: row-reverse;
+
+          .left {
+            h4 {
+              justify-content: end;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .list_wrapper9 {
+    .ux-card {
+      .content {
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+
+        .underline {
+          display: inline-block;
+        }
+
+        .ux-list {
+          .ux-item {
+            flex-direction: row-reverse;
+            align-items: center;
+            gap: 20px;
+
+            .arrow {
+              transform: rotate(178deg);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .list_wrapper10 {
+    .leaderboard-card {
+      .leaderboard-list {
+        .leader-item {
+          flex-direction: row-reverse;
+
+          .profile {
+            flex-direction: row-reverse;
+          }
+        }
+      }
+    }
+  }
+
+}
+
 /* ===============================
    RESPONSIVE CSS
 ================================ */

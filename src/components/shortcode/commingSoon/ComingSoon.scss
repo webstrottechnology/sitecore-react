@@ -61,7 +61,7 @@
       border: 1px solid var(--white-color);
       background: transparent;
       padding-left: var(--p16);
-       padding-right: var(--p16);
+      padding-right: var(--p16);
       color: var(--white-color);
       outline: none;
       border-radius: var(--br6);
@@ -95,6 +95,22 @@
   }
 
 }
+
+//  RTL Version Css Start //
+
+[dir="rtl"] {
+  .comingsoon_section {
+    .form {
+      flex-direction: row-reverse;
+
+      input {
+        text-align: right;
+      }
+    }
+  }
+}
+
+
 
 // responsive css start 
 

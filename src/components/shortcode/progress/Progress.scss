@@ -621,6 +621,31 @@
 
 }
 
+//   RTL css start   //
+
+[dir="rtl"] {
+    .progressEight {
+        .progress-item {
+            .progress-header {
+                flex-direction: row-reverse;
+            }
+        }
+    }
+
+    .innerPagePortfolioDetails {
+        .innerPagePortfolioDetailInner {
+            .row {
+                .viewWebsiteBtn {
+                    align-items: end;
+                    justify-content: end;
+                }
+            }
+        }
+    }
+}
+
+
+
 // +++++++++++++++++++ responsive css start +++++++++++++
 
 /* Responsive */

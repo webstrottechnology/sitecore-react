@@ -1362,7 +1362,7 @@
                 h2 {
                     font-size: var(--fs40);
                     font-weight: var(--fw600);
-                    color:var(--black-color);
+                    color: var(--black-color);
                 }
 
                 p {
@@ -1417,6 +1417,73 @@
                     border-radius: 0px 20px 20px 0px;
                     background: #FB8500;
                     z-index: -1;
+                }
+            }
+        }
+    }
+}
+
+
+// RTL 
+
+[dir="rtl"] {
+    .AboutWrapperInformation {
+        .container {
+            .about_content {
+                .progress_wrapper {
+                    .progress_item {
+                        .progress_number {
+                            right: inherit;
+                            left: 0;
+                        }
+                    }
+                }
+
+                .about_list {
+                    li {
+                        padding-left: inherit;
+                        padding-right: 24px;
+
+                        &::before {
+                            content: "▶";
+                            position: absolute;
+                            right: 0;
+                            left: inherit;
+                            top: 0;
+                            color: var(--seaGreenColor);
+                            font-size: var(--fs16);
+                            font-weight: var(--fw700);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .feature12 {
+        .feature12-container {
+            .feature12-left {
+                display: inline-flex;
+                flex-direction: column;
+                align-items: end;
+            }
+        }
+    }
+
+    .connectBusiness {
+        .connectBusinessContainer {
+            .connectBusinessContent {
+                .connectBusinessContactInner {
+                    .connectBusinessList {
+                        ul {
+                            li {
+
+                                display: flex;
+                                flex-direction: row-reverse;
+                                gap: 10px;
+                            }
+                        }
+                    }
                 }
             }
         }

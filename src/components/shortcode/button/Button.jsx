@@ -1,6 +1,8 @@
 import React from "react";
 import { buttonData, gradientButtonData, textLinksData } from "./ButtonData";
 import "./Button.scss";
+import { AboutBannerBreadCrumb } from "../breadcrumb/Breadcrumb";
+import sitecoreBg from "../../../assets/images/sitecoreBreadCrumb_bg_img.png";
 
 const ButtonComponent1 = () => {
   return (
@@ -175,28 +177,31 @@ const ButtonComponent6 = () => {
 
 const ButtonComponent7 = () => {
   return (
-    <div className="button-wrapper-section">
-      <div className="section-heading">
-        <h4>Filled Button</h4>
-      </div>
-      <div className="container ">
-        <div className="row">
-          <div className="col-lg-12 col-md-12 col-sm-12 col-12">
-            <div className="btn-sizes">
-              {buttonData.map((btn) => (
-                <a
-                  key={btn.id}
-                  href={btn.link}
-                  className={`mintGreenFilledBtn ${btn.sizeClass}`}
-                >
-                  <span>{btn.text}</span> {/* Text wrapped in span */}
-                </a>
-              ))}
+    <>
+      <AboutBannerBreadCrumb title="Buttons" bgImage={sitecoreBg} />
+      <div className="button-wrapper-section">
+        <div className="section-heading">
+          <h4>Filled Button</h4>
+        </div>
+        <div className="container ">
+          <div className="row">
+            <div className="col-lg-12 col-md-12 col-sm-12 col-12">
+              <div className="btn-sizes">
+                {buttonData.map((btn) => (
+                  <a
+                    key={btn.id}
+                    href={btn.link}
+                    className={`mintGreenFilledBtn ${btn.sizeClass}`}
+                  >
+                    <span>{btn.text}</span> {/* Text wrapped in span */}
+                  </a>
+                ))}
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

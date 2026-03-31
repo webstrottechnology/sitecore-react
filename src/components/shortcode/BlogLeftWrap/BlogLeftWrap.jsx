@@ -9,7 +9,7 @@ import {
   BlogpopularPosts,
   BlogTags,
   BlogsocialIcons,
-  Blognewsletter
+  Blognewsletter,
 } from "./BlogLeftWrapData";
 
 const BlogLeftAsideBox = () => {
@@ -18,12 +18,7 @@ const BlogLeftAsideBox = () => {
       {/* Search */}
       <div className="searchKeyword customCard fadein">
         <div className="searchKeywordInner">
-          <h4>
-            <Link to="/blog-search">Search Keyword</Link>
-          </h4>
-
-          <h6>Search</h6>
-
+          <h4>Search Keyword</h4>
           <form>
             <div className="input-group">
               <input
@@ -42,9 +37,7 @@ const BlogLeftAsideBox = () => {
 
       {/* Categories */}
       <div className="postCategories customCard fadein">
-        <h4>
-          <Link to="/blog">Post Categories</Link>
-        </h4>
+        <h4>Post Categories</h4>
 
         <div className="list-group">
           {Blogcategories.map((item, index) => (
@@ -62,9 +55,7 @@ const BlogLeftAsideBox = () => {
 
       {/* Recent Post */}
       <div className="recentPost customCard fadein">
-        <h4>
-          <Link to="/blog">Recent Post</Link>
-        </h4>
+        <h4>Recent Post</h4>
 
         <div className="recentPostList">
           {BlogrecentPosts.map((post, index) => (
@@ -86,9 +77,7 @@ const BlogLeftAsideBox = () => {
 
       {/* Popular Post */}
       <div className="recentPost customCard fadein">
-        <h4>
-          <Link to="/blog">Popular Post</Link>
-        </h4>
+        <h4>Popular Post</h4>
 
         <div className="recentPostList">
           {BlogpopularPosts.map((post, index) => (
@@ -110,9 +99,7 @@ const BlogLeftAsideBox = () => {
 
       {/* Tags */}
       <div className="popularTags customCard fadein">
-        <h4>
-          <Link to="/tags">Popular Tags</Link>
-        </h4>
+        <h4>Popular Tags</h4>
 
         <div className="tagGroup">
           <ul className="nav">
@@ -132,9 +119,7 @@ const BlogLeftAsideBox = () => {
 
       {/* Social Icons */}
       <div className="ipSocialMedia customCard fadein">
-        <h4>
-          <Link to="/social">Social Icons</Link>
-        </h4>
+        <h4>Social Icons</h4>
 
         <div className="ipSocialMediaIcon">
           <ul className="nav">

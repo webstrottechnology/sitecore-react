@@ -18,7 +18,7 @@
     padding: var(--p60) var(--p0);
     background: var(--white-color);
 
-      .row {
+    .row {
         row-gap: 30px;
     }
 
@@ -222,14 +222,33 @@
 }
 
 
-
-
-
-
-
 /* ======================= */
 /* MOBILE RESPONSIVE */
 /* ======================= */
+
+//  RTL Version Css Start //
+
+[dir="rtl"] {
+    .SiteproductDetails {
+        .thumbnails-right-box {
+            .stories-list-box {
+                ul {
+                    li {
+                        padding-left: inherit;
+                        padding-right: 20px;
+
+                        &::before {
+                            right: 0px;
+                            left: auto;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
 
 
 @include responsive(lg-md) {
