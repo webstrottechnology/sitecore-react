@@ -8,6 +8,9 @@
     background: var(--bg-dark);
     color: var(--white-color);
     padding: var(--p50) var(--p50) var(--p20) var(--p50);
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
 
     .footer-top {
         display: flex;
@@ -917,7 +920,7 @@
                     background: var(--purple-color);
                     color: var(--white-color);
                     border: none;
-                    padding: var(--p10) var(--24);
+                    padding: var(--p10) var(--p24);
                     border-radius: var(--br4);
                     cursor: pointer;
                     transition: all 0.5s;
@@ -1676,6 +1679,79 @@
                             gap: 10px;
                         }
                     }
+                }
+
+                .socialMediaIconRow {
+                    .socialMediaIcon {
+                        .nav {
+                            justify-content: flex-end;
+                        }
+                    }
+
+                    .helpSupport {
+                        text-align: left;
+                    }
+                }
+            }
+        }
+    }
+
+    .footerFive {
+        .footer-brand {
+            align-items: end;
+        }
+    }
+
+    .footerSix {
+        .footer-brand {
+            align-items: end;
+        }
+
+        .footer-newsletter {
+            align-items: end;
+        }
+    }
+
+    .footerSeven {
+        .new_footer_top {
+            .f_widget {
+                align-items: end;
+
+                .f_subscribe_two {
+                    padding-left: var(--p32);
+                    padding-right: inherit;
+                    align-items: end;
+                }
+            }
+        }
+    }
+
+    .footerthree {
+        .footer-top {
+            .footer-about {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                align-items: flex-end;
+            }
+        }
+    }
+
+    .FooterEight {
+        .footer-col {
+            align-items: end;
+        }
+    }
+
+    .footerSeven {
+        .footer_bottom {
+            p {
+                &.info_left {
+                    text-align: right;
+                }
+
+                &.info_right {
+                    text-align: left;
                 }
             }
         }

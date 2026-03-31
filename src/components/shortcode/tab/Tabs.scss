@@ -694,7 +694,8 @@
                 h2 {
                     font-size: var(--fs28);
                 }
-                p{
+
+                p {
                     margin-top: var(--m10);
                 }
             }
@@ -1093,6 +1094,44 @@
     }
 }
 
+
+// RTL Version Css Start //
+
+
+[dir="rtl"] {
+    .tabs_wrapper6 {
+        .tabs_container {
+            .tabs_content_right {
+                .tab_content_inner {
+                    .tab_text {
+                        align-items: end;
+                    }
+                }
+            }
+        }
+    }
+
+    .tabs9_wrapper {
+        .tabs9_content {
+            .accordion_item {
+                .accordion_title {
+                    flex-direction: row-reverse;
+                }
+            }
+        }
+    }
+
+    .tabs_wrapper10 {
+        .tabs10_content {
+            .right {
+                .feature_item {
+                    justify-content: end;
+                }
+            }
+        }
+    }
+}
+
 /* =======================
   RESPONSIVE CSS
 ======================= */
@@ -1194,7 +1233,7 @@
 
 @include responsive(mobile) {
 
-    .tabs_button{
+    .tabs_button {
         gap: 20px;
     }
 
@@ -1323,7 +1362,9 @@
 }
 
 @include responsive(xs) {
-    .tabs_wrapper .tabs_card .cards_container, .tabs_wrapper2 .tabs_button{
+
+    .tabs_wrapper .tabs_card .cards_container,
+    .tabs_wrapper2 .tabs_button {
         justify-content: center;
     }
 

@@ -335,6 +335,26 @@
                 }
             }
         }
+
+        .searchKeyword {
+            .searchKeywordInner {
+                .input-group {
+                    flex-direction: row-reverse;
+
+                    .form-control {
+                        text-align: right;
+                    }
+                }
+            }
+        }
+
+        .postCategories {
+            .list-group {
+                .list-group-item {
+                    flex-direction: row-reverse;
+                }
+            }
+        }
     }
 }
 

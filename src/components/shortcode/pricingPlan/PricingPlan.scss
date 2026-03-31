@@ -1092,6 +1092,117 @@
     }
 }
 
+// RTL Version Css Start //
+
+
+[dir="rtl"] {
+    .pricing_wrapper {
+        .pricing_cards {
+            .plan-card {
+                .list {
+                    li {
+                        padding-right: 24px;
+                        padding-left: inherit;
+
+                        &::before {
+                            right: 0;
+                            left: inherit;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .price_wrapper3 {
+        .pricing_cards {
+            .pricing_card {
+                .list {
+                    li {
+                        padding-right: 24px;
+                        padding-left: inherit;
+                        text-align: right;
+
+                        &::before {
+                            right: 0;
+                            left: inherit;
+                        }
+                    }
+                }
+
+                .link {
+                    text-align: end;
+                }
+            }
+        }
+    }
+
+    .pricing_wrapper6 {
+        .pricing_cards {
+            .pricing_card {
+                ul {
+                    li {
+                        text-align: right;
+                        padding-left: inherit;
+                        padding-right: 22px;
+
+                        &::before {
+                            right: 0;
+                            left: inherit;
+                        }
+                    }
+                }
+
+                h3 {
+                    text-align: right;
+                }
+            }
+        }
+    }
+
+    .pricing_wrapper2 {
+        .pricing_cards {
+            .pricing_inner_Card {
+                .list {
+                    li {
+                        text-align: right;
+                        padding-left: inherit;
+                        padding-right: 22px;
+
+                        &::before {
+                            right: 0;
+                            left: inherit;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .pricing_wrapper10 {
+        .pricing_cards {
+            .pricing_card {
+                .price {
+                    text-align: right;
+                }
+
+                .list {
+                    li {
+                        strong {
+                            display: block;
+                            text-align: right;
+                        }
+
+                        p {
+                            text-align: right;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
 /* ---------------- RESPONSIVE PRICING PLAN CSS ---------------- */
 
 @include responsive(tablet-sm) {

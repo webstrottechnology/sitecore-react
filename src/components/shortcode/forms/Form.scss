@@ -1844,6 +1844,93 @@
             }
         }
     }
+
+    .sitecore_lr_wrapper {
+        .auth_card {
+            .input_group {
+                .input_box {
+                    input {
+                        text-align: right;
+                    }
+
+                    .icon {
+                        left: 10px;
+                        right: inherit;
+                    }
+                }
+            }
+        }
+    }
+
+    .appointment_section {
+        .appointment_wrapper {
+            .right {
+                .input {
+                    input {
+                        text-align: right;
+                    }
+
+                    textarea {
+                        text-align: right;
+                    }
+                }
+            }
+        }
+    }
+
+    .contact-section {
+        .contact-wrapper {
+            .contact-right {
+                input {
+                    text-align: right;
+                }
+
+                textarea {
+                    text-align: right;
+                }
+            }
+
+        }
+    }
+
+    .formTwo-wrapper {
+        .formTwo-container {
+            .formInfo-box {
+                .formTwo-box {
+                    input {
+                        text-align: right;
+                    }
+                }
+            }
+        }
+    }
+
+    .formThree-wrapper {
+        .inputs-box {
+            .input {
+                flex-direction: row-reverse;
+
+                input {
+                    text-align: right;
+                }
+            }
+        }
+
+        .forgot-password {
+           justify-content: end;
+        }
+    }
+    .formFour-wrapper {
+	.formFour-container {
+		.login-form {
+			.form-group {
+				.form-input {
+					text-align: right;
+				}
+			}
+		}
+	}
+}
 }
 
 // resposnsive css start 
