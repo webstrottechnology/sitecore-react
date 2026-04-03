@@ -3,6 +3,11 @@ import Banner5Img from "../../../assets/images/banner5-img.jpg";
 import Banner6Img from "../../../assets/images/banner6-bg.jpg";
 import Banner7Img from "../../../assets/images/chair-banner.jpg";
 
+import bgImg from "../../../assets/images/home_medical/medicalBannerBg.png";
+import doctorImg from "../../../assets/images/home_medical/medicalBannerGirlImg.png";
+import icon1 from "../../../assets/images/home_medical/icons/medicalBannerIcon1.png";
+import icon2 from "../../../assets/images/home_medical/icons/medicalBannerIcon2.png";
+
 /* ---------------- BANNER DATA ONE ---------------- */
 
 export const BannerData = [
@@ -251,3 +256,24 @@ export const Banner10Data = [
       "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?q=80&w=2000",
   },
 ];
+
+
+export const MedicalBannerData = {
+  tag: "HIGHER LEVEL OF CARE",
+
+  title1: "Protect",
+  highlightText: "Your Health and Take",
+  title2: "Care of Your Health",
+
+  description:
+    "Good health is a state of mental, physical and social well being and it does not just mean the absence of disease!",
+
+  buttonText: "Learn More",
+
+  images: {
+    bg: bgImg,
+    doctor: doctorImg,
+    icon1: icon1,
+    icon2: icon2,
+  },
+};

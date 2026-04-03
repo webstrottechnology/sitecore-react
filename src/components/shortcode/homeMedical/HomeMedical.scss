@@ -1,0 +1,342 @@
+/* ===============================
+   TOP CATEGORIES
+================================ */
+
+.medicalTopCategories {
+  padding: var(--p80);
+
+  .medTopCategoriesHeading {
+    h3 {
+      color: var(--temp1BlueColor);
+      text-align: center;
+      font-size: var(--fs40);
+      font-weight: var(--fw700);
+      margin-bottom: var(--m20);
+      font-family: var(--roboto-font);
+    }
+  }
+
+  .medCategoriesItem {
+    margin: var(--m10);
+    padding: var(--p40) var(--p20);
+    border-radius: var(--br20);
+    background: var(--white-color);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+    text-align: center;
+
+    &:hover {
+      img {
+        animation: none;
+      }
+    }
+  }
+
+  .medCategoriesIcon {
+    span {
+      border-radius: var(--br20);
+      background: #fcf0e3;
+      width: 100px;
+      height: 100px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    img {
+      width: 40px;
+      animation: heartbeat 1.3s infinite;
+    }
+  }
+
+  .medCategoriesTxt {
+    p {
+      font-size: var(--fs20);
+      font-weight: var(--fw700);
+      color: var(--temp1BlueColor);
+      font-family: var(--roboto-font);
+    }
+  }
+
+  /* ===============================
+     RANGE SLIDER
+  ================================= */
+
+  .slider-container {
+    text-align: center;
+    margin-top: var(--m40);
+    width: var(--width100);
+
+    .range-slider {
+      max-width: 480px;
+      width: var(--width100);
+      appearance: none;
+      height: 10px;
+      border-radius: var(--br20);
+      outline: none;
+      background: #e6d8c9;
+      position: relative;
+
+      &::-webkit-slider-runnable-track {
+        height: 10px;
+        border-radius: var(--br20);
+        background: linear-gradient(to right,
+            var(--orange-color) 0%,
+            var(--orange-color) calc((100% / 3) * var(--value)),
+            #e6d8c9 calc((100% / 3) * var(--value)),
+            #e6d8c9 100%);
+      }
+
+      &::-webkit-slider-thumb {
+        appearance: none;
+        width: 22px;
+        height: 22px;
+        background: var(--orange-color);
+        border-radius: var(--br4); // square look
+        cursor: pointer;
+        margin-top: -6px;
+        border: none;
+      }
+    }
+  }
+
+  /* ===============================
+     SWIPER ARROWS
+  ================================= */
+
+  .swiper-button-prev,
+  .swiper-button-next {
+    width: 50px;
+    height: 50px;
+    border-radius: var(--br50);
+    background: var(--orange-color);
+    color: var(--white-color);
+    border: none;
+
+    &::after {
+      font-size: var(--fs18);
+      font-weight: var(--fw700);
+    }
+
+    svg {
+      width: 10px;
+    }
+
+    &.swiper-button-disabled {
+      background: transparent;
+      border: 2px solid var(--orange-color);
+      color: var(--orange-color);
+      cursor: not-allowed;
+      pointer-events: none;
+    }
+  }
+
+
+  /* ===============================
+   ANIMATION
+================================ */
+
+  @keyframes heartbeat {
+    0% {
+      transform: scale(1);
+    }
+
+    15% {
+      transform: scale(1.3);
+    }
+
+    35% {
+      transform: scale(1);
+    }
+
+    55% {
+      transform: scale(1);
+    }
+
+    100% {
+      transform: scale(1);
+    }
+  }
+}
+
+.aboutUs {
+  background-color: var(--temp1BlueColor);
+  padding: var(--p80) 0;
+  position: relative;
+  overflow: hidden;
+
+  &::after {
+    content: "";
+    background-image: url("../assets/images/home_medical/aboutUsBgImg.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: var(--width100);
+    height: var(--width100);
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0.15;
+    z-index: 1;
+
+    animation: kenburns 30s linear infinite;
+  }
+
+  @keyframes kenburns {
+    25% {
+      transform: scale(1.1);
+    }
+
+    50% {
+      opacity: 0.8;
+      transform: scale(1.2);
+    }
+
+    60% {
+      opacity: 0;
+      transform: scale(1.3);
+    }
+  }
+
+  .aboutUsInner {
+    position: relative;
+    z-index: 2;
+
+    .aboutUsRow{
+      align-items: center;
+    }
+  }
+
+  /* IMAGE SECTION */
+  .aboutUsGallery {
+    position: relative;
+
+    .mainImg {
+      border-radius: var(--br20);
+      width: var(--width100);
+    }
+
+    .secondaryImg {
+      position: absolute;
+      bottom: -40px;
+      right: 30px;
+      width: var(--width60);
+      border-radius: var(--br20);
+      border: 6px solid var(--white-color);
+      box-shadow: var(--boxShadow01);
+    }
+  }
+
+  /* CONTENT SECTION */
+  .aboutUsContent {
+    display: flex;
+    flex-direction: column;
+    gap: var(--p50);
+
+    .aboutUsContentInner {
+      display: flex;
+      flex-direction: column;
+      gap: var(--p18);
+      align-items: start;
+
+      .subHeading {
+        color: var(--orange-color);
+        font-size: var(--fs26);
+        font-weight: var(--fw400);
+        font-family: var(--roboto-font);
+      }
+
+      h4 {
+        color: var(--white-color);
+        font-size: var(--fs40);
+        font-weight: var(--fw700);
+        line-height: var(--line-height-48);
+        font-family: var(--roboto-font);
+      }
+
+      p {
+        color: var(--grayColorShade1);
+        font-size: var(--fs20);
+        line-height: var(--line-height-28);
+        font-family: var(--body);
+        font-family: var(--roboto-font);
+        margin-bottom: var(--m16);
+      }
+
+      .medCommBtn {
+        background: var(--white-color);
+        color: var(--black-color);
+        padding: var(--p12) var(--p30);
+        border-radius: var(--br50);
+        text-decoration: none;
+        font-size: var(--fs16);
+        font-weight: var(--fw600);
+        transition: var(--transition2);
+        font-family: var(--roboto-font);
+
+        &:hover {
+          background: var(--orange-color);
+          color: var(--white-color);
+        }
+      }
+    }
+
+    /* EMERGENCY BOX */
+    .emergencyMedical {
+      display: grid;
+      grid-template-columns: 100px 1fr;
+      background: var(--orange-color);
+      padding: var(--p30) var(--p40);
+      border-radius: var(--br20);
+      align-items: center;
+      gap: var(--p16);
+
+      .emergencyMedicalIcon {
+        span {
+          width: 70px;
+          height: 70px;
+          background: rgba(255, 255, 255, 0.3);
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border-radius: var(--br50);
+
+          img {
+            width: 30px;
+            animation: heartBeat 1.3s infinite;
+          }
+        }
+      }
+
+      .emergencyMedicalContent {
+        h4 {
+          color: var(--white-color);
+          font-size: var(--fs24);
+          font-weight: var(--fw700);
+          margin-bottom: var(--m8);
+        }
+
+        p {
+          color: var(--white-color);
+          font-size: var(--fs14);
+          line-height: var(--line-height-20);
+        }
+      }
+    }
+  }
+
+  /* HEART ANIMATION */
+  @keyframes heartBeat {
+    0% {
+      transform: scale(1);
+    }
+
+    25% {
+      transform: scale(1.2);
+    }
+
+    40% {
+      transform: scale(1);
+    }
+  }
+}

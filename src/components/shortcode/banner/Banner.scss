@@ -1466,21 +1466,289 @@
     }
 }
 
+/* ===============================
+   MEDICAL HERO BANNER
+================================ */
+
+.medicalTopBanner {
+    padding-top: var(--p80);
+    background-size: cover;
+    background-position: center;
+    background-color: var(--temSiteCoreLightOrangeColor);
+    overflow: hidden;
+    width: 100%;
+    font-family: var(--roboto-font);
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 300px;
+        height: 100%;
+        background-image: url("/src/assets/images/home_medical/medicalBannerBg.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .medicalTopBannerInner {
+        padding-top: var(--p100);
+
+        /* LEFT CONTENT */
+        .medTopBannerContent {
+
+            button {
+                text-transform: uppercase;
+                font-family: var(--roboto-font);
+            }
+
+            /* TAG BUTTON */
+            .higherLevelCare {
+                position: relative;
+                margin-bottom: var(--m40);
+
+                &::before {
+                    left: -5px;
+                    top: -5px;
+                }
+
+                &::after {
+                    bottom: -5px;
+                    left: -5px;
+                }
+
+                .higherLevelInner {
+                    padding: var(--p26) var(--p38);
+                    width: fit-content;
+                    border: 1px solid var(--orange-color);
+                    background-color: var(--bg-light);
+                    position: relative;
+
+                    &::before {
+                        top: -5px;
+                        right: -5px;
+                    }
+
+                    &::after {
+                        bottom: -5px;
+                        right: -5px;
+                    }
+
+                    span {
+                        color: var(--orange-color);
+                        font-size: var(--fs26);
+                        font-weight: var(--fw700);
+                        text-transform: uppercase;
+                    }
+                }
+            }
+
+            h1 {
+                font-size: var(--fs80);
+                font-weight: var(--fw700);
+                color: var(--temp1BlueColor);
+                margin-bottom: var(--m20);
+                font-family: var(--roboto-font);
+
+                span {
+                    color: var(--temSitCoreBlueColor);
+                }
+            }
+
+            p {
+                color: var(--dark-gray);
+                margin-bottom: var(--m40);
+                font-size: var(--fs20);
+                font-weight: var(--fw400);
+            }
+        }
+
+
+        .higherLevelInner::before,
+        .higherLevelInner::after,
+        .higherLevelCare::before,
+        .higherLevelCare::after {
+            content: "";
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            border-radius: 50px;
+            background-color: var(--orange-color);
+            animation: pulse-animation 2s infinite;
+        }
+
+
+        /* RIGHT IMAGE */
+        .medTopBannerImage {
+            position: relative;
+            text-align: center;
+
+            .medTopBannerInnerImg {
+                position: relative;
+                width: fit-content;
+                margin: 0 0 0 auto;
+
+                /* FLOATING ICONS */
+                .floatingIcon {
+                    position: absolute;
+                    width: 60px;
+                    padding: var(--p10);
+                    background: var(--white-color);
+                    border-radius: var(--br20);
+                    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.05);
+
+                    animation: heartBeat1 1.35s linear infinite;
+                }
+
+                .icon1 {
+                    right: -20px;
+                    top: -20px;
+                    position: absolute;
+                    padding: 10px;
+                    width: fit-content;
+                    z-index: 2;
+                }
+
+                .icon2 {
+                    left: 8px;
+                    top: 25px;
+                    position: absolute;
+                    padding: 10px;
+                    width: fit-content;
+                }
+
+                /* IMAGE WRAPPER */
+                .girlImage {
+                    position: relative;
+                    display: inline-block;
+                    overflow: hidden;
+                    border-top-left-radius: 250px;
+
+                    .doctorImg {
+                        transition: var(--transition3);
+                    }
+
+                    &::before {
+                        position: absolute;
+                        top: 0;
+                        left: -75%;
+                        z-index: 2;
+                        content: "";
+                        width: 50%;
+                        height: 100%;
+                        background: linear-gradient(to right,
+                                rgba(255, 255, 255, 0) 0%,
+                                rgba(255, 255, 255, 0.3) 100%);
+                        transform: skewX(-25deg);
+                    }
+
+                    &:hover {
+                        &::before {
+                            animation: shine 1s;
+                        }
+
+                        .doctorImg {
+                            transform: scale(1.05);
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+
+
+    /* ===============================
+   HEART BEAT ANIMATION
+================================ */
+
+    @keyframes heartBeat1 {
+        0% {
+            transform: scale(1);
+        }
+
+        14% {
+            transform: scale(1.15);
+        }
+
+        28% {
+            transform: scale(1);
+        }
+
+        42% {
+            transform: scale(1.15);
+        }
+
+        70% {
+            transform: scale(1);
+        }
+    }
+
+
+
+    /* FLOAT ANIMATION */
+    @keyframes floatIcon {
+        0% {
+            transform: translateY(0px);
+        }
+
+        50% {
+            transform: translateY(-12px);
+        }
+
+        100% {
+            transform: translateY(0px);
+        }
+    }
+
+
+    /* KEYFRAMES */
+    @keyframes shine {
+        100% {
+            left: 125%;
+        }
+    }
+
+}
+
+
+
 /* ---------------- RESPONSIVE CSS ---------------- */
+
+@include responsive(xl) {
+    .medicalTopBanner .medicalTopBannerInner .medTopBannerContent h1 {
+        font-size: var(--fs70);
+    }
+
+    .medicalTopBanner .medicalTopBannerInner .medTopBannerImage .medTopBannerInnerImg .icon1 {
+        right: -5px;
+    }
+}
+
+@include responsive(lg-md) {
+    .medicalTopBanner .medicalTopBannerInner .medTopBannerContent h1 {
+        font-size: var(--fs60);
+    }
+}
+
+
+@include responsive(laptop) {
+    .medicalTopBanner .medicalTopBannerInner .medTopBannerContent .higherLevelCare .higherLevelInner {
+        padding: var(--p16) var(--p20);
+    }
+
+    .medicalTopBanner .medicalTopBannerInner .medTopBannerContent .higherLevelCare .higherLevelInner span {
+        font-size: var(--fs22);
+    }
+
+    .medicalTopBanner .medicalTopBannerInner .medTopBannerContent h1 {
+        font-size: var(--fs44);
+    }
+}
 
 
 @include responsive(tablet) {
-    // .banner9 .numbers {
-    //     bottom: 30px;
-    //     right: auto;
-    //     flex-direction: row;
-    //     top: auto;
-    // }
-
-    // .banner9-num {
-    //     justify-content: center;
-    //     display: flex;
-    // }
     .banner9 .slide .container .banner9_content .right h1 {
         font-size: var(--fs86);
     }
@@ -1618,6 +1886,28 @@
             top: 100px;
         }
     }
+
+    .medicalTopBanner .medicalTopBannerInner .medTopBannerContent h1 {
+        font-size: var(--fs34);
+    }
+
+    .medicalTopBanner .medicalTopBannerInner .medTopBannerContent p {
+        font-size: var(--fs18);
+    }
+
+    .medicalTopBanner .medicalTopBannerInner .medTopBannerImage .medTopBannerInnerImg .girlImage {
+        border-top-left-radius: 100px;
+    }
+
+    .medicalTopBanner .medicalTopBannerInner .medTopBannerImage .medTopBannerInnerImg .icon2 {
+        left: 0;
+        top: 0;
+    }
+
+    .medicalTopBanner .medicalTopBannerInner .medTopBannerImage .medTopBannerInnerImg .floatingIcon {
+        border-radius: 10px;
+        width: 60px;
+    }
 }
 
 /* desktop */
@@ -1627,6 +1917,14 @@
 
 /* mobile */
 @include responsive(mobile) {
+    .medicalTopBanner .medicalTopBannerInner .medTopBannerContent .higherLevelCare .higherLevelInner span {
+        font-size: var(--fs18);
+    }
+
+    .medicalTopBanner .medicalTopBannerInner .medTopBannerContent {
+        margin-bottom: var(--m40);
+    }
+
     .banner10 .slide .content .buttons a {
         padding: var(--p12) var(--p26);
     }
@@ -1988,5 +2286,9 @@
 
     .banner10 .slide .content h1 {
         font-size: var(--fs30);
+    }
+
+    .medicalTopBanner .medicalTopBannerInner .medTopBannerContent h1 {
+        font-size: var(--fs28);
     }
 }

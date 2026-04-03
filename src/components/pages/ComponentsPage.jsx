@@ -201,6 +201,7 @@ import Header_01 from "../shortcode/Header/Header_01";
 import Header_02 from "../shortcode/Header/Header_02";
 import Header_04 from "../shortcode/Header/Header_04";
 import Header_05 from "../shortcode/Header/Header_05";
+import Header_Medical from "../shortcode/Header/Header_Medical"
 import Services, {
   MobileAppDesign,
   ServicesGrid,
@@ -305,6 +306,7 @@ const ComponentsPage = () => {
               <Header_02 />
               <Header_04 />
               <Header_05 />
+              <Header_Medical/>
             </>
           }
         />
