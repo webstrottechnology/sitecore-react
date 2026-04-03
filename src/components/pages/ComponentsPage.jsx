@@ -262,6 +262,12 @@ import ButtonComponent1, {
   ButtonComponent7,
   ButtonComponent8,
 } from "../shortcode/button/Button";
+import HomeCafeBreakfast, {
+  HomeCafeBrand,
+  HomeCafeGallery,
+  HomeCafeTestimonial,
+  HomeCafeVideo,
+} from "../shortcode/HomeCafeComponent/HomeCafeComponent";
 
 const ComponentsPage = () => {
   return (
@@ -798,6 +804,19 @@ const ComponentsPage = () => {
               <ButtonComponent4 />
               <ButtonComponent5 />
               <ButtonComponent6 />
+            </>
+          }
+        />
+
+        <Route
+          path="HomeCafeComponent"
+          element={
+            <>
+              <HomeCafeBreakfast />
+              <HomeCafeTestimonial />
+              <HomeCafeBrand />
+              <HomeCafeGallery />
+              <HomeCafeVideo />
             </>
           }
         />

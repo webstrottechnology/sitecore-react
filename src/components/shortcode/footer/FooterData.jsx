@@ -109,7 +109,7 @@ export const footerDataTwo = {
 export const footerDataThree = {
   socialLinks: [
     { icon: <FaFacebookF />, url: "Javascript:0", label: "Facebook" },
-    { icon: <FaTwitter />, url: "Javascript:0", label: "Twitter" },
+    { icon: <FaXTwitter />, url: "Javascript:0", label: "Twitter" },
     { icon: <FaLinkedinIn />, url: "Javascript:0", label: "LinkedIn" },
     { icon: <FaInstagram />, url: "Javascript:0", label: "Instagram" },
   ],
@@ -317,7 +317,7 @@ export const footerDataSeven = {
     title: "Team Solutions",
     icons: [
       { icon: <FaFacebookF />, link: "/" },
-      { icon: <FaTwitter />, link: "/" },
+      { icon: <FaXTwitter />, link: "/" },
       { icon: <FaVimeoV />, link: "/" },
       { icon: <FaPinterestP />, link: "/" },
     ],
@@ -338,7 +338,7 @@ export const footerDataEight = {
     title: "Let’s Talk",
     desc: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit sed diam nonummy.",
     socials: [
-      { icon: <FaTwitter />, link: "/" },
+      { icon: <FaXTwitter />, link: "/" },
       { icon: <FaFacebookF />, link: "/" },
       { icon: <FaPinterestP />, link: "/" },
       { icon: <FaInstagram />, link: "/" },
@@ -383,7 +383,7 @@ export const footerDataNine = [
       "We can’t wait to see all of our beloved friends and relatives at our wedding.",
     social: [
       { icon: <FaFacebookF />, url: "Javascript:0" },
-      { icon: <FaTwitter />, url: "Javascript:0" },
+      { icon: <FaXTwitter />, url: "Javascript:0" },
       { icon: <FaInstagram />, url: "Javascript:0" },
     ],
   },
@@ -504,13 +504,13 @@ export const SitecoreCafeFooterData = {
 
   moreinfo: [
     { name: "Contact Us", path: "/contact" },
-    { name: "Comming Soon", path: "/services" },
-    { name: "Checkout", path: "/blog" },
-    { name: "404 Error", path: "/team" },
+    { name: "Comming Soon", path: "/coming-soon" },
+    { name: "Checkout", path: "/checkout" },
+    { name: "404 Error", path: "/404" },
   ],
   socials: [
     { icon: <FaFacebookF />, link: "#" },
-    { icon: <FaTwitter />, link: "#" },
+    { icon: <FaXTwitter />, link: "#" },
     { icon: <FaLinkedinIn />, link: "#" },
     { icon: <FaInstagram />, link: "#" },
   ],
