@@ -8,7 +8,7 @@ import sitecoreBg from "../../assets/images/sitecoreBreadCrumb_bg_img.png";
 import AboutVideo from "../shortcode/aboutVideo/AboutVideo";
 import AboutFeatures from "../shortcode/aboutFeatures/AboutFeatures";
 import { FormTwelve } from "../shortcode/forms/Form";
-
+import { BlogSectionThree } from "../shortcode/blog/Blog";
 
 const About = () => {
   return (
@@ -16,6 +16,7 @@ const About = () => {
       <AboutBannerBreadCrumb title="About Us" bgImage={sitecoreBg} />
       <AboutInfo />
       <AboutFeatures />
+      <BlogSectionThree />
       <AboutVideo />
       <AboutBrandStory />
       <AboutTestimonial />

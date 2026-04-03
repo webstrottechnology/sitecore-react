@@ -940,7 +940,7 @@ const HomeCafeFooter = () => {
 
         <div className="footer-bottom-wrapper">
           <p>
-            Copyright © 2024-25 <Link to="/">SITECORE.</Link> All Rights
+            Copyright © 2026-27 <Link to="/">SITECORE.</Link> All Rights
             Reserved.
           </p>
         </div>
