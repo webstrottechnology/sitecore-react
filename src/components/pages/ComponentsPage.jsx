@@ -60,6 +60,7 @@ import FooterOne, {
   FooterTen,
   FooterThree,
   FooterTwo,
+  HomeCafeFooter,
   Sitecorefooter,
 } from "../shortcode/footer/Footer";
 
@@ -262,6 +263,12 @@ import ButtonComponent1, {
   ButtonComponent7,
   ButtonComponent8,
 } from "../shortcode/button/Button";
+import HomeCafeBreakfast, {
+  HomeCafeBrand,
+  HomeCafeGallery,
+  HomeCafeTestimonial,
+  HomeCafeVideo,
+} from "../shortcode/HomeCafeComponent/HomeCafeComponent";
 
 const ComponentsPage = () => {
   return (
@@ -388,6 +395,7 @@ const ComponentsPage = () => {
               <Sitecorefooter />
               <FooterNine />
               <FooterTen />
+              <HomeCafeFooter />
             </>
           }
         />
@@ -458,7 +466,6 @@ const ComponentsPage = () => {
               <Portfolio2 />
               <Portfolio3 />
               <Portfolio4 />
-             
             </>
           }
         />
@@ -799,6 +806,19 @@ const ComponentsPage = () => {
               <ButtonComponent4 />
               <ButtonComponent5 />
               <ButtonComponent6 />
+            </>
+          }
+        />
+
+        <Route
+          path="HomeCafeComponent"
+          element={
+            <>
+              <HomeCafeBreakfast />
+              <HomeCafeTestimonial />
+              <HomeCafeBrand />
+              <HomeCafeGallery />
+              <HomeCafeVideo />
             </>
           }
         />

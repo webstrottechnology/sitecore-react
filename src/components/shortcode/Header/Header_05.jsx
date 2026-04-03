@@ -17,7 +17,6 @@ const Header_05 = ({ direction, setDirection }) => {
   const homeLinks = [
     { label: "Home Corporate", path: "/" }, 
     { label: "Home Medical", path: "/home-medical" },
-    { label: "Home Architecture", path: "/home-architecture" },
     { label: "Home Cafe", path: "/home-cafe" },
   ];
 
@@ -211,7 +210,7 @@ const Header_05 = ({ direction, setDirection }) => {
                     <Link to="/home-medical">Home Medical</Link>
                   </li>
                   <li>
-                    <Link to="/home-architecture">Home Architecture</Link>
+                    <Link to="/home-cafe">Home Cafe</Link>
                   </li>
                 </ul>
               </div>
