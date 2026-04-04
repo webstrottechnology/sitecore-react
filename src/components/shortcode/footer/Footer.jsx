@@ -1,6 +1,5 @@
 import React from "react";
 import "./Footer.scss";
-import { RiContactsBookLine } from "react-icons/ri";
 import { footerOneLinks } from "./FooterData";
 import { footerDataTwo } from "./FooterData";
 import { footerDataThree } from "./FooterData";
@@ -11,16 +10,18 @@ import { footerDataSeven } from "./FooterData";
 import { footerDataEight } from "./FooterData";
 import { footerDataNine } from "./FooterData";
 import { footerDataTen } from "./FooterData";
+import { SitecoreCafeFooterData } from "./FooterData";
 import { SiteCorefooterLinks } from "./FooterData";
 import { FiSend } from "react-icons/fi";
 import { FaPaperPlane } from "react-icons/fa";
 import { FaWhatsapp, FaInstagram, FaFacebookF } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
-// import { TbBrandXTwitter } from "react-icons/tb";
 import { BsFillCircleFill } from "react-icons/bs";
 import footerLogo from "../../../assets/images/sitecore_footer_logo.png";
 import { AboutBannerBreadCrumb } from "../breadcrumb/Breadcrumb";
 import sitecoreBg from "../../../assets/images/sitecoreBreadCrumb_bg_img.png";
+import { Link } from "react-router-dom";
+import HomeCafeLogo from "../../../assets/images/homecafe/logo.png";
 
 const FooterOne = () => {
   return (
@@ -866,6 +867,91 @@ const Sitecorefooter = () => {
   );
 };
 
+const HomeCafeFooter = () => {
+  const { contact, quickLinks, socials, moreinfo, instagram } =
+    SitecoreCafeFooterData;
+
+  return (
+    <footer className="cafe-footer-main-wrapper">
+      <div className="container custom-container-lg">
+        <div className="footer-main-wrapper">
+          {/* Contact Section */}
+          <div className="footer-column footer-logo">
+            <Link to="/">
+              <img src={HomeCafeLogo} alt="logo" />
+            </Link>
+            {contact.map((item, index) => (
+              <div
+                key={`${item.id}-${index}`}
+                className="footer-contact-wrapper"
+              >
+                {/* External protocol (tel/mailto) uses <a> */}
+                <a href={item.link} className="contact-icon">
+                  {item.icon}
+                </a>
+                <div className="contact-text">
+                  <p>{item.text}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* Links & Social Section */}
+          <div className="footer-column footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              {quickLinks.map((link, i) => (
+                <li key={i}>
+                  <Link to={link.path}>{link.name}</Link>
+                </li>
+              ))}
+            </ul>
+            <h4>More Information</h4>
+            <ul>
+              {moreinfo.map((link, i) => (
+                <li key={i}>
+                  <Link to={link.path}>{link.name}</Link>
+                </li>
+              ))}
+            </ul>
+            <div className="social-icon">
+              {socials.map((social, i) => (
+                <a key={i} href={social.link} target="_blank" rel="noreferrer">
+                  {social.icon}
+                </a>
+              ))}
+            </div>
+          </div>
+
+          {/* Instagram Section */}
+          <div className="footer-column footer-media">
+            <h4>Instagram</h4>
+            <div className="media-wrapper">
+              {instagram.map((img, i) => (
+                <div key={i} className="media-img">
+                  <img src={img} alt="insta" />
+                  <div className="insta-icon">
+                    <a href="#" target="_blank" rel="noreferrer">
+                      <FaInstagram />
+                    </a>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        <div className="footer-bottom-wrapper">
+          <p>
+            Copyright © 2026-27 <Link to="/">SITECORE.</Link> All Rights
+            Reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
+  );
+};
+
 export default FooterOne;
 export {
   FooterTwo,
@@ -878,4 +964,5 @@ export {
   Sitecorefooter,
   FooterNine,
   FooterTen,
+  HomeCafeFooter,
 };
