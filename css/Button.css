@@ -1,0 +1,32 @@
+@charset "UTF-8";
+/*-----------------------------------
+
+
+    Template Name: Sitecore React Template
+    Version: 1.0.0
+    Author: Webstrot
+    Copyright: © 2026-27
+
+--------------------------------------- */
+.button-wrapper-section {
+  width: 100%;
+  background-color: var(--white-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: var(--p60) var(--p16);
+  gap: 40px;
+}
+.button-wrapper-section .btn-sizes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+  align-items: center;
+}
+.button-wrapper-section .gradientbtnbox {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}/*# sourceMappingURL=Button.css.map */

@@ -1,0 +1,119 @@
+@charset "UTF-8";
+/*-----------------------------------
+
+
+    Template Name: Sitecore React Template
+    Version: 1.0.0
+    Author: Webstrot
+    Copyright: © 2026-27
+
+--------------------------------------- */
+/* ---------------- ABOUT INNER VIDEO CSS---------------- */
+.innerpagesVideoSection {
+  padding: var(--p80) var(--p0);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  position: relative;
+  width: 100%;
+}
+.innerpagesVideoSection::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+.innerpagesVideoSection .innerpagesVideoInner {
+  position: relative;
+  height: 100%;
+}
+.innerpagesVideoSection .innerpagesVideoInner .innerpagesVideoPlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.innerpagesVideoSection .innerpagesVideoInner .innerpagesVideoPlay .playBtn {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: none;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.innerpagesVideoSection .innerpagesVideoInner .innerpagesVideoPlay .playBtn .pulse {
+  border-radius: 50%;
+  animation: pulseAnimation 2s infinite;
+}
+@keyframes pulseAnimation {
+  0% {
+    box-shadow: 0 0 0 0px rgba(33, 158, 188, 0.5);
+  }
+  100% {
+    box-shadow: 0 0 0 20px rgba(33, 158, 188, 0);
+  }
+}
+.innerpagesVideoSection {
+  /* Modal */
+}
+.innerpagesVideoSection .videoModal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.85);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+.innerpagesVideoSection .videoModal .videoModalContent {
+  position: relative;
+  width: var(--width80);
+  max-width: 900px;
+}
+.innerpagesVideoSection .videoModal .closeBtn {
+  position: absolute;
+  top: -40px;
+  right: 0;
+  background: none;
+  border: none;
+  color: var(--white-color);
+  font-size: var(--fs28);
+  cursor: pointer;
+}
+
+/* ---------------- RESPONSIVE ABOUT INNER VIDEO CSS---------------- */
+@media (max-width: 1440px) {
+  .innerpagesVideoSection {
+    height: 90vh;
+  }
+}
+@media (max-width: 1280px) {
+  .innerpagesVideoSection {
+    height: 70vh;
+  }
+}
+@media (max-width: 991px) {
+  .innerpagesVideoSection {
+    height: 60vh;
+  }
+}
+@media (max-width: 767px) {
+  .innerpagesVideoSection {
+    height: 50vh;
+  }
+}
+@media (max-width: 576px) {
+  .innerpagesVideoSection {
+    height: 40vh;
+  }
+}
+@media (max-width: 480px) {
+  .innerpagesVideoSection {
+    height: 30vh;
+  }
+}/*# sourceMappingURL=AboutVideo.css.map */

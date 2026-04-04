@@ -156,4 +156,3 @@ export const gallery4Data = {
     ],
   },
 };
-  

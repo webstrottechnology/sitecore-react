@@ -1,0 +1,72 @@
+@charset "UTF-8";
+/*-----------------------------------
+
+
+    Template Name: Sitecore React Template
+    Version: 1.0.0
+    Author: Webstrot
+    Copyright: © 2026-27
+
+--------------------------------------- */
+/* ---------------- ABOUT FEATURES CSS ---------------- */
+.innerPageStayConnected {
+  padding: var(--p60) var(--p0);
+  height: 100%;
+}
+.innerPageStayConnected .row {
+  row-gap: 30px;
+}
+.innerPageStayConnected .row .innerPageStayConnectedImg1 {
+  height: 100%;
+}
+.innerPageStayConnected .row .innerPageStayConnectedImg1 img {
+  height: 100%;
+}
+.innerPageStayConnected .row .innerPageStayConnectedContant .commHeading1 {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.innerPageStayConnected .row .innerPageStayConnectedContant .commHeading1 span {
+  color: var(--yellow-color);
+  font-size: var(--fs26);
+  font-weight: var(--fw400);
+}
+.innerPageStayConnected .row .innerPageStayConnectedContant .commHeading1 h4 {
+  color: var(--temp1BlueColor);
+  font-size: var(--fs40);
+}
+.innerPageStayConnected .row .innerPageStayConnectedContant .commHeading1 p {
+  color: var(--dark-gray);
+}
+
+/* ---------------- RESPONSIVE ABOUT FEATURES CSS ---------------- */
+@media (max-width: 1366px) {
+  .innerPageStayConnected .row .innerPageStayConnectedContant .commHeading1 h4 {
+    font-size: var(--fs34);
+  }
+}
+@media (max-width: 1280px) {
+  .innerPageStayConnected .row .innerPageStayConnectedContant .commHeading1 span {
+    font-size: var(--fs22);
+  }
+  .innerPageStayConnected .row .innerPageStayConnectedContant .commHeading1 h4 {
+    font-size: var(--fs30);
+  }
+}
+@media (max-width: 991px) {
+  .innerPageStayConnected .row .innerPageStayConnectedContant .commHeading1 h4 {
+    font-size: var(--fs26);
+  }
+  .innerPageStayConnected .row .innerPageStayConnectedContant .commHeading1 p {
+    font-size: var(--fs14);
+  }
+}
+@media (max-width: 576px) {
+  .innerPageStayConnected .row .innerPageStayConnectedContant .commHeading1 h4 {
+    font-size: var(--fs22);
+  }
+  .innerPageStayConnected .row .innerPageStayConnectedContant .commHeading1 span {
+    font-size: var(--fs18);
+  }
+}/*# sourceMappingURL=AboutFeatures.css.map */

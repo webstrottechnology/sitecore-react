@@ -60,7 +60,6 @@ import FooterOne, {
   FooterTen,
   FooterThree,
   FooterTwo,
-  HomeCafeFooter,
   Sitecorefooter,
 } from "../shortcode/footer/Footer";
 
@@ -201,7 +200,6 @@ import Header_01 from "../shortcode/Header/Header_01";
 import Header_02 from "../shortcode/Header/Header_02";
 import Header_04 from "../shortcode/Header/Header_04";
 import Header_05 from "../shortcode/Header/Header_05";
-import Header_Medical from "../shortcode/Header/Header_Medical"
 import Services, {
   MobileAppDesign,
   ServicesGrid,
@@ -263,12 +261,6 @@ import ButtonComponent1, {
   ButtonComponent7,
   ButtonComponent8,
 } from "../shortcode/button/Button";
-import HomeCafeBreakfast, {
-  HomeCafeBrand,
-  HomeCafeGallery,
-  HomeCafeTestimonial,
-  HomeCafeVideo,
-} from "../shortcode/HomeCafeComponent/HomeCafeComponent";
 
 const ComponentsPage = () => {
   return (
@@ -306,7 +298,6 @@ const ComponentsPage = () => {
               <Header_02 />
               <Header_04 />
               <Header_05 />
-              <Header_Medical/>
             </>
           }
         />
@@ -395,7 +386,6 @@ const ComponentsPage = () => {
               <Sitecorefooter />
               <FooterNine />
               <FooterTen />
-              <HomeCafeFooter />
             </>
           }
         />
@@ -466,6 +456,7 @@ const ComponentsPage = () => {
               <Portfolio2 />
               <Portfolio3 />
               <Portfolio4 />
+             
             </>
           }
         />
@@ -806,19 +797,6 @@ const ComponentsPage = () => {
               <ButtonComponent4 />
               <ButtonComponent5 />
               <ButtonComponent6 />
-            </>
-          }
-        />
-
-        <Route
-          path="HomeCafeComponent"
-          element={
-            <>
-              <HomeCafeBreakfast />
-              <HomeCafeTestimonial />
-              <HomeCafeBrand />
-              <HomeCafeGallery />
-              <HomeCafeVideo />
             </>
           }
         />
