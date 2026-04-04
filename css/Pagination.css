@@ -1,0 +1,105 @@
+@charset "UTF-8";
+/*-----------------------------------
+
+
+    Template Name: Sitecore React Template
+    Version: 1.0.0
+    Author: Webstrot
+    Copyright: © 2026-27
+
+--------------------------------------- */
+.pagination-wrapper {
+  width: var(--width100);
+  display: flex;
+  justify-content: center;
+  padding: var(--p20) var(--p0) var(--p60) var(--p0);
+}
+.pagination-wrapper .pagination-container {
+  background: var(--orange-color);
+  padding: var(--p20) var(--p40);
+  border-radius: var(--br60);
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+.pagination-wrapper .pagination-container .nav-btn {
+  width: 70px;
+  height: 70px;
+  background: var(--grayColorShade1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: 0.3s ease;
+  font-size: 24px;
+  color: var(--orange-color);
+  border: none;
+}
+.pagination-wrapper .pagination-container .nav-btn:hover {
+  transform: scale(1.05);
+}
+.pagination-wrapper .pagination-container .pages {
+  display: flex;
+  gap: 18px;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+.pagination-wrapper .pagination-container .pages .page {
+  width: 55px;
+  height: 55px;
+  background: var(--grayColorShade1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--fs18);
+  cursor: pointer;
+  transition: 0.3s ease;
+  color: var(--black-color);
+}
+.pagination-wrapper .pagination-container .pages .page:hover {
+  transform: scale(1.05);
+}
+.pagination-wrapper .pagination-container .pages .page.active {
+  background: var(--white-color);
+  border: 3px solid var(--orange-color);
+  color: var(--black-color);
+  outline: 2px solid var(--white-color);
+}
+
+@media (max-width: 767px) {
+  .pagination-wrapper .pagination-container .pages {
+    gap: 6px;
+  }
+  .pagination-wrapper .pagination-container {
+    padding: var(--p10) var(--p20);
+    gap: 10px;
+  }
+  .pagination-wrapper .pagination-container .nav-btn {
+    width: 50px;
+    height: 50px;
+    font-size: 16px;
+  }
+  .pagination-wrapper .pagination-container .pages .page {
+    width: 40px;
+    height: 40px;
+    font-size: 14px;
+  }
+}
+@media (max-width: 375px) {
+  .pagination-wrapper .pagination-container .pages .page {
+    width: 32px;
+    height: 32px;
+    font-size: 10px;
+  }
+  .pagination-wrapper .pagination-container .nav-btn {
+    width: 40px;
+    height: 40px;
+    font-size: 14px;
+  }
+  .pagination-wrapper .pagination-container {
+    padding: var(--p10) var(--p10);
+  }
+}/*# sourceMappingURL=Pagination.css.map */

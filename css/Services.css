@@ -1,0 +1,578 @@
+@charset "UTF-8";
+/*-----------------------------------
+
+
+    Template Name: Sitecore React Template
+    Version: 1.0.0
+    Author: Webstrot
+    Copyright: © 2026-27
+
+--------------------------------------- */
+/* ---------------- SERVICES ONE CSS ---------------- */
+.SiteCoreServices_wrapper {
+  padding: var(--p60) var(--p0);
+  color: var(--black-color);
+}
+.SiteCoreServices_wrapper .container .services_title {
+  text-align: center;
+  margin-bottom: var(--m50);
+}
+.SiteCoreServices_wrapper .container .services_title h4 {
+  color: var(--green-color02);
+  font-size: var(--fs20);
+  letter-spacing: 3px;
+  margin-bottom: var(--m10);
+  text-transform: uppercase;
+}
+.SiteCoreServices_wrapper .container .services_title h2 {
+  font-size: var(--fs40);
+  color: var(--black-color);
+  margin-top: var(--m30);
+}
+.SiteCoreServices_wrapper .container .services_list {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  list-style: none;
+  padding: var(--p0);
+  margin: var(--m0);
+  width: var(--width100);
+}
+.SiteCoreServices_wrapper .container .services_list .services_Card {
+  background: var(--white-color);
+  width: 100%;
+  padding: var(--p30);
+  border-radius: var(--br16);
+  text-align: left;
+  position: relative;
+  cursor: default;
+  transition: var(--transition2);
+  position: relative;
+}
+.SiteCoreServices_wrapper .container .services_list .services_Card:hover {
+  transform: translateY(-7px);
+}
+.SiteCoreServices_wrapper .container .services_list .services_Card:hover h4,
+.SiteCoreServices_wrapper .container .services_list .services_Card:hover a {
+  color: var(--green-color02);
+}
+.SiteCoreServices_wrapper .container .services_list .services_Card .icon {
+  width: 60px;
+  height: 60px;
+  border-radius: var(--br6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--fs28);
+  margin-bottom: var(--m30);
+  color: var(--white-color);
+  animation: zoomInOut 2s infinite alternate;
+  position: relative;
+  z-index: 2;
+}
+.SiteCoreServices_wrapper .container .services_list .services_Card h4 {
+  font-size: var(--fs26);
+  font-weight: var(--fw700) !important;
+  margin-bottom: var(--m30);
+  color: var(--black02);
+}
+.SiteCoreServices_wrapper .container .services_list .services_Card p {
+  font-size: var(--fs16);
+  color: var(--gray02);
+  line-height: var(--line-height-24);
+  margin-bottom: var(--m30);
+}
+.SiteCoreServices_wrapper .container .services_list .services_Card a {
+  font-size: var(--fs16);
+  color: #023047;
+  font-weight: var(--fw700) !important;
+  text-decoration: none;
+  transition: var(--transition2);
+}
+.SiteCoreServices_wrapper .container .services_list .services_Card a:hover {
+  text-decoration: underline;
+}
+.SiteCoreServices_wrapper .container .services_list .services_Card.card_1 .icon::after,
+.SiteCoreServices_wrapper .container .services_list .services_Card.card_3 .icon::after {
+  content: "";
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  border-radius: var(--br6);
+  top: -8px;
+  right: -8px;
+  background: currentColor;
+  opacity: 0.25;
+}
+.SiteCoreServices_wrapper .container .services_list .services_Card.card_0 .icon {
+  background: #f74f6f;
+}
+.SiteCoreServices_wrapper .container .services_list .services_Card.card_0 .icon::after {
+  background: #f74f6f;
+}
+.SiteCoreServices_wrapper .container .services_list .services_Card.card_1 .icon {
+  background: #00c2a8;
+}
+.SiteCoreServices_wrapper .container .services_list .services_Card.card_1 .icon::after {
+  background: #00c2a8;
+}
+.SiteCoreServices_wrapper .container .services_list .services_Card.card_2 .icon {
+  background: #4aa3ff;
+}
+.SiteCoreServices_wrapper .container .services_list .services_Card.card_2 .icon::after {
+  background: #4aa3ff;
+}
+.SiteCoreServices_wrapper .container .services_list .services_Card.card_3 .icon {
+  background: #ffb703;
+  color: #000;
+}
+.SiteCoreServices_wrapper .container .services_list .services_Card.card_3 .icon::after {
+  background: #ffb703;
+}
+.SiteCoreServices_wrapper .container .services_btn {
+  margin-top: var(--m40);
+  text-align: center;
+}
+.SiteCoreServices_wrapper {
+  /* Animation */
+}
+@keyframes zoomInOut {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.1);
+  }
+}
+.SiteCoreServices_wrapper {
+  /* Animation keyframes */
+}
+@keyframes zoomInOut {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* ---------------- SERVICES TWO CSS ---------------- */
+.SitecoreChooseData_wrapper {
+  width: var(--width100);
+  padding: var(--p140) var(--p0) var(--p100) var(--p0);
+  background-color: var(--white-color);
+  position: relative;
+  overflow: hidden;
+}
+.SitecoreChooseData_wrapper .container {
+  display: flex;
+  align-items: flex-start;
+}
+.SitecoreChooseData_wrapper {
+  /* ================= LEFT SIDE ================= */
+}
+.SitecoreChooseData_wrapper .data_left_content {
+  flex: 1;
+}
+.SitecoreChooseData_wrapper .data_left_content h4 {
+  font-size: var(--fs20);
+  font-weight: var(--fw600);
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--green-color02);
+}
+.SitecoreChooseData_wrapper .data_left_content h2 {
+  font-size: var(--fs40);
+  color: var(--black-color);
+  margin: var(--m30) var(--m0);
+}
+.SitecoreChooseData_wrapper .data_left_content p {
+  font-size: var(--fs16);
+  color: var(--gray-color);
+  margin-bottom: var(--m30);
+  max-width: 600px;
+}
+.SitecoreChooseData_wrapper .data_left_content ul {
+  list-style: none;
+  padding: var(--p0);
+  margin-bottom: var(--m36);
+}
+.SitecoreChooseData_wrapper .data_left_content ul li {
+  position: relative;
+  padding-left: var(--p22);
+  margin-bottom: var(--m16);
+  font-size: var(--fs22);
+  font-weight: var(--fw600);
+  color: #0b1b3f;
+}
+.SitecoreChooseData_wrapper .data_left_content ul li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 7px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--green-color02);
+}
+.SitecoreChooseData_wrapper {
+  /* ================= RIGHT SIDE ================= */
+}
+.SitecoreChooseData_wrapper .data_right_content {
+  flex: 1;
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+.SitecoreChooseData_wrapper .data_right_content::before {
+  content: "";
+  position: absolute;
+  top: -120px;
+  right: -80px;
+  width: 260px;
+  height: 260px;
+  border-radius: 50%;
+  background: rgba(47, 214, 181, 0.35);
+  z-index: 0;
+}
+.SitecoreChooseData_wrapper .data_right_content::after {
+  content: "";
+  position: absolute;
+  bottom: -90px;
+  left: -90px;
+  width: 260px;
+  height: 260px;
+  border-radius: 50%;
+  background: rgba(47, 214, 181, 0.35);
+  z-index: 0;
+}
+.SitecoreChooseData_wrapper .data_right_content .card {
+  position: relative;
+  background-color: var(--white-color);
+  padding: var(--p32) var(--p20);
+  border-radius: var(--br10);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.06);
+  z-index: 1;
+  overflow: hidden;
+  border: none;
+  /* staggered card layout */
+}
+.SitecoreChooseData_wrapper .data_right_content .card:nth-child(2) {
+  margin-top: -30px;
+}
+.SitecoreChooseData_wrapper .data_right_content .card:nth-child(3) {
+  margin-top: var(--m0);
+}
+.SitecoreChooseData_wrapper .data_right_content .card {
+  /* attached green circle */
+}
+.SitecoreChooseData_wrapper .data_right_content .card::before {
+  content: "";
+  position: absolute;
+  top: -38px;
+  left: -38px;
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  background: rgba(47, 214, 181, 0.2);
+  z-index: 0;
+}
+.SitecoreChooseData_wrapper .data_right_content .card .icon {
+  position: relative;
+  z-index: 1;
+  font-size: var(--fs34);
+  color: var(--green-color02);
+  margin-bottom: 18px;
+  animation: floatIcon 2s ease-in-out infinite;
+}
+.SitecoreChooseData_wrapper .data_right_content .card h4 {
+  position: relative;
+  z-index: 1;
+  font-size: var(--fs26);
+  font-weight: var(--fw700) !important;
+  color: #0b1b3f;
+  margin: var(--m20) var(--m0);
+}
+.SitecoreChooseData_wrapper .data_right_content .card p {
+  position: relative;
+  z-index: 1;
+  font-size: var(--fs16);
+  line-height: 1.6;
+}
+
+/* ================= ICON ANIMATION ================= */
+@keyframes floatIcon {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+.tempservicesGrid {
+  width: var(--width100);
+  height: 100%;
+  background: var(--white-color);
+  padding: var(--p100) var(--p0);
+}
+.tempservicesGrid .container {
+  max-width: 1600px;
+  margin: auto;
+}
+.tempservicesGrid .grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+.tempservicesGrid .service-card-box {
+  padding: var(--p80);
+  text-align: center;
+  background: var(--white-color);
+  transition: 0.3s ease;
+  /* Inner Grid Lines */
+  border-right: 1px solid var(--orange-color);
+  border-bottom: 1px solid var(--orange-color);
+}
+.tempservicesGrid .service-card-box .iconCircle {
+  width: 70px;
+  height: 70px;
+  border: 2px solid var(--orange-color);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 25px;
+  color: var(--orange-color);
+  font-size: var(--fs22);
+  transition: all 0.5s;
+}
+.tempservicesGrid .service-card-box .iconCircle svg {
+  width: 40px;
+  height: 40px;
+}
+.tempservicesGrid .service-card-box h4 {
+  font-size: var(--fs26);
+  font-weight: var(--fw600);
+  margin-bottom: var(--m16);
+}
+.tempservicesGrid .service-card-box h4 a {
+  color: var(--black-color);
+}
+.tempservicesGrid .service-card-box p {
+  font-size: var(--fs16);
+  color: var(--gray-color);
+  margin-bottom: var(--m20);
+}
+.tempservicesGrid .service-card-box .arrow {
+  color: var(--orange-color);
+  font-size: var(--fs50);
+  transition: 0.3s ease;
+}
+.tempservicesGrid .service-card-box:hover {
+  background: var(--white-color);
+}
+.tempservicesGrid .service-card-box:hover .arrow {
+  transform: translateX(8px);
+}
+.tempservicesGrid .service-card-box:hover .iconCircle {
+  background-color: var(--orange-color);
+}
+.tempservicesGrid .service-card-box:hover .iconCircle svg path {
+  fill: var(--white-color);
+  stroke: var(--white-color);
+}
+.tempservicesGrid {
+  /* ❌ Remove Right Border From Last Column */
+}
+.tempservicesGrid .service-card-box:nth-child(3n) {
+  border-right: none;
+}
+.tempservicesGrid {
+  /* ❌ Remove Bottom Border From Last Row */
+}
+.tempservicesGrid .service-card-box:nth-last-child(-n+3) {
+  border-bottom: none;
+}
+
+.MobileAppDesignWrapper {
+  width: 100%;
+  background: var(--white-color);
+  padding: var(--p60) var(--p0);
+}
+.MobileAppDesignWrapper .container {
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+}
+.MobileAppDesignWrapper .mobile-content {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.MobileAppDesignWrapper .mobile-content .icon-box {
+  margin-bottom: var(--mb20);
+}
+.MobileAppDesignWrapper .mobile-content .icon-box .icon {
+  width: 70px;
+  height: 70px;
+  border: 2px solid var(--orange-color);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--orange-color);
+  font-size: var(--fs26);
+}
+.MobileAppDesignWrapper .mobile-content h2 {
+  font-size: var(--fs50);
+  font-weight: var(--fw600);
+  color: var(--black-color);
+  letter-spacing: 1px;
+}
+.MobileAppDesignWrapper .mobile-content p {
+  font-size: var(--fs16);
+  line-height: 1.8;
+  color: var(--gray-color);
+  margin-bottom: var(--p25);
+}
+.MobileAppDesignWrapper .mobile-image {
+  width: 50%;
+}
+.MobileAppDesignWrapper .mobile-image img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* ---------------- RESPONSIVE SERVICES CSS ---------------- */
+@media (max-width: 1280px) {
+  .SitecoreChooseData_wrapper .container {
+    flex-direction: column;
+    gap: 50px;
+    display: flex;
+  }
+  .tempservicesGrid .service-card-box {
+    padding: var(--p60);
+  }
+  .tempservicesGrid .service-card-box h4 {
+    font-size: var(--fs22);
+  }
+  .SitecoreChooseData_wrapper {
+    padding: var(--p80) var(--p0) var(--p100) var(--p0);
+  }
+}
+@media (max-width: 1024px) {
+  .SiteCoreServices_wrapper .container .services_list {
+    grid-template-columns: auto auto;
+  }
+  .SiteCoreServices_wrapper .container .services_list .services_Card h4 {
+    font-size: 22px;
+  }
+}
+@media (max-width: 991px) {
+  .SiteCoreServices_wrapper .container .services_title h2,
+  .SitecoreChooseData_wrapper .data_left_content h2 {
+    font-size: var(--fs36);
+  }
+  .tempservicesGrid .service-card-box {
+    border-right: none;
+    border-bottom: none;
+  }
+  .tempservicesGrid .service-card-box:nth-last-child(-n+3) {
+    border-bottom: none;
+  }
+  .tempservicesGrid .grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .MobileAppDesignWrapper .container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .MobileAppDesignWrapper .mobile-content {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+  .MobileAppDesignWrapper .mobile-content p {
+    text-align: center;
+  }
+  .MobileAppDesignWrapper .mobile-image {
+    width: 100%;
+  }
+  .MobileAppDesignWrapper .mobile-image img {
+    max-width: 600px;
+    margin: 0 auto;
+    display: block;
+  }
+  .MobileAppDesignWrapper .mobile-content h2 {
+    font-size: 30px;
+  }
+}
+@media (max-width: 767px) {
+  .SitecoreChooseData_wrapper .data_right_content::before,
+  .SitecoreChooseData_wrapper .data_right_content::after {
+    display: none;
+  }
+  .SiteCoreServices_wrapper .container .services_title h2,
+  .SitecoreChooseData_wrapper .data_left_content h2 {
+    font-size: var(--fs32);
+  }
+  .tempservicesGrid .grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .SitecoreChooseData_wrapper {
+    padding: var(--p60) var(--p0) var(--p60) var(--p0);
+  }
+}
+@media (max-width: 576px) {
+  .SiteCoreServices_wrapper .container .services_list {
+    grid-template-columns: auto;
+  }
+  .SiteCoreServices_wrapper .container .services_list .services_Card h4 {
+    font-size: 18px;
+  }
+  .SiteCoreServices_wrapper .container .services_title h2,
+  .SitecoreChooseData_wrapper .data_left_content h2 {
+    font-size: var(--fs28);
+  }
+  .tempservicesGrid .service-card-box {
+    padding: var(--p20);
+  }
+  .MobileAppDesignWrapper .mobile-image img {
+    max-width: 430px;
+  }
+}
+@media (max-width: 480px) {
+  .SitecoreChooseData_wrapper .data_right_content {
+    grid-template-columns: 1fr;
+  }
+  .SiteCoreServices_wrapper .container .services_title h2,
+  .SitecoreChooseData_wrapper .data_left_content h2 {
+    font-size: var(--fs22);
+  }
+  .SitecoreChooseData_wrapper .data_left_content ul li {
+    font-size: var(--fs18);
+  }
+  .SitecoreChooseData_wrapper .data_right_content .card h4 {
+    font-size: var(--fs22);
+  }
+  .SiteCoreServices_wrapper .container .services_list .services_Card {
+    padding: var(--p20);
+  }
+  .MobileAppDesignWrapper .mobile-image img {
+    max-width: 100%;
+  }
+  .MobileAppDesignWrapper .mobile-content h2 {
+    font-size: 26px;
+    text-align: center;
+  }
+}/*# sourceMappingURL=Services.css.map */

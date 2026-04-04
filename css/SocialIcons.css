@@ -1,0 +1,643 @@
+@charset "UTF-8";
+/*-----------------------------------
+
+
+    Template Name: Sitecore React Template
+    Version: 1.0.0
+    Author: Webstrot
+    Copyright: © 2026-27
+
+--------------------------------------- */
+/* ---------------- SOCIAL ICONS ONE CSS ---------------- */
+.social-wrapper {
+  display: flex;
+  gap: var(--m50);
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: var(--p60) var(--p0);
+  width: var(--width100);
+}
+.social-wrapper .social-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: var(--br16);
+  background: var(--bg-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  box-shadow: var(--boxShadow01);
+  cursor: pointer;
+}
+.social-wrapper .social-icon::before {
+  content: "";
+  position: absolute;
+  top: -100%;
+  left: 0;
+  width: var(--width100);
+  height: 100%;
+  background: var(--brand-color);
+  transition: var(--transition3);
+  z-index: 1;
+}
+.social-wrapper .social-icon:hover::before {
+  top: 0;
+}
+.social-wrapper .social-icon .icon {
+  font-size: var(--fs24);
+  color: var(--brand-color);
+  z-index: 2;
+  transition: var(--transition2);
+}
+.social-wrapper .social-icon:hover .icon {
+  color: var(--white-color);
+}
+
+/* ---------------- SOCIAL ICONS TWO CSS ---------------- */
+.social2-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: var(--bg-dark);
+  padding: var(--p60) var(--p0);
+  width: var(--width100);
+}
+.social2-wrapper .social2-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+.social2-wrapper .social2-list li a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70px;
+  width: 70px;
+  padding: var(--p6);
+  border-radius: 50%;
+  font-size: var(--fs56);
+  color: var(--white-color);
+  transition: 0.5s ease;
+}
+.social2-wrapper .social2-list li a:hover {
+  font-size: calc(var(--fs60, 60px) - 10px);
+  color: var(--sky-blue);
+  box-shadow: 0 0 40px var(--sky-blue);
+}
+.social2-wrapper .mt {
+  margin-top: var(--m100);
+}
+
+/* ---------------- SOCIAL ICONS THREE CSS ---------------- */
+.social3-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: var(--p60) var(--p0);
+  width: var(--width100);
+  flex-wrap: wrap;
+}
+.social3-wrapper .bg-ico {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: var(--fs90);
+  border-radius: 50%;
+  background-color: var(--white-color);
+  cursor: pointer;
+  position: relative;
+  transition: transform 0.5s ease, background-color 0.5s ease, box-shadow 0.5s ease;
+}
+.social3-wrapper .bg-ico .social {
+  font-size: var(--fs48);
+  transition: color 0.5s ease, transform 0.5s ease;
+  color: var(--black-color);
+}
+.social3-wrapper .bg-ico:hover {
+  transform: scale(1.3);
+  background-color: var(--brand-color);
+  box-shadow: 0 0 25px var(--brand-color-light);
+}
+.social3-wrapper .bg-ico:hover .social {
+  color: var(--white-color);
+}
+.social3-wrapper .instagram-ico {
+  border-radius: var(--br8);
+  background-color: var(--white-color);
+}
+.social3-wrapper .instagram-ico:hover {
+  transform: scale(1.3);
+  box-shadow: 0 0 25px rgba(236, 20, 103, 0.5);
+  background: linear-gradient(45deg, #feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5);
+}
+.social3-wrapper .instagram-ico:hover .social {
+  color: var(--white-color);
+}
+
+/* ---------------- SOCIAL ICONS FOUR CSS ---------------- */
+.social4-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  padding: var(--p60) var(--p0);
+  width: var(--width100);
+}
+.social4-wrapper .bg-ico {
+  display: flex;
+  background-color: var(--white-color);
+  width: 90px;
+  height: 90px;
+  line-height: 90px;
+  text-align: center;
+  border-radius: 28%;
+  box-shadow: 0 5px 15px -5px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: background-color 0.35s ease, transform 0.35s ease, box-shadow 0.35s ease;
+}
+.social4-wrapper .bg-ico:hover {
+  transform: scale(1.25);
+  box-shadow: 0 5px 15px -5px rgba(0, 0, 0, 0.8);
+}
+.social4-wrapper .social {
+  margin: auto;
+  font-size: var(--fs30);
+}
+.social4-wrapper .social:hover {
+  transform: scale(1.4);
+}
+.social4-wrapper .bg-ico[style] .social {
+  color: var(--brand-color);
+}
+.social4-wrapper .bg-ico:hover .social {
+  transform: scale(1.3);
+}
+.social4-wrapper .instagram {
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+.social4-wrapper .instagram-ico:hover {
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+}
+
+/* ---------------- SOCIAL ICONS FIVE CSS ---------------- */
+.social5-wrapper {
+  display: flex;
+  justify-content: center;
+  padding: var(--p60) var(--p0);
+  width: var(--width100);
+}
+.social5-wrapper .social5-list {
+  display: flex;
+  gap: 80px;
+  padding: var(--p0);
+  margin: var(--m0);
+  flex-wrap: wrap;
+  width: var(--width100);
+  justify-content: center;
+}
+.social5-wrapper .social5-list li {
+  list-style: none;
+}
+.social5-wrapper .social5-list li a {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--main, #fff);
+  transform: perspective(100px) rotate(-30deg) skew(25deg);
+  box-shadow: -20px 20px 10px rgba(0, 0, 0, 0.5);
+  transition: 0.6s;
+}
+.social5-wrapper .social5-list li a svg {
+  font-size: var(--fs40);
+  color: var(--white-color);
+  transition: 0.4s;
+}
+.social5-wrapper .social5-list li a::before {
+  content: "";
+  position: absolute;
+  left: -20px;
+  top: 10px;
+  width: 20px;
+  height: 100%;
+  background: var(--side, #b1b1b1);
+  transform: skewY(-45deg);
+}
+.social5-wrapper .social5-list li a::after {
+  content: "";
+  position: absolute;
+  bottom: -20px;
+  left: -10px;
+  width: 100%;
+  height: 20px;
+  background: var(--bottom, #b1b1b1);
+  transform: skewX(-45deg);
+}
+.social5-wrapper .social5-list li a:hover {
+  transform: perspective(1000px) rotate(-30deg) skew(25deg) translate(20px, -20px);
+  box-shadow: -50px 50px 40px rgba(0, 0, 0, 0.6);
+}
+.social5-wrapper .social5-list li {
+  /* Instagram Gradient */
+}
+.social5-wrapper .social5-list li .instagram {
+  background: linear-gradient(#400080, transparent), linear-gradient(200deg, #d047d1, #ff0000, #ffff00);
+}
+.social5-wrapper .social5-list li .instagram::before, .social5-wrapper .social5-list li .instagram::after {
+  background: linear-gradient(#400080, transparent), linear-gradient(200deg, #d047d1, #ff0000, #ffff00);
+}
+
+/* ---------------- SOCIAL ICONS SIX CSS ---------------- */
+.social6-container {
+  padding: var(--p60) var(--p0);
+  width: var(--width100);
+}
+.social6-container .social6-icons {
+  justify-content: center;
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+.social6-container .social6-icons .social6-icon {
+  width: var(--p100);
+  height: var(--p100);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-size: var(--fs40);
+  color: var(--brand);
+  /* background hover logic */
+  background-image: linear-gradient(to top, var(--brand) 50%, var(--white-color) 50%);
+  background-size: 100% 200%;
+  background-position: 0% 0%;
+  border-bottom: 4px solid var(--brand);
+  border-radius: var(--br8);
+  box-shadow: var(--boxShadow01);
+  transition: background-position 0.45s ease, color 0.45s ease, border-color 0.45s ease;
+}
+.social6-container .social6-icons .social6-icon:hover {
+  background-position: 0% 100%;
+  color: var(--white-color);
+  border-bottom-color: var(--brand);
+}
+
+/* ---------------- SOCIAL ICONS SEVEN CSS ---------------- */
+.social7-wrapper {
+  padding: var(--p60) var(--p0);
+  width: var(--width100);
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+.social7-wrapper .social7-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: var(--white-color);
+  border: 2px solid var(--brand-color);
+  color: var(--brand-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--fs22);
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s ease;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+.social7-wrapper .social7-icon .fill {
+  position: absolute;
+  top: -100%;
+  left: 0;
+  width: var(--width100);
+  height: 100%;
+  background: var(--brand-color);
+  transition: all 0.4s ease;
+  z-index: 0;
+}
+.social7-wrapper .social7-icon svg {
+  position: relative;
+  z-index: 1;
+  transition: color 0.4s ease;
+}
+.social7-wrapper .social7-icon:hover {
+  transform: translateY(-6px);
+}
+.social7-wrapper .social7-icon:hover .fill {
+  top: 0;
+}
+.social7-wrapper .social7-icon:hover svg {
+  color: var(--white-color);
+}
+
+/* ---------------- SOCIAL ICONS EIGHT CSS ---------------- */
+.social_wrapper8 {
+  width: var(--width100);
+}
+.social_wrapper8 .sticky-icon {
+  position: fixed;
+  top: 30%;
+  right: 0;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+}
+.social_wrapper8 .sticky-icon a {
+  width: 220px;
+  margin: var(--m2) 0;
+  padding: var(--p10);
+  display: flex;
+  align-items: center;
+  gap: var(--p14);
+  font-family: var(--body);
+  font-size: var(--fs18);
+  font-weight: var(--fw500);
+  color: var(--white-color);
+  text-decoration: none;
+  text-transform: uppercase;
+  border-radius: var(--br50) 0 0 var(--br50);
+  transform: translateX(160px);
+  transition: var(--transition3);
+}
+.social_wrapper8 .sticky-icon a:hover {
+  transform: translateX(0);
+}
+.social_wrapper8 .sticky-icon a i {
+  width: 40px;
+  height: 40px;
+  background: var(--white-color);
+  border-radius: var(--br50);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition2);
+}
+.social_wrapper8 .sticky-icon a i svg {
+  font-size: var(--fs18);
+}
+.social_wrapper8 .sticky-icon a:hover i {
+  transform: rotate(360deg);
+}
+.social_wrapper8 .instagram {
+  background: var(--pink-color);
+}
+.social_wrapper8 .instagram i svg {
+  color: var(--pink-color);
+}
+.social_wrapper8 .facebook {
+  background: var(--sky-blue);
+}
+.social_wrapper8 .facebook i svg {
+  color: var(--sky-blue);
+}
+.social_wrapper8 .google {
+  background: var(--red-color);
+}
+.social_wrapper8 .google i svg {
+  color: var(--red-color);
+}
+.social_wrapper8 .youtube {
+  background: var(--orange-color);
+}
+.social_wrapper8 .youtube i svg {
+  color: var(--orange-color);
+}
+.social_wrapper8 .twitter {
+  background: var(--blue-color);
+}
+.social_wrapper8 .twitter i svg {
+  color: var(--blue-color);
+}
+
+/* ---------------- SOCIAL ICONS NINE CSS ---------------- */
+.social_wrapper9 {
+  position: fixed;
+  top: 30%;
+  left: 0;
+  z-index: 10;
+}
+.social_wrapper9 ul li {
+  width: 320px;
+  margin: var(--m6) var(--m0);
+  padding: var(--p10);
+  background: rgba(0, 0, 0, 0.55);
+  border-radius: 0 var(--br30) var(--br30) 0;
+  text-align: right;
+  transform: translateX(-260px);
+  transition: transform 2.8s cubic-bezier(0.22, 1, 0.36, 1), background-color 0.8s ease;
+}
+.social_wrapper9 ul li:hover {
+  transform: translateX(0);
+}
+.social_wrapper9 ul li a {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: var(--p14);
+  font-family: var(--body);
+  font-size: var(--fs18);
+  color: var(--white-color);
+  text-decoration: none;
+}
+.social_wrapper9 ul li i {
+  width: 42px;
+  height: 42px;
+  background: var(--white-color);
+  border-radius: var(--br50);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.social_wrapper9 ul li i svg {
+  font-size: var(--fs18);
+  color: var(--black-color);
+  transform: rotate(0deg);
+  transition: transform 2s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.social_wrapper9 ul li:hover i svg {
+  transform: rotate(360deg);
+}
+.social_wrapper9 ul .twitter:hover {
+  background: var(--sky-blue);
+}
+.social_wrapper9 ul .facebook:hover {
+  background: var(--ocean-blue);
+}
+.social_wrapper9 ul .google:hover {
+  background: var(--red-color);
+}
+.social_wrapper9 ul .instagram:hover {
+  background: var(--red-color);
+}
+
+/* ---------------- SOCIAL ICONS TEN CSS ---------------- */
+.social_wrapper10 .social-menu10 {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+.social_wrapper10 .social-menu10 .social-btn10 {
+  list-style: none;
+  width: 60px;
+  height: 60px;
+  margin: var(--p16);
+  background: var(--white-color);
+  border-radius: var(--br10);
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 10px 10px -5px rgba(255, 255, 255, 0.1);
+  cursor: pointer;
+  transition: var(--transition2);
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+.social_wrapper10 .social-menu10 .social-btn10 a {
+  color: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.social_wrapper10 .social-menu10 .social-btn10 {
+  /* Tooltip text */
+}
+.social_wrapper10 .social-menu10 .social-btn10::before {
+  content: attr(data-tooltip);
+  position: absolute;
+  top: 0;
+  opacity: 0;
+  pointer-events: none;
+  background: var(--white-color);
+  color: var(--black-color);
+  padding: var(--p8) var(--p12);
+  font-size: var(--fs14);
+  font-weight: var(--fw600);
+  border-radius: var(--br6);
+  letter-spacing: 1px;
+  transition: all 0.35s ease;
+  z-index: -1;
+  white-space: nowrap;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+.social_wrapper10 .social-menu10 .social-btn10 {
+  /* Tooltip arrow */
+}
+.social_wrapper10 .social-menu10 .social-btn10::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 8px;
+  height: 8px;
+  background: var(--white-color);
+  transform: translateX(-50%) rotate(45deg);
+  opacity: 0;
+  transition: all 0.35s ease;
+  z-index: -2;
+}
+.social_wrapper10 .social-menu10 .social-btn10:hover::before {
+  top: -45px;
+  opacity: 1;
+}
+.social_wrapper10 .social-menu10 .social-btn10:hover::after {
+  top: -15px;
+  opacity: 1;
+}
+.social_wrapper10 .social-menu10 .facebook {
+  color: #1877F2;
+}
+.social_wrapper10 .social-menu10 .facebook:hover {
+  background: #1877F2;
+  color: var(--white-color);
+  transform: translateY(-5px);
+}
+.social_wrapper10 .social-menu10 .instagram {
+  color: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+}
+.social_wrapper10 .social-menu10 .instagram:hover {
+  background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+  color: var(--white-color);
+  transform: translateY(-5px);
+}
+.social_wrapper10 .social-menu10 .pinterest {
+  color: #E60023;
+}
+.social_wrapper10 .social-menu10 .pinterest:hover {
+  background: #E60023;
+  color: var(--white-color);
+}
+.social_wrapper10 .social-menu10 .linkedin {
+  color: #0A66C2;
+}
+.social_wrapper10 .social-menu10 .linkedin:hover {
+  background: #0A66C2;
+  color: var(--white-color);
+  transform: translateY(-5px);
+}
+
+/* ---------------- RESPONSIVE ICONS CSS ---------------- */
+@media (max-width: 991px) {
+  .social5-wrapper .social5-list li a {
+    width: 70px;
+    height: 70px;
+  }
+}
+@media (max-width: 767px) {
+  .social5-wrapper .social5-list li a {
+    width: 60px;
+    height: 60px;
+  }
+  .social5-wrapper .social5-list {
+    display: grid;
+    grid-template-columns: auto auto auto;
+  }
+  .social2-wrapper .social2-list li a {
+    height: 50px;
+    width: 50px;
+  }
+}
+@media (max-width: 576px) {
+  .social6-container .social6-icons .social6-icon {
+    width: auto;
+  }
+}
+@media (max-width: 480px) {
+  .social5-wrapper .social5-list {
+    grid-template-columns: auto;
+  }
+  .social2-wrapper .social2-list {
+    gap: 30px;
+  }
+  .social_wrapper9 ul li i {
+    width: 30px;
+    height: 30px;
+  }
+  .social_wrapper9 ul li {
+    width: 304px;
+  }
+  .social_wrapper8 .sticky-icon a {
+    width: 204px;
+  }
+  .social_wrapper8 .sticky-icon a i {
+    width: 30px;
+    height: 30px;
+  }
+}
+@media (max-width: 375px) {
+  .social2-wrapper .social2-list {
+    gap: 20px;
+  }
+}/*# sourceMappingURL=SocialIcons.css.map */
