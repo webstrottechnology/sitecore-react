@@ -1,4 +1,4 @@
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, useLocation } from "react-router-dom";
 import { useState, useEffect } from "react";
 import ThemeSwitcher from "./components/shortcode/ThemeSwitcher/ThemeSwitcher";
 import DirectionSwitcher from "./components/shortcode/DirectionSwitcher/Direction";
@@ -31,10 +31,14 @@ import ProductGridPage from "./components/pages/ProductGridPage";
 import Checkout from "./components/pages/Checkout";
 import ProductSingle01 from "./components/pages/ProductSingle01";
 import ProductSingle02 from "./components/pages/ProductSingle02";
+import HeaderMedical from "./components/pages/HeaderMedical";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
 const App = () => {
+  const location = useLocation();
+  const hideLayoutRoutes = ["/home-medical"];
+  const shouldHideLayout = hideLayoutRoutes.includes(location.pathname);
   const [direction, setDirection] = useState("ltr");
 
   useEffect(() => {
@@ -53,8 +57,10 @@ const App = () => {
   }, []);
   return (
     <>
-      {/* HEADER ALWAYS */}
-      <Header_05 direction={direction} setDirection={setDirection}/>
+      {/* GLOBAL HEADER */}
+      {!shouldHideLayout && (
+        <Header_05 direction={direction} setDirection={setDirection} />
+      )}
       {/* PAGE ROUTES */}
       <Routes>
         <Route path="/" element={<Home />} />
@@ -85,9 +91,10 @@ const App = () => {
         <Route path="/checkout" element={<Checkout />} />
         <Route path="/product-single-01" element={<ProductSingle01 />} />
         <Route path="/product-single-02" element={<ProductSingle02 />} />
+        <Route path="/home-medical" element={<HeaderMedical />} />
       </Routes>
       {/* FOOTER ALWAYS */}
-      <Sitecorefooter />
+      {!shouldHideLayout && <Sitecorefooter />}
     </>
   );
 };
