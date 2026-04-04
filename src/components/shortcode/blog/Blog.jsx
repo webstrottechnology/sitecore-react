@@ -4,9 +4,12 @@ import { Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import { HomeBlogData } from "./blogData";
-import { blogDataOne } from "./blogData";
-import { blogDataTwo } from "./blogData";
-import { blogDataThree } from "./blogData";
+import {
+  blogDataOne,
+  blogDataTwo,
+  blogDataThree,
+  blogDataFour,
+} from "./blogData";
 import { Link } from "react-router-dom";
 import {
   FiUser,
@@ -16,6 +19,8 @@ import {
   FiArrowRight,
 } from "react-icons/fi";
 import { FaUser, FaComment } from "react-icons/fa";
+import { IoIosArrowBack } from "react-icons/io";
+import { IoIosArrowForward } from "react-icons/io";
 import { AboutBannerBreadCrumb } from "../breadcrumb/Breadcrumb";
 import sitecoreBg from "../../../assets/images/sitecoreBreadCrumb_bg_img.png";
 
@@ -350,9 +355,9 @@ const BlogSectionThree = () => {
                     <a href={item.link}>{item.title}</a>
                   </h3>
                   <div className="latestNewBtn">
-                    <a href={item.link} className="Temp-read-more">
+                    <Link to={item.link} class="outlineroundedbtn  lg-btn">
                       <span>Continue Reading </span>
-                    </a>
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -362,7 +367,93 @@ const BlogSectionThree = () => {
 
         {/* VIEW ALL */}
         <div className="view-all">
-          <a href="/blog">View All</a>
+          <Link to="/blog" className="filledroundedbtn md-btn">
+            <span>View All</span>
+          </Link>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+const BlogSectionFour = () => {
+  return (
+    <section className="BlogSectionFour">
+      <div className="custom-container-lg">
+        {/* HEADER */}
+        <div className="blog-header">
+          <div className="title_box">
+            <span className="subtitle">Our Blog</span>
+            <h2>Our Latest Newsletter</h2>
+          </div>
+
+          <div className="nav-arrows">
+            <button className="blog-prev active">
+              <IoIosArrowBack />
+            </button>
+            <button className="blog-next">
+              <IoIosArrowForward />
+            </button>
+          </div>
+        </div>
+
+        {/* SLIDER */}
+        <Swiper
+          modules={[Navigation]}
+          spaceBetween={30}
+          slidesPerView={3}
+          navigation={{
+            prevEl: ".blog-prev",
+            nextEl: ".blog-next",
+          }}
+          breakpoints={{
+            0: { slidesPerView: 1 },
+            768: { slidesPerView: 2 },
+            1024: { slidesPerView: 3 },
+          }}
+        >
+          {blogDataFour.map((item, index) => (
+            <SwiperSlide key={index}>
+              <div className="blog-card">
+                {/* IMAGE */}
+                <div className="image-box">
+                  <img src={item.image} alt={item.title} />
+                </div>
+
+                {/* CONTENT */}
+                <div className="content">
+                  <div className="date-badge">
+                    <span>{item.date}</span>
+                    <small>{item.month}</small>
+                  </div>
+                  <ul className="meta">
+                    <li>
+                      <FaUser /> by {item.author}
+                    </li>
+                    <li>
+                      <FaComment /> {item.comments} comments
+                    </li>
+                  </ul>
+
+                  <h3>
+                    <a href={item.link}>{item.title}</a>
+                  </h3>
+                  <div className="latestNewBtn">
+                    <Link to={item.link} className="Home2OutlineGreenBtn">
+                      Continue Reading
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
+
+        {/* VIEW ALL */}
+        <div className="view-all">
+          <Link to="/blog" className="Home2FilledGreenBtn">
+            View All
+          </Link>
         </div>
       </div>
     </section>
@@ -370,4 +461,4 @@ const BlogSectionThree = () => {
 };
 
 export default Blog;
-export { BlogSectionOne, BlogSectionTwo, BlogSectionThree };
+export { BlogSectionOne, BlogSectionTwo, BlogSectionThree, BlogSectionFour };

@@ -591,14 +591,15 @@
             .video-player {
                 width: 100%;
 
-                video {
-                    width: 100%;
-                }
-
+             
                 .wrapper {
                     top: 50%;
                     position: absolute;
                 }
+                   video {
+                    width: 100%;
+                }
+
             }
 
             .video-img {
