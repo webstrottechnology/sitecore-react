@@ -38,8 +38,7 @@ import "aos/dist/aos.css";
 
 const App = () => {
   const location = useLocation();
-  const hideLayoutRoutes = ["/home-cafe"];
-  const hideLayoutRoutes = ["/home-medical"];
+  const hideLayoutRoutes = ["/home-cafe", "/home-medical"];
   const shouldHideLayout = hideLayoutRoutes.includes(location.pathname);
   const [direction, setDirection] = useState("ltr");
 
