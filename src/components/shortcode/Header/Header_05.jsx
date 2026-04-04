@@ -15,7 +15,7 @@ const Header_05 = ({ direction, setDirection }) => {
   };
 
   const homeLinks = [
-    { label: "Home Corporate", path: "/" }, // ✅ CORRECT
+    { label: "Home Corporate", path: "/" }, 
     { label: "Home Medical", path: "/home-medical" },
     { label: "Home Cafe", path: "/home-cafe" },
   ];

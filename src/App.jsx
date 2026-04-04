@@ -32,12 +32,14 @@ import Checkout from "./components/pages/Checkout";
 import ProductSingle01 from "./components/pages/ProductSingle01";
 import ProductSingle02 from "./components/pages/ProductSingle02";
 import HomeCafe from "./components/pages/HomeCafe";
+import HeaderMedical from "./components/pages/HeaderMedical";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
 const App = () => {
   const location = useLocation();
   const hideLayoutRoutes = ["/home-cafe"];
+  const hideLayoutRoutes = ["/home-medical"];
   const shouldHideLayout = hideLayoutRoutes.includes(location.pathname);
   const [direction, setDirection] = useState("ltr");
 
@@ -57,7 +59,7 @@ const App = () => {
   }, []);
   return (
     <>
-      {/* HEADER ALWAYS */}
+      {/* GLOBAL HEADER */}
       {!shouldHideLayout && (
         <Header_05 direction={direction} setDirection={setDirection} />
       )}
@@ -92,6 +94,7 @@ const App = () => {
         <Route path="/checkout" element={<Checkout />} />
         <Route path="/product-single-01" element={<ProductSingle01 />} />
         <Route path="/product-single-02" element={<ProductSingle02 />} />
+        <Route path="/home-medical" element={<HeaderMedical />} />
       </Routes>
       {/* FOOTER ALWAYS */}
       {!shouldHideLayout && <Sitecorefooter />}

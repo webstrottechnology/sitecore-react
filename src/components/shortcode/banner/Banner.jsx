@@ -11,6 +11,7 @@ import {
   Banner8Data,
   Banner9Data,
   Banner10Data,
+  MedicalBannerData,
 } from "./bannerData";
 import { Autoplay, EffectFade } from "swiper/modules";
 import "swiper/css";
@@ -630,6 +631,68 @@ const Banner11 = () => {
   );
 };
 
+const MedicalTopBanner = () => {
+  const data = MedicalBannerData;
+
+  return (
+    <section className="medicalTopBanner">
+      <div className="container custom-container-lg">
+        <div className="medicalTopBannerInner">
+          <div className="row">
+            {/* LEFT */}
+            <div className="col-md-6">
+              <div className="medTopBannerContent">
+                <div className="higherLevelCare">
+                  <a href="#">
+                    <div className="higherLevelInner">
+                      <span>{data.tag}</span>
+                    </div>
+                  </a>
+                </div>
+                <h1>
+                  {data.title1} <span>{data.highlightText}</span> {data.title2}
+                </h1>
+
+                <p>{data.description}</p>
+
+                <button className="filledroundedbtn md-btn">
+                  <span>{data.buttonText}</span>
+                </button>
+              </div>
+            </div>
+
+            {/* RIGHT */}
+            <div className="col-md-6">
+              <div className="medTopBannerImage">
+                <div className="medTopBannerInnerImg">
+                  <a href="javascript:;" className="icon1">
+                    <img
+                      src={data.images.icon1}
+                      className="floatingIcon icon1"
+                    />
+                  </a>
+                  <div className="girlImage ">
+                    <img
+                      src={data.images.doctor}
+                      className="doctorImg img-fluid"
+                    />
+                  </div>
+                  <a href="javascript:;" className="icon2">
+                    <img
+                      src={data.images.icon2}
+                      className="floatingIcon icon2"
+                    />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
 export default Banner;
 export {
   Banner2,
@@ -642,4 +705,5 @@ export {
   Banner9,
   Banner10,
   Banner11,
+  MedicalTopBanner,
 };
