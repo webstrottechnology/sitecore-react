@@ -1,0 +1,86 @@
+@charset "UTF-8";
+/*-----------------------------------
+
+
+    Template Name: Sitecore React Template
+    Version: 1.0.0
+    Author: Webstrot
+    Copyright: © 2026-27
+
+--------------------------------------- */
+.error404 {
+  width: var(--width100);
+  height: 100%;
+  background: var(--orange-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--p60) var(--p0);
+}
+.error404-container {
+  max-width: 800px;
+  margin: auto;
+}
+.error404-logo {
+  margin-bottom: var(--m20);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.error404-logo img {
+  width: var(--width100);
+  max-width: 200px;
+}
+.error404-title {
+  font-size: var(--fs70);
+  color: var(--white-color);
+  font-weight: var(--fw700);
+  margin-top: var(--m20);
+  font-family: var(--heading-font);
+  text-align: center;
+}
+.error404-subtitle {
+  color: var(--white-color);
+  margin-top: var(--m10);
+  font-size: var(--fs18);
+  font-family: var(--heading-font);
+  font-weight: var(--fw400);
+  text-align: center;
+}
+.error404 .btnBox {
+  width: var(--width100);
+  display: flex;
+  justify-content: center;
+}
+.error404 .btnBox .error404-btn {
+  display: inline-block;
+  margin-top: var(--m30);
+  background: var(--white-color);
+  color: var(--black-color);
+  padding: var(--p12) var(--p30);
+  border-radius: var(--br30);
+  text-decoration: none;
+  font-weight: var(--fw600);
+  transition: 0.3s;
+}
+.error404 .btnBox .error404-btn:hover {
+  background: var(--black-color);
+  color: var(--white-color);
+}
+
+@media (max-width: 768px) {
+  .error404-title {
+    font-size: var(--fs50);
+  }
+}
+@media (max-width: 480px) {
+  .error404-title {
+    font-size: var(--fs30);
+  }
+  .error404-subtitle {
+    font-size: var(--fs14);
+  }
+  .error404-logo img {
+    max-width: 165px;
+  }
+}/*# sourceMappingURL=ErrorPage.css.map */

@@ -212,3 +212,59 @@ export const blogDataThree = [
     link: "/blog/construction-risk",
   },
 ];
+
+
+export const blogDataFour = [
+  {
+    id: 1,
+    image: imgB1,
+    date: "25",
+    month: "Mar",
+    author: "admin",
+    comments: 2,
+    title: "Workplace Safety Concerns: The Plight of Construction Workers",
+    link: "/blog/workplace-safety",
+  },
+  {
+    id: 2,
+    image: imgB2,
+    date: "26",
+    month: "Mar",
+    author: "admin",
+    comments: 2,
+    title: "Large-Scale Projects and Construction Worker Challenges",
+    link: "/blog/large-scale-projects",
+  },
+  {
+    id: 3,
+    image: imgB3,
+    date: "27",
+    month: "Mar",
+    author: "admin",
+    comments: 2,
+    title: "Understanding the Risk: Construction Workers on Large Projects",
+    link: "/blog/construction-risk",
+  },
+
+  {
+    id: 4,
+    image: imgB1,
+    date: "27",
+    month: "June",
+    author: "admin",
+    comments: 2,
+    title: "Understanding the Risk: Construction Workers on Large Projects",
+    link: "/blog/construction-risk",
+  },
+
+  {
+    id: 3,
+    image: imgB2,
+    date: "27",
+    month: "April",
+    author: "admin",
+    comments: 2,
+    title: "Understanding the Risk: Construction Workers on Large Projects",
+    link: "/blog/construction-risk",
+  },
+];

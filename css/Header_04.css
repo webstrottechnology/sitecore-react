@@ -1,0 +1,168 @@
+@charset "UTF-8";
+/*-----------------------------------
+
+
+    Template Name: Sitecore React Template
+    Version: 1.0.0
+    Author: Webstrot
+    Copyright: © 2026-27
+
+--------------------------------------- */
+.components-page .navbarCompo {
+  position: relative;
+}
+
+.headerFour {
+  top: 20px;
+  width: var(--width100);
+  z-index: 1000;
+  transition: 0.4s ease;
+  /* Scroll Effect */
+}
+.headerFour.scrolled .headerTwo-inner {
+  background: rgba(0, 0, 0, 0.85);
+}
+.headerFour.scrolled .logo,
+.headerFour.scrolled .navLinks a {
+  color: var(--white-color);
+}
+.headerFour.scrolled .cta {
+  background: var(--white-color);
+  color: var(--black-color);
+}
+.headerFour.scrolled .hamburger span {
+  background: var(--white-color);
+}
+.headerFour {
+  /* Inner */
+}
+.headerFour .headerFour-inner {
+  max-width: 1600px;
+  margin: auto;
+  padding: var(--p16) var(--p28);
+  border-radius: var(--br20);
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+.headerFour {
+  /* Logo */
+}
+.headerFour .logo {
+  font-size: var(--fs24);
+  font-weight: var(--fw700);
+  font-family: var(--heading-font);
+}
+.headerFour .logo span {
+  color: var(--red-color);
+}
+.headerFour {
+  /* Navigation */
+}
+.headerFour .navLinks {
+  display: flex;
+  gap: 36px;
+}
+.headerFour .navLinks a {
+  text-decoration: none;
+  font-weight: var(--fw600);
+  color: var(--black01);
+  transition: 0.3s;
+}
+.headerFour .navLinks a:hover {
+  color: var(--red-color);
+}
+.headerFour {
+  /* Actions */
+}
+.headerFour .actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.headerFour {
+  /* Button */
+}
+.headerFour .cta {
+  padding: var(--p12) var(--p26);
+  border-radius: var(--br40);
+  background: var(--black-color);
+  color: var(--white-color);
+  border: none;
+  cursor: pointer;
+  font-weight: var(--fw600);
+}
+.headerFour {
+  /* Hamburger */
+}
+.headerFour .hamburger {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+.headerFour .hamburger span {
+  width: 26px;
+  height: 3px;
+  display: block;
+  margin: var(--m6) var(--m0);
+  background: var(--black-color);
+  transition: 0.3s;
+}
+.headerFour .hamburger.open span:nth-child(1) {
+  transform: rotate(45deg) translate(6px, 6px);
+}
+.headerFour .hamburger.open span:nth-child(2) {
+  opacity: 0;
+}
+.headerFour .hamburger.open span:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+.headerFour {
+  /* Mobile Menu */
+}
+.headerFour-mobile {
+  position: fixed;
+  inset: 0;
+  background: var(--black-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  transform: translateX(100%);
+  transition: 0.4s ease;
+  z-index: 999;
+}
+.headerFour-mobile.show {
+  transform: translateX(0);
+}
+.headerFour-mobile a {
+  color: var(--white-color);
+  font-size: var(--fs24);
+  font-family: var(--heading-font);
+  font-weight: var(--fw400);
+  text-decoration: none;
+}
+.headerFour-mobile .mobile-cta {
+  margin-top: var(--m20);
+  padding: var(--p14) var(--p30);
+  border-radius: var(--br30);
+  border: none;
+  font-weight: var(--fw600);
+}
+.headerFour {
+  /* ================= Responsive ================= */
+}
+@media (max-width: 768px) {
+  .headerFour .navLinks,
+  .headerFour .cta {
+    display: none;
+  }
+  .headerFour .hamburger {
+    display: block;
+  }
+}/*# sourceMappingURL=Header_04.css.map */

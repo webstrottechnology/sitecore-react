@@ -880,8 +880,11 @@ const HomeCafeFooter = () => {
             <Link to="/">
               <img src={HomeCafeLogo} alt="logo" />
             </Link>
-            {contact.map((item) => (
-              <div key={item.id} className="footer-contact-wrapper">
+            {contact.map((item, index) => (
+              <div
+                key={`${item.id}-${index}`}
+                className="footer-contact-wrapper"
+              >
                 {/* External protocol (tel/mailto) uses <a> */}
                 <a href={item.link} className="contact-icon">
                   {item.icon}

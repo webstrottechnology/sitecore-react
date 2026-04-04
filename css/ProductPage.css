@@ -1,0 +1,466 @@
+@charset "UTF-8";
+/*-----------------------------------
+
+
+    Template Name: Sitecore React Template
+    Version: 1.0.0
+    Author: Webstrot
+    Copyright: © 2026-27
+
+--------------------------------------- */
+.ipProductGridWithSidebar {
+  width: 100%;
+  padding: var(--p80) var(--p0);
+  position: relative;
+}
+.ipProductGridWithSidebar .ipProductGridViewInner {
+  position: relative;
+  z-index: 2;
+}
+.ipProductGridWithSidebar .ipProductGridViewInner .row {
+  row-gap: 30px;
+}
+.ipProductGridWithSidebar .ipProductGridViewInner .ipProductGridLeft {
+  width: var(--width100);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.ipProductGridWithSidebar .ipProductGridViewInner .ipProductGridLeft .ipFilterCard {
+  background: var(--white-color);
+  border-radius: var(--br10);
+  box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.05);
+}
+.ipProductGridWithSidebar .ipProductGridViewInner .ipProductGridLeft .ipFilterCard .ipFilterCardHead {
+  padding: var(--p20) var(--p20);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+.ipProductGridWithSidebar .ipProductGridViewInner .ipProductGridLeft .ipFilterCard .ipFilterCardHead h5 {
+  color: var(--black-color);
+  font-size: var(--fs22);
+  font-weight: var(--fw700);
+}
+.ipProductGridWithSidebar .ipProductGridViewInner .ipProductGridLeft .ipFilterCard .ipCategoryList {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.ipProductGridWithSidebar .ipProductGridViewInner .ipProductGridLeft .ipFilterCard .ipCategoryList li a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: var(--gray-color);
+  font-size: var(--fs16);
+  font-weight: var(--fw500);
+  transition: 0.3s;
+}
+.ipProductGridWithSidebar .ipProductGridViewInner .ipProductGridLeft .ipFilterCard .ipCategoryList li a .catIcon {
+  color: var(--orange-color);
+  font-size: var(--fs26);
+}
+.ipProductGridWithSidebar .ipProductGridViewInner .ipProductGridLeft .ipFilterCard .ipCategoryList li a:hover {
+  color: var(--black-color);
+}
+.ipProductGridWithSidebar .ipProductGridViewInner .ipProductGridLeft .ipFilterCard .ipFilterCardContant {
+  padding: var(--p24) var(--p24);
+}
+.ipProductGridWithSidebar .ipProductGridViewInner .ipProductGridLeft .ipFilterCard .ipFilterCardContant .nav {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.ipProductGridWithSidebar .ipProductGridViewInner .ipProductGridLeft .ipFilterCard .ipFilterCardContant .nav li a {
+  color: var(--gray-color);
+  font-size: var(--fs16);
+  font-weight: var(--fw500);
+  position: relative;
+  padding-left: var(--p28);
+}
+.ipProductGridWithSidebar .ipProductGridViewInner .ipProductGridLeft .ipFilterCard .ipFilterCardContant .ipFilterCardCheck {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.ipProductGridWithSidebar .ipProductGridViewInner .ipProductGridLeft .ipFilterCard .ipFilterCardContant .ipFilterCardCheck .form-check-label {
+  color: var(--gray-color);
+  font-size: var(--f16);
+  cursor: pointer;
+}
+.ipProductGridWithSidebar .ipProductGridViewInner .ipProductGridLeft .ipFilterCard .ipFilterCardContant .ipFilterCardCheck .form-check-label input {
+  margin-right: var(--m8);
+  border-color: var(--gray-color);
+}
+.ipProductGridWithSidebar .ipProductGridViewInner .ipProductGridLeft .ipFilterCard .ipFilterCardContant .ipFilterCardCheck .form-check-label input:checked {
+  background-color: var(--orange-color);
+  border-color: var(--orange-color);
+}
+.ipProductGridWithSidebar .ipProductGridViewInner .ipProductGridLeft .ipFilterCard .ipFilterCardContant .ipFilterCardCheck .form-check-label input:checked:focus {
+  border-color: var(--orange-color);
+}
+.ipProductGridWithSidebar .ipProductGridViewInner .ipProductGridLeft .ipFilterCard .ipFilterCardContant .ipFilterCardCheck .form-check-label input:focus {
+  box-shadow: unset;
+  border-color: var(--gray-color);
+}
+.ipProductGridWithSidebar .ipProductGridViewInner .ipProductGridLeft .ipFilterCard .ipFilterCardContant .ipFilterCardCheck .form-check-label span {
+  color: var(--gray-color);
+  font-size: var(--fs16);
+}
+.ipProductGridWithSidebar .ipProductGridViewInner .ipProductGridLeft .ipFilterCard .ipFilterCardContant .ipFilterReviewCard {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.ipProductGridWithSidebar .ipProductGridViewInner .ipProductGridLeft .ipFilterCard .ipFilterCardContant .ipFilterReviewCard .ipFilterReview {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+.ipProductGridWithSidebar .ipProductGridViewInner .ipProductGridLeft .ipFilterCard .ipFilterCardContant .ipFilterReviewCard .ipFilterReview .stars {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: var(--fs16);
+  color: var(--gray-color);
+}
+.ipProductGridWithSidebar .ipProductGridViewInner .ipProductGridLeft .ipFilterCard .ipFilterCardContant .ipFilterReviewCard .ipFilterReview .stars .active {
+  color: var(--orange-color);
+}
+.ipProductGridWithSidebar .ipProductGridViewInner .ipProductGridLeft .ipFilterCard .ipFilterCardContant .ipFilterReviewCard .ipFilterReview span {
+  color: var(--gray-color);
+  font-size: var(--fs16);
+}
+.ipProductGridWithSidebar .ipProductGridViewInner .ipProductGridLeft .ipFilterCard .ipFilterCardContant .ipPriceRange input[type=range] {
+  width: 100%;
+  appearance: none;
+  background: transparent;
+  margin: var(--m20) var(--m0);
+}
+.ipProductGridWithSidebar .ipProductGridViewInner .ipProductGridLeft .ipFilterCard .ipFilterCardContant .ipPriceRange {
+  /* slider line */
+}
+.ipProductGridWithSidebar .ipProductGridViewInner .ipProductGridLeft .ipFilterCard .ipFilterCardContant .ipPriceRange input[type=range]::-webkit-slider-runnable-track {
+  height: 6px;
+  background: var(--gray-color);
+  border-radius: var(--br10);
+}
+.ipProductGridWithSidebar .ipProductGridViewInner .ipProductGridLeft .ipFilterCard .ipFilterCardContant .ipPriceRange {
+  /* sliding point */
+}
+.ipProductGridWithSidebar .ipProductGridViewInner .ipProductGridLeft .ipFilterCard .ipFilterCardContant .ipPriceRange input[type=range]::-webkit-slider-thumb {
+  appearance: none;
+  height: 18px;
+  width: 18px;
+  background: var(--orange-color);
+  border-radius: 50%;
+  cursor: pointer;
+  margin-top: -6px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+.ipProductGridWithSidebar .ipProductGridViewInner .ipProductGridLeft .ipFilterCard .ipFilterCardContant .ipPriceRange {
+  /* firefox support */
+}
+.ipProductGridWithSidebar .ipProductGridViewInner .ipProductGridLeft .ipFilterCard .ipFilterCardContant .ipPriceRange input[type=range]::-moz-range-thumb {
+  height: 18px;
+  width: 18px;
+  background: var(--orange-color);
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.ipProductGridWithSidebar .ipProductGridViewInner .ipProductGridLeft .ipFilterCard .ipFilterCardContant .ipPriceRange .ipPriceValue {
+  display: flex;
+  justify-content: space-between;
+}
+.ipProductGridWithSidebar .ipProductGridViewInner .ipProductGridLeft .ipFilterCard .ipFilterCardContant .ipPriceRange .ipPriceValue span {
+  font-size: var(--fs16);
+  font-weight: var(--fw600);
+  color: var(--black-color);
+}
+.ipProductGridWithSidebar .ipProductGridViewInner .ipProductGridLeft .ipFilterPromoCard {
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 450px;
+  padding: var(--p26) var(--p20);
+  text-align: center;
+  border-radius: var(--br10);
+  box-shadow: 0px 2px 20px 0px rgba(0, 0, 0, 0.05);
+}
+.ipProductGridWithSidebar .ipProductGridViewInner .ipProductGridLeft .ipFilterPromoCard .promoSmall {
+  display: block;
+  font-size: var(--fs14);
+  margin-bottom: var(--m6);
+  color: var(--white-color);
+}
+.ipProductGridWithSidebar .ipProductGridViewInner .ipProductGridLeft .ipFilterPromoCard h3 {
+  font-size: var(--fs26);
+  font-weight: var(--fw600);
+  margin-bottom: var(--m10);
+  color: var(--white-color);
+}
+.ipProductGridWithSidebar .ipProductGridViewInner .ipProductGridLeft .ipFilterPromoCard .promoBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--white-color);
+  font-weight: var(--fw600);
+  text-decoration: none;
+  border-bottom: 1px solid var(--white-color);
+  padding-bottom: var(--p4);
+}
+.ipProductGridWithSidebar .ipProductGridViewInner .ipProductGridLeft .ipFilterPromoCard .promoBtn svg {
+  font-size: var(--fs16);
+}
+.ipProductGridWithSidebar .ipProductGridViewInner .ipProductGridRight {
+  width: var(--width100);
+}
+.ipProductGridWithSidebar .ipProductGridViewInner .ipProductGridRight .filter-bar-buttons {
+  width: var(--width100);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--m30);
+  flex-wrap: wrap;
+  row-gap: 20px;
+}
+.ipProductGridWithSidebar .ipProductGridViewInner .ipProductGridRight .filter-bar-buttons .showing-results span {
+  color: var(--black-color);
+  font-size: var(--fs18);
+  font-weight: var(--fw600);
+}
+.ipProductGridWithSidebar .ipProductGridViewInner .ipProductGridRight .filter-bar-buttons .filter-Column {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+.ipProductGridWithSidebar .ipProductGridViewInner .ipProductGridRight .filter-bar-buttons .filter-Column .filter-short-by {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 290px;
+}
+.ipProductGridWithSidebar .ipProductGridViewInner .ipProductGridRight .filter-bar-buttons .filter-Column .filter-short-by label {
+  width: 90px;
+  font-size: var(--fs14);
+  font-weight: var(--fw700);
+  color: var(--black-color);
+}
+.ipProductGridWithSidebar .ipProductGridViewInner .ipProductGridRight .filter-bar-buttons .filter-Column .filter-short-by select {
+  background-color: var(--temSiteCoreLightOrangeColor);
+  border: 1px solid var(--temSiteCoreLightOrangeColor);
+  font-size: var(--fs16);
+  outline: none;
+}
+.ipProductGridWithSidebar .ipProductGridViewInner .ipProductGridRight .filter-bar-buttons .filter-Column .filter-short-by select:focus {
+  box-shadow: none;
+  outline: none;
+}
+.ipProductGridWithSidebar .ipProductGridViewInner .ipProductGridRight .filter-bar-buttons .filter-Column .filter-buttons {
+  display: flex;
+  gap: 10px;
+}
+.ipProductGridWithSidebar .ipProductGridViewInner .ipProductGridRight .filter-bar-buttons .filter-Column .filter-buttons button {
+  width: 40px;
+  height: 40px;
+  border: 1px solid var(--temSiteCoreLightOrangeColor);
+  background: var(--temSiteCoreLightOrangeColor);
+  color: var(--gray-color);
+  border-radius: var(--br6);
+  cursor: pointer;
+}
+.ipProductGridWithSidebar .ipProductGridViewInner .ipProductGridRight .filter-bar-buttons .filter-Column .filter-buttons button:hover, .ipProductGridWithSidebar .ipProductGridViewInner .ipProductGridRight .filter-bar-buttons .filter-Column .filter-buttons button.active {
+  background: var(--orange-color);
+  color: var(--white-color);
+}
+.ipProductGridWithSidebar .ipProductGridViewInner .ipProductGridRight {
+  /* PRODUCT GRID */
+}
+.ipProductGridWithSidebar .ipProductGridViewInner .ipProductGridRight .grid-list .row {
+  row-gap: 30px;
+}
+.ipProductGridWithSidebar .ipProductGridViewInner .ipProductGridRight .grid-list.grid-view-filter .row {
+  display: flex;
+  flex-wrap: wrap;
+}
+.ipProductGridWithSidebar .ipProductGridViewInner .ipProductGridRight .grid-list.list-view-filter .list-view-filter-item .bsFeaturedProductItem {
+  display: grid;
+  grid-template-columns: 350px 1fr;
+  gap: 20px;
+  background: var(--white-color);
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.08);
+  border-radius: 8px;
+}
+.ipProductGridWithSidebar .ipProductGridViewInner .ipProductGridRight .grid-list.list-view-filter .list-view-filter-item .bsFeaturedProductImg img {
+  height: 200px;
+  object-fit: cover;
+}
+.ipProductGridWithSidebar .ipProductGridViewInner .ipProductGridRight .grid-list.list-view-filter .list-view-filter-item .bsFeaturedProductContant {
+  text-align: left;
+  display: flex;
+  gap: 18px;
+  flex-direction: column;
+  justify-content: center;
+}
+.ipProductGridWithSidebar .ipProductGridViewInner .ipProductGridRight .grid-list .bsFeaturedProductItem {
+  padding: var(--p20) var(--p20);
+  background: var(--white-color);
+  border-radius: var(--br8);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  text-align: center;
+  position: relative;
+}
+.ipProductGridWithSidebar .ipProductGridViewInner .ipProductGridRight .grid-list .bsFeaturedProductItem .bsFeaturedProductImg {
+  width: 100%;
+  background: var(--white-color);
+  padding: var(--p20) var(--p20);
+  position: relative;
+}
+.ipProductGridWithSidebar .ipProductGridViewInner .ipProductGridRight .grid-list .bsFeaturedProductItem .bsFeaturedProductImg .bsFeaturedProductImgInner {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.ipProductGridWithSidebar .ipProductGridViewInner .ipProductGridRight .grid-list .bsFeaturedProductItem .bsFeaturedProductImg .bsFeaturedProductImgInner a {
+  width: 100%;
+}
+.ipProductGridWithSidebar .ipProductGridViewInner .ipProductGridRight .grid-list .bsFeaturedProductItem .bsFeaturedProductImg .bsFeaturedProductImgInner img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+.ipProductGridWithSidebar .ipProductGridViewInner .ipProductGridRight .grid-list .bsFeaturedProductItem .bsFeaturedProductImg .bsFeaturedProductImgInner .btn-cart {
+  position: absolute;
+  bottom: 10px;
+  margin: 0 auto;
+  max-width: 220px;
+  left: 50%;
+  transform: translateX(-50%) scale(0);
+  transition: all 0.6s ease;
+}
+.ipProductGridWithSidebar .ipProductGridViewInner .ipProductGridRight .grid-list .bsFeaturedProductItem .bsFeaturedProductImg .bsFeaturedProductImgInner .bsIconNav {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+  background-color: var(--white-color);
+  box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.06);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: scale(0);
+  transition: all 0.6s ease;
+}
+.ipProductGridWithSidebar .ipProductGridViewInner .ipProductGridRight .grid-list .bsFeaturedProductItem .bsFeaturedProductImg .bsFeaturedProductImgInner .bsIconNav svg {
+  width: 30px;
+  height: 30px;
+}
+.ipProductGridWithSidebar .ipProductGridViewInner .ipProductGridRight .grid-list .bsFeaturedProductItem .bsFeaturedProductImg:before {
+  content: "";
+  position: absolute;
+  display: block;
+  border-radius: 100%;
+  width: 0;
+  height: 0;
+  background-color: #e9f5f8;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  transform: scale(0);
+  transition: all 0.6s ease;
+}
+.ipProductGridWithSidebar .ipProductGridViewInner .ipProductGridRight .grid-list .bsFeaturedProductItem .bsFeaturedProductContant {
+  text-align: center;
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.ipProductGridWithSidebar .ipProductGridViewInner .ipProductGridRight .grid-list .bsFeaturedProductItem .bsFeaturedProductContant span {
+  color: var(--temSitCoreBlueColor);
+  font-size: var(--fs16);
+  font-weight: var(--fw700);
+}
+.ipProductGridWithSidebar .ipProductGridViewInner .ipProductGridRight .grid-list .bsFeaturedProductItem .bsFeaturedProductContant h5 {
+  font-size: var(--fs18);
+  font-weight: var(--fw700);
+  color: var(--black-color);
+}
+.ipProductGridWithSidebar .ipProductGridViewInner .ipProductGridRight .grid-list .bsFeaturedProductItem .bsFeaturedProductContant h5 a {
+  color: inherit;
+  text-decoration: none;
+}
+.ipProductGridWithSidebar .ipProductGridViewInner .ipProductGridRight .grid-list .bsFeaturedProductItem .bsFeaturedProductContant h6 {
+  font-size: var(--fs18);
+  font-weight: var(--fw700);
+}
+.ipProductGridWithSidebar .ipProductGridViewInner .ipProductGridRight .grid-list .bsFeaturedProductItem .bsFeaturedProductContant h6 ins {
+  color: var(--black-color);
+  text-decoration: none;
+  margin-right: 10px;
+}
+.ipProductGridWithSidebar .ipProductGridViewInner .ipProductGridRight .grid-list .bsFeaturedProductItem .bsFeaturedProductContant h6 del {
+  color: var(--gray-color);
+}
+.ipProductGridWithSidebar .ipProductGridViewInner .ipProductGridRight .grid-list .bsFeaturedProductItem::before {
+  content: "";
+  position: absolute;
+  display: block;
+  border-radius: 100%;
+  width: 0;
+  height: 0;
+  background-color: var(--bg-color);
+  opacity: 0;
+  top: 0;
+  left: 0;
+  transform: scale(0);
+  transition: all 0.6s ease;
+}
+.ipProductGridWithSidebar .ipProductGridViewInner .ipProductGridRight .grid-list .bsFeaturedProductItem:hover::before {
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  transform: scale(1);
+  border-radius: 0px;
+}
+.ipProductGridWithSidebar .ipProductGridViewInner .ipProductGridRight .grid-list .bsFeaturedProductItem:hover .bsFeaturedProductImg:before {
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  transform: scale(1);
+  border-radius: 0px;
+}
+.ipProductGridWithSidebar .ipProductGridViewInner .ipProductGridRight .grid-list .bsFeaturedProductItem:hover .bsFeaturedProductImg .bsFeaturedProductImgInner .bsIconNav {
+  transform: scale(1);
+}
+.ipProductGridWithSidebar .ipProductGridViewInner .ipProductGridRight .grid-list .bsFeaturedProductItem:hover .bsFeaturedProductImg .bsFeaturedProductImgInner .btn-cart {
+  transform: translateX(-50%) scale(1);
+}
+.ipProductGridWithSidebar .ipProductGridViewInner .ipProductGridRight .Pagination-Box {
+  margin-top: var(--m20);
+}
+
+@media (max-width: 767px) {
+  .ipProductGridWithSidebar .ipProductGridViewInner .ipProductGridRight .grid-list.list-view-filter .list-view-filter-item .bsFeaturedProductItem {
+    grid-template-columns: 265px 1fr;
+  }
+}
+@media (max-width: 576px) {
+  .ipProductGridWithSidebar .ipProductGridViewInner .ipProductGridRight .grid-list.list-view-filter .list-view-filter-item .bsFeaturedProductItem {
+    grid-template-columns: auto;
+  }
+  .ipProductGridWithSidebar .ipProductGridViewInner .ipProductGridRight .grid-list.list-view-filter .list-view-filter-item .bsFeaturedProductContant {
+    text-align: center;
+  }
+}/*# sourceMappingURL=ProductPage.css.map */

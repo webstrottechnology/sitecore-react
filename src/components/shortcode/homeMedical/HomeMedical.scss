@@ -202,7 +202,7 @@
     position: relative;
     z-index: 2;
 
-    .aboutUsRow{
+    .aboutUsRow {
       align-items: center;
     }
   }
@@ -250,8 +250,8 @@
         color: var(--white-color);
         font-size: var(--fs40);
         font-weight: var(--fw700);
-        line-height: var(--line-height-48);
         font-family: var(--roboto-font);
+        line-height: var(--line-height-48);
       }
 
       p {

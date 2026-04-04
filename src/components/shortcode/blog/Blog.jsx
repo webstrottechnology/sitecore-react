@@ -4,9 +4,12 @@ import { Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import { HomeBlogData } from "./blogData";
-import { blogDataOne } from "./blogData";
-import { blogDataTwo } from "./blogData";
-import { blogDataThree } from "./blogData";
+import {
+  blogDataOne,
+  blogDataTwo,
+  blogDataThree,
+  blogDataFour,
+} from "./blogData";
 import { Link } from "react-router-dom";
 import {
   FiUser,
@@ -409,8 +412,8 @@ const BlogSectionFour = () => {
             1024: { slidesPerView: 3 },
           }}
         >
-          {blogDataThree.map((item) => (
-            <SwiperSlide key={item.id}>
+          {blogDataFour.map((item, index) => (
+            <SwiperSlide key={index}>
               <div className="blog-card">
                 {/* IMAGE */}
                 <div className="image-box">
@@ -436,7 +439,7 @@ const BlogSectionFour = () => {
                     <a href={item.link}>{item.title}</a>
                   </h3>
                   <div className="latestNewBtn">
-                    <Link to={item.link} class="Home2OutlineGreenBtn">
+                    <Link to={item.link} className="Home2OutlineGreenBtn">
                       Continue Reading
                     </Link>
                   </div>
