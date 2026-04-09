@@ -7,7 +7,7 @@ import "swiper/css/navigation";
 import { CategoriesData, AboutData } from "./HomeMedicalData";
 import "./HomeMedical.scss";
 
-const TopCategories = () => {
+const MedicalTopCategories = () => {
   const swiperRef = useRef(null);
   const [slideIndex, setSlideIndex] = useState(0);
   const MAX_SLIDE = 4;
@@ -76,12 +76,12 @@ const TopCategories = () => {
   );
 };
 
-const AboutUs = () => {
+const MedicalAboutUs = () => {
   const { subHeading, heading, description, buttonText, images, emergency } =
     AboutData;
 
   return (
-    <section className="aboutUs" id="aboutUs">
+    <section className="medicalAboutus" id="aboutUs">
       <div className="container custom-container-lg">
         <div className="aboutUsInner">
           <div className="row aboutUsRow">
@@ -129,5 +129,5 @@ const AboutUs = () => {
   );
 };
 
-export default TopCategories;
-export { AboutUs };
+export default MedicalTopCategories;
+export { MedicalAboutUs };

@@ -15,12 +15,12 @@ import {
   FiUser,
   FiMessageCircle,
   FiArrowUpRight,
-  FiArrowLeft,
-  FiArrowRight,
 } from "react-icons/fi";
 import { FaUser, FaComment } from "react-icons/fa";
 import { IoIosArrowBack } from "react-icons/io";
 import { IoIosArrowForward } from "react-icons/io";
+import { MdOutlineArrowBackIosNew } from "react-icons/md";
+import { MdOutlineArrowForwardIos } from "react-icons/md";
 import { AboutBannerBreadCrumb } from "../breadcrumb/Breadcrumb";
 import sitecoreBg from "../../../assets/images/sitecoreBreadCrumb_bg_img.png";
 
@@ -305,10 +305,10 @@ const BlogSectionThree = () => {
 
           <div className="nav-arrows">
             <button className="blog-prev active">
-              <FiArrowLeft />
+           <MdOutlineArrowBackIosNew />
             </button>
             <button className="blog-next">
-              <FiArrowRight />
+             <MdOutlineArrowForwardIos />
             </button>
           </div>
         </div>

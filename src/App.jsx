@@ -31,7 +31,7 @@ import ProductGridPage from "./components/pages/ProductGridPage";
 import Checkout from "./components/pages/Checkout";
 import ProductSingle01 from "./components/pages/ProductSingle01";
 import ProductSingle02 from "./components/pages/ProductSingle02";
-import HeaderMedical from "./components/pages/HeaderMedical";
+import HomeMedical from "./components/pages/HomeMedical";
 import HomeCafe from "./components/pages/HomeCafe";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -92,7 +92,7 @@ const App = () => {
         <Route path="/checkout" element={<Checkout />} />
         <Route path="/product-single-01" element={<ProductSingle01 />} />
         <Route path="/product-single-02" element={<ProductSingle02 />} />
-        <Route path="/home-medical" element={<HeaderMedical />} />
+        <Route path="/home-medical" element={<HomeMedical />} />
         <Route path="/home-cafe" element={<HomeCafe />} />
       </Routes>
       {/* FOOTER ALWAYS */}
