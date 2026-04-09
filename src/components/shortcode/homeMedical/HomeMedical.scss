@@ -1,6 +1,13 @@
-/* ===============================
-   TOP CATEGORIES
-================================ */
+/*-----------------------------------
+
+
+    Template Name: Sitecore React Template
+    Version: 1.0.0
+    Author: Webstrot
+    Copyright: © 2026-27
+
+--------------------------------------- */
+@use "../../../styles/mixins/mixins" as *;
 
 .medicalTopCategories {
   padding: var(--p80);
@@ -159,7 +166,7 @@
   }
 }
 
-.medicalAboutus {
+.MedicalAboutUs {
   background-color: var(--temp1BlueColor);
   padding: var(--p80) 0;
   position: relative;
@@ -167,18 +174,14 @@
 
   &::after {
     content: "";
-    background-image: url("../../../assets/images/home_medical/aboutUsBgImg.png");
+    background-image: url("/src/assets/images/home_medical/aboutUsBgImg.png");
     background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    width: var(--width100);
-    height: var(--width100);
+    background-repeat: repeat;
+    width: 100%;
+    height: 100%;
     position: absolute;
     top: 0;
     left: 0;
-    opacity: 0.15;
-    z-index: 1;
-
     animation: kenburns 30s linear infinite;
   }
 
@@ -231,7 +234,7 @@
   .aboutUsContent {
     display: flex;
     flex-direction: column;
-    gap: var(--p50);
+    gap: var(--p60);
 
     .aboutUsContentInner {
       display: flex;
@@ -274,6 +277,7 @@
         transition: var(--transition2);
         font-family: var(--roboto-font);
 
+
         &:hover {
           background: var(--orange-color);
           color: var(--white-color);
@@ -289,17 +293,18 @@
       padding: var(--p30) var(--p40);
       border-radius: var(--br20);
       align-items: center;
-      gap: var(--p16);
+      font-family: var(--roboto-font);
 
       .emergencyMedicalIcon {
         span {
-          width: 70px;
-          height: 70px;
+          width: 80px;
+          height: 80px;
           background: rgba(255, 255, 255, 0.3);
           display: flex;
           justify-content: center;
           align-items: center;
           border-radius: var(--br50);
+          font-family: var(--roboto-font);
 
           img {
             width: 30px;
@@ -311,15 +316,17 @@
       .emergencyMedicalContent {
         h4 {
           color: var(--white-color);
-          font-size: var(--fs24);
+          font-size: var(--fs26);
           font-weight: var(--fw700);
           margin-bottom: var(--m8);
+          font-family: var(--roboto-font);
         }
 
         p {
           color: var(--white-color);
           font-size: var(--fs14);
           line-height: var(--line-height-20);
+          font-family: var(--roboto-font);
         }
       }
     }
@@ -339,4 +346,839 @@
       transform: scale(1);
     }
   }
+}
+
+.MedicalTeam-section {
+  width: var(--width100);
+  height: 100%;
+  padding: var(--p100) var(--p0);
+  position: relative;
+  z-index: 9;
+
+  /* ✅ TITLE STYLE ADD */
+  .section-header {
+    margin-bottom: 40px;
+
+    span {
+      color: orange;
+      font-weight: 500;
+      font-size: 14px;
+    }
+
+    h2 {
+      font-size: 32px;
+      font-weight: 700;
+      color: #0e2b3d;
+      margin-top: 5px;
+    }
+  }
+
+  .container {
+    margin: auto;
+    position: relative;
+    /* ✅ IMPORTANT for buttons */
+  }
+
+  /* ❌ REMOVE GRID WHEN USING SWIPER */
+  /* comment this */
+  /*
+    .container {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 25px;
+    }
+    */
+
+  /* ✅ SWIPER FIX */
+  .swiper {
+    padding-top: 10px;
+  }
+
+  .swiper-slide {
+    height: auto;
+  }
+
+  /* ✅ SLIDER BUTTONS */
+  .slider-buttons {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    gap: 10px;
+
+    .custom-prev,
+    .custom-next {
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+      border: 1px solid orange;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      font-size: 20px;
+      transition: 0.3s;
+    }
+
+    .custom-prev {
+      color: orange;
+      background: transparent;
+    }
+
+    .custom-next {
+      background: orange;
+      color: white;
+    }
+
+    .custom-prev:hover,
+    .custom-next:hover {
+      transform: scale(1.1);
+    }
+  }
+
+  /* ✅ spacing between title & slider */
+  .swiper-wrapper {
+    margin-top: 20px;
+  }
+
+  /* ========================= */
+  /* 🔽 YOUR ORIGINAL CODE SAME */
+  /* ========================= */
+
+  .team12-card-box {
+    background: var(--white-color);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+
+    .imgBox {
+      position: relative;
+
+      img {
+        width: 100%;
+        display: block;
+      }
+
+      .team12overlay {
+        position: absolute;
+        top: 50px;
+        right: -15px;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-start;
+        padding: var(--p20);
+        pointer-events: none;
+
+        .social {
+          background: transparent;
+          padding: var(--p10);
+          border-radius: var(--br10);
+          display: flex;
+          flex-direction: column;
+          gap: 12px;
+
+          transform: translateY(-40px) scale(0.8);
+          opacity: 0;
+          transition: 0.4s;
+
+          a {
+            width: 40px;
+            height: 40px;
+            background: var(--white-color);
+            border: 1px solid var(--white-color);
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: 0.5s;
+
+            svg {
+              fill: var(--temp1BlueColor);
+            }
+
+            &:hover {
+              background: var(--temp1BlueColor);
+
+              svg {
+                fill: var(--white-color);
+              }
+            }
+          }
+        }
+      }
+
+      .team12overlay.show {
+        pointer-events: auto;
+
+        .social {
+          transform: translateY(0) scale(1);
+          opacity: 1;
+        }
+      }
+
+      .plus {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        width: 40px;
+        height: 40px;
+        background: var(--white-color);
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        z-index: 2;
+        transition: 0.4s;
+
+        svg {
+          transition: 0.4s;
+          font-size: var(--fs20);
+
+          path {
+            fill: var(--temp1BlueColor);
+          }
+        }
+      }
+
+      .plus.active {
+        background: var(--white-color);
+
+        svg {
+          transform: rotate(45deg);
+        }
+      }
+    }
+
+    .info {
+      width: var(--width100);
+      height: 100%;
+      padding: var(--p20);
+      text-align: center;
+      transition: 0.5s;
+
+      h3 {
+        font-size: var(--fs22);
+
+        a {
+          color: var(--black-color);
+          text-decoration: none;
+        }
+      }
+
+      p {
+        color: var(--bottle-green-color);
+        font-size: var(--fs16);
+      }
+    }
+  }
+}
+
+.portfolioGallery {
+  position: relative;
+
+  .sliderGallery-title {
+    text-align: center;
+    margin-bottom: 40px;
+    z-index: 5;
+    position: relative;
+
+    h2 {
+      font-size: 36px;
+      font-weight: 700;
+      color: #0e2b3d;
+    }
+
+    p {
+      color: orange;
+      margin-top: 5px;
+    }
+  }
+}
+
+.professionalHealthVideo {
+  padding-left: 200px;
+  position: relative;
+}
+
+.professionalHealthVideo::before {
+  content: "";
+  position: absolute;
+  background: url('../../../assets/images/home_medical/medicalVideoImgBg.png') no-repeat;
+  background-size: contain;
+  height: 800px;
+  width: 400px;
+  top: -182px;
+  left: 0;
+  z-index: 1;
+}
+
+.professionalHealthVideo::after {
+  content: "";
+  position: absolute;
+  background-color: #eaf4fb;
+  height: 50%;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+.professionalHealthVideoInner {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 80vh;
+  padding: 80px;
+  position: relative;
+  z-index: 2;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  object-fit: cover;
+  height: 100%;
+}
+
+.profHealthVideo {
+  width: 400px;
+}
+
+.playBtn {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  box-shadow: 0px 0px 1px 1px #0000001a;
+  background-color: orange;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+  border: 4px solid #fff;
+  cursor: pointer;
+}
+
+.playBtn img {
+  width: 100%;
+}
+
+.pulse {
+  animation: pulseAnimation 2s infinite;
+}
+
+@keyframes pulseAnimation {
+  0% {
+    box-shadow: 0 0 0 0px #fff3e6;
+  }
+
+  100% {
+    box-shadow: 0 0 0 20px #fff3e6;
+  }
+}
+
+.professionalHealthVideoInner p {
+  color: #0d2b45;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+/* MODAL BACKDROP */
+.videoModal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+/* MODAL BOX */
+.videoModalContent {
+  position: relative;
+  width: 70%;
+  max-width: 900px;
+  background: #000;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* CLOSE BUTTON */
+.closeBtn {
+  position: absolute;
+  top: -30px;
+  right: 0;
+  color: #fff;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.playBtn {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #9bcdce;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 30px;
+
+  /* INNER WHITE BORDER */
+  border: 4px solid #fff;
+
+  position: relative;
+  z-index: 5;
+
+  animation: pulseAnimation 2s ease-out infinite;
+}
+
+/* ✅ OUTER BORDER WITH GAP */
+.playBtn::before {
+  content: "";
+  position: absolute;
+  top: -8px;
+  left: -8px;
+  right: -8px;
+  bottom: -8px;
+  border-radius: 50%;
+  border: 2px solid #9bcdce;
+}
+
+
+@keyframes pulseAnimation {
+  0% {
+    box-shadow: 0 0 0 0 rgba(155, 205, 206, 0.8);
+    /* #9bcdce */
+  }
+
+  60% {
+    box-shadow: 0 0 0 20px rgba(155, 205, 206, 0.8);
+  }
+
+  100% {
+    box-shadow: 0 0 0 40px rgba(155, 205, 206, 0.8);
+  }
+}
+
+.MedicalTestimonials {
+  padding: 80px 0;
+  background-color: #fff;
+
+  .testimonialsRow {
+    align-items: center;
+  }
+
+  /* LEFT IMAGE */
+  .testimonialsImg {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      border-radius: 20px;
+    }
+
+    .fiveStar {
+      background-color: #0e2b3d;
+      padding: 15px 20px;
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      width: fit-content;
+      position: absolute;
+      top: 0;
+      left: 0;
+      border-top-left-radius: 20px;
+      border-bottom-right-radius: 20px;
+
+      span {
+        font-weight: 700;
+        font-size: 30px;
+        color: #fff;
+        font-family: var(--roboto-font);
+      }
+
+      h5 {
+        font-weight: 700;
+        font-size: 14px;
+        color: #fff;
+        margin: 0;
+        font-family: var(--roboto-font);
+      }
+    }
+  }
+
+  /* RIGHT CONTENT */
+  .testimonialsContent {
+
+    .testimonialsHeadingSlider {
+      width: 60%;
+      margin-bottom: 25px;
+
+      span {
+        font-weight: 400;
+        font-size: 26px;
+        color: #FB8500;
+        font-family: var(--roboto-font);
+      }
+
+      h2 {
+        color: #023047;
+        font-size: 40px;
+        font-weight: 700;
+        font-family: var(--roboto-font);
+      }
+    }
+
+    .testimonialSlide {
+
+      .testimonialsSlider {
+        position: relative;
+
+        /* QUOTE ICON IMAGE */
+        &::before {
+          content: "";
+          position: absolute;
+          top: 10px;
+          right: 20px;
+          height: 60px;
+          width: 60px;
+          background: url("/images/home2/icon/q.png") no-repeat center;
+          background-size: contain;
+          z-index: 2;
+        }
+
+        .testimonialsSliderOuter {
+          position: relative;
+          padding: 40px;
+          min-height: 250px;
+
+          /* BACKGROUND IMAGE (IMPORTANT 🔥) */
+          &::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: url("/images/home2/icon/testimonial.png") no-repeat center;
+            background-size: cover;
+            z-index: 0;
+          }
+
+          .testimonialsSliderInner {
+            position: relative;
+            z-index: 2;
+
+            .ratingGroup {
+              display: flex;
+              align-items: center;
+              gap: 15px;
+              margin-bottom: 20px;
+
+              .star {
+                display: flex;
+
+                span {
+                  font-size: 26px;
+                }
+
+                .starYellow {
+                  color: #FB8500;
+                }
+
+                .starGray {
+                  color: #666666;
+                }
+              }
+
+              h6 {
+                font-size: 16px;
+                font-weight: 700;
+                color: #0e2b3d;
+                margin: 0;
+                font-family: var(--roboto-font);
+              }
+            }
+
+            p {
+              font-weight: 400;
+              font-size: 16px;
+              color: #666;
+              font-family: var(--roboto-font);
+            }
+          }
+        }
+
+        /* 🔽 BOTTOM SECTION */
+        .slideBottomContent {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          margin-top: 20px;
+
+          .userProfile {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+
+            .userProfileImg {
+              img {
+                width: 70px;
+                height: 70px;
+                border-radius: 50%;
+                padding: 4px;
+                background-color: #e6f0f8;
+              }
+            }
+
+            .userInfo {
+              h4 {
+                margin-bottom: 0;
+                font-weight: 700;
+                font-size: 20px;
+                color: #023047;
+                font-family: var(--roboto-font);
+              }
+
+              span {
+                font-weight: 500;
+                font-size: 16px;
+                color: #219EBC;
+                font-family: var(--roboto-font);
+              }
+            }
+          }
+
+          .customNav {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+
+            button {
+              border: none;
+              background: transparent;
+              display: flex;
+              align-items: center;
+              gap: 5px;
+              cursor: pointer;
+
+              span {
+                color: orange;
+                font-weight: 600;
+                font-family: var(--roboto-font);
+              }
+
+              &:hover {
+                opacity: 0.7;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.mediDoctorImages img {
+  width: 100%;
+}
+
+.mediCounterInner {
+  background-color: #FB8500;
+  padding: 80px 0;
+}
+
+.mediCounterItems {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.mediCounterItem {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  justify-content: center;
+}
+
+.mediCounterIcon span {
+  background-color: #fff;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+.mediCounterIcon img {
+  animation: heartBeat1 1.35s linear infinite;
+}
+
+.mediCounterContant h4 {
+  color: #fff;
+  font-size: 40px;
+  font-weight: 700;
+  font-family: var(--roboto-font);
+}
+
+.mediCounterContant .label {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 500;
+  font-family: var(--roboto-font);
+}
+
+.galleryNav {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+
+  button {
+    border: none;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+
+    span {
+      color: orange;
+      font-weight: 600;
+      font-family: var(--roboto-font);
+    }
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+}
+
+@keyframes heartBeat1 {
+  0% {
+    transform: scale(1);
+  }
+
+  25% {
+    transform: scale(1.1);
+  }
+
+  50% {
+    transform: scale(1);
+  }
+
+  75% {
+    transform: scale(1.1);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@include responsive(md) {
+  .mediCounterContant h4 {
+    font-size: var(--fs28);
+  }
+
+  .mediCounterContant .label {
+    font-size: var(--fs16);
+  }
+
+  .mediCounterIcon span {
+    width: 80px;
+    height: 80px;
+  }
+
+  .mediCounterIcon img {
+    width: 34px;
+    height: 34px;
+    object-fit: contain;
+  }
+
+  .professionalHealthVideoInner p {
+    font-size: var(--fs30);
+  }
+
+  .profHealthVideo {
+    width: 300px;
+  }
+
+  .MedicalAboutUs .aboutUsContent .aboutUsContentInner h4 {
+    font-size: var(--fs30);
+  }
+
+  .MedicalAboutUs .aboutUsContent {
+    gap: 30px;
+  }
+
+  .MedicalAboutUs .aboutUsContent .aboutUsContentInner p {
+    font-size: var(--fs16);
+  }
+
+  .MedicalAboutUs .aboutUsContent .emergencyMedical .emergencyMedicalContent h4 {
+    font-size: var(--fs22);
+  }
+}
+
+@include responsive(tablet-sm) {
+  .mediCounterItems {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .mediCounterItem {
+    justify-content: start;
+  }
+
+  .professionalHealthVideo {
+    padding-left: 0px;
+  }
+
+  .professionalHealthVideoInner p {
+    font-size: var(--fs20);
+  }
+
+  .profHealthVideo {
+    width: 250px;
+  }
+
+  .MedicalAboutUs .aboutUsGallery {
+    margin-bottom: var(--m20);
+  }
+}
+
+@include responsive(mobile) {
+  .professionalHealthVideoInner {
+    padding: var(--p30) var(--p40);
+  }
+
+  .professionalHealthVideo::before {
+    height: 300px;
+  }
+
+  .MedicalAboutUs .aboutUsContent .aboutUsContentInner h4 {
+    font-size: var(--fs22);
+  }
+
+  .MedicalAboutUs .aboutUsContent .emergencyMedical .emergencyMedicalContent h4 {
+    font-size: var(--fs18);
+  }
+}
+
+@include responsive(mobile-sm) {
+  .mediCounterItems {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .professionalHealthVideo::before {
+    height: 400px;
+    width: 100px;
+    top: -100px;
+  }
+
 }
