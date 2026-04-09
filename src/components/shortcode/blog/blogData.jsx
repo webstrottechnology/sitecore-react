@@ -197,7 +197,7 @@ export const blogDataThree = [
     month: "June",
     author: "admin",
     comments: 2,
-    title: "Understanding the Risk: Construction Workers on Large Projects",
+    title: "Large-Scale Projects and Construction Worker Challenges",
     link: "/blog/construction-risk",
   },
 
@@ -208,7 +208,7 @@ export const blogDataThree = [
     month: "April",
     author: "admin",
     comments: 2,
-    title: "Understanding the Risk: Construction Workers on Large Projects",
+    title: "Workplace Safety Concerns: The Plight of Construction Workers",
     link: "/blog/construction-risk",
   },
 ];

@@ -1790,8 +1790,9 @@
 
                 img {
                     width: 100%;
-                    height: auto;
+                    height: 100%;
                     display: block;
+                    object-fit: cover;
                 }
 
                 .insta-icon {
@@ -2209,6 +2210,22 @@
         justify-content: center;
         column-gap: 30px;
         row-gap: 16px;
+    }
+
+    .cafe-footer-main-wrapper .footer-main-wrapper .media-wrapper .media-img {
+        width: 135px;
+        height: 100px;
+    }
+
+    .cafe-footer-main-wrapper .footer-main-wrapper .media-wrapper .media-img img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    .cafe-footer-main-wrapper .footer-main-wrapper .media-wrapper {
+        display: flex;
+        flex-wrap: wrap;
     }
 }
 
