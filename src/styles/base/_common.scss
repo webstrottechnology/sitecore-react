@@ -95,6 +95,7 @@ p {
   width: 100%;
   max-width: 1440px;
   margin: 0 auto;
+  padding: 0 16px;
 }
 
 
@@ -102,25 +103,12 @@ p {
   width: 100%;
   max-width: 1600px;
   margin: 0 auto;
+  padding: 0 16px;
 
 }
 
 
-@include responsive(tablet-sm) {
-  .custom-container-md {
-    width: 100%;
-    max-width: 100%;
-    padding: 0 15px;
-  }
 
-
-  .custom-container-lg {
-    width: 100%;
-    max-width: 100%;
-    padding: 0 15px;
-  }
-
-}
 
 // common btn animation effect  //
 
@@ -897,4 +885,22 @@ body {
 
 [dir="rtl"] .text-right {
   text-align: left;
+}
+
+
+@include responsive(tablet-sm) {
+  .custom-container-md {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .custom-container-lg {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .Home2FilledGreenBtn {
+    padding: var(--p14) var(--p28);
+  }
+
 }

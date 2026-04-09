@@ -22,7 +22,7 @@ import rightArrow from "../../../assets/images/home_medical/icons/testimonialRig
 import CountUp from "react-countup";
 import { useInView } from "react-intersection-observer";
 
-const TopCategories = () => {
+const MedicalTopCategories = () => {
   const swiperRef = useRef(null);
   const [slideIndex, setSlideIndex] = useState(0);
   const MAX_SLIDE = 4;
