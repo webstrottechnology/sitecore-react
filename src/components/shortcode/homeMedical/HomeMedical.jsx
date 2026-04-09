@@ -490,7 +490,7 @@ const MedicalCounter = () => {
   );
 };
 
-export default TopCategories;
+export default MedicalTopCategories;
 export {
   MedicalAboutUs,
   MedicalTeam,

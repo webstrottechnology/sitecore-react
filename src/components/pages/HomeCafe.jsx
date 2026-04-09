@@ -13,10 +13,12 @@ import HomeCafeBreakfast, {
   HomeCafeTestimonial,
   HomeCafeVideo,
 } from "../shortcode/HomeCafeComponent/HomeCafeComponent";
+import HeaderCafe from "../shortcode/Header/HeaderCafe";
 
 const HomeCafe = () => {
   return (
     <div>
+      <HeaderCafe />
       <HomeCafeSliderSection />
       <HomeCafeService />
       <HomeCafeAboutUs />

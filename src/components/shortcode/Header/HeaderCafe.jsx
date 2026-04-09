@@ -1,14 +1,31 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { FiChevronDown, FiMenu, FiSearch, FiX } from "react-icons/fi";
-import "./Header_05.scss";
-import Logo from "../../../assets/images/home-01/logo.png";
-import MegaImg from "../../../assets/images/home-01/mega-menu-img.png";
+import "./HeaderCafe.scss";
+import Logo from "../../../assets/images/homecafe/cafe-logo.png";
 import { Link } from "react-router-dom";
 
-const Header_05 = ({ direction, setDirection }) => {
+const HeaderCafe = ({ direction, setDirection }) => {
   const [sidebar, setSidebar] = useState(false);
   const [mobileDrop, setMobileDrop] = useState(null);
   const [searchOpen, setSearchOpen] = useState(false);
+  const [isFixed, setIsFixed] = useState(false);
+
+  // ✅ SCROLL FIX HEADER
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 100) {
+        setIsFixed(true);
+      } else {
+        setIsFixed(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   const toggleMobile = (menu) => {
     setMobileDrop(mobileDrop === menu ? null : menu);
@@ -22,7 +39,11 @@ const Header_05 = ({ direction, setDirection }) => {
 
   return (
     <>
-      <header className="header_05_section">
+      <header
+        className={`HeaderCafeWrapper menu-items-wrapper ${
+          isFixed ? "menu-fixed fadeInDown" : ""
+        }`}
+      >
         <div className="container custom-container-lg">
           {/* LOGO */}
           <div className="logo">
@@ -31,155 +52,160 @@ const Header_05 = ({ direction, setDirection }) => {
               <img src={Logo} alt="" />{" "}
             </Link>
           </div>
-          {/* NAV */}
-          <ul className="nav">
-            {/* HOME */}
-            <li className="mega-parent">
-              <a href="#">
-                {" "}
-                Home
-                <FiChevronDown />
-              </a>
-              <div className="mega-menu-box dropdwonMenu">
-                <div>
-                  {homeLinks.map((item, i) => (
-                    <Link key={i} to={item.path}>
-                      {item.label}
+
+          <div className="inner_wrapper">
+            {/* NAV */}
+            <ul className="nav">
+              {/* HOME */}
+              <li className="mega-parent">
+                <a href="#">
+                  {" "}
+                  Home
+                  <FiChevronDown />
+                </a>
+                <div className="mega-menu-box dropdwonMenu">
+                  <div>
+                    {homeLinks.map((item, i) => (
+                      <Link key={i} to={item.path}>
+                        {item.label}
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              </li>
+              {/* NORMAL */}
+              <li className="mega-parent">
+                <Link to="#">
+                  Pages <FiChevronDown />
+                </Link>
+
+                <div className="mega-menu-box dropdwonMenu">
+                  <div>
+                    <Link to="/about-us">About Us</Link>
+                    <Link to="/404">404 Error</Link>
+                    <Link to="/coming-soon">Coming Soon</Link>
+                    <Link to="/login">Login / Register</Link>
+                    <Link to="/services">Services</Link>
+                    <Link to="/services-single">Services Single</Link>
+                    <Link to="/team-01">Team 01</Link>
+                    <Link to="/team-02">Team 02</Link>
+                    <Link to="/team-single">Team Single</Link>
+                  </div>
+                </div>
+              </li>
+              <li className="mega-parent">
+                <Link to="#">
+                  Portfolio <FiChevronDown />
+                </Link>
+                <div className="mega-menu-box dropdwonMenu">
+                  <div>
+                    <Link to="/portfolio-3-column">Portfolio 3 column</Link>
+                    <Link to="/portfolio-4-column">Portfolio 4 column</Link>
+                    <Link to="/portfolio-details">Portfolio Details</Link>
+                  </div>
+                </div>
+              </li>
+              <li className="mega-parent">
+                <Link to="#">
+                  Blog <FiChevronDown />
+                </Link>
+                <div className="mega-menu-box dropdwonMenu">
+                  <div>
+                    <Link to="/blog-page">Blog With Sidebar</Link>
+                    <Link to="/image-post">Image Post</Link>
+                    <Link to="/slider-post">Slider Post</Link>
+                    <Link to="/youtube-post">Youtube Post</Link>
+                    <Link to="/vimeo-post">Vimeo Post</Link>
+                    <Link to="/audio-post">Audio Post</Link>
+                    <Link to="/quote-post">Quote Post</Link>
+                  </div>
+                </div>
+              </li>
+              <li className="mega-parent">
+                <Link to="#">
+                  Shop <FiChevronDown />
+                </Link>
+                <div className="mega-menu-box dropdwonMenu">
+                  <div>
+                    <Link to="/product-with-sidebar">Product Sidebar</Link>
+                    <Link to="/product-single-01">Product Single 01</Link>
+                    <Link to="/product-single-02">Product Single 02</Link>
+                    <Link to="/cart">Cart</Link>
+                    <Link to="/checkout">Checkout</Link>
+                  </div>
+                </div>
+              </li>
+              <li className="mega-parent">
+                <Link to="#">
+                  ShortCode <FiChevronDown />
+                </Link>
+
+                <div className="mega-menu-box">
+                  <div>
+                    <h4>Shortcode (1)</h4>
+                    <Link to="/components/accordion">Accordion</Link>
+                    <Link to="/components/alert">Alert</Link>
+                    <Link to="/components/button">Button</Link>
+                    <Link to="/components/client">Client</Link>
+                    <Link to="/components/counter">Counter</Link>
+                    <Link to="/components/features-with-icon">
+                      Feature With Icon
                     </Link>
-                  ))}
+                  </div>
+
+                  <div>
+                    <h4>Shortcode (2)</h4>
+                    <Link to="/components/form">Form</Link>
+                    <Link to="/components/list">List</Link>
+                    <Link to="/components/portfolio">Portfolio</Link>
+                    <Link to="/components/pricingPlan">Pricing Table</Link>
+                    <Link to="/components/features">Features with Images</Link>
+                    <Link to="/components/heading">Headings</Link>
+                  </div>
+
+                  <div>
+                    <h4>Shortcode (3)</h4>
+                    <Link to="/components/social-icons">Social Icons</Link>
+                    <Link to="/components/Tabs">Tab</Link>
+                    <Link to="/components/teams">Team</Link>
+                    <Link to="/components/Testimonial">Testimonial</Link>
+                    <Link to="/components/Header">Headers</Link>
+                    <Link to="/components/footer">Footer</Link>
+                  </div>
                 </div>
-              </div>
-            </li>
-            {/* NORMAL */}
-            <li className="mega-parent">
-              <Link to="#">
-                Pages <FiChevronDown />
+              </li>
+              <li>
+                <Link to="Contact">Contact</Link>
+              </li>
+            </ul>
+
+            {/* RIGHT */}
+
+            <div className="right">
+              <FiSearch
+                className="search-icon"
+                onClick={() => setSearchOpen(true)}
+              />
+              {/* ✅ RTL BUTTON */}
+              <button
+                className="rtl-toggle-btn rtl-toggle-btnBlack"
+                onClick={() =>
+                  setDirection(direction === "ltr" ? "rtl" : "ltr")
+                }
+              >
+                {direction === "ltr" ? "RTL" : "LTR"}
+              </button>
+              <Link to="/contact" className="Home2FilledGreenBtn md-btn">
+                Let's Talk
               </Link>
 
-              <div className="mega-menu-box dropdwonMenu">
-                <div>
-                  <Link to="/about-us">About Us</Link>
-                  <Link to="/404">404 Error</Link>
-                  <Link to="/coming-soon">Coming Soon</Link>
-                  <Link to="/login">Login / Register</Link>
-                  <Link to="/services">Services</Link>
-                  <Link to="/services-single">Services Single</Link>
-                  <Link to="/team-01">Team 01</Link>
-                  <Link to="/team-02">Team 02</Link>
-                  <Link to="/team-single">Team Single</Link>
-                </div>
-              </div>
-            </li>
-            <li className="mega-parent">
-              <Link to="#">
-                Portfolio <FiChevronDown />
-              </Link>
-              <div className="mega-menu-box dropdwonMenu">
-                <div>
-                  <Link to="/portfolio-3-column">Portfolio 3 column</Link>
-                  <Link to="/portfolio-4-column">Portfolio 4 column</Link>
-                  <Link to="/portfolio-details">Portfolio Details</Link>
-                </div>
-              </div>
-            </li>
-            <li className="mega-parent">
-              <Link to="#">
-                Blog <FiChevronDown />
-              </Link>
-              <div className="mega-menu-box dropdwonMenu">
-                <div>
-                  <Link to="/blog-page">Blog With Sidebar</Link>
-                  <Link to="/image-post">Image Post</Link>
-                  <Link to="/slider-post">Slider Post</Link>
-                  <Link to="/youtube-post">Youtube Post</Link>
-                  <Link to="/vimeo-post">Vimeo Post</Link>
-                  <Link to="/audio-post">Audio Post</Link>
-                  <Link to="/quote-post">Quote Post</Link>
-                </div>
-              </div>
-            </li>
-            <li className="mega-parent">
-              <Link to="#">
-                Shop <FiChevronDown />
-              </Link>
-              <div className="mega-menu-box dropdwonMenu">
-                <div>
-                  <Link to="/product-with-sidebar">Product Sidebar</Link>
-                  <Link to="/product-single-01">Product Single 01</Link>
-                  <Link to="/product-single-02">Product Single 02</Link>
-                  <Link to="/cart">Cart</Link>
-                  <Link to="/checkout">Checkout</Link>
-                </div>
-              </div>
-            </li>
-            <li className="mega-parent">
-              <Link to="#">
-                ShortCode <FiChevronDown />
-              </Link>
+              {/* MOBILE MENU BUTTON */}
 
-              <div className="mega-menu-box">
-                <div>
-                  <h4>Shortcode (1)</h4>
-                  <Link to="/components/accordion">Accordion</Link>
-                  <Link to="/components/alert">Alert</Link>
-                  <Link to="/components/button">Button</Link>
-                  <Link to="/components/client">Client</Link>
-                  <Link to="/components/counter">Counter</Link>
-                  <Link to="/components/features-with-icon">
-                    Feature With Icon
-                  </Link>
-                </div>
-
-                <div>
-                  <h4>Shortcode (2)</h4>
-                  <Link to="/components/form">Form</Link>
-                  <Link to="/components/list">List</Link>
-                  <Link to="/components/portfolio">Portfolio</Link>
-                  <Link to="/components/pricingPlan">Pricing Table</Link>
-                  <Link to="/components/features">Features with Images</Link>
-                  <Link to="/components/heading">Headings</Link>
-                </div>
-
-                <div>
-                  <h4>Shortcode (3)</h4>
-                  <Link to="/components/social-icons">Social Icons</Link>
-                  <Link to="/components/Tabs">Tab</Link>
-                  <Link to="/components/teams">Team</Link>
-                  <Link to="/components/Testimonial">Testimonial</Link>
-                  <Link to="/components/Header">Headers</Link>
-                  <Link to="/components/footer">Footer</Link>
-                </div>
-              </div>
-            </li>
-            <li>
-              <Link to="Contact">Contact</Link>
-            </li>
-          </ul>
-
-          {/* RIGHT */}
-
-          <div className="right">
-            <FiSearch
-              className="search-icon"
-              onClick={() => setSearchOpen(true)}
-            />
-            {/* ✅ RTL BUTTON */}
-            <button
-              className="rtl-toggle-btn"
-              onClick={() => setDirection(direction === "ltr" ? "rtl" : "ltr")}
-            >
-              {direction === "ltr" ? "RTL" : "LTR"}
-            </button>
-            <Link to="/contact" className="mintGreenFilledBtn md-btn">
-              Let's Talk
-            </Link>
-
-            {/* MOBILE MENU BUTTON */}
-
-            <FiMenu
-              className="mobile-menu-btn"
-              onClick={() => setSidebar(true)}
-            />
+              <FiMenu
+                className="mobile-menu-btn"
+                onClick={() => setSidebar(true)}
+              />
+            </div>
           </div>
         </div>
 
@@ -469,4 +495,4 @@ const Header_05 = ({ direction, setDirection }) => {
   );
 };
 
-export default Header_05;
+export default HeaderCafe;
