@@ -811,6 +811,247 @@ p {
   }
 }
 
+//  Rtl button Common Css //
+
+.rtl-toggle-btn {
+  font-size: var(--fs22);
+  background: transparent;
+  color: var(--white-color);
+  border: none;
+  cursor: pointer;
+  display: inline-block !important;
+
+  svg {
+    fill: var(--white-color);
+    width: 28px;
+    height: 28px;
+  }
+
+  &.rtl-toggle-btnBlack {
+    color: var(--black-color);
+
+    svg {
+      fill: var(--black-color);
+    }
+  }
+}
+
+// =================== Cart Common Scss =================== //
+
+
+.SitecoreCartIcon {
+  position: relative;
+  font-size: 24px;
+  cursor: pointer;
+
+  .cart-count {
+    position: absolute;
+    top: -8px;
+    right: -10px;
+    background: red;
+    color: #fff;
+    font-size: 12px;
+    padding: 2px 6px;
+    border-radius: 50%;
+  }
+}
+
+/* DRAWER */
+.SitecoreCartDrawer {
+  position: fixed;
+  top: 0;
+  right: -500px;
+  width: 450px;
+  height: 100%;
+  background: #fff;
+  z-index: 99999;
+  transition: 0.4s;
+  display: flex;
+  flex-direction: column;
+
+  &.open {
+    right: 0;
+  }
+
+  .cart-header {
+    display: flex;
+    justify-content: space-between;
+    padding: var(--p24) var(--p16);
+    border-bottom: 1px solid #eee;
+
+    h3 {
+      color: var(--black-color);
+      font-weight: var(--fw600);
+      font-size: var(--fs26);
+    }
+  }
+
+  .cart-body {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    overflow-y: auto;
+    padding: var(--p24) var(--p16);
+
+    .cart-item {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      position: relative;
+
+      .InnerContent {
+        display: flex;
+        gap: 12px;
+        flex-wrap: wrap;
+
+        .ImgBox {
+          width: 95px;
+          height: 95px;
+
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+
+
+        .info {
+          display: flex;
+          flex-direction: column;
+          gap: 6px;
+
+          h4 {
+            font-size: 18px;
+            color: var(--black-color);
+            font-weight: var(--fw600);
+            transition: all 0.5s;
+
+            &:hover {
+              color: var(--orange-color);
+            }
+          }
+
+          p {
+            font-size: 16px;
+            color: var(--black-color);
+            font-weight: var(--fw600);
+          }
+
+          .qty {
+            display: flex;
+            align-items: center;
+
+            button {
+              width: 35px;
+              height: 35px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              color: var(--orange-color);
+              font-size: var(--fs26);
+              padding: var(--p12);
+              font-weight: var(--fw500);
+              border: none;
+              border: 1px solid var(--orange-color);
+              background-color: transparent;
+            }
+
+            span {
+              width: 35px;
+              height: 35px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              font-size: var(--fs16);
+              padding: var(--p12);
+              color: var(--black-color);
+              font-weight: var(--fw600);
+              border-top: 1px solid var(--orange-color);
+              border-bottom: 1px solid var(--orange-color);
+            }
+          }
+        }
+      }
+
+      .CancelBox {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        position: absolute;
+        top: inherit;
+        right: 0;
+        border: 1px solid var(--black-color);
+        border-radius: 50%;
+        padding: var(--p6);
+        background-color: transparent;
+
+        svg {
+          cursor: pointer;
+          stroke: var(--black-color);
+          transition: all 0.5s;
+        }
+
+        &:hover {
+          background-color: var(--black-color);
+
+          svg {
+            stroke: var(--white-color);
+          }
+        }
+
+      }
+    }
+  }
+
+  .cart-footer {
+    padding: var(--p24) var(--p16);
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    border-top: 1px solid #eee;
+
+
+    h4 {
+      color: var(--black-color);
+      font-size: var(--fs26);
+      font-weight: var(--fw600);
+
+    }
+
+    .cart-buttons {
+      display: flex;
+      gap: 24px;
+      align-items: center;
+      justify-content: center;
+
+      .md-btn {
+        width: 100%;
+      }
+    }
+  }
+}
+
+/* OVERLAY */
+.SitecoreCartOverlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s;
+  z-index: 9999;
+
+  &.show {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+
+
 
 @-webkit-keyframes shine {
   100% {
@@ -887,6 +1128,45 @@ body {
   text-align: left;
 }
 
+[dir="rtl"] {
+  .SitecoreCartDrawer {
+    right: inherit;
+    left: -500px;
+
+    &.open {
+      right: inherit;
+      left: 0;
+    }
+
+    .cart-header {
+      flex-direction: row-reverse;
+    }
+
+    .cart-body {
+      .cart-item {
+        justify-content: flex-end;
+
+        .InnerContent {
+          flex-direction: row-reverse;
+
+          .info {
+            .qty {
+              justify-content: flex-end;
+            }
+          }
+        }
+
+        .CancelBox {
+          right: inherit;
+          left: 0;
+        }
+
+      }
+    }
+  }
+}
+
+
 
 @include responsive(tablet-sm) {
   .custom-container-md {
@@ -902,5 +1182,19 @@ body {
   .Home2FilledGreenBtn {
     padding: var(--p14) var(--p28);
   }
+}
 
+@include responsive(mobile-sm) {
+  .SitecoreCartDrawer {
+    width: 320px;
+  }
+
+  .SitecoreCartDrawer .cart-footer .cart-buttons {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .SitecoreCartDrawer .cart-footer h4 {
+    font-size: 22px;
+  }
 }

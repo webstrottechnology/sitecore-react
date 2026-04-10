@@ -2,12 +2,21 @@ import React, { useState, useEffect } from "react";
 import { FiChevronDown, FiMenu, FiSearch, FiX } from "react-icons/fi";
 import "./HeaderCafe.scss";
 import Logo from "../../../assets/images/homecafe/cafe-logo.png";
+import { FiShoppingCart } from "react-icons/fi";
 import { Link } from "react-router-dom";
+import { IoLanguage } from "react-icons/io5";
+import { useCart } from "../CartContextWrap/CartContext";
 
 const HeaderCafe = ({ direction, setDirection }) => {
   const [sidebar, setSidebar] = useState(false);
   const [mobileDrop, setMobileDrop] = useState(null);
   const [searchOpen, setSearchOpen] = useState(false);
+  const [cartOpen, setCartOpen] = useState(false);
+  const { cartItems, increaseQty, decreaseQty, removeItem } = useCart();
+  const totalPrice = cartItems.reduce(
+    (acc, item) => acc + item.price * item.qty,
+    0,
+  );
   const [isFixed, setIsFixed] = useState(false);
 
   // ✅ SCROLL FIX HEADER
@@ -186,6 +195,14 @@ const HeaderCafe = ({ direction, setDirection }) => {
                 className="search-icon"
                 onClick={() => setSearchOpen(true)}
               />
+              {/* CART ICON */}
+              <div
+                className="SitecoreCartIcon"
+                onClick={() => setCartOpen(true)}
+              >
+                <FiShoppingCart />
+                <span className="cart-count">{cartItems.length}</span>
+              </div>
               {/* ✅ RTL BUTTON */}
               <button
                 className="rtl-toggle-btn rtl-toggle-btnBlack"
@@ -193,7 +210,7 @@ const HeaderCafe = ({ direction, setDirection }) => {
                   setDirection(direction === "ltr" ? "rtl" : "ltr")
                 }
               >
-                {direction === "ltr" ? "RTL" : "LTR"}
+                <IoLanguage />
               </button>
               <Link to="/contact" className="Home2FilledGreenBtn md-btn">
                 Let's Talk
@@ -471,7 +488,75 @@ const HeaderCafe = ({ direction, setDirection }) => {
           onClick={() => setSidebar(false)}
         ></div>
       </header>
+      <div className={`SitecoreCartDrawer ${cartOpen ? "open" : ""}`}>
+        <div className="cart-header">
+          <h3>Shopping Cart</h3>
+          <FiX onClick={() => setCartOpen(false)} />
+        </div>
 
+        <div className="cart-body">
+          {cartItems.length === 0 ? (
+            <p>Cart is empty</p>
+          ) : (
+            cartItems.map((item) => (
+              <div className="cart-item" key={item.id}>
+                <div className="InnerContent">
+                  <div className="ImgBox">
+                    <img src={item.img} alt="" />
+                  </div>
+                  <div className="info">
+                    <h4>{item.name}</h4>
+                    <p>₹{item.price}</p>
+
+                    <div className="qty">
+                      <button onClick={() => decreaseQty(item.id)}>-</button>
+                      <span>{item.qty}</span>
+                      <button onClick={() => increaseQty(item.id)}>+</button>
+                    </div>
+                  </div>
+                </div>
+                <div className="CancelBox">
+                  <FiX onClick={() => removeItem(item.id)} />
+                </div>
+              </div>
+            ))
+          )}
+        </div>
+
+        <div className="cart-footer">
+          <h4>Total: ₹{totalPrice}</h4>
+
+          <div className="cart-buttons">
+            <Link
+              to="/cart"
+              className="filledroundedbtn md-btn"
+              onClick={() => {
+                setCartOpen(false);
+                navigate("/cart"); // 👈 cart page
+              }}
+            >
+              <span>View Cart</span>
+            </Link>
+
+            <Link
+              to="/checkout"
+              className="filledroundedbtn md-btn"
+              onClick={() => {
+                setCartOpen(false);
+                navigate("/checkout"); // 👈 checkout page
+              }}
+            >
+              <span>Checkout</span>
+            </Link>
+          </div>
+        </div>
+      </div>
+
+      {/* overlay */}
+      <div
+        className={`SitecoreCartOverlay ${cartOpen ? "show" : ""}`}
+        onClick={() => setCartOpen(false)}
+      ></div>
       <div className={`search-overlay ${searchOpen ? "active" : ""}`}>
         <div className="search-box">
           {/* INPUT */}

@@ -18,7 +18,7 @@
   left: 0;
   right: 0;
   z-index: 999;
-      transition: all 0.4s ease;
+  transition: all 0.4s ease;
 
   .container {
     margin: auto;
@@ -368,28 +368,15 @@
   }
 }
 
-
-// RTL CSS START  //
-
-.rtl-toggle-btn {
-  padding: var(--p6) var(--p12);
-  font-size: var(--fs16);
-  background: transparent;
-  color: var(--white-color);
-  border: none;
-  cursor: pointer;
-  border-radius: var(--br4);
-  display: inline-block !important;
-  border: 1px solid var(--black-color);
-
-  &.rtl-toggle-btnBlack {
-    color: var(--black-color);
-  }
-}
+// RTL STYLE CSS START //
 
 [dir="rtl"] {
   .HeaderCafeWrapper {
     .container {
+      flex-direction: row-reverse;
+    }
+
+    .inner_wrapper {
       flex-direction: row-reverse;
     }
 
@@ -470,7 +457,6 @@
   .HeaderCafeWrapper .right {
     display: flex;
     gap: 10px;
-    color: var(--white-color);
     align-items: center;
   }
 
@@ -482,6 +468,35 @@
 }
 
 @include responsive(tablet-sm) {
+
+  .HeaderCafeWrapper {
+    background-color: #0000008f;
+  }
+
+  .HeaderCafeWrapper .rtl-toggle-btn.rtl-toggle-btnBlack svg {
+    fill: var(--white-color);
+  }
+
+  .HeaderCafeWrapper.menu-fixed .rtl-toggle-btn.rtl-toggle-btnBlack svg {
+    fill: var(--black-color);
+  }
+
+  .HeaderCafeWrapper .right {
+    color: var(--white-color);
+  }
+
+  .HeaderCafeWrapper.menu-fixed .right {
+    color: var(--black-color);
+  }
+
+  .HeaderCafeWrapper .mobile-menu-btn svg {
+    fill: var(--black-color);
+  }
+
+  .HeaderCafeWrapper .right .Home2FilledGreenBtn {
+    display: none;
+  }
+
   .HeaderCafeWrapper .nav {
     display: none;
   }
@@ -511,12 +526,6 @@
 
 
 @include responsive(mobile-sm) {
-
-  .rtl-toggle-btn {
-    font-size: var(--fs12);
-    padding: 8px 8px;
-  }
-
   .HeaderCafeWrapper .container {
     padding: 16px 10px;
   }
@@ -529,9 +538,4 @@
   .HeaderCafeWrapper .logo img {
     max-width: 90px;
   }
-
-  .HeaderCafeWrapper .right {
-    gap: 6px;
-  }
-
 }

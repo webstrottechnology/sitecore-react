@@ -1,4 +1,5 @@
 import React from "react";
+import { useState, useEffect } from "react";
 import { BlogSectionFour } from "../shortcode/blog/Blog";
 import { HomeCafeFooter } from "../shortcode/footer/Footer";
 import HomeCafeBreakfast, {
@@ -16,9 +17,14 @@ import HomeCafeBreakfast, {
 import HeaderCafe from "../shortcode/Header/HeaderCafe";
 
 const HomeCafe = () => {
+  const [direction, setDirection] = useState("ltr");
+
+  useEffect(() => {
+    document.documentElement.setAttribute("dir", direction);
+  }, [direction]);
   return (
     <div>
-      <HeaderCafe />
+      <HeaderCafe direction={direction} setDirection={setDirection} />
       <HomeCafeSliderSection />
       <HomeCafeService />
       <HomeCafeAboutUs />
