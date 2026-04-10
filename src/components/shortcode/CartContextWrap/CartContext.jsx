@@ -26,7 +26,7 @@ const CartProvider = ({ children }) => {
       if (exist) {
         return prev.map((item) =>
           Number(item.id) === Number(product.id)
-            ? { ...item, qty: item.qty + 1 }
+            ? { ...item, qty: item.qty + 0 }
             : item
         );
       } else {

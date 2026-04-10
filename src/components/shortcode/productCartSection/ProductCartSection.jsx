@@ -23,7 +23,7 @@ const ProductCartSection = () => {
     >
       <div className="container custom-container-lg">
         <div className="ProductCartSection-title">
-          <h4>Books in this series: (4 books)</h4>
+          <h4>Books in this series: (3 books)</h4>
         </div>
         <div className="row">
           {Productcartdata.map((product) => (

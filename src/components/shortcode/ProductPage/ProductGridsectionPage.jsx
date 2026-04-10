@@ -17,6 +17,7 @@ import { useCart } from "../../shortcode/CartContextWrap/CartContext";
 import promoImg from "../../../assets/images/product/product_left_sidebar_data_img.jpg";
 
 const ProductGridSection = () => {
+  const { addToCart } = useCart();
   const [view, setView] = useState("grid");
 
   /* STATE */
