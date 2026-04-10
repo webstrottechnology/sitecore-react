@@ -500,7 +500,7 @@ const Header_05 = ({ direction, setDirection }) => {
                   </div>
                   <div className="info">
                     <h4>{item.name}</h4>
-                    <p>₹{item.price}</p>
+                    <p>${item.price}</p>
 
                     <div className="qty">
                       <button onClick={() => decreaseQty(item.id)}>-</button>
