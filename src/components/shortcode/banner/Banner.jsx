@@ -27,6 +27,7 @@ import WomenImg from "../../../assets/images/left-women.jpg";
 import BgImg from "../../../assets/images/home-01/home-bg.png";
 import TitleShape from "../../../assets/images/home-01/title-shape.png";
 import SliderImg from "../../../assets/images/home-01/slider-img.png";
+import { Link } from "react-router-dom";
 
 /* ---------------- BANNER ONE ---------------- */
 
@@ -619,7 +620,12 @@ const Banner11 = () => {
               <span>Digital Reality</span>
             </h1>
             <img src={TitleShape} alt="shape" />
+           
           </div>
+
+           <div  className="BtnBox">
+              <Link to="/contact" className="mintGreenFilledBtn md-btn">Get Started</Link>
+            </div>
 
           {/* IMAGE + PROGRESS */}
           <div className="slider-img">

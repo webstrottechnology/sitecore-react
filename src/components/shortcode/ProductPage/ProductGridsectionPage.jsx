@@ -11,8 +11,8 @@ import { FaStar, FaArrowRight } from "react-icons/fa";
 import { FaThLarge, FaList } from "react-icons/fa";
 import { FiArrowRight } from "react-icons/fi";
 import { IoCart } from "react-icons/io5";
-import { FaHeart } from "react-icons/fa";
 import Pagination from "../../shortcode/pagination/Pagination";
+import { useCart } from "../../shortcode/CartContextWrap/CartContext";
 
 import promoImg from "../../../assets/images/product/product_left_sidebar_data_img.jpg";
 
@@ -232,7 +232,17 @@ const ProductGridSection = () => {
                       >
                         <div className="bsFeaturedProductItem">
                           <div className="bsFeaturedProductImg">
-                            <div className="bsFeaturedProductImgInner">
+                            <div
+                              className="bsFeaturedProductImgInner"
+                              onClick={() =>
+                                addToCart({
+                                  id: product.id,
+                                  name: product.title,
+                                  price: product.price,
+                                  img: product.img,
+                                })
+                              }
+                            >
                               <a href={product.link}>
                                 <img
                                   src={product.img}
@@ -244,9 +254,21 @@ const ProductGridSection = () => {
                               <Link
                                 to={product.link}
                                 className="btn-cart filledsqaurebtn"
+                                onClick={(e) => {
+                                  e.preventDefault();
+
+                                  addToCart({
+                                    id: Number(product.id),
+                                    name: product.title,
+                                    price: Number(
+                                      product.price.replace(/[^0-9.]/g, ""),
+                                    ),
+                                    img: product.img,
+                                  });
+                                }}
                               >
                                 <span>
-                                  <IoCart />
+                                  <IoCart className="cartIcon" />
                                   ADD TO CART
                                 </span>
                               </Link>

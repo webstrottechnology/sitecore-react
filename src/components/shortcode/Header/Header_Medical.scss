@@ -411,19 +411,6 @@
 }
 
 
-// RTL CSS START  //
-
-.rtl-toggle-btn {
-    padding: var(--p6) var(--p12);
-    font-size: var(--fs16);
-    background: transparent;
-    color: var(--white-color);
-    border: none;
-    cursor: pointer;
-    border-radius: var(--br4);
-    display: inline-block !important;
-    border: 1px solid var(--white-color);
-}
 
 
 
@@ -563,11 +550,6 @@
 }
 
 @include responsive(mobile-sm) {
-
-    .rtl-toggle-btn {
-        font-size: var(--fs12);
-        padding: 8px 8px;
-    }
 
     .medical-header .mintGreenFilledBtn.md-btn {
         padding: 8px 10px;
