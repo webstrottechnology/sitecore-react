@@ -362,11 +362,11 @@
     span {
       color: orange;
       font-weight: 500;
-      font-size: 14px;
+      font-size: 26px;
     }
 
     h2 {
-      font-size: 32px;
+      font-size: 40px;
       font-weight: 700;
       color: #0e2b3d;
       margin-top: 5px;
@@ -376,18 +376,7 @@
   .container {
     margin: auto;
     position: relative;
-    /* ✅ IMPORTANT for buttons */
   }
-
-  /* ❌ REMOVE GRID WHEN USING SWIPER */
-  /* comment this */
-  /*
-    .container {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        gap: 25px;
-    }
-    */
 
   /* ✅ SWIPER FIX */
   .swiper {
@@ -402,7 +391,7 @@
   .slider-buttons {
     position: absolute;
     top: 0;
-    right: 0;
+    right: 16px;
     display: flex;
     gap: 10px;
 
@@ -1150,6 +1139,22 @@
   .MedicalAboutUs .aboutUsGallery {
     margin-bottom: var(--m20);
   }
+
+  .MedicalTestimonials .testimonialsContent .testimonialsHeadingSlider h2 {
+    font-size: var(--fs30);
+  }
+
+  .MedicalTestimonials .testimonialsRow .testimonialsContent {
+    margin-top: var(--m40);
+  }
+
+  .MedicalTeam-section .section-header h2 {
+    font-size: var(--fs30);
+  }
+
+  .medicalTopCategories .medTopCategoriesHeading h3 {
+    font-size: var(--fs30);
+  }
 }
 
 @include responsive(mobile) {
@@ -1168,6 +1173,31 @@
   .MedicalAboutUs .aboutUsContent .emergencyMedical .emergencyMedicalContent h4 {
     font-size: var(--fs18);
   }
+
+  .MedicalTestimonials .testimonialsContent .testimonialsHeadingSlider h2 {
+    font-size: var(--fs22);
+  }
+
+  .MedicalTestimonials .testimonialsContent .testimonialsHeadingSlider span {
+    font-size: var(--fs20);
+  }
+
+  .MedicalTestimonials .testimonialsContent .testimonialSlide .testimonialsSlider .testimonialsSliderOuter {
+    padding: var(--p40) var(--p20);
+  }
+
+  .MedicalTeam-section .section-header h2 {
+    font-size: var(--fs22);
+  }
+
+  .MedicalTeam-section .section-header span {
+    font-size: var(--fs20);
+  }
+
+  .medicalTopCategories .medTopCategoriesHeading h3 {
+    font-size: var(--fs22);
+  }
+  
 }
 
 @include responsive(mobile-sm) {
@@ -1181,4 +1211,28 @@
     top: -100px;
   }
 
+  .MedicalTeam-section .slider-buttons {
+    position: static;
+    justify-content: center;
+    margin-top: var(--m40);
+  }
+
+  .medical-header .right-section .toggleBtn a svg {
+    width: 32px;
+    height: 36px;
+  }
+
+  .medical-header .right-section .toggleBtn {
+    padding-inline: var(--p4);
+  }
+
+  .medicalTopCategories {
+    padding: var(--p40) var(--p16);
+  }
+
+  .medicalTopCategories .swiper-button-prev,
+  .medicalTopCategories .swiper-button-next {
+    width: 35px;
+    height: 35px;
+  }
 }
