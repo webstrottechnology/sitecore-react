@@ -1466,7 +1466,7 @@
     .slider-img {
         position: relative;
         text-align: center;
-        top: 160px;
+        top: 80px;
 
         img {
             max-width: 100%;
@@ -1721,6 +1721,32 @@
 
 }
 
+
+[dir="rtl"] {
+    .medicalTopBanner {
+        .medicalTopBannerInner {
+            .medTopBannerContent {
+                .higherLevelCare {
+                    justify-content: end;
+                    display: flex;
+
+                    &::before {
+                        left: inherit;
+                        top: -5px;
+                        right: 358px;
+                        z-index: 1;
+                    }
+
+                    &::after {
+                        bottom: -5px;
+                        left: inherit;
+                        right: 358px;
+                    }
+                }
+            }
+        }
+    }
+}
 
 
 /* ---------------- RESPONSIVE CSS ---------------- */
