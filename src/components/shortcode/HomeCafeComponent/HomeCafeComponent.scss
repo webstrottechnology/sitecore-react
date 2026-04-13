@@ -1662,8 +1662,7 @@
     background-repeat: no-repeat;
     background-position: top center;
     background-size: cover;
-    padding: var(--p170) var(--p0);
-    margin-top: -97px;
+    padding: var(--p140) var(--p0) var(--p100) var(--p0);
     position: relative;
     z-index: 1;
 
@@ -1673,6 +1672,7 @@
         align-items: center;
 
         .cafe-left {
+
             width: 40%;
 
             h4 {
@@ -1791,6 +1791,92 @@
 }
 
 
+//  RTL Version Scss Start  //
+
+[dir="rtl"] {
+    .cafe-slider-main-wrapper {
+        .cafe-slider-caption-wrapper {
+            .cafe-left {
+                display: flex;
+                flex-direction: column;
+                align-items: end;
+
+                .slide-btn-sec {
+                    flex-direction: row-reverse;
+
+                    .slide-contact {
+                        flex-direction: row-reverse;
+                    }
+                }
+            }
+        }
+    }
+
+    .cafe-about-main-wrapper {
+        .cafe-about-wrapper {
+            .about-text {
+                .title_box {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: end;
+                }
+
+                .work-experience-wrapper {
+                    .work-experience {
+                        align-items: flex-end;
+                    }
+
+                    .work-text {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: end;
+                    }
+                }
+            }
+        }
+    }
+
+    .cafe-our-menu-main-wrapper {
+        .cafe-menu-tab-wrapper {
+            .tab-content {
+                .product-chart-wrpapper {
+                    .product-list {
+                        p {
+                            flex-direction: row-reverse;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .cafe-our-chefs-main-wrapper {
+        .cafe-team-slider-wrapper {
+            .slick-prev {
+                right: inherit;
+                left: 30px;
+            }
+
+            .slick-next {
+                right: inherit;
+                left: 100px;
+            }
+        }
+    }
+
+    .cafe-breakfast-main-wrapper {
+        .breakfast-wrapper {
+            .breakfast-text {
+                .winning-award {
+                    justify-content: end;
+                    flex-direction: row-reverse;
+                }
+            }
+        }
+    }
+}
+
+
 //   Responsive Css Start   //
 
 @include responsive(lg) {
@@ -1856,6 +1942,17 @@
 
 
 @include responsive(tablet-sm) {
+
+    [dir="rtl"] {
+        .cafe-slider-main-wrapper:before {
+            display: none;
+        }
+
+        .cafe-slider-main-wrapper .cafe-slider-caption-wrapper {
+            flex-direction: column;
+        }
+    }
+
     .cafe-about-main-wrapper .cafe-about-wrapper {
         gap: 20px;
         flex-direction: column;
@@ -1915,9 +2012,20 @@
         width: 48%;
     }
 
+    .cafe-slider-main-wrapper .cafe-slider-caption-wrapper {
+        flex-direction: column;
+    }
+
     .cafe-slider-main-wrapper:before {
-        width: 400px;
-        height: 610px;
+        display: none;
+    }
+
+    .cafe-slider-main-wrapper .cafe-slider-caption-wrapper .cafe-left {
+        width: 100%;
+    }
+
+    .cafe-slider-main-wrapper .cafe-slider-caption-wrapper .cafe-right {
+        width: 100%;
     }
 
     .cafe-slider-main-wrapper .cafe-slider-caption-wrapper .cafe-left .slide-btn-sec .slide-contact span {
@@ -2110,6 +2218,16 @@
         flex-wrap: wrap;
         gap: 30px;
     }
+
+    .cafe-about-main-wrapper .cafe-about-wrapper .about-text .title_box h4 {
+        text-align: center;
+    }
+
+    [dir="rtl"] {
+        .cafe-about-main-wrapper .cafe-about-wrapper .about-text .title_box {
+            align-items: center;
+        }
+    }
 }
 
 
@@ -2268,6 +2386,10 @@
 
     .cafe-testi-main-wrapper .cafe-testimonial-main-wrapper .testimonial-content .cafe-menu-title h2 {
         font-size: 32px;
+    }
+
+    .cafe-breakfast-main-wrapper .breakfast-wrapper .breakfast-img .img-back {
+        height: 295px;
     }
 }
 

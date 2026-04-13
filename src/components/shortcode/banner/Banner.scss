@@ -1453,6 +1453,15 @@
         }
     }
 
+    //  BtnBox
+
+    .BtnBox {
+        margin-top: var(--m60);
+        display: flex;
+        justify-content: center;
+        justify-content: center;
+    }
+
     /* SLIDER IMAGE */
     .slider-img {
         position: relative;

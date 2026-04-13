@@ -4,8 +4,10 @@ import { Productcartdata } from "./ProductCartSectionData";
 import "./ProductCartSection.scss";
 import { IoCart } from "react-icons/io5";
 import { Link } from "react-router-dom";
+import { useCart } from "../../shortcode/CartContextWrap/CartContext";
 
 const ProductCartSection = () => {
+  const { addToCart } = useCart();
   const [view, setView] = useState("grid");
   // wishlist state
   const [wishlist, setWishlist] = useState([]);
@@ -21,7 +23,7 @@ const ProductCartSection = () => {
     >
       <div className="container custom-container-lg">
         <div className="ProductCartSection-title">
-          <h4>Books in this series: (4 books)</h4>
+          <h4>Books in this series: (3 books)</h4>
         </div>
         <div className="row">
           {Productcartdata.map((product) => (
@@ -35,7 +37,17 @@ const ProductCartSection = () => {
             >
               <div className="bsFeaturedProductItem">
                 <div className="bsFeaturedProductImg">
-                  <div className="bsFeaturedProductImgInner">
+                  <div
+                    className="bsFeaturedProductImgInner"
+                    onClick={() =>
+                      addToCart({
+                        id: product.id,
+                        name: product.title,
+                        price: product.price,
+                        img: product.img,
+                      })
+                    }
+                  >
                     <a href={product.link}>
                       <img
                         src={product.img}
@@ -47,9 +59,19 @@ const ProductCartSection = () => {
                     <Link
                       to={product.link}
                       className="btn-cart filledsqaurebtn"
+                      onClick={(e) => {
+                        e.preventDefault();
+
+                        addToCart({
+                          id: Number(product.id),
+                          name: product.title,
+                          price: Number(product.price.replace(/[^0-9.]/g, "")),
+                          img: product.img,
+                        });
+                      }}
                     >
                       <span>
-                        <IoCart />
+                        <IoCart className="cartIcon" />
                         ADD TO CART
                       </span>
                     </Link>

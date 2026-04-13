@@ -411,86 +411,6 @@
 }
 
 
-// RTL CSS START  //
-
-.rtl-toggle-btn {
-    padding: var(--p6) var(--p12);
-    font-size: var(--fs16);
-    background: transparent;
-    color: var(--black-color);
-    border: none;
-    cursor: pointer;
-    border-radius: var(--br4);
-    display: inline-block !important;
-    border: 1px solid var(--black-color);
-}
-
-[dir="rtl"] {
-    .medical-header {
-        .container {
-            flex-direction: row-reverse;
-        }
-
-        .nav {
-            direction: rtl;
-
-            li {
-                text-align: right;
-
-                .mega-menu-box {
-                    text-align: right;
-
-                    div {
-                        a {
-                            text-align: right;
-
-                            &:hover {
-                                padding-right: var(--p8);
-                            }
-                        }
-                    }
-                }
-            }
-        }
-
-        .right {
-            flex-direction: row-reverse;
-        }
-    }
-
-
-    .mobile-sidebar.show {
-        right: 0;
-    }
-
-    .mobile-sidebar {
-        .close {
-            left: inherit;
-            right: 280px;
-        }
-
-        ul {
-            li {
-                .mobile-title {
-                    direction: rtl;
-                    text-align: right; // text right side
-                }
-            }
-        }
-    }
-
-    .mobile-dropdown {
-        text-align: right;
-    }
-
-    .search-box {
-        input {
-            text-align: right;
-        }
-    }
-
-
-}
 
 
 
@@ -630,11 +550,6 @@
 }
 
 @include responsive(mobile-sm) {
-
-    .rtl-toggle-btn {
-        font-size: var(--fs12);
-        padding: 8px 8px;
-    }
 
     .medical-header .mintGreenFilledBtn.md-btn {
         padding: 8px 10px;
