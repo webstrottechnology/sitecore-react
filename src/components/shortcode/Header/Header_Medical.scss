@@ -53,7 +53,6 @@
         display: flex;
         align-items: center;
         gap: 10px;
-        padding: 10px;
 
         .phone-icon {
             width: 45px;
@@ -284,7 +283,6 @@
             padding: 0;
 
             li {
-                border-bottom: 1px solid rgba(255, 255, 255, 0.15);
 
                 .mobile-title {
                     padding: var(--p18) var(--p26);
@@ -323,9 +321,9 @@
                     a {
                         padding: var(--p12) var(--p36);
                         display: block;
-                        color: var(--white-color);
+                        color: var(--black-color);
                         font-size: var(--fs16);
-                        background-color: var(--temp1BlueColor);
+                        background-color: var(--white-color);
                     }
 
                 }
@@ -410,10 +408,135 @@
     }
 }
 
+[dir="rtl"] {
+    .medical-header {
+        .container {
+            flex-direction: row-reverse;
+        }
+
+        .nav {
+            flex-direction: row-reverse;
+
+            li {
+                &:hover {
+                    .mega-menu-box {
+                        flex-direction: row-reverse;
+                    }
+                }
+            }
+        }
+
+        .header-inner {
+            flex-direction: row-reverse;
+
+            .right-section {
+                flex-direction: row-reverse;
+            }
+        }
+    }
+
+    // .MedicalAboutUs {
+    //     .aboutUsInner {
+    //         .aboutUsRow {
+    //             flex-direction: row-reverse;
+
+    //             .aboutUsContent {
+    //                 .aboutUsContentInner {
+    //                     align-items: end;
+    //                 }
+    //             }
+    //         }
+    //     }
+    // }
+
+    // .medicalTopBanner {
+    //     .medicalTopBannerInner {
+    //         .medTopBannerContent {
+    //             .higherLevelCare {
+    //                 justify-content: end;
+    //                 display: flex;
+
+    //                 &::before {
+    //                     left: inherit;
+    //                     top: -5px;
+    //                     right: 358px;
+    //                     z-index: 1;
+    //                 }
+
+    //                 &::after {
+    //                     bottom: -5px;
+    //                     left: inherit;
+    //                     right: 358px;
+    //                 }
+    //             }
+    //         }
+    //     }
+    // }
+
+    // .MedicalTeam-section {
+    //     .slider-buttons {
+    //         left: 0;
+    //     }
+    // }
 
 
+    // .MedicalTestimonials {
+    //     .testimonialsContent {
+    //         .testimonialsHeadingSlider {
+    //             justify-content: flex-end;
+    //             display: flex;
+    //             flex-direction: column;
+    //             align-items: end;
+    //         }
 
+    //         .testimonialSlide {
+    //             .testimonialsSlider {
+    //                 .slideBottomContent {
+    //                     flex-direction: row-reverse;
+    //                 }
 
+    //                 .testimonialsSliderOuter {
+    //                     .testimonialsSliderInner {
+    //                         display: flex;
+    //                         flex-direction: column;
+    //                         align-items: end;
+    //                     }
+    //                 }
+    //             }
+    //         }
+    //     }
+
+    //     .testimonialsImg {
+    //         .fiveStar {
+    //             right: 0;
+    //             left: auto;
+    //         }
+    //     }
+    // }
+
+    // .mediCounterItems {
+    //     flex-direction: row-reverse;
+    //     display: flex;
+    //     width: 100%;
+    //     align-items: center;
+    //     justify-content: space-around;
+    // }
+
+    // .innerPagesAboutCircleItem {
+    //     flex-direction: row-reverse;
+    //     display: flex;
+    //     justify-content: center;
+
+    //     .innerPagesAboutCircle {
+    //         a {
+    //             .icon {
+    //                 left: 30px;
+    //             }
+    //         }
+    //     }
+    // }
+
+}
 
 /* RESPONSIVE */
 
@@ -455,6 +578,19 @@
 }
 
 @include responsive(laptop) {
+    [dir=rtl] .medicalTopBanner .medicalTopBannerInner .medTopBannerContent .higherLevelCare::before {
+        left: inherit;
+        top: -4px;
+        right: 278px;
+        z-index: 1;
+    }
+
+    [dir=rtl] .medicalTopBanner .medicalTopBannerInner .medTopBannerContent .higherLevelCare::after {
+        bottom: -4px;
+        left: inherit;
+        right: 278px;
+    }
+
     .medical-header .mobile-sidebar {
         top: 80px;
     }
@@ -514,6 +650,18 @@
 }
 
 @include responsive(mobile) {
+    [dir=rtl] .medicalTopBanner .medicalTopBannerInner .medTopBannerContent .higherLevelCare::before {
+        left: inherit;
+        top: -4px;
+        right: 235px;
+        z-index: 1;
+    }
+
+    [dir=rtl] .medicalTopBanner .medicalTopBannerInner .medTopBannerContent .higherLevelCare::after {
+        bottom: -4px;
+        left: inherit;
+        right: 235px;
+    }
 
     .medical-header .contact-box .contact-detail,
     .medical-header .appointment-btn span {
@@ -537,6 +685,7 @@
 
     .medical-header .contact-box {
         padding: 0;
+        display: none;
     }
 
     .medical-header .right-section .toggleBtn {

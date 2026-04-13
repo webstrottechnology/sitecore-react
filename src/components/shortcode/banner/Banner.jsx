@@ -620,12 +620,13 @@ const Banner11 = () => {
               <span>Digital Reality</span>
             </h1>
             <img src={TitleShape} alt="shape" />
-           
           </div>
 
-           <div  className="BtnBox">
-              <Link to="/contact" className="mintGreenFilledBtn md-btn">Get Started</Link>
-            </div>
+          <div className="BtnBox">
+            <Link to="/contact" className="mintGreenFilledBtn md-btn">
+              Get Started
+            </Link>
+          </div>
 
           {/* IMAGE + PROGRESS */}
           <div className="slider-img">
@@ -661,9 +662,9 @@ const MedicalTopBanner = () => {
 
                 <p>{data.description}</p>
 
-                <button className="filledroundedbtn md-btn">
+                <a href="/about-us" className="filledroundedbtn md-btn">
                   <span>{data.buttonText}</span>
-                </button>
+                </a>
               </div>
             </div>
 
