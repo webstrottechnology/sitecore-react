@@ -4,7 +4,8 @@ import { Navigation } from "swiper/modules";
 
 import "swiper/css";
 import "swiper/css/navigation";
-
+import { FaArrowLeftLong } from "react-icons/fa6";
+import { FaArrowRightLong } from "react-icons/fa6";
 import SliderGalleryData from "./sliderGalleryData";
 import "./SliderGallery.scss";
 
@@ -52,8 +53,12 @@ const SliderGallery = () => {
       </Swiper>
 
       <div className="galleryNav">
-        <button className="prevBtn">← Previous</button>
-        <button className="nextBtn">Next →</button>
+        <button className="prevBtn">
+          <FaArrowLeftLong />
+          Previous</button>
+        <button className="nextBtn">Next 
+          <FaArrowRightLong />
+        </button>
       </div>
     </section>
   );

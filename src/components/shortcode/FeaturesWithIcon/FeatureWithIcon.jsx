@@ -276,9 +276,7 @@ const SitecorefeatureItems = () => {
                     <Icon size={32} />
                   </Link>
 
-                  <h5>
-                    <Link to={service.link}>{service.title}</Link>
-                  </h5>
+                  <h5>{service.title}</h5>
 
                   <p>{service.desc}</p>
                 </div>

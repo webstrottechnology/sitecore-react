@@ -71,7 +71,7 @@ export const FeaturesWithIconDataOne = [
     id: 2,
     icon: <FaBootstrap />,
     title: "Bootstrap v5",
-    link: "/bootstrap-v5",
+    link: "/",
     desc: "Built on top of awesome Bootstrap latest 5.2+ version.",
   },
   {

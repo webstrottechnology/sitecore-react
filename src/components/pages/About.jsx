@@ -22,7 +22,6 @@ const About = () => {
       <AboutBrandStory />
       <AboutTestimonial />
       <FormTwelve />
-      <Header_Medical/>
     </>
   );
 };

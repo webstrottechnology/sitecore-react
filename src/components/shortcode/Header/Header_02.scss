@@ -353,6 +353,24 @@
     .header-02-section .header-02-wrapper .banner .banner-right .accordion .acc-item h4 {
         flex-direction: row-reverse;
     }
+
+    .header-02-section .header-02-wrapper .header-02 {
+        flex-direction: row-reverse;
+    }
+
+    .header-02-section .header-02-wrapper .sidebar {
+        right: -100%;
+        left: inherit;
+    }
+
+    .header-02-section .header-02-wrapper .sidebar.open {
+        left: inherit;
+        right: 0;
+    }
+
+    .header-02-section .header-02-wrapper .sidebar .sidebar-menu .menu-title {
+        flex-direction: row-reverse;
+    }
 }
 
 

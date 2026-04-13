@@ -20,7 +20,7 @@ const Pagination = () => {
   };
 
   return (
-    <div className="pagination-wrapper">
+    <div className="pagination-wrapper Pagination_mr_wrapper">
       <div className="pagination-container">
         <button className="nav-btn" onClick={handlePrev}>
           <FiArrowLeft />

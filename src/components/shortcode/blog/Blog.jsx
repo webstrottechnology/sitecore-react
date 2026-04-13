@@ -11,11 +11,7 @@ import {
   blogDataFour,
 } from "./blogData";
 import { Link } from "react-router-dom";
-import {
-  FiUser,
-  FiMessageCircle,
-  FiArrowUpRight,
-} from "react-icons/fi";
+import { FiUser, FiMessageCircle, FiArrowUpRight } from "react-icons/fi";
 import { FaUser, FaComment } from "react-icons/fa";
 import { IoIosArrowBack } from "react-icons/io";
 import { IoIosArrowForward } from "react-icons/io";
@@ -305,10 +301,10 @@ const BlogSectionThree = () => {
 
           <div className="nav-arrows">
             <button className="blog-prev active">
-           <MdOutlineArrowBackIosNew />
+              <MdOutlineArrowBackIosNew />
             </button>
             <button className="blog-next">
-             <MdOutlineArrowForwardIos />
+              <MdOutlineArrowForwardIos />
             </button>
           </div>
         </div>
@@ -367,7 +363,7 @@ const BlogSectionThree = () => {
 
         {/* VIEW ALL */}
         <div className="view-all">
-          <Link to="/blog" className="filledroundedbtn md-btn">
+          <Link to="/blog-page" className="filledroundedbtn md-btn">
             <span>View All</span>
           </Link>
         </div>
