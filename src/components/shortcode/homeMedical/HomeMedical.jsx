@@ -19,6 +19,8 @@ import testimonialLeftImg from "../../../assets/images/home_medical/medicalTesti
 import likeIcon from "../../../assets/images/home_medical/icons/like.png";
 import leftArrow from "../../../assets/images/home_medical/icons/testimonialLeftArrow.png";
 import rightArrow from "../../../assets/images/home_medical/icons/testimonialRightArrow.png";
+import { FaArrowLeftLong } from "react-icons/fa6";
+import { FaArrowRightLong } from "react-icons/fa6";
 import CountUp from "react-countup";
 import { useInView } from "react-intersection-observer";
 import { FaAngleRight } from "react-icons/fa";
@@ -414,7 +416,7 @@ const MedicalTestimonials = () => {
                             <button
                               onClick={() => swiperRef.current.slidePrev()}
                             >
-                              <FaArrowLeft />
+                             <FaArrowLeftLong />
                               <span>Previous</span>
                             </button>
 
@@ -422,7 +424,7 @@ const MedicalTestimonials = () => {
                               onClick={() => swiperRef.current.slideNext()}
                             >
                               <span>Next</span>
-                              <FaArrowRight />
+                              <FaArrowRightLong />
                             </button>
                           </div>
                         </div>
