@@ -6,6 +6,7 @@ import {
   FaTwitter,
   FaYoutube,
 } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
 
 import profile1 from "../../../assets/images/blog-img/blog_profile1.png";
 import profile2 from "../../../assets/images/blog-img/blog_profile2.png";
@@ -68,7 +69,7 @@ export const socialIcons = [
     link: "https://linkedin.com",
   },
   {
-    icon: FaTwitter,
+    icon: FaXTwitter,
     alt: "twitter",
     link: "https://twitter.com",
   },

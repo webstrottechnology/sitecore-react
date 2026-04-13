@@ -2,9 +2,9 @@ import {
   FaFacebookF,
   FaInstagram,
   FaLinkedinIn,
-  FaTwitter,
   FaYoutube,
 } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
 import thumb1 from "../../../assets/images/blog-img/thumbnail1.jpg";
 import thumb2 from "../../../assets/images/blog-img/thumbnail2.jpg";
 import thumb3 from "../../../assets/images/blog-img/thumbnail3.jpg";
@@ -75,7 +75,7 @@ export const BlogsocialIcons = [
   { icon: <FaFacebookF />, link: "https://facebook.com" },
   { icon: <FaInstagram />, link: "https://instagram.com" },
   { icon: <FaLinkedinIn />, link: "https://linkedin.com" },
-  { icon: <FaTwitter />, link: "https://twitter.com" },
+  { icon: <FaXTwitter />, link: "https://twitter.com" },
   { icon: <FaYoutube />, link: "https://youtube.com" },
 ];
 

@@ -20,7 +20,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: var(--p60) var(--p0);
+    padding: var(--p170) var(--p0) var(--p60) var(--p0);
 
     &-container {
         max-width: 800px;
@@ -35,7 +35,7 @@
 
         img {
             width: var(--width100);
-            max-width: 200px;
+            max-width: 160px;
         }
     }
 
@@ -100,6 +100,6 @@
     }
 
     .error404-logo img {
-        max-width: 165px;
+        max-width: 120px;
     }
 }

@@ -63,12 +63,15 @@
 
                 a {
                     width: 100%;
+
+                    &.Current_parent {
+                        height: 550px;
+                    }
                 }
 
                 img {
                     width: 100%;
-                    height: 300px;
-                    object-fit: cover;
+                    height: 100%;
                 }
 
                 .btn-cart {
@@ -239,5 +242,15 @@
 
     .ProductCartSection .bsFeaturedProductItem .bsFeaturedProductImg {
         padding: var(--p10) var(--p10);
+    }
+}
+
+@include responsive(mobile) {
+    .ProductCartSection .bsFeaturedProductItem .bsFeaturedProductImg .bsFeaturedProductImgInner img {
+        object-fit: contain;
+    }
+
+    .ProductCartSection .bsFeaturedProductItem .bsFeaturedProductImg .bsFeaturedProductImgInner a.Current_parent {
+        height: 350px;
     }
 }

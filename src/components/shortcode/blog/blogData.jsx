@@ -167,7 +167,7 @@ export const blogDataThree = [
     author: "admin",
     comments: 2,
     title: "Workplace Safety Concerns: The Plight of Construction Workers",
-    link: "/blog/workplace-safety",
+    link: "image-post",
   },
   {
     id: 2,
@@ -177,7 +177,7 @@ export const blogDataThree = [
     author: "admin",
     comments: 2,
     title: "Large-Scale Projects and Construction Worker Challenges",
-    link: "/blog/large-scale-projects",
+    link: "image-post",
   },
   {
     id: 3,
@@ -187,7 +187,7 @@ export const blogDataThree = [
     author: "admin",
     comments: 2,
     title: "Understanding the Risk: Construction Workers on Large Projects",
-    link: "/blog/construction-risk",
+    link: "image-post",
   },
 
   {
@@ -198,7 +198,7 @@ export const blogDataThree = [
     author: "admin",
     comments: 2,
     title: "Large-Scale Projects and Construction Worker Challenges",
-    link: "/blog/construction-risk",
+    link: "image-post",
   },
 
   {
@@ -209,10 +209,9 @@ export const blogDataThree = [
     author: "admin",
     comments: 2,
     title: "Workplace Safety Concerns: The Plight of Construction Workers",
-    link: "/blog/construction-risk",
+    link: "image-post",
   },
 ];
-
 
 export const blogDataFour = [
   {
@@ -223,7 +222,7 @@ export const blogDataFour = [
     author: "admin",
     comments: 2,
     title: "Workplace Safety Concerns: The Plight of Construction Workers",
-    link: "/blog/workplace-safety",
+    link: "image-post",
   },
   {
     id: 2,
@@ -233,7 +232,7 @@ export const blogDataFour = [
     author: "admin",
     comments: 2,
     title: "Large-Scale Projects and Construction Worker Challenges",
-    link: "/blog/large-scale-projects",
+    link: "image-post",
   },
   {
     id: 3,
@@ -243,7 +242,7 @@ export const blogDataFour = [
     author: "admin",
     comments: 2,
     title: "Understanding the Risk: Construction Workers on Large Projects",
-    link: "/blog/construction-risk",
+    link: "image-post",
   },
 
   {
@@ -254,7 +253,7 @@ export const blogDataFour = [
     author: "admin",
     comments: 2,
     title: "Understanding the Risk: Construction Workers on Large Projects",
-    link: "/blog/construction-risk",
+    link: "image-post",
   },
 
   {
@@ -265,6 +264,6 @@ export const blogDataFour = [
     author: "admin",
     comments: 2,
     title: "Understanding the Risk: Construction Workers on Large Projects",
-    link: "/blog/construction-risk",
+    link: "image-post",
   },
 ];

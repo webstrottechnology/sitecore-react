@@ -19,15 +19,13 @@ const CartProvider = ({ children }) => {
   // ✅ ADD TO CART
   const addToCart = (product) => {
     setCartItems((prev) => {
-      const exist = prev.find(
-        (item) => Number(item.id) === Number(product.id)
-      );
+      const exist = prev.find((item) => Number(item.id) === Number(product.id));
 
       if (exist) {
         return prev.map((item) =>
           Number(item.id) === Number(product.id)
             ? { ...item, qty: item.qty + 0 }
-            : item
+            : item,
         );
       } else {
         return [
@@ -46,7 +44,7 @@ const CartProvider = ({ children }) => {
   // ✅ REMOVE ITEM
   const removeItem = (id) => {
     setCartItems((prev) =>
-      prev.filter((item) => Number(item.id) !== Number(id))
+      prev.filter((item) => Number(item.id) !== Number(id)),
     );
   };
 
@@ -54,10 +52,8 @@ const CartProvider = ({ children }) => {
   const increaseQty = (id) => {
     setCartItems((prev) =>
       prev.map((item) =>
-        Number(item.id) === Number(id)
-          ? { ...item, qty: item.qty + 1 }
-          : item
-      )
+        Number(item.id) === Number(id) ? { ...item, qty: item.qty + 1 } : item,
+      ),
     );
   };
 
@@ -67,22 +63,19 @@ const CartProvider = ({ children }) => {
       prev.map((item) =>
         Number(item.id) === Number(id) && item.qty > 1
           ? { ...item, qty: item.qty - 1 }
-          : item
-      )
+          : item,
+      ),
     );
   };
 
   // ✅ TOTAL PRICE
   const totalPrice = cartItems.reduce(
     (acc, item) => acc + item.price * item.qty,
-    0
+    0,
   );
 
   // ✅ TOTAL COUNT (better than length)
-  const totalItems = cartItems.reduce(
-    (acc, item) => acc + item.qty,
-    0
-  );
+  const totalItems = cartItems.reduce((acc, item) => acc + item.qty, 0);
 
   return (
     <CartContext.Provider
