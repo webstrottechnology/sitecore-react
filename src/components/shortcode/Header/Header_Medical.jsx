@@ -9,14 +9,13 @@ import appointmentIcon from "../../../assets/images/home_medical/medical-header-
 const Header_Medical = ({ direction, setDirection }) => {
   const [sidebar, setSidebar] = useState(false);
   const [mobileDrop, setMobileDrop] = useState(null);
-  const [searchOpen, setSearchOpen] = useState(false);
 
   const toggleMobile = (menu) => {
     setMobileDrop(mobileDrop === menu ? null : menu);
   };
 
   const homeLinks = [
-    { label: "Home Corporate", path: "/" }, // ✅ CORRECT
+    { label: "Home Corporate", path: "/" },
     { label: "Home Medical", path: "/home-medical" },
     { label: "Home Architecture", path: "/home-architecture" },
     { label: "Home Cafe", path: "/home-cafe" },
@@ -471,7 +470,5 @@ const Header_Medical = ({ direction, setDirection }) => {
     </header>
   );
 };
-
-
 
 export default Header_Medical;
