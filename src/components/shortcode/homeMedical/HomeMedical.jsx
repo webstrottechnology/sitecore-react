@@ -19,12 +19,21 @@ import testimonialLeftImg from "../../../assets/images/home_medical/medicalTesti
 import likeIcon from "../../../assets/images/home_medical/icons/like.png";
 import leftArrow from "../../../assets/images/home_medical/icons/testimonialLeftArrow.png";
 import rightArrow from "../../../assets/images/home_medical/icons/testimonialRightArrow.png";
+import { FaArrowLeftLong } from "react-icons/fa6";
+import { FaArrowRightLong } from "react-icons/fa6";
 import CountUp from "react-countup";
 import { useInView } from "react-intersection-observer";
+import { FaAngleRight } from "react-icons/fa";
+import { FaAngleLeft } from "react-icons/fa";
+import { FaArrowLeft } from "react-icons/fa6";
+import { FaArrowRight } from "react-icons/fa6";
 
 const MedicalTopCategories = () => {
   const swiperRef = useRef(null);
   const [slideIndex, setSlideIndex] = useState(0);
+  const [isBeginning, setIsBeginning] = useState(true);
+  const [isEnd, setIsEnd] = useState(false);
+
   const MAX_SLIDE = 4;
 
   return (
@@ -35,22 +44,59 @@ const MedicalTopCategories = () => {
             <h3>Our Top Categories</h3>
           </div>
 
+          <div className="custom-nav">
+            <button className={`custom-prev ${isBeginning ? "disabled" : ""}`}>
+              <FaAngleLeft />
+            </button>
+
+            <button className={`custom-next ${isEnd ? "disabled" : ""}`}>
+              <FaAngleRight />
+            </button>
+          </div>
+
           <Swiper
             modules={[Navigation]}
             spaceBetween={20}
             slidesPerView={4}
-            navigation
-            onSwiper={(swiper) => (swiperRef.current = swiper)}
+            navigation={{
+              prevEl: ".custom-prev",
+              nextEl: ".custom-next",
+            }}
+            onBeforeInit={(swiper) => {
+              swiper.params.navigation.prevEl = ".custom-prev";
+              swiper.params.navigation.nextEl = ".custom-next";
+            }}
+            breakpoints={{
+              0: {
+                slidesPerView: 1,
+                spaceBetween: 10,
+              },
+              576: {
+                slidesPerView: 2,
+                spaceBetween: 15,
+              },
+              768: {
+                slidesPerView: 3,
+                spaceBetween: 18,
+              },
+              1024: {
+                slidesPerView: 4,
+                spaceBetween: 20,
+              },
+            }}
+            onSwiper={(swiper) => {
+              swiperRef.current = swiper;
+              setIsBeginning(swiper.isBeginning);
+              setIsEnd(swiper.isEnd);
+            }}
             onSlideChange={(swiper) => {
               let index = swiper.activeIndex;
               if (index > MAX_SLIDE) index = MAX_SLIDE;
               setSlideIndex(index);
-            }}
-            breakpoints={{
-              320: { slidesPerView: 1 },
-              576: { slidesPerView: 2 },
-              768: { slidesPerView: 3 },
-              1024: { slidesPerView: 4 },
+
+              // ⭐ arrow state update
+              setIsBeginning(swiper.isBeginning);
+              setIsEnd(swiper.isEnd);
             }}
           >
             {CategoriesData.map((item) => (
@@ -119,7 +165,7 @@ const MedicalAboutUs = () => {
                   <h4>{heading}</h4>
                   <p>{description}</p>
 
-                  <a href="#" className="filledroundedbtn xl-btn">
+                  <a href="/about-us" className="filledroundedbtn xl-btn">
                     <span>{buttonText}</span>
                   </a>
                 </div>
@@ -221,8 +267,12 @@ const MedicalTeam = () => {
 
         {/* ✅ CUSTOM ARROWS */}
         <div className="slider-buttons">
-          <div className="custom-prev">‹</div>
-          <div className="custom-next">›</div>
+          <div className="custom-prev">
+            <FaAngleLeft />
+          </div>
+          <div className="custom-next">
+            <FaAngleRight />
+          </div>
         </div>
       </div>
     </div>
@@ -366,7 +416,7 @@ const MedicalTestimonials = () => {
                             <button
                               onClick={() => swiperRef.current.slidePrev()}
                             >
-                              <img src={leftArrow} alt="prev" />
+                             <FaArrowLeftLong />
                               <span>Previous</span>
                             </button>
 
@@ -374,7 +424,7 @@ const MedicalTestimonials = () => {
                               onClick={() => swiperRef.current.slideNext()}
                             >
                               <span>Next</span>
-                              <img src={rightArrow} alt="next" />
+                              <FaArrowRightLong />
                             </button>
                           </div>
                         </div>

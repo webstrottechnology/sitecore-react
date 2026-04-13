@@ -39,7 +39,7 @@ export const HomeCafetestimonialData = {
   titleSmall: "Testimonials",
   titleMain: "What our customers are talking about us",
   buttonText: "View More Details",
-  buttonLink: "/testimonials",
+  buttonLink: "/quote-post",
 
   testimonials: [
     {
@@ -84,7 +84,7 @@ export const HomeCafebreakfastData = {
   image: breakfastImg, // ✅ correct
   imageTitle: "Sitecore Cafe",
   buttonText: "Learn More",
-  buttonLink: "/about",
+  buttonLink: "/product-with-sidebar",
 };
 
 export const HomeCafeBrandData = [
@@ -98,7 +98,7 @@ export const HomeCafeGalleryData = {
   titleSmall: "Our Gallery",
   titleMain: "Enjoy Every Moment",
   buttonText: "View Our Gallery",
-  buttonLink: "/gallery",
+  buttonLink: "/portfolio",
 
   gallery: [
     {

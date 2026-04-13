@@ -27,7 +27,7 @@
 
   }
 
-    &.menu-fixed {
+  &.menu-fixed {
     position: fixed;
     top: 0;
     left: 0;
@@ -363,6 +363,20 @@
 }
 
 
+// RTL CSS START  //
+
+.rtl-toggle-btn {
+  padding: var(--p6) var(--p12);
+  font-size: var(--fs16);
+  background: transparent;
+  color: var(--white-color);
+  border: none;
+  cursor: pointer;
+  border-radius: var(--br4);
+  display: inline-block !important;
+  border: 1px solid var(--white-color);
+}
+
 [dir="rtl"] {
   .header_05_section {
     .container {
@@ -458,11 +472,6 @@
 }
 
 @include responsive(tablet-sm) {
-
-  .header_05_section .mintGreenFilledBtn.md-btn {
-    display: none;
-  }
-
   .header_05_section .nav {
     display: none;
   }
@@ -492,6 +501,12 @@
 
 
 @include responsive(mobile-sm) {
+
+  .rtl-toggle-btn {
+    font-size: var(--fs12);
+    padding: 8px 8px;
+  }
+
   .header_05_section .container {
     padding: 16px 10px;
   }
@@ -504,4 +519,9 @@
   .header_05_section .logo img {
     max-width: 90px;
   }
+
+  .header_05_section .right {
+    gap: 6px;
+  }
+
 }

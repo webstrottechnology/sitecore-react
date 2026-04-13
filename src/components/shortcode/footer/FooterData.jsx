@@ -495,15 +495,15 @@ export const SitecoreCafeFooterData = {
   quickLinks: [
     { name: "About Us", path: "/about" },
     { name: "Services", path: "/services" },
-    { name: "Our Blog", path: "/blog" },
-    { name: "Our Team", path: "/team" },
-    { name: "Portfolio", path: "/portfolio" },
-    { name: "Product", path: "/product" },
+    { name: "Our Blog", path: "/blog-page" },
+    { name: "Our Team", path: "/team-single" },
+    { name: "Portfolio", path: "/portfolio-details" },
+    { name: "Product", path: "/product-with-sidebar" },
     { name: "Login/Register", path: "/login" },
   ],
 
   moreinfo: [
-    { name: "Contact Us", path: "/contact" },
+    { name: "Contact Us", path: "/Contact" },
     { name: "Comming Soon", path: "/coming-soon" },
     { name: "Checkout", path: "/checkout" },
     { name: "404 Error", path: "/404" },

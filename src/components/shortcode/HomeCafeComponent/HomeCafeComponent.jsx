@@ -391,7 +391,7 @@ const HomeCafeChefs = () => {
 
                 <div className="team-text">
                   <h4>
-                    <Link to="/"> {chef.name}</Link>
+                    <Link to="/team-single"> {chef.name}</Link>
                   </h4>
                   <p>{chef.role}</p>
                 </div>
@@ -576,9 +576,9 @@ const HomeCafeAboutUs = () => {
               {/* BOTTOM TEXT */}
               <div className="work-text">
                 <h2>{data.bottomText}</h2>
-                <a href="#" className="Home2FilledGreenBtn cafe-btn">
+                <Link to="/about-us" className="Home2FilledGreenBtn cafe-btn">
                   {data.buttonText}
-                </a>
+                </Link>
               </div>
             </div>
           </div>
@@ -665,9 +665,9 @@ const HomeCafeSliderSection = () => {
             <div className="slide-btn-sec">
               {/* BUTTON */}
               <div className="slide-btn">
-                <a href="#" className="Home2FilledGreenBtn cafe-btn">
+                <Link to="/Contact" className="Home2FilledGreenBtn cafe-btn">
                   {data.buttonText}
-                </a>
+                </Link>
               </div>
 
               {/* CONTACT */}

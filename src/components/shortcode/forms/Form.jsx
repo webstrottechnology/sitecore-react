@@ -27,7 +27,7 @@ import {
   FiEyeOff,
 } from "react-icons/fi";
 import { FcGoogle } from "react-icons/fc";
-import Logo from "../../../assets/images/inner-pages/login-logo.png";
+import Logo from "../../../assets/images/sitecore_footer_logo.png";
 import { AboutBannerBreadCrumb } from "../breadcrumb/Breadcrumb";
 import sitecoreBg from "../../../assets/images/sitecoreBreadCrumb_bg_img.png";
 

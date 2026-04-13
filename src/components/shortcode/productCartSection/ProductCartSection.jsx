@@ -48,7 +48,7 @@ const ProductCartSection = () => {
                       })
                     }
                   >
-                    <a href={product.link}>
+                    <a href={product.link} className="Current_parent">
                       <img
                         src={product.img}
                         alt={product.title}
