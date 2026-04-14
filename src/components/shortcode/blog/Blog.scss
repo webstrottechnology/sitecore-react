@@ -1017,4 +1017,15 @@
         margin-top: 24px;
     }
 
+    .Sitecorehome_blog_wrapper .blog__container .blog__wrapper .blog__left .blog__contentBox .blog__meta .blog__date {
+        gap: 3px;
+    }
+
+    .Sitecorehome_blog_wrapper .blog__container .blog__wrapper .blog__left .blog__contentBox .blog__meta {
+
+    font-size: var(--fs16);
+    column-gap: 10px;
+    row-gap: 10px;
+}
+
 }

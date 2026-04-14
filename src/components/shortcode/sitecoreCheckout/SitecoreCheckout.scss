@@ -361,8 +361,90 @@
                         }
                     }
                 }
+
+
+            }
+
+            .commentBox {
+                .commentBoxInner {
+                    .commentFormGroup {
+                        .form-control {
+                            text-align: right;
+                        }
+                    }
+                }
             }
         }
+    }
+
+    .formOne-container-box input {
+        text-align: right;
+    }
+
+    .formFive-wrapper .formFive-login-card .login-left .form-box input {
+        text-align: right;
+    }
+
+    .form-seven__form input,
+    .form-seven__form textarea {
+        text-align: right;
+    }
+
+    .formFour-wrapper .formFour-container .login-form .checkbox-group .checkbox-label {
+        flex-direction: row-reverse;
+    }
+
+    .formEight-wrapper .form-group .form-textarea {
+        text-align: right;
+    }
+
+    .formEight-wrapper .form-group .form-input,
+    .formEight-wrapper .form-group .form-textarea {
+        text-align: right;
+    }
+
+    .FormNine-wrapper .contact-card .contact-left .input-group input,
+    .FormNine-wrapper .contact-card .contact-left .input-group textarea {
+        text-align: right;
+    }
+
+    .FormNine-wrapper .contact-card .contact-left p {
+        max-width: 100%;
+    }
+
+    .formten-wrapper .formten__container .formten__form form input,
+    .formten-wrapper .formten__container .formten__form form textarea {
+        text-align: right;
+    }
+
+    .formten-wrapper .formten__container .formten__form form .remember {
+        flex-direction: row-reverse;
+    }
+
+    .formten-wrapper .formten__container .formten__form form .flexBox {
+        width: 100%;
+    }
+
+    .formten-wrapper .formten__container .formten__form form {
+        align-items: flex-end;
+    }
+
+    .formten-wrapper .formten__container .formten__form form input[type='text'],
+    .formten-wrapper .formten__container .formten__form form textarea {
+        width: 100%;
+    }
+
+    .sitecore_lr_wrapper .auth_card .remember_row {
+        flex-direction: row-reverse;
+    }
+
+    .sitecore_lr_wrapper .auth_card .remember_row .custom_checkbox {
+        flex-direction: row-reverse;
+    }
+
+    .FourteencommentBox .commentBoxInner .commentFormGroup input,
+    .FourteencommentBox .commentBoxInner .commentFormGroup textarea {
+        text-align: end;
     }
 }
 

@@ -390,21 +390,26 @@
                 flex-direction: row-reverse;
                 margin-top: 20px;
             }
+
+            .blogTagsShare {
+                flex-direction: row-reverse;
+            }
         }
 
         .coment {
             .commentGroup {
                 .commentRight {
                     .commentTop {
-                        .commentShare{
-                                 left: 0;
-                                 right:inherit;
+                        .commentShare {
+                            left: 0;
+                            right: inherit;
                         }
                     }
                 }
             }
         }
     }
+
 }
 
 //  resposnive css start //
@@ -429,6 +434,7 @@
     .BlogSinglePagesSection .coment h2 {
         font-size: 33px;
         margin-bottom: 20px;
+        text-align: center;
     }
 
     .BlogSinglePagesSection .coment .commentGroup {

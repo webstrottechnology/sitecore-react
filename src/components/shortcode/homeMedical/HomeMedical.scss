@@ -10,14 +10,14 @@
 @use "../../../styles/mixins/mixins" as *;
 
 .medicalTopCategories {
-  padding: var(--p80);
+  padding: var(--p80) var(--p0);
 
   .medTopCategoriesInner {
     position: relative;
 
     .custom-nav {
       position: absolute;
-      top: 55%;
+      top: 50%;
       left: 0;
       width: 100%;
       transform: translateY(-50%);
@@ -479,7 +479,7 @@
   /* ✅ SLIDER BUTTONS */
   .slider-buttons {
     position: absolute;
-    top: 0;
+    top: 20px;
     right: 16px;
     display: flex;
     gap: 10px;
@@ -495,22 +495,19 @@
       justify-content: center;
       cursor: pointer;
       font-size: 20px;
-      transition: 0.3s;
-    }
-
-    .custom-prev {
+      transition: all 0.5s;
       color: orange;
       background: transparent;
-    }
 
-    .custom-next {
-      background: orange;
-      color: white;
-    }
+      &.swiper-button-disabled {
+        background: orange;
+        color: white;
+      }
 
-    .custom-prev:hover,
-    .custom-next:hover {
-      transform: scale(1.1);
+      &:hover {
+        background: orange;
+        color: white;
+      }
     }
   }
 
@@ -907,6 +904,7 @@
      RIGHT CONTENT
   =================================*/
   .testimonialsContent {
+    position: relative;
 
     /* HEADING */
     .testimonialsHeadingSlider {
@@ -924,6 +922,42 @@
         font-weight: var(--fw700);
         color: var(--temp1BlueColor);
         font-family: var(--roboto-font);
+      }
+    }
+
+    /* NAV BUTTONS */
+    .customNav {
+      z-index: 11;
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      display: flex;
+      align-items: center;
+      gap: var(--p14);
+
+      button {
+        border: none;
+        background: transparent;
+        display: flex;
+        align-items: center;
+        gap: var(--p6);
+        cursor: pointer;
+        transition: var(--transition2);
+
+        span {
+          color: var(--orange-color);
+          font-weight: var(--fw600);
+          font-family: var(--roboto-font);
+        }
+
+        svg {
+          fill: var(--orange-color);
+          font-size: var(--fs22);
+        }
+
+        &:hover {
+          opacity: 0.7;
+        }
       }
     }
 
@@ -949,6 +983,8 @@
         .testimonialsSliderOuter {
           position: relative;
           padding: var(--p40);
+          box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+          margin: var(--m6);
           min-height: 250px;
 
           &::after {
@@ -1045,37 +1081,7 @@
             }
           }
 
-          /* NAV BUTTONS */
-          .customNav {
-            display: flex;
-            align-items: center;
-            gap: var(--p14);
 
-            button {
-              border: none;
-              background: transparent;
-              display: flex;
-              align-items: center;
-              gap: var(--p6);
-              cursor: pointer;
-              transition: var(--transition2);
-
-              span {
-                color: var(--orange-color);
-                font-weight: var(--fw600);
-                font-family: var(--roboto-font);
-              }
-
-              svg {
-                fill: var(--orange-color);
-                font-size: var(--fs22);
-              }
-
-              &:hover {
-                opacity: 0.7;
-              }
-            }
-          }
         }
       }
     }
@@ -1425,5 +1431,15 @@
   .medicalTopCategories .swiper-button-next {
     width: 35px;
     height: 35px;
+  }
+}
+
+@include responsive(xs) {
+  .MedicalAboutUs .aboutUsContent .emergencyMedical {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 20px;
+    text-align: center;
   }
 }

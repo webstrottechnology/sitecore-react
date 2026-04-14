@@ -1757,6 +1757,7 @@
     box-shadow: 0px 7px 32px rgba(0, 0, 0, 0.04);
     border-radius: var(--br6);
     margin-top: var(--m30);
+    margin-bottom: var(--m48);
 
     .commentBoxInner {
         max-width: 1000px;
@@ -1826,11 +1827,37 @@
 //  RTL Version css Start  //
 
 [dir="rtl"] {
-    .appointment_section .appointment_wrapper .left {
-        display: flex;
-        flex-direction: column;
-        align-items: end;
-        margin-right: 20px;
+    .appointment_section {
+        .appointment_wrapper {
+            .left {
+                display: flex;
+                flex-direction: column;
+                align-items: end;
+                margin-right: 20px;
+
+                h2 {
+                    text-align: right;
+                }
+
+                p {
+                    text-align: right;
+                }
+
+
+                .contact_card {
+                    .item {
+                        display: flex;
+                        flex-direction: row-reverse;
+                        align-items: center;
+
+                        .text-box {
+                            width: 70%;
+                        }
+                    }
+                }
+            }
+        }
+
     }
 
     .FormNine-wrapper {
@@ -1952,7 +1979,7 @@
 
 @include responsive(lg-md) {
     .appointment_section .appointment_wrapper {
-        gap: 30px;
+        gap: 12px;
     }
 
     .appointment_section .appointment_wrapper .left .contact_card {
@@ -1974,9 +2001,18 @@
         gap: 20px;
     }
 
+    [dir=rtl] .appointment_section .appointment_wrapper .left {
+        margin-right: 12px;
+    }
+
 }
 
 @include responsive(tablet-sm) {
+
+    [dir=rtl] .appointment_section .appointment_wrapper .left {
+        margin-right: 0px;
+    }
+
     .formten__container {
         grid-template-columns: 1fr;
         padding: 30px 20px;

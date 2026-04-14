@@ -1911,14 +1911,14 @@
     }
 
     .banner11 {
-        padding: 140px 0 40px;
+        padding: 260px 0 40px;
 
         .slider-caption h1 {
             font-size: 46px;
         }
 
         .slider-img {
-            top: 100px;
+            top: 60px;
         }
     }
 
@@ -2289,6 +2289,10 @@
         .slider-caption h1 {
             font-size: var(--fs34);
         }
+    }
+
+    .banner11 .order-strip-wrapper {
+        border-radius: 30px;
     }
 }
 

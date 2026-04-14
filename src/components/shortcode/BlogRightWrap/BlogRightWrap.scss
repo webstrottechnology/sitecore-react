@@ -220,12 +220,19 @@
             .latestNewsCardInnerContent {
                 .latestNewsList {
                     flex-direction: row-reverse;
-                     margin-top: 20px;
+                    margin-top: 20px;
+                }
+            }
+        }
+
+        .ipQuoteBlog {
+            .ipQuote {
+                .ipAwesomeAuthor {
+                   flex-direction: row-reverse;
                 }
             }
         }
     }
-
 }
 
 

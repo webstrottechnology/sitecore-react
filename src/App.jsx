@@ -36,6 +36,7 @@ import HomeCafe from "./components/pages/HomeCafe";
 import CartProvider from "./components/shortcode/CartContextWrap/CartContext";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import ScrollToTop from "./ScrollToTop";
 
 const App = () => {
   const location = useLocation();
@@ -59,6 +60,7 @@ const App = () => {
   }, []);
   return (
     <CartProvider>
+       <ScrollToTop />   {/* YE ADD KARNA THA */}
       {/* GLOBAL HEADER */}
       {!shouldHideLayout && (
         <Header_05 direction={direction} setDirection={setDirection} />

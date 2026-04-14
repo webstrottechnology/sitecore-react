@@ -1943,6 +1943,25 @@
 
 @include responsive(tablet-sm) {
 
+    .cafe-about-main-wrapper .cafe-about-wrapper .about-text .work-experience-wrapper .work-experience p {
+        text-align: center;
+    }
+
+    .cafe-about-main-wrapper .cafe-about-wrapper .about-text .work-experience-wrapper .work-experience h2 {
+        text-align: center;
+    }
+
+    .cafe-slider-main-wrapper .cafe-slider-caption-wrapper .cafe-left {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .cafe-slider-main-wrapper .cafe-slider-caption-wrapper .cafe-left .slide-btn-sec {
+        justify-content: center;
+    }
+
     [dir="rtl"] {
         .cafe-slider-main-wrapper:before {
             display: none;
@@ -1950,6 +1969,10 @@
 
         .cafe-slider-main-wrapper .cafe-slider-caption-wrapper {
             flex-direction: column;
+        }
+
+        .cafe-about-main-wrapper .cafe-about-wrapper .about-text .work-experience-wrapper .work-experience p {
+            text-align: right;
         }
     }
 
@@ -2232,6 +2255,32 @@
 
 
 @include responsive(mobile-sm) {
+
+    .cafe-our-chefs-main-wrapper .cafe-team-slider-wrapper .slick-prev svg,
+    .cafe-our-chefs-main-wrapper .cafe-team-slider-wrapper .slick-next svg {
+        width: 16px;
+        height: 16px;
+    }
+
+    .cafe-our-chefs-main-wrapper .cafe-team-slider-wrapper .slick-prev,
+    .cafe-our-chefs-main-wrapper .cafe-team-slider-wrapper .slick-next {
+        width: 40px;
+        height: 40px;
+    }
+
+    .cafe-brand-main-wrapper .brand-main-wrapper {
+        flex-direction: column;
+        gap: 22px;
+    }
+
+    .cafe-brand-main-wrapper .brand-main-wrapper .brand-img {
+        width: 100%;
+    }
+
+    .cafe-brand-main-wrapper .brand-main-wrapper .brand-img img {
+        max-width: 180px;
+    }
+
     .cafe-slider-main-wrapper:before {
         display: none;
     }
@@ -2273,7 +2322,7 @@
 
     .cafe-our-chefs-main-wrapper .cafe-team-slider-wrapper .slick-prev {
         top: -125px;
-        right: 80px;
+        right: 70px;
     }
 
     .cafe-our-chefs-main-wrapper .cafe-team-slider-wrapper .slick-next {
@@ -2306,6 +2355,10 @@
 }
 
 @include responsive(xs) {
+    .cafe-offer-main-wrapper .ArrowBox button {
+        font-size: var(--fs20);
+    }
+
     .cafe-about-main-wrapper .cafe-about-wrapper .about-img .inner-img {
         flex-wrap: wrap;
     }
@@ -2391,6 +2444,18 @@
     .cafe-breakfast-main-wrapper .breakfast-wrapper .breakfast-img .img-back {
         height: 295px;
     }
+
+    .cafe-our-menu-main-wrapper .cafe-menu-tab-wrapper .tab-content .product-chart-wrpapper .product-list h4 a {
+        font-size: 20px;
+    }
+
+    .cafe-our-menu-main-wrapper .cafe-menu-tab-wrapper .tab-content .product-chart-wrpapper .product-list p small {
+        font-size: var(--fs14);
+    }
+
+    .cafe-our-menu-main-wrapper .cafe-menu-tab-wrapper .tab-content .product-chart-wrpapper .product-list p span {
+        font-size: 18px;
+    }
 }
 
 
@@ -2422,4 +2487,6 @@
     .cafe-slider-main-wrapper .cafe-slider-caption-wrapper .cafe-left h1 {
         font-size: 32px;
     }
+
+
 }
