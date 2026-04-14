@@ -83,6 +83,15 @@
     .innerPageStayConnected .row .innerPageStayConnectedContant .commHeading1 p {
         font-size: var(--fs14);
     }
+
+    .innerPageStayConnected .row .innerPageStayConnectedContant .commHeading1 {
+        align-items: center;
+    }
+
+    .innerPageStayConnected .row .innerPageStayConnectedContant .commHeading1 h4 {
+        text-align: center;
+    }
+
 }
 
 @include responsive(mobile-sm) {

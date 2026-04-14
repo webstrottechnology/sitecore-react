@@ -17,6 +17,7 @@ import {
   connectBusinessData,
   portfolioDetails,
 } from "./featuresData";
+import { FaArrowRightLong } from "react-icons/fa6";
 import featureImg from "../../../assets/images/feature-img1.jpg";
 import featureImg2 from "../../../assets/images/feature-img2.jpg";
 import featureImg3 from "../../../assets/images/feature-img3.jpg";
@@ -629,7 +630,7 @@ const ConnectBusiness = () => {
               <ul>
                 {connectBusinessData.listLeft.map((item, index) => (
                   <li key={index}>
-                    → <span>{item}</span>
+                    <FaArrowRightLong /> <span>{item}</span>
                   </li>
                 ))}
               </ul>
@@ -637,7 +638,8 @@ const ConnectBusiness = () => {
               <ul>
                 {connectBusinessData.listRight.map((item, index) => (
                   <li key={index}>
-                    → <span>{item}</span>
+                    <FaArrowRightLong />
+                    <span>{item}</span>
                   </li>
                 ))}
               </ul>

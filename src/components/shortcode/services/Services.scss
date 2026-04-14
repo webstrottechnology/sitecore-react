@@ -526,7 +526,7 @@
       font-size: var(--fs16);
       line-height: 1.8;
       color: var(--gray-color);
-      margin-bottom: var(--p25);
+      margin-bottom: var(--p26);
     }
   }
 
@@ -576,8 +576,7 @@
       .services_list {
         .services_Card {
           a {
-            direction: rtl;
-            flex-direction: row-reverse; // 🔥 icon right side
+            flex-direction: row-reverse; 
             text-align: right;
             justify-content: flex-end;
           }

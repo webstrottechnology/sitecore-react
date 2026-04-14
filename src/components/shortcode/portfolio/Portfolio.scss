@@ -410,8 +410,6 @@
 
 }
 
-
-
 @keyframes zoomIn {
   from {
     transform: scale(0.8);
@@ -552,6 +550,16 @@
 
 }
 
+
+[dir="rtl"] {
+  .portfolio-img-gallery-wrapper4 ul.nav {
+    flex-direction: row-reverse;
+  }
+
+  .portfolio-img-gallery-wrapper3 .portfolio-menu {
+    flex-direction: row-reverse;
+  }
+}
 
 // responsive css start 
 

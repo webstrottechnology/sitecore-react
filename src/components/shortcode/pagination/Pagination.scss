@@ -81,8 +81,8 @@
     }
   }
 
-  &.Pagination_mr_wrapper{
-     padding: var(--p20) var(--p0) var(--p20) var(--p0);
+  &.Pagination_mr_wrapper {
+    padding: var(--p20) var(--p0) var(--p20) var(--p0);
   }
 }
 
@@ -111,21 +111,21 @@
   }
 }
 
+@include responsive(xs) {
+  .pagination-wrapper .pagination-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .pagination-wrapper .pagination-container {
+    border-radius: var(--br20);
+  }
+}
+
+
 
 @include responsive(xxs) {
-
-  .pagination-wrapper .pagination-container .pages .page {
-    width: 32px;
-    height: 32px;
-    font-size: 10px;
-  }
-
-  .pagination-wrapper .pagination-container .nav-btn {
-    width: 40px;
-    height: 40px;
-    font-size: 14px;
-  }
-
   .pagination-wrapper .pagination-container {
     padding: var(--p10) var(--p14);
   }

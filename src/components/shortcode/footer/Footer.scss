@@ -1941,6 +1941,12 @@
                     }
                 }
             }
+
+            .footerInnerCol2 {
+                .socialMediaIconRow {
+                    align-items: end;
+                }
+            }
         }
     }
 
@@ -2001,6 +2007,13 @@
     .SiteCore_footer_Wrapper .footerInner .footerInnerCol2 .socialMediaIconRow .socialMediaIcon .nav {
         align-items: center;
         justify-content: center;
+    }
+
+
+    [dir="rtl"] {
+        .SiteCore_footer_Wrapper .footerInner .footerInnerCol2 .socialMediaIconRow .helpSupport {
+            text-align: right;
+        }
     }
 
 }

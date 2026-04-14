@@ -411,27 +411,22 @@ const MedicalTestimonials = () => {
                               <span>{item.role}</span>
                             </div>
                           </div>
-
-                          <div className="customNav">
-                            <button
-                              onClick={() => swiperRef.current.slidePrev()}
-                            >
-                             <FaArrowLeftLong />
-                              <span>Previous</span>
-                            </button>
-
-                            <button
-                              onClick={() => swiperRef.current.slideNext()}
-                            >
-                              <span>Next</span>
-                              <FaArrowRightLong />
-                            </button>
-                          </div>
                         </div>
                       </div>
                     </div>
                   </SwiperSlide>
                 ))}
+                <div className="customNav">
+                  <button onClick={() => swiperRef.current.slidePrev()}>
+                    <FaArrowLeftLong />
+                    <span>Previous</span>
+                  </button>
+
+                  <button onClick={() => swiperRef.current.slideNext()}>
+                    <span>Next</span>
+                    <FaArrowRightLong />
+                  </button>
+                </div>
               </Swiper>
             </div>
           </div>

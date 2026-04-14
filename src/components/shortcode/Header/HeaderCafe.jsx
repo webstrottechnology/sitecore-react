@@ -247,7 +247,7 @@ const HeaderCafe = ({ direction, setDirection }) => {
               >
                 <ul>
                   <li>
-                    <Link to="/home-corporate">Home Corporate</Link>
+                    <Link to="/">Home Corporate</Link>
                   </li>
                   <li>
                     <Link to="/home-medical">Home Medical</Link>

@@ -632,6 +632,18 @@
   }
 }
 
+
+[dir="rtl"] {
+  .about-banner-breadcrumb {
+    transform: scaleX(-1);
+
+    .banner-content {
+      transform: scaleX(-1);
+      align-items: end;
+    }
+  }
+}
+
 // responsive css start //
 
 

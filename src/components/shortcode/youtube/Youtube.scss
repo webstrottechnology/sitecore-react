@@ -191,6 +191,14 @@
     .hero-container .hero-content h1 {
         font-size: var(--fs32);
     }
+
+    .Hero_main_section .hero-container {
+        height: 80vh;
+    }
+
+    .hero-container .hero-content {
+        padding-inline: 4px;
+    }
 }
 
 @include responsive(mobile-sm) {

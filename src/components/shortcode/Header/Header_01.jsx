@@ -1,4 +1,5 @@
 import React, { useState, useRef, useEffect } from "react";
+import { Link } from "react-router-dom";
 import "./Header_01.scss";
 import {
   FiSearch,
@@ -13,6 +14,7 @@ import {
 } from "react-icons/fi";
 import img1 from "../../../assets/images/portfolio/12.jpg";
 import img2 from "../../../assets/images/portfolio/13.jpg";
+import Logo from "../../../assets/images/home-01/coprologo2.png";
 import { MdOutlinePhoneInTalk } from "react-icons/md";
 import { CiMail } from "react-icons/ci";
 
@@ -31,7 +33,6 @@ const Header_01 = () => {
 
   const [langOpen, setLangOpen] = useState(false);
   const [cityOpen, setCityOpen] = useState(false);
-
 
   // ================= CART STATE =================
 
@@ -52,15 +53,12 @@ const Header_01 = () => {
     },
   ]);
 
-
   // Increase Qty
   const increaseQty = (id) => {
     setCartItems((prev) =>
       prev.map((item) =>
-        item.id === id
-          ? { ...item, qty: item.qty + 1 }
-          : item
-      )
+        item.id === id ? { ...item, qty: item.qty + 1 } : item,
+      ),
     );
   };
 
@@ -68,26 +66,21 @@ const Header_01 = () => {
   const decreaseQty = (id) => {
     setCartItems((prev) =>
       prev.map((item) =>
-        item.id === id && item.qty > 1
-          ? { ...item, qty: item.qty - 1 }
-          : item
-      )
+        item.id === id && item.qty > 1 ? { ...item, qty: item.qty - 1 } : item,
+      ),
     );
   };
 
   // Subtotal
   const subtotal = cartItems.reduce(
     (total, item) => total + item.price * item.qty,
-    0
+    0,
   );
-
-
 
   const searchRef = useRef(null);
   const userRef = useRef(null);
   const langRef = useRef(null);
   const cityRef = useRef(null);
-
 
   const toggle = (name) => {
     setActive(active === name ? null : name);
@@ -112,11 +105,10 @@ const Header_01 = () => {
     return () => document.removeEventListener("mousedown", close);
   }, []);
 
-
   return (
     <>
       {/* ================= TOP BAR ================= */}
-        <AboutBannerBreadCrumb title="Header" bgImage={sitecoreBg} />
+      <AboutBannerBreadCrumb title="Header" bgImage={sitecoreBg} />
 
       <div className="header_01_section">
         <div className="top-bar">
@@ -130,8 +122,11 @@ const Header_01 = () => {
                 onClick={() => {
                   setLangOpen(!langOpen);
                   setCityOpen(false);
-                }}>
-                <span>{language} <FiChevronDown /></span>
+                }}
+              >
+                <span>
+                  {language} <FiChevronDown />
+                </span>
                 {langOpen && (
                   <div className="top-menu">
                     <p onClick={() => setLanguage("English")}>English</p>
@@ -149,9 +144,11 @@ const Header_01 = () => {
                 onClick={() => {
                   setCityOpen(!cityOpen);
                   setLangOpen(false);
-                }}>
-
-                <span>{city} <FiChevronDown /></span>
+                }}
+              >
+                <span>
+                  {city} <FiChevronDown />
+                </span>
                 {cityOpen && (
                   <div className="top-menu">
                     <p onClick={() => setCity("Delhi")}>EUR</p>
@@ -174,7 +171,12 @@ const Header_01 = () => {
 
         <div className="header_01">
           <div className="header-inner container">
-            <div className="logo">Sitecore</div>
+            <div className="logo">
+             <Link to="/">
+              {" "}
+              <img src={Logo} alt="" />{" "}
+            </Link>
+            </div>
             {/* Desktop Menu */}
             <nav className="navbar-list">
               <ul>
@@ -276,7 +278,7 @@ const Header_01 = () => {
                   </div>
                 </li>
 
-                <li className="pages-dropdown" >
+                <li className="pages-dropdown">
                   <a href="#">Shop</a>
                   <FiChevronDown />
 
@@ -288,7 +290,9 @@ const Header_01 = () => {
                     <a href="#">My Account</a>
                   </div>
                 </li>
-                <li><a href="#">Collection</a></li>
+                <li>
+                  <a href="#">Collection</a>
+                </li>
                 <li className="pages-dropdown">
                   <a href="#">Pages</a>
                   <FiChevronDown />
@@ -302,7 +306,7 @@ const Header_01 = () => {
                   </div>
                 </li>
 
-                <li className="pages-dropdown" >
+                <li className="pages-dropdown">
                   <a href="#">Blog</a>
                   <FiChevronDown />
 
@@ -314,7 +318,9 @@ const Header_01 = () => {
                     <a href="#">My Account</a>
                   </div>
                 </li>
-                <li><a href="#">Contact</a></li>
+                <li>
+                  <a href="#">Contact</a>
+                </li>
               </ul>
             </nav>
 
@@ -325,27 +331,22 @@ const Header_01 = () => {
                 <FiSearch onClick={() => setSearchOpen(!searchOpen)} />
 
                 {searchOpen && (
-                  <div className={`search-overlay2 ${searchOpen ? "open" : ""}`}>
-
+                  <div
+                    className={`search-overlay2 ${searchOpen ? "open" : ""}`}
+                  >
                     <div className="search-box">
-
                       <FiX onClick={() => setSearchOpen(false)} />
 
                       <input type="text" placeholder="Search products..." />
 
                       <button>Search</button>
-
                     </div>
-
                   </div>
-
                 )}
-
               </div>
 
               {/* User */}
               <div className="icon-btn user-icon">
-
                 <FiUser onClick={() => setUserOpen(!userOpen)} />
 
                 <div className={`user-menu ${userOpen ? "show" : ""}`}>
@@ -353,28 +354,19 @@ const Header_01 = () => {
                   <a href="#">Register</a>
                   <a href="#">My Account</a>
                 </div>
-
               </div>
-
 
               <div className="icon-badge">
                 <FiHeart />
                 <span>0</span>
               </div>
 
-              <div
-                className="icon-badge"
-                onClick={() => setCartOpen(true)}
-              >
+              <div className="icon-badge" onClick={() => setCartOpen(true)}>
                 <FiShoppingBag />
                 <span>2</span>
               </div>
 
-
-              <FiMenu
-                className="menu-btn"
-                onClick={() => setMenuOpen(true)}
-              />
+              <FiMenu className="menu-btn" onClick={() => setMenuOpen(true)} />
             </div>
           </div>
 
@@ -459,8 +451,13 @@ const Header_01 = () => {
               </div>
 
               <div className="contact">
-                <p><MdOutlinePhoneInTalk /> (1245) 2456 012</p>
-                <p><CiMail />info@yourdomain.com</p>
+                <p>
+                  <MdOutlinePhoneInTalk /> (1245) 2456 012
+                </p>
+                <p>
+                  <CiMail />
+                  info@yourdomain.com
+                </p>
               </div>
             </div>
           </div>
@@ -476,12 +473,9 @@ const Header_01 = () => {
             </div>
 
             <div className="cart-body">
-
               {cartItems.map((item) => (
-
                 <div className="cart-item" key={item.id}>
-
-                  <img src={item.img} alt="" className="img-box"/>
+                  <img src={item.img} alt="" className="img-box" />
 
                   <div className="text-box">
                     <h5>{item.name}</h5>
@@ -489,21 +483,11 @@ const Header_01 = () => {
                   </div>
 
                   <div className="qty">
-
-                    <button
-                      onClick={() => decreaseQty(item.id)}
-                    >
-                      -
-                    </button>
+                    <button onClick={() => decreaseQty(item.id)}>-</button>
 
                     <span>{item.qty}</span>
 
-                    <button
-                      onClick={() => increaseQty(item.id)}
-                    >
-                      +
-                    </button>
-
+                    <button onClick={() => increaseQty(item.id)}>+</button>
                   </div>
                 </div>
               ))}
@@ -513,15 +497,12 @@ const Header_01 = () => {
               <div className="total">
                 <span>Subtotal</span>
                 <span>${subtotal.toFixed(2)}</span>
-
               </div>
 
               <button>View Cart</button>
               <button className="checkout">Checkout</button>
             </div>
-
           </div>
-
         </div>
       </div>
     </>
@@ -529,4 +510,3 @@ const Header_01 = () => {
 };
 
 export default Header_01;
-
