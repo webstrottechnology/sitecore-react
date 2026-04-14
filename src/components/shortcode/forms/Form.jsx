@@ -624,7 +624,7 @@ const FormEleven = () => {
               </div>
             </div>
 
-            <button className="main_btn">Reset Password</button>
+            <button className="filledroundedbtn md-btn">Reset Password</button>
 
             <span className="link" onClick={() => setForgot(false)}>
               Back to Login
@@ -752,7 +752,7 @@ const FormEleven = () => {
                   </div>
                 </div>
 
-                <button className="main_btn">SIGN UP</button>
+                <button className="filledroundedbtn md-btn">SIGN UP</button>
               </>
             )}
 
