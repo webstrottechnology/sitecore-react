@@ -307,12 +307,18 @@ const ProfessionalHealthVideo = () => {
 
       {/* Modal */}
       {open && (
-        <div className="videoModal">
-          <div className="videoModalContent">
-            <span className="closeBtn" onClick={() => setOpen(false)}>
-              ✕
-            </span>
-
+        <div
+          className="videoModal"
+          onClick={() => setOpen(false)} // 👈 OUTSIDE CLICK
+        >
+          {/* CLOSE BUTTON */}
+          <span className="closeBtn" onClick={() => setOpen(false)}>
+            ✕
+          </span>
+          <div
+            className="videoModalContent"
+            onClick={(e) => e.stopPropagation()} // 👈 VIDEO CLICK STOP
+          >
             <iframe
               width="100%"
               height="450"

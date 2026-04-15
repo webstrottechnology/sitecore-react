@@ -43,20 +43,13 @@
     }
 
     button {
-        background-color: var(--blue-color);
-        color: var(--white-color);
-        font-size: var(--fs12);
-        padding: var(--p12) var(--p48);
-        border-radius: var(--br8);
-        border: 1px solid transparent;
-        font-weight: var(--fw600);
         letter-spacing: 0.5px;
         cursor: pointer;
         text-transform: uppercase;
 
         &.hidden {
-            background: transparent;
             border-color: var(--white-color);
+            color: var(--white-color);
         }
     }
 
@@ -68,6 +61,7 @@
         justify-content: center;
         padding: 0 var(--p40);
         height: 100%;
+        gap: 6px;
     }
 
     input {
@@ -132,11 +126,11 @@
             justify-content: center;
             margin: var(--m0) var(--m4);
             font-size: var(--fs18);
-            color: var(--blue-color);
+            color: var(--green-color02);
             transition: 0.3s;
 
             &:hover {
-                color: var(--blue-color);
+                color: var(--green-color02);
             }
         }
     }
@@ -156,7 +150,7 @@
     }
 
     .toggle {
-        background: linear-gradient(to right, #5c6bc0, var(--blue-color));
+        background: linear-gradient(to right, #3debc3, var(--green-color02));
         color: var(--white-color);
         position: relative;
         left: -100%;
@@ -254,23 +248,9 @@
 
                 button {
                     width: var(--width50);
-                    padding: var(--p10);
-                    background-color: var(--bg-color);
-                    font-family: var(--heading-font);
-                    font-size: var(--fs16);
-                    font-weight: var(--fw600);
-                    color: var(--black-color);
                     border: none;
                     cursor: pointer;
-                    border-radius: var(--br10) var(--br10) var(--br0) var(--br0);
-
-                    &.active {
-                        background-color: var(--blue-color);
-                        color: var(--white-color);
-                    }
                 }
-
-
             }
 
             .formTwo-box {
@@ -296,16 +276,11 @@
                 }
 
                 button {
-                    padding: var(--p10);
-                    background-color: var(--blue-color);
-                    color: var(--white-color);
-                    border: none;
-                    border-radius: var(--br6);
                     cursor: pointer;
                 }
 
                 a {
-                    color: var(--blue-color);
+                    color: var(--temSitCoreBlueColor);
                     text-decoration: none;
                     margin-bottom: var(--m20);
                     text-align: right;
@@ -347,7 +322,7 @@
 
 
         .text {
-            color: var(--primary-color);
+            color: var(--orange-color);
             font-size: var(--fs40);
             font-family: var(--heading-font);
             font-weight: var(--fw600);
@@ -356,7 +331,7 @@
         .underline {
             width: 61px;
             height: 6px;
-            background-color: var(--primary-color);
+            background-color: var(--orange-color);
             border-radius: var(--br8)
         }
     }
@@ -404,7 +379,7 @@
         align-items: start;
 
         a {
-            color: var(--primary-color);
+            color: var(--orange-color);
             cursor: pointer;
         }
     }
@@ -417,26 +392,11 @@
         margin: var(--m60) var(--m0) var(--m0) var(--m0);
 
         .submit {
-            display: flex;
-            justify-content: center;
-            align-items: center;
             width: 220px;
             height: 59px;
-            color: var(--white-color);
-            background-color: var(--primary-color);
-            border-radius: var(--br50);
-            font-size: var(--fs18);
-            font-weight: var(--fw600);
-            font-family: var(--heading-font);
             cursor: pointer;
         }
-
-        .gray {
-            background-color: var(--bg-color);
-            color: var(--gray-color);
-        }
     }
-
 }
 
 // +++++++++++++++ Form three css end ++++++++++++++
@@ -489,7 +449,6 @@
                     padding: var(--p10) var(--p12);
                     margin-top: var(--m6);
                     border: 1px solid var(--gray-color);
-                    ;
                     border-radius: var(--br8);
                     font-size: var(--fs14);
                     color: var(--gray-color);
@@ -497,7 +456,7 @@
 
                     &:focus {
                         outline: none;
-                        border-color: var(--primary-color);
+                        border-color: var(--temp1BlueColor);
                     }
                 }
 
@@ -509,7 +468,7 @@
 
                 .forgot-link {
                     font-size: var(--fs14);
-                    color: var(--primary-color);
+                    color: var(--temp1BlueColor);
                     text-decoration: none;
 
                 }
@@ -534,21 +493,10 @@
 
             .submit-btn {
                 width: var(--width100);
-                padding: var(--p12);
                 margin-top: var(--m10);
-                border: 1px solid transparent;
-                border-radius: var(--br8);
-                background: var(--primary-color);
-                color: var(--white-color);
-                font-weight: var(--fw600);
+                background-color: transparent;
                 cursor: pointer;
                 transition: all 0.5s;
-
-                &:hover {
-                    background: var(--white-color);
-                    border-color: var(--primary-color);
-                    color: var(--primary-color)
-                }
             }
 
         }
@@ -594,7 +542,7 @@
             font-size: var(--fs14);
 
             a {
-                color: var(--primary-color);
+                color: var(--temp1BlueColor);
                 font-weight: var(--fw600);
                 text-decoration: none;
             }
@@ -628,19 +576,19 @@
             h2 {
                 font-size: var(--fs28);
                 margin-bottom: var(--m10);
-                color: var(--black-color);
+                color: var(--green-color02);
             }
 
             p {
                 font-size: var(--fs14);
-                color: var(--gray-color);
+                color: var(--green-color02);
                 margin-bottom: var(--m26);
             }
 
             .google-btn {
                 width: var(--width100);
                 padding: var(--p10);
-                border: 1px solid var(--gray-color);
+                border: 1px solid var(--green-color02);
                 ;
                 background: transparent;
                 border-radius: var(--br8);
@@ -649,6 +597,7 @@
                 justify-content: center;
                 gap: 10px;
                 cursor: pointer;
+                color: var(--green-color02);
                 margin-bottom: var(--m26);
                 font-size: var(--fs18);
                 font-family: var(--heading-font);
@@ -659,7 +608,8 @@
                 }
 
                 &:hover {
-                    background: var(--gray-color);
+                    background: var(--green-color02);
+                    color: var(--white-color);
                 }
             }
 
@@ -668,42 +618,33 @@
                     font-size: var(--fs16);
                     font-family: var(--heading-font);
                     font-weight: var(--fw600);
-                    color: var(--gray-color);
+                    color: var(--green-color02);
                 }
 
                 input {
                     width: 100%;
                     padding: var(--p10);
                     margin: var(--m6) var(--m0) var(--m18);
-                    border: 1px solid var(--gray-color);
-                    ;
+                    border: 1px solid var(--green-color02);
                     border-radius: var(--br8);
                     font-size: var(--fs14);
                     font-family: var(--heading-font);
                     font-weight: var(--fw400);
-                    color: var(--gray-color);
+                    color: var(--green-color02);
+
+                    &::placeholder {
+                        color: var(--green-color02);
+                    }
 
                     &:focus {
                         outline: none;
-                        border-color: var(--primary-color);
+                        border-color: var(--green-color02);
                     }
                 }
 
                 .login-btn {
                     width: var(--width100);
-                    padding: var(--p12);
-                    background: var(--primary-color);
-                    border: none;
-                    color: var(--white-color);
-                    border-radius: var(--br8);
-                    font-weight: var(--fw600);
-                    font-size: var(--fs16);
-                    font-family: var(--heading-font);
                     cursor: pointer;
-
-                    &:hover {
-                        background: var(--primary-color);
-                    }
                 }
             }
 
@@ -713,7 +654,7 @@
                 font-size: var(--fs14);
                 font-family: var(--heading-font);
                 font-weight: var(--fw400);
-                color: var(--gray-color);
+                color: var(--green-color02);
             }
         }
 
@@ -954,17 +895,7 @@
     .form-submit {
         width: 100%;
         margin-top: var(--m24);
-        background-color: var(--blue-color);
-        color: var(--white-color);
-        padding: var(--p12);
-        border-radius: var(--br6);
-        border: none;
         cursor: pointer;
-        transition: 0.3s;
-
-        &:hover {
-            background-color: var(--blue-color);
-        }
     }
 }
 
@@ -996,7 +927,7 @@
             top: 0;
             width: 150px;
             height: 100%;
-            background: linear-gradient(to bottom, var(--blue-color), #2575fc);
+            background: var(--temSitCoreBlueColor);
         }
 
         .contact-left {
@@ -1038,25 +969,15 @@
                 }
 
                 textarea:focus {
-                    border-color: var(--blue-color);
+                    border-color: var(--temSitCoreBlueColor);
                 }
             }
 
             button {
                 width: 220px;
-                background: linear-gradient(to right, #2575fc, var(--blue-color));
-                border: none;
-                color: var(--white-color);
-                padding: var(--p12) var(--p0);
-                border-radius: var(--p30);
                 cursor: pointer;
-                font-size: var(--fs14);
                 letter-spacing: 1px;
                 transition: 0.3s;
-
-                &::hover {
-                    opacity: 0.85;
-                }
             }
 
         }
@@ -1091,7 +1012,7 @@
                     font-size: var(--fs14);
 
                     svg {
-                        color: var(--blue-color);
+                        color: var(--temSitCoreBlueColor);
                         margin-top: var(--m4);
                     }
                 }
@@ -1248,22 +1169,7 @@
                 }
 
                 button {
-                    width: 180px;
-                    background: linear-gradient(135deg, var(--blue-color), #2575fc);
-                    color: var(--white-color);
-                    border: none;
-                    padding: var(--p12) var(--p0);
-                    border-radius: 8px;
                     cursor: pointer;
-                    font-size: var(--fs14);
-                    font-weight: var(--fw600);
-                    letter-spacing: 0.5px;
-                    transition: 0.3s;
-
-                    &:hover {
-                        opacity: 0.9;
-                        transform: translateY(-2px);
-                    }
                 }
             }
         }
@@ -1733,13 +1639,6 @@
             }
 
             button {
-
-                background: var(--orange-color);
-                border: none;
-                padding: var(--p16) var(--p30);
-                color: var(--white-color);
-                font-weight: bold;
-                border-radius: var(--br30);
                 cursor: pointer;
             }
         }
@@ -1959,6 +1858,27 @@
             }
         }
     }
+
+    .formFour-wrapper .formFour-container .login-form .label-row {
+        flex-direction: row-reverse;
+    }
+
+    .form-seven__info .info-item {
+        flex-direction: row-reverse;
+    }
+
+    .FormNine-wrapper .contact-card .contact-right .info-box .info-item {
+        flex-direction: row-reverse;
+    }
+
+    .contact-section .contact-wrapper .contact-left .contact-card {
+        display: flex;
+        flex-direction: row-reverse;
+    }
+
+    .contact-section .contact-wrapper .contact-left .contact-card .info {
+      width: 70%;
+    }
 }
 
 // resposnsive css start 
@@ -2122,6 +2042,7 @@
 
     .form-seven__right h3 {
         font-size: var(--fs32);
+        text-align: center;
     }
 }
 
@@ -2198,6 +2119,14 @@
 
     .FourteencommentBox {
         padding: 20px 20px;
+    }
+
+    .form-seven__left {
+        padding: var(--p40) var(--p20);
+    }
+
+    .form-seven__right h3 {
+        font-size: var(--fs26);
     }
 }
 
@@ -2312,5 +2241,9 @@
 
     .FourteencommentBox {
         padding: 16px 16px;
+    }
+
+    .form-seven__info {
+        padding: var(--p18);
     }
 }

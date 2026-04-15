@@ -242,7 +242,7 @@
 
 
             &.active {
-                color: var(--primary-color);
+                color: var(--green-color02);
 
                 &::after {
                     content: "";
@@ -251,7 +251,7 @@
                     bottom: 0;
                     width: var(--width100);
                     height: 3px;
-                    background-color: var(--primary-color);
+                    background-color: var(--green-color02);
                     border-radius: var(--br10);
                 }
             }
@@ -291,12 +291,6 @@
             }
 
             .learn_more_btn {
-                padding: var(--p12) var(--p28);
-                border-radius: var(--br50);
-                border: none;
-                background: var(--primary-color);
-                color: var(--white-color);
-                font-size: var(--fs20);
                 cursor: pointer;
             }
 
@@ -652,12 +646,7 @@
                     }
 
                     .read-more-btn {
-                        padding: var(--p8) var(--p16);
-                        background: var(--orange-color);
-                        border: none;
-                        color: var(--white-color);
                         cursor: pointer;
-                        border-radius: var(--br6);
                     }
                 }
             }
@@ -806,7 +795,7 @@
             border: none;
 
             &.active {
-                color: var(--blue-color);
+                color: var(--temSitCoreBlueColor);
 
                 .icon {
                     font-size: var(--fs20);
@@ -851,11 +840,6 @@
             }
 
             .action {
-                background: var(--blue-color);
-                color: var(--white-color);
-                border: none;
-                padding: var(--p8) var(--p20);
-                border-radius: var(--br8);
                 cursor: pointer;
             }
 
@@ -1129,6 +1113,18 @@
                 }
             }
         }
+    }
+
+    .tabs_wrapper .tabs_title {
+        max-width: 100%;
+    }
+
+    .tabs_wrapper2 .tabs_button {
+        justify-content: end;
+    }
+
+    .tabs_wrapper4 .tabs_content4 .accordion_item .accordion_title {
+        flex-direction: row-reverse;
     }
 }
 

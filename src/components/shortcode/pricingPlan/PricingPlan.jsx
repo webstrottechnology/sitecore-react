@@ -44,8 +44,8 @@ const PricingPlan = () => {
                   ))}
                 </ul>
 
-                <a href={plan.link} className="button">
-                  Contact Us
+                <a href={plan.link} className="button filledroundedbtn md-btn">
+                  <span>Contact Us</span>
                 </a>
               </div>
             ))}
@@ -91,7 +91,9 @@ const PricingPlan2 = () => {
                 ))}
               </ul>
 
-              <a href="#">BUY NOW</a>
+              <a href="#" className="filledsqaurebtn md-btn">
+                <span>BUY NOW</span>
+              </a>
             </div>
           ))}
         </div>
@@ -123,7 +125,11 @@ const PricingPlan3 = () => {
                 <small>{item.billing}</small>
               </div>
 
-              <button className={item.featured ? "dark" : ""}>
+              <button
+                className={`mintGreenFilledBtn md-btn ${
+                  item.featured ? "dark" : ""
+                }`}
+              >
                 {item.buttonText}
               </button>
 
@@ -166,8 +172,11 @@ const PricingPlan4 = () => {
                 ))}
               </ul>
 
-              <a href={plan.link} className="pricing-custom-btn">
-                {plan.buttonText}
+              <a
+                href={plan.link}
+                className="pricing-custom-btn outlineroundedbtn md-btn"
+              >
+                <span>{plan.buttonText}</span>
               </a>
             </div>
           ))}
@@ -201,8 +210,8 @@ const PricingPlan5 = () => {
                 ))}
               </ul>
               <div className="pricing5_button">
-                <a href={plan.link} className="button">
-                  {plan.buttonText}
+                <a href={plan.link} className="button outlinesqaurebtn md-btn">
+                  <span>{plan.buttonText}</span>
                 </a>
               </div>
             </div>
@@ -321,7 +330,9 @@ const PricingPlan8 = () => {
               </ul>
 
               <a href="#">
-                <button>{plan.buttonText}</button>
+                <button className="mintGreenFilledBtn md-btn">
+                  <span>{plan.buttonText}</span>
+                </button>
               </a>
             </div>
           ))}
@@ -390,7 +401,9 @@ const PricingPlan9 = () => {
                   <p key={i}>{feature}</p>
                 ))}
               </div>
-              <a href="#">{plan.buttonText}</a>
+              <a href="#" className="outlinesqaurebtn md-btn">
+                <span>{plan.buttonText}</span>
+              </a>
             </div>
           ))}
         </div>
@@ -451,7 +464,7 @@ const PricingPlan10 = () => {
                   </li>
                 ))}
               </ul>
-              <a href="#">{plan.buttonText}</a>
+              <a href="#" className="mintGreenOutlineBtn md-btn">{plan.buttonText}</a>
             </div>
           ))}
         </div>

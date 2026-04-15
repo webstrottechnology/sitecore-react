@@ -218,6 +218,10 @@
             }
         }
     }
+
+    .innerPagesAboutUs .innerPagesAboutUsInner .innerPagesAboutContent .innerPagesAboutRow {
+        flex-direction: row-reverse;
+    }
 }
 
 /* ---------------- RESPONSIVE CSS ---------------- */

@@ -313,7 +313,7 @@
             .features4-tag {
                 font-size: var(--fs16);
                 font-weight: var(--fw500);
-                color: var(--pink-color);
+                color: var(--orange-color);
                 text-transform: uppercase;
                 letter-spacing: 1px;
                 margin-bottom: var(--m16);
@@ -328,7 +328,7 @@
                 margin-bottom: var(--m24);
 
                 span {
-                    color: var(--pink-color);
+                    color: var(--orange-color);
                 }
             }
 
@@ -340,18 +340,7 @@
             }
 
             .features4-btn {
-                display: inline-block;
-                padding: var(--p14) var(--p36);
-                font-weight: var(--fw600);
-                color: var(--white-color);
-                background: var(--pink-color);
-                border-radius: var(--br30);
                 text-transform: uppercase;
-                transition: var(--transition4);
-
-                &:hover {
-                    background: var(--black-color);
-                }
             }
         }
     }
@@ -395,7 +384,7 @@
             .offer {
                 font-size: var(--fs20);
                 letter-spacing: 2px;
-                color: var(--yellow-color);
+                color: var(--orange-color);
                 margin-bottom: var(--m12);
                 display: inline-block;
             }
@@ -407,7 +396,7 @@
                 margin-bottom: var(--m16);
 
                 span {
-                    color: var(--yellow-color);
+                    color: var(--orange-color);
                 }
             }
 
@@ -416,21 +405,6 @@
                 color: var(--gray-color);
                 max-width: 480px;
                 margin-bottom: var(--m30);
-            }
-
-            .features5-btn {
-                display: inline-block;
-                padding: var(--p14) var(--p36);
-                background: var(--orange-color);
-                color: var(--black-color);
-                font-weight: var(--fw600);
-                border-radius: var(--br6);
-                transition: var(--transition2);
-
-                &:hover {
-                    background: var(--yellow-color);
-                    transform: translateY(-2px);
-                }
             }
 
             .features5-thumbs {
@@ -456,7 +430,7 @@
 
                     &.active {
                         opacity: 1;
-                        border-color: var(--yellow-color);
+                        border-color: var(--orange-color);
                         transform: translateY(-8px);
                     }
                 }
@@ -634,7 +608,7 @@
             width: var(--width50);
             padding-left: var(--p60);
 
-            span {
+            .title-txt {
                 font-size: var(--fs20);
                 letter-spacing: 2px;
                 color: var(--gray-color);
@@ -650,21 +624,6 @@
                 color: var(--gray-color);
                 margin-bottom: var(--m24);
                 max-width: 500px;
-            }
-
-            .features7-btn {
-                display: inline-block;
-                padding: var(--p12) var(--p30);
-                background: var(--yellow-color);
-                color: var(--white-color);
-                font-size: var(--fs14);
-                font-weight: var(--fw600);
-                transition: all 1.0s;
-
-                &:hover {
-                    border: 1px solid var(--yellow-color);
-                    background: none;
-                }
             }
         }
     }
@@ -1489,6 +1448,38 @@
                 }
             }
         }
+    }
+
+    .features_wrapper5 .features5-container .features5-content p {
+        max-width: 100%;
+    }
+
+    .features_wrapper7 .features7-container .features7-content p {
+        max-width: 100%;
+    }
+
+    .features_wrapper8 .features8-container .features8-content {
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+    }
+
+    .features_wrapper8 .features8-container .features8-content .features8-list li {
+        flex-direction: row-reverse;
+    }
+
+    .features_wrapper8 .features8-container .features8-content .features8-contact {
+        flex-direction: row-reverse;
+    }
+
+    .feature9 .feature9-container .feature9-content {
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+    }
+
+    .feature10 .feature10-container .feature10-cards .feature10-card {
+        text-align: right;
     }
 }
 
