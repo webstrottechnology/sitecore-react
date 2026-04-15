@@ -447,7 +447,7 @@ const BlogSectionFour = () => {
 
         {/* VIEW ALL */}
         <div className="view-all">
-          <Link to="/blog" className="Home2FilledGreenBtn">
+          <Link to="/blog-page" className="Home2FilledGreenBtn">
             View All
           </Link>
         </div>

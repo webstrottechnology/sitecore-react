@@ -1171,6 +1171,15 @@
             flex-direction: row-reverse;
         }
     }
+
+    .testimonial-dark .testimonial-card .avatar {
+        left: inherit;
+        right: 30px;
+    }
+
+    .testimonial-dark .testimonial-card .content .testimonial_icon {
+        justify-content: flex-start;
+    }
 }
 
 

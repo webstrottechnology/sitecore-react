@@ -64,7 +64,9 @@ const FormOne = () => {
             <input type="email" placeholder="Email" />
             <input type="password" placeholder="Password" />
 
-            <button type="button">Sign Up</button>
+            <button type="button" className="mintGreenFilledBtn md-btn">
+              Sign Up
+            </button>
           </form>
         </div>
 
@@ -95,7 +97,9 @@ const FormOne = () => {
 
             <a href="#">Forget Your Password?</a>
 
-            <button type="button">Sign In</button>
+            <button type="button" className="mintGreenFilledBtn md-btn">
+              Sign In
+            </button>
           </form>
         </div>
 
@@ -105,7 +109,10 @@ const FormOne = () => {
             <div className="toggle_pannel toggle_left">
               <h1>Welcome Back!</h1>
               <p>Enter your personal details to use all of site features</p>
-              <button className="hidden" onClick={() => setActive(false)}>
+              <button
+                className="hidden mintGreenFilledBtn md-btn"
+                onClick={() => setActive(false)}
+              >
                 Sign In
               </button>
             </div>
@@ -115,8 +122,11 @@ const FormOne = () => {
               <p>
                 Register with your personal details to use all of site features
               </p>
-              <button className="hidden" onClick={() => setActive(true)}>
-                Sign Up
+              <button
+                className="hidden mintGreenFilledBtn md-btn"
+                onClick={() => setActive(true)}
+              >
+                <span>Sign Up</span>
               </button>
             </div>
           </div>
@@ -135,16 +145,16 @@ const FormTwo = () => {
         <div className="formInfo-box">
           <div className="form-toggle">
             <button
-              className={islogin ? "active" : ""}
+              className={`${islogin ? "active" : ""} filledsqaurebtn md-btn`}
               onClick={() => setIsLogin(true)}
             >
-              Login
+              <span>Login</span>
             </button>
             <button
-              className={!islogin ? "active" : ""}
+              className={`${islogin ? "active" : ""} outlinesqaurebtn md-btn`}
               onClick={() => setIsLogin(false)}
             >
-              SignUp
+              <span>SignUp</span>
             </button>
           </div>
           {islogin ? (
@@ -154,7 +164,9 @@ const FormTwo = () => {
                 <input type="email" placeholder="Email" />
                 <input type="password" placeholder="Password" />
                 <a href="#">Forgot Password?</a>
-                <button type="button">Login</button>
+                <button type="button" className="filledsqaurebtn md-btn">
+                  <span>Login</span>
+                </button>
                 <p>
                   Not a Member?{" "}
                   <a href="#" onClick={() => setIsLogin(false)}>
@@ -170,7 +182,9 @@ const FormTwo = () => {
                 <input type="email" placeholder="Email" />
                 <input type="password" placeholder="Password" />
                 <input type="password" placeholder="Confirm Password" />
-                <button type="button">SignUp</button>
+                <button type="button" className="filledsqaurebtn md-btn">
+                  <span>SignUp</span>
+                </button>
                 <p>
                   Already a Member?{" "}
                   <a href="#" onClick={() => setIsLogin(true)}>
@@ -223,20 +237,24 @@ const FormThree = () => {
       )}
       <div className="submit-container">
         <div
-          className={action === "Login" ? "submit gray" : "submit"}
+          className={`submit outlineroundedbtn md-btn ${
+            action === "Login" ? "gray" : ""
+          }`}
           onClick={() => {
             setAction("Sign Up");
           }}
         >
-          Sign Up
+          <span>Sign Up</span>
         </div>
         <div
-          className={action === "Sign Up" ? "submit gray" : "submit"}
+          className={`submit filledroundedbtn md-btn ${
+            action === "Sign Up" ? "gray" : ""
+          }`}
           onClick={() => {
             setAction("Login");
           }}
         >
-          Login
+          <span> Login</span>
         </div>
       </div>
     </div>
@@ -285,8 +303,8 @@ const FormFour = () => {
             </label>
           </div>
 
-          <button type="button" className="submit-btn">
-            Sign In
+          <button type="button" className="outlinesqaurebtn md-btn submit-btn">
+            <span>Sign In</span>
           </button>
         </form>
 
@@ -339,7 +357,9 @@ const FormFive = () => {
             <label>Password*</label>
             <input type="password" placeholder="Min. 8 character" />
 
-            <button className="login-btn">Login</button>
+            <button className="login-btn mintGreenOutlineBtn md-btn">
+              <span>Login</span>
+            </button>
           </div>
 
           <span className="copyright">©2026 Erdem All rights reserved</span>
@@ -443,7 +463,9 @@ const FormEight = () => {
           ></textarea>
         </div>
 
-        <button className="form-submit">Send</button>
+        <button className="form-submit filledsqaurebtn md-btn">
+          <span>Send</span>
+        </button>
       </form>
     </div>
   );
@@ -476,7 +498,9 @@ const FormNine = () => {
                 <textarea placeholder="Message"></textarea>
               </div>
 
-              <button type="submit">Send</button>
+              <button type="submit" className="filledsqaurebtn md-btn">
+                <span>Send</span>
+              </button>
             </form>
           </div>
 
@@ -589,7 +613,9 @@ const FormTen = () => {
               </span>
             </label>
 
-            <button type="submit">SEND MESSAGE</button>
+            <button type="submit" className="mintGreenFilledBtn md-btn">
+              SEND MESSAGE
+            </button>
           </form>
         </div>
       </div>
@@ -624,7 +650,9 @@ const FormEleven = () => {
               </div>
             </div>
 
-            <button className="filledroundedbtn md-btn">Reset Password</button>
+            <button className="filledroundedbtn md-btn">
+              <span>Reset Password</span>
+            </button>
 
             <span className="link" onClick={() => setForgot(false)}>
               Back to Login
@@ -699,7 +727,7 @@ const FormEleven = () => {
                   </span>
                 </div>
 
-                <button className="filledroundedbtn md-btn ">
+                <button className="filledroundedbtn sm-btn ">
                   <span>LOG IN</span>
                 </button>
               </>
@@ -752,7 +780,9 @@ const FormEleven = () => {
                   </div>
                 </div>
 
-                <button className="filledroundedbtn md-btn">SIGN UP</button>
+                <button className="filledroundedbtn md-btn">
+                  <span>SIGN UP</span>
+                </button>
               </>
             )}
 
@@ -936,7 +966,9 @@ const FormThirteen = () => {
               <input type="text" placeholder="Phone" />
               <input type="text" placeholder="Address" />
               <textarea placeholder="Message"></textarea>
-              <button type="submit">SUBMIT</button>
+              <button type="submit" className="filledroundedbtn md-btn">
+                <span>SUBMIT</span>
+              </button>
             </form>
           </div>
         </div>

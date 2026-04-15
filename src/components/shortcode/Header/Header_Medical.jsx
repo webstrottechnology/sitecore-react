@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { FiChevronDown, FiMenu, FiX } from "react-icons/fi";
+import { FiChevronDown, FiMenu, FiSearch, FiX } from "react-icons/fi";
 import "./Header_Medical.scss";
 import Logo from "../../../assets/images/home_medical/medical-logo.webp";
 import { Link } from "react-router-dom";
@@ -11,6 +11,7 @@ import { useCart } from "../CartContextWrap/CartContext";
 
 const Header_Medical = ({ direction, setDirection }) => {
   const [sidebar, setSidebar] = useState(false);
+  const [searchOpen, setSearchOpen] = useState(false);
   const [mobileDrop, setMobileDrop] = useState(null);
   const [isFixed, setIsFixed] = useState(false);
   const [cartOpen, setCartOpen] = useState(false);
@@ -460,6 +461,11 @@ const Header_Medical = ({ direction, setDirection }) => {
               >
                 {" "}
               </div>
+
+              <FiSearch
+                className="search-icon"
+                onClick={() => setSearchOpen(true)}
+              />
               {/* CART ICON */}
               <div
                 className="SitecoreCartIcon"
@@ -479,7 +485,7 @@ const Header_Medical = ({ direction, setDirection }) => {
                 <IoLanguage title="Toggle Language Direction" />
               </button>
               {/* CONTACT */}
-              <div className="contact-box">
+              {/* <div className="contact-box">
                 <div className="phone-icon">
                   <FiPhoneCall />
                 </div>
@@ -487,13 +493,13 @@ const Header_Medical = ({ direction, setDirection }) => {
                   <span>Contact Us</span>
                   <h4>+48 35461 35480</h4>
                 </div>
-              </div>
+              </div> */}
 
               {/* BUTTON */}
-              <a href="#" className="appointment-btn">
+              <Link to="/contact" className="appointment-btn">
                 <img src={appointmentIcon} alt="appointment" />
                 <span>GET APPOINTMENT</span>
-              </a>
+              </Link>
 
               {/* MOBILE MENU BUTTON */}
 
@@ -509,11 +515,6 @@ const Header_Medical = ({ direction, setDirection }) => {
                   )}
                 </a>
               </div>
-
-              <div
-                className={`overlay ${sidebar ? "show" : ""}`}
-                onClick={() => setSidebar(false)}
-              ></div>
             </div>
           </div>
         </div>
@@ -587,6 +588,26 @@ const Header_Medical = ({ direction, setDirection }) => {
         className={`SitecoreCartOverlay ${cartOpen ? "show" : ""}`}
         onClick={() => setCartOpen(false)}
       ></div>
+
+      <div className={`search-overlay ${searchOpen ? "active" : ""}`}>
+        <div className="search-box">
+          {/* INPUT */}
+
+          <input type="text" placeholder="Search..." />
+
+          {/* SEARCH ICON */}
+
+          <FiSearch className="search-icon" />
+
+          {/* CLOSE BUTTON */}
+
+          <FiX className="close-btn" onClick={() => setSearchOpen(false)} />
+        </div>
+
+        {/* CLICK OUTSIDE CLOSE */}
+
+        <div className="search-bg" onClick={() => setSearchOpen(false)}></div>
+      </div>
     </>
   );
 };

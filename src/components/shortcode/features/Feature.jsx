@@ -151,8 +151,11 @@ const Features3 = () => {
             <p>{description1}</p>
             <p>{description2}</p>
 
-            <a href="#" className="features_wrapper3-btn">
-              {buttonText}
+            <a
+              href="#"
+              className="features_wrapper3-btn filledroundedbtn sm-btn"
+            >
+              <span>{buttonText}</span>
             </a>
           </div>
         </div>
@@ -178,8 +181,8 @@ const Features4 = () => {
 
           <p className="features4-desc">{FeaturesData4.description}</p>
 
-          <a href="#" className="features4-btn">
-            {FeaturesData4.buttonText}
+          <a href="#" className="features4-btn filledroundedbtn sm-btn">
+            <span>{FeaturesData4.buttonText}</span>
           </a>
         </div>
 
@@ -215,8 +218,8 @@ const Features5 = () => {
 
           <p>{FeatureData5.description}</p>
 
-          <a href="#" className="features5-btn">
-            {FeatureData5.buttonText}
+          <a href="#" className="features5-btn filledroundedbtn sm-btn">
+            <span>{FeatureData5.buttonText}</span>
           </a>
 
           {/* THUMBNAILS WITH LOGIC */}
@@ -310,11 +313,11 @@ const Features7 = () => {
 
         {/* CENTER CONTENT */}
         <div className="features7-content">
-          <span>{FeatureData7.center.tag}</span>
+          <span className="title-txt">{FeatureData7.center.tag}</span>
           <h2>{FeatureData7.center.title}</h2>
           <p>{FeatureData7.center.description}</p>
-          <a href="#" className="features7-btn">
-            {FeatureData7.center.buttonText}
+          <a href="#" className="features7-btn filledroundedbtn sm-btn">
+            <span>{FeatureData7.center.buttonText}</span>
           </a>
         </div>
       </div>

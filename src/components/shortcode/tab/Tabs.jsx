@@ -150,7 +150,7 @@ const Tabs3 = () => {
           <div className={`content_left ${fade ? "fade-out" : "fade-in"}`}>
             <h3>{tabsData3[activeTab].title}</h3>
             <p>{tabsData3[activeTab].description}</p>
-            <a href="#" className="learn_more_btn">
+            <a href="#" className="learn_more_btn mintGreenFilledBtn md-btn">
               Learn More
             </a>
           </div>
@@ -354,8 +354,8 @@ const Tabs6 = () => {
                     <span className="highlight">Description:</span>{" "}
                     {tabsData6[activeTab].description}
                   </p>
-                  <a href="#" className="read-more-btn">
-                    Read More
+                  <a href="#" className="read-more-btn filledroundedbtn sm-btn">
+                    <span>Read More</span>
                   </a>
                 </div>
               </div>
@@ -473,8 +473,8 @@ const Tabs8 = () => {
           </div>
           <div className="right">
             <h3>{tabsData8[activeTab].title}</h3>
-            <a href="#" className="action">
-              {tabsData8[activeTab].button}
+            <a href="#" className="action filledsqaurebtn md-btn">
+              <span>{tabsData8[activeTab].button}</span>
             </a>
             <p>{tabsData8[activeTab].content}</p>
           </div>

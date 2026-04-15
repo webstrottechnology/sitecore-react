@@ -29,17 +29,29 @@
 
     }
 
+    &.menu-fixed {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background: #fff;
+    }
+
+    &.fadeInDown {
+        animation: fadeInDown 0.4s ease;
+    }
+
     /* RIGHT SECTION */
     .right-section {
         display: flex;
         align-items: center;
-        gap: 10px;
+        gap: 16px;
     }
 
     /* SEARCH ICON */
     .search-icon {
-        font-size: 20px;
-        color: #1b3b4d;
+        font-size: 28px;
+        color: var(--black-color);
         cursor: pointer;
         transition: 0.3s;
 
@@ -84,7 +96,7 @@
         background: #0c3b53;
         color: white;
         border: none;
-        padding: 10px 30px;
+        padding: 14px 30px;
         border-radius: 30px;
         font-weight: bold;
         cursor: pointer;

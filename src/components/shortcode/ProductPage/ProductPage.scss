@@ -589,6 +589,34 @@
       }
     }
   }
+
+  .ipProductGridWithSidebar .ipProductGridViewInner .ipProductGridLeft .ipFilterCard .ipCategoryList li a .catIcon {
+    transform: rotate(180deg);
+  }
+
+  .ipProductGridWithSidebar .ipProductGridViewInner .ipProductGridLeft .ipFilterCard .ipFilterCardContant .ipFilterReviewCard .ipFilterReview {
+    flex-direction: row-reverse;
+  }
+
+  .ipProductGridWithSidebar .ipProductGridViewInner .ipProductGridLeft .ipFilterCard .ipFilterCardContant .ipFilterCardCheck {
+    flex-direction: row-reverse;
+  }
+
+  .ipProductGridWithSidebar .ipProductGridViewInner .ipProductGridLeft .ipFilterCard .ipFilterCardContant .ipFilterCardCheck .form-check-label {
+    flex-direction: row-reverse;
+    display: flex;
+    gap:10px;
+  }
+
+  .ipProductGridWithSidebar .ipProductGridViewInner .ipProductGridLeft .ipFilterCard .ipFilterCardContant .ipFilterCardCheck .form-check {
+    padding-left: 0;
+    padding-right: 30px;
+  }
+
+  .ipProductGridWithSidebar .ipProductGridViewInner .ipProductGridLeft .ipFilterCard .ipFilterCardContant .ipFilterCardCheck .form-check .form-check-input {
+    margin-right: -1.5em;
+    margin-left: inherit;
+  }
 }
 
 

@@ -134,6 +134,7 @@
       font-weight: var(--fw700);
       color: var(--temp1BlueColor);
       font-family: var(--roboto-font);
+      margin-top: var(--m10);
     }
   }
 
@@ -718,12 +719,13 @@
   .professionalHealthVideoInner {
     position: relative;
     z-index: 2;
-    padding: var(--p80);
+    padding: var(--p80) var(--p0);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     border-top-left-radius: var(--br20);
     border-bottom-left-radius: var(--br20);
+    position: relative;
 
     .profHealthVideo {
       width: 400px;
@@ -767,6 +769,27 @@
       /* PULSE ANIMATION */
       &.pulse {
         animation: pulseAnimation 2s ease-out infinite;
+      }
+    }
+
+    .videoModal {
+      .closeBtn {
+        position: absolute;
+        display: inline-block;
+        top: 0;
+        /* 👈 adjust kar sakti hai */
+        right: 0;
+        font-size: 28px;
+        color: var(--white-color);
+        cursor: pointer;
+        z-index: 10000;
+        background: var(--black-color);
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
       }
     }
   }
@@ -1123,6 +1146,10 @@
       }
     }
   }
+
+  .MedicalTestimonials .testimonialsContent .testimonialSlide .testimonialsSlider .slideBottomContent .userProfile {
+    flex-direction: row-reverse;
+  }
 }
 
 .mediDoctorImages img {
@@ -1207,6 +1234,10 @@
     width: 100%;
     align-items: center;
     justify-content: space-around;
+  }
+
+  .mediLatestCounter .mediCounterInner .mediCounterItem {
+    flex-direction: row-reverse;
   }
 }
 
