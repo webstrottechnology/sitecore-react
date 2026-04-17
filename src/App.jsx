@@ -1,42 +1,64 @@
 import { Routes, Route, useLocation } from "react-router-dom";
-import { useState, useEffect } from "react";
+import { useState, useEffect, lazy, Suspense } from "react";
 import ThemeSwitcher from "./components/shortcode/ThemeSwitcher/ThemeSwitcher";
 import DirectionSwitcher from "./components/shortcode/DirectionSwitcher/Direction";
-import Home from "./components/pages/Home";
 import Header_05 from "./components/shortcode/Header/Header_05";
 import { Sitecorefooter } from "./components/shortcode/footer/Footer";
-import ErrorPage from "./components/shortcode/404Pages/ErrorPage";
-import ComingSoon from "./components/shortcode/commingSoon/ComingSoon";
-import ComponentsPage from "./components/pages/ComponentsPage";
-import About from "./components/pages/About";
-import Team_01 from "./components/pages/Team_01";
-import Team_02 from "./components/pages/Team_02";
-import TeamSingle from "./components/pages/TeamSingle";
-import Services_01 from "./components/pages/Services_01";
-import { FormEleven } from "./components/shortcode/forms/Form";
-import ContactUs from "./components/pages/ContactUs";
-import ServiceSingle from "./components/pages/ServiceSingle";
-import PortfolioDetails from "./components/pages/PortfolioDetails";
-import BlogPage from "./components/pages/BlogPage";
-import PortfolioColumn3 from "./components/pages/PortfolioColumn3";
-import PortfolioColumn4 from "./components/pages/PortfolioColumn4";
-import BlogImagePage from "./components/pages/BlogImagePage";
-import ShopCart from "./components/pages/cart";
-import BlogVedioPage from "./components/pages/BlogVedioPage";
-import BlogSliderPage from "./components/pages/BlogSliderPage";
-import BlogVimeoPage from "./components/pages/BlogVimeoPage";
-import BlogAudioPage from "./components/pages/BlogAudioPage";
-import BlogQuotePage from "./components/pages/BlogQuotePage";
-import ProductGridPage from "./components/pages/ProductGridPage";
-import Checkout from "./components/pages/Checkout";
-import ProductSingle01 from "./components/pages/ProductSingle01";
-import ProductSingle02 from "./components/pages/ProductSingle02";
-import HomeMedical from "./components/pages/HomeMedical";
-import HomeCafe from "./components/pages/HomeCafe";
 import CartProvider from "./components/shortcode/CartContextWrap/CartContext";
+import ScrollToTop from "./ScrollToTop";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import ScrollToTop from "./ScrollToTop";
+
+// ✅ LAZY LOAD PAGES
+const Home = lazy(() => import("./components/pages/Home"));
+const About = lazy(() => import("./components/pages/About"));
+const Team_01 = lazy(() => import("./components/pages/Team_01"));
+const Team_02 = lazy(() => import("./components/pages/Team_02"));
+const TeamSingle = lazy(() => import("./components/pages/TeamSingle"));
+const Services_01 = lazy(() => import("./components/pages/Services_01"));
+const ServiceSingle = lazy(() => import("./components/pages/ServiceSingle"));
+const ComponentsPage = lazy(() => import("./components/pages/ComponentsPage"));
+const ContactUs = lazy(() => import("./components/pages/ContactUs"));
+const PortfolioDetails = lazy(
+  () => import("./components/pages/PortfolioDetails"),
+);
+const PortfolioColumn3 = lazy(
+  () => import("./components/pages/PortfolioColumn3"),
+);
+const PortfolioColumn4 = lazy(
+  () => import("./components/pages/PortfolioColumn4"),
+);
+const BlogPage = lazy(() => import("./components/pages/BlogPage"));
+const BlogImagePage = lazy(() => import("./components/pages/BlogImagePage"));
+const BlogVedioPage = lazy(() => import("./components/pages/BlogVedioPage"));
+const BlogSliderPage = lazy(() => import("./components/pages/BlogSliderPage"));
+const BlogVimeoPage = lazy(() => import("./components/pages/BlogVimeoPage"));
+const BlogAudioPage = lazy(() => import("./components/pages/BlogAudioPage"));
+const BlogQuotePage = lazy(() => import("./components/pages/BlogQuotePage"));
+const ProductGridPage = lazy(
+  () => import("./components/pages/ProductGridPage"),
+);
+const ErrorPage = lazy(
+  () => import("./components/shortcode/404Pages/ErrorPage"),
+);
+const ComingSoon = lazy(
+  () => import("./components/shortcode/commingSoon/ComingSoon"),
+);
+const ShopCart = lazy(() => import("./components/pages/cart"));
+const Checkout = lazy(() => import("./components/pages/Checkout"));
+const ProductSingle01 = lazy(
+  () => import("./components/pages/ProductSingle01"),
+);
+const ProductSingle02 = lazy(
+  () => import("./components/pages/ProductSingle02"),
+);
+const HomeMedical = lazy(() => import("./components/pages/HomeMedical"));
+const HomeCafe = lazy(() => import("./components/pages/HomeCafe"));
+const FormEleven = lazy(() =>
+  import("./components/shortcode/forms/Form").then((module) => ({
+    default: module.FormEleven,
+  }))
+);
 
 const App = () => {
   const location = useLocation();
@@ -50,57 +72,60 @@ const App = () => {
 
   useEffect(() => {
     AOS.init({
-      duration: 2000, // animation speed
-      once: true, // animation only once
+      duration: 2000,
+      once: true,
     });
   }, []);
 
   useEffect(() => {
     AOS.refresh();
   }, []);
+
   return (
     <CartProvider>
-       <ScrollToTop />   {/* YE ADD KARNA THA */}
-      {/* GLOBAL HEADER */}
+      <ScrollToTop />
+
       {!shouldHideLayout && (
         <Header_05 direction={direction} setDirection={setDirection} />
       )}
 
-      {/* PAGE ROUTES */}
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about-us" element={<About />} />
-        <Route path="/team-01" element={<Team_01 />} />
-        <Route path="/team-02" element={<Team_02 />} />
-        <Route path="/team-single" element={<TeamSingle />} />
-        <Route path="/services" element={<Services_01 />} />
-        <Route path="/services-single" element={<ServiceSingle />} />
-        <Route path="/login" element={<FormEleven />} />
-        <Route path="/components/*" element={<ComponentsPage />} />
-        <Route path="/Contact" element={<ContactUs />} />
-        <Route path="/portfolio-details" element={<PortfolioDetails />} />
-        <Route path="/portfolio-3-column" element={<PortfolioColumn3 />} />
-        <Route path="/portfolio-4-column" element={<PortfolioColumn4 />} />
-        <Route path="/contact" element={<ContactUs />} />
-        <Route path="/blog-page" element={<BlogPage />} />
-        <Route path="/image-post" element={<BlogImagePage />} />
-        <Route path="/youtube-post" element={<BlogVedioPage />} />
-        <Route path="/slider-post" element={<BlogSliderPage />} />
-        <Route path="/vimeo-post" element={<BlogVimeoPage />} />
-        <Route path="/audio-post" element={<BlogAudioPage />} />
-        <Route path="/quote-post" element={<BlogQuotePage />} />
-        <Route path="/product-with-sidebar" element={<ProductGridPage />} />
-        <Route path="/404" element={<ErrorPage />} />
-        <Route path="/coming-soon" element={<ComingSoon />} />
-        <Route path="/cart" element={<ShopCart />} />
-        <Route path="/checkout" element={<Checkout />} />
-        <Route path="/product-single-01" element={<ProductSingle01 />} />
-        <Route path="/product-single-02" element={<ProductSingle02 />} />
-        <Route path="/home-medical" element={<HomeMedical />} />
-        <Route path="/home-cafe" element={<HomeCafe />} />
-      </Routes>
+      {/* ✅ SUSPENSE WRAP */}
+      <Suspense fallback={<div className="loader">Loading...</div>}>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about-us" element={<About />} />
+          <Route path="/team-01" element={<Team_01 />} />
+          <Route path="/team-02" element={<Team_02 />} />
+          <Route path="/team-single" element={<TeamSingle />} />
+          <Route path="/services" element={<Services_01 />} />
+          <Route path="/services-single" element={<ServiceSingle />} />
+          <Route path="/login" element={<FormEleven />} />
+          <Route path="/components/*" element={<ComponentsPage />} />
+          <Route path="/contact" element={<ContactUs />} />
+          <Route path="/portfolio-details" element={<PortfolioDetails />} />
+          <Route path="/portfolio-3-column" element={<PortfolioColumn3 />} />
+          <Route path="/portfolio-4-column" element={<PortfolioColumn4 />} />
+          <Route path="/blog-page" element={<BlogPage />} />
+          <Route path="/image-post" element={<BlogImagePage />} />
+          <Route path="/youtube-post" element={<BlogVedioPage />} />
+          <Route path="/slider-post" element={<BlogSliderPage />} />
+          <Route path="/vimeo-post" element={<BlogVimeoPage />} />
+          <Route path="/audio-post" element={<BlogAudioPage />} />
+          <Route path="/quote-post" element={<BlogQuotePage />} />
+          <Route path="/product-with-sidebar" element={<ProductGridPage />} />
+          <Route path="/coming-soon" element={<ComingSoon />} />
+          <Route path="/cart" element={<ShopCart />} />
+          <Route path="/checkout" element={<Checkout />} />
+          <Route path="/product-single-01" element={<ProductSingle01 />} />
+          <Route path="/product-single-02" element={<ProductSingle02 />} />
+          <Route path="/home-medical" element={<HomeMedical />} />
+          <Route path="/home-cafe" element={<HomeCafe />} />
 
-      {/* FOOTER */}
+          {/* ✅ ALWAYS LAST */}
+          <Route path="*" element={<ErrorPage />} />
+        </Routes>
+      </Suspense>
+
       {!shouldHideLayout && <Sitecorefooter />}
     </CartProvider>
   );

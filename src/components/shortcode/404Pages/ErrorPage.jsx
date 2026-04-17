@@ -15,7 +15,7 @@ const ErrorPage = () => {
 
         {/* 404 Number */}
         <div className="errorImgBox">
-          <img src={ErrorImg01} alt="" className="img-fluid" />
+          <img src={ErrorImg01} alt="image" className="img-fluid" />
         </div>
 
         {/* Title */}

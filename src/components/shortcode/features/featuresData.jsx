@@ -412,7 +412,7 @@ export const connectBusinessData = {
 
 /* ---------------- FEATURE DATA FOURTEEN ---------------- */
 
-import portfolioImg from "../../../assets/images/portfolio/portfolioDetailsImg.webp";
+import portfolioImg from "../../../assets/images/portfolio/portfolioDetailsImg.png";
 
 export const portfolioDetails = {
   category: "Food Recipe",

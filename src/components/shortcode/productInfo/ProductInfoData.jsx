@@ -1,5 +1,5 @@
-import ProductInfoImg1 from "../../../assets/images/inner-pages/productInfo-img1.webp";
-import ProductInfoImg2 from "../../../assets/images/inner-pages/productInfo-img2.webp";
+import ProductInfoImg1 from "../../../assets/images/inner-pages/productInfo-img1.png";
+import ProductInfoImg2 from "../../../assets/images/inner-pages/productInfo-img2.png";
 
 export const ProductInfoData = {
   information: [

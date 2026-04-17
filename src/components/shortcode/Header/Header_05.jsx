@@ -60,7 +60,7 @@ const Header_05 = ({ direction, setDirection }) => {
           <div className="logo">
             <Link to="/">
               {" "}
-              <img src={Logo} alt="" />{" "}
+              <img src={Logo} alt="image" />{" "}
             </Link>
           </div>
           {/* NAV */}
@@ -496,7 +496,7 @@ const Header_05 = ({ direction, setDirection }) => {
               <div className="cart-item" key={item.id}>
                 <div className="InnerContent">
                   <div className="ImgBox">
-                    <img src={item.img} alt="" />
+                    <img src={item.img} alt="image" />
                   </div>
                   <div className="info">
                     <h4>{item.name}</h4>

@@ -6,11 +6,11 @@ import img1 from "../../../assets/images/thumbnail/thumbnail1.png";
 import img2 from "../../../assets/images/thumbnail/thumbnail2.png";
 import img3 from "../../../assets/images/thumbnail/thumbnail3.png";
 
-import offerIcon01 from "../../../assets/images/inner-pages/icons/offer1.webp";
-import offerIcon02 from "../../../assets/images/inner-pages/icons/offer2.webp";
-import offerIcon03 from "../../../assets/images/inner-pages/icons/offer3.webp";
+import offerIcon01 from "../../../assets/images/inner-pages/icons/offer1.png";
+import offerIcon02 from "../../../assets/images/inner-pages/icons/offer2.png";
+import offerIcon03 from "../../../assets/images/inner-pages/icons/offer3.png";
 
-import arrowIcon from "../../../assets/images/inner-pages/icons/brand-story-right-arrow.webp";
+import arrowIcon from "../../../assets/images/inner-pages/icons/brand-story-right-arrow.png";
 import { FaStar } from "react-icons/fa";
 import { FaShareAlt } from "react-icons/fa";
 
@@ -48,6 +48,7 @@ const HistoricalFiction02 = () => {
                       src={img}
                       className={active === i ? "active" : ""}
                       onClick={() => setActive(i)}
+                      alt={`thumbnail-${i + 1}`}
                     />
                   ))}
 

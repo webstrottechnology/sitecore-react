@@ -48,8 +48,9 @@
         text-transform: uppercase;
 
         &.hidden {
-            border-color: var(--white-color);
-            color: var(--white-color);
+            border-color: var(--black-color);
+            color: var(--black-color);
+
         }
     }
 
@@ -169,6 +170,7 @@
         align-items: center;
         padding: 0 var(--p30);
         text-align: center;
+        color: var(--black-color);
     }
 
     .toggle_left {
@@ -177,6 +179,7 @@
 
     .toggle_right {
         right: 0;
+        color: var(--black-color);
     }
 
     &.active {
@@ -250,6 +253,22 @@
                     width: var(--width50);
                     border: none;
                     cursor: pointer;
+                    background-color: var(--gray-color);
+                    color: var(--white-color);
+                    transition: all 0.5s;
+
+                    span {
+                        color: var(--white-color);
+                    }
+
+                    &.active {
+                        background-color: var(--temSitCoreBlueColor);
+                        color: var(--white-color);
+
+                        span {
+                            color: var(--white-color);
+                        }
+                    }
                 }
             }
 
@@ -576,12 +595,13 @@
             h2 {
                 font-size: var(--fs28);
                 margin-bottom: var(--m10);
-                color: var(--green-color02);
+                color: var(--black-color);
+                font-weight: var(--fw700);
             }
 
             p {
                 font-size: var(--fs14);
-                color: var(--green-color02);
+                color: var(--black-color);
                 margin-bottom: var(--m26);
             }
 
@@ -597,7 +617,7 @@
                 justify-content: center;
                 gap: 10px;
                 cursor: pointer;
-                color: var(--green-color02);
+                color: var(--black-color);
                 margin-bottom: var(--m26);
                 font-size: var(--fs18);
                 font-family: var(--heading-font);
@@ -618,7 +638,7 @@
                     font-size: var(--fs16);
                     font-family: var(--heading-font);
                     font-weight: var(--fw600);
-                    color: var(--green-color02);
+                    color: var(--black-color);
                 }
 
                 input {
@@ -630,15 +650,15 @@
                     font-size: var(--fs14);
                     font-family: var(--heading-font);
                     font-weight: var(--fw400);
-                    color: var(--green-color02);
+                    color: var(--black-color);
 
                     &::placeholder {
-                        color: var(--green-color02);
+                        color: var(--black-color);
                     }
 
                     &:focus {
                         outline: none;
-                        border-color: var(--green-color02);
+                        color: var(--black-color);
                     }
                 }
 
@@ -654,7 +674,7 @@
                 font-size: var(--fs14);
                 font-family: var(--heading-font);
                 font-weight: var(--fw400);
-                color: var(--green-color02);
+                color: var(--black-color);
             }
         }
 
@@ -1877,7 +1897,55 @@
     }
 
     .contact-section .contact-wrapper .contact-left .contact-card .info {
-      width: 70%;
+        width: 70%;
+    }
+
+    .formFive-wrapper .formFive-login-card .login-left .form-box input {
+        text-align: right;
+    }
+
+    .formOne-container-box input {
+        text-align: right;
+    }
+
+    .formFour-wrapper .formFour-container .login-form .checkbox-group .checkbox-label {
+        flex-direction: row-reverse;
+    }
+
+    .form-seven__form input,
+    .form-seven__form textarea {
+        text-align: right;
+    }
+
+    .FormNine-wrapper .contact-card .contact-left p {
+        max-width: 100%;
+    }
+
+    .formten-wrapper .formten__container .formten__form form .remember {
+        flex-direction: row-reverse;
+    }
+
+    .formten-wrapper .formten__container .formten__form form input,
+    .formten-wrapper .formten__container .formten__form form textarea {
+        text-align: right;
+    }
+
+    .sitecore_lr_wrapper .auth_card .remember_row {
+        flex-direction: row-reverse;
+    }
+
+    .sitecore_lr_wrapper .auth_card .remember_row .custom_checkbox {
+        flex-direction: row-reverse;
+    }
+
+    .FourteencommentBox .commentBoxInner .commentFormGroup input,
+    .FourteencommentBox .commentBoxInner .commentFormGroup textarea {
+        text-align: right;
+    }
+
+    .FormNine-wrapper .contact-card .contact-left .input-group input,
+    .FormNine-wrapper .contact-card .contact-left .input-group textarea {
+        text-align: right;
     }
 }
 

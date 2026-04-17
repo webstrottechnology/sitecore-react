@@ -298,75 +298,18 @@
       }
     }
   }
-}
 
-/* MOBILE BUTTON */
-.mobile-menu-btn {
-  display: none;
-  font-size: var(--fs26);
-  cursor: pointer;
-}
-
-/* ================= SEARCH ================= */
-.search-overlay {
-  position: fixed;
-  inset: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: rgba(0, 0, 0, 0.85);
-  backdrop-filter: blur(6px);
-  opacity: 0;
-  visibility: hidden;
-  transition: .4s;
-  z-index: 9999;
-
-  &.active {
-    opacity: 1;
-    visibility: visible;
-  }
-
-  .search-box {
-    position: relative;
-    width: 500px;
-    background: var(--white-color);
-    border-radius: var(--br50);
-    padding: var(--p10) var(--p20);
-    display: flex;
-    align-items: center;
-    transform: translateY(-50px);
-    transition: .4s;
+  /* MOBILE BUTTON */
+  .mobile-menu-btn {
+    display: none;
+    font-size: var(--fs26);
     cursor: pointer;
-
-    input {
-      width: var(--width100);
-      border: none;
-      outline: none;
-      font-size: var(--fs16);
-      padding-right: var(--p80);
-      font-weight: var(--fw400);
-      font-family: var(--heading-font);
-    }
-
-
-    .search-icon {
-      position: absolute;
-      right: 50px;
-      font-size: var(--fs30);
-      color: var(--black-color);
-
-    }
-
-
-    .close-btn {
-      position: absolute;
-      right: 15px;
-      font-size: var(--fs22);
-      cursor: pointer;
-      color: var(--dark-gray);
-    }
   }
 }
+
+
+
+
 
 // RTL STYLE CSS START //
 
@@ -501,7 +444,7 @@
     display: none;
   }
 
-  .mobile-menu-btn {
+  .HeaderCafeWrapper .mobile-menu-btn {
     display: block;
   }
 
@@ -536,6 +479,6 @@
   }
 
   .HeaderCafeWrapper .logo img {
-    max-width: 90px;
+    max-width: 110px;
   }
 }

@@ -562,7 +562,7 @@ const Team9 = () => {
             className="team9-card"
             style={{ background: item.color }}
           >
-            <img src={item.img} alt="" />
+            <img src={item.img} alt="image" />
 
             {/* Bottom Box */}
             <div className="team9-info-box">
@@ -711,7 +711,7 @@ const Team12 = () => {
         {team12Data.map((member, index) => (
           <div className="team12-card-box" key={index}>
             <div className="imgBox">
-              <img src={member.img} alt="" />
+              <img src={member.img} alt="image" />
 
               {/* PLUS BUTTON */}
               <span
@@ -769,16 +769,16 @@ const Team13 = () => {
 
           {/* SOCIAL */}
           <div className="team13-social">
-            <a href="#">
+            <a href="https://www.facebook.com/">
               <FaFacebookF />
             </a>
-            <a href="#">
+            <a href="https://www.instagram.com/">
               <FaInstagram />
             </a>
-            <a href="#">
+            <a href="https://x.com/">
               <FaXTwitter />
             </a>
-            <a href="#">
+            <a href="https://web.whatsapp.com/">
               <FaWhatsapp />
             </a>
           </div>

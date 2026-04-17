@@ -6,7 +6,7 @@ import {
 } from "./SitecoreCheckoutData";
 
 import "./SitecoreCheckout.scss";
-import cardImages from "../../../assets/images/inner-pages/icons/cards-images.webp";
+import cardImages from "../../../assets/images/inner-pages/icons/cards-images.png";
 
 // ================= CHECKOUT PAGE ================= //
 

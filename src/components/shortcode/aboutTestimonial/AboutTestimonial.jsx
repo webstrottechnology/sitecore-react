@@ -40,8 +40,8 @@ const AboutTestimonial = () => {
           },
         }}
       >
-        {AboutTestimonialData.map((item) => (
-          <SwiperSlide key={item.id}>
+        {AboutTestimonialData.map((item, index) => (
+          <SwiperSlide key={`${item.id}-${index}`}>
             <div className="testimonialCard">
               <div className="testimonialContent">
                 <div className="quote">

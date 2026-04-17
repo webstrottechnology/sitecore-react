@@ -931,9 +931,9 @@ const HomeCafeFooter = () => {
                 <div key={i} className="media-img">
                   <img src={img} alt="insta" />
                   <div className="insta-icon">
-                    <a href="#" target="_blank" rel="noreferrer">
+                    <Link to="https://www.instagram.com"  rel="noreferrer">
                       <FaInstagram />
-                    </a>
+                    </Link>
                   </div>
                 </div>
               ))}

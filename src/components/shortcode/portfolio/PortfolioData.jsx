@@ -57,23 +57,23 @@ export const gallery3Data = [
   { id: 12, img: port12, category: "wp", title: "Frontier" },
 ];
 
-import column3Img1 from "../../../assets/images/portfolio/column3Img1.webp";
-import column3Img2 from "../../../assets/images/portfolio/column3Img2.webp";
-import column3Img3 from "../../../assets/images/portfolio/column3Img3.webp";
-import column3Img4 from "../../../assets/images/portfolio/column3Img4.webp";
-import column3Img5 from "../../../assets/images/portfolio/column3Img5.webp";
-import column3Img6 from "../../../assets/images/portfolio/column3Img6.webp";
-import column3Img7 from "../../../assets/images/portfolio/column3Img7.webp";
-import column3Img8 from "../../../assets/images/portfolio/column3Img8.webp";
-import column3Img9 from "../../../assets/images/portfolio/column3Img9.webp";
-import column3Img10 from "../../../assets/images/portfolio/column3Img10.webp";
-import column3Img11 from "../../../assets/images/portfolio/column3Img11.webp";
-import column3Img12 from "../../../assets/images/portfolio/column3Img12.webp";
-import column3Img13 from "../../../assets/images/portfolio/column3Img13.webp";
-import column3Img14 from "../../../assets/images/portfolio/column3Img14.webp";
-import column3Img15 from "../../../assets/images/portfolio/column3Img15.webp";
-import column3Img16 from "../../../assets/images/portfolio/column3Img16.webp";
-import column3Img17 from "../../../assets/images/portfolio/column3Img17.webp";
+import column3Img1 from "../../../assets/images/portfolio/column3Img1.png";
+import column3Img2 from "../../../assets/images/portfolio/column3Img2.png";
+import column3Img3 from "../../../assets/images/portfolio/column3Img3.png";
+import column3Img4 from "../../../assets/images/portfolio/column3Img4.png";
+import column3Img5 from "../../../assets/images/portfolio/column3Img5.png";
+import column3Img6 from "../../../assets/images/portfolio/column3Img6.png";
+import column3Img7 from "../../../assets/images/portfolio/column3Img7.png";
+import column3Img8 from "../../../assets/images/portfolio/column3Img8.png";
+import column3Img9 from "../../../assets/images/portfolio/column3Img9.png";
+import column3Img10 from "../../../assets/images/portfolio/column3Img10.png";
+import column3Img11 from "../../../assets/images/portfolio/column3Img11.png";
+import column3Img12 from "../../../assets/images/portfolio/column3Img12.png";
+import column3Img13 from "../../../assets/images/portfolio/column3Img13.png";
+import column3Img14 from "../../../assets/images/portfolio/column3Img14.png";
+import column3Img15 from "../../../assets/images/portfolio/column3Img15.png";
+import column3Img16 from "../../../assets/images/portfolio/column3Img16.png";
+import column3Img17 from "../../../assets/images/portfolio/column3Img17.png";
 
 export const gallery4Data = {
   tabs: [

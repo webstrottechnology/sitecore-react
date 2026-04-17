@@ -172,10 +172,10 @@ const Header_01 = () => {
         <div className="header_01">
           <div className="header-inner container">
             <div className="logo">
-             <Link to="/">
-              {" "}
-              <img src={Logo} alt="" />{" "}
-            </Link>
+              <Link to="/">
+                {" "}
+                <img src={Logo} alt="image" />{" "}
+              </Link>
             </div>
             {/* Desktop Menu */}
             <nav className="navbar-list">
@@ -475,7 +475,7 @@ const Header_01 = () => {
             <div className="cart-body">
               {cartItems.map((item) => (
                 <div className="cart-item" key={item.id}>
-                  <img src={item.img} alt="" className="img-box" />
+                  <img src={item.img} alt="image" className="img-box" />
 
                   <div className="text-box">
                     <h5>{item.name}</h5>

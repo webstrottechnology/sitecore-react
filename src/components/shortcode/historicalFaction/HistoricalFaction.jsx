@@ -46,7 +46,7 @@ const HistoricalFiction = () => {
                   <img
                     key={i}
                     src={img}
-                    alt=""
+                    alt="image"
                     className={active === i ? "active" : ""}
                     onClick={() => setActive(i)}
                   />
@@ -55,7 +55,7 @@ const HistoricalFiction = () => {
 
               {/* main image */}
               <div className="main">
-                <img src={images[active]} alt="" />
+                <img src={images[active]} alt="image" />
 
                 <div className="wishlist">
                   <FiHeart />

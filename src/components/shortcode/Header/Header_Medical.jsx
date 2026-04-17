@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { FiChevronDown, FiMenu, FiSearch, FiX } from "react-icons/fi";
 import "./Header_Medical.scss";
-import Logo from "../../../assets/images/home_medical/medical-logo.webp";
+import Logo from "../../../assets/images/home_medical/medical-logo.png";
 import { Link } from "react-router-dom";
 import { FiPhoneCall } from "react-icons/fi";
 import { IoLanguage } from "react-icons/io5";
 import { FiShoppingCart } from "react-icons/fi";
-import appointmentIcon from "../../../assets/images/home_medical/medical-header-icon.webp";
+import appointmentIcon from "../../../assets/images/home_medical/medical-header-icon.png";
 import { useCart } from "../CartContextWrap/CartContext";
 
 const Header_Medical = ({ direction, setDirection }) => {
@@ -61,7 +61,7 @@ const Header_Medical = ({ direction, setDirection }) => {
             <div className="logo">
               <Link to="/">
                 {" "}
-                <img src={Logo} alt="" />{" "}
+                <img src={Logo} alt="image" />{" "}
               </Link>
             </div>
 
@@ -533,7 +533,7 @@ const Header_Medical = ({ direction, setDirection }) => {
               <div className="cart-item" key={item.id}>
                 <div className="InnerContent">
                   <div className="ImgBox">
-                    <img src={item.img} alt="" />
+                    <img src={item.img} alt="image" />
                   </div>
                   <div className="info">
                     <h4>{item.name}</h4>
