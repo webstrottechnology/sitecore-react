@@ -1,6 +1,5 @@
 import { Routes, Route, useLocation } from "react-router-dom";
 import { useState, useEffect, lazy, Suspense } from "react";
-import ThemeSwitcher from "./components/shortcode/ThemeSwitcher/ThemeSwitcher";
 import DirectionSwitcher from "./components/shortcode/DirectionSwitcher/Direction";
 import Header_05 from "./components/shortcode/Header/Header_05";
 import { Sitecorefooter } from "./components/shortcode/footer/Footer";
