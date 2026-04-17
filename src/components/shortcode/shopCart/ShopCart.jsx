@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { ShopCartData } from "./shopCartData";
-import truck from "../../../assets/images/inner-pages/icons/truck.webp";
+import truck from "../../../assets/images/inner-pages/icons/truck.png";
 import "./ShopCart.scss";
  import { Link } from "react-router-dom";
 
@@ -66,7 +66,7 @@ const ShopCart = () => {
                         <td>
                           <div className="productsDetail">
                             <div className="productsImg">
-                              <img src={item.image} alt="" />
+                              <img src={item.image} alt="image" />
                             </div>
                             <h6>{item.title}</h6>
                           </div>

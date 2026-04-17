@@ -1,10 +1,10 @@
 // src/data/galleryData.js
 
-import sliderGalleryImg1 from "../../../assets/images/inner-pages/sliderGallery/sliderGalleryImg1.webp";
-import sliderGalleryImg2 from "../../../assets/images/inner-pages/sliderGallery/sliderGalleryImg2.webp";
-import sliderGalleryImg3 from "../../../assets/images/inner-pages/sliderGallery/sliderGalleryImg3.webp";
-import sliderGalleryImg4 from "../../../assets/images/inner-pages/sliderGallery/sliderGalleryImg4.webp";
-import sliderGalleryImg5 from "../../../assets/images/inner-pages/sliderGallery/sliderGalleryImg5.webp";
+import sliderGalleryImg1 from "../../../assets/images/inner-pages/sliderGallery/sliderGalleryImg1.png";
+import sliderGalleryImg2 from "../../../assets/images/inner-pages/sliderGallery/sliderGalleryImg2.png";
+import sliderGalleryImg3 from "../../../assets/images/inner-pages/sliderGallery/sliderGalleryImg3.png";
+import sliderGalleryImg4 from "../../../assets/images/inner-pages/sliderGallery/sliderGalleryImg4.png";
+import sliderGalleryImg5 from "../../../assets/images/inner-pages/sliderGallery/sliderGalleryImg5.png";
 
 const SliderGalleryData = [
   {

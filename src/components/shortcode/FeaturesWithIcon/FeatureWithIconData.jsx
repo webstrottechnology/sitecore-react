@@ -144,6 +144,7 @@ export const FeaturesWithIconDataTwo = [
     id: 3,
     icon: <FaSearch />,
     title: "SEO friendly",
+    link: "/SEOfriendly",
     desc: "Using Gatsby or Next.js with SSR support significantly affects improvement in SEO and making website more visible in Google searching results.",
   },
   {

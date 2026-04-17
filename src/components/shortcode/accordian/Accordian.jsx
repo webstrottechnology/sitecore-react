@@ -44,7 +44,7 @@ const Accordian = () => {
 
           {data.map((item, index) => (
             <div
-              key={index}
+              key={item.id}
               className={`accordian-item ${active === index ? "active" : ""}`}
             >
               <button
@@ -72,21 +72,18 @@ const AccordianTwo = () => {
   const contentRefs = useRef([]);
 
   const toggleAccordion = (id, index) => {
+    if (!contentRefs.current[index]) return;
+
     if (active2 === id) {
       contentRefs.current[index].style.height = "0px";
       setActive2(null);
     } else {
-      if (active2 !== null) {
-        const prevIndex = contentRefs.current.findIndex(
-          (el) => el.style.height !== "0px",
-        );
-        if (contentRefs.current[prevIndex]) {
-          contentRefs.current[prevIndex].style.height = "0px";
-        }
-      }
+      contentRefs.current.forEach((el) => {
+        if (el) el.style.height = "0px";
+      });
 
-      contentRefs.current[index].style.height =
-        contentRefs.current[index].scrollHeight + "px";
+      const el = contentRefs.current[index];
+      el.style.height = el.scrollHeight + "px";
 
       setActive2(id);
     }

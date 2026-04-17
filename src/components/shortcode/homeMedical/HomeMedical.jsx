@@ -226,7 +226,7 @@ const MedicalTeam = () => {
             <SwiperSlide key={index}>
               <div className="team12-card-box">
                 <div className="imgBox">
-                  <img src={member.img} alt="" />
+                  <img src={member.img} alt="image" />
 
                   <span
                     className={`plus ${openIndex === index ? "active" : ""}`}

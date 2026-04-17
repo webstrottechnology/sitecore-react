@@ -10,7 +10,7 @@ const ComingSoon = () => {
 
         {/* Logo */}
         <div className="logo">
-        <img src={Logo} alt="" />
+        <img src={Logo} alt="image" />
         </div>
 
         {/* small text */}

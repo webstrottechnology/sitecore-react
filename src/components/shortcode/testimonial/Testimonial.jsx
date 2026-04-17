@@ -1,6 +1,8 @@
 import React, { useRef, useEffect } from "react";
 import Slider from "react-slick";
 import { Swiper, SwiperSlide } from "swiper/react";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
@@ -64,7 +66,7 @@ const Testimonial = () => {
 
                     <div className="bottom_text">
                       <div className="bottom_text_img">
-                        <img src={item.img} alt="" />
+                        <img src={item.img} alt="image" />
                       </div>
 
                       <div className="bottom_text_info">

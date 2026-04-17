@@ -1,5 +1,4 @@
 import React, { useEffect, useRef } from "react";
-import EasyPieChart from "easy-pie-chart";
 import "./Progress.scss";
 import {
   dataEight,
@@ -13,6 +12,8 @@ import {
 } from "./ProgressData";
 import { AboutBannerBreadCrumb } from "../breadcrumb/Breadcrumb";
 import sitecoreBg from "../../../assets/images/sitecoreBreadCrumb_bg_img.png";
+import { CircularProgressbar, buildStyles } from "react-circular-progressbar";
+import "react-circular-progressbar/dist/styles.css";
 
 // progress bar one start
 const ProgressColumn = () => {
@@ -31,7 +32,7 @@ const ProgressColumn = () => {
       <AboutBannerBreadCrumb title="Progress" bgImage={sitecoreBg} />
       <div className="progress-wrapper">
         {dataOne.map((item, i) => (
-          <div className="progress-item" key={i}>
+          <div className="progress-item" key={item.id || i}>
             <span className="progress-title">{item.title}</span>
 
             <div className="progress-track">
@@ -70,19 +71,12 @@ const ProgressOne = () => {
 
 // progress bar two start
 const ProgressTwoColumn = () => {
-  useEffect(() => {
-    document.querySelectorAll(".progress-fill").forEach((bar) => {
-      const value = bar.getAttribute("data-value");
-      bar.style.width = value + "%";
-    });
-  }, []);
-
   return (
     <div className="progressTwo-section">
       {dataTwo.map((item, i) => (
-        <div className="progress-item" key={i}>
+        <div className="progress-item" key={item.id || i}>
           <div className="progress-track">
-            <div className="progress-fill" data-value={item.value}>
+            <div className="progress-fill" style={{ width: `${item.value}%` }}>
               <span className="progress-label">{item.title}</span>
               <span className="progress-percent">{item.value}%</span>
             </div>
@@ -127,7 +121,7 @@ const ProgressThreeColumn = () => {
   return (
     <div className="progressThree-section">
       {dataThree.map((item, i) => (
-        <div className="progressThree-item" key={i}>
+        <div className="progressThree-item" key={item.id || i}>
           <div className="progressThree-head">
             <span>{item.title}</span>
             {/* <span className="percent">{item.value}%</span> */}
@@ -223,7 +217,7 @@ const ProgressFive = () => {
   return (
     <div className="progressFive-wrapper">
       {dataFive.map((item, i) => (
-        <div className="circle-card" key={i}>
+        <div className="circle-card" key={item.id || i}>
           <div className="circle-box">
             <svg width="160" height="160">
               <circle cx="80" cy="80" r="60" className="bg" />
@@ -276,7 +270,7 @@ const ProgressSix = () => {
           {dataSix.map((item, i) => (
             <div
               className="card-box"
-              key={i}
+              key={item.id || i}
               style={{ backgroundColor: item.bg }}
             >
               <h3>{item.title}</h3>
@@ -309,39 +303,24 @@ const ProgressSix = () => {
 
 // progress bar seven start
 const ProgressSeven = () => {
-  const charts = useRef([]);
-
-  useEffect(() => {
-    charts.current.forEach((el) => {
-      if (!el || el.dataset.init) return;
-
-      el.dataset.init = "true";
-
-      new EasyPieChart(el, {
-        barColor: "#4285f4",
-        trackColor: "#f2f2f2",
-        scaleColor: false,
-        lineWidth: 8,
-        size: 150,
-        lineCap: "round",
-        animate: 2000,
-      });
-    });
-  }, []);
-
   return (
     <div className="progressSeven-section">
       <div className="container">
         <div className="row">
           {dataSeven.map((item, i) => (
-            <div className="col-md-3 text-center" key={i}>
+            <div className="col-md-3 text-center" key={item.id || i}>
               <div className="our-progress">
-                <div
-                  className="chart_one"
-                  data-percent={item.percent}
-                  ref={(el) => (charts.current[i] = el)}
-                >
-                  <span className="percent">{item.percent}%</span>
+                <div style={{ width: 150, height: 150, margin: "auto" }}>
+                  <CircularProgressbar
+                    value={item.percent}
+                    text={`${item.percent}%`}
+                    styles={buildStyles({
+                      pathColor: "#4285f4",
+                      textColor: "#000",
+                      trailColor: "#f2f2f2",
+                      strokeLinecap: "round",
+                    })}
+                  />
                 </div>
 
                 <h4>{item.title}</h4>

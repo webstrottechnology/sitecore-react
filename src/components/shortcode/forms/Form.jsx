@@ -27,7 +27,7 @@ import {
   FiEyeOff,
 } from "react-icons/fi";
 import { FcGoogle } from "react-icons/fc";
-import Logo from "../../../assets/images/sitecore_footer_logo.png";
+import Logo from "../../../assets/images/home-01/coprologo2.png";
 import { AboutBannerBreadCrumb } from "../breadcrumb/Breadcrumb";
 import sitecoreBg from "../../../assets/images/sitecoreBreadCrumb_bg_img.png";
 
@@ -151,7 +151,7 @@ const FormTwo = () => {
               <span>Login</span>
             </button>
             <button
-              className={`${islogin ? "active" : ""} outlinesqaurebtn md-btn`}
+              className={`${!islogin ? "active" : ""} outlinesqaurebtn md-btn`}
               onClick={() => setIsLogin(false)}
             >
               <span>SignUp</span>
@@ -316,11 +316,11 @@ const FormFour = () => {
         {/* Social */}
         <div className="social-buttons">
           <button className="social-btn">
-            <img src={googleIcon} alt="" />
+            <img src={googleIcon} alt="image" />
             Google
           </button>
           <button className="social-btn">
-            <img src={githubIcon} alt="" />
+            <img src={githubIcon} alt="image" />
             GitHub
           </button>
         </div>
@@ -346,7 +346,7 @@ const FormFive = () => {
           <p>See your growth and get consulting support!</p>
 
           <button className="google-btn">
-            <img src={googleIcon} alt="" />
+            <img src={googleIcon} alt="image" />
             Sign in with Google
           </button>
 
@@ -633,7 +633,7 @@ const FormEleven = () => {
     <div className="sitecore_lr_wrapper">
       <div className="auth_card">
         <div className="logo">
-          <img src={Logo} alt="" />
+          <img src={Logo} alt="image" />
         </div>
         <h3>Welcome!</h3>
         <p>Please Enter Your Detail</p>

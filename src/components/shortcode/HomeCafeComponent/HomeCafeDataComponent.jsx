@@ -16,7 +16,7 @@ import g7 from "../../../assets/images/homecafe/gallery7.png";
 import videoSrc from "../../../assets/images/homecafe/webstrot.mp4";
 import videoImg from "../../../assets/images/homecafe/v-img.png";
 import playIcon from "../../../assets/images/homecafe/play-icon.png";
-import pauseIcon from "../../../assets/images/homecafe/pause.webp";
+import pauseIcon from "../../../assets/images/homecafe/pause.png";
 import team1 from "../../../assets/images/homecafe/team1.png";
 import team2 from "../../../assets/images/homecafe/team2.png";
 import team3 from "../../../assets/images/homecafe/team3.png";

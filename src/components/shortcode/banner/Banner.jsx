@@ -45,7 +45,7 @@ const Banner = () => {
         {BannerData.map((item) => (
           <SwiperSlide key={item.id}>
             <div className="slide">
-              <img src={item.image} alt="" />
+              <img src={item.image} alt="image" />
             </div>
             <div className="overlay" />
             <div className="content">
@@ -257,7 +257,7 @@ const Banner5 = () => {
         {Banner5Data.map((item) => (
           <SwiperSlide key={item.id}>
             <div className="banner5_bg">
-              <img src={item.image} alt="" />
+              <img src={item.image} alt="image" />
             </div>
             <div className="banner5-content">
               {/* CENTER CONTENT */}
@@ -676,18 +676,21 @@ const MedicalTopBanner = () => {
                     <img
                       src={data.images.icon1}
                       className="floatingIcon icon1"
+                      alt="image"
                     />
                   </a>
                   <div className="girlImage ">
                     <img
                       src={data.images.doctor}
                       className="doctorImg img-fluid"
+                      alt="image"
                     />
                   </div>
                   <a href="javascript:;" className="icon2">
                     <img
                       src={data.images.icon2}
                       className="floatingIcon icon2"
+                      alt="image"
                     />
                   </a>
                 </div>

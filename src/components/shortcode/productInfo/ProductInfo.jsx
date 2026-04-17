@@ -83,7 +83,7 @@ const ProductInfo = () => {
               <div className="commentItem" key={index}>
                 <div className="commentPost">
                   <div className="userProfile">
-                    <img src={review.image} alt="" />
+                    <img src={review.image} alt="image" />
                   </div>
 
                   <div className="postContent">

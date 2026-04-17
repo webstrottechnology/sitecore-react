@@ -350,75 +350,17 @@
         }
     }
 
-}
-
-/* MOBILE BUTTON */
-.mobile-menu-btn {
-    display: none;
-    font-size: var(--fs26);
-    cursor: pointer;
-}
-
-/* ================= SEARCH ================= */
-.search-overlay {
-    position: fixed;
-    inset: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: rgba(0, 0, 0, 0.85);
-    backdrop-filter: blur(6px);
-    opacity: 0;
-    visibility: hidden;
-    transition: .4s;
-    z-index: 9999;
-
-    &.active {
-        opacity: 1;
-        visibility: visible;
-    }
-
-    .search-box {
-        position: relative;
-        width: 500px;
-        background: var(--white-color);
-        border-radius: var(--br50);
-        padding: var(--p10) var(--p20);
-        display: flex;
-        align-items: center;
-        transform: translateY(-50px);
-        transition: .4s;
+    /* MOBILE BUTTON */
+    .mobile-menu-btn {
+        display: none;
+        font-size: var(--fs26);
         cursor: pointer;
-
-        input {
-            width: var(--width100);
-            border: none;
-            outline: none;
-            font-size: var(--fs16);
-            padding-right: var(--p80);
-            font-weight: var(--fw400);
-            font-family: var(--heading-font);
-        }
-
-
-        .search-icon {
-            position: absolute;
-            right: 50px;
-            font-size: var(--fs30);
-            color: var(--green-color02);
-
-        }
-
-
-        .close-btn {
-            position: absolute;
-            right: 15px;
-            font-size: var(--fs22);
-            cursor: pointer;
-            color: var(--dark-gray);
-        }
     }
 }
+
+
+
+
 
 [dir="rtl"] {
     .medical-header {
@@ -557,6 +499,13 @@
         height: 40px;
     }
 
+    .medical-header .mobile-menu-btn {
+        display: block;
+    }
+
+    .medical-header .right-section {
+        gap: 8px;
+    }
 }
 
 @include responsive(mobile) {
@@ -585,12 +534,12 @@
     }
 
     .medical-header .appointment-btn {
-        padding: 0;
-        width: 40px;
-        height: 40px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        display: none;
+    }
+
+    .medical-header .appointment-btn img {
+        width: 100%;
+        height: 100%;
     }
 
     .medical-header .contact-box {
@@ -603,8 +552,12 @@
     }
 
     .medical-header .right-section .toggleBtn a svg {
-        width: 36px;
-        height: 36px;
+        width: 30px;
+        height: 30px;
+    }
+
+    .medical-header .right-section {
+        gap: 10px;
     }
 }
 
@@ -615,14 +568,7 @@
         font-size: var(--fs12);
     }
 
-    .medical-header .right {
-        gap: 6px;
-    }
-
-}
-
-@include responsive(xxs) {
     .medical-header .logo img {
-        width: 100px;
+        width: 110px;
     }
 }

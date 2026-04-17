@@ -23,7 +23,7 @@ const Header = ({ setSidebar }) => {
       <h2>
         <Link to="/">
           {" "}
-          <img src={Logo} alt="" />{" "}
+          <img src={Logo} alt="image" />{" "}
         </Link>
       </h2>
 

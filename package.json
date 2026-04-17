@@ -1,8 +1,19 @@
 {
-  "name": "sitecore",
+  "name": "sitecore-react-template",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
+  "description": "A modern and responsive React template with reusable UI components, built using Vite and optimized for performance.",
+  "author": "Webstrot",
+  "license": "MIT",
   "type": "module",
+  "keywords": [
+    "react",
+    "vite",
+    "template",
+    "ui",
+    "responsive",
+    "themeforest"
+  ],
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -10,22 +21,22 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "animejs": "^4.3.5",
     "aos": "^2.3.4",
     "bootstrap": "^5.3.8",
-    "easy-pie-chart": "^2.1.7",
+    "dompurify": "^3.4.0",
     "framer-motion": "^12.34.0",
     "ogl": "^1.0.11",
     "react": "^19.2.0",
     "react-bootstrap": "^2.10.10",
+    "react-circular-progressbar": "^2.2.0",
     "react-countup": "^6.5.3",
     "react-dom": "^19.2.0",
     "react-grid-gallery": "^1.0.1",
+    "react-helmet-async": "^3.0.0",
     "react-icons": "^5.6.0",
     "react-intersection-observer": "^10.0.3",
     "react-router-dom": "^7.12.0",
     "react-slick": "^0.31.0",
-    "rtlcss": "^4.3.0",
     "slick-carousel": "^1.8.1",
     "swiper": "^12.1.0",
     "yet-another-react-lightbox": "^3.28.0"
@@ -39,6 +50,7 @@
     "eslint-plugin-react-hooks": "^7.0.1",
     "eslint-plugin-react-refresh": "^0.4.24",
     "globals": "^16.5.0",
+    "rtlcss": "^4.3.0",
     "sass": "^1.97.2",
     "vite": "^7.2.4"
   }

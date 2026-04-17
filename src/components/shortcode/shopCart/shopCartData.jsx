@@ -1,4 +1,4 @@
-import ShopCartThumbnail from "../../../assets/images/inner-pages/ShopCartThumbnail.webp";
+import ShopCartThumbnail from "../../../assets/images/inner-pages/ShopCartThumbnail.png";
 
 export const ShopCartData = [
   {

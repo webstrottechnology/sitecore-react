@@ -772,25 +772,23 @@
       }
     }
 
-    .videoModal {
-      .closeBtn {
-        position: absolute;
-        display: inline-block;
-        top: 0;
-        /* 👈 adjust kar sakti hai */
-        right: 0;
-        font-size: 28px;
-        color: var(--white-color);
-        cursor: pointer;
-        z-index: 10000;
-        background: var(--black-color);
-        width: 35px;
-        height: 35px;
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
+    .closeBtn {
+      position: absolute;
+      display: inline-block;
+      top: 0;
+      /* 👈 adjust kar sakti hai */
+      right: 0;
+      font-size: 28px;
+      color: var(--white-color);
+      cursor: pointer;
+      z-index: 10000;
+      background: var(--black-color);
+      width: 35px;
+      height: 35px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
   }
 }
@@ -818,7 +816,6 @@
   width: var(--width100);
   height: 100%;
   z-index: 9999;
-
   display: flex;
   align-items: center;
   justify-content: center;
@@ -838,15 +835,15 @@
       height: 450px;
       border: none;
     }
+  }
 
-    .closeBtn {
-      position: absolute;
-      top: -30px;
-      right: 0;
-      color: var(--white-color);
-      font-size: var(--fs22);
-      cursor: pointer;
-    }
+  .closeBtn {
+    position: absolute;
+    top: 20%;
+    right: 25%;
+    color: var(--white-color);
+    font-size: var(--fs22);
+    cursor: pointer;
   }
 }
 
@@ -932,6 +929,9 @@
     /* HEADING */
     .testimonialsHeadingSlider {
       margin-bottom: var(--m24);
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
 
       span {
         font-size: var(--fs26);
@@ -1225,6 +1225,8 @@
       }
     }
   }
+
+
 }
 
 [dir="rtl"] {
@@ -1297,7 +1299,7 @@
     font-size: var(--fs16);
   }
 
-  .mediCounterIcon span {
+  .mediLatestCounter .mediCounterInner .mediCounterItem .mediCounterIcon span {
     width: 80px;
     height: 80px;
   }
@@ -1373,6 +1375,35 @@
 
   .medicalTopCategories .medTopCategoriesHeading h3 {
     font-size: var(--fs30);
+  }
+
+  .videoModal .videoModalContent {
+    width: 90%;
+  }
+
+  .videoModal .closeBtn {
+    top: 15%;
+    right: 3%;
+  }
+
+  .mediLatestCounter .mediCounterInner .mediCounterItem .mediCounterContant h4 {
+    font-size: var(--fs32);
+  }
+
+  .mediLatestCounter .mediCounterInner .mediCounterItem .mediCounterContant .label {
+    font-size: var(--fs20);
+  }
+
+  .portfolioGallery {
+    padding: var(--p40) var(--p0);
+  }
+
+  .MedicalTestimonials {
+    padding: var(--p60) 0;
+  }
+
+  .MedicalTeam-section {
+    padding: var(--p60) var(--p0);
   }
 }
 
@@ -1463,6 +1494,9 @@
     width: 35px;
     height: 35px;
   }
+
+
+
 }
 
 @include responsive(xs) {
