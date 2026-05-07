@@ -882,11 +882,16 @@ p {
     justify-content: space-between;
     padding: var(--p24) var(--p16);
     border-bottom: 1px solid #eee;
+    cursor: pointer;
 
     h3 {
       color: var(--black-color);
       font-weight: var(--fw600);
       font-size: var(--fs26);
+
+       svg{
+          cursor: pointer;
+       }
     }
   }
 
@@ -991,6 +996,7 @@ p {
         border-radius: 50%;
         padding: var(--p6);
         background-color: transparent;
+        cursor: pointer;
 
         svg {
           cursor: pointer;

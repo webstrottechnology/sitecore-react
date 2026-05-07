@@ -29,7 +29,7 @@ const PortfolioColumn4 = lazy(
 );
 const BlogPage = lazy(() => import("./components/pages/BlogPage"));
 const BlogImagePage = lazy(() => import("./components/pages/BlogImagePage"));
-const BlogVedioPage = lazy(() => import("./components/pages/BlogVedioPage"));
+const BlogVideoPage = lazy(() => import("./components/pages/BlogVideoPage"));
 const BlogSliderPage = lazy(() => import("./components/pages/BlogSliderPage"));
 const BlogVimeoPage = lazy(() => import("./components/pages/BlogVimeoPage"));
 const BlogAudioPage = lazy(() => import("./components/pages/BlogAudioPage"));
@@ -56,7 +56,7 @@ const HomeCafe = lazy(() => import("./components/pages/HomeCafe"));
 const FormEleven = lazy(() =>
   import("./components/shortcode/forms/Form").then((module) => ({
     default: module.FormEleven,
-  }))
+  })),
 );
 
 const App = () => {
@@ -71,12 +71,10 @@ const App = () => {
 
   useEffect(() => {
     AOS.init({
-      duration: 2000,
+      duration: 1200,
       once: true,
     });
-  }, []);
 
-  useEffect(() => {
     AOS.refresh();
   }, []);
 
@@ -106,7 +104,7 @@ const App = () => {
           <Route path="/portfolio-4-column" element={<PortfolioColumn4 />} />
           <Route path="/blog-page" element={<BlogPage />} />
           <Route path="/image-post" element={<BlogImagePage />} />
-          <Route path="/youtube-post" element={<BlogVedioPage />} />
+          <Route path="/youtube-post" element={<BlogVideoPage />} />
           <Route path="/slider-post" element={<BlogSliderPage />} />
           <Route path="/vimeo-post" element={<BlogVimeoPage />} />
           <Route path="/audio-post" element={<BlogAudioPage />} />

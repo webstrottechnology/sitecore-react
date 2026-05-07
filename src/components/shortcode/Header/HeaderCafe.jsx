@@ -3,7 +3,7 @@ import { FiChevronDown, FiMenu, FiSearch, FiX } from "react-icons/fi";
 import "./HeaderCafe.scss";
 import Logo from "../../../assets/images/homecafe/cafe-logo.png";
 import { FiShoppingCart } from "react-icons/fi";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { IoLanguage } from "react-icons/io5";
 import { useCart } from "../CartContextWrap/CartContext";
 
@@ -45,7 +45,7 @@ const HeaderCafe = ({ direction, setDirection }) => {
     { label: "Home Medical", path: "/home-medical" },
     { label: "Home Cafe", path: "/home-cafe" },
   ];
-
+  const navigate = useNavigate();
   return (
     <>
       <header
@@ -67,8 +67,7 @@ const HeaderCafe = ({ direction, setDirection }) => {
             <ul className="nav">
               {/* HOME */}
               <li className="mega-parent">
-                <a href="#">
-                  {" "}
+                <a href="#!" onClick={(e) => e.preventDefault()}>
                   Home
                   <FiChevronDown />
                 </a>
@@ -84,9 +83,9 @@ const HeaderCafe = ({ direction, setDirection }) => {
               </li>
               {/* NORMAL */}
               <li className="mega-parent">
-                <Link to="#">
+                <a href="#!" onClick={(e) => e.preventDefault()}>
                   Pages <FiChevronDown />
-                </Link>
+                </a>
 
                 <div className="mega-menu-box dropdwonMenu">
                   <div>
@@ -103,9 +102,9 @@ const HeaderCafe = ({ direction, setDirection }) => {
                 </div>
               </li>
               <li className="mega-parent">
-                <Link to="#">
+                <a href="#!" onClick={(e) => e.preventDefault()}>
                   Portfolio <FiChevronDown />
-                </Link>
+                </a>
                 <div className="mega-menu-box dropdwonMenu">
                   <div>
                     <Link to="/portfolio-3-column">Portfolio 3 column</Link>
@@ -115,9 +114,9 @@ const HeaderCafe = ({ direction, setDirection }) => {
                 </div>
               </li>
               <li className="mega-parent">
-                <Link to="#">
+                <a href="#!" onClick={(e) => e.preventDefault()}>
                   Blog <FiChevronDown />
-                </Link>
+                </a>
                 <div className="mega-menu-box dropdwonMenu">
                   <div>
                     <Link to="/blog-page">Blog With Sidebar</Link>
@@ -131,9 +130,9 @@ const HeaderCafe = ({ direction, setDirection }) => {
                 </div>
               </li>
               <li className="mega-parent">
-                <Link to="#">
+                <a href="#!" onClick={(e) => e.preventDefault()}>
                   Shop <FiChevronDown />
-                </Link>
+                </a>
                 <div className="mega-menu-box dropdwonMenu">
                   <div>
                     <Link to="/product-with-sidebar">Product Sidebar</Link>
@@ -145,9 +144,9 @@ const HeaderCafe = ({ direction, setDirection }) => {
                 </div>
               </li>
               <li className="mega-parent">
-                <Link to="#">
+                <a href="#!" onClick={(e) => e.preventDefault()}>
                   ShortCode <FiChevronDown />
-                </Link>
+                </a>
 
                 <div className="mega-menu-box">
                   <div>
@@ -184,7 +183,7 @@ const HeaderCafe = ({ direction, setDirection }) => {
                 </div>
               </li>
               <li>
-                <Link to="Contact">Contact</Link>
+                <Link to="/contact">Contact</Link>
               </li>
             </ul>
 
@@ -530,10 +529,7 @@ const HeaderCafe = ({ direction, setDirection }) => {
             <Link
               to="/cart"
               className="filledroundedbtn md-btn"
-              onClick={() => {
-                setCartOpen(false);
-                navigate("/cart"); // 👈 cart page
-              }}
+              onClick={() => setCartOpen(false)}
             >
               <span>View Cart</span>
             </Link>
@@ -541,10 +537,7 @@ const HeaderCafe = ({ direction, setDirection }) => {
             <Link
               to="/checkout"
               className="filledroundedbtn md-btn"
-              onClick={() => {
-                setCartOpen(false);
-                navigate("/checkout"); // 👈 checkout page
-              }}
+              onClick={() => setCartOpen(false)}
             >
               <span>Checkout</span>
             </Link>

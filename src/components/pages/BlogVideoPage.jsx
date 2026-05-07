@@ -6,7 +6,7 @@ import BlogVedioSidebarPage from "../shortcode/BlogMainPage/BlogVedioSidebarPage
 const BlogVedioPage = () => {
   return (
     <div>
-      <AboutBannerBreadCrumb title="Blog Single Vedio" bgImage={sitecoreBg} />
+      <AboutBannerBreadCrumb title="Blog Single Video" bgImage={sitecoreBg} />
       <BlogVedioSidebarPage />
     </div>
   );
