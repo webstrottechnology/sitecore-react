@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import { FiChevronDown, FiMenu, FiSearch, FiX } from "react-icons/fi";
 import "./Header_05.scss";
 import Logo from "../../../assets/images/home-01/logo.png";
 import { FiShoppingCart } from "react-icons/fi";
-import { Link } from "react-router-dom";
 import { IoLanguage } from "react-icons/io5";
 import { useCart } from "../CartContextWrap/CartContext";
 
@@ -13,6 +13,7 @@ const Header_05 = ({ direction, setDirection }) => {
   const [searchOpen, setSearchOpen] = useState(false);
   const [cartOpen, setCartOpen] = useState(false);
   const { cartItems, increaseQty, decreaseQty, removeItem } = useCart();
+  const navigate = useNavigate();
 
   const totalPrice = cartItems.reduce(
     (acc, item) => acc + item.price * item.qty,
@@ -67,7 +68,7 @@ const Header_05 = ({ direction, setDirection }) => {
           <ul className="nav">
             {/* HOME */}
             <li className="mega-parent">
-              <a href="#">
+              <a href="#!" onClick={(e) => e.preventDefault()}>
                 {" "}
                 Home
                 <FiChevronDown />
@@ -84,9 +85,9 @@ const Header_05 = ({ direction, setDirection }) => {
             </li>
             {/* NORMAL */}
             <li className="mega-parent">
-              <Link to="#">
+              <a href="#!" onClick={(e) => e.preventDefault()}>
                 Pages <FiChevronDown />
-              </Link>
+              </a>
 
               <div className="mega-menu-box dropdwonMenu">
                 <div>
@@ -103,9 +104,9 @@ const Header_05 = ({ direction, setDirection }) => {
               </div>
             </li>
             <li className="mega-parent">
-              <Link to="#">
+              <a href="#!" onClick={(e) => e.preventDefault()}>
                 Portfolio <FiChevronDown />
-              </Link>
+              </a>
               <div className="mega-menu-box dropdwonMenu">
                 <div>
                   <Link to="/portfolio-3-column">Portfolio 3 column</Link>
@@ -115,9 +116,9 @@ const Header_05 = ({ direction, setDirection }) => {
               </div>
             </li>
             <li className="mega-parent">
-              <Link to="#">
+              <a href="#!" onClick={(e) => e.preventDefault()}>
                 Blog <FiChevronDown />
-              </Link>
+              </a>
               <div className="mega-menu-box dropdwonMenu">
                 <div>
                   <Link to="/blog-page">Blog With Sidebar</Link>
@@ -131,9 +132,9 @@ const Header_05 = ({ direction, setDirection }) => {
               </div>
             </li>
             <li className="mega-parent">
-              <Link to="#">
+              <a href="#!" onClick={(e) => e.preventDefault()}>
                 Shop <FiChevronDown />
-              </Link>
+              </a>
               <div className="mega-menu-box dropdwonMenu">
                 <div>
                   <Link to="/product-with-sidebar">Product Sidebar</Link>
@@ -145,9 +146,9 @@ const Header_05 = ({ direction, setDirection }) => {
               </div>
             </li>
             <li className="mega-parent">
-              <Link to="#">
+              <a href="#!" onClick={(e) => e.preventDefault()}>
                 ShortCode <FiChevronDown />
-              </Link>
+              </a>
 
               <div className="mega-menu-box">
                 <div>
@@ -184,7 +185,7 @@ const Header_05 = ({ direction, setDirection }) => {
               </div>
             </li>
             <li>
-              <Link to="Contact">Contact</Link>
+              <Link to="/contact">Contact</Link>
             </li>
           </ul>
 
@@ -500,7 +501,7 @@ const Header_05 = ({ direction, setDirection }) => {
                   </div>
                   <div className="info">
                     <h4>{item.name}</h4>
-                    <p>${item.price}</p>
+                    <p>₹{item.price}</p>
 
                     <div className="qty">
                       <button onClick={() => decreaseQty(item.id)}>-</button>
@@ -524,10 +525,7 @@ const Header_05 = ({ direction, setDirection }) => {
             <Link
               to="/cart"
               className="filledroundedbtn md-btn"
-              onClick={() => {
-                setCartOpen(false);
-                navigate("/cart"); // 👈 cart page
-              }}
+              onClick={() => setCartOpen(false)}
             >
               <span>View Cart</span>
             </Link>
@@ -535,10 +533,7 @@ const Header_05 = ({ direction, setDirection }) => {
             <Link
               to="/checkout"
               className="filledroundedbtn md-btn"
-              onClick={() => {
-                setCartOpen(false);
-                navigate("/checkout"); // 👈 checkout page
-              }}
+              onClick={() => setCartOpen(false)}
             >
               <span>Checkout</span>
             </Link>
