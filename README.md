@@ -100,4 +100,4 @@ This project is intended for development and template usage.
 
 ## Author
 
-Built using React and Vite for Sitecore integration.
+Created by Webstrot :  Built using React and Vite for Sitecore integration. 

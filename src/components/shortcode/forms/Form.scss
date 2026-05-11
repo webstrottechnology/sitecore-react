@@ -799,6 +799,10 @@
             }
         }
 
+        input[type="radio"] {
+            width: auto;
+        }
+
         textarea {
             border-radius: var(--br16);
             resize: none;
@@ -808,17 +812,19 @@
         button {
             margin-top: var(--m10);
             background: var(--blue06-color);
-            color: var(--white-color);
+            color: var(--blue-color);
             border: none;
             padding: var(--p14);
             border-radius: var(--br30);
             font-size: var(--fs16);
             cursor: pointer;
             transition: 0.3s;
+            border: 1px solid var(--blue-color);
 
 
             &:hover {
                 background: var(--blue-color);
+                color: var(--white-color);
             }
         }
     }
@@ -1947,6 +1953,10 @@
     .FormNine-wrapper .contact-card .contact-left .input-group textarea {
         text-align: right;
     }
+
+    .form-seven .radio-group label {
+        flex-direction: row-reverse;
+    }
 }
 
 // resposnsive css start 
@@ -2105,7 +2115,7 @@
     }
 
     .form-seven__right {
-        padding: var(--p26) var(--p10);
+        padding: var(--p26) var(--p22);
     }
 
     .form-seven__right h3 {
