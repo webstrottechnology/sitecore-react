@@ -6,17 +6,17 @@ export const useCart = () => useContext(CartContext);
 
 const CartProvider = ({ children }) => {
   const [cartItems, setCartItems] = useState(() => {
-    // 🔥 localStorage se load (refresh pe bhi rahe)
+    // Load cart from localStorage on initial render (persist after refresh)
     const savedCart = localStorage.getItem("cart");
     return savedCart ? JSON.parse(savedCart) : [];
   });
 
-  // 🔥 save to localStorage
+  // Save cart to localStorage whenever cartItems change
   useEffect(() => {
     localStorage.setItem("cart", JSON.stringify(cartItems));
   }, [cartItems]);
 
-  // ✅ ADD TO CART
+  // Add product to cart
   const addToCart = (product) => {
     setCartItems((prev) => {
       const exist = prev.find((item) => Number(item.id) === Number(product.id));
@@ -41,14 +41,14 @@ const CartProvider = ({ children }) => {
     });
   };
 
-  // ✅ REMOVE ITEM
+  // Remove item from cart
   const removeItem = (id) => {
     setCartItems((prev) =>
       prev.filter((item) => Number(item.id) !== Number(id)),
     );
   };
 
-  // ✅ INCREASE QTY
+  // Increase quantity
   const increaseQty = (id) => {
     setCartItems((prev) =>
       prev.map((item) =>
@@ -57,7 +57,7 @@ const CartProvider = ({ children }) => {
     );
   };
 
-  // ✅ DECREASE QTY
+  // Decrease quantity (minimum 1)
   const decreaseQty = (id) => {
     setCartItems((prev) =>
       prev.map((item) =>
@@ -68,13 +68,13 @@ const CartProvider = ({ children }) => {
     );
   };
 
-  // ✅ TOTAL PRICE
+  // Calculate total price
   const totalPrice = cartItems.reduce(
     (acc, item) => acc + item.price * item.qty,
     0,
   );
 
-  // ✅ TOTAL COUNT (better than length)
+  // Calculate total item quantity
   const totalItems = cartItems.reduce((acc, item) => acc + item.qty, 0);
 
   return (

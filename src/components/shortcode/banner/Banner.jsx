@@ -672,13 +672,13 @@ const MedicalTopBanner = () => {
             <div className="col-md-6">
               <div className="medTopBannerImage">
                 <div className="medTopBannerInnerImg">
-                  <a href="javascript:;" className="icon1">
+                  <Link to="/" className="icon1">
                     <img
                       src={data.images.icon1}
                       className="floatingIcon icon1"
                       alt="image"
                     />
-                  </a>
+                  </Link>
                   <div className="girlImage ">
                     <img
                       src={data.images.doctor}
@@ -686,13 +686,13 @@ const MedicalTopBanner = () => {
                       alt="image"
                     />
                   </div>
-                  <a href="javascript:;" className="icon2">
+                  <Link to="/" className="icon2">
                     <img
                       src={data.images.icon2}
                       className="floatingIcon icon2"
                       alt="image"
                     />
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>

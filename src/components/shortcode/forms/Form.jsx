@@ -994,7 +994,8 @@ const FormFourteen = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(formData);
+
+    alert("Form submitted successfully!");
   };
 
   return (
