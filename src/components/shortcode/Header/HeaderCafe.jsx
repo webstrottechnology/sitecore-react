@@ -19,6 +19,13 @@ const HeaderCafe = ({ direction, setDirection }) => {
   );
   const [isFixed, setIsFixed] = useState(false);
 
+  // ccurrency js format
+  const formatPrice = (value) =>
+    new Intl.NumberFormat("en-IN", {
+      style: "currency",
+      currency: "INR",
+    }).format(value);
+
   // ✅ SCROLL FIX HEADER
   useEffect(() => {
     const handleScroll = () => {
@@ -535,9 +542,12 @@ const HeaderCafe = ({ direction, setDirection }) => {
                   <div className="ImgBox">
                     <img src={item.img} alt="image" />
                   </div>
+
                   <div className="info">
                     <h4>{item.name}</h4>
-                    <p>${item.price}</p>
+
+                    {/* ✅ FIXED PRICE */}
+                    <p>{formatPrice(item.price)}</p>
 
                     <div className="qty">
                       <button onClick={() => decreaseQty(item.id)}>-</button>
@@ -546,6 +556,7 @@ const HeaderCafe = ({ direction, setDirection }) => {
                     </div>
                   </div>
                 </div>
+
                 <div className="CancelBox">
                   <FiX onClick={() => removeItem(item.id)} />
                 </div>
@@ -555,7 +566,8 @@ const HeaderCafe = ({ direction, setDirection }) => {
         </div>
 
         <div className="cart-footer">
-          <h4>Total: ${totalPrice}</h4>
+          {/* ✅ FIXED TOTAL */}
+          <h4>Total: {formatPrice(totalPrice)}</h4>
 
           <div className="cart-buttons">
             <Link

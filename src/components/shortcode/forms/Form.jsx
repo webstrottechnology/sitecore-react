@@ -376,7 +376,7 @@ const FormFive = () => {
 
 const FormSeven = () => {
   return (
-    <div className="formSeven-wrapper">
+    <div className="form-seven">
       <div className="form-seven__container">
         {/* Left Side */}
         <div className="form-seven__left">
@@ -995,7 +995,16 @@ const FormFourteen = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    alert("Form submitted successfully!");
+    // form submit success message (simple UI feedback)
+    console.log("Form submitted successfully");
+
+    // optional: reset form
+    setFormData({
+      name: "",
+      email: "",
+      website: "",
+      comment: "",
+    });
   };
 
   return (
