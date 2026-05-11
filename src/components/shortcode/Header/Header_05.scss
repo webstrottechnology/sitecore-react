@@ -82,6 +82,20 @@
         gap: 5px;
       }
 
+      button {
+        color: var(--white-color);
+        font-size: var(--fs16);
+        font-weight: var(--fw400);
+        font-family: var(--heading-font);
+        text-transform: capitalize;
+        position: relative;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        border: none;
+        background-color: transparent;
+      }
+
       /* MEGA MENU */
 
       .mega-menu-box {
@@ -375,6 +389,8 @@
 
 /* RESPONSIVE */
 
+
+
 @include responsive(md) {
   .header_05_section .nav {
     gap: 10px;
@@ -396,6 +412,14 @@
   }
 
 }
+
+@include responsive(laptop) {
+  .header_05_section .nav li button {
+    font-size: var(--fs14);
+    gap: 2px;
+  }
+}
+
 
 @include responsive(tablet-sm) {
   .header_05_section .nav {

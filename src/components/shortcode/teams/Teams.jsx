@@ -80,26 +80,45 @@ const Teams = () => {
 
                       <ul className="social">
                         <li>
-                          {" "}
-                          <a href="javascript:;">
+                          <a
+                            href="https://facebook.com"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="Facebook"
+                          >
                             <FaFacebookF />
                           </a>
                         </li>
+
                         <li>
-                          {" "}
-                          <a href="javascript:;">
+                          <a
+                            href="https://twitter.com"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="Twitter"
+                          >
                             <FaTwitter />
                           </a>
                         </li>
+
                         <li>
-                          {" "}
-                          <a href="javascript:;">
+                          <a
+                            href="https://linkedin.com"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="LinkedIn"
+                          >
                             <FaLinkedinIn />
                           </a>
                         </li>
+
                         <li>
-                          {" "}
-                          <a href="javascript:;">
+                          <a
+                            href="https://google.com"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="Google"
+                          >
                             <FaGooglePlusG />
                           </a>
                         </li>
@@ -179,26 +198,45 @@ const Teams2 = () => {
 
                   <ul className="team2-social">
                     <li>
-                      {" "}
-                      <a href="javascript:;">
+                      <a
+                        href="https://facebook.com"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="Facebook"
+                      >
                         <FaFacebookF />
                       </a>
                     </li>
+
                     <li>
-                      {" "}
-                      <a href="javascript:;">
+                      <a
+                        href="https://twitter.com"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="Twitter"
+                      >
                         <FaTwitter />
                       </a>
                     </li>
+
                     <li>
-                      {" "}
-                      <a href="javascript:;">
+                      <a
+                        href="https://linkedin.com"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="LinkedIn"
+                      >
                         <FaLinkedinIn />
                       </a>
                     </li>
+
                     <li>
-                      {" "}
-                      <a href="javascript:;">
+                      <a
+                        href="https://instagram.com"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="Instagram"
+                      >
                         <FaInstagram />
                       </a>
                     </li>
@@ -365,22 +403,40 @@ const Team5 = () => {
                   {/* Social */}
                   <ul className="team5-social">
                     <li>
-                      <a href="javascript:;">
+                      <a
+                        href="https://facebook.com"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="Facebook"
+                      >
                         <FaFacebookF />
                       </a>
                     </li>
+
                     <li>
-                      <a href="javascript:;">
+                      <a
+                        href="https://twitter.com"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="Twitter"
+                      >
                         <FaTwitter />
                       </a>
                     </li>
+
                     <li>
-                      <a href="javascript:;">
+                      <a
+                        href="https://linkedin.com"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="LinkedIn"
+                      >
                         <FaLinkedinIn />
                       </a>
                     </li>
+
                     <li>
-                      <a href="javascript:;">
+                      <a href="#" aria-label="RSS">
                         <FaRss />
                       </a>
                     </li>
@@ -413,22 +469,45 @@ const Team6 = () => {
 
                 <ul className="team6-social">
                   <li>
-                    <a href="javascript:;">
+                    <a
+                      href="https://facebook.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="Facebook"
+                    >
                       <FaFacebookF />
                     </a>
                   </li>
+
                   <li>
-                    <a href="javascript:;">
+                    <a
+                      href="https://instagram.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="Instagram"
+                    >
                       <FaInstagram />
                     </a>
                   </li>
+
                   <li>
-                    <a href="javascript:;">
+                    <a
+                      href="https://twitter.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="Twitter"
+                    >
                       <FaTwitter />
                     </a>
                   </li>
+
                   <li>
-                    <a href="javascript:;">
+                    <a
+                      href="https://linkedin.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="LinkedIn"
+                    >
                       <FaLinkedinIn />
                     </a>
                   </li>
@@ -529,16 +608,39 @@ const Team8 = () => {
 
               {/* Social */}
               <div className="team-social">
-                <a href="javascript:;">
+                <a
+                  href="https://twitter.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Twitter"
+                >
                   <FaTwitter />
                 </a>
-                <a href="javascript:;">
+
+                <a
+                  href="https://pinterest.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Pinterest"
+                >
                   <FaPinterestP />
                 </a>
-                <a href="javascript:;">
+
+                <a
+                  href="https://facebook.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Facebook"
+                >
                   <FaFacebookF />
                 </a>
-                <a href="javascript:;">
+
+                <a
+                  href="https://dribbble.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Dribbble"
+                >
                   <FaDribbble />
                 </a>
               </div>
@@ -569,17 +671,39 @@ const Team9 = () => {
               <h4>{item.name}</h4>
               <span>{item.role}</span>
               <div className="team9-social">
-                <a href="javascript:;">
+                <a
+                  href="https://instagram.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Instagram"
+                >
                   <FaInstagram />
                 </a>
-                <a href="javascript:;">
+
+                <a
+                  href="https://facebook.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Facebook"
+                >
                   <FaFacebookF />
                 </a>
-                <a href="javascript:;">
+
+                <a
+                  href="https://twitter.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Twitter"
+                >
                   <FaTwitter />
                 </a>
-                <a href="javascript:;">
-                  {" "}
+
+                <a
+                  href="https://youtube.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="YouTube"
+                >
                   <FaYoutube />
                 </a>
               </div>
@@ -621,14 +745,30 @@ const Team10 = () => {
             <p>{item.role}</p>
 
             <div className="social-icon">
-              <a href="javascript:;">
+              <a
+                href="https://instagram.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Instagram"
+              >
                 <FaInstagram />
               </a>
-              <a href="javascript:;">
+
+              <a
+                href="https://facebook.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Facebook"
+              >
                 <FaFacebookF />
               </a>
-              <a href="javascript:;">
-                {" "}
+
+              <a
+                href="https://youtube.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="YouTube"
+              >
                 <FaYoutube />
               </a>
             </div>

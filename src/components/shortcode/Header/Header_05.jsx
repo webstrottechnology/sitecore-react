@@ -68,11 +68,14 @@ const Header_05 = ({ direction, setDirection }) => {
           <ul className="nav">
             {/* HOME */}
             <li className="mega-parent">
-              <a href="#!" onClick={(e) => e.preventDefault()}>
-                {" "}
-                Home
-                <FiChevronDown />
-              </a>
+              <button
+                type="button"
+                className="dropdown-trigger"
+                onClick={() => toggleMenu("home")}
+                aria-expanded={mobileDrop === "home"}
+              >
+                Home <FiChevronDown />
+              </button>
               <div className="mega-menu-box dropdwonMenu">
                 <div>
                   {homeLinks.map((item, i) => (
@@ -85,9 +88,14 @@ const Header_05 = ({ direction, setDirection }) => {
             </li>
             {/* NORMAL */}
             <li className="mega-parent">
-              <a href="#!" onClick={(e) => e.preventDefault()}>
+              <button
+                type="button"
+                className="dropdown-trigger"
+                onClick={() => toggleMenu("pages")}
+                aria-expanded={mobileDrop === "pages"}
+              >
                 Pages <FiChevronDown />
-              </a>
+              </button>
 
               <div className="mega-menu-box dropdwonMenu">
                 <div>
@@ -104,9 +112,14 @@ const Header_05 = ({ direction, setDirection }) => {
               </div>
             </li>
             <li className="mega-parent">
-              <a href="#!" onClick={(e) => e.preventDefault()}>
+              <button
+                type="button"
+                className="dropdown-trigger"
+                onClick={() => toggleMenu("portfolio")}
+                aria-expanded={mobileDrop === "portfolio"}
+              >
                 Portfolio <FiChevronDown />
-              </a>
+              </button>
               <div className="mega-menu-box dropdwonMenu">
                 <div>
                   <Link to="/portfolio-3-column">Portfolio 3 column</Link>
@@ -116,9 +129,14 @@ const Header_05 = ({ direction, setDirection }) => {
               </div>
             </li>
             <li className="mega-parent">
-              <a href="#!" onClick={(e) => e.preventDefault()}>
+              <button
+                type="button"
+                className="dropdown-trigger"
+                onClick={() => toggleMenu("blog")}
+                aria-expanded={mobileDrop === "blog"}
+              >
                 Blog <FiChevronDown />
-              </a>
+              </button>
               <div className="mega-menu-box dropdwonMenu">
                 <div>
                   <Link to="/blog-page">Blog With Sidebar</Link>
@@ -132,9 +150,14 @@ const Header_05 = ({ direction, setDirection }) => {
               </div>
             </li>
             <li className="mega-parent">
-              <a href="#!" onClick={(e) => e.preventDefault()}>
+              <button
+                type="button"
+                className="dropdown-trigger"
+                onClick={() => toggleMenu("shop")}
+                aria-expanded={mobileDrop === "shop"}
+              >
                 Shop <FiChevronDown />
-              </a>
+              </button>
               <div className="mega-menu-box dropdwonMenu">
                 <div>
                   <Link to="/product-with-sidebar">Product Sidebar</Link>
@@ -146,9 +169,14 @@ const Header_05 = ({ direction, setDirection }) => {
               </div>
             </li>
             <li className="mega-parent">
-              <a href="#!" onClick={(e) => e.preventDefault()}>
+              <button
+                type="button"
+                className="dropdown-trigger"
+                onClick={() => toggleMenu("shortcode")}
+                aria-expanded={mobileDrop === "shortcode"}
+              >
                 ShortCode <FiChevronDown />
-              </a>
+              </button>
 
               <div className="mega-menu-box">
                 <div>
@@ -295,6 +323,10 @@ const Header_05 = ({ direction, setDirection }) => {
                   </li>
                   <li>
                     <Link to="/team-single">Team Single</Link>
+                  </li>
+
+                  <li>
+                    <Link to="/contact">Contact</Link>
                   </li>
                 </ul>
               </div>
@@ -501,7 +533,7 @@ const Header_05 = ({ direction, setDirection }) => {
                   </div>
                   <div className="info">
                     <h4>{item.name}</h4>
-                    <p>₹{item.price}</p>
+                    <p>${item.price}</p>
 
                     <div className="qty">
                       <button onClick={() => decreaseQty(item.id)}>-</button>
@@ -519,7 +551,7 @@ const Header_05 = ({ direction, setDirection }) => {
         </div>
 
         <div className="cart-footer">
-          <h4>Total: ₹{totalPrice}</h4>
+          <h4>Total: ${totalPrice}</h4>
 
           <div className="cart-buttons">
             <Link

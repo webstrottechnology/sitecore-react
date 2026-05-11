@@ -139,6 +139,19 @@
                 align-items: center;
             }
 
+            button {
+                color: #023047;
+                font-size: var(--fs16);
+                font-weight: var(--fw600);
+                font-family: var(--heading-font);
+                text-transform: capitalize;
+                position: relative;
+                display: flex;
+                align-items: center;
+                border: none;
+                background-color: transparent;
+            }
+
             /* MEGA MENU */
 
             .mega-menu-box {
@@ -484,6 +497,11 @@
         background-position: center;
         background-size: 100%;
         font-size: 22px;
+    }
+
+    .medical-header .nav li button {
+        font-size: var(--fs14);
+        gap: 2px;
     }
 }
 

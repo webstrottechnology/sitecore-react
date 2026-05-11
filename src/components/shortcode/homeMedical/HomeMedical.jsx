@@ -292,13 +292,16 @@ const ProfessionalHealthVideo = () => {
           }}
         >
           <div className="profHealthVideo">
-            <a
-              href="javascript:;"
+            <Link
+              to="/"
               className="playBtn pulse"
-              onClick={() => setOpen(true)}
+              onClick={(e) => {
+                e.preventDefault();
+                setOpen(true);
+              }}
             >
               <img src={VideoSectionData.playIcon} alt="play-btn" />
-            </a>
+            </Link>
 
             <p>{VideoSectionData.title}</p>
           </div>
