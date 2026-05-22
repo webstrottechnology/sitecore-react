@@ -51,6 +51,7 @@ const HeaderCafe = ({ direction, setDirection }) => {
     { label: "Home Corporate", path: "/" },
     { label: "Home Medical", path: "/home-medical" },
     { label: "Home Cafe", path: "/home-cafe" },
+    { label: "Home Job", path: "/home-job" },
   ];
   const navigate = useNavigate();
   return (
@@ -289,6 +290,9 @@ const HeaderCafe = ({ direction, setDirection }) => {
                   </li>
                   <li>
                     <Link to="/home-cafe">Home Cafe</Link>
+                  </li>
+                  <li>
+                    <Link to="/home-job">Home Job</Link>
                   </li>
                 </ul>
               </div>
