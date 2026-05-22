@@ -54,6 +54,7 @@ const Header_05 = ({ direction, setDirection }) => {
     { label: "Home Corporate", path: "/" },
     { label: "Home Medical", path: "/home-medical" },
     { label: "Home Cafe", path: "/home-cafe" },
+    { label: "Home Job", path: "/home-job" },
   ];
 
   return (
