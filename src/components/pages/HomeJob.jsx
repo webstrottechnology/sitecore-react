@@ -2,6 +2,11 @@ import React from "react";
 import JobDreamSection, {
   FindJobSection,
   JobForYouSection,
+  JobProcessSection,
+  JobSpeakerSection,
+  JobTeamSection,
+  JobTrustedSection,
+  JobWorkingProcessSection,
   PopularCategoriesSection,
 } from "../shortcode/HomeJob/HomeJobPage";
 
@@ -12,6 +17,11 @@ const HomeJob = () => {
       <PopularCategoriesSection />
       <JobForYouSection />
       <FindJobSection />
+      <JobWorkingProcessSection />
+      <JobTrustedSection />
+      <JobTeamSection />
+      <JobSpeakerSection />
+      <JobProcessSection />
     </div>
   );
 };

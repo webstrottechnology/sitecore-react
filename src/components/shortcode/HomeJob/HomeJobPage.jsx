@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import "./HomeJobPage.scss";
+import { Link } from "react-router-dom";
 
 import {
   heroContentDataSction1,
@@ -11,11 +12,29 @@ import {
   popularCategoriesData,
   jobForYouSectionData,
   findJobButtonData,
+  jobWorkingProcessData,
+  trustedLogoGroupsData,
+  jobTrustedPlansData,
+  jobTeamData,
+  jobTeamNavData,
+  jobSpeakerData,
+  jobProcessData,
 } from "./HomeJobPageData";
 
 import jobYouImg from "../../../assets/images/homejob/jobyou-img.png";
-
 import findJobImg from "../../../assets/images/homejob/findjob_img.png";
+import playBtnImg from "../../../assets/images/homejob/jobplay-video-button.png";
+import workingBgImg from "../../../assets/images/homejob/jobworking_bgimg.png";
+
+import { FaRegCheckCircle } from "react-icons/fa";
+import { FaFacebookF, FaWhatsapp } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
+import { FaArrowRight } from "react-icons/fa";
+
+import { FaRegUser, FaFileUpload, FaSearch } from "react-icons/fa";
+
+// JobDreamSection
+
 const JobDreamSection = () => {
   return (
     <section className="jobdream_section1">
@@ -128,9 +147,7 @@ const PopularCategoriesSection = () => {
           <div className="popular_innerwrapper1">
             <div className="popular_box1">
               <div className="popularheadingbox">
-                <h2 className="jobmain_heading">
-                  <a href="javascript:;">Popular Categories</a>
-                </h2>
+                <h2 className="jobmain_heading">Popular Categories</h2>
               </div>
 
               <p className="jobpara">
@@ -142,9 +159,9 @@ const PopularCategoriesSection = () => {
 
             <div className="popular_box2">
               <div className="popularbtn_box">
-                <a href="javascript:;" className="indJob-btn">
+                <Link to="/" className="indJob-btn">
                   Browse All Categories
-                </a>
+                </Link>
               </div>
             </div>
           </div>
@@ -158,7 +175,7 @@ const PopularCategoriesSection = () => {
                       <>
                         <div className="catebox2">
                           <h5>
-                            <a href="javascript:;">{item.title}</a>
+                            <Link to="/">{item.title}</Link>
                           </h5>
 
                           <p>({item.positions} open Positions )</p>
@@ -176,7 +193,7 @@ const PopularCategoriesSection = () => {
 
                         <div className="catebox2">
                           <h5>
-                            <a href="javascript:;">{item.title}</a>
+                            <Link to="/">{item.title}</Link>
                           </h5>
 
                           <p>({item.positions} open Positions )</p>
@@ -204,9 +221,7 @@ const JobForYouSection = () => {
           <div className="col-12 col-md-12 col-lg-6">
             <div className="jobyou-box1">
               <div className="jobyouheadingbox">
-                <h2 className="jobmain_heading">
-                  <a href="javascript:;">Job For You</a>
-                </h2>
+                <h2 className="jobmain_heading">Job For You</h2>
               </div>
 
               <p className="jobpara">
@@ -216,9 +231,9 @@ const JobForYouSection = () => {
               </p>
 
               <div className="jobyoubtn_box">
-                <a href="javascript:;" className="ind25-btn">
+                <Link to="/" className="indJob-btn">
                   Browse All Categories
-                </a>
+                </Link>
               </div>
 
               <div className="jobsearchimg_box">
@@ -238,13 +253,13 @@ const JobForYouSection = () => {
                       </span>
 
                       <h5>
-                        <a href="javascript:;">{item.title}</a>
+                        <Link to="/">{item.title}</Link>
                       </h5>
 
                       <div className="foryoudetailbtnbox">
-                        <a href="contact-us.html" className="foryoubtn">
+                        <Link to="contact-us.html" className="foryoubtn">
                           Apply Now
-                        </a>
+                        </Link>
                       </div>
                     </div>
                   </li>
@@ -260,13 +275,13 @@ const JobForYouSection = () => {
                       </span>
 
                       <h5>
-                        <a href="javascript:;">{item.title}</a>
+                        <Link to="/">{item.title}</Link>
                       </h5>
 
                       <div className="foryoudetailbtnbox">
-                        <a href="contact-us.html" className="foryoubtn">
+                        <Link to="contact-us.html" className="foryoubtn">
                           Apply Now
-                        </a>
+                        </Link>
                       </div>
                     </div>
                   </li>
@@ -313,9 +328,7 @@ const FindJobSection = () => {
               <div className="findjob_box2">
                 <div className="findjobheadingbox">
                   <h2 className="jobmain_heading">
-                    <a href="javascript:;">
-                      Find the job that suits you the most.
-                    </a>
+                    <Link to="/">Find the job that suits you the most.</Link>
                   </h2>
                 </div>
 
@@ -332,19 +345,19 @@ const FindJobSection = () => {
                     <li key={item.id}>
                       <div className="findjobbutton_box">
                         <span>
-                          <a href="javascript:;">{item.icon}</a>
+                          <Link to="/">{item.icon}</Link>
                         </span>
 
-                        <a href="javascript:;">{item.title}</a>
+                        <Link to="/">{item.title}</Link>
                       </div>
                     </li>
                   ))}
                 </ul>
 
                 <div className="findjobbtn_box">
-                  <a href="javascript:;" className="ind25-btn">
+                  <Link to="/" className="indJob-btn">
                     Browse Jobs
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -355,5 +368,357 @@ const FindJobSection = () => {
   );
 };
 
+//  JobWorkingProcessSection
+
+const JobWorkingProcessSection = () => {
+  const [isVideoOpen, setIsVideoOpen] = useState(false);
+
+  return (
+    <>
+      <section className="w-100 clearfix">
+        <div
+          className="jobworking_wrapper_section"
+          style={{
+            backgroundImage: `url(${workingBgImg})`,
+          }}
+        >
+          <div className="jobworking_innerbox">
+            <div className="findworkingheadingbox">
+              <h2 className="jobmain_heading">
+                {jobWorkingProcessData.heading}
+              </h2>
+            </div>
+
+            <p className="jobworkingpara">
+              {jobWorkingProcessData.description}
+            </p>
+
+            <div className="jobworking_btn">
+              <button
+                type="button"
+                className="video-play-button youtube-link border-0 bg-transparent"
+                onClick={() => setIsVideoOpen(true)}
+              >
+                <img src={playBtnImg} alt="btn-img" className="sus-play-btn" />
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {isVideoOpen && (
+        <div className="video-popup-overlay">
+          <div className="video-popup-content">
+            <button
+              className="video-close-btn"
+              onClick={() => setIsVideoOpen(false)}
+            >
+              ×
+            </button>
+
+            <iframe
+              width="100%"
+              height="500"
+              src="https://www.youtube.com/embed/jNQXAC9IVRw?autoplay=1"
+              title="YouTube video player"
+              frameBorder="0"
+              allow="autoplay; encrypted-media"
+              allowFullScreen
+            ></iframe>
+          </div>
+        </div>
+      )}
+    </>
+  );
+};
+
+// JobTrustedSection
+
+const JobTrustedSection = () => {
+  return (
+    <section className="clearfix w-100">
+      <div className="jobtrusted_wrapper_section">
+        <div className="container custom-container-lg">
+          <div className="jobtrustd_innerwap">
+            <div className="jobtrustedheadingbox">
+              <h2 className="jobmain_heading text-center">
+                We are Trusted by Popular 800+ Company
+              </h2>
+            </div>
+
+            <div className="jobtrusted_logowrapper">
+              <div className="joblogobox1">
+                <ul>
+                  {trustedLogoGroupsData.left.map((item) => (
+                    <li key={item.id} className={item.className}>
+                      <span>
+                        <img src={item.img} alt={item.alt} />
+                      </span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              <div className="joblogobox2">
+                <div className="joblogdetailbox">
+                  <span>
+                    {/* SVG logo yaha same HTML wala paste kar sakti ho */}
+                  </span>
+
+                  <p>
+                    Convallis gravida odio viverra nisi, aliquam sem netus.
+                    Sedpellentesque nunc pulvinadonec scelerisque. Malesuada f
+                    acilisaliquam nunc tincidunt nibh. Massa feugiat
+                    habitaviverra. Praesent massa habitant sapien odi praesent
+                    id.
+                  </p>
+
+                  <div className="jobtrustedbtn_box">
+                    <Link to="/" className="jobtrusted-btn">
+                      Read More
+                    </Link>
+                  </div>
+                </div>
+              </div>
+
+              <div className="joblogobox1">
+                <ul>
+                  {trustedLogoGroupsData.right.map((item) => (
+                    <li key={item.id} className={item.className}>
+                      <span>
+                        <img src={item.img} alt={item.alt} />
+                      </span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div className="jobplan-wrapper">
+            <div className="jobplanheadingbox">
+              <h2 className="jobmain_heading text-center">
+                Buy Our Plans And Packeges
+              </h2>
+            </div>
+
+            <div className="jobstandard_wrap">
+              <div className="row">
+                {jobTrustedPlansData.map((plan) => (
+                  <div className="col-12 col-md-6 col-lg-4" key={plan.id}>
+                    <div className="jobstandard_box">
+                      <h3>
+                        <Link to="#">{plan.title}</Link>
+                      </h3>
+
+                      <div className="jobdate_box">
+                        <h5>
+                          <span>$</span>
+                          {plan.price}
+                        </h5>
+                        <p>{plan.duration}</p>
+                      </div>
+
+                      <ul>
+                        {plan.features.map((feature, index) => (
+                          <li key={index}>
+                            <span>
+                              <FaRegCheckCircle />
+                            </span>
+                            {feature}
+                          </li>
+                        ))}
+                      </ul>
+
+                      <div className="jobstandard_btnbox">
+                        <Link to="#">{plan.btnText}</Link>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+//  JobTeamSection
+
+const JobTeamSection = () => {
+  const [activeIndex, setActiveIndex] = useState(0);
+  const activeTeam = jobTeamData[activeIndex];
+
+  return (
+    <section className="clearfix w-100">
+      <div className="jobteam_wrapper_section padding100ind25">
+        <div className="container custom-container-lg">
+          <div className="jobteamslider_wrapper">
+            <div className="slider owl-carousel owl-theme">
+              <div className="item">
+                <div className="jobteam_sliderbox" key={activeIndex}>
+                  <div className="row">
+                    <div className="col-12 col-md-12 col-lg-6">
+                      <div className="jobteam_sliderimgbox">
+                        <img src={activeTeam.image} alt={activeTeam.alt} />
+                      </div>
+                    </div>
+
+                    <div className="col-12 col-md-12 col-lg-6">
+                      <div className="jobteam_slidercontentbox">
+                        <div className="jobteamheadingbox">
+                          <h2 className="jobmain_heading">
+                            <Link to="#">{activeTeam.heading}</Link>
+                          </h2>
+                        </div>
+
+                        <h5>{activeTeam.name}</h5>
+                        <h6>{activeTeam.designation}</h6>
+                        <p>{activeTeam.description}</p>
+
+                        <ul>
+                          <li>
+                            <span>
+                              <FaFacebookF />
+                            </span>
+                          </li>
+                          <li>
+                            <span>
+                              <FaXTwitter />
+                            </span>
+                          </li>
+                          <li>
+                            <span>
+                              <FaWhatsapp />
+                            </span>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="slider2 owl-carousel owl-theme">
+              {jobTeamNavData.map((item, index) => (
+                <button
+                  type="button"
+                  className={`item ${activeIndex === index ? "active" : ""}`}
+                  key={item.id}
+                  onClick={() => setActiveIndex(index)}
+                >
+                  <img src={item.image} alt={item.alt} />
+                </button>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+//  JobSpeakerSection
+
+const JobSpeakerSection = () => {
+  return (
+    <section className="clearfix w-100">
+      <div className="jobspeaker_wrapper_section padding100ind25">
+        <div className="container custom-container-lg">
+          <div className="row">
+            {jobSpeakerData.map((item) => (
+              <div className="col-12 col-md-12 col-lg-6" key={item.id}>
+                <div className="jobspeaker_box">
+                  <div className="jobspaeker_iconbox">
+                    <span>{item.icon}</span>
+                  </div>
+
+                  <div className="jobspeaker_textbox">
+                    <div className="joabspeakerheadingbox">
+                      <h2 className="jobmain_heading">
+                        <Link to="/">{item.title}</Link>
+                      </h2>
+                    </div>
+
+                    <p>{item.description}</p>
+
+                    <div className="jobspeaker_btn">
+                      <Link to={item.btnLink}>
+                        {item.btnText}
+                        <span>
+                          <FaArrowRight />
+                        </span>
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <span className="jobspeaker_shape1">
+          <img src={jobSpeakerData[0].shape1} alt="jobspeaker-img" />
+        </span>
+
+        <span className="jobspeaker_shape2">
+          <img src={jobSpeakerData[0].shape2} alt="jobspeaker-img" />
+        </span>
+      </div>
+    </section>
+  );
+};
+
+//  JobProcessSection
+
+const JobProcessSection = () => {
+  return (
+    <section className="w-100 clearfix">
+      <div className="job_process_wrapper_section">
+        <div className="container custom-container-lg">
+          <div className="joabprocessheadingbox">
+            <h2 className="jobmain_heading text-center">
+              <Link to="#">Our Job Process</Link>
+            </h2>
+          </div>
+
+          <div className="job_process_box">
+            {jobProcessData.map((item) => (
+              <div className={`process_box ${item.className}`} key={item.id}>
+                <div className="job_processcircle">{item.icon}</div>
+
+                <h5>{item.title}</h5>
+
+                <p>{item.description}</p>
+
+                <div className="jobspeaker_btn">
+                  <Link to={item.btnLink}>
+                    {item.btnText}
+                    <span>
+                      <FaArrowRight />
+                    </span>
+                  </Link>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
 export default JobDreamSection;
-export { PopularCategoriesSection, JobForYouSection, FindJobSection };
+export {
+  PopularCategoriesSection,
+  JobForYouSection,
+  FindJobSection,
+  JobWorkingProcessSection,
+  JobTrustedSection,
+  JobTeamSection,
+  JobSpeakerSection,
+  JobProcessSection,
+};
