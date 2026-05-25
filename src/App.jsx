@@ -103,7 +103,7 @@ const FormEleven = lazy(() =>
 const App = () => {
   const location = useLocation();
 
-  const hideLayoutRoutes = ["/home-cafe", "/home-medical"];
+const hideLayoutRoutes = ["/home-cafe", "/home-medical", "/home-job"];
 
   const shouldHideLayout = hideLayoutRoutes.some(
     (route) => route === location.pathname

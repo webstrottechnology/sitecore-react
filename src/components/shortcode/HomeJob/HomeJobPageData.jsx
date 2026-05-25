@@ -39,6 +39,13 @@ import jobteamnavImg4 from "../../../assets/images/homejob/jobteamnavimg-4.png";
 import jobspeakerShape1 from "../../../assets/images/homejob/jobspeaker_shape1img.png";
 import jobspeakerShape2 from "../../../assets/images/homejob/jobquestionshape1.png";
 
+import jobblogImg1 from "../../../assets/images/homejob/jobblog_img1.png";
+import jobblogImg2 from "../../../assets/images/homejob/jobblog_img2.png";
+import jobblogImg3 from "../../../assets/images/homejob/jobblog_img3.png";
+
+import jobQuestionImg from "../../../assets/images/homejob/jobquestion-img.png";
+import jobSubscribeImg from "../../../assets/images/homejob/jobsubscribe_img1.png";
+
 export const heroContentDataSction1 = {
   tag: "No.1 Jobseeker Platform",
   title: "Build",
@@ -412,7 +419,8 @@ export const jobProcessData = [
     className: "jobprocess_innerbox",
     icon: <FaRegUser />,
     title: "Create Account",
-    description: "Risus commodo viverra and maecenas accumsan lacus vel facilisis.",
+    description:
+      "Risus commodo viverra and maecenas accumsan lacus vel facilisis.",
     btnText: "Apply Now",
     btnLink: "#",
   },
@@ -421,7 +429,8 @@ export const jobProcessData = [
     className: "",
     icon: <FaFileUpload />,
     title: "Upload Resume",
-    description: "Risus commodo viverra and maecenas accumsan lacus vel facilisis.",
+    description:
+      "Risus commodo viverra and maecenas accumsan lacus vel facilisis.",
     btnText: "Apply Now",
     btnLink: "#",
   },
@@ -430,8 +439,68 @@ export const jobProcessData = [
     className: "",
     icon: <FaSearch />,
     title: "Search Job",
-    description: "Risus commodo viverra and maecenas accumsan lacus vel facilisis.",
+    description:
+      "Risus commodo viverra and maecenas accumsan lacus vel facilisis.",
     btnText: "Apply Now",
     btnLink: "#",
   },
 ];
+
+//  jobBlogData
+
+export const jobBlogData = [
+  {
+    id: 1,
+    image: jobblogImg1,
+    alt: "blog-img",
+    date: "02 Aug 2026",
+    title: "New Generation",
+    description:
+      "An eye-catching title and client-focused overview help us match you to the work you want. Includes history.",
+  },
+
+  {
+    id: 2,
+    image: jobblogImg2,
+    alt: "blog-img",
+    date: "22 Aug 2026",
+    title: "Get paid securely",
+    description:
+      "Choose how you get paid. Our fixed-price protection releases client payments at project milestones.",
+  },
+
+  {
+    id: 3,
+    image: jobblogImg3,
+    alt: "blog-img",
+    date: "12 Aug 2026",
+    title: "Explore ways to earn",
+    description:
+      "Work and earn in different ways. Bid for jobs, pitch your projects, and discuss your in-demand skills.",
+  },
+];
+
+// jobQuestionData
+
+export const jobQuestionData = {
+  heading: "Have any Question on Mind ?",
+  description:
+    "Convallis gravida odio viverra nisi, aliquam sem netus. Sed at semper at lacus. Nam integer nunc pellentesque nunc pulvinadonec scelerisque. Malesuada massa facilisis aliquam nunc ut nisl tincidunt nibh.",
+  placeholder: "Write Here",
+  btnText: "Let’s Talk",
+  btnLink: "#",
+  image: jobQuestionImg,
+  alt: "jobquestion-img",
+};
+
+//  jobSubscribeData
+
+export const jobSubscribeData = {
+  image: jobSubscribeImg,
+  imageAlt: "img-jabsubcribe",
+  heading: "Subscribe For Latest News",
+  description:
+    "Convallis gravida odio viverra nisi, aliquam sem netus. Sed atlacus. Nam integer nunc pellentesque nunc pulvinadonec scelerisque. Malesuada massa facilisis aliquam nunc ut nisl tincidunt nibh.",
+  placeholder: "Email Address...",
+  buttonText: "Subscribe",
+};

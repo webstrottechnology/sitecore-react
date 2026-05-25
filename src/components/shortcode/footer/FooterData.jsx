@@ -34,6 +34,15 @@ import { IoLocation } from "react-icons/io5";
 import { FaXTwitter } from "react-icons/fa6";
 import f10logo from "../../../assets/images/footer10-logo.svg";
 
+import { FaMapMarkerAlt, FaWhatsapp } from "react-icons/fa";
+
+import jobFooterLogo from "../../../assets/images/homejob/jobfooter_logo.png";
+import jobFooterGoogleImg from "../../../assets/images/homejob/jobfooter_googleimg.png";
+import jobFooterAppStoreImg from "../../../assets/images/homejob/jobfooter_appstoreimg.png";
+
+import footerIcon from "../../../assets/images/homeEvent/icon.png";
+import footerLogo from "../../../assets/images/homeEvent/foter-logo.png";
+
 export const footerOneLinks = [
   {
     title: "Company",
@@ -515,4 +524,236 @@ export const SitecoreCafeFooterData = {
     { icon: <FaInstagram />, link: "https://www.instagram.com/" },
   ],
   instagram: [social1, social2, social3, social4, social5, social6],
+};
+
+//  jobFooterData
+
+export const jobFooterData = {
+  footerColumns: [
+    {
+      id: 1,
+      title: "For Candidate",
+      links: [
+        { id: 1, title: "Browse Job", link: "#" },
+        { id: 2, title: "Account", link: "#" },
+        { id: 3, title: "Browse Categories", link: "#" },
+        { id: 4, title: "Resume", link: "#" },
+        { id: 5, title: "Job List", link: "#" },
+      ],
+    },
+    {
+      id: 2,
+      title: "Find Jobs",
+      links: [
+        { id: 1, title: "US Jobs", link: "#" },
+        { id: 2, title: "Canada Jobs", link: "#" },
+        { id: 3, title: "UK Jobs", link: "#" },
+        { id: 4, title: "Jobs in Deuts", link: "#" },
+        { id: 5, title: "Emplois En Fance", link: "#" },
+      ],
+    },
+    {
+      id: 3,
+      title: "Useful links",
+      links: [
+        { id: 1, title: "About Us", link: "/about-us" },
+        { id: 2, title: "Contact Us", link: "/contact-us" },
+        { id: 3, title: "Services", link: "/service-single" },
+        { id: 4, title: "Product", link: "/product-single-01" },
+        { id: 5, title: "Team", link: "/team-single" },
+      ],
+    },
+  ],
+
+  contactInfo: {
+    title: "Contact Info",
+    items: [
+      {
+        id: 1,
+        title: "email@example.com",
+        href: "mailto:email@example.com",
+        icon: <FaEnvelope />,
+      },
+      {
+        id: 2,
+        title: "+108890795411",
+        href: "tel:8890795411",
+        icon: <FaPhoneAlt />,
+      },
+      {
+        id: 3,
+        title: "5,Road ,ST. VA 3040, USA",
+        href: "#",
+        icon: <FaMapMarkerAlt />,
+      },
+    ],
+  },
+
+  appBox: {
+    logo: jobFooterLogo,
+    logoAlt: "job-footer-logo",
+    logoLink: "#",
+    title: "Download App",
+    googleImg: jobFooterGoogleImg,
+    googleAlt: "google_btn_img",
+    appStoreImg: jobFooterAppStoreImg,
+    appStoreAlt: "google_btn_img",
+  },
+
+  support: {
+    phone: "3465739809",
+  },
+
+  socialLinks: [
+    { id: 1, link: "#", icon: <FaWhatsapp /> },
+    { id: 2, link: "#", icon: <FaInstagram /> },
+    { id: 3, link: "#", icon: <FaFacebookF /> },
+    { id: 4, link: "#", icon: <FaXTwitter /> },
+  ],
+
+  policyLinks: [
+    { id: 1, title: "Privacy Policy", link: "#" },
+    { id: 2, title: "Terms of Services", link: "#" },
+    { id: 3, title: "Our Sitemap", link: "#" },
+  ],
+
+  copyright: {
+    brand: "SITECORE.",
+    link: "#",
+  },
+};
+
+//  HomeeventFooterData
+
+export const eventFooterData = {
+  newsletter: {
+    icon: footerIcon,
+    iconAlt: "icon",
+    title: "Subscribe to our Newsletter",
+    placeholder: "Enter Your Email Address",
+    buttonText: "Subscribe",
+  },
+
+  logoSection: {
+    logo: footerLogo,
+    logoAlt: "logo",
+    link: "/",
+    description:
+      "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
+  },
+
+  footerLinks: [
+    {
+      id: 1,
+      title: "Useful Links",
+      links: [
+        {
+          id: 1,
+          label: "About Us",
+          link: "/about-us",
+        },
+        {
+          id: 2,
+          label: "Services",
+          link: "/service1",
+        },
+        {
+          id: 3,
+          label: "Our Blog",
+          link: "/blog-with-sidebar",
+        },
+        {
+          id: 4,
+          label: "Portfolio",
+          link: "/portfolio-3-column",
+        },
+      ],
+    },
+
+    {
+      id: 2,
+      title: "Page's",
+      links: [
+        {
+          id: 1,
+          label: "team",
+          link: "/team01",
+        },
+        {
+          id: 2,
+          label: "Coming Soon",
+          link: "/coming-soon",
+        },
+        {
+          id: 3,
+          label: "Login Register",
+          link: "/login-register",
+        },
+        {
+          id: 4,
+          label: "Contact",
+          link: "/contact-us",
+        },
+      ],
+    },
+  ],
+
+  contactSection: {
+    title: "Contact",
+
+    items: [
+      {
+        id: 1,
+        icon: <FaPhoneAlt />,
+        label: "(+800) 1234 5678 90",
+        href: "tel:1234567890",
+      },
+
+      {
+        id: 2,
+        icon: <FaEnvelope />,
+        label: "support@sitecore.com",
+        href: "mailto:abc@example.com",
+      },
+
+      {
+        id: 3,
+        icon: <FaMapMarkerAlt />,
+        label: "94A Oxford St, Paddington NSW 2025, Australia",
+        href: "#",
+      },
+    ],
+  },
+
+  copyright: {
+    brand: "Sitecore",
+    year: "2026-27",
+    link: "#",
+  },
+
+  socialLinks: [
+    {
+      id: 1,
+      icon: <FaInstagram />,
+      link: "#",
+    },
+
+    {
+      id: 2,
+      icon: <FaFacebookF />,
+      link: "#",
+    },
+
+    {
+      id: 3,
+      icon: <FaTwitter />,
+      link: "#",
+    },
+
+    {
+      id: 4,
+      icon: <FaPinterestP />,
+      link: "#",
+    },
+  ],
 };
