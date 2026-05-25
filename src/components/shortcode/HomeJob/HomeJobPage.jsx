@@ -19,6 +19,9 @@ import {
   jobTeamNavData,
   jobSpeakerData,
   jobProcessData,
+  jobBlogData,
+  jobQuestionData,
+  jobSubscribeData,
 } from "./HomeJobPageData";
 
 import jobYouImg from "../../../assets/images/homejob/jobyou-img.png";
@@ -30,6 +33,10 @@ import { FaRegCheckCircle } from "react-icons/fa";
 import { FaFacebookF, FaWhatsapp } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { FaArrowRight } from "react-icons/fa";
+import { FaCalendarAlt } from "react-icons/fa";
+import { MdOutlineEmail } from "react-icons/md";
+
+
 
 import { FaRegUser, FaFileUpload, FaSearch } from "react-icons/fa";
 
@@ -41,7 +48,7 @@ const JobDreamSection = () => {
       <div className="container custom-container-lg">
         <div className="row align-items-center">
           {/* LEFT */}
-          <div className="col-lg-6">
+          <div className="col-md-12 col-lg-6">
             <div className="jobdream_box1">
               {/* SIDE TAG */}
               <div className="jobdream_side">
@@ -122,7 +129,7 @@ const JobDreamSection = () => {
           </div>
 
           {/* RIGHT IMAGE */}
-          <div className="col-lg-6">
+          <div className="col-md-12 col-lg-6">
             <div className="jobdream_box2">
               <img
                 src={heroContentDataSction1.image}
@@ -711,6 +718,167 @@ const JobProcessSection = () => {
   );
 };
 
+const JobBlogSection = () => {
+  return (
+    <div className="job_blog_wrapper_section">
+      <div className="container custom-container-lg">
+        <div className="jobblogheadingbox">
+          <h2 className="jobmain_heading">
+            <Link to="/">Our Latest Blog</Link>
+          </h2>
+        </div>
+
+        <div className="jobblog_btnbox">
+          <Link to="/blog-with-sidebar" className="indJob-btn">
+            See All Blogs
+          </Link>
+        </div>
+
+        <div className="jobblog_column_section">
+          <div className="row">
+            {jobBlogData.map((item) => (
+              <div className="col-12 col-md-6 col-lg-4" key={item.id}>
+                <div className="jobblog_box">
+                  <div className="jobblog_img_wrapper">
+                    <div className="img_box shine-effect">
+                      <img src={item.image} alt={item.alt} />
+                    </div>
+                  </div>
+
+                  <div className="jobcontent_box">
+                    <div className="jobblogdate_box">
+                      <span>
+                        <FaCalendarAlt />
+                      </span>
+                      {item.date}
+                    </div>
+
+                    <h3>
+                      <Link to="/">{item.title}</Link>
+                    </h3>
+
+                    <p>{item.description}</p>
+
+                    <div className="blogcontent_btnbox">
+                      <Link to="/blog-with-sidebar">
+                        Read More
+                        <span>
+                          <FaArrowRight />
+                        </span>
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+const JobQuestionSection = () => {
+  return (
+    <section className="clearfix w-100">
+      <div className="jobquestion_wrapper_section">
+        <div className="container custom-container-lg">
+          <div className="job_quesinnerbox">
+            <div className="jobquestionheadingbox">
+              <h2 className="jobmain_heading text-center">
+                <Link to="#">{jobQuestionData.heading}</Link>
+              </h2>
+            </div>
+
+            <p>{jobQuestionData.description}</p>
+
+            <div className="jobquestion_btnbox">
+              <ul>
+                <li>
+                  <form>
+                    <input
+                      type="text"
+                      placeholder={jobQuestionData.placeholder}
+                    />
+                  </form>
+                </li>
+
+                <li>
+                  <div className="letstalk_btn">
+                    <Link to={jobQuestionData.btnLink}>
+                      {jobQuestionData.btnText}
+                    </Link>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <div className="jobquestionimgbox">
+              <img src={jobQuestionData.image} alt={jobQuestionData.alt} />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+const JobSubscribeSection = () => {
+  return (
+    <section className="clearfix w-100">
+      <div className="jobsubscribe_wrapper_section">
+        <div className="container custom-container-lg">
+          <div className="row">
+            <div className="col-12 col-md-12 col-lg-6">
+              <div className="jobsubscribe_imgbox">
+                <img
+                  src={jobSubscribeData.image}
+                  alt={jobSubscribeData.imageAlt}
+                />
+              </div>
+            </div>
+
+            <div className="col-12 col-md-12 col-lg-6">
+              <div className="jobsubscribe_textbox">
+                <div className="jobsubscribeheadingbox">
+                  <h2 className="jobmain_heading text-center">
+                    <Link to="#">{jobSubscribeData.heading}</Link>
+                  </h2>
+                </div>
+
+                <p>{jobSubscribeData.description}</p>
+
+                <div className="prosubcribe_form_wrapper">
+                  <form>
+                    <div className="prosearch-box">
+                      <input
+                        type="email"
+                        className="form-control"
+                        placeholder={jobSubscribeData.placeholder}
+                        name="email"
+                      />
+
+                      <div className="food-form-btn">
+                        <button type="submit" className="indJob-btn">
+                          <span>
+                            <MdOutlineEmail />
+                          </span>
+                          {jobSubscribeData.buttonText}
+                        </button>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+
 export default JobDreamSection;
 export {
   PopularCategoriesSection,
@@ -721,4 +889,7 @@ export {
   JobTeamSection,
   JobSpeakerSection,
   JobProcessSection,
+  JobBlogSection,
+  JobQuestionSection,
+  JobSubscribeSection,
 };

@@ -12,6 +12,8 @@ import { footerDataNine } from "./FooterData";
 import { footerDataTen } from "./FooterData";
 import { SitecoreCafeFooterData } from "./FooterData";
 import { SiteCorefooterLinks } from "./FooterData";
+import { jobFooterData } from "./FooterData";
+import { eventFooterData } from "./FooterData";
 import { FiSend } from "react-icons/fi";
 import { FaPaperPlane } from "react-icons/fa";
 import { FaWhatsapp, FaInstagram, FaFacebookF } from "react-icons/fa";
@@ -22,6 +24,13 @@ import { AboutBannerBreadCrumb } from "../breadcrumb/Breadcrumb";
 import sitecoreBg from "../../../assets/images/sitecoreBreadCrumb_bg_img.png";
 import { Link } from "react-router-dom";
 import HomeCafeLogo from "../../../assets/images/homecafe/logo.png";
+
+import {
+  FaMinus,
+  FaEnvelope,
+  FaPhoneAlt,
+  FaMapMarkerAlt,
+} from "react-icons/fa";
 
 const FooterOne = () => {
   return (
@@ -931,7 +940,7 @@ const HomeCafeFooter = () => {
                 <div key={i} className="media-img">
                   <img src={img} alt="insta" />
                   <div className="insta-icon">
-                    <Link to="https://www.instagram.com"  rel="noreferrer">
+                    <Link to="https://www.instagram.com" rel="noreferrer">
                       <FaInstagram />
                     </Link>
                   </div>
@@ -952,6 +961,245 @@ const HomeCafeFooter = () => {
   );
 };
 
+const HomeJobFooter = () => {
+  return (
+    <footer className="clearfix w-100">
+      <div className="jobfooter_wrappeer" id="topbutton">
+        <div className="container custom-container-lg">
+          <div className="job_topboxfooter">
+            <div className="row">
+              <div className="col-12 col-md-9 col-lg-10 col-xxl-10">
+                <div className="job_innerfooterbox1">
+                  {jobFooterData.footerColumns.map((column) => (
+                    <div className="jobf_box1" key={column.id}>
+                      <h3>{column.title}</h3>
+                      <ul>
+                        {column.links.map((item) => (
+                          <li key={item.id}>
+                            <Link to={item.link}>
+                              <span>
+                                <FaMinus />
+                              </span>
+                              {item.title}
+                            </Link>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  ))}
+
+                  <div className="jobf_box1">
+                    <h3>{jobFooterData.contactInfo.title}</h3>
+                    <ul>
+                      {jobFooterData.contactInfo.items.map((item) => (
+                        <li key={item.id}>
+                          <a href={item.href} className="jobfooter_contactbtn">
+                            <span>{item.icon}</span>
+                            {item.title}
+                          </a>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div className="col-12 col-md-3 col-lg-2 col-xxl-2">
+                <div className="job_innerfooterbox2">
+                  <div className="jobfooter_logobox">
+                    <Link to={jobFooterData.appBox.logoLink}>
+                      <img
+                        src={jobFooterData.appBox.logo}
+                        alt={jobFooterData.appBox.logoAlt}
+                      />
+                    </Link>
+                  </div>
+
+                  <h3>{jobFooterData.appBox.title}</h3>
+
+                  <div className="datingdownload_btnbox">
+                    <div className="download_btn1">
+                      <img
+                        src={jobFooterData.appBox.googleImg}
+                        alt={jobFooterData.appBox.googleAlt}
+                      />
+                    </div>
+
+                    <div className="download_btn2">
+                      <img
+                        src={jobFooterData.appBox.appStoreImg}
+                        alt={jobFooterData.appBox.appStoreAlt}
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="job_middlefooter">
+            <div className="row align-items-center">
+              <div className="col-12 col-md-12 col-lg-4">
+                <div className="jobfooter_contwrap1">
+                  <p>
+                    Support Line :
+                    <span>
+                      <a href={`tel:${jobFooterData.support.phone}`}>
+                        {jobFooterData.support.phone}
+                      </a>
+                    </span>
+                  </p>
+                </div>
+              </div>
+
+              <div className="col-12 col-md-12 col-lg-4">
+                <div className="jobfooter_contwrap2">
+                  <p>Follow Us :</p>
+                  <div className="footer_icon_wrap">
+                    <ul>
+                      {jobFooterData.socialLinks.map((item) => (
+                        <li key={item.id}>
+                          <Link to={item.link}>{item.icon}</Link>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div className="col-12 col-md-12 col-lg-4">
+                <div className="jobfooter_contwrap3">
+                  <ul>
+                    {jobFooterData.policyLinks.map((item) => (
+                      <li key={item.id}>
+                        <p>
+                          <Link to={item.link}>{item.title}</Link>
+                        </p>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="job_bottomboxfooter">
+          <p>
+            Copyright © 2026-2027{" "}
+            <Link to={jobFooterData.copyright.link}>
+              {jobFooterData.copyright.brand}
+            </Link>{" "}
+            All Rights Reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
+  );
+};
+
+const HoomeEventFooter = () => {
+  return (
+    <footer className="footer">
+      <div className="event-main-footer">
+        <div className="container custom-container-lg">
+          <div className="subscribe-newsletter-wrappper">
+            <div className="subscribe-text">
+              <div className="sub-icon">
+                <img
+                  src={eventFooterData.newsletter.icon}
+                  alt={eventFooterData.newsletter.iconAlt}
+                />
+              </div>
+
+              <div className="sub-text">
+                <h4>{eventFooterData.newsletter.title}</h4>
+              </div>
+            </div>
+
+            <div className="subscribe-input">
+              <input
+                type="text"
+                placeholder={eventFooterData.newsletter.placeholder}
+                className="form-control"
+              />
+
+              <button className="event-btn">
+                {eventFooterData.newsletter.buttonText}
+              </button>
+            </div>
+          </div>
+
+          <div className="event-footer-inner-main-wrapper">
+            <div className="footer-logo wow fadeinUp" data-wow-delay="200ms">
+              <Link to={eventFooterData.logoSection.link}>
+                <img
+                  src={eventFooterData.logoSection.logo}
+                  alt={eventFooterData.logoSection.logoAlt}
+                />
+              </Link>
+
+              <p>{eventFooterData.logoSection.description}</p>
+            </div>
+
+            {eventFooterData.footerLinks.map((section) => (
+              <div
+                className="footer-links wow fadeinUp"
+                data-wow-delay="100ms"
+                key={section.id}
+              >
+                <h4>{section.title}</h4>
+
+                <ul>
+                  {section.links.map((item) => (
+                    <li key={item.id}>
+                      <Link to={item.link}>{item.label}</Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+
+            <div className="footer-links wow fadeinUp" data-wow-delay="100ms">
+              <h4>{eventFooterData.contactSection.title}</h4>
+
+              {eventFooterData.contactSection.items.map((item) => (
+                <p className="destination" key={item.id}>
+                  <span>{item.icon}</span>
+
+                  <a href={item.href}>{item.label}</a>
+                </p>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="event-footer-bottom">
+        <div className="container custom-container">
+          <div className="copy-right-wrappper">
+            <p>
+              Copyright{" "}
+              <Link to={eventFooterData.copyright.link}>
+                {eventFooterData.copyright.brand}
+              </Link>{" "}
+              {eventFooterData.copyright.year}. All right reserved
+            </p>
+
+            <div className="social">
+              {eventFooterData.socialLinks.map((item) => (
+                <Link to={item.link} key={item.id}>
+                  {item.icon}
+                </Link>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  );
+};
+
 export default FooterOne;
 export {
   FooterTwo,
@@ -965,4 +1213,6 @@ export {
   FooterNine,
   FooterTen,
   HomeCafeFooter,
+  HomeJobFooter,
+  HoomeEventFooter,
 };
