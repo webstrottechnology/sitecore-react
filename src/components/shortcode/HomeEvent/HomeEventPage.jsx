@@ -306,11 +306,11 @@ const EventAboutSection = () => {
         </div>
 
         <div className="multi-btn">
-          <Link className="event-btn" to="#">
+          <Link className="event-btn" to="/contact">
             Buy Ticket
           </Link>
 
-          <Link className="event-btn" to="#">
+          <Link className="event-btn" to="/about-us">
             Read MOre
           </Link>
         </div>
