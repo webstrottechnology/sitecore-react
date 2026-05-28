@@ -10,7 +10,7 @@
 
 @use "../../../styles/mixins/mixins" as *;
 
-.HeaderJobWrapper {
+.HeaderEventWrapper {
     width: var(--width100);
     background: transparent;
     position: fixed;
@@ -37,7 +37,7 @@
 
     .inner_wrapper {
         display: flex;
-        justify-content: space-between;
+        justify-content: end;
         gap: 30px;
         width: 85%;
     }
@@ -133,7 +133,7 @@
                     width: var(--width30);
 
                     h4 {
-                        color: var(--darkpuple);
+                        color: var(--bgOrange1);
                         font-size: var(--fs16);
                         font-weight: var(--fw600);
                         text-transform: uppercase;
@@ -153,7 +153,7 @@
 
 
                         &:hover {
-                            color: var(--darkpuple);
+                            color: var(--bgOrange1);
                             padding-left: var(--p8);
 
                         }
@@ -223,7 +223,7 @@
         width: 320px;
         height: 100vh;
         overflow-y: auto;
-        background: var(--darkpuple);
+        background: var(--bgOrange1);
         transition: .4s;
         z-index: 9999999;
 
@@ -248,7 +248,7 @@
         .sidebar-logo {
             position: sticky;
             top: 0;
-            background: var(--darkpuple);
+            background: var(--bgOrange1);
             padding: var(--p0) var(--p26) var(--p26) var(--p26);
             border-bottom: 1px solid rgba(255, 255, 255, 0.1);
             z-index: 10;
@@ -307,7 +307,7 @@
                         display: block;
                         color: var(--white-color);
                         font-size: var(--fs16);
-                        background-color: var(--darkpuple);
+                        background-color: var(--bgOrange1);
                     }
 
                 }
@@ -333,7 +333,7 @@
 // RTL STYLE CSS START //
 
 [dir="rtl"] {
-    .HeaderJobWrapper {
+    .HeaderEventWrapper {
         .container {
             flex-direction: row-reverse;
         }
@@ -407,22 +407,40 @@
 
 /* RESPONSIVE */
 
+@include responsive(lg-md) {
+    .HeaderEventWrapper .right .event-btn {
+        min-width: 145px;
+    }
+
+    .HeaderEventWrapper .nav {
+        gap: 20px;
+    }
+
+    .HeaderEventWrapper .inner_wrapper {
+        gap: 20px;
+    }
+
+    .HeaderEventWrapper .right {
+        gap: 20px;
+    }
+}
+
 @include responsive(md) {
-    .HeaderJobWrapper .nav {
+    .HeaderEventWrapper .nav {
         gap: 10px;
     }
 
-    .HeaderJobWrapper .nav li a {
+    .HeaderEventWrapper .nav li a {
         font-size: var(--fs14);
     }
 
-    .HeaderJobWrapper .right {
+    .HeaderEventWrapper .right {
         display: flex;
         gap: 10px;
         align-items: center;
     }
 
-    .HeaderJobWrapper .logo img {
+    .HeaderEventWrapper .logo img {
         max-width: 140px;
     }
 
@@ -430,7 +448,7 @@
 }
 
 @include responsive(laptop) {
-    .HeaderJobWrapper .nav li button {
+    .HeaderEventWrapper .nav li button {
         font-size: var(--fs14);
         gap: 2px;
     }
@@ -438,66 +456,66 @@
 
 @include responsive(tablet-sm) {
 
-    .HeaderJobWrapper {
+    .HeaderEventWrapper {
         background-color: #0000008f;
     }
 
-    .HeaderJobWrapper .rtl-toggle-btn.rtl-toggle-btnBlack svg {
+    .HeaderEventWrapper .rtl-toggle-btn.rtl-toggle-btnBlack svg {
         fill: var(--white-color);
     }
 
-    .HeaderJobWrapper.menu-fixed .rtl-toggle-btn.rtl-toggle-btnBlack svg {
+    .HeaderEventWrapper.menu-fixed .rtl-toggle-btn.rtl-toggle-btnBlack svg {
         fill: var(--black-color);
     }
 
-    .HeaderJobWrapper .right {
+    .HeaderEventWrapper .right {
         color: var(--white-color);
     }
 
-    .HeaderJobWrapper.menu-fixed .right {
+    .HeaderEventWrapper.menu-fixed .right {
         color: var(--black-color);
     }
 
-    .HeaderJobWrapper .mobile-menu-btn svg {
+    .HeaderEventWrapper .mobile-menu-btn svg {
         fill: var(--black-color);
     }
 
-    .HeaderJobWrapper .right .indJob-btn {
+    .HeaderEventWrapper .right .event-btn {
         display: none;
     }
 
-    .HeaderJobWrapper .nav {
+    .HeaderEventWrapper .nav {
         display: none;
     }
 
-    .HeaderJobWrapper .mobile-menu-btn {
+    .HeaderEventWrapper .mobile-menu-btn {
         display: block;
     }
 
-    .HeaderJobWrapper .right button {
+    .HeaderEventWrapper .right button {
         display: none;
     }
 
-    .HeaderJobWrapper .right {
+    .HeaderEventWrapper .right {
         gap: 12px;
     }
 
-    .HeaderJobWrapper .logo img {
+    .HeaderEventWrapper .logo img {
         max-width: 140px;
     }
 
 
-    .HeaderJobWrapper .container {
+    .HeaderEventWrapper .container {
         padding: 20px;
     }
 
 
-    .HeaderJobWrapper .inner_wrapper {
+    .HeaderEventWrapper .inner_wrapper {
         justify-content: end;
     }
 
     [dir="rtl"] {
-        .HeaderJobWrapper .inner_wrapper {
+        .HeaderEventWrapper .inner_wrapper {
             justify-content: start;
         }
     }
@@ -505,20 +523,20 @@
 
 
 @include responsive(mobile-sm) {
-    .HeaderJobWrapper .container {
+    .HeaderEventWrapper .container {
         padding: 16px 10px;
     }
 
-    .HeaderJobWrapper .mintGreenFilledBtn.md-btn {
+    .HeaderEventWrapper .mintGreenFilledBtn.md-btn {
         padding: 8px 10px;
         font-size: var(--fs12);
     }
 
-    .HeaderJobWrapper .logo img {
+    .HeaderEventWrapper .logo img {
         max-width: 110px;
     }
 
-    .HeaderJobWrapper .job_logo_wrap {
+    .HeaderEventWrapper .job_logo_wrap {
         width: 40%;
     }
 

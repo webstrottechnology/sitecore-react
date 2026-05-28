@@ -1,13 +1,14 @@
 import React, { useState, useEffect } from "react";
 import { FiChevronDown, FiMenu, FiSearch, FiX } from "react-icons/fi";
-import "./HeaderCafe.scss";
-import Logo from "../../../assets/images/homecafe/cafe-logo.png";
+import "./HeaderEvent.scss";
+import Logo from "../../../assets/images/homeEvent/logo-event.png";
+import Logo2 from "../../../assets/images/homeEvent/foter-logo.png";
 import { FiShoppingCart } from "react-icons/fi";
 import { Link, useNavigate } from "react-router-dom";
 import { IoLanguage } from "react-icons/io5";
 import { useCart } from "../CartContextWrap/CartContext";
 
-const HeaderCafe = ({ direction, setDirection }) => {
+const HeaderEvent = ({ direction, setDirection }) => {
   const [sidebar, setSidebar] = useState(false);
   const [mobileDrop, setMobileDrop] = useState(null);
   const [searchOpen, setSearchOpen] = useState(false);
@@ -58,13 +59,13 @@ const HeaderCafe = ({ direction, setDirection }) => {
   return (
     <>
       <header
-        className={`HeaderCafeWrapper menu-items-wrapper ${
+        className={`HeaderEventWrapper menu-items-wrapper ${
           isFixed ? "menu-fixed fadeInDown" : ""
         }`}
       >
         <div className="container custom-container-lg">
           {/* LOGO */}
-          <div className="logo">
+          <div className="logo job_logo_wrap">
             <Link to="/">
               {" "}
               <img src={Logo} alt="image" />{" "}
@@ -249,7 +250,7 @@ const HeaderCafe = ({ direction, setDirection }) => {
               >
                 <IoLanguage />
               </button>
-              <Link to="/contact" className="Home2FilledGreenBtn md-btn">
+              <Link to="/contact" className="event-btn md-btn">
                 Let's Talk
               </Link>
 
@@ -266,7 +267,7 @@ const HeaderCafe = ({ direction, setDirection }) => {
         <div className={`mobile-sidebar ${sidebar ? "show" : ""}`}>
           <FiX className="close" onClick={() => setSidebar(false)} />
           <div className="sidebar-logo">
-            <img src={Logo} alt="logo" />
+            <img src={Logo2} alt="logo" />
           </div>
           <ul>
             <li>
@@ -625,4 +626,4 @@ const HeaderCafe = ({ direction, setDirection }) => {
   );
 };
 
-export default HeaderCafe;
+export default HeaderEvent;

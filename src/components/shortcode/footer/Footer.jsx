@@ -968,7 +968,7 @@ const HomeJobFooter = () => {
         <div className="container custom-container-lg">
           <div className="job_topboxfooter">
             <div className="row">
-              <div className="col-12 col-md-9 col-lg-10 col-xxl-10">
+              <div className="col-12 col-md-12 col-lg-10 col-xxl-10">
                 <div className="job_innerfooterbox1">
                   {jobFooterData.footerColumns.map((column) => (
                     <div className="jobf_box1" key={column.id}>
@@ -1004,7 +1004,7 @@ const HomeJobFooter = () => {
                 </div>
               </div>
 
-              <div className="col-12 col-md-3 col-lg-2 col-xxl-2">
+              <div className="col-12 col-md-12 col-lg-2 col-xxl-2">
                 <div className="job_innerfooterbox2">
                   <div className="jobfooter_logobox">
                     <Link to={jobFooterData.appBox.logoLink}>
@@ -1176,7 +1176,7 @@ const HoomeEventFooter = () => {
       </div>
 
       <div className="event-footer-bottom">
-        <div className="container custom-container">
+        <div className="container custom-container-lg">
           <div className="copy-right-wrappper">
             <p>
               Copyright{" "}
