@@ -36,8 +36,6 @@ import { FaArrowRight } from "react-icons/fa";
 import { FaCalendarAlt } from "react-icons/fa";
 import { MdOutlineEmail } from "react-icons/md";
 
-
-
 import { FaRegUser, FaFileUpload, FaSearch } from "react-icons/fa";
 
 // JobDreamSection
@@ -877,7 +875,6 @@ const JobSubscribeSection = () => {
     </section>
   );
 };
-
 
 export default JobDreamSection;
 export {

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { FiChevronDown, FiMenu, FiSearch, FiX } from "react-icons/fi";
 import "./HederJob.scss";
 import Logo from "../../../assets/images/homejob/header-logo.png";
+import Logo2 from "../../../assets/images/homejob/jobfooter_logo.png";
 import { FiShoppingCart } from "react-icons/fi";
 import { Link, useNavigate } from "react-router-dom";
 import { IoLanguage } from "react-icons/io5";
@@ -52,6 +53,7 @@ const HeaderJob = ({ direction, setDirection }) => {
     { label: "Home Medical", path: "/home-medical" },
     { label: "Home Cafe", path: "/home-cafe" },
     { label: "Home Job", path: "/home-job" },
+    { label: "Home Event", path: "/home-event" },
   ];
   const navigate = useNavigate();
   return (
@@ -265,7 +267,7 @@ const HeaderJob = ({ direction, setDirection }) => {
         <div className={`mobile-sidebar ${sidebar ? "show" : ""}`}>
           <FiX className="close" onClick={() => setSidebar(false)} />
           <div className="sidebar-logo">
-            <img src={Logo} alt="logo" />
+            <img src={Logo2} alt="logo" />
           </div>
           <ul>
             <li>
@@ -293,6 +295,9 @@ const HeaderJob = ({ direction, setDirection }) => {
                   </li>
                   <li>
                     <Link to="/home-job">Home Job</Link>
+                  </li>
+                  <li>
+                    <Link to="/home-event">Home Event</Link>
                   </li>
                 </ul>
               </div>

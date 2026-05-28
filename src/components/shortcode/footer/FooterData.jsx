@@ -676,7 +676,7 @@ export const eventFooterData = {
       links: [
         {
           id: 1,
-          label: "team",
+          label: "Team",
           link: "/team01",
         },
         {

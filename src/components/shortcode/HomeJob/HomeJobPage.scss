@@ -1,6 +1,6 @@
-// =================  Job Index all section start  ===================== //
+@use "../../../styles/mixins/mixins" as *;
 
-// common btn //
+// =================  Job Index all section start  ===================== //
 
 //  page common btn  //
 
@@ -566,7 +566,7 @@
                             a {
                                 color: var(--black-color);
                                 font-family: var(--roboto-font);
-                                font-size: var(--f22);
+                                font-size: var(--fs20);
                                 text-align: center;
                                 transition: all 0.5s;
                                 font-weight: var(--fw500);
@@ -1056,7 +1056,6 @@
     justify-content: center;
 }
 
-
 // jobtrusted_wrapper_section css start 
 
 .jobtrusted_wrapper_section {
@@ -1212,6 +1211,7 @@
                         font-family: var(--roboto-font);
                         font-size: var(--fs16);
                         font-weight: var(--fw400);
+                        text-align: center;
                     }
                 }
 
@@ -1954,7 +1954,6 @@
     }
 }
 
-
 // jobsubscribe_wrapper css start
 
 .jobsubscribe_wrapper_section {
@@ -1999,13 +1998,13 @@
                     background: var(--white-color);
                     border-radius: 5px;
                     box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.08);
+                    padding: 0px 18px;
 
                     input {
                         width: 65%;
                         border: 0;
                         outline: none;
                         padding: 0;
-                        padding-left: 30px;
                         height: 50px;
                         border-radius: 0px;
                         color: var(--dark-gray);
@@ -2027,6 +2026,8 @@
                     background-color: transparent;
                     border: 0;
                     outline: 0;
+                    display: flex;
+                    justify-content: end;
 
                     .pro-btn {
                         display: inline-flex;
@@ -2053,7 +2054,6 @@
 }
 
 //  RTL version css start   //
-
 
 [dir="rtl"] {
     .jobdream_section1 .jobdream_content .radio_box {
@@ -2127,8 +2127,6 @@
 
     .jobsubscribe_wrapper_section .jobsubscribe_textbox .prosubcribe_form_wrapper form .prosearch-box input {
         text-align: right;
-        padding-right: 20px;
-        padding-left: inherit;
     }
 
     .jobquestion_wrapper_section .job_quesinnerbox .jobquestion_btnbox ul li form input {
@@ -2136,10 +2134,9 @@
     }
 }
 
-
 //  responsive css start  //
 
-@media (max-width:1599px) {
+@include responsive(lg) {
     .career_popular_wrapper .popular_innerwrapper2 ul li .categoriesdetailbox {
         width: 320px;
     }
@@ -2188,7 +2185,7 @@
     }
 }
 
-@media (max-width:1299px) {
+@include responsive(md) {
     .job_process_wrapper_section .job_process_box .process_box {
         width: 290px;
         height: 290px;
@@ -2253,7 +2250,6 @@
     }
 
     .jobsubscribe_wrapper_section .jobsubscribe_textbox .prosubcribe_form_wrapper form .prosearch-box input {
-        padding-left: 22px;
         width: 62%;
     }
 
@@ -2292,5 +2288,465 @@
 
     .findjob_wrapper_section .findjob_box1 .findjobimg_box::before {
         width: 285px;
+    }
+
+    .jobyou_wrapper_section .jobyou-box2 {
+        display: flex;
+        column-gap: 20px;
+    }
+}
+
+@include responsive(tablet-sm) {
+    .jobdream_section1 .jobdream_side .jobdream_content {
+        width: 100%;
+    }
+
+    .jobyou_wrapper_section .row {
+        row-gap: 40px;
+    }
+
+    .jobyou_wrapper_section .jobyou-box2 {
+        display: flex;
+        column-gap: 20px;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .jobyou_wrapper_section .jobyou-box2 ul li .jobforyoudetailbox {
+        width: 300px;
+    }
+
+    .jobyou_wrapper_section .jobyou-box1 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .jobyou_wrapper_section .jobyou-box1 .jobpara {
+        text-align: center;
+    }
+
+    .findjob_wrapper_section .row {
+        row-gap: 80px;
+    }
+
+    .findjob_wrapper_section .findjob_box1 .findjobimg_box::before {
+        left: 35%;
+    }
+
+    .findjob_wrapper_section .findjob_box1 .findjob_contentbox {
+        left: 33%;
+    }
+
+    .jobtrusted_wrapper_section .jobplan-wrapper .jobstandard_wrap .row {
+        row-gap: 30px;
+        justify-content: center;
+    }
+
+    .jobteam_wrapper_section .row {
+        row-gap: 30px;
+    }
+
+    .jobspeaker_wrapper_section .row {
+        row-gap: 30px;
+    }
+
+    .job_process_wrapper_section .job_process_box {
+        flex-direction: column;
+    }
+
+    .job_blog_wrapper_section .row {
+        row-gap: 30px;
+        justify-content: center;
+    }
+
+    .jobquestion_wrapper_section .job_quesinnerbox .jobquestionimgbox {
+        display: none;
+    }
+
+    .jobsubscribe_wrapper_section .row {
+        row-gap: 40px;
+    }
+
+    .jobsubscribe_wrapper_section {
+        padding: 60px 0px;
+    }
+
+    .jobsubscribe_wrapper_section .jobsubscribe_imgbox img {
+        max-width: 450px;
+        display: block;
+        margin: 0 auto;
+    }
+
+    .jobsubscribe_wrapper_section .jobsubscribe_textbox {
+        align-items: center;
+    }
+
+    .career_popular_wrapper .popular_innerwrapper2 ul li .categoriesdetailbox .catebox2 h5 a {
+        font-size: var(--fs18);
+    }
+
+    .career_popular_wrapper .popular_innerwrapper2 ul li .categoriesdetailbox {
+        width: 210px;
+    }
+
+    .career_popular_wrapper .popular_innerwrapper2 {
+        margin-top: 60px;
+    }
+
+    .jobsubscribe_wrapper_section .jobsubscribe_textbox p {
+        text-align: center;
+    }
+
+    .jobquestion_wrapper_section {
+        margin-top: 0px;
+    }
+
+    .job_blog_wrapper_section {
+        padding: 10px 0px 60px 0px;
+    }
+
+    .jobtrusted_wrapper_section .jobtrustd_innerwap .jobtrusted_logowrapper {
+        row-gap: 40px;
+        flex-direction: column;
+    }
+
+    .jobtrusted_wrapper_section .jobtrustd_innerwap .jobtrusted_logowrapper .joblogobox1 ul {
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        column-gap: 40px;
+    }
+
+    .jobtrusted_wrapper_section .jobtrustd_innerwap .jobtrusted_logowrapper .joblogobox1 ul .jobtruestedulmar_left {
+        left: inherit;
+    }
+
+    .jobtrusted_wrapper_section .jobtrustd_innerwap .jobtrusted_logowrapper .joblogobox1 ul .jobtruestedulmar_right {
+        right: inherit;
+    }
+
+    .jobdream_section1 .jobdream_box1 {
+        width: 100%;
+        justify-content: space-around;
+    }
+
+    .career_popular_wrapper .popular_innerwrapper2 ul {
+        justify-content: center;
+        flex-wrap: wrap;
+        row-gap: 30px;
+    }
+
+    [dir="rtl"] {
+        .jobdream_section1 .jobdream_box1 {
+            justify-content: space-around;
+            width: 100%;
+        }
+
+        .jobyou_wrapper_section .jobyou-box1 {
+            align-items: center;
+        }
+
+        .job_blog_wrapper_section .jobblog_column_section .jobblog_box .jobcontent_box {
+            display: flex;
+            flex-direction: column;
+            align-items: end;
+        }
+
+        .jobsubscribe_wrapper_section .jobsubscribe_textbox {
+            align-items: center;
+        }
+
+        .jobsubscribe_wrapper_section .jobsubscribe_textbox .prosubcribe_form_wrapper form .food-form-btn {
+            justify-content: flex-start;
+        }
+    }
+
+    .jobdream_section1 .row {
+        row-gap: 60px;
+    }
+}
+
+
+@include responsive(mobile) {
+    .career_popular_wrapper .popular_innerwrapper1 {
+        flex-direction: column !important;
+        justify-content: center;
+        gap: 30px;
+    }
+
+    .career_popular_wrapper .popular_innerwrapper1 .popular_box1 .popularheadingbox {
+        margin-bottom: 12px;
+        text-align: center;
+    }
+
+    .jobyou_wrapper_section .jobyou-box2 {
+        flex-wrap: wrap;
+        row-gap: 60px;
+    }
+
+    .jobfooter_wrappeer .job_topboxfooter .job_innerfooterbox1 {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+        column-gap: 60px;
+        row-gap: 40px;
+    }
+}
+
+@include responsive(mobile-sm) {
+    .jobyou_wrapper_section .jobyou-box2 .jobyoumargin {
+        margin-top: 0px;
+    }
+
+    .findjob_wrapper_section .findjob_box1 .findjob_contentbox h2 {
+        font-size: 40px;
+    }
+
+    .findjob_wrapper_section .findjob_box1 .findjob_contentbox {
+        width: 280px;
+        border-radius: 80px 0px 45px 0px;
+    }
+
+    .jobmain_heading {
+        font-size: 32px;
+    }
+
+    .career_popular_wrapper .popular_innerwrapper1 .jobpara {
+        text-align: center;
+    }
+
+    .jobdream_section1 .jobdream_content h1 {
+        font-size: 40px;
+    }
+
+    .findjob_wrapper_section .findjob_box1 .findjob_contentbox {
+        height: 100px;
+    }
+
+    .jobtrusted_wrapper_section .jobtrustd_innerwap .jobtrusted_logowrapper .joblogobox1 ul li span {
+        width: 100px;
+        height: 100px;
+    }
+
+    .jobteam_wrapper_section .jobteamslider_wrapper .slider2 {
+        flex-wrap: wrap;
+    }
+
+    .jobdream_section1 .jobdream_content .people_box {
+        flex-wrap: wrap;
+        padding: 20px 20px;
+        border-radius: 18px;
+        justify-content: center;
+    }
+
+    .jobdream_section1 .jobdream_content .jobdream_form {
+        height: 100%;
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px 16px;
+    }
+
+    .jobdream_section1 .jobdream_content .jobdream_form .search_btn {
+        width: 100%;
+        border-radius: 6px;
+        padding: 12px 36px;
+    }
+
+    .jobdream_section1 .jobdream_content .jobdream_form .select_box {
+        width: 100%;
+    }
+
+    .jobdream_section1 .jobdream_content .jobdream_form .border_right {
+        border-right: none;
+    }
+
+    .jobdream_section1 .jobdream_content .radio_box {
+        flex-wrap: wrap;
+    }
+
+    .jobdream_section1 {
+        padding: 120px 0 60px 0px;
+    }
+
+    .findjob_wrapper_section .findjob_box1 .findjob_contentbox {
+        left: 0;
+    }
+
+    .findjob_wrapper_section .findjob_box1 .findjobimg_box::before {
+        display: none;
+    }
+
+    .jobquestion_wrapper_section .job_quesinnerbox .jobquestion_btnbox ul {
+        flex-wrap: wrap;
+        row-gap: 20px;
+    }
+
+    .jobsubscribe_wrapper_section .jobsubscribe_textbox .prosubcribe_form_wrapper form .prosearch-box {
+        height: 100%;
+        flex-wrap: wrap;
+        background: transparent;
+        box-shadow: none;
+    }
+
+    .jobsubscribe_wrapper_section .jobsubscribe_textbox .prosubcribe_form_wrapper form .food-form-btn {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .jobsubscribe_wrapper_section .jobsubscribe_textbox .prosubcribe_form_wrapper form .prosearch-box input {
+        width: 100%;
+        background: var(--white-color);
+        border-radius: 5px;
+        box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.08);
+        padding: 0px 18px;
+    }
+
+    .jobtrusted_wrapper_section .jobplan-wrapper .jobstandard_wrap .jobstandard_box ul li {
+        font-size: var(--fs18);
+    }
+
+    .jobsubscribe_wrapper_section .jobsubscribe_textbox .jobsubscribeheadingbox .jobmain_heading {
+        text-align: center;
+    }
+
+    [dir="rtl"] {
+        .jobteam_wrapper_section .jobteamslider_wrapper .slider2 {
+            align-items: end;
+            justify-content: end;
+        }
+
+        .jobsubscribe_wrapper_section .jobsubscribe_textbox .prosubcribe_form_wrapper form .food-form-btn {
+            justify-content: center;
+        }
+    }
+}
+
+@media (max-width:425px) {
+    .jobspeaker_wrapper_section .jobspeaker_box {
+        grid-template-columns: 1fr;
+        row-gap: 30px;
+    }
+
+    .jobspeaker_wrapper_section .jobspeaker_box .jobspaeker_iconbox {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .jobspeaker_wrapper_section .jobspeaker_box .jobspeaker_textbox {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .jobspeaker_wrapper_section .jobspeaker_box .jobspeaker_textbox {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .jobspeaker_wrapper_section .jobspeaker_box .jobspeaker_textbox p {
+        text-align: center;
+    }
+
+    .career_popular_wrapper .popular_innerwrapper2 ul li:nth-child(2)::before {
+        content: "";
+        position: absolute;
+        left: 1px;
+        top: 0;
+        background-color: var(--darkpuple);
+        height: 200px;
+        width: 2px;
+    }
+
+    .career_popular_wrapper .popular_innerwrapper2 ul li:nth-child(2)::before {
+        display: none;
+    }
+
+    .career_popular_wrapper .popular_innerwrapper2 ul li:nth-child(2)::after {
+        display: none;
+    }
+
+    .career_popular_wrapper .popular_innerwrapper2 ul li:nth-child(2) {
+        top: inherit;
+    }
+
+    .career_popular_wrapper .popular_innerwrapper2 ul li:nth-child(4)::before {
+        display: none;
+    }
+
+    .career_popular_wrapper .popular_innerwrapper2 ul li:nth-child(4) {
+        top: inherit;
+    }
+
+    .career_popular_wrapper .popular_innerwrapper2 ul li:nth-child(4) .categoriesdetailbox {
+        flex-direction: column-reverse;
+    }
+
+    .career_popular_wrapper .popular_innerwrapper2 ul li:nth-child(2) .categoriesdetailbox {
+        flex-direction: column-reverse;
+    }
+
+    .jobworking_wrapper_section .jobworking_innerbox .jobworking_btn .video-play-button img {
+        max-width: 140px;
+    }
+
+    .jobtrusted_wrapper_section .jobtrustd_innerwap .jobtrusted_logowrapper .joblogobox1 ul {
+        flex-direction: column;
+        row-gap: 20px;
+    }
+
+    .jobtrusted_wrapper_section {
+        padding: 60px 0px 80px 0px;
+    }
+
+    .jobtrusted_wrapper_section .jobplan-wrapper {
+        margin-top: 65px;
+    }
+
+    .jobspeaker_wrapper_section .jobspeaker_box .jobspeaker_textbox .joabspeakerheadingbox .jobmain_heading {
+        text-align: center;
+    }
+
+    .jobdream_section1 .jobdream_content h1 {
+        font-size: 28px;
+    }
+
+    .jobdream_section1 .jobdream_side .platform_box {
+        width: 60px;
+    }
+
+    .jobdream_section1 .jobdream_side .platform_box p {
+        font-size: 22px;
+    }
+
+    .jobdream_section1 .jobdream_box1 {
+        gap: 24px;
+    }
+
+    .jobtrusted_wrapper_section .jobtrustd_innerwap .jobtrusted_logowrapper .joblogobox2 .joblogdetailbox {
+        width: 310px;
+        height: 310px;
+    }
+
+    .jobtrusted_wrapper_section .jobtrustd_innerwap .jobtrusted_logowrapper .joblogobox2 .joblogdetailbox p {
+        max-width: 230px;
+        font-size: 14px;
+    }
+
+    .jobtrusted_wrapper_section .jobplan-wrapper .jobstandard_wrap .jobstandard_box {
+        padding: 40px 18px 0px 18px;
+    }
+
+}
+
+
+@include responsive(xxs) {
+
+    .jobmain_heading {
+        font-size: 26px;
     }
 }
