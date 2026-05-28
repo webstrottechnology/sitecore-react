@@ -116,7 +116,7 @@ export const eventSpeakersData = {
       alt: "img",
       name: "Bruno Le Maire",
       designation: "Minister for the Economy & Finance",
-      link: "#",
+      link: "/team-single",
     },
 
     {
@@ -125,7 +125,7 @@ export const eventSpeakersData = {
       alt: "img",
       name: "Holly Ransom",
       designation: "CEO, Emergent",
-      link: "#",
+      link: "/team-single",
     },
 
     {
@@ -134,7 +134,7 @@ export const eventSpeakersData = {
       alt: "img",
       name: "Jim Whitehurst",
       designation: "Chief Executive Officer, Red Hat",
-      link: "#",
+       link: "/team-single",
     },
 
     {
@@ -143,7 +143,7 @@ export const eventSpeakersData = {
       alt: "img",
       name: "Jane McGonigal",
       designation: "Director, Game Development Ins.",
-      link: "#",
+       link: "/team-single",
     },
 
     {
@@ -152,13 +152,13 @@ export const eventSpeakersData = {
       alt: "img",
       name: "Ginni Rometty",
       designation: "CEO, IBM",
-      link: "#",
+       link: "/team-single",
     },
   ],
 
   button: {
     text: "View All Speaker",
-    link: "#",
+     link: "/team-single",
   },
 };
 
