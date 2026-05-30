@@ -54,6 +54,7 @@ const HeaderEvent = ({ direction, setDirection }) => {
     { label: "Home Cafe", path: "/home-cafe" },
     { label: "Home Job", path: "/home-job" },
     { label: "Home Event", path: "/home-event" },
+    { label: "Home Travel", path: "/home-travel" },
   ];
   const navigate = useNavigate();
   return (
@@ -298,6 +299,9 @@ const HeaderEvent = ({ direction, setDirection }) => {
                   </li>
                   <li>
                     <Link to="/home-event">Home Event</Link>
+                  </li>
+                  <li>
+                    <Link to="/home-travel">Home Travel</Link>
                   </li>
                 </ul>
               </div>

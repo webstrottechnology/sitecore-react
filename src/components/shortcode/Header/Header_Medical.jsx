@@ -54,7 +54,9 @@ const Header_Medical = ({ direction, setDirection }) => {
     { label: "Home Corporate", path: "/" },
     { label: "Home Medical", path: "/home-medical" },
     { label: "Home Cafe", path: "/home-cafe" },
+     { label: "Home Job", path: "/home-job" },
     { label: "Home Event", path: "/home-event" },
+    { label: "Home Travel", path: "/home-travel" },
   ];
   return (
     <>
@@ -257,6 +259,9 @@ const Header_Medical = ({ direction, setDirection }) => {
                         </li>
                         <li>
                           <Link to="/home-event">Home Event</Link>
+                        </li>
+                        <li>
+                          <Link to="/home-travel">Home Travel</Link>
                         </li>
                       </ul>
                     </div>

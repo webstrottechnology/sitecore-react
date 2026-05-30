@@ -75,6 +75,8 @@ const HomeJob = lazy(() => import("./components/pages/HomeJob"));
 
 const HomeEvent = lazy(() => import("./components/pages/HomeEvent"));
 
+const HomeTravel = lazy(() => import("./components/pages/HomeTravel"));
+
 const FormEleven = lazy(() =>
   import("./components/shortcode/forms/Form").then((module) => ({
     default: module.FormEleven,
@@ -89,6 +91,7 @@ const App = () => {
     "/home-medical",
     "/home-job",
     "/home-event",
+    "/home-travel",
   ];
 
   const shouldHideLayout = hideLayoutRoutes.some(
@@ -167,6 +170,7 @@ const App = () => {
           <Route path="/home-cafe" element={<HomeCafe />} />
           <Route path="/home-job" element={<HomeJob />} />
           <Route path="/home-event" element={<HomeEvent />} />
+          <Route path="/home-travel" element={<HomeTravel />} />
 
           {/* ✅ 404 Page */}
           <Route path="*" element={<ErrorPage />} />

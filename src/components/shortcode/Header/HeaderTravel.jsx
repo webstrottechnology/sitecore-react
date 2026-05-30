@@ -1,13 +1,14 @@
 import React, { useState, useEffect } from "react";
 import { FiChevronDown, FiMenu, FiSearch, FiX } from "react-icons/fi";
-import "./HeaderCafe.scss";
-import Logo from "../../../assets/images/homecafe/cafe-logo.png";
+import "./HeaderTravel.scss";
+import Logo from "../../../assets/images/homeTravel/logo-travel.png";
+import Logo2 from "../../../assets/images/homeTravel/logo-travel2.png";
 import { FiShoppingCart } from "react-icons/fi";
 import { Link, useNavigate } from "react-router-dom";
 import { IoLanguage } from "react-icons/io5";
 import { useCart } from "../CartContextWrap/CartContext";
 
-const HeaderCafe = ({ direction, setDirection }) => {
+const HeaderTravel = ({ direction, setDirection }) => {
   const [sidebar, setSidebar] = useState(false);
   const [mobileDrop, setMobileDrop] = useState(null);
   const [searchOpen, setSearchOpen] = useState(false);
@@ -59,13 +60,13 @@ const HeaderCafe = ({ direction, setDirection }) => {
   return (
     <>
       <header
-        className={`HeaderCafeWrapper menu-items-wrapper ${
+        className={`HeaderTravelWrapper menu-items-wrapper ${
           isFixed ? "menu-fixed fadeInDown" : ""
         }`}
       >
         <div className="container custom-container-lg">
           {/* LOGO */}
-          <div className="logo">
+          <div className="logo job_logo_wrap">
             <Link to="/">
               {" "}
               <img src={Logo} alt="image" />{" "}
@@ -250,8 +251,8 @@ const HeaderCafe = ({ direction, setDirection }) => {
               >
                 <IoLanguage />
               </button>
-              <Link to="/contact" className="Home2FilledGreenBtn md-btn">
-                Let's Talk
+              <Link to="/contact" className="travel-btn md-btn">
+                <span>Let's Talk</span>
               </Link>
 
               {/* MOBILE MENU BUTTON */}
@@ -267,7 +268,7 @@ const HeaderCafe = ({ direction, setDirection }) => {
         <div className={`mobile-sidebar ${sidebar ? "show" : ""}`}>
           <FiX className="close" onClick={() => setSidebar(false)} />
           <div className="sidebar-logo">
-            <img src={Logo} alt="logo" />
+            <img src={Logo2} alt="logo" />
           </div>
           <ul>
             <li>
@@ -629,4 +630,4 @@ const HeaderCafe = ({ direction, setDirection }) => {
   );
 };
 
-export default HeaderCafe;
+export default HeaderTravel;

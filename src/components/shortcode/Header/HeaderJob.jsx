@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { FiChevronDown, FiMenu, FiSearch, FiX } from "react-icons/fi";
-import "./HederJob.scss";
+import "./HeaderJob.scss";
 import Logo from "../../../assets/images/homejob/header-logo.png";
 import Logo2 from "../../../assets/images/homejob/jobfooter_logo.png";
 import { FiShoppingCart } from "react-icons/fi";
@@ -54,6 +54,7 @@ const HeaderJob = ({ direction, setDirection }) => {
     { label: "Home Cafe", path: "/home-cafe" },
     { label: "Home Job", path: "/home-job" },
     { label: "Home Event", path: "/home-event" },
+    { label: "Home Travel", path: "/home-travel" },
   ];
   const navigate = useNavigate();
   return (
@@ -298,6 +299,9 @@ const HeaderJob = ({ direction, setDirection }) => {
                   </li>
                   <li>
                     <Link to="/home-event">Home Event</Link>
+                  </li>
+                  <li>
+                    <Link to="/home-travel">Home Travel</Link>
                   </li>
                 </ul>
               </div>

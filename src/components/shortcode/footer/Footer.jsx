@@ -14,6 +14,7 @@ import { SitecoreCafeFooterData } from "./FooterData";
 import { SiteCorefooterLinks } from "./FooterData";
 import { jobFooterData } from "./FooterData";
 import { eventFooterData } from "./FooterData";
+import { travelFooterData } from "./FooterData";
 import { FiSend } from "react-icons/fi";
 import { FaPaperPlane } from "react-icons/fa";
 import { FaWhatsapp, FaInstagram, FaFacebookF } from "react-icons/fa";
@@ -1200,6 +1201,110 @@ const HoomeEventFooter = () => {
   );
 };
 
+const HomeTravelFooter = () => {
+  return (
+    <footer className="travel-main-footer">
+      <div className="container custom-container-lg">
+        <div className="travel-footer-inner-main-wrapper">
+          <div className="footer-logo wow fadeinUp" data-wow-delay="200ms">
+            <a href={travelFooterData.logoLink}>
+              <img src={travelFooterData.logo} alt={travelFooterData.logoAlt} />
+            </a>
+            <h4>{travelFooterData.infoTitle}</h4>
+            <p>{travelFooterData.description}</p>
+            <div className="input-box">
+              <input
+                type="email"
+                className="form-control"
+                placeholder={travelFooterData.inputPlaceholder}
+              />
+              <button type="button" className="subscribe-btn">
+                {travelFooterData.subscribeText}
+              </button>
+            </div>
+          </div>
+
+          {travelFooterData.footerLinks.map((item, index) => (
+            <div
+              className="footer-links wow fadeinUp"
+              data-wow-delay={item.delay}
+              key={index}
+            >
+              <h4>{item.title}</h4>
+              <ul>
+                {item.links.map((link, linkIndex) => (
+                  <li key={linkIndex}>
+                    <a href={link.url}>{link.label}</a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+
+          <div className="footer-links wow fadeinUp" data-wow-delay="200ms">
+            <h4>{travelFooterData.contactTitle}</h4>
+
+            <p>
+              <span>
+                <FaPhoneAlt />
+              </span>
+              <a href={travelFooterData.phoneLink}>{travelFooterData.phone}</a>
+            </p>
+
+            <p>
+              <span>
+                <FaEnvelope />
+              </span>
+              <a href={travelFooterData.emailLink}>{travelFooterData.email}</a>
+            </p>
+
+            <p>
+              <span>
+                <FaMapMarkerAlt />
+              </span>
+              <a href="#0">{travelFooterData.address}</a>
+            </p>
+          </div>
+        </div>
+
+        <div
+          className="travel-bottom-footer wow fadeinUp"
+          data-wow-delay="200ms"
+        >
+          <p className="mb-0">
+            {travelFooterData.copyrightText}{" "}
+            <a href="#0">{travelFooterData.companyName}</a>{" "}
+            {travelFooterData.rightsText}
+          </p>
+
+          <div className="social-icon">
+            <a href="#0">
+              <span>
+                <FaWhatsapp />
+              </span>
+            </a>
+            <a href="#0">
+              <span>
+                <FaInstagram />
+              </span>
+            </a>
+            <a href="#0">
+              <span>
+                <FaFacebookF />
+              </span>
+            </a>
+            <a href="#0">
+              <span>
+                <FaXTwitter />
+              </span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  );
+};
+
 export default FooterOne;
 export {
   FooterTwo,
@@ -1215,4 +1320,5 @@ export {
   HomeCafeFooter,
   HomeJobFooter,
   HoomeEventFooter,
+  HomeTravelFooter,
 };
