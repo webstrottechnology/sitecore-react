@@ -82,6 +82,12 @@ li {
 input {
   outline: none;
   box-shadow: none;
+
+}
+
+select,
+textarea {
+  box-shadow: none;
 }
 
 p {
@@ -889,9 +895,9 @@ p {
       font-weight: var(--fw600);
       font-size: var(--fs26);
 
-       svg{
-          cursor: pointer;
-       }
+      svg {
+        cursor: pointer;
+      }
     }
   }
 

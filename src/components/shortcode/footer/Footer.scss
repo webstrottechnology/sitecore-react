@@ -2331,7 +2331,7 @@
 
 }
 
-// subscribe-newsletter
+// event-footer-bottom
 .event-footer-bottom {
     width: 100%;
     background-color: #474747;
@@ -2376,6 +2376,215 @@
         }
     }
 }
+
+// travel-main-footer 
+
+.travel-main-footer {
+    width: 100%;
+    padding: 60px 0px 30px;
+    background-image: url(../../../assets/images/homeTravel/travel-footer.png);
+    background-position: top left;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+
+    .travel-footer-inner-main-wrapper {
+        width: 100%;
+        display: flex;
+        border-bottom: 1px solid #ffffff4f;
+        padding-bottom: 40px;
+
+        .footer-logo {
+            width: 40%;
+            padding: 0px 30px 0px 0px;
+
+            h4 {
+                font-size: var(--fs22);
+                font-family: var(--roboto-font);
+                font-weight: var(--fw600);
+                color: var(--white-color);
+                padding-top: 30px;
+            }
+
+            p {
+                color: var(--white-color);
+                font-weight: var(--fw400);
+                padding-top: 30px;
+            }
+
+            .input-box {
+                width: 100%;
+                display: flex;
+                border: 1px solid var(--white-color);
+                padding: 8px;
+                margin-top: 30px;
+
+                .subscribe-btn {
+                    min-width: 120px;
+                    background-color: var(--white-color);
+                    color: var(--black-color);
+                    font-size: var(--fs16);
+                    font-family: var(--roboto-font);
+                    line-height: 38px;
+                    text-align: center;
+                }
+
+                input {
+                    background-color: transparent;
+                    border: 0;
+                    color: var(--bgWhite);
+                    border: none;
+                    outline: none;
+
+                    &::placeholder {
+                        color: var(--bgWhite);
+                    }
+
+                    &:focus {
+                        box-shadow: none;
+                    }
+                }
+            }
+        }
+
+        .footer-links {
+            width: 20%;
+
+            h4 {
+                font-size: var(--fs24);
+                font-family: var(--roboto-font);
+                font-weight: var(--fw500);
+                color: var(--white-color);
+                padding-bottom: 20px;
+            }
+
+            ul {
+                padding-left: 20px;
+
+                li {
+                    list-style: disc;
+                    color: var(--white-color);
+                    padding-bottom: 12px;
+
+                    a {
+                        color: var(--white-color);
+                        font-size: var(--fs16);
+                        font-weight: var(--fw400);
+                        transition: all 0.5s;
+
+                        &:hover {
+                            color: var(--bgOrange1);
+                            transition: all 0.5s;
+                        }
+                    }
+
+                    &:hover {
+                        color: var(--bgOrange1);
+                        transition: all 0.5s;
+                    }
+                }
+            }
+
+            p {
+                display: flex;
+                gap: 8px;
+                padding-bottom: 10px;
+
+                span {
+                    svg {
+                        fill: var(--bgOrange1);
+                    }
+                }
+
+                a {
+                    color: var(--white-color);
+                    font-size: var(--fs16);
+                    font-weight: var(--fw400);
+                }
+            }
+        }
+    }
+
+    .travel-bottom-footer {
+        width: 100%;
+        padding-top: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        p {
+            color: var(--white-color);
+
+            a {
+                color: var(--bgOrange1);
+                text-transform: uppercase;
+                font-weight: var(--fw600);
+                font-family: var(--roboto-font);
+            }
+        }
+
+        .social-icon {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+
+            a {
+                width: 45px;
+                height: 45px;
+                line-height: 40px;
+                border-radius: 50%;
+                border: 1px solid var(--white-color);
+                text-align: center;
+                display: inline-block;
+                transition: all 0.5s;
+                position: relative;
+                overflow: hidden;
+
+                span {
+                    svg {
+                        fill: var(--white-color);
+                        width: 20px;
+                        height: 20px;
+                    }
+                }
+
+                &:after {
+                    content: '';
+                    width: 0;
+                    height: 100%;
+                    position: absolute;
+                    left: -38%;
+                    top: 0;
+                    transform: skew(26deg);
+                    transition-duration: 0.6s;
+                    transform-origin: top left;
+                    background: var(--bgOrange1);
+                    transition: all 0.3s;
+                }
+
+                &:hover {
+                    border: 1px solid var(--bgOrange1);
+
+                    span {
+                        z-index: 11;
+                        position: relative;
+
+                        svg {
+                            fill: var(--white-color);
+                        }
+                    }
+
+                    &:after {
+                        height: 100%;
+                        width: 135%;
+                        transition: all 0.3s;
+                    }
+                }
+            }
+        }
+    }
+}
+
 
 [dir="rtl"] {
     .jobfooter_wrappeer .job_topboxfooter .job_innerfooterbox1 .jobf_box1 ul li a {

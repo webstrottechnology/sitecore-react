@@ -43,6 +43,8 @@ import jobFooterAppStoreImg from "../../../assets/images/homejob/jobfooter_appst
 import footerIcon from "../../../assets/images/homeEvent/icon.png";
 import footerLogo from "../../../assets/images/homeEvent/foter-logo.png";
 
+import footerTravelLogo from "../../../assets/images/homeTravel/footer-travel-logo.png";
+
 export const footerOneLinks = [
   {
     title: "Company",
@@ -756,4 +758,77 @@ export const eventFooterData = {
       link: "#",
     },
   ],
+};
+
+
+export const travelFooterData = {
+  logo: footerTravelLogo,
+  logoAlt: "logo",
+  logoLink: "home-18-travel.html",
+
+  infoTitle: "Information",
+  description:
+    "Continually productize compelling quality for packed with Elated productize compelling quality for packed with all Elaating pages. Continually productize compelling quality for packed.",
+
+  inputPlaceholder: "Enter Your email",
+  subscribeText: "Subscribe",
+
+  footerLinks: [
+    {
+      title: "Pages",
+      delay: "100ms",
+      links: [
+        {
+          label: "Blog",
+          url: "blog-with-sidebar.html",
+        },
+        {
+          label: "About Us",
+          url: "about-us.html",
+        },
+        {
+          label: "Service",
+          url: "service1.html",
+        },
+        {
+          label: "Contact",
+          url: "contact-us.html",
+        },
+      ],
+    },
+    {
+      title: "Quick Links",
+      delay: "200ms",
+      links: [
+        {
+          label: "404 Error",
+          url: "404-error.html",
+        },
+        {
+          label: "Checkout",
+          url: "checkout.html",
+        },
+        {
+          label: "Cart",
+          url: "cart.html",
+        },
+      ],
+    },
+  ],
+
+  contactTitle: "Contact Us",
+
+  phone: "123-456-7890",
+  phoneLink: "tel:123-456-7890",
+
+  email: "mail@website.com",
+  emailLink: "mailto:abc@example.com",
+
+  address: `Akshya Nagar 1st Block
+1st Cross, Rammurthy nagar,
+Bangalore-560016`,
+
+  copyrightText: "Copyright © 2026-27",
+  companyName: "SITECORE.",
+  rightsText: "All Rights Reserved.",
 };
