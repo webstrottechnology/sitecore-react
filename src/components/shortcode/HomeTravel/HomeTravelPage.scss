@@ -1,3 +1,15 @@
+/*-----------------------------------
+
+
+    Template Name: Sitecore React Template
+    Version: 1.0.0
+    Author: Webstrot
+    Copyright: © 2026-27
+
+--------------------------------------- */
+
+@use "../../../styles/mixins/mixins" as *;
+
 // ================= common css start ================ //
 
 
@@ -362,17 +374,6 @@
     margin: 0;
 }
 
-@media (max-width: 767px) {
-    .h--timeline-event-content {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .h--timeline-dates {
-        margin: 0 35px;
-    }
-}
-
 //   travel-top-banner-main-wrapper   //
 
 .travel-top-banner-main-wrapper {
@@ -411,7 +412,7 @@
                     position: absolute;
                     right: 0;
                     bottom: 34px;
-                    width: 380px;
+                    width: 350px;
                     height: 3px;
                     background-color: var(--bgOrange1);
                 }
@@ -1719,5 +1720,621 @@
         background-size: cover;
         width: 260px;
         height: 300px;
+    }
+}
+
+
+//  RTL Version Css Start  //
+
+[dir="rtl"] {
+    .travel-best-package-main-wrapper .tave-tabs-wrapper:before {
+        left: 0;
+    }
+
+    .travel-heading-title h4 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .travel-heading-title h4:after {
+        right: inherit;
+        left: inherit;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .travel-adventure-main-wrapper .travel-heading-title {
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+    }
+
+    .travel-adventure-main-wrapper .adventure-wrapper .adventure-content .bullet li {
+        display: flex;
+        flex-direction: row-reverse;
+        gap: 20px;
+    }
+
+    .travel-about-main-wrapper .travel-heading-title {
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+    }
+
+    .travel-about-main-wrapper .about-main-wrapper .travel-about-text .travel-holidays-package-wrapper {
+        justify-content: end;
+    }
+
+    .travel-about-main-wrapper .about-main-wrapper .travel-about-text .travel-holidays-package-wrapper:after {
+        right: 0;
+        left: inherit;
+        width: 490px;
+    }
+
+    .travel-top-banner-main-wrapper .travel-slider-caption-wrapper .travel-right .banner-counter-wrapper .stats {
+        justify-content: end;
+        flex-direction: row-reverse;
+    }
+
+    .travel-top-banner-main-wrapper .travel-slider-caption-wrapper .travel-left h1:after {
+        right: 172px;
+        width: 235px;
+    }
+
+    .travel-journey-main-wrapper .travel-heading-title h4:after {
+        right: inherit;
+        left: 38%;
+    }
+
+    .travel-best-package-main-wrapper .travel-heading-title {
+        justify-content: end;
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+    }
+
+    .travel-contact-main-wrapper .travel-inner-main-wrapper .contact-form form .form-group input {
+        text-align: end;
+    }
+
+    .travel-contact-main-wrapper .travel-inner-main-wrapper .contact-form form .multi-btn {
+        justify-content: end;
+        flex-direction: row-reverse;
+    }
+
+    .travel-contact-main-wrapper .travel-inner-main-wrapper .contact-form form .form-group textarea {
+        text-align: right;
+    }
+
+    .travel-blog-main-wrapper .blog-iner-main-wrapper .blog-right-side .blog-details-wrapper .blog-right-content .date {
+        flex-direction: row-reverse;
+    }
+
+    .travel-blog-main-wrapper .blog-iner-main-wrapper .blog-left-side .travel-blog-content .date {
+        flex-direction: row-reverse;
+    }
+
+    .travel-main-footer .travel-footer-inner-main-wrapper .footer-links ul li {
+        list-style: none;
+        position: relative;
+        padding-right: 20px;
+    }
+
+    .travel-main-footer .travel-footer-inner-main-wrapper .footer-links ul li::before {
+        content: "•";
+        position: absolute;
+        right: 0;
+    }
+
+    .travel-top-banner-main-wrapper .travel-slider-caption-wrapper .travel-left {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        justify-content: flex-end;
+        align-items: end;
+    }
+
+    .travel-best-package-main-wrapper .tave-tabs-wrapper .tab-content .tab-img-wrapper .tab-img .tab-img-content p {
+        flex-direction: row-reverse;
+    }
+
+    .travel-best-package-main-wrapper .tave-tabs-wrapper .tab-content .tab-img-wrapper .tab-img .tab-img-content h4 {
+        flex-direction: row-reverse;
+    }
+}
+
+// Resposnive Css Start  //
+
+
+@media (max-width:1599px) {
+    .travel-top-banner-main-wrapper .travel-slider-caption-wrapper .travel-left h1 {
+        font-size: 62px;
+    }
+
+    .travel-top-banner-main-wrapper .travel-slider-caption-wrapper .travel-left h1:after {
+        width: 90px;
+    }
+
+    [dir=rtl] .travel-top-banner-main-wrapper .travel-slider-caption-wrapper .travel-left h1:after {
+        right: inherit;
+        width: 100px;
+        left: 0px;
+    }
+}
+
+@include responsive(lg) {
+    .travel-top-banner-main-wrapper .travel-slider-caption-wrapper .travel-right {
+        width: 40%;
+    }
+
+    .travel-top-banner-main-wrapper .travel-slider-caption-wrapper .travel-left h1 {
+        font-size: 50px;
+    }
+}
+
+@include responsive(md) {
+    .travel-clear-main-wrapper .affordable-main-wrapper .affordable-box .afford-text .top-text h2 {
+        font-size: var(--fs50);
+    }
+
+    .travel-testimonial-main-wrapper .travel-testimonial-slider .travel-testi-wrapper .testi-img h4 a {
+        font-size: var(--fs20);
+    }
+
+    .travel-testimonial-main-wrapper .travel-testimonial-slider .travel-testi-wrapper .testi-img {
+        padding: 30px 20px;
+    }
+
+    .travel-top-banner-main-wrapper .travel-slider-caption-wrapper .travel-right .banner-counter-wrapper .stats {
+        gap: 16px;
+    }
+
+    .travel-top-banner-main-wrapper .travel-slider-caption-wrapper .travel-right .banner-counter-wrapper .stats .count-text h5 {
+        font-size: var(--fs16);
+    }
+
+    .travel-about-main-wrapper .about-main-wrapper .travel-about-text .travel-holidays-package-wrapper .left-package .holiday h4 {
+        font-size: var(--fs20);
+    }
+
+    .travel-heading-title h2 {
+        font-size: 32px;
+    }
+
+    .travel-top-banner-main-wrapper .travel-slider-caption-wrapper .travel-left {
+        width: 38%;
+    }
+
+    .travel-blog-main-wrapper .blog-iner-main-wrapper .blog-right-side .blog-details-wrapper .blog-right-content .date {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .travel-blog-main-wrapper .blog-iner-main-wrapper .blog-right-side .blog-details-wrapper {
+        align-items: center;
+    }
+
+    .travel-contact-main-wrapper .travel-inner-main-wrapper .contact-form form .multi-btn {
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+
+    .travel-about-main-wrapper .about-main-wrapper .travel-about-text .travel-holidays-package-wrapper:after {
+        width: 370px;
+    }
+}
+
+
+@include responsive(laptop) {
+    .travel-top-banner-main-wrapper .travel-slider-caption-wrapper .travel-left h1 {
+        font-size: 42px;
+    }
+
+    [dir=rtl] .travel-top-banner-main-wrapper .travel-slider-caption-wrapper .travel-left h1:after {
+        bottom: 20px;
+    }
+}
+
+@include responsive(tablet-sm) {
+
+    .travel-top-banner-main-wrapper .travel-slider-caption-wrapper .travel-right .banner-counter-wrapper {
+        width: 100%;
+    }
+
+    [dir=rtl] .travel-about-main-wrapper .about-main-wrapper .travel-about-text .travel-holidays-package-wrapper {
+        justify-content: center;
+    }
+
+    [dir=rtl] .travel-about-main-wrapper .about-main-wrapper .travel-about-text .travel-holidays-package-wrapper:after {
+        right: inherit;
+        left: inherit;
+    }
+
+    .travel-clear-main-wrapper .affordable-main-wrapper {
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 32px;
+    }
+
+    .travel-clear-main-wrapper .affordable-main-wrapper .affordable-box {
+        width: 48%;
+    }
+
+    .travel-blog-main-wrapper .blog-iner-main-wrapper {
+        flex-direction: column;
+    }
+
+    .travel-blog-main-wrapper .blog-iner-main-wrapper .blog-left-side {
+        width: 100%;
+    }
+
+    .travel-blog-main-wrapper .blog-iner-main-wrapper .blog-right-side {
+        width: 100%;
+    }
+
+    .travel-contact-main-wrapper .travel-inner-main-wrapper {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .travel-contact-main-wrapper .travel-inner-main-wrapper .contact-img {
+        width: 100%;
+    }
+
+    .travel-contact-main-wrapper .travel-inner-main-wrapper .contact-form {
+        width: 100%;
+    }
+
+    .travel-contact-main-wrapper .travel-inner-main-wrapper .contact-form form .multi-btn {
+        justify-content: center;
+        align-items: center;
+        column-gap: 40px;
+    }
+
+    .travel-heading-title h2 {
+        font-size: 28px;
+    }
+
+    .travel-heading-title h4 {
+        font-size: 20px;
+    }
+
+    .travel-top-banner-main-wrapper .travel-slider-caption-wrapper .travel-right {
+        width: 100%;
+    }
+
+    .travel-top-banner-main-wrapper .travel-slider-caption-wrapper .travel-left {
+        width: 100%;
+    }
+
+    .travel-top-banner-main-wrapper .travel-slider-caption-wrapper {
+        flex-direction: column;
+    }
+
+    .travel-top-banner-main-wrapper .travel-slider-caption-wrapper .travel-left h1:after {
+        display: none;
+    }
+
+    .travel-about-main-wrapper .about-main-wrapper .travel-about-text .travel-holidays-package-wrapper .left-package .holiday h4 {
+        font-size: 18px;
+    }
+
+    .travel-about-main-wrapper .about-main-wrapper {
+        flex-direction: column;
+        gap: 140px;
+    }
+
+    .travel-about-main-wrapper .about-main-wrapper .travel-about-img {
+        width: 100%;
+    }
+
+    .travel-about-main-wrapper .about-main-wrapper .travel-about-text {
+        width: 100%;
+    }
+
+    .travel-about-main-wrapper .about-main-wrapper .travel-about-text {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .travel-about-main-wrapper .about-main-wrapper .travel-about-text .travel-heading-title {
+        width: 100%;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .travel-about-main-wrapper .about-main-wrapper .travel-about-text .travel-holidays-package-wrapper {
+        justify-content: center;
+        align-items: center;
+    }
+
+    .travel-about-main-wrapper .about-main-wrapper .travel-about-text .travel-holidays-package-wrapper:after {
+        left: inherit;
+    }
+
+    .travel-top-banner-main-wrapper .travel-slider-caption-wrapper {
+        gap: 60px;
+    }
+
+    .travel-best-package-main-wrapper .tave-tabs-wrapper .tab-content .tab-img-wrapper {
+        gap: 22px;
+        flex-wrap: wrap;
+    }
+
+    .travel-adventure-main-wrapper .adventure-wrapper {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .travel-adventure-main-wrapper .adventure-wrapper .adventure-img {
+        width: 100%;
+    }
+
+    .travel-adventure-main-wrapper .adventure-wrapper .adventure-content {
+        width: 100%;
+    }
+
+    .travel-adventure-main-wrapper .adventure-wrapper .adventure-content .travel-btn {
+        margin-bottom: 30px;
+    }
+
+    .travel-top-banner-main-wrapper .travel-slider-caption-wrapper .travel-right {
+        flex-wrap: wrap;
+    }
+
+    .travel-heading-title h2 {
+        max-width: 100%;
+    }
+
+    .travel-journey-main-wrapper .travel-heading-title {
+        max-width: 100%;
+    }
+
+    .travel-brand-main-wrappper .brand-inner-wrapper {
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .travel-testimonial-main-wrapper .travel-testimonial-prev {
+        left: 0px;
+    }
+
+    .travel-testimonial-main-wrapper .travel-testimonial-slider .travel-testi-wrapper {
+        flex-direction: column;
+    }
+
+    .travel-testimonial-main-wrapper .travel-testimonial-next {
+        right: 0px;
+    }
+
+    .h--timeline-event-content {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .h--timeline-dates {
+        margin: 0 35px;
+    }
+
+    .travel-top-banner-main-wrapper .travel-slider-caption-wrapper .travel-right {
+        gap: 60px;
+    }
+}
+
+@include responsive(mobile) {
+    .travel-best-package-main-wrapper .travel-heading-title h2 {
+        text-align: center;
+    }
+
+    .travel-best-package-main-wrapper .travel-heading-title {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .travel-clear-main-wrapper .affordable-main-wrapper .affordable-box {
+        width: 80%;
+    }
+
+    .travel-gallery-main-wrapper:after {
+        width: 110px;
+        height: 160px;
+    }
+
+    .travel-blog-main-wrapper .blog-iner-main-wrapper .blog-right-side .blog-details-wrapper {
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .travel-blog-main-wrapper .blog-iner-main-wrapper .blog-right-side .blog-details-wrapper {
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .travel-gallery-main-wrapper .gallery-main-wrapper {
+
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+
+    .travel-best-package-main-wrapper .tave-tabs-wrapper nav .nav-tabs {
+        flex-wrap: wrap;
+    }
+
+    .travel-best-package-main-wrapper .tave-tabs-wrapper nav .nav-tabs .nav-link {
+        padding: 4px 6px;
+        font-size: var(--fs14);
+    }
+
+    .travel-about-main-wrapper .about-main-wrapper .travel-about-img .big-img img {
+        width: 100%;
+    }
+
+    .travel-about-main-wrapper .about-main-wrapper .travel-about-img .about-small img {
+        width: 100%;
+    }
+
+    .travel-about-main-wrapper .about-main-wrapper .travel-about-img .big-img {
+        width: 100%;
+    }
+
+    .travel-blog-main-wrapper:after {
+        display: none;
+    }
+
+    .travel-blog-main-wrapper:before {
+        display: none;
+    }
+
+    .travel-testimonial-main-wrapper:after {
+        display: none;
+    }
+
+    .travel-gallery-main-wrapper:before {
+        display: none;
+    }
+
+    .travel-adventure-main-wrapper .adventure-wrapper .adventure-content {
+        width: 100%;
+        padding-left: 0px;
+    }
+
+    .travel-about-main-wrapper .about-main-wrapper .travel-about-img .about-small {
+        position: relative;
+        right: inherit;
+        bottom: 0px;
+    }
+
+    .travel-about-main-wrapper .about-main-wrapper .travel-about-img {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .travel-top-banner-main-wrapper .travel-slider-caption-wrapper .travel-right .banner-counter-wrapper {
+        width: 100%;
+    }
+
+    [dir=rtl] .travel-best-package-main-wrapper .travel-heading-title {
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width:425px) {
+    .travel-clear-main-wrapper .affordable-main-wrapper .affordable-box {
+        width: 100%;
+    }
+
+    .travel-top-banner-main-wrapper .travel-slider-caption-wrapper .travel-left h1 {
+        font-size: 46px;
+    }
+
+    .travel-about-main-wrapper .about-main-wrapper .travel-about-text .travel-holidays-package-wrapper {
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .travel-about-main-wrapper .about-main-wrapper .travel-about-text .travel-holidays-package-wrapper .left-package .holiday {
+        padding-bottom: 40px;
+    }
+
+    .travel-about-main-wrapper .about-main-wrapper .travel-about-text .travel-holidays-package-wrapper .left-package+.left-package {
+        border-left: none;
+        padding-left: 0px;
+    }
+
+    .travel-about-main-wrapper .about-main-wrapper .travel-about-text .travel-holidays-package-wrapper:after {
+        display: none;
+    }
+
+    .travel-about-main-wrapper .about-main-wrapper .travel-about-text .travel-holidays-package-wrapper {
+        gap: 0px;
+    }
+
+    .travel-about-main-wrapper {
+        width: 100%;
+        padding: 60px 0px 0px 0px;
+        position: relative;
+    }
+
+    .travel-about-main-wrapper .about-main-wrapper {
+        gap: 80px;
+    }
+
+    .travel-blog-main-wrapper .travel-heading-title {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .travel-blog-main-wrapper .travel-heading-title h4:after {
+        left: -30px;
+    }
+
+    .travel-clear-main-wrapper .affordable-main-wrapper .affordable-box .afford-text .top-text {
+        padding: 18px;
+    }
+
+    .travel-clear-main-wrapper .affordable-main-wrapper .affordable-box .afford-text .top-text {
+        padding: 18px;
+    }
+
+    .travel-clear-main-wrapper .affordable-main-wrapper .affordable-box .afford-text .tag p {
+        font-size: 18px;
+    }
+
+    .travel-clear-main-wrapper .affordable-main-wrapper .affordable-box .afford-text .tag {
+        top: 28px;
+        right: -85px;
+    }
+
+    .travel-about-main-wrapper .about-main-wrapper .travel-about-text .travel-holidays-package-wrapper .left-package .holiday {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media (max-width:375px) {
+    .travel-best-package-main-wrapper .tave-tabs-wrapper nav .nav-tabs .nav-link {
+        padding: 4px 4px;
+        font-size: var(--fs12);
+    }
+
+    .travel-top-banner-main-wrapper .travel-slider-caption-wrapper .travel-left h1 {
+        font-size: 40px;
+    }
+
+    .travel-heading-title h2 {
+        font-size: 22px;
+    }
+
+    .travel-testimonial-main-wrapper .travel-testimonial-arrow {
+        width: 36px;
+        height: 36px;
     }
 }

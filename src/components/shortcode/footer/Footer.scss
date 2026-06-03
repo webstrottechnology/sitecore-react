@@ -2638,6 +2638,29 @@
     .event-main-footer .event-footer-inner-main-wrapper .footer-logo {
         padding: 0px 00px 0px 0px;
     }
+
+    .travel-main-footer .travel-footer-inner-main-wrapper .footer-links p {
+        flex-direction: row-reverse;
+    }
+
+    .travel-main-footer .travel-footer-inner-main-wrapper .footer-links ul li a {
+        display: flex;
+        align-items: end;
+        justify-content: end;
+        width: 100%;
+    }
+
+    .travel-main-footer .travel-footer-inner-main-wrapper .footer-logo .input-box {
+        flex-direction: row-reverse;
+    }
+
+    .travel-main-footer .travel-footer-inner-main-wrapper .footer-logo .input-box input {
+        text-align: end;
+    }
+
+    .travel-main-footer .travel-footer-inner-main-wrapper .footer-links p a {
+        max-width: 200px;
+    }
 }
 
 //  responsive css start  //
@@ -2861,6 +2884,25 @@
         width: 50%;
     }
 
+    .travel-main-footer .travel-footer-inner-main-wrapper .footer-logo {
+        width: 100%;
+    }
+
+    .travel-main-footer .travel-footer-inner-main-wrapper .footer-links {
+        width: 50%;
+    }
+
+
+    .travel-main-footer .travel-footer-inner-main-wrapper {
+        flex-wrap: wrap;
+        row-gap: 30px;
+    }
+
+    .travel-main-footer .travel-bottom-footer {
+        flex-direction: column;
+        gap: 20px;
+    }
+
     [dir=rtl] {
         .jobfooter_wrappeer .job_middlefooter .jobfooter_contwrap2 {
             justify-content: center;
@@ -2868,6 +2910,15 @@
 
         .jobfooter_wrappeer .job_middlefooter .row {
             row-gap: 20px;
+        }
+
+        .travel-main-footer .travel-footer-inner-main-wrapper .footer-logo {
+            width: 100%;
+            padding: 0px 0px 0px 0px;
+        }
+
+        .travel-main-footer .travel-footer-inner-main-wrapper .footer-links {
+            width: 33%;
         }
     }
 }
@@ -2943,6 +2994,9 @@
         flex-direction: column;
     }
 
+    [dir=rtl] .travel-main-footer .travel-footer-inner-main-wrapper .footer-links {
+        width: 100%;
+    }
 
 }
 
@@ -3031,8 +3085,11 @@
     .event-footer-bottom .copy-right-wrappper p {
         text-align: center;
     }
-}
 
+    .travel-main-footer .travel-footer-inner-main-wrapper .footer-links {
+        width: 100%;
+    }
+}
 
 @include responsive(xs) {
     .footerOne .footer-top h2 {
@@ -3094,5 +3151,14 @@
 
     .event-main-footer .event-footer-inner-main-wrapper .footer-links {
         width: 100%;
+    }
+
+    .travel-main-footer .travel-bottom-footer p {
+        text-align: center;
+    }
+
+    .travel-main-footer .travel-footer-inner-main-wrapper .footer-logo {
+        width: 100%;
+        padding: 0px 0px 0px 0px;
     }
 }
